@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <!-- arrowhead -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/>
+    </marker>
+    <marker id="arrow-light" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#888"/>
+    </marker>
+    <marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c97c1e"/>
+    </marker>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="760" fill="#fafaf8"/>
+
+  <!-- ─────────────── Title ─────────────── -->
+  <text x="600" y="50" text-anchor="middle" font-size="28" font-weight="600" fill="#111">Decision-Driven Design</text>
+  <text x="600" y="80" text-anchor="middle" font-size="15" fill="#555">
+    Decisions are the unit of work · Artifacts are the unit of composition · Value actions are the terminus
+  </text>
+
+  <!-- ─────────────── Section 1 label ─────────────── -->
+  <text x="80" y="140" font-size="13" font-weight="600" fill="#999" letter-spacing="2">THE UNIT — A ROLE</text>
+  <line x1="80" y1="150" x2="1120" y2="150" stroke="#ddd" stroke-width="1"/>
+
+  <!-- Bundle (input artifacts) -->
+  <g>
+    <text x="240" y="190" text-anchor="middle" font-size="13" font-weight="600" fill="#444">bundle (context)</text>
+    <rect x="160" y="205" width="160" height="22" rx="3" fill="#fff" stroke="#888" stroke-width="1"/>
+    <text x="240" y="221" text-anchor="middle" font-size="12" fill="#333">artifact</text>
+    <rect x="160" y="232" width="160" height="22" rx="3" fill="#fff" stroke="#888" stroke-width="1"/>
+    <text x="240" y="248" text-anchor="middle" font-size="12" fill="#333">artifact</text>
+    <rect x="160" y="259" width="160" height="22" rx="3" fill="#fff" stroke="#888" stroke-width="1"/>
+    <text x="240" y="275" text-anchor="middle" font-size="12" fill="#333">artifact</text>
+    <text x="240" y="305" text-anchor="middle" font-size="11" fill="#888" font-style="italic">assembled deterministically</text>
+    <text x="240" y="320" text-anchor="middle" font-size="11" fill="#888" font-style="italic">from the graph</text>
+  </g>
+
+  <!-- arrow bundle → role -->
+  <line x1="335" y1="243" x2="445" y2="243" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Role (the forecast) -->
+  <g>
+    <rect x="445" y="195" width="280" height="100" rx="6" fill="#fff" stroke="#333" stroke-width="2"/>
+    <text x="585" y="225" text-anchor="middle" font-size="16" font-weight="600" fill="#111">ROLE</text>
+    <text x="585" y="247" text-anchor="middle" font-size="12" fill="#555">a context-conditioned forecast</text>
+    <text x="585" y="268" text-anchor="middle" font-size="11" fill="#888" font-style="italic">filled by human or LLM</text>
+    <text x="585" y="283" text-anchor="middle" font-size="11" fill="#888" font-style="italic">— same interface either way</text>
+  </g>
+
+  <!-- arrow role → artifact -->
+  <line x1="735" y1="243" x2="845" y2="243" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Output artifact -->
+  <g>
+    <text x="940" y="190" text-anchor="middle" font-size="13" font-weight="600" fill="#444">artifact (decision)</text>
+    <rect x="845" y="205" width="190" height="76" rx="3" fill="#fff" stroke="#333" stroke-width="1.5"/>
+    <text x="940" y="228" text-anchor="middle" font-size="12" fill="#333" font-weight="500">schema · provenance · form</text>
+    <line x1="860" y1="240" x2="1020" y2="240" stroke="#eee"/>
+    <text x="940" y="258" text-anchor="middle" font-size="11" fill="#666">durable · inspectable</text>
+    <text x="940" y="273" text-anchor="middle" font-size="11" fill="#666">crosses role boundaries</text>
+    <text x="940" y="305" text-anchor="middle" font-size="11" fill="#888" font-style="italic">conditions other decisions</text>
+  </g>
+
+  <!-- session annotation -->
+  <text x="585" y="345" text-anchor="middle" font-size="11" fill="#888" font-style="italic">
+    one bundle → one role → one artifact = one session (the unit of measurement)
+  </text>
+
+  <!-- ─────────────── Section 2 label ─────────────── -->
+  <text x="80" y="405" font-size="13" font-weight="600" fill="#999" letter-spacing="2">THE SYSTEM — A DAG OF DECISIONS</text>
+  <line x1="80" y1="415" x2="1120" y2="415" stroke="#ddd" stroke-width="1"/>
+
+  <!-- Request entry -->
+  <g>
+    <rect x="80" y="555" width="120" height="48" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
+    <text x="140" y="577" text-anchor="middle" font-size="13" font-weight="500" fill="#111">Request</text>
+    <text x="140" y="593" text-anchor="middle" font-size="11" fill="#777">entry</text>
+  </g>
+
+  <!-- Role A (top branch) -->
+  <g>
+    <rect x="280" y="450" width="130" height="56" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
+    <text x="345" y="473" text-anchor="middle" font-size="13" font-weight="500" fill="#111">Role A</text>
+    <text x="345" y="491" text-anchor="middle" font-size="10" fill="#888">e.g. discovery</text>
+  </g>
+
+  <!-- Role B (middle) -->
+  <g>
+    <rect x="280" y="550" width="130" height="56" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
+    <text x="345" y="573" text-anchor="middle" font-size="13" font-weight="500" fill="#111">Role B</text>
+    <text x="345" y="591" text-anchor="middle" font-size="10" fill="#888">e.g. architect</text>
+  </g>
+
+  <!-- Role C (bottom branch) -->
+  <g>
+    <rect x="280" y="650" width="130" height="56" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
+    <text x="345" y="673" text-anchor="middle" font-size="13" font-weight="500" fill="#111">Role C</text>
+    <text x="345" y="691" text-anchor="middle" font-size="10" fill="#888">e.g. design</text>
+  </g>
+
+  <!-- Role D (converger) -->
+  <g>
+    <rect x="500" y="550" width="130" height="56" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
+    <text x="565" y="573" text-anchor="middle" font-size="13" font-weight="500" fill="#111">Role D</text>
+    <text x="565" y="591" text-anchor="middle" font-size="10" fill="#888">e.g. implementer</text>
+  </g>
+
+  <!-- Interpretation -->
+  <g>
+    <rect x="720" y="550" width="130" height="56" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
+    <text x="785" y="573" text-anchor="middle" font-size="13" font-weight="500" fill="#111">Role E</text>
+    <text x="785" y="591" text-anchor="middle" font-size="10" fill="#888">e.g. validator</text>
+  </g>
+
+  <!-- Value action -->
+  <g>
+    <rect x="940" y="540" width="180" height="76" rx="6" fill="#fff8ec" stroke="#c97c1e" stroke-width="2.5"/>
+    <text x="1030" y="568" text-anchor="middle" font-size="14" font-weight="700" fill="#8a5414">★ VALUE ACTION</text>
+    <text x="1030" y="588" text-anchor="middle" font-size="11" fill="#8a5414">the world changes</text>
+    <text x="1030" y="604" text-anchor="middle" font-size="11" fill="#8a5414">(ship · close · publish)</text>
+  </g>
+
+  <!-- Edges with artifact labels -->
+  <!-- Request → A, B, C -->
+  <path d="M 200 579 Q 240 575 280 478" stroke="#888" stroke-width="1.2" fill="none" marker-end="url(#arrow-light)"/>
+  <path d="M 200 579 L 280 579" stroke="#888" stroke-width="1.2" fill="none" marker-end="url(#arrow-light)"/>
+  <path d="M 200 579 Q 240 583 280 678" stroke="#888" stroke-width="1.2" fill="none" marker-end="url(#arrow-light)"/>
+
+  <!-- A → D -->
+  <path d="M 410 478 Q 460 478 500 565" stroke="#888" stroke-width="1.2" fill="none" marker-end="url(#arrow-light)"/>
+  <text x="455" y="510" font-size="10" fill="#888" font-style="italic">spec</text>
+
+  <!-- B → D -->
+  <path d="M 410 579 L 500 579" stroke="#888" stroke-width="1.2" fill="none" marker-end="url(#arrow-light)"/>
+  <text x="442" y="572" font-size="10" fill="#888" font-style="italic">ADR</text>
+
+  <!-- C → D -->
+  <path d="M 410 678 Q 460 678 500 593" stroke="#888" stroke-width="1.2" fill="none" marker-end="url(#arrow-light)"/>
+  <text x="455" y="660" font-size="10" fill="#888" font-style="italic">design</text>
+
+  <!-- D → E -->
+  <path d="M 630 579 L 720 579" stroke="#888" stroke-width="1.2" fill="none" marker-end="url(#arrow-light)"/>
+  <text x="660" y="572" font-size="10" fill="#888" font-style="italic">build</text>
+
+  <!-- E → Value action -->
+  <path d="M 850 579 L 940 579" stroke="#c97c1e" stroke-width="2" fill="none" marker-end="url(#arrow-accent)"/>
+  <text x="877" y="572" font-size="10" fill="#c97c1e" font-style="italic" font-weight="500">verdict</text>
+
+  <!-- Feedback loop -->
+  <path d="M 785 606 Q 785 730 345 730 Q 345 712 345 706" stroke="#888" stroke-width="1.2" stroke-dasharray="5,4" fill="none" marker-end="url(#arrow-light)"/>
+  <text x="565" y="745" text-anchor="middle" font-size="11" fill="#888" font-style="italic">feedback (first-class flow — defect · gap · contradiction · scope-issue)</text>
+
+  <!-- Annotation: edges are artifacts -->
+  <text x="80" y="450" font-size="11" fill="#888" font-style="italic">edges = artifacts</text>
+  <text x="80" y="466" font-size="11" fill="#888" font-style="italic">nodes = decisions</text>
+  <text x="80" y="495" font-size="11" fill="#888" font-style="italic">the only thing crossing</text>
+  <text x="80" y="510" font-size="11" fill="#888" font-style="italic">role boundaries is artifacts</text>
+</svg>
