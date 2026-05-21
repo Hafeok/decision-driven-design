@@ -87,9 +87,11 @@ Language choice by action flavor:
 - **Pure execution against external systems** (deployer, test runner, email sender, ticket creator): whatever has the best SDK for the target system.
 - **Code-shaped actions** (search, AST manipulation, patch application): Rust if performance matters or it's reused heavily, Python otherwise.
 
+**Sensing workers** are the dual of value-action workers — same contract, opposite direction. A log query worker, a metrics puller, a webhook receiver, an API poller, a research compiler, an inbound-request intake. They follow the same flavor categorization: pure_execution sensors (log query, metric pull) in whatever language fits the source SDK; generative sensors (research compilers, market summarizers) typically in Python for the same reasons as generative value workers; interpretive sensors (signal triagers, anomaly classifiers) in Python. From the harness's perspective there is no difference — same dispatch, same session record, same SHACL validation on the produced artifact. The interpretation that pairs with a sensing action evaluates "is this reading trustworthy and what does it mean" rather than "did the world change as intended," which surfaces as a different measurement profile on the same infrastructure (§7).
+
 For LLM actions that use tools mid-session (an implementer writing code, running tests, iterating), tools are local to the worker, implemented in whatever language fits. The whole tool-use exchange is one session from the harness's perspective: one dispatch, one artifact returned, one session record capturing the full tool-call lineage.
 
-Worker registration is the orchestration analogue of model selection: workers announce capabilities (`code-writer`, `email-sender`, `terraform-applier`) on a registry the orchestration system reads. Roles bind to capabilities, not specific worker instances. The binding from role to specific worker is an orchestration policy decision — same mechanism as model selection, same measurement evidence, same versioning.
+Worker registration is the orchestration analogue of model selection: workers announce capabilities (`code-writer`, `email-sender`, `terraform-applier`, `log-query`, `metric-pull`) on a registry the orchestration system reads. Roles bind to capabilities, not specific worker instances. The binding from role to specific worker is an orchestration policy decision — same mechanism as model selection, same measurement evidence, same versioning.
 
 ---
 
@@ -127,6 +129,8 @@ Architecture: all mutations route through a single chokepoint — pipeline-cli's
 6. Commit transaction, then publish events to subscribers
 
 Subscriptions are themselves first-class artifacts: a `Subscription` carries a SPARQL query, declared trigger types (which artifact mutations should re-evaluate it), and a delivery target. The orchestration system maintains the subscription registry as standing policy.
+
+The substrate also accommodates the input boundary cleanly. Sensing-action triggers (webhooks from external systems, scheduled monitoring polls, inbound requests) arrive as graph mutations through the same `GraphWriter` chokepoint; the resulting sensing-action artifacts trigger downstream subscriptions exactly like any other artifact. There is no separate "input pipeline" — external events become triples and join the graph.
 
 ### Graph-as-state, not event-sourced
 
@@ -265,7 +269,7 @@ The bounds document references the graph as the operational specification.
 
 The shape of this system at maturity:
 
-- Multiple system implementations, each owning one process (Engineering, Validation, Operations, Discovery, Release), all driven by one orchestration system.
+- Multiple system implementations, each owning one process (Engineering, Validation, Operations, Discovery, Release), all driven by one orchestration system. Operations is fundamentally sensing-driven (continuous monitoring of deployed value actions producing operational findings); Discovery is sensing-driven on the input side (user research, technology evaluation, market signals). Both follow the same architecture — sensing actions are workers like any other, going through the same harness, the same session record, the same audit infrastructure.
 - A bus between systems carrying inter-system artifacts (feature requests, validation verdicts, operational findings, deployment requests).
 - Per-role autonomy graduated independently based on measurement evidence — some roles fully autonomous, others human-checkpointed, the system's overall level being the floor across roles.
 - A meta-loop that revises queries, role definitions, model bindings, and policies under empirical pressure, with the framework's discipline applied to itself.

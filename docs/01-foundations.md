@@ -14,6 +14,14 @@ A human work process is a chain of context-conditioned decisions. Roles (UXer, d
 
 Organizations exist to perform value actions — the things that create value: shipping a product, closing a deal, treating a patient, publishing a paper. Every value action is preceded by a chain of decisions that determines whether, when, and how it happens. So the work to model is not the org chart and not the process flow, but the decision graph upstream of each value action. Map value-backwards: start from what the organization actually produces, and trace back through the decisions that had to occur for it to happen.
 
+## The other boundary: sensing
+
+Value actions are where the system acts on the world. The dual boundary is where the system reads from the world — sensing actions. Monitoring a deployed feature. Pulling production logs. Querying an API for current state. Interviewing a user. Polling a market signal. Reading a sensor.
+
+Sensing actions execute against external reality the same way value actions do, their outcomes are equally uncertain, and they need the same kind of interpretation to be useful. Their job is to bring information *in* rather than push value *out*. The geometry of a real process has two world boundaries: sensing on the input side, value actions on the output side, decisions in between.
+
+Value-anchoring still holds — every subgraph terminates in a value action, and sensing actions aren't terminal in the value-delivery sense. They're upstream nodes whose artifacts feed forward through decision chains that eventually land at value. The dual is also worth stating: every subgraph originates in sensing — a continuous sense (monitoring), a triggered sense (a probe authorized by an upstream decision), or an initial request (which is itself sensing an upstream party: customer, PM, calling process). Map value-backwards to find the chain; map sensing-forwards to find the chain's origin.
+
 ## The shift this enables
 
 Most of the hard problems in knowledge work aren't automation problems — they're decision problems. Automation works when you already know what to build and just need to execute reliably. But the work of figuring out *what* to build, what's good, what's worth doing, who needs to weigh in — that's decisions, all the way down. Treating LLMs as forecasters lets us tackle that layer directly.
@@ -38,7 +46,7 @@ The composition is a graph, not a pipeline. Multiple artifacts feed a single dec
 
 Two disciplines keep the graph honest:
 
-**Granularity.** You can trace decisions backwards forever, since every action presupposes a context that was itself decided. The natural stopping point is where decisions either become trivial (routine execution within an established frame) or get absorbed into a single role's standing authority. Below that line is execution; above it is the graph you're modeling.
+**Granularity.** You can trace decisions backwards forever, since every action presupposes a context that was itself decided. The natural stopping points are three: decisions become trivial (routine execution within an established frame), decisions get absorbed into a single role's standing authority, or the chain reaches a sensing action where external reality enters the graph. Below the execution line is execution; above it is the graph you're modeling.
 
 **Value anchoring.** Every subgraph must terminate in a value action. That's what keeps the system from sprawling, and it's a useful audit: if you can't trace a decision back to a value action it eventually serves, either the map is wrong or the decision shouldn't exist.
 
@@ -61,7 +69,7 @@ Treat model selection as a per-role design decision, not a deployment detail.
 ## Design principle
 
 1. **Identify the value actions.** What does the organization actually produce that creates value.
-2. **Trace backwards.** For each value action, what decisions had to happen for it to occur, and in what order.
+2. **Trace backwards.** For each value action, what decisions had to happen for it to occur, and in what order. The chain ends at standing authority, at trivial execution, or at a sensing action — the input boundary where external reality enters the graph.
 3. **Map the roles and artifacts.** Each decision belongs to a role; each role consumes and produces artifacts. Artifacts are the interface.
 4. **Classify artifact form.** Text, visual, structured, mixed — this constrains which models can fill the role.
 5. **Choose a model per role** whose capabilities match the context shape and decision profile.

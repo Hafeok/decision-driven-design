@@ -8,7 +8,7 @@ Current LLM agent frameworks treat the **tool call** as the primary output unit.
 
 Decision-Driven Design inverts this. The **decision** is the primary output unit. A decision is a context-conditioned forecast that produces a durable, inspectable artifact. Most decisions never touch the world; they shape the context for other decisions. Tool calls — the moments the world actually changes — sit only at the terminal nodes of the graph, where a chain of decisions finally executes against external reality.
 
-This isn't a refinement of agentic design. It's a different geometry. The agent loop is one node in the graph; the graph is the system. The work is the decisions, plural, distributed across roles, recorded as artifacts. The tool call is just where value lands.
+The geometry of a real process has two world boundaries: **sensing actions** on the input side (the system reads from the world), and **value actions** on the output side (the system acts on the world). Everything in between is decisions. This isn't a refinement of agentic design — it's a different geometry. The agent loop is one node in the graph; the graph is the system. The work is the decisions, plural, distributed across roles, recorded as artifacts. The tool call is just where information enters or value lands.
 
 The vocabulary below makes this geometry precise.
 
@@ -26,7 +26,7 @@ A process is what gets mapped. It's the unit a system maps one-to-one.
 
 **Gating process.** A process upstream of a value action that decides whether the value action should happen. Validation gates implementation. Deal review gates a closed sale. Peer review gates publication. Safety evaluation gates model deployment. The gating process is its own decision graph with its own roles, artifacts, and terminal value action (the verdict).
 
-**Observing process.** For digital products, a process downstream of a value action that watches what happens and feeds back. Monitoring observes deployed features. Incident response observes production behavior. The observing process exists as a first-class graph because the feedback loop is continuous; the analog for physical products has slower cadence and different structure.
+**Observing process.** For digital products, a process downstream of a value action that watches what happens and feeds back. Monitoring observes deployed features. Incident response observes production behavior. The observing process exists as a first-class graph because the feedback loop is continuous; the analog for physical products has slower cadence and different structure. Observing processes are sensing-heavy by definition — their primary work is sensing actions that produce operational findings.
 
 ### Value Action
 
@@ -43,6 +43,28 @@ Three tests:
 
 In current LLM systems, value actions correspond to tool calls with side effects. They are what agent frameworks make first-class. DDD makes them last-class — important, but terminal, not central.
 
+**Contrast with sensing action.** Sensing actions are the dual — terminal-flavored actions whose product flows back into the graph as context rather than out into the world as value. Together they define the system's two boundaries with the world.
+
+### Sensing Action
+
+The terminal action on the input side. The moment a system reads from external reality, producing an artifact that feeds back into the decision graph as context rather than out into the world as value.
+
+Examples. Monitoring a deployed service. Querying an API for current state. Pulling production logs. Running a user interview. Polling a market signal. Reading a sensor. Compiling research on a technology choice. Receiving an inbound request from a customer or upstream process.
+
+Sensing actions are actions in the strict sense — they execute against external reality, their outcomes are uncertain, and they pair with an interpretation session that turns the raw signal into an inspectable artifact. They take the same three flavors:
+
+- *pure_execution* — mechanical reads against a known interface (log query, metric pull, API fetch). Reliability and latency dominate.
+- *generative* — synthesis-shaped reads where the action constructs the artifact from a body of source material (research compilation, market summary). Quality dominates.
+- *interpretive* — classification of an incoming signal against a defined response framework (signal triager, anomaly classifier). Accuracy dominates.
+
+The distinction from value actions is direction, not kind. Value actions push value *out* of the system; sensing actions pull information *in*. Both are external; both have uncertain outcomes; both follow the action-interpretation pattern.
+
+**Value-anchoring still holds.** Sensing actions are not terminal in the value-delivery sense — they're upstream nodes whose artifacts feed forward through decisions that eventually land at value. Every subgraph still terminates in a value action. The dual is that every subgraph *originates* in sensing (or an initial request, which is itself sensing the upstream party).
+
+**Interpretation profile differs.** A value-action interpretation asks "did the world change as intended?" A sensing-action interpretation asks "is this reading trustworthy, and what does it mean?" Failure modes split accordingly: a value action can fail because the executor broke; a sensing action can fail because the source is wrong, the interpretation criteria are stale, or the signal is genuinely ambiguous. This argues for a distinct measurement profile per direction when designing the role.
+
+**Where they cluster.** Operations is sensing-heavy downstream of value actions — continuous monitoring producing operational findings that route back via feedback flow. Discovery is sensing-heavy upstream of value actions — user research, technology evaluation, market signals. Both follow the same action semantics; they sit at opposite ends of the graph.
+
 ### Decision
 
 A context-conditioned forecast made by a role. The unit of work in DDD.
@@ -53,13 +75,13 @@ Decisions are private to the role. They happen inside the role's reasoning. They
 
 **Decision vs value action.** A decision is internal; a value action is external. Most decisions in a system never become value actions. They produce artifacts that condition other decisions. Only the terminal decision in a chain results in a value action. This is the inversion in operational form.
 
-**Granularity.** Decisions can be traced backwards indefinitely. The framework stops where decisions either become trivial (routine execution within an established frame) or fold into a role's standing authority. Below that line is execution; above it is the graph being modeled.
+**Granularity.** Decisions can be traced backwards indefinitely. The framework stops where decisions either become trivial (routine execution within an established frame), fold into a role's standing authority, or reach a sensing action where external reality enters the graph. Below that line is execution; above it is the graph being modeled.
 
 ### Action
 
 The execution of a state change against external reality. Distinct from a decision because its outcome is uncertain — actions interact with reality, and reality is partially unknown.
 
-Implementing code is an action. Executing a deployment is an action. Running tests is an action. Sending a notification is an action. Classifying a high-volume signal is an action (interpretive flavor).
+Implementing code is an action. Executing a deployment is an action. Running tests is an action. Sending a notification is an action. Classifying a high-volume signal is an action (interpretive flavor). Reading production logs is an action (sensing flavor).
 
 The distinction between decision and action is structural, not gradient:
 - Decisions produce deterministic artifacts. The artifact exists in exactly the form it was written.
@@ -67,11 +89,17 @@ The distinction between decision and action is structural, not gradient:
 
 This asymmetry is why every action structurally pairs with an **interpretation** (see below). Decisions don't need that — their products are knowable; their consequences propagate over time and are evaluated asynchronously through audits and downstream consumption.
 
+Actions split along two orthogonal dimensions:
+- **Direction** — value actions push outward (system → world); sensing actions pull inward (world → system); some actions sit internal to the graph (e.g., an implementer producing code that other roles consume).
+- **Flavor** — pure_execution, generative, or interpretive (see Session below).
+
+The framework's action semantics — uncertainty, interpretation pairing, session record, audit — apply uniformly across both direction and flavor.
+
 ### Interpretation
 
 The decision session that consumes an action's output and produces a verdict about what it means.
 
-A test runner executes tests (action) and produces results. A gatekeeper interprets the results and decides whether to ship (interpretation). An implementer produces code (action). A reviewer interprets whether the code matches specification (interpretation). A deployer rolls out a release (action). A post-deploy verifier interprets system health (interpretation).
+A test runner executes tests (action) and produces results. A gatekeeper interprets the results and decides whether to ship (interpretation). An implementer produces code (action). A reviewer interprets whether the code matches specification (interpretation). A deployer rolls out a release (action). A post-deploy verifier interprets system health (interpretation). A log query worker pulls metrics (sensing action). An anomaly analyst interprets whether the metrics indicate a problem (interpretation).
 
 Interpretation is its own decision session, paired with the action. Same role catalog mechanics. Same decision-type measurement weighting (quality dominates). Same audit expectations.
 
@@ -89,6 +117,7 @@ A role has these properties:
 - **Form requirements** — the artifact forms it must be able to read
 - **Session type** — decision or action
 - **Action flavor** (for action roles) — pure_execution, generative, or interpretive
+- **Action direction** (for action roles) — value, sensing, or internal
 - **Interpretation pairing** (for action roles) — which decision role interprets its outputs
 - **Autonomy level** — currently 0-5, set per-role based on measurement evidence
 - **Model binding** — the model currently filling this role, when AI-filled
@@ -133,12 +162,14 @@ Sessions split into two types:
 
 **Decision session.** Produces an artifact that conditions future decisions. Evaluation is asynchronous (audits, downstream consumption). Quality dominates the fit profile.
 
-**Action session.** Produces a state change in the world. Evaluation is synchronous through a paired interpretation session. Quality is more binary; cost and latency matter more.
+**Action session.** Produces a state change in the world or pulls in a reading from the world. Evaluation is synchronous through a paired interpretation session. Quality is more binary; cost and latency matter more.
 
 Action sessions have a flavor:
-- *pure_execution* — nearly mechanical (deployer running infrastructure-as-code, test runner invoking a suite). Measured on reliability plus cost/latency.
-- *generative* — the session generates the artifact that is the action (implementer producing code, drafter producing release notes). Measured on quality plus cost/latency.
+- *pure_execution* — nearly mechanical (deployer running infrastructure-as-code, test runner invoking a suite, log query worker pulling metrics). Measured on reliability plus cost/latency.
+- *generative* — the session generates the artifact that is the action (implementer producing code, drafter producing release notes, research compiler synthesizing a market summary). Measured on quality plus cost/latency.
 - *interpretive* — maps a real-world signal onto a defined response framework (signal triager classifying an alert, failure triager interpreting a test result). Measured on classification accuracy plus latency.
+
+Action sessions also carry a direction — value (outward), sensing (inward), or internal — orthogonal to flavor. Direction informs the measurement profile: a value-direction interpretation asks "did the world change as intended"; a sensing-direction interpretation asks "is this reading trustworthy."
 
 ### System
 
@@ -229,6 +260,8 @@ The kind of movement an artifact is doing through the graph. Two classes:
 **Forward flow.** Artifacts moving toward value actions. The natural direction of work — request becomes feature becomes implementation becomes deployment.
 
 **Feedback flow.** Artifacts moving against the forward direction, carrying information that conditions upstream decisions. A validation rejection routes back to engineering; an operational finding routes back to discovery; a defect report routes back to whichever system produced the defective artifact.
+
+Sensing-action outputs typically enter the graph as forward flow when they originate decision chains (a discovery interview producing a feature request), and as feedback flow when they observe the consequences of prior value actions (a monitoring read producing an operational finding). The classification is by intent and routing, not by the action that produced the artifact.
 
 Both classes use the same artifact-as-interface mechanism. Distinguishing them at the bus and orchestration layers makes routing and auditing cleaner.
 
@@ -345,9 +378,11 @@ Session records are bidirectionally referenced with the artifacts they produced.
 
 A first-class measurement: for action sessions reporting success, how often does the paired interpretation session agree?
 
-Low agreement rates are diagnostic signals. Possible causes: the action is unreliable (claiming success when something went wrong), the interpretation criteria are miscalibrated (rejecting outcomes that should be accepted), or the specification was incomplete (action did exactly what it was told but interpretation has additional standards that weren't expressed upstream).
+Low agreement rates are diagnostic signals. Possible causes split by action direction:
+- For value actions: the action is unreliable (claiming success when something went wrong), the interpretation criteria are miscalibrated (rejecting outcomes that should be accepted), or the specification was incomplete (action did exactly what it was told but interpretation has additional standards that weren't expressed upstream).
+- For sensing actions: the source is wrong (returning incorrect or stale readings), the interpretation criteria are stale (the response framework doesn't match current reality), or the signal is genuinely ambiguous (no defensible classification exists).
 
-This metric is what makes the framework's audit principle measurable at action boundaries.
+This metric is what makes the framework's audit principle measurable at action boundaries, on both sides of the system/world boundary.
 
 ### Fitness Function
 
@@ -374,10 +409,10 @@ The system's autonomy level is the floor — the level of its most-supervised ro
 
 ## The Lifecycle
 
-How the entities compose into work:
+How the entities compose into work. A chain originates at the input boundary — either a sensing action reading from external reality, or an initial request arriving from an upstream party — and terminates at a value action, the output boundary where the world changes:
 
 1. A **role** receives a **bundle** assembled from **artifacts** via the **graph**.
-2. The role makes a **decision** (or executes an **action**) — a **session** is recorded.
+2. The role makes a **decision** (or executes an **action** — value, sensing, or internal) — a **session** is recorded.
 3. The session's output is externalized as a new **artifact** with **provenance**.
 4. **Audits** check whether the bundle was sufficient and the output is sound.
 5. If the session was an action, an **interpretation** session pairs with it to produce a verdict.
@@ -387,6 +422,6 @@ How the entities compose into work:
 9. **Session records** accumulate measurement evidence; **policy** decisions revise **model bindings** and **autonomy levels** based on the evidence.
 10. Eventually, a terminal decision in a chain produces an artifact that triggers a **value action** — a deployment, a sent message, a closed deal. The world changes.
 
-The crucial pattern: most decisions don't trigger value actions. They condition other decisions. The graph is mostly internal forecasting; only the leaves cross out into the world. And the framework's discipline applies to itself — the orchestration system, the measurement system, the policy decisions are all themselves decisions, audited and improvable through the same mechanisms.
+The crucial pattern: most decisions don't trigger value actions. They condition other decisions. The graph is mostly internal forecasting; only the leaves cross out into the world (value actions), and only the roots cross in from it (sensing actions). The framework's discipline applies to itself — the orchestration system, the measurement system, the policy decisions are all themselves decisions, audited and improvable through the same mechanisms.
 
-This is the inversion stated structurally. Current LLM agent design optimizes the tool call. DDD optimizes the chain of decisions that determines whether the tool call should happen, what it should look like, and whether anyone should care.
+This is the inversion stated structurally. Current LLM agent design optimizes the tool call. DDD optimizes the chain of decisions between the sensing actions that bring information in and the value actions that push value out — that determines whether the tool call should happen, what it should look like, and whether anyone should care.
