@@ -65,6 +65,30 @@ The distinction from value actions is direction, not kind. Value actions push va
 
 **Where they cluster.** Operations is sensing-heavy downstream of value actions — continuous monitoring producing operational findings that route back via feedback flow. Discovery is sensing-heavy upstream of value actions — user research, technology evaluation, market signals. Both follow the same action semantics; they sit at opposite ends of the graph.
 
+### Convergence State
+
+A predicate on a focal artifact's chain, computed continuously from the graph. Convergence states name the cadence-relevant moments where a chain "lands." Two forms.
+
+**Ready.** The focal artifact's upstream context graph is complete and audit-passing — design, spec, verification approach, test criteria, acknowledgements, and any other context downstream work requires are present, coherent, and pass the relevant audits. Ready predicates the focal artifact for downstream work: implementation, deployment, or whatever the next phase calls for.
+
+**Done.** The terminal value action of the chain has fired, its paired interpretation confirms success, and post-action audits (drift, health, action-interpretation agreement) pass. The world has changed and the system has confirmed it.
+
+The framework already supplied the underlying mechanism — phase exit criteria, the feature×domain coverage matrix, gap analysis, preflight audits, drift detection, paired interpretation. Naming the convergence states makes the operational pattern explicit: chains land at ready before they continue to done, and the cadence of work, the audit profiles, and the typical autonomy boundaries all hinge on this distinction.
+
+The vocabulary borrows from agile's "definition of ready" and "definition of done." The fit is good, with the precision DDD adds: ready and done are computable predicates over the graph, not informal team agreements, and the framework's audit and feedback infrastructure operationalizes both.
+
+**The agile refinement parallel.** The ready-chain with feedback iteration is structurally what backlog refinement is in agile, with the framework's discipline applied. Refinement maps to the ready-chain — multiple roles producing upstream context with iterative back-and-forth as gaps surface. Sprint planning maps to the human checkpoint at the ready boundary, the moment work crosses from refinement into execution. Sprint execution maps to the done-chain. Sprint review and demo map to post-action interpretation plus discovery sensing for the next iteration. Retrospective maps to the meta-loop — both observe patterns from completed work and revise the process, with the meta-loop bringing more rigor about evidence. The daily standup has no direct equivalent because the graph itself maintains continuous status visibility; status is observed by querying, not synchronized at 9am.
+
+What DDD makes precise that agile leaves informal: refinement gains a controlled vocabulary (`gap`, `contradiction`, `unimplementable`, `scope-issue`, `unverifiable`) with lifecycle and audit trail per feedback artifact; DoR becomes a computable predicate rather than a team checklist; re-opening ready is a structural feedback mechanism rather than a meeting and a backlog edit; and refinement stops being the PO bottleneck — the chain of decision roles can be filled by workers, shifting human attention to the actually hard decisions (prioritization, strategic choice) rather than mechanical specification work. The framework also addresses several common agile failure modes structurally: items stuck in "almost ready" surface their blocking conditions concretely because the predicate is computable; feedback surfaced in execution gets a permanent audit trail and aggregate pattern visibility rather than being lost; DoR drift across teams disappears because the predicate is shared infrastructure; and the refinement-execution gap closes because the same mechanism gates both.
+
+**Ready isn't a true terminus.** Value-anchoring still holds: every chain ultimately traces to a value action. Ready is the staging plateau where work pauses, possibly batches, possibly waits for a human gate, then continues. The done-chain begins where the ready-chain ends.
+
+**Ready is continuously evaluated.** Downstream feedback can invalidate it. If the verifier can't write verification because the design is underspecified, that's `gap` feedback flowing upstream — it re-opens the readiness gate on the focal artifact. The orchestration system pauses dependent done-chains, re-dispatches upstream roles, and re-converges on a new ready state before resuming. Drift detection plays the symmetric role from the other direction: when implementation reveals reality has moved, upstream context is no longer ready and needs revision.
+
+**Audit profiles differ at the two boundaries.** Ready-boundary audits ask "is this artifact ready for downstream context consumption?" — gap analysis, coverage, link completeness, acknowledgements, traceability. Done-boundary audits ask "did the action succeed and is the resulting state coherent?" — action-interpretation agreement, drift, post-action health. The same audit primitives compose into different gates at the two boundaries; see Audit below.
+
+**Autonomy commonly splits at the ready boundary.** The natural human-checkpoint location for many processes is at ready: the system fully drafts the upstream context (design, spec, verification approach, TCs), a human approves the ready bundle, then the done-chain proceeds. The inverse is also common for low-stakes work: human writes the spec, the system autonomously implements and ships. The ready boundary is architecturally privileged because it's where the most context is concentrated for a single review decision. Orchestration policy declares the split per-feature-type or per-domain.
+
 ### Decision
 
 A context-conditioned forecast made by a role. The unit of work in DDD.
@@ -237,7 +261,7 @@ A stage in the process with exit criteria. A sequencing mechanism for the graph.
 
 Phases let the graph express "X must complete before Y" at a coarser grain than individual artifact dependencies. Each phase has artifacts (typically a set of features or their equivalent), exit criteria (artifacts of type test or equivalent that must pass), and a gate state (open/locked). The system enforces phase gates by refusing to surface phase-N+1 work while phase-N exit criteria are failing.
 
-Phases are how value-delivery order gets encoded structurally.
+Phases are how value-delivery order gets encoded structurally. Phase exit criteria are a coarse-grained instance of the ready predicate (see Convergence State): phase N can't surface its successor's work until its constituent focal artifacts are in done state and its phase-level artifacts are in ready state.
 
 ### Acknowledgement
 
@@ -282,6 +306,8 @@ Every system can produce feedback for every other system. Feedback has its own s
 
 The lifecycle makes feedback completion trackable. Open feedback is a tracked metric; dropped feedback is a fitness function failure. Rejection from a target produces counter-feedback, which is itself an auditable signal — patterns of rejection from one direction suggest either producer miscalibration or target blind spots.
 
+Feedback also drives readiness re-evaluation. When feedback arrives against a focal artifact in a done-chain, the orchestration system re-evaluates the upstream ready predicate; if the feedback invalidates ready, dependent done-chains pause until the upstream re-converges. This is the structural connection between feedback flow and Convergence State.
+
 ### Bus
 
 The infrastructure that moves artifacts between systems. Distinct from the harness.
@@ -316,6 +342,8 @@ Audits produce findings with stable IDs (so suppressions survive across runs), s
 
 The audit principle has a typed version: for decision sessions, the audit asks whether the bundle gave enough basis for the decision; for action sessions, the audit asks whether the specification produced by upstream decision sessions was complete enough to execute against. Action session failures often trace back to decision session inadequacy — the implementer couldn't write working code because the ADR was ambiguous about an error path.
 
+**Audit primitives compose differently at the two convergence boundaries** (see Convergence State). At the **ready boundary**, preflight and gap analysis dominate: the question is whether the focal artifact's upstream context graph is complete and internally consistent enough for downstream work to proceed. Drift detection participates — stale upstream claims block ready. At the **done boundary**, action-interpretation agreement and drift dominate: did the value action's intended state change actually occur, and does the graph now correctly reflect reality? Same primitives, different compositions, evaluated at different points in the chain. The ready predicate and the done predicate are both computable functions over audit outcomes; they're not separate machinery, just different gates the same machinery produces.
+
 ### Harness
 
 The orchestration executor that invokes models. Outside the systems proper.
@@ -347,6 +375,8 @@ The core operations:
 - *subscribe_feedback_events* — notify when feedback artifacts are produced
 - *receive_inbound* — accept an inbound artifact from another system
 - *receive_feedback* — accept a feedback artifact from another system
+- *evaluate_ready* — compute the ready predicate for a focal artifact
+- *evaluate_done* — compute the done predicate for a focal artifact
 
 Plug-in systems implement the interface against their domain. The orchestration system, harness, and bus depend only on the interface. Adding a new process is implementing the interface and registering.
 
@@ -354,7 +384,7 @@ Plug-in systems implement the interface against their domain. The orchestration 
 
 A standing declaration about how the orchestration system behaves. A first-class artifact in the orchestration system.
 
-Policies cover role-to-model bindings, SLA thresholds, escalation policies, retry policies, autonomy levels, capacity allocations. Each policy is versioned, has provenance, and can be revised based on measurement evidence.
+Policies cover role-to-model bindings, SLA thresholds, escalation policies, retry policies, autonomy levels, capacity allocations, dispatch triggers (forward-dispatch subscriptions and readiness-re-evaluation subscriptions). Each policy is versioned, has provenance, and can be revised based on measurement evidence.
 
 The policy owner role consumes measurement evidence and produces policy update artifacts. Policy changes are themselves decisions, with their own context (the fit evidence), their own audit (does the evidence actually support the change), and their own provenance. At Level 5 autonomy, the policy owner role itself becomes AI-filled; at lower levels it is human-owned for governance reasons.
 
@@ -388,7 +418,7 @@ This metric is what makes the framework's audit principle measurable at action b
 
 Architectural quality metric with a declared threshold, evaluated continuously.
 
-Spec coverage, test coverage, exit-criteria coverage, formal-block coverage, gap density, drift density, gap-resolution rate, action-interpretation agreement rate, dispatch latency, escalation rate, feedback closure rate. Each metric has a threshold and a severity (error/warning). The CI gate fails when error-severity thresholds are breached. Trends are tracked over time.
+Spec coverage, test coverage, exit-criteria coverage, formal-block coverage, gap density, drift density, gap-resolution rate, action-interpretation agreement rate, dispatch latency, escalation rate, feedback closure rate, ready-state stability (rate at which ready predicates get invalidated by downstream feedback), done-chain duration from ready (cycle time for the done half of a chain). Each metric has a threshold and a severity (error/warning). The CI gate fails when error-severity thresholds are breached. Trends are tracked over time.
 
 Fitness functions operationalize "the graph stays honest at scale" — not just at any one moment, but over the system's lifetime.
 
@@ -404,6 +434,8 @@ A per-role property, not a per-system property. Currently 0-5, set based on meas
 - Level 5: AI-filled including the meta-work of defining and improving the role.
 
 The system's autonomy level is the floor — the level of its most-supervised role. The path to higher levels is per-role graduation: a role with consistent quality and stable performance moves up; a role with degrading evidence moves down. The orchestration system's policy declarations record the autonomy level per role and the evidence supporting the binding.
+
+The ready boundary is the architecturally privileged location for the most common human-in-the-loop checkpoint — see Convergence State for the typical autonomy-split pattern.
 
 ---
 
@@ -421,6 +453,8 @@ How the entities compose into work. A chain originates at the input boundary —
 8. If the artifact reaches a terminal value action, it crosses the bus to the next system.
 9. **Session records** accumulate measurement evidence; **policy** decisions revise **model bindings** and **autonomy levels** based on the evidence.
 10. Eventually, a terminal decision in a chain produces an artifact that triggers a **value action** — a deployment, a sent message, a closed deal. The world changes.
+
+Chains commonly land at a **ready convergence state** before continuing toward **done**. The ready-chain produces the validated upstream context (design, spec, verification approach, TCs, acknowledgements) and pauses; the done-chain runs from there through the value action and its interpretation. The pause at ready is the natural place for human checkpoints and batched commitment. Downstream feedback can re-open the ready state, causing the orchestration system to pause dependent done-chains until the upstream re-converges.
 
 The crucial pattern: most decisions don't trigger value actions. They condition other decisions. The graph is mostly internal forecasting; only the leaves cross out into the world (value actions), and only the roots cross in from it (sensing actions). The framework's discipline applies to itself — the orchestration system, the measurement system, the policy decisions are all themselves decisions, audited and improvable through the same mechanisms.
 

@@ -50,6 +50,18 @@ Two disciplines keep the graph honest:
 
 **Value anchoring.** Every subgraph must terminate in a value action. That's what keeps the system from sprawling, and it's a useful audit: if you can't trace a decision back to a value action it eventually serves, either the map is wrong or the decision shouldn't exist.
 
+## Chain termini: ready and done
+
+Value anchoring says every chain terminates in a value action. True in the long run, but the cadence of actual work distinguishes two terminus patterns, borrowed from agile's vocabulary:
+
+**Done.** A chain ends when its value action has fired, its outcome has been interpreted, and post-action audits pass. The world has changed and the system has confirmed it.
+
+**Ready.** A chain ends — or, more precisely, pauses — when the focal artifact's upstream context graph is complete: design, spec, verification approach, test criteria, acknowledgements, all coherent and audit-passing. No external action has occurred; the system has converged on a fully contextualized artifact suitable for downstream work.
+
+Ready isn't a true terminus. Value-anchoring still holds; the chain resumes from ready toward the value action. But ready is the natural plateau where work batches, where human checkpoints most naturally sit, and where downstream feedback can re-open upstream context. Ready is continuously evaluated, not stamped: if implementation reveals the design is wrong, feedback flows upstream and invalidates the ready state, pausing dependent done-chains until the upstream re-converges. The DAG isn't strictly forward.
+
+The two patterns have different audit profiles, different fitness signals, and different per-role autonomy implications. Naming them earns its keep because it's where a lot of the operational architecture hinges.
+
 ## Context has a form
 
 Written context — briefs, specs, decision logs, code, tickets — is LLMs' native medium and moves into them at near-zero loss. Visual context — sketches, mockups, layouts, the felt sense of a design — used to be a hard wall. Modern frontier multimodal models (Claude Opus 4.7 and peers) read images and design files with enough fidelity to participate in visually-driven roles. Smaller, cheaper models often don't, or do so poorly.
