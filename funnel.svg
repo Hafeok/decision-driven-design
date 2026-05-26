@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/>
+    </marker>
+    <marker id="arrow-light" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="760" fill="#fafaf8"/>
+
+  <!-- Title -->
+  <text x="600" y="50" text-anchor="middle" font-size="28" font-weight="600" fill="#111">The Funnel Principle</text>
+  <text x="600" y="80" text-anchor="middle" font-size="15" fill="#555">
+    Upstream decisions constrain downstream space &#183; The model needed shrinks &#183; The value action is code
+  </text>
+
+  <!-- Top axis: constraint density -->
+  <text x="530" y="125" text-anchor="middle" font-size="12" fill="#666" font-style="italic">constraint density increasing &#183; uncertainty resolving</text>
+  <line x1="140" y1="140" x2="920" y2="140" stroke="#888" stroke-width="1" marker-end="url(#arrow-light)"/>
+
+  <!-- Feedback curve: shows re-entry, not reversal -->
+  <path d="M 940 308 Q 600 165 330 250" stroke="#888" stroke-width="1.2" stroke-dasharray="5,4" fill="none" marker-end="url(#arrow-light)"/>
+  <text x="600" y="200" text-anchor="middle" font-size="11" fill="#888" font-style="italic">feedback flow: re-enters the funnel as input to a new chain</text>
+
+  <!-- The funnel - collapses to a point at (920, 335) -->
+  <polygon points="140,200 920,335 140,470" fill="#fff" stroke="#333" stroke-width="1.5"/>
+
+  <!-- Sensing / Request -->
+  <g>
+    <rect x="145" y="245" width="110" height="180" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
+    <text x="200" y="272" text-anchor="middle" font-size="13" font-weight="600" fill="#111">Sensing</text>
+    <text x="200" y="289" text-anchor="middle" font-size="11" fill="#555">/ Request</text>
+    <line x1="160" y1="302" x2="240" y2="302" stroke="#eee"/>
+    <text x="200" y="326" text-anchor="middle" font-size="10" fill="#777">open problem</text>
+    <text x="200" y="342" text-anchor="middle" font-size="10" fill="#777">space; signals</text>
+    <text x="200" y="358" text-anchor="middle" font-size="10" fill="#777">from the world</text>
+  </g>
+
+  <!-- Discovery / Architect -->
+  <g>
+    <rect x="275" y="260" width="110" height="150" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
+    <text x="330" y="287" text-anchor="middle" font-size="13" font-weight="600" fill="#111">Discovery</text>
+    <text x="330" y="304" text-anchor="middle" font-size="11" fill="#555">/ Architect</text>
+    <line x1="290" y1="317" x2="370" y2="317" stroke="#eee"/>
+    <text x="330" y="341" text-anchor="middle" font-size="10" fill="#777">synthesis over</text>
+    <text x="330" y="357" text-anchor="middle" font-size="10" fill="#777">ambiguous</text>
+    <text x="330" y="373" text-anchor="middle" font-size="10" fill="#777">multi-source</text>
+  </g>
+
+  <!-- Spec / Designer -->
+  <g>
+    <rect x="405" y="280" width="110" height="110" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
+    <text x="460" y="305" text-anchor="middle" font-size="13" font-weight="600" fill="#111">Spec</text>
+    <text x="460" y="322" text-anchor="middle" font-size="11" fill="#555">/ Designer</text>
+    <line x1="420" y1="334" x2="500" y2="334" stroke="#eee"/>
+    <text x="460" y="356" text-anchor="middle" font-size="10" fill="#777">pin remaining</text>
+    <text x="460" y="372" text-anchor="middle" font-size="10" fill="#777">problem-domain</text>
+  </g>
+
+  <!-- Implementer -->
+  <g>
+    <rect x="545" y="295" width="110" height="80" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
+    <text x="600" y="317" text-anchor="middle" font-size="13" font-weight="600" fill="#111">Implementer</text>
+    <line x1="560" y1="327" x2="640" y2="327" stroke="#eee"/>
+    <text x="600" y="346" text-anchor="middle" font-size="10" fill="#777">spec &#8594; code in</text>
+    <text x="600" y="362" text-anchor="middle" font-size="10" fill="#777">known idiom</text>
+  </g>
+
+  <!-- Deployer -->
+  <g>
+    <rect x="685" y="320" width="110" height="32" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
+    <text x="740" y="340" text-anchor="middle" font-size="12" font-weight="600" fill="#111">Deployer</text>
+  </g>
+
+  <!-- Value action: deterministic code, just OUTSIDE the funnel point -->
+  <g>
+    <rect x="940" y="308" width="190" height="54" rx="6" fill="#fff8ec" stroke="#c97c1e" stroke-width="2.5"/>
+    <text x="1035" y="332" text-anchor="middle" font-size="14" font-weight="700" fill="#8a5414">&#9733; VALUE ACTION</text>
+    <text x="1035" y="350" text-anchor="middle" font-size="11" fill="#8a5414">deterministic code</text>
+  </g>
+
+  <!-- Bottom axis: model capability timeline -->
+  <line x1="140" y1="510" x2="920" y2="510" stroke="#888" stroke-width="1" marker-end="url(#arrow-light)"/>
+
+  <!-- Model dots on the timeline, decreasing in size -->
+  <circle cx="200" cy="510" r="11" fill="#fff" stroke="#333" stroke-width="1.5"/>
+  <text x="200" y="535" text-anchor="middle" font-size="11" font-weight="600" fill="#333">frontier</text>
+  <text x="200" y="549" text-anchor="middle" font-size="10" fill="#777">multimodal</text>
+
+  <circle cx="330" cy="510" r="9" fill="#fff" stroke="#333" stroke-width="1.5"/>
+  <text x="330" y="535" text-anchor="middle" font-size="11" font-weight="600" fill="#333">strong</text>
+  <text x="330" y="549" text-anchor="middle" font-size="10" fill="#777">reasoning</text>
+
+  <circle cx="460" cy="510" r="7" fill="#fff" stroke="#333" stroke-width="1.5"/>
+  <text x="460" y="535" text-anchor="middle" font-size="11" font-weight="600" fill="#333">mid-tier</text>
+  <text x="460" y="549" text-anchor="middle" font-size="10" fill="#777">reasoning</text>
+
+  <circle cx="600" cy="510" r="5.5" fill="#fff" stroke="#333" stroke-width="1.5"/>
+  <text x="600" y="535" text-anchor="middle" font-size="11" font-weight="600" fill="#333">small</text>
+  <text x="600" y="549" text-anchor="middle" font-size="10" fill="#777">code-specialized</text>
+
+  <circle cx="740" cy="510" r="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
+  <text x="740" y="535" text-anchor="middle" font-size="11" font-weight="600" fill="#333">pure</text>
+  <text x="740" y="549" text-anchor="middle" font-size="10" fill="#777">execution</text>
+
+  <text x="530" y="575" text-anchor="middle" font-size="12" fill="#666" font-style="italic">model capability needed decreasing</text>
+
+  <!-- Patterns section -->
+  <text x="80" y="605" font-size="13" font-weight="600" fill="#999" letter-spacing="2">DECLARED PATTERNS &#8212; two wrinkles, one composition rule</text>
+  <line x1="80" y1="615" x2="1120" y2="615" stroke="#ddd" stroke-width="1"/>
+
+  <g>
+    <text x="80" y="640" font-size="12" font-weight="600" fill="#444">1. Implementer needs bigger model than its position predicts</text>
+    <text x="80" y="658" font-size="11" fill="#666">signals upstream under-specification. fix the spec (gap/contradiction feedback) or fix the bundle (codebase context).</text>
+  </g>
+
+  <g>
+    <text x="80" y="685" font-size="12" font-weight="600" fill="#444">2. Interpretation sessions can spike above their paired action</text>
+    <text x="80" y="703" font-size="11" fill="#666">interpreting user research or an ambiguous architectural call is heavier than the action it pairs with.</text>
+  </g>
+
+  <g>
+    <text x="80" y="730" font-size="12" font-weight="600" fill="#444">3. Feedback re-enters the funnel, it doesn&#8217;t reverse it</text>
+    <text x="80" y="748" font-size="11" fill="#666">operational findings land at an upstream role&#8217;s input and trigger a fresh forward chain. the funnel composes with itself.</text>
+  </g>
+</svg>

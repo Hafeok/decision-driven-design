@@ -32,14 +32,6 @@ This is also why LLMs feel categorically different from prior automation. Indust
 
 The dominant AI-factory framing reaches for assembly lines and workstations: discrete tasks, deterministic flow, machines that execute. That metaphor fits when the answer is known and the goal is throughput. It fits poorly when the goal is to *decide*, because decisions are shaped by which context arrives and in what form — not by repeatable mechanical steps. The factory isn't wrong; it's just answering a different question.
 
-## Contrast with the biology metaphor
-
-A second tempting metaphor extends the brain-as-forecaster framing further. If the LLM plays the role of the brain, perhaps the harness should play the role biology plays — generating drives that translate environmental state into context-appropriate goals, the way hunger or threat orient an animal's cognition. It's structurally appealing, and a clean extension of the framing.
-
-DDD doesn't take this path. Biological drives exist because organisms are single persistent entities, embodied in a specific substrate, allocating scarce resources across competing objectives in a continuous environment. Those four preconditions are precisely what DDD's session boundary removes: sessions are stateless, workers are interchangeable, costs are budgeted by explicit policy, and continuity lives in the graph rather than in any agent. There is no persistent entity that needs regulating, so the regulatory mechanism isn't needed.
-
-The metaphor is more useful as a critique tool — asking "is this behavior an implicit drive or a declared decision?" can surface real audit gaps — than as a design directive. The full argument, including why agent-loop frameworks tend to re-import biology's problems whether they want to or not, is in [05-biology-contrast.md](05-biology-contrast.md).
-
 ## The alternative: a digital twin of the process
 
 Map the real process — the roles, the decisions each role makes, and the artifacts that flow between them (briefs, specs, designs, reviews, tickets, decision records). Artifacts are not incidental; they are the medium by which context transfers between roles. Once the process and its artifacts are mapped, we have a digital twin: a structure we can simulate, with LLMs filling roles and producing the same artifacts a competent human would.
@@ -86,13 +78,33 @@ The role-as-context-bundle framing extends naturally: the bundle dictates the mo
 
 Treat model selection as a per-role design decision, not a deployment detail.
 
+## The funnel: model capability tracks constraint density
+
+Model selection per-role isn't independent across roles in a chain. There's a structural pattern that emerges when the chain is well-designed: constraint density rises monotonically from the input boundary to the value action, and the model capability needed falls correspondingly. Discovery roles work in open problem space and need frontier reasoning. Architecture and design narrow the space through synthesis. Specifications pin remaining problem-domain decisions. Implementation translates a well-specified problem into code in a known idiom. Deployment, at the limit, is `terraform apply`. The value action itself is deterministic code.
+
+![The funnel principle: constraint density rises and model capability falls from the sensing/request boundary to the value action terminus](assets/funnel.svg)
+
+The principle is sharper than "smaller models can do simpler things." The claim is that upstream decisions reduce the cognitive load downstream, and a well-designed chain pushes hard calls upstream so the terminus needs only execution. If implementation requires a frontier model, the question isn't whether the model is good enough — it's whether the spec pinned the calls that should have been pinned. The funnel is a design discipline before it's a model-selection heuristic.
+
+This turns model bindings into a forcing function on chain rigor. Bind the implementer role to a small code-specialized model. If it fails, the first move is upstream — tighten the spec, enrich the bundle — not reach for a bigger model. The binding makes under-specification visible. And the framework already measures the relevant signals: `gap` and `contradiction` feedback flag spec incompleteness; idiomatic drift and amendment churn flag bundle incompleteness; action-interpretation disagreement quantifies the gap.
+
+Two wrinkles and one composition rule are worth declaring rather than ignoring.
+
+**Generative actions late in the chain.** Implementation produces a complex artifact even from a perfect spec — naming, structure, integration with existing code. Some baseline implementer judgment doesn't go away because it's about the implementation domain, not the problem domain. The spec encodes decisions over the problem; the bundle (including codebase context) supports decisions over implementation. The asymptote isn't "spec encodes everything" — that's a 4GL, and it has been tried. It's "spec encodes every problem-domain decision, leaving only implementation-domain decisions to the implementer."
+
+**Interpretation sessions can spike.** A value-action interpretation ("did deploy succeed") is small-model trivial. An interpretation of user research or an ambiguous architectural call can need more reasoning than the action it pairs with. These are bumps in the funnel, not violations of it — they're declared, not mysterious.
+
+**Feedback re-enters the funnel rather than reversing it.** An operational finding doesn't traverse the funnel backwards on its way upstream — it lands at an upstream role's input and triggers a fresh forward chain. The receiving role uses its normal binding. Feedback isn't counter-funnel; the funnel just composes with itself.
+
+The design target is the bottom of the funnel: the value action should be deterministic code. Anywhere the value action still requires LLM judgment, an upstream decision was deferred into execution. The funnel discipline pushes that judgment back where it belongs.
+
 ## Design principle
 
 1. **Identify the value actions.** What does the organization actually produce that creates value.
 2. **Trace backwards.** For each value action, what decisions had to happen for it to occur, and in what order. The chain ends at standing authority, at trivial execution, or at a sensing action — the input boundary where external reality enters the graph.
 3. **Map the roles and artifacts.** Each decision belongs to a role; each role consumes and produces artifacts. Artifacts are the interface.
 4. **Classify artifact form.** Text, visual, structured, mixed — this constrains which models can fill the role.
-5. **Choose a model per role** whose capabilities match the context shape and decision profile.
+5. **Choose a model per role** whose capabilities match the context shape and decision profile. Along a single chain, this typically follows the funnel — bigger models upstream, smaller toward the value action.
 6. **Wire them up.** Feed each role its context, and let the artifacts flow.
 
 ## Why this works
@@ -101,5 +113,6 @@ Treat model selection as a per-role design decision, not a deployment detail.
 - Artifacts make context transfer concrete and inspectable. If a step fails, you can read what it had to work with — and what it didn't.
 - Stable artifact schemas make the system composable. Roles can be swapped, models upgraded, branches added, without rewriting the graph.
 - Value anchoring prevents sprawl. Every chain has to pay out in something the organization actually values.
+- The funnel turns model bindings into a forcing function on upstream rigor — under-specification surfaces as model-size escalation rather than as silent failures.
 - It gives an honest failure criterion. When an LLM step underperforms, the first question is "did it have the context a competent human in this role would have?" — not "is the model good enough?" Most of the time, the gap is contextual, and that's where the engineering is.
-- It's honest about the problem. We're not building a faster assembly line. We're not building a body either. We're building a system that can decide.
+- It's honest about the problem. We're not building a faster assembly line. We're building a system that can decide.
