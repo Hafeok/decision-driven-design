@@ -40,7 +40,7 @@ Decision-Driven Design is what comes after the factory metaphor stops being usef
 
 ## Reading order
 
-The four documents in [`/docs`](docs) build on each other. Read them in order if you're new, or jump to whichever question you're answering.
+The five documents in [`/docs`](docs) build on each other. Read them in order if you're new, or jump to whichever question you're answering.
 
 ### [1. Foundations](docs/01-foundations.md) — *start here*
 
@@ -57,6 +57,10 @@ How the framework maps to the standard 0–5 autonomy ladder, why autonomy is pe
 ### [4. Implementation](docs/04-implementation.md)
 
 The architecture for actually building a DDD-shaped system: Rust + Oxigraph (RDF triple store), curated SPARQL queries for bundle assembly, the event substrate, the worker contract, emergent-decisions-during-action, the meta-loop, per-component autonomy, the model catalog. Concrete, opinionated, technology choices included. Read this when you want to build something.
+
+### [5. The biology contrast](docs/05-biology-contrast.md)
+
+Why DDD doesn't model the harness as a body. The biology metaphor — LLM as brain, harness as regulatory body, drives as the translation between world-state and goal-state — is a structurally tempting extension of the brain-as-forecaster framing. It fails because biological drives exist to solve regulatory problems (persistence, embodiment, scarcity, continuity) that DDD's stateless session boundary architecturally removes. A short positioning piece; can be read right after foundations if the contrast with agent-loop frameworks is what you want to sharpen.
 
 ## Reference implementation
 
