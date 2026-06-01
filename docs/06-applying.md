@@ -1,5 +1,7 @@
 # Applying DDD to a Real Process
 
+> See the [Glossary](glossary.md) for borrowed terms (DAG, DMN, RDF, MCP, OCI, …).
+
 How to turn an actual process into a DDD model: start at the one thing the process produces, walk backward one hop at a time, and let the artifacts, roles, and decisions fall out of a small set of questions you ask at each node.
 
 This is the companion to [the notation](05-notation.md). The notation is how you *draw* the result; this is how you *derive* it. The method is value-backward by construction — "start from what the organization actually produces, and trace back through the decisions that had to occur for it to happen" — because anchoring on the value action is what keeps the map from sprawling into everything-anyone-ever-does.

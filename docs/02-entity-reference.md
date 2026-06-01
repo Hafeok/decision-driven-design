@@ -1,5 +1,7 @@
 # Decision-Driven Design: Entity Reference
 
+> See the [Glossary](glossary.md) for borrowed terms (DAG, DMN, RDF, MCP, OCI, …).
+
 The framework's vocabulary, organized around its central inversion: decisions are the work, value actions are the terminus.
 
 ## The inversion

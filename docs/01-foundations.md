@@ -1,5 +1,7 @@
 # Decision-Driven Design
 
+> See the [Glossary](glossary.md) for borrowed terms (DAG, DMN, RDF, MCP, OCI, …).
+
 A framework for building systems with LLMs.
 
 ## Premise: LLMs as forecasters

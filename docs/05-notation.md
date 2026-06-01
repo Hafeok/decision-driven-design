@@ -1,5 +1,7 @@
 # The DDD Notation
 
+> See the [Glossary](glossary.md) for borrowed terms (DAG, DMN, RDF, MCP, OCI, …).
+
 A design language for drawing decision graphs, roles, artifacts, and systems — and a thin set of conventions for rendering them inside this repo.
 
 This document does not invent a visual grammar. It borrows three established ones, redefines a small number of node semantics, and adds the handful of glyphs no standard has. The result is a profile — the way SysML is a profile of UML — not a new UML. Everything here renders as [Mermaid](https://mermaid.js.org/) in a fenced code block, which means GitHub renders it, diffs it, and lets contributors author diagrams as text rather than in a drawing tool. It is the formalization of what [`assets/overview.svg`](assets/overview.svg) already draws by hand.

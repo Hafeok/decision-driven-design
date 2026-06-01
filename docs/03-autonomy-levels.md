@@ -1,5 +1,7 @@
 # DDD and the Five Levels of AI Autonomy
 
+> See the [Glossary](glossary.md) for borrowed terms (DAG, DMN, RDF, MCP, OCI, …).
+
 How the architecture maps to the standard autonomy framework, what each level looks like in DDD terms, and why DDD is the structure that makes Levels 4 and 5 actually achievable rather than aspirational.
 
 ## The framework

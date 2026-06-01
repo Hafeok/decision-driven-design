@@ -1,8 +1,8 @@
 # Decision-Driven Design
 
-**A framework for building systems with LLMs.**
+**A framework for LLM systems that earn their autonomy.**
 
-Decisions are the unit of work. Artifacts are the unit of composition. Value actions are the terminus.
+Real organizational work is a graph of decisions terminating in value actions, not a single agent loop. DDD names every piece — roles, artifacts, sessions, audits — and gives each one a measurable path from human-checkpointed to fully autonomous.
 
 ---
 
@@ -41,6 +41,8 @@ Decision-Driven Design is what comes after the factory metaphor stops being usef
 ## Reading order
 
 The documents in [`/docs`](docs) build on each other. Read them in order if you're new, or jump to whichever question you're answering. The first two establish the framework; **05–06 are a modeling toolkit** (how to draw and how to derive a model) that builds directly on the Entity Reference; 03–04 cover autonomy and the system implementation.
+
+> Borrowed terms (DAG, DMN, RDF, MCP, OCI, …) are defined in the [Glossary](docs/glossary.md) — open it in a side tab if any of those acronyms are unfamiliar.
 
 ### [1. Foundations](docs/01-foundations.md) — *start here*
 

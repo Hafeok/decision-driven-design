@@ -1,5 +1,7 @@
 # DDD and the biology contrast
 
+> See the [Glossary](glossary.md) for borrowed terms (DAG, DMN, RDF, MCP, OCI, …).
+
 Why DDD doesn't model the harness as a body, what the biology metaphor gets right, and what it would cost to take seriously.
 
 ## The metaphor and its appeal
