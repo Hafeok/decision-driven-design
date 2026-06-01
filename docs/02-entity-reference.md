@@ -14,6 +14,24 @@ The vocabulary below makes this geometry precise.
 
 ---
 
+## Index
+
+**Primary Entities** — the actors, work units, and outputs of the graph.
+[Process](#process) · [Value Action](#value-action) · [Sensing Action](#sensing-action) · [Convergence State](#convergence-state) · [Decision](#decision) · [Action](#action) · [Interpretation](#interpretation) · [Role](#role) · [Worker](#worker) · [Domain Knowledge](#domain-knowledge) · [Artifact](#artifact) · [Context](#context) · [Bundle](#bundle) · [Session](#session) · [System](#system)
+
+**Structural Entities** — the shape and connection of the primary entities.
+[Schema](#schema) · [Prompt](#prompt) · [Eligible](#eligible) · [Edge](#edge) · [Provenance](#provenance) · [Form](#form) · [Domain](#domain) · [Phase](#phase) · [Acknowledgement](#acknowledgement)
+
+**Flow Entities** — how artifacts and signals move through and between systems.
+[Flow Class](#flow-class) · [Feedback](#feedback) · [Bus](#bus) · [Inter-system Schema](#inter-system-schema)
+
+**Operational Entities** — the runtime and process layer.
+[Audit](#audit) · [Harness](#harness) · [Transport](#transport) · [Interface (System Interface)](#interface-system-interface) · [Policy](#policy) · [Session Record](#session-record) · [Action-Interpretation Agreement](#action-interpretation-agreement) · [Fitness Function](#fitness-function) · [Autonomy Level](#autonomy-level)
+
+[The Lifecycle](#the-lifecycle) — how the entities compose into work.
+
+---
+
 ## Primary Entities
 
 ### Process

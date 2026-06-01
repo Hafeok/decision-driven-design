@@ -8,7 +8,7 @@ The foundational DDD documents articulate a framework: decisions are the work, a
 
 What follows is the implementation architecture that resulted from working through how to actually build a DDD-shaped system. It covers technology choices, structural patterns, and the few non-obvious decisions that shape everything downstream. It is not a tutorial; it is the implementation analogue of the entity reference — vocabulary and patterns to refer back to.
 
-The concrete system this architecture targets is **pipeline-cli** (the orchestration system), **product-cli** (the Engineering process system, which already exists), and **oxi-events** (a reusable event substrate extracted as a separate Rust crate). Slice 1 bounds for that work are in a companion document.
+The concrete system this architecture targets is **decision-cli** (the orchestration system), **product-cli** (the Engineering process system, which already exists), and **oxi-events** (a reusable event substrate extracted as a separate Rust crate). Slice 1 bounds for that work are in a companion document.
 
 ---
 
@@ -16,7 +16,7 @@ The concrete system this architecture targets is **pipeline-cli** (the orchestra
 
 The choice is uniform across the orchestration layer and the system implementations:
 
-- **Rust** for the harness, orchestration system, and process system implementations (pipeline-cli, product-cli, future plug-ins). Performance and type safety matter at the orchestration layer; durability and audit-criticality of routing decisions argue for strong guarantees.
+- **Rust** for the harness, orchestration system, and process system implementations (decision-cli, product-cli, future plug-ins). Performance and type safety matter at the orchestration layer; durability and audit-criticality of routing decisions argue for strong guarantees.
 - **Oxigraph** as the embedded RDF triple store and SPARQL engine. Apache 2.0, Rust-native, embeddable, SPARQL 1.1 conformant.
 - **Python** for LLM-driven workers (both decision and action). The Anthropic and OpenAI SDKs, structured output libraries (Pydantic, instructor, BAML), and the prompt-engineering / eval ecosystem are most mature in Python.
 - **Any language for mechanical action workers** — workers communicate with the orchestration layer via a stable JSON contract over the message transport. Language follows ecosystem fit for the action (Terraform for deployment, the codebase's language for test runners, etc.).
@@ -136,7 +136,7 @@ Each signal drives an upstream change. And each signal that arrives during a don
 
 Polling is a workaround, not a design. The native pattern: graph mutations are events; subscriptions over the graph are derived event streams; consumers react.
 
-Architecture: all mutations route through a single chokepoint — pipeline-cli's `GraphWriter`. Every transaction follows this shape:
+Architecture: all mutations route through a single chokepoint — decision-cli's `GraphWriter`. Every transaction follows this shape:
 
 1. Write triples (with named graph for provenance)
 2. Identify which subscriptions are affected (by artifact type touched)
@@ -240,13 +240,13 @@ Together a `Model` entry, a `Prompt` entry, and a permission scope are the three
 
 ---
 
-## 10. System composition: pipeline-cli, product-cli, oxi-events
+## 10. System composition: decision-cli, product-cli, oxi-events
 
 The concrete shape of the architecture:
 
 **product-cli** — the system implementation for the Engineering process. Already exists; manages feature/ADR/TC/dep artifacts, builds the derived in-memory graph, exports RDF, assembles curated context bundles, runs preflight/gap/drift audits, computes fitness metrics, serves the engineering graph via MCP. Its PRD draws an explicit line: *"Product does not invoke agents."*
 
-**pipeline-cli** — the orchestration system. Invokes agents, records sessions, routes artifacts between roles, manages model bindings, manages policy, runs the event substrate, surfaces work to humans for checkpoints, improves itself via the meta-loop. *Does not own engineering artifact knowledge* — calls product-cli for what product-cli already knows.
+**decision-cli** — the orchestration system. Invokes agents, records sessions, routes artifacts between roles, manages model bindings, manages policy, runs the event substrate, surfaces work to humans for checkpoints, improves itself via the meta-loop. *Does not own engineering artifact knowledge* — calls product-cli for what product-cli already knows.
 
 **oxi-events** — the event substrate, extracted as a separate Rust crate intended for community contribution. Provides `GraphWriter`, `Subscription`, the outbox-pattern publisher, and delivery transports. No DDD-specific vocabulary; speaks only of mutations, subscriptions, events, delivery.
 
@@ -254,13 +254,13 @@ The concrete shape of the architecture:
 
 Governs the dependency direction:
 
-- oxi-events depends only on substrates more stable than itself (oxigraph, tokio, tokio-stream, axum, serde, tracing). No dependency on pipeline-cli; no awareness of DDD concepts.
-- pipeline-cli depends on oxi-events and on product-cli (initially via subprocess invocation).
-- The framework crate lives inside pipeline-cli's workspace initially; separate-repo extraction is deferred until the API has been pressure-tested by more than one consumer.
+- oxi-events depends only on substrates more stable than itself (oxigraph, tokio, tokio-stream, axum, serde, tracing). No dependency on decision-cli; no awareness of DDD concepts.
+- decision-cli depends on oxi-events and on product-cli (initially via subprocess invocation).
+- The framework crate lives inside decision-cli's workspace initially; separate-repo extraction is deferred until the API has been pressure-tested by more than one consumer.
 
 ### The platform property
 
-pipeline-cli + product-cli is a software engineering platform, not a single-product tool. The first product it operates on is itself. The second is the oxi-events framework it extracts. The third is whatever else you point it at. The DDD recursion — process that operates on itself — generalizes to "process that operates on any product, including its own internals." The OSS maintenance burden of extracting oxi-events is absorbed into the same loop that runs everything else.
+decision-cli + product-cli is a software engineering platform, not a single-product tool. The first product it operates on is itself. The second is the oxi-events framework it extracts. The third is whatever else you point it at. The DDD recursion — process that operates on itself — generalizes to "process that operates on any product, including its own internals." The OSS maintenance burden of extracting oxi-events is absorbed into the same loop that runs everything else.
 
 ---
 
@@ -353,10 +353,10 @@ Most attempts at autonomous AI jump straight to Level 5 ambitions and fail becau
 
 A few decisions surfaced during design that may shift as slice 1 contacts reality:
 
-- **Where does `CodeChange` live?** It's an Engineering artifact about a feature, which argues for product-cli's schema. But the session that produced it lives in pipeline-cli. Slice 1 leans toward extending product-cli with the new type for symmetry; could reverse if it creates friction.
+- **Where does `CodeChange` live?** It's an Engineering artifact about a feature, which argues for product-cli's schema. But the session that produced it lives in decision-cli. Slice 1 leans toward extending product-cli with the new type for symmetry; could reverse if it creates friction.
 - **Subscription evaluation cost at scale.** Currently expected to be cheap (~10–100 subscriptions, ~10–100 mutations per session). If subscription count grows substantially, true incremental view maintenance (differential dataflow style) may be needed rather than naive re-evaluation. Readiness re-evaluation subscriptions are particularly worth watching here, since they may need to recompute predicates over larger sub-graphs.
 - **NATS or no NATS.** Current decision is no broker. If push-latency requirements ever exceed what graph-poll-on-event-delivery can provide, NATS with JetStream is the licensing-clean addition. State stays in Oxigraph; NATS only carries wake-up signals.
-- **When to extract oxi-events to a separate repo.** Currently lives in pipeline-cli's workspace. Right time is "after a second consumer exists and the API has been pressure-tested" — concretely, sometime around slice 3 or 4.
+- **When to extract oxi-events to a separate repo.** Currently lives in decision-cli's workspace. Right time is "after a second consumer exists and the API has been pressure-tested" — concretely, sometime around slice 3 or 4.
 - **Ready predicate computation cost.** Each ready predicate is a function over the focal artifact's upstream context — its audit results, its acknowledgements, its linked TCs. For deeply-nested focal artifacts (a feature with many sub-features and many TCs), the predicate evaluation could be expensive. Cache invalidation on mutation is straightforward via the subscription mechanism, but the cache itself is a design point that will need pressure-testing in slice 2.
 
 ---

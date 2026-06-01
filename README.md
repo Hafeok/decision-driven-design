@@ -70,11 +70,16 @@ The method: pick one value action, walk backward one hop at a time, and let arti
 
 Why DDD doesn't model the harness as a body. The biology metaphor — brain + drives + embodiment — is appealing once you frame the LLM as a forecaster, but biological drives exist to solve a regulatory problem whose preconditions (persistence, embodiment, scarcity, continuity) are exactly what DDD's stateless-session architecture removes. A companion piece, useful for sharpening what DDD chooses *not* to be and for diagnosing implicit drives sneaking into a system.
 
+### [Glossary](docs/glossary.md) — borrowed and external concepts
+
+Short definitions for the terms the docs use but don't define, because they come from outside the framework: DAG, DMN/DRD, BPMN, C4, Mermaid, RDF/SPARQL, SHACL, MCP, OCI, "frontier model." The Entity Reference covers DDD's own vocabulary; this page covers everything the docs *reference* from established work elsewhere.
+
 ## Reference implementation
 
-Work-in-progress reference implementation: **[github.com/Hafeok/product-cli](https://github.com/Hafeok/product-cli)**.
+Work-in-progress reference implementations:
 
-product-cli is the system implementation for the Engineering process — the part that owns features, ADRs, test criteria, dependencies, builds the derived graph, assembles curated bundles, runs audits, and serves the engineering graph. The companion orchestration system (pipeline-cli) is being designed against the patterns in `04-implementation.md`.
+- **[github.com/Hafeok/product-cli](https://github.com/Hafeok/product-cli)** — the system implementation for the Engineering process. Owns features, ADRs, test criteria, and dependencies; builds the derived graph; assembles curated bundles; runs audits; serves the engineering graph.
+- **[github.com/Hafeok/decision-cli](https://github.com/Hafeok/decision-cli)** — the companion orchestration system, being designed against the patterns in `04-implementation.md`.
 
 ## Status
 
