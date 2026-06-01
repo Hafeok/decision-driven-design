@@ -21,7 +21,7 @@ This isn't a refinement of agentic design. It's a different geometry.
 | | Agent-centric design | Decision-Driven Design |
 |---|---|---|
 | **Primary unit** | The tool call | The decision |
-| **System shape** | An agent loop | A DAG of roles |
+| **System shape** | An agent loop | A [DAG](docs/glossary.md#dag--directed-acyclic-graph) of roles |
 | **Role boundary** | "The agent" | Many roles, swappable |
 | **Composition** | Tool wrapping | Artifacts with schemas |
 | **What's audited** | The trajectory | Each session, each bundle, each artifact |
