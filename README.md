@@ -58,7 +58,7 @@ How the framework maps to the standard 0–5 autonomy ladder, why autonomy is pe
 
 ### [4. Implementation](docs/04-implementation.md)
 
-The architecture for actually building a DDD-shaped system: Rust + Oxigraph (RDF triple store), curated SPARQL queries for bundle assembly, the event substrate, the worker contract, emergent-decisions-during-action, the meta-loop, per-component autonomy, the model catalog. Concrete, opinionated, technology choices included. Read this when you want to build something.
+The architecture for actually building a DDD-shaped system, framed by the *capabilities* it requires — artifact graph, declarative queries, shape constraints, provenance model, session-scoped lineage, durable event substrate — rather than the products that supply them. A concrete reference-implementation stack (Rust + Oxigraph + SHACL + PROV-O + Python LLM workers) is called out where it shaped the design, but the patterns are meant to survive specific technology choices. Covers bundle assembly, the worker contract, emergent-decisions-during-action, the meta-loop, per-component autonomy, and the model and prompt catalogs. Read this when you want to build something.
 
 ### [5. Notation](docs/05-notation.md)
 
