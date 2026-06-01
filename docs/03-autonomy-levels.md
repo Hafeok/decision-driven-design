@@ -81,7 +81,7 @@ AI fills all roles within a bounded process; humans intervene only on signals th
 
 DDD's full architecture is what makes Level 4 reachable. The pieces that matter:
 
-**The orchestration system makes the boundary explicit.** "Autonomous in defined domain" requires the domain to be defined. The orchestration system's policy declarations — role-to-model bindings, escalation triggers, capacity limits — are the explicit definition. Outside the declared boundary, the orchestration system escalates rather than acting.
+**The orchestration system makes the boundary explicit.** "Autonomous in defined domain" requires the domain to be defined. The orchestration system's policy declarations — role-to-filler bindings, escalation triggers, capacity limits — are the explicit definition. Outside the declared boundary, the orchestration system escalates rather than acting.
 
 **Measurement-driven binding decisions replace human checkpoints with confident bindings.** A role that has run thousands of sessions with consistent quality, low downstream rejection, and stable performance graduates from human-checkpointed to autonomously bound. The graduation is evidence-based and reversible.
 

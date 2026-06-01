@@ -144,11 +144,39 @@ A role has these properties:
 - **Action direction** (for action roles) — value, sensing, or internal
 - **Interpretation pairing** (for action roles) — which decision role interprets its outputs
 - **Autonomy level** — currently 0-5, set per-role based on measurement evidence
-- **Model binding** — the model currently filling this role, when AI-filled
+- **Filler binding** — the human or worker filling this role; a worker carries a model, a prompt, and a permission scope (see Worker)
 
 Form requirements determine which models can fill the role. A design lead consuming Figma files needs a frontier multimodal model. A ticket triager consuming structured text needs almost nothing.
 
-Note the vocabulary clash with current LLM frameworks: "agent" in that world means the whole reasoning-and-acting loop; in DDD, an agent is the implementation choice for filling a single role. The system is composed of many roles, only some of which are filled by agents.
+When a role is AI-filled, the thing filling it is a worker (see Worker). The system is composed of many roles, only some of which are filled by workers; one role can be filled by a human or a worker interchangeably, because the interface is the artifact, not the filler.
+
+### Worker
+
+The concrete realization of a role when an LLM fills it. A role is filled by either a human or a worker.
+
+A worker is the binding of three things: a model (selected by capability tag, not by name), a prompt (the versioned execution guidance), and a permission scope (the tools and side effects it may use). It runs as the stateless `bundle → artifact` function of the worker contract (implementation doc §5); the model and prompt are resolved from the binding at dispatch, not baked into the worker.
+
+A worker sits behind the role interface. The only thing crossing a role boundary is the artifact, and that is governed by the role's authority — not the worker. Swap the worker, or replace it with a human, and the downstream graph is unaffected. This is the single-interface principle made literal: humans and workers are two fillers of one interface.
+
+Two authorities stay separate:
+- **Artifact authority** — what may be produced. Lives on the role. Interface-level; identical whether a human or a worker fills it.
+- **Permission scope** — what may be touched during execution: which tools and effect-producing actions, which secrets, which sandbox. Lives on the worker. Implementation-level.
+
+A worker binding is *valid* when its prompt targets the role, its model satisfies the role's form requirements and the prompt's capability requirements, and its permission scope covers the role's value actions. Validity is a static check. *Eligibility* — whether the binding is trusted to run, and at what autonomy level — is earned separately from session evidence, the same qualified/candidate/deprecated lifecycle the model catalog uses.
+
+Vocabulary note: "agent" in current LLM frameworks means the whole reasoning-and-acting loop; in DDD that loop is a worker filling one role.
+
+### Domain Knowledge
+
+An artifact carrying out-of-graph domain expertise, produced to condition a downstream decision.
+
+Some decisions need knowledge that is neither in the graph nor in the model — current platform specifics, a specialist's read on a design. The rule is that such knowledge enters only through the bundle, never through a live call inside the session that consumes it: a live retrieval mid-session would make the worker's output depend on something its bundle doesn't capture, breaking the replayability of the session.
+
+Knowledge therefore enters in one of two frozen forms, chosen by whether producing it is a judgment:
+- When producing it is itself a decision — "does this architecture hold up against the platform's guidance, and what should change" — it is the output of a subject-matter-expert *role* (a human, or a worker bound to a knowledge source), captured as a Domain Knowledge artifact that downstream bundles consume.
+- When it is a fact lookup with a single correct answer, the bundle assembler retrieves it at assembly time and freezes it into the bundle, hashed with the rest.
+
+A Domain Knowledge artifact carries snapshot provenance for its out-of-graph origin — the source, the query, the time, a content hash — so it stays auditable after the live source has moved on. A subject-matter expert is not new machinery: it is a role, defined by what it decides, producing a Domain Knowledge artifact (forward-flow) or a verification verdict (gating). The distinction that decides where knowledge goes is decision-content first — if there is a call being made, it owes an artifact; if any two lookups would agree, it belongs in bundle assembly.
 
 ### Artifact
 
@@ -218,6 +246,26 @@ These describe the shape and connection of primary entities.
 The contract for an artifact type. Fields (required, optional, format), edges (typed relationships to other artifact types), constraints (validation rules), provenance fields.
 
 A schema is the interface contract that lets any role consume the output of any other. Stable schemas are what make the system composable. Schemas evolve; the system tracks schema versions and migrates artifacts forward.
+
+The schema is owned by the role and versioned with it. Because the role owns the schema, the schema-bound portion of a worker's prompt is derived from it rather than written by hand — schema and prompt cannot drift. A schema-version change moves the target of the work, so it resets the quality baseline for that role rather than being compared across the boundary; a prompt or model change, which holds the target fixed, does not.
+
+### Prompt
+
+The versioned execution guidance for one role. The *how* that pairs with the schema's *what*.
+
+Prompts live in a catalog parallel to the model catalog: identity-versioned, eligibility-tracked, with provenance. A prompt targets exactly one role; reuse across roles is by composition (a shared fragment plus a role-specific body), not by one prompt claiming several roles.
+
+The split that earns the prompt its own catalog: the role owns the output schema — what a good artifact *is* — so the prompt focuses on execution, how to reason toward the artifact, and the schema-bound part is derived from the role's authority rather than restated.
+
+A prompt declares **capability requirements** against model capability tags (tool-calling, vision, long-context, a reasoning-effort floor) — never specific model identities, which would re-couple the model and prompt catalogs and go stale on every model release. Whether a given model and prompt actually work together is a property of the worker, proven by eligibility, not asserted on the prompt.
+
+Holding schema, model, and bundle fixed, two prompt versions are directly comparable on output quality. The prompt version is therefore the measurement unit for execution, and prompt revision is a normal instance of the meta-loop — measure, propose, validate, apply.
+
+### Eligible
+
+The shared shape of every registerable, versioned, evidence-gated catalog entry — the abstract supertype behind the model catalog, the worker registry, and the prompt catalog.
+
+Each carries identity and version, a capability surface (capability *tags* for what it offers, capability *requirements* for what it needs), an eligibility status earned through a registration audit (qualified, candidate, deprecated, pulled), and provenance. None of them hard-references another catalog's identities — capabilities are the join, eligibility is the proof. A newly qualified model is automatically a candidate for any prompt whose requirements it meets, with no edits to existing entries.
 
 ### Edge
 
@@ -384,7 +432,7 @@ Plug-in systems implement the interface against their domain. The orchestration 
 
 A standing declaration about how the orchestration system behaves. A first-class artifact in the orchestration system.
 
-Policies cover role-to-model bindings, SLA thresholds, escalation policies, retry policies, autonomy levels, capacity allocations, dispatch triggers (forward-dispatch subscriptions and readiness-re-evaluation subscriptions). Each policy is versioned, has provenance, and can be revised based on measurement evidence.
+Policies cover role-to-filler bindings (for a worker: its model, prompt, and permission scope), SLA thresholds, escalation policies, retry policies, autonomy levels, capacity allocations, dispatch triggers (forward-dispatch subscriptions and readiness-re-evaluation subscriptions). Each policy is versioned, has provenance, and can be revised based on measurement evidence.
 
 The policy owner role consumes measurement evidence and produces policy update artifacts. Policy changes are themselves decisions, with their own context (the fit evidence), their own audit (does the evidence actually support the change), and their own provenance. At Level 5 autonomy, the policy owner role itself becomes AI-filled; at lower levels it is human-owned for governance reasons.
 
@@ -394,7 +442,7 @@ The measurement artifact produced for every session. Lives in the orchestration 
 
 Four classes of measurement:
 
-**Identity and context.** Session ID, system, role, artifact ID, model + version, configuration, bundle hash, bundle size, bundle form profile, timestamps, dispatcher rationale.
+**Identity and context.** Session ID, system, role, artifact ID, model + version, prompt + version, schema version, configuration, bundle hash, bundle size, bundle form profile, timestamps, dispatcher rationale. Stamping the full version tuple (model, prompt, schema, bundle) is what lets a later quality change be attributed to the one parameter that moved; a change touching two of them at once is recorded as confounded.
 
 **Cost.** Input tokens, output tokens, wall-clock time, model time, retry count, tool call costs, dollar cost.
 

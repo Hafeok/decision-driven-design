@@ -106,7 +106,9 @@ The flavor categorization in the entity reference (pure_execution / generative /
 
 For LLM workers that use tools mid-session (an implementer writing code, running tests, iterating), tools are local to the worker, implemented in whatever language fits. The whole tool-use exchange is one session from the harness's perspective: one dispatch, one artifact returned, one session record capturing the full tool-call lineage.
 
-Worker registration is the orchestration analogue of model selection: workers announce capabilities (`adr-writer`, `verification-designer`, `tc-writer`, `code-writer`, `email-sender`, `terraform-applier`, `log-query`, `metric-pull`) on a registry the orchestration system reads. Roles bind to capabilities, not specific worker instances. The binding from role to specific worker is an orchestration policy decision — same mechanism as model selection, same measurement evidence, same versioning.
+These mid-session tools are *effect* and *execution* tools — running tests, applying a patch, querying the system the action operates on. Knowledge acquisition is different: pulling in domain knowledge the bundle does not contain must happen upstream, either as a subject-matter-expert role producing a bundled artifact or as retrieval folded into bundle assembly (see entity reference, Domain Knowledge). A worker does not reach outside its bundle for knowledge mid-session — that would break the `bundle → artifact` seam that makes the session replayable.
+
+Worker registration is the orchestration analogue of model selection: workers announce capabilities (`adr-writer`, `verification-designer`, `tc-writer`, `code-writer`, `email-sender`, `terraform-applier`, `log-query`, `metric-pull`) on a registry the orchestration system reads. Roles bind to capabilities, not specific worker instances. The binding from role to specific worker is an orchestration policy decision — same mechanism as model selection, same measurement evidence, same versioning. The binding resolves the worker's three dimensions: a model (by capability tag), a prompt (from the prompt catalog), and a permission scope (see entity reference, Worker and Prompt).
 
 ---
 
@@ -230,6 +232,12 @@ A first-class entity in the architecture, parallel to the role catalog. A `Model
 
 Bundle queries and role bindings reference **capability tags**, not model names. "Requires frontier multimodal reasoning" is the binding; the catalog maps that to the current best concrete model. When a new model qualifies, the policy owner re-evaluates affected role bindings as a normal meta-decision — no edits to system implementations needed. Models enter the catalog by passing a registration audit; the catalog represents the eligible set, not the universe of LLMs anyone could call.
 
+### The prompt catalog
+
+A second catalog with the same shape (see entity reference, Eligible), holding the prompts that guide AI-filled roles. A `Prompt` artifact carries identity and version, the role it targets, capability requirements expressed against model capability tags (not model names), eligibility status, and provenance. Prompts are resolved from the catalog at dispatch and supplied to the worker alongside the bundle — they are not baked into the worker package, so the same worker package can run different prompt versions and a prompt revision is a catalog change rather than a rebuild.
+
+Together a `Model` entry, a `Prompt` entry, and a permission scope are the three dimensions a role-to-worker binding resolves. Because all three are versioned independently and stamped on every session record, a drop in a role's output quality can be triaged to the one dimension that changed — model, prompt, schema, or the incoming bundle — and a model migration becomes a measured swap (hold schema and bundle fixed, compare the worker on evidence, re-tune the prompt for the new model if needed) rather than a leap.
+
 ---
 
 ## 10. System composition: pipeline-cli, product-cli, oxi-events
@@ -327,7 +335,7 @@ The shape of this system at maturity:
 - Multiple system implementations, each owning one process (Engineering, Validation, Operations, Discovery, Release), all driven by one orchestration system. Operations is fundamentally sensing-driven (continuous monitoring of deployed value actions producing operational findings); Discovery is sensing-driven on the input side (user research, technology evaluation, market signals). Both follow the same architecture — sensing actions are workers like any other, going through the same harness, the same session record, the same audit infrastructure.
 - A bus between systems carrying inter-system artifacts (feature requests, validation verdicts, operational findings, deployment requests).
 - Per-role autonomy graduated independently based on measurement evidence — some roles fully autonomous, others human-checkpointed, the system's overall level being the floor across roles. Human checkpoints cluster at the ready convergence boundary on focal artifacts; the done-chain typically runs more autonomously once ready has been approved.
-- A meta-loop that revises queries, role definitions, model bindings, and policies (including dispatch trigger registrations) under empirical pressure, with the framework's discipline applied to itself.
+- A meta-loop that revises queries, role definitions, model and prompt bindings, and policies (including dispatch trigger registrations) under empirical pressure, with the framework's discipline applied to itself.
 - An ontology that grows under human curation as new artifact types and edge types become necessary.
 
 What this gives that current AI systems don't:
