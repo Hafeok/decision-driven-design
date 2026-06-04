@@ -91,6 +91,14 @@ Work-in-progress reference implementations:
 - **[github.com/Hafeok/product-cli](https://github.com/Hafeok/product-cli)** — the system implementation for the Engineering process. Owns features, ADRs, test criteria, and dependencies; builds the derived graph; assembles curated bundles; runs audits; serves the engineering graph.
 - **[github.com/Hafeok/decision-cli](https://github.com/Hafeok/decision-cli)** — the companion orchestration system, being designed against the patterns in `04-implementation.md`.
 
+## Applications
+
+Worked applications of DDD to concrete domains live in [`/applications`](applications). `/docs` defines the framework in the abstract; `/applications` takes a real domain and traces it through end to end — processes, roles, artifacts, task decomposition, the points where the domain pushes back. An application is *use*, not theory; when applying it forces new general claims, they are promoted into `/docs` and the application references them.
+
+Each application is marked *projected* (clean derivation, not yet exercised by a running system) or *reported* (something a real system has actually run), because a framework in love with its own generality is a failure mode.
+
+- **[The software development lifecycle](applications/sdlc.md)** — *projected.* Code generation under DDD: the steered coding agent dissolving into typed task clusters, the classify-and-dispatch gate, the broad worker as explorer-and-typifier, and the maturation toward a standard-task catalog. The first application, and the one the reference implementation is being built against.
+
 ## Status
 
 These documents capture the framework as it currently stands. They are versioned artifacts; revisions follow the same discipline the framework describes. Open questions live at the end of `04-implementation.md` — places where the design will likely shift as the reference implementation contacts reality.

@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/>
+    </marker>
+    <marker id="arrow-light" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#888"/>
+    </marker>
+    <marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c97c1e"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="760" fill="#fafaf8"/>
+
+  <!-- Title -->
+  <text x="600" y="50" text-anchor="middle" font-size="28" font-weight="600" fill="#111">The Maturation Curve</text>
+  <text x="600" y="80" text-anchor="middle" font-size="15" fill="#555">
+    The funnel over time &#183; exploration mints task types &#183; known work descends to small, cheap models
+  </text>
+
+  <!-- X axis: time -->
+  <text x="600" y="690" text-anchor="middle" font-size="12" fill="#666" font-style="italic">time / accumulated catalog structure &#8594;</text>
+  <line x1="120" y1="668" x2="1080" y2="668" stroke="#888" stroke-width="1" marker-end="url(#arrow-light)"/>
+
+  <!-- Y axis hint -->
+  <text x="92" y="360" text-anchor="middle" font-size="12" fill="#666" font-style="italic" transform="rotate(-90 92 360)">share of incoming work</text>
+
+  <!-- stage dividers -->
+  <line x1="420" y1="120" x2="420" y2="650" stroke="#e2e2dd" stroke-width="1" stroke-dasharray="4,5"/>
+  <line x1="740" y1="120" x2="740" y2="650" stroke="#e2e2dd" stroke-width="1" stroke-dasharray="4,5"/>
+  <text x="270" y="138" text-anchor="middle" font-size="12" font-weight="600" fill="#999" letter-spacing="1">EARLY</text>
+  <text x="580" y="138" text-anchor="middle" font-size="12" font-weight="600" fill="#999" letter-spacing="1">FILLING IN</text>
+  <text x="910" y="138" text-anchor="middle" font-size="12" font-weight="600" fill="#999" letter-spacing="1">MATURE</text>
+
+  <!-- ============ BROAD-WORKER STREAM (top band, thinning) ============ -->
+  <!-- a wide dark band at left that narrows to a thin strip at right (the ~20%) -->
+  <path d="M 120 165 L 1060 300 L 1060 360 L 120 545 Z" fill="#fff" stroke="#333" stroke-width="1.4"/>
+  <text x="200" y="330" font-size="14" font-weight="600" fill="#111">broad worker / human</text>
+  <text x="200" y="350" font-size="11.5" fill="#555">explores the unknown &#183; one big context</text>
+  <text x="200" y="372" font-size="11" fill="#8a5414" font-style="italic">frontier model / human judgment</text>
+
+  <text x="980" y="318" text-anchor="end" font-size="12" font-weight="600" fill="#8a5414">~20%</text>
+  <text x="1062" y="338" font-size="10.5" fill="#777" transform="rotate(90 1062 338)">novel tasks</text>
+
+  <!-- minting arrows: broad stream spins task types DOWN across the boundary into the fan -->
+  <path d="M 300 432 L 300 520" fill="none" stroke="#c97c1e" stroke-width="1.6" marker-end="url(#arrow-accent)"/>
+  <path d="M 470 420 L 470 560" fill="none" stroke="#c97c1e" stroke-width="1.6" marker-end="url(#arrow-accent)"/>
+  <path d="M 640 408 L 640 575" fill="none" stroke="#c97c1e" stroke-width="1.6" marker-end="url(#arrow-accent)"/>
+  <text x="300" y="424" text-anchor="middle" font-size="10.5" fill="#c97c1e" font-style="italic" font-weight="600">mints task types &#8595;</text>
+
+  <!-- ============ KNOWN-TASK FAN (bottom band, widening) ============ -->
+  <!-- the fan grows from nothing at left to dominant at right (the 80%) -->
+  <path d="M 120 560 L 1060 380 L 1060 650 L 120 650 Z" fill="#fff8ec" stroke="#c97c1e" stroke-width="1.5"/>
+
+  <!-- lane separators inside the fan, fanning out -->
+  <line x1="430" y1="650" x2="1060" y2="455" stroke="#e7cfa6" stroke-width="1"/>
+  <line x1="560" y1="650" x2="1060" y2="500" stroke="#e7cfa6" stroke-width="1"/>
+  <line x1="690" y1="650" x2="1060" y2="545" stroke="#e7cfa6" stroke-width="1"/>
+  <line x1="820" y1="650" x2="1060" y2="590" stroke="#e7cfa6" stroke-width="1"/>
+
+  <!-- lane labels (standardized task types) -->
+  <text x="930" y="438" font-size="10.5" fill="#8a5414">add-entity</text>
+  <text x="930" y="483" font-size="10.5" fill="#8a5414">crud-api</text>
+  <text x="930" y="528" font-size="10.5" fill="#8a5414">auth-rule</text>
+  <text x="930" y="573" font-size="10.5" fill="#8a5414">migration</text>
+  <text x="930" y="618" font-size="10.5" fill="#8a5414">&#8230; standard tasks</text>
+
+  <text x="600" y="610" text-anchor="middle" font-size="14" font-weight="600" fill="#8a5414">known-task fan &#183; decomposed cell clusters</text>
+  <text x="600" y="630" text-anchor="middle" font-size="11.5" fill="#9a7a4e">dispatched mechanically &#183; small code-specialized models</text>
+
+  <text x="1000" y="400" text-anchor="end" font-size="12" font-weight="600" fill="#8a5414">~80%</text>
+  <text x="1062" y="470" font-size="10.5" fill="#9a7a4e" transform="rotate(90 1062 470)">decomposes into known types</text>
+
+  <!-- the crossover note -->
+  <circle cx="120" cy="557" r="3" fill="#c97c1e"/>
+  <text x="130" y="575" font-size="10.5" fill="#9a7a4e" font-style="italic">catalog starts empty</text>
+
+  <!-- model-capability descent annotation (ties to the funnel) -->
+  <text x="600" y="172" text-anchor="middle" font-size="11.5" fill="#666" font-style="italic">required model capability falls as constraint accrues in the catalog &#8594; (the funnel, on the time axis)</text>
+
+  <!-- footnote -->
+  <text x="600" y="730" text-anchor="middle" font-size="11.5" fill="#777" font-style="italic">
+    Cost and opacity are front-loaded into exploration and amortized into reusable structure. The 80% is a fitness function: features decomposing into 100% known task types.
+  </text>
+</svg>

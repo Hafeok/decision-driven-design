@@ -119,6 +119,20 @@ Two wrinkles and one composition rule are worth declaring rather than ignoring.
 
 The design target is the bottom of the funnel: the value action should be deterministic code. Anywhere the value action still requires LLM judgment, an upstream decision was deferred into execution. The funnel discipline pushes that judgment back where it belongs.
 
+## The funnel over time: maturation
+
+The funnel describes one chain at one moment — constraint rising and model capability falling along its length. The same descent happens to a *system* over time, and it is worth naming separately because it is where the framework's cost curve comes from.
+
+Complex artifact generation decomposes: a unit of delivered work (a feature, a campaign, a case) is rarely one artifact but a composition of recurring *sub-units of work* — call them tasks — each of which is itself a cluster of typed artifacts. Early in a system's life, none of these tasks are recognized. Each one is open problem space, so each needs a broad, high-capability worker (or a human) to work it out from scratch. As the same tasks recur, they get *typed* — their decomposition, ordering, and quality criteria get made once and frozen into a reusable type (see Task and TaskType in the entity reference). The next instance of a typed task inherits all that prior constraint for free and slides down to a small, cheap model.
+
+So constraint accumulates not only along a chain (the funnel) but across time, **as catalog structure**. The hard calls migrate out of the model's live reasoning and into versioned types that any model can execute against. The funnel is the spatial view of one chain constraining itself toward its terminus; maturation is the temporal view of a whole system constraining itself toward a stable architecture, where most incoming work decomposes entirely into already-known types and only the genuinely novel remainder needs a broad worker.
+
+This gives a measurable definition of architectural maturity: the fraction of incoming work that decomposes into entirely known types. It rises as the type catalogs fill and falls when the system enters a new domain — an operational signal, not a vibe (see Implementation, fitness functions). The broad worker never disappears; it becomes the explorer that handles the novel remainder and, in doing so, mints the new types that let the next instance descend. Cost and opacity are front-loaded into exploration and amortized into reusable structure.
+
+The maturation curve is the funnel's companion picture:
+
+![Maturation: the broad-worker stream narrows over time as recurring work is typed and descends into a widening fan of cheap, decomposed known-task clusters](assets/maturation.svg)
+
 ## Design principle
 
 1. **Identify the value actions.** What does the organization actually produce that creates value.

@@ -19,7 +19,7 @@ The vocabulary below makes this geometry precise.
 ## Index
 
 **Primary Entities** — the actors, work units, and outputs of the graph.
-[Process](#process) · [Value Action](#value-action) · [Sensing Action](#sensing-action) · [Convergence State](#convergence-state) · [Decision](#decision) · [Action](#action) · [Interpretation](#interpretation) · [Role](#role) · [Worker](#worker) · [Domain Knowledge](#domain-knowledge) · [Artifact](#artifact) · [Context](#context) · [Bundle](#bundle) · [Session](#session) · [System](#system)
+[Process](#process) · [Task](#task) · [TaskType](#tasktype) · [Value Action](#value-action) · [Sensing Action](#sensing-action) · [Convergence State](#convergence-state) · [Decision](#decision) · [Action](#action) · [Interpretation](#interpretation) · [Role](#role) · [Worker](#worker) · [Domain Knowledge](#domain-knowledge) · [Artifact](#artifact) · [Context](#context) · [Bundle](#bundle) · [Session](#session) · [System](#system)
 
 **Structural Entities** — the shape and connection of the primary entities.
 [Schema](#schema) · [Prompt](#prompt) · [Eligible](#eligible) · [Edge](#edge) · [Provenance](#provenance) · [Form](#form) · [Domain](#domain) · [Phase](#phase) · [Acknowledgement](#acknowledgement)
@@ -47,6 +47,32 @@ A process is what gets mapped. It's the unit a system maps one-to-one.
 **Gating process.** A process upstream of a value action that decides whether the value action should happen. Validation gates implementation. Deal review gates a closed sale. Peer review gates publication. Safety evaluation gates model deployment. The gating process is its own decision graph with its own roles, artifacts, and terminal value action (the verdict).
 
 **Observing process.** For digital products, a process downstream of a value action that watches what happens and feeds back. Monitoring observes deployed features. Incident response observes production behavior. The observing process exists as a first-class graph because the feedback loop is continuous; the analog for physical products has slower cadence and different structure. Observing processes are sensing-heavy by definition — their primary work is sensing actions that produce operational findings.
+
+### Task
+
+A recurring sub-unit of work within a process. The composable middle layer between the unit of delivered work and the leaf cell.
+
+A unit of delivered work is rarely a single artifact. A shipped feature is "add an entity" plus "expose an API" plus "wire a migration"; a closed deal is "qualify the lead" plus "scope the solution" plus "negotiate terms." Each of those sub-units is a **task**: a coherent piece of work that produces a *cluster* of related artifacts, not just one. A task sits below the delivered unit (which value-anchors the chain) and above the individual `(role, artifact type)` cell — each cell being one prompt producing one artifact (see Prompt, Decision).
+
+This makes three composition levels, and they form a Stable Dependency stack — dependencies point down the stability gradient and never up. A **cell** depends on nothing above it (a prompt is the most stable thing and changes least). A **task** is defined purely by its cell cluster and their ordering; it composes cells but never reaches up into the delivered unit. The **delivered unit** composes tasks but never reaches down past a task into its cells. This is the same discipline as the crate and slice boundaries in the implementation doc, applied to work decomposition — and it is what lets each layer's catalog stabilize without thrashing the layer beneath it.
+
+A task is not a system. Tasks and cells are sub-processes serving one terminal value action — modules within a system, not independent systems, by the boundary rule (a system boundary exists only where artifacts cross to a different value-action cluster). Decomposing work into tasks never spawns new systems; it is internal structure.
+
+### TaskType
+
+The registered, versioned definition of how a recurring task decomposes. A catalog entry, in the `Eligible` family alongside the model, worker, and prompt catalogs.
+
+When a task recurs often enough to be worth standardizing, its structure is captured once as a TaskType carrying:
+- **The cell cluster** — which artifact types this task decomposes into.
+- **The dependency order** — the `derived_from` edges among the cells (what must precede what; what runs in parallel). This is the task's own internal decision graph, declared once.
+- **The prompt binding per cell** — which `(role, artifact type)` prompt fills each cell. Because one prompt is one decision kind (see Prompt, Decision), the cell cluster is also a set of decision kinds.
+- **The coherence audit** — the cross-cell consistency shape the task requires (the artifacts in the cluster must agree where they overlap).
+- **A recognition signature** — what marks an incoming task as being of this type, so a classifier can match it.
+
+A TaskType is *born* through a frozen boundary like all domain knowledge: typifying an exploratory build is a judgment call, so it is produced as Pattern A — an architect-as-SME role generalizing from the originating session into a TaskType artifact, with provenance, not auto-derived from one example. It is *reused* mechanically: a classifier matches incoming work to a type, and dispatch instantiates the cluster, assembles bundles in the declared order, binds the prompts, and runs the coherence audit. It is *evolved* on the meta-loop: a coherence audit that keeps failing means the decomposition is wrong (a cell deciding things that should be split out, or two cells that are really one), and the architect revises the type as a normal versioned change.
+
+TaskTypes are why a system gets cheaper over time rather than just bigger (see Foundations, maturation). They are not specific to software: any process with complex, recurring artifact generation — engineering, sales proposals, clinical documentation, research protocols — accumulates a TaskType catalog as its recurring work gets recognized and standardized. Work whose type is known dispatches its cluster cheaply; work whose type is unknown routes to a broad worker that handles it and may mint a new type.
+
 
 ### Value Action
 
@@ -519,7 +545,7 @@ This metric is what makes the framework's audit principle measurable at action b
 
 Architectural quality metric with a declared threshold, evaluated continuously.
 
-Spec coverage, test coverage, exit-criteria coverage, formal-block coverage, gap density, drift density, gap-resolution rate, action-interpretation agreement rate, dispatch latency, escalation rate, feedback closure rate, ready-state stability (rate at which ready predicates get invalidated by downstream feedback), done-chain duration from ready (cycle time for the done half of a chain). Each metric has a threshold and a severity (error/warning). The CI gate fails when error-severity thresholds are breached. Trends are tracked over time.
+Spec coverage, test coverage, exit-criteria coverage, formal-block coverage, gap density, drift density, gap-resolution rate, action-interpretation agreement rate, dispatch latency, escalation rate, feedback closure rate, ready-state stability (rate at which ready predicates get invalidated by downstream feedback), done-chain duration from ready (cycle time for the done half of a chain), type-decomposability (the fraction of incoming work that decomposes entirely into known TaskTypes — the operational measure of architectural maturity; it climbs as the catalog fills and drops on entry to a new domain, where a sustained drop is an early warning of architectural drift). Each metric has a threshold and a severity (error/warning). The CI gate fails when error-severity thresholds are breached. Trends are tracked over time.
 
 Fitness functions operationalize "the graph stays honest at scale" — not just at any one moment, but over the system's lifetime.
 
