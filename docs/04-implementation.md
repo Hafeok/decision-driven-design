@@ -60,6 +60,19 @@ What the choice costs:
 
 The reference implementation commits to RDF with **Oxigraph** as the embedded triple store (Apache 2.0, Rust-native, embeddable, SPARQL 1.1 conformant), hosted inside the orchestration process and exposed as a SPARQL HTTP endpoint for polyglot workers, with named-graph-per-session for provenance and PROV-O annotations on every session-produced triple. The architecture above does not require RDF specifically — but the listed capabilities ("typed edges, shape constraints, provenance vocabulary, session-scoped sub-graphs") are exactly what RDF + SHACL + PROV-O + named graphs supply, which is why the reference implementation lands there.
 
+### The decision graph rides the same seam
+
+The decision graph (foundations, *Two graphs*; entity reference, Decision) is not separate infrastructure. The session named-graph is already the intersection of the two provenance axes: the harness writes the produced artifact *and* the decisions made in the session into the same sub-graph, both anchored to the session's PROV-O activity, in the one atomic commit. Decision nodes carry the shared supertype shape (`rationale`, `madeBy`, `status`, `supersededBy`, `kind`, session reference) plus the two edges, `governed_by` and `derived_from`. Workers emit decisions as structured output alongside the artifact — the harness writes them, the same way it writes everything else, so the "workers don't touch the graph" contract (§5) is unchanged.
+
+Four SHACL shapes make the graph total and walkable in both directions. They constrain edges and kinds, not classes — the generation/subject-matter distinction is a projection, so there is nothing to type-check, only topology to enforce:
+
+- **Kind resolves to a cell.** Every decision's `kind` must reference a registered `(role, artifact type)` prompt cell. Because defining the prompt is what registers the kind, an unregistered kind is unwritable — closed registration falls out of the constraint.
+- **Every prompt has generation guidance.** A prompt cell must carry at least one generation decision; a prompt that produces an artifact type with no recorded generation decisions is malformed.
+- **Every produced artifact carries subject-matter decisions, governed and rooted.** A produced artifact must have at least one subject-matter decision; each such decision must carry a `governed_by` edge to its cell's generation guidance and, unless it is a domain root, a `derived_from` edge. No subject-matter decision floats free of either its governance or its content lineage.
+- **Counts agree per role.** A role's artifact-type count, prompt count, and decision-kind count must be equal. Divergence is the staleness check for the decision layer — the same kind of CI staleness gate the SPARQL-derived diagrams use.
+
+These shapes are the first audit layer for decisions exactly as schema-conformance shapes are for artifacts (glossary, SHACL): the triple store evaluates them directly at write time; heavier decision audits compose on top.
+
 ---
 
 ## 4. Bundle assembly: curated graph queries
@@ -75,6 +88,8 @@ Properties that matter:
 - **The query is itself an audit artifact.** When a role decides badly, "what did this role see?" is answered by re-running the query against the session sub-graph state at decision time. Reviewing the query when a role underperforms is often where the fix lives — not in the model, in what you gave it.
 
 Per-role queries are the unit of evolution. Quality on a role flagging? Adjust its query, measure whether quality improves, version the change. Every encoded query is a permanent capture of process context any model can consume.
+
+The two decision edges are bundle-assembly inputs in their own right. A `derived_from` walk pulls the subject-matter lineage a role needs to see — the prior decisions its focal artifact rests on — while the `governed_by` walk reaches the generation guidance that should frame the role's own output. Decision lineage was already named as one of the typical sub-queries; the two edges make precise which lineage is content (follow `derived_from`) and which is governance (follow `governed_by`), so a bundle can carry both without conflating them.
 
 (In the reference implementation, the queries are SPARQL CONSTRUCT — the declarative-query and sub-graph-construction capabilities from §2/§3.)
 
@@ -246,7 +261,9 @@ Bundle queries and role bindings reference **capability tags**, not model names.
 
 A second catalog with the same shape (see entity reference, Eligible), holding the prompts that guide AI-filled roles. A `Prompt` artifact carries identity and version, the role it targets, capability requirements expressed against model capability tags (not model names), eligibility status, and provenance. Prompts are resolved from the catalog at dispatch and supplied to the worker alongside the bundle — they are not baked into the worker package, so the same worker package can run different prompt versions and a prompt revision is a catalog change rather than a rebuild.
 
-Together a `Model` entry, a `Prompt` entry, and a permission scope are the three dimensions a role-to-worker binding resolves. Because all three are versioned independently and stamped on every session record, a drop in a role's output quality can be triaged to the one dimension that changed — model, prompt, schema, or the incoming bundle — and a model migration becomes a measured swap (hold schema and bundle fixed, compare the worker on evidence, re-tune the prompt for the new model if needed) rather than a leap.
+Together a `Model` entry, a `Prompt` entry, and a permission scope are the three dimensions a role-to-worker binding resolves. Because all three are versioned independently and stamped on every session record, a drop in a role's output quality can be triaged to the one dimension that changed — model, prompt, schema, or the incoming bundle — and a model migration becomes a measured swap (hold schema and bundle fixed, compare the worker on evidence, re-tune the prompt for the new model if needed) rather than a leap. These four attribution axes — **Schema, Prompt, Model, Context (SPMC)** — are the unit of quality triage; the term is used throughout for the tuple (entity reference, SPMC).
+
+This four-way triage is what the decision graph makes a *graph-walk* rather than a remembered stamp. From a flagged artifact, the decision axis (§3; entity reference, Provenance) walks to the session, to the decisions made there, up `governed_by` to the generation guidance (the prompt dimension), while the session's named graph already binds schema, model, and the incoming bundle. The four axes are recoverable by traversal because the session is where they meet — triage works because the two graphs intersect there, not because a separate tuple was stamped and kept in sync.
 
 ---
 

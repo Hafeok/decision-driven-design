@@ -38,7 +38,11 @@ The W3C semantic-web stack DDD's reference implementation builds on.
 
 ### SHACL — Shapes Constraint Language
 
-A W3C standard for validating RDF graphs against declared shape constraints. DDD uses SHACL as the first layer of audit in the reference implementation: schema conformance and edge-cardinality checks are SHACL shapes the triple store evaluates directly. Heavier audits (gap analysis, drift detection) compose on top of SHACL but are LLM-driven. See [Implementation §3](04-implementation.md).
+A W3C standard for validating RDF graphs against declared shape constraints. DDD uses SHACL as the first layer of audit in the reference implementation: schema conformance and edge-cardinality checks are SHACL shapes the triple store evaluates directly. Heavier audits (gap analysis, drift detection) compose on top of SHACL but are LLM-driven. The decision-graph invariants — kind-resolves-to-cell, every-prompt-has-generation-guidance, every-artifact-governed-and-rooted, per-role count agreement — are also SHACL shapes, constraining edge topology rather than classes. See [Implementation §3](04-implementation.md).
+
+### PROV-O — the Provenance Ontology
+
+A W3C standard vocabulary for describing the lineage of things — its core terms are *Entity*, *Activity*, and *Agent*, related by predicates like `wasGeneratedBy`, `used`, and `wasAssociatedWith`. DDD's reference implementation annotates every session-produced triple with PROV-O, so the artifact graph maps directly onto it: artifact (Entity) `wasGeneratedBy` session (Activity), which `used` the bundle and `wasAssociatedWith` the role and model. PROV-O captures the **artifact axis** of provenance completely. It is deliberately *not* stretched to cover the **decision axis**: the `governed_by` edge — "this choice was governed by that generation guidance" — has no PROV-O analogue, so DDD records decisions as first-class and lets the two axes meet at the session rather than forcing decisions into a provenance dialect. See [Entity Reference §Provenance](02-entity-reference.md) and [Foundations §Two graphs](01-foundations.md).
 
 ### MCP — Model Context Protocol
 
