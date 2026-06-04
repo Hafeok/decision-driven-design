@@ -20,15 +20,23 @@ This isn't a refinement of agentic design. It's a different geometry.
 
 | | Agent-centric design | Decision-Driven Design |
 |---|---|---|
-| **Primary unit** | The tool call | The decision |
+| **Primary unit** | The tool call | [The decision](docs/01-foundations.md#two-graphs-artifacts-and-decisions) |
 | **System shape** | An agent loop | A [DAG](docs/glossary.md#dag--directed-acyclic-graph) of roles |
 | **Role boundary** | "The agent" | Many roles, swappable |
 | **Composition** | Tool wrapping | Artifacts with schemas |
-| **What's audited** | The trajectory | Each session, each bundle, each artifact |
+| **What's audited** | The trajectory | Each session, each bundle, each artifact, each decision |
 | **Where humans fit** | Approval at the end | Any role, any checkpoint, per-role autonomy |
 | **Failure mode** | Opaque | Localized to a role and a bundle |
 
 The point is not that agent loops are wrong — they are one valid node in the graph. The point is that for real organizational work, the graph upstream of the loop is most of the engineering, and treating it as first-class is what makes the resulting system bounded, auditable, and improvable.
+
+## Two graphs
+
+The DAG above is the **artifact graph** — what was produced, by which session, from what inputs. It is the lineage existing provenance vocabularies already capture, and for a process run by humans it is the whole of the recoverable record, because the decisions themselves lived in people's heads.
+
+An LLM-run process breaks that limitation. When a worker fills a role, its decisions are made against a recorded bundle in a recorded session — the reasoning is no longer ambient. A system that records only the artifact graph throws away exactly the half that became newly recordable because a machine made the call. So DDD makes a second graph first-class: the **decision graph**.
+
+The two graphs are different shapes over the same work, and they **intersect at the session** — the production event is the shared node. A process is *provenance-complete* only when a value-anchored artifact can be walked backward through both: through the artifact graph to its chain of upstream artifacts, and through the decision graph to its chain of upstream decisions. Recording both is what full provenance means for a system that decides.
 
 ## Why it matters now
 
@@ -46,7 +54,7 @@ The documents in [`/docs`](docs) build on each other. Read them in order if you'
 
 ### [1. Foundations](docs/01-foundations.md) — *start here*
 
-The framework's premise and core ideas. LLMs as forecasters; work as a chain of context-conditioned decisions; value actions as the terminus; roles and artifacts as the unit of organization and composition; the DAG, not the pipeline; the funnel principle that ties model capability to constraint density along a chain. About 10 pages. Read this first.
+The framework's premise and core ideas. LLMs as forecasters; work as a chain of context-conditioned decisions; value actions as the terminus; roles and artifacts as the unit of organization and composition; the DAG, not the pipeline; the two graphs (artifact and decision) that meet at the session; the funnel principle that ties model capability to constraint density along a chain. About 10 pages. Read this first.
 
 ### [2. Entity Reference](docs/02-entity-reference.md)
 
