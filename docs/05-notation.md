@@ -1,6 +1,8 @@
 # The DDD Notation
 
-> See the [Glossary](glossary.md) for borrowed terms (DAG, DMN, RDF, MCP, OCI, …).
+> **Appendix A. Notation profile** — *informative.* A design language for drawing decision graphs, roles, artifacts, and systems. Not required for conformance; supplied as a uniform visual vocabulary for readers who want one.
+>
+> Borrowed terms (DAG, DMN, RDF, MCP, OCI, …) — see [Appendix C: Glossary](glossary.md).
 
 A design language for drawing decision graphs, roles, artifacts, and systems — and a thin set of conventions for rendering them inside this repo.
 

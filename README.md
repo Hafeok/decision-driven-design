@@ -46,64 +46,86 @@ The dominant "AI factory" framing reaches for assembly lines and workstations: d
 
 Decision-Driven Design is what comes after the factory metaphor stops being useful.
 
-## Reading order
+---
 
-The documents in [`/docs`](docs) build on each other. Read them in order if you're new, or jump to whichever question you're answering. The first two establish the framework; **05–06 are a modeling toolkit** (how to draw and how to derive a model) that builds directly on the Entity Reference; 03–04 cover autonomy and the system implementation.
+## Status of this document
 
-> Borrowed terms (DAG, DMN, RDF, MCP, OCI, …) are defined in the [Glossary](docs/glossary.md) — open it in a side tab if any of those acronyms are unfamiliar.
+This is a working specification of Decision-Driven Design, organized in the shape of a [W3C/RFC-style spec](https://www.rfc-editor.org/rfc/rfc7322): a motivation, a normative core, informative companions, and worked non-normative examples. It captures the framework as it currently stands; revisions follow the discipline the framework describes, and the specification is versioned alongside the reference implementations it constrains.
 
-### [1. Foundations](docs/01-foundations.md) — *start here*
+Open questions — places where the design will likely shift as the reference implementation contacts reality — live at the end of [§4 Conformance capabilities](docs/04-implementation.md).
+
+This is not a product, and it is not a methodology being marketed. It is a specification of a way to build with LLMs, written for people who want to build the same way.
+
+## Structure of this specification
+
+| § | Document | Status |
+|---|---|---|
+| §1 | [Introduction and motivation](docs/01-foundations.md) | Informative |
+| §2 | [Terminology and entity reference](docs/02-entity-reference.md) | **Normative** |
+| §3 | [Autonomy mapping](docs/03-autonomy-levels.md) | Informative |
+| §4 | [Conformance capabilities](docs/04-implementation.md) | **Normative** |
+| §5 | [Application method](docs/06-applying.md) | Informative |
+| App. A | [Notation profile](docs/05-notation.md) | Informative |
+| App. B | [Design rationale — the biology contrast](docs/07-biology-contrast.md) | Informative |
+| App. C | [Glossary of borrowed terms](docs/glossary.md) | Informative |
+| — | [Non-normative examples](applications/) | Informative |
+
+**Normative** sections define what a system must provide to claim conformance to DDD: the vocabulary used to describe it (§2) and the capabilities required to support that vocabulary in implementation (§4). **Informative** sections motivate, explain, illustrate, or otherwise serve the normative core, but do not themselves constrain implementations.
+
+> Borrowed terms (DAG, DMN, RDF, MCP, OCI, …) are defined in [Appendix C: Glossary](docs/glossary.md) — open it in a side tab if any of those acronyms are unfamiliar.
+
+## Recommended reading order
+
+The sections build on each other. Read them in order if you're new to the framework, or jump to whichever question you're answering. The first two establish the framework; **§5 and Appendix A are a modeling toolkit** (how to derive a model, and how to draw the result) that builds directly on §2; §3 and §4 cover autonomy and implementation.
+
+### [§1. Introduction and motivation](docs/01-foundations.md) — *informative* — *start here*
 
 The framework's premise and core ideas. LLMs as forecasters; work as a chain of context-conditioned decisions; value actions as the terminus; roles and artifacts as the unit of organization and composition; the DAG, not the pipeline; the two graphs (artifact and decision) that meet at the session; the funnel principle that ties model capability to constraint density along a chain. About 10 pages. Read this first.
 
-### [2. Entity Reference](docs/02-entity-reference.md)
+### [§2. Terminology and entity reference](docs/02-entity-reference.md) — *normative*
 
-The framework's vocabulary, made precise. Processes, decisions, actions, interpretations, roles, artifacts, sessions, schemas, bundles, audits, the orchestration system, feedback as a first-class flow class, action-interpretation pairing, per-role autonomy levels. The reference you come back to once you've internalized the foundations.
+The framework's vocabulary, made precise. Processes, decisions, actions, interpretations, roles, artifacts, sessions, schemas, bundles, audits, the orchestration system, feedback as a first-class flow class, action-interpretation pairing, per-role autonomy levels. The reference you come back to once you've internalized the foundations. Anything claiming DDD conformance uses these entities as defined here.
 
-### [3. The Five Levels of AI Autonomy](docs/03-autonomy-levels.md)
+### [§3. The five levels of AI autonomy](docs/03-autonomy-levels.md) — *informative*
 
 How the framework maps to the standard 0–5 autonomy ladder, why autonomy is per-role rather than per-system, and why DDD is the structure that makes Levels 4 and 5 actually reachable rather than aspirational. The destination-grammar conversation; useful when talking to people who already think in autonomy levels.
 
-### [4. Implementation](docs/04-implementation.md)
+### [§4. Conformance capabilities](docs/04-implementation.md) — *normative*
 
 The architecture for actually building a DDD-shaped system, framed by the *capabilities* it requires — artifact graph, declarative queries, shape constraints, provenance model, session-scoped lineage, durable event substrate — rather than the products that supply them. A concrete reference-implementation stack (Rust + Oxigraph + SHACL + PROV-O + Python LLM workers) is called out where it shaped the design, but the patterns are meant to survive specific technology choices. Covers bundle assembly, the worker contract, emergent-decisions-during-action, the meta-loop, per-component autonomy, and the model and prompt catalogs. Read this when you want to build something.
 
-### [5. Notation](docs/05-notation.md)
-
-A design language for drawing decision graphs, roles, artifacts, and systems. Not a new UML — a thin profile over three established notations (DMN decision-requirement diagrams, BPMN lanes, C4), rendered as Mermaid so every diagram renders, diffs, and is authored as text. Introduces no new framework entities; it supplies glyphs for the ones the Entity Reference already defines, including the ready/done convergence gates. Read this when you want to draw a DDD model.
-
-### [6. Applying DDD to a Real Process](docs/06-applying.md)
+### [§5. Application method](docs/06-applying.md) — *informative*
 
 The method: pick one value action, walk backward one hop at a time, and let artifacts, roles, and decisions fall out of three questions asked at each node. Covers the identification heuristics (what counts as an artifact, a role, a decision, a sensing action), where to stop, how gates and gating processes reveal themselves, and how feedback edges are derived. Worked end-to-end on a hiring process. Read this when you want to map your own process.
 
-### [7. The Biology Contrast](docs/07-biology-contrast.md)
+### [Appendix A. Notation profile](docs/05-notation.md) — *informative*
+
+A design language for drawing decision graphs, roles, artifacts, and systems. Not a new UML — a thin profile over three established notations (DMN decision-requirement diagrams, BPMN lanes, C4), rendered as Mermaid so every diagram renders, diffs, and is authored as text. Introduces no new framework entities; it supplies glyphs for the ones the Entity Reference already defines, including the ready/done convergence gates. Read this when you want to draw a DDD model.
+
+### [Appendix B. Design rationale — the biology contrast](docs/07-biology-contrast.md) — *informative*
 
 Why DDD doesn't model the harness as a body. The biology metaphor — brain + drives + embodiment — is appealing once you frame the LLM as a forecaster, but biological drives exist to solve a regulatory problem whose preconditions (persistence, embodiment, scarcity, continuity) are exactly what DDD's stateless-session architecture removes. A companion piece, useful for sharpening what DDD chooses *not* to be and for diagnosing implicit drives sneaking into a system.
 
-### [Glossary](docs/glossary.md) — borrowed and external concepts
+### [Appendix C. Glossary of borrowed terms](docs/glossary.md) — *informative*
 
-Short definitions for the terms the docs use but don't define, because they come from outside the framework: DAG, DMN/DRD, BPMN, C4, Mermaid, RDF/SPARQL, SHACL, MCP, OCI, "frontier model." The Entity Reference covers DDD's own vocabulary; this page covers everything the docs *reference* from established work elsewhere.
+Short definitions for the terms the docs use but don't define, because they come from outside the framework: DAG, DMN/DRD, BPMN, C4, Mermaid, RDF/SPARQL, SHACL, MCP, OCI, "frontier model." §2 covers DDD's own vocabulary; this appendix covers everything the docs *reference* from established work elsewhere.
 
-## Reference implementation
+---
+
+## Reference implementations
 
 Work-in-progress reference implementations:
 
 - **[github.com/Hafeok/product-cli](https://github.com/Hafeok/product-cli)** — the system implementation for the Engineering process. Owns features, ADRs, test criteria, and dependencies; builds the derived graph; assembles curated bundles; runs audits; serves the engineering graph.
-- **[github.com/Hafeok/decision-cli](https://github.com/Hafeok/decision-cli)** — the companion orchestration system, being designed against the patterns in `04-implementation.md`.
+- **[github.com/Hafeok/decision-cli](https://github.com/Hafeok/decision-cli)** — the companion orchestration system, being designed against the patterns in §4.
 
-## Applications
+## Non-normative examples
 
-Worked applications of DDD to concrete domains live in [`/applications`](applications). `/docs` defines the framework in the abstract; `/applications` takes a real domain and traces it through end to end — processes, roles, artifacts, task decomposition, the points where the domain pushes back. An application is *use*, not theory; when applying it forces new general claims, they are promoted into `/docs` and the application references them.
+Worked applications of DDD to concrete domains live in [`/applications`](applications). The numbered sections above define the framework in the abstract; `/applications` takes a real domain and traces it through end to end — processes, roles, artifacts, task decomposition, the points where the domain pushes back. An application is *use*, not theory; when applying it forces new general claims, they are promoted into the specification and the application references them.
 
 Each application is marked *projected* (clean derivation, not yet exercised by a running system) or *reported* (something a real system has actually run), because a framework in love with its own generality is a failure mode.
 
 - **[The software development lifecycle](applications/sdlc.md)** — *projected.* Code generation under DDD: the steered coding agent dissolving into typed task clusters, the classify-and-dispatch gate, the broad worker as explorer-and-typifier, and the maturation toward a standard-task catalog. The first application, and the one the reference implementation is being built against.
-
-## Status
-
-These documents capture the framework as it currently stands. They are versioned artifacts; revisions follow the same discipline the framework describes. Open questions live at the end of `04-implementation.md` — places where the design will likely shift as the reference implementation contacts reality.
-
-This is not a product, and it's not a methodology being marketed. It's a working specification of a way to build with LLMs that I'm using to build with LLMs. Sharing it because it might be useful to others working on similar problems.
 
 ## Discussion
 

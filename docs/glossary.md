@@ -1,5 +1,7 @@
 # Glossary — borrowed and external concepts
 
+> **Appendix C. Glossary of borrowed terms** — *informative.* Definitions for terms the specification uses but does not itself define, because they come from external work.
+
 A short reference for terms the DDD docs use but do not define, because they come from outside the framework. The [Entity Reference](02-entity-reference.md) covers DDD's own vocabulary; this page covers everything the docs *reference* from established work elsewhere.
 
 Each entry is one paragraph: what it is, and how DDD uses it.

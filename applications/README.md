@@ -1,5 +1,7 @@
 # Applications
 
+> **Non-normative examples.** Worked applications of the specification to concrete domains. Examples illustrate the framework but do not extend it; new general claims discovered through application are promoted into the spec (see "The promotion rule" below).
+
 Worked applications of Decision-Driven Design to concrete domains.
 
 The framework documents in [`/docs`](../docs) define DDD in the abstract. This section does the opposite: it takes a real, messy practice and shows DDD applied to it — what the framework's abstractions become in that domain, what the application buys, and what it costs. The README's standing claim is that the strongest pressure on the framework has come from applying it past its origin; this is where that pressure is written down.

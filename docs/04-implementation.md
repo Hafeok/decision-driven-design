@@ -1,6 +1,8 @@
 # Implementing Decision-Driven Design
 
-> See the [Glossary](glossary.md) for borrowed terms (DAG, DMN, RDF, MCP, OCI, …).
+> **§4. Conformance capabilities** — *normative.* The capabilities a system must provide to be conformant with DDD: artifact graph, declarative queries, shape constraints, provenance model, session-scoped lineage, durable event substrate. Capability-framed; the specific technology stack illustrating them is non-normative.
+>
+> Borrowed terms (DAG, DMN, RDF, MCP, OCI, …) — see [Appendix C: Glossary](glossary.md).
 
 A reference for the implementation architecture that emerged from applying Decision-Driven Design to a concrete system. Companion to the foundational DDD documents (*Decision-Driven Design*, *DDD and the Five Levels of AI Autonomy*, *Decision-Driven Design: Entity Reference*).
 

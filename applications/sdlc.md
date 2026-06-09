@@ -1,6 +1,6 @@
 # Application: the software development lifecycle
 
-> **Status: projected.** This is a clean derivation of DDD applied to code generation, not yet a reported result from a running system. The reference implementation (product-cli) is being built against it. Read it as a design, and weight the open questions accordingly.
+> **Non-normative example · Status: projected.** This is a clean derivation of DDD applied to code generation, not yet a reported result from a running system. The reference implementation (product-cli) is being built against it. Read it as a design, and weight the open questions accordingly.
 >
 > Relies on framework concepts defined in the spec: [Task and TaskType](../docs/02-entity-reference.md#task), [the maturation curve](../docs/01-foundations.md#the-funnel-over-time-maturation), [the funnel](../docs/01-foundations.md#the-funnel-model-capability-tracks-constraint-density), [Decision and the two graphs](../docs/01-foundations.md#two-graphs-artifacts-and-decisions), and [SPMC](../docs/02-entity-reference.md#spmc-schema-prompt-model-context). This doc applies them; it does not re-derive them.
 

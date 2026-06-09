@@ -1,6 +1,8 @@
 # Decision-Driven Design
 
-> See the [Glossary](glossary.md) for borrowed terms (DAG, DMN, RDF, MCP, OCI, …).
+> **§1. Introduction and motivation** — *informative.* The premise the rest of the specification rests on: LLMs as forecasters, work as a chain of context-conditioned decisions, value actions as the terminus, the two graphs that meet at the session.
+>
+> Borrowed terms (DAG, DMN, RDF, MCP, OCI, …) — see [Appendix C: Glossary](glossary.md).
 
 A framework for building systems with LLMs.
 

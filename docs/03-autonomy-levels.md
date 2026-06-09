@@ -1,6 +1,8 @@
 # DDD and the Five Levels of AI Autonomy
 
-> See the [Glossary](glossary.md) for borrowed terms (DAG, DMN, RDF, MCP, OCI, …).
+> **§3. Autonomy mapping** — *informative.* How the framework maps to the standard 0–5 autonomy ladder, and why per-role autonomy is the unit. Not required for conformance; supplied for readers already thinking in autonomy levels.
+>
+> Borrowed terms (DAG, DMN, RDF, MCP, OCI, …) — see [Appendix C: Glossary](glossary.md).
 
 How the architecture maps to the standard autonomy framework, what each level looks like in DDD terms, and why DDD is the structure that makes Levels 4 and 5 actually achievable rather than aspirational.
 
