@@ -1,6 +1,8 @@
 # Decision-Driven Design
 
-**A framework for LLM systems that earn their autonomy.**
+**A framework for LLM systems that uses precision to create transparency. To earn trust**
+
+In order to move to fully autonoumous systems driven by LLMs we need a way to trust that system. Decision Driven Design is build around the idea to create fully specified systems with traceability to every decision for every action. In order to for the people using the systems to trust them.
 
 Real organizational work is a graph of decisions terminating in value actions, not a single agent loop. DDD names every piece — roles, artifacts, sessions, audits — and gives each one a measurable path from human-checkpointed to fully autonomous.
 
