@@ -1,6 +1,6 @@
 # Decision-Driven Design
 
-**A framework for LLM systems that uses precision to create transparency. To earn trust**
+**A framework for LLM systems to earn trust by having integrity using precision to create transparency.**
 
 In order to move to fully autonoumous systems driven by LLMs we need a way to trust that system. Decision Driven Design is build around the idea to create fully specified systems with traceability to every decision for every action. In order to for the people using the systems to trust them.
 
