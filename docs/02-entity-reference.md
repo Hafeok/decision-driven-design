@@ -21,12 +21,12 @@ The vocabulary below makes this geometry precise.
 ## Index
 
 **Alphabetical.**
-[Acknowledgement](#acknowledgement) · [Action](#action) · [Action-Interpretation Agreement](#action-interpretation-agreement) · [Artifact](#artifact) · [Audit](#audit) · [Autonomy Level](#autonomy-level) · [Bundle](#bundle) · [Bus](#bus) · [Context](#context) · [Convergence State](#convergence-state) · [Decision](#decision) · [Domain](#domain) · [Domain Knowledge](#domain-knowledge) · [Edge](#edge) · [Eligible](#eligible) · [Feedback](#feedback) · [Fitness Function](#fitness-function) · [Flow Class](#flow-class) · [Form](#form) · [Harness](#harness) · [Interface (System Interface)](#interface-system-interface) · [Interpretation](#interpretation) · [Inter-system Schema](#inter-system-schema) · [Phase](#phase) · [Policy](#policy) · [Process](#process) · [Prompt](#prompt) · [Provenance](#provenance) · [Role](#role) · [Schema](#schema) · [Sensing Action](#sensing-action) · [Session](#session) · [Session Record](#session-record) · [SPMC](#spmc-schema-prompt-model-context) · [System](#system) · [Task](#task) · [TaskType](#tasktype) · [Transport](#transport) · [Value Action](#value-action) · [Worker](#worker)
+[Acknowledgement](#acknowledgement) · [Action](#action) · [Action-Interpretation Agreement](#action-interpretation-agreement) · [Application Status](#application-status) · [Artifact](#artifact) · [Audit](#audit) · [Autonomy Level](#autonomy-level) · [Bundle](#bundle) · [Bus](#bus) · [Context](#context) · [Convergence State](#convergence-state) · [Decision](#decision) · [Domain](#domain) · [Domain Knowledge](#domain-knowledge) · [Edge](#edge) · [Eligible](#eligible) · [Feedback](#feedback) · [Fitness Function](#fitness-function) · [Flow Class](#flow-class) · [Form](#form) · [Harness](#harness) · [Interface (System Interface)](#interface-system-interface) · [Interpretation](#interpretation) · [Inter-system Schema](#inter-system-schema) · [Phase](#phase) · [Policy](#policy) · [Process](#process) · [Prompt](#prompt) · [Provenance](#provenance) · [Role](#role) · [Schema](#schema) · [Sensing Action](#sensing-action) · [Session](#session) · [Session Record](#session-record) · [SPMC](#spmc-schema-prompt-model-context) · [System](#system) · [Task](#task) · [TaskType](#tasktype) · [Transport](#transport) · [Value Action](#value-action) · [Worker](#worker)
 
 **By category.**
 
 - *Primary entities* — the actors, work units, and outputs of the graph: [Action](#action) · [Artifact](#artifact) · [Bundle](#bundle) · [Context](#context) · [Convergence State](#convergence-state) · [Decision](#decision) · [Domain Knowledge](#domain-knowledge) · [Interpretation](#interpretation) · [Process](#process) · [Role](#role) · [Sensing Action](#sensing-action) · [Session](#session) · [System](#system) · [Task](#task) · [TaskType](#tasktype) · [Value Action](#value-action) · [Worker](#worker)
-- *Structural entities* — the shape and connection of the primary entities: [Acknowledgement](#acknowledgement) · [Domain](#domain) · [Edge](#edge) · [Eligible](#eligible) · [Form](#form) · [Phase](#phase) · [Prompt](#prompt) · [Provenance](#provenance) · [Schema](#schema)
+- *Structural entities* — the shape and connection of the primary entities: [Acknowledgement](#acknowledgement) · [Application Status](#application-status) · [Domain](#domain) · [Edge](#edge) · [Eligible](#eligible) · [Form](#form) · [Phase](#phase) · [Prompt](#prompt) · [Provenance](#provenance) · [Schema](#schema)
 - *Flow entities* — how artifacts and signals move through and between systems: [Bus](#bus) · [Feedback](#feedback) · [Flow Class](#flow-class) · [Inter-system Schema](#inter-system-schema)
 - *Operational entities* — the runtime and process layer: [Action-Interpretation Agreement](#action-interpretation-agreement) · [Audit](#audit) · [Autonomy Level](#autonomy-level) · [Fitness Function](#fitness-function) · [Harness](#harness) · [Interface (System Interface)](#interface-system-interface) · [Policy](#policy) · [Session Record](#session-record) · [SPMC](#spmc-schema-prompt-model-context) · [Transport](#transport)
 
@@ -74,6 +74,22 @@ Low agreement rates are diagnostic signals. Possible causes split by action dire
 - For sensing actions: the source is wrong (returning incorrect or stale readings), the interpretation criteria are stale (the response framework doesn't match current reality), or the signal is genuinely ambiguous (no defensible classification exists).
 
 This metric is what makes the framework's audit principle measurable at action boundaries, on both sides of the system/world boundary.
+
+### Application Status
+*Structural.*
+
+Every application document carries a status. The status vocabulary is defined normatively by the [Completeness Exercise](completeness-exercise.md) tiers. Two orthogonal axes; fusing them is a spec error.
+
+**Status — the evidence axis.**
+
+- **projected** — Tier-1 evidence only: derivation clean, no dangling edges. A design.
+- **reported** — Tier-2 or Tier-3 evidence from a named system: exercise run, residual recorded, run cited. No citation, no status.
+
+Frozen records — RFCs, contracts — are derivations, not runs. Freezing never changes status.
+
+**Promotion — the location axis.**
+
+A projection frozen into a more stable tier is recorded as a `frozen-as` edge: projection → landing artifact, kept in the application document's Promotion record. The edge records genealogy, not evidence, and adds no dependency: the authoring document never depends on the artifacts its projections landed in. There is no third status value — "promoted" is an edge, not a state.
 
 ### Artifact
 *Primary.*

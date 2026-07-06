@@ -70,6 +70,7 @@ This is not a product, and it is not a methodology being marketed. It is a speci
 | App. A | [Notation profile](docs/05-notation.md) | Informative |
 | App. B | [Design rationale — the biology contrast](docs/07-biology-contrast.md) | Informative |
 | App. C | [Glossary of borrowed terms](docs/glossary.md) | Informative |
+| — | [The Completeness Exercise](docs/completeness-exercise.md) | **Normative track** (proposed) |
 | — | [Non-normative examples](applications/) | Informative |
 
 **Normative** sections define what a system must provide to claim conformance to DDD: the vocabulary used to describe it (§2) and the capabilities required to support that vocabulary in implementation (§4). **Informative** sections motivate, explain, illustrate, or otherwise serve the normative core, but do not themselves constrain implementations.
@@ -112,6 +113,10 @@ Why DDD doesn't model the harness as a body. The biology metaphor — brain + dr
 
 Short definitions for the terms the docs use but don't define, because they come from outside the framework: DAG, DMN/DRD, BPMN, C4, Mermaid, RDF/SPARQL, SHACL, MCP, OCI, "frontier model." §2 covers DDD's own vocabulary; this appendix covers everything the docs *reference* from established work elsewhere.
 
+### [The Completeness Exercise](docs/completeness-exercise.md) — *proposed, normative track*
+
+Conformance asks whether a spec is legal; completeness asks whether it is sufficient for its pinned consumer. This document defines `complete(spec, binding)` as a relation, the three-tier exercise that tests it (structural check, dry-run, sampled), the residual as a first-class artifact attributed per SPMC axis, and the *projected*/*reported* status vocabulary that application documents carry. Read this to understand why "that prompt doesn't work reliably" is a detectable specification failure, not a model mood.
+
 ---
 
 ## Reference implementations
@@ -125,7 +130,7 @@ Work-in-progress reference implementations:
 
 Worked applications of DDD to concrete domains live in [`/applications`](applications). The numbered sections above define the framework in the abstract; `/applications` takes a real domain and traces it through end to end — processes, roles, artifacts, task decomposition, the points where the domain pushes back. An application is *use*, not theory; when applying it forces new general claims, they are promoted into the specification and the application references them.
 
-Each application is marked *projected* (clean derivation, not yet exercised by a running system) or *reported* (something a real system has actually run), because a framework in love with its own generality is a failure mode.
+Each application is marked *projected* (clean derivation, not yet exercised by a running system) or *reported* (something a real system has actually run), because a framework in love with its own generality is a failure mode. The status vocabulary is defined normatively by the [Completeness Exercise](docs/completeness-exercise.md) tiers, as the [Application Status](docs/02-entity-reference.md#application-status) entity.
 
 - **[The software development lifecycle](applications/sdlc.md)** — *projected.* Code generation under DDD: the steered coding agent dissolving into typed task clusters, the classify-and-dispatch gate, the broad worker as explorer-and-typifier, and the maturation toward a standard-task catalog. The first application, and the one the reference implementation is being built against.
 

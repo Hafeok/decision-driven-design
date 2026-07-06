@@ -1,0 +1,108 @@
+<svg viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <rect width="1200" height="760" fill="#fafaf8"/>
+
+  <!-- Title -->
+  <text x="60" y="52" font-size="22" fill="#333" font-weight="bold">The Completeness Exercise</text>
+  <text x="60" y="76" font-size="13" fill="#666">complete(spec, binding) — a specification is complete for a pinned SPMC binding when the exercise residual is empty</text>
+  <line x1="60" y1="96" x2="1140" y2="96" stroke="#ddd" stroke-width="1"/>
+
+  <!-- Section labels -->
+  <text x="60" y="132" font-size="11" fill="#999" letter-spacing="2">SPECIFICATION</text>
+  <text x="470" y="132" font-size="11" fill="#999" letter-spacing="2">THE EXERCISE</text>
+  <text x="920" y="132" font-size="11" fill="#999" letter-spacing="2">EXERCISE TARGET</text>
+
+  <!-- Left: WorkUnit -->
+  <rect x="60" y="150" width="240" height="240" rx="6" fill="#ffffff" stroke="#ddd" stroke-width="1.5"/>
+  <text x="180" y="180" font-size="15" fill="#333" font-weight="bold" text-anchor="middle">Bundle <tspan font-size="11" fill="#666" font-weight="normal">(WorkUnit at the seam)</tspan></text>
+  <line x1="80" y1="194" x2="280" y2="194" stroke="#ddd" stroke-width="1"/>
+  <rect x="80" y="208" width="200" height="34" rx="4" fill="#fafaf8" stroke="#ddd"/>
+  <text x="94" y="230" font-size="13" fill="#333">Schema</text>
+  <rect x="80" y="250" width="200" height="34" rx="4" fill="#fafaf8" stroke="#ddd"/>
+  <text x="94" y="272" font-size="13" fill="#333">Prompt</text>
+  <rect x="80" y="292" width="200" height="34" rx="4" fill="#fafaf8" stroke="#ddd"/>
+  <text x="94" y="314" font-size="13" fill="#333">Model</text>
+  <rect x="80" y="334" width="200" height="34" rx="4" fill="#fafaf8" stroke="#ddd"/>
+  <text x="94" y="356" font-size="13" fill="#333">Context  <tspan fill="#666" font-size="11">(content-addressed pool)</tspan></text>
+
+  <text x="60" y="416" font-size="12" fill="#666">Conformance says this artifact is legal.</text>
+  <text x="60" y="434" font-size="12" fill="#666">Nothing yet says it is sufficient.</text>
+
+  <!-- Arrow spec -> exercise -->
+  <line x1="300" y1="270" x2="440" y2="270" stroke="#999" stroke-width="1.5"/>
+  <polygon points="440,270 430,265 430,275" fill="#999"/>
+
+  <!-- Right: Pinned binding -->
+  <rect x="900" y="150" width="240" height="200" rx="6" fill="#ffffff" stroke="#ddd" stroke-width="1.5"/>
+  <text x="1020" y="180" font-size="15" fill="#333" font-weight="bold" text-anchor="middle">Pinned SPMC Binding</text>
+  <line x1="920" y1="194" x2="1120" y2="194" stroke="#ddd" stroke-width="1"/>
+  <text x="920" y="222" font-size="13" fill="#333">Model axis pinned (foundations RFC 0002)</text>
+  <text x="920" y="246" font-size="13" fill="#333">CapabilityManifest declared</text>
+  <text x="920" y="270" font-size="13" fill="#333">Binding-homogeneous per unit</text>
+  <text x="920" y="308" font-size="12" fill="#666">One unit, one binding, one verdict.</text>
+  <text x="920" y="326" font-size="12" fill="#666">Binding changes → verdicts void.</text>
+
+  <!-- Arrow binding -> exercise -->
+  <line x1="900" y1="270" x2="760" y2="270" stroke="#999" stroke-width="1.5"/>
+  <polygon points="760,270 770,265 770,275" fill="#999"/>
+
+  <!-- Center: three tiers -->
+  <rect x="440" y="150" width="320" height="90" rx="6" fill="#ffffff" stroke="#ddd" stroke-width="1.5"/>
+  <text x="456" y="176" font-size="14" fill="#333" font-weight="bold">Tier 1 — Structural check</text>
+  <text x="456" y="196" font-size="12" fill="#666">Walk the graph. No dangling edges.</text>
+  <text x="456" y="214" font-size="12" fill="#666">Static, decidable. Gates authoring.</text>
+
+  <line x1="600" y1="240" x2="600" y2="262" stroke="#c97c1e" stroke-width="1.5"/>
+  <polygon points="600,262 595,252 605,252" fill="#c97c1e"/>
+
+  <rect x="440" y="262" width="320" height="90" rx="6" fill="#ffffff" stroke="#ddd" stroke-width="1.5"/>
+  <text x="456" y="288" font-size="14" fill="#333" font-weight="bold">Tier 2 — Dry-run exercise</text>
+  <text x="456" y="308" font-size="12" fill="#666">Effectors off. Look, don't touch.</text>
+  <text x="456" y="326" font-size="12" fill="#666">One call. Gates the seam.</text>
+
+  <line x1="600" y1="352" x2="600" y2="374" stroke="#c97c1e" stroke-width="1.5"/>
+  <polygon points="600,374 595,364 605,364" fill="#c97c1e"/>
+
+  <rect x="440" y="374" width="320" height="90" rx="6" fill="#ffffff" stroke="#ddd" stroke-width="1.5"/>
+  <text x="456" y="400" font-size="14" fill="#333" font-weight="bold">Tier 3 — Sampled exercise</text>
+  <text x="456" y="420" font-size="12" fill="#666">N runs. Residual distribution.</text>
+  <text x="456" y="438" font-size="12" fill="#666">Certifies for Level 4+ autonomy.</text>
+
+  <!-- Verdict arrow down -->
+  <line x1="600" y1="464" x2="600" y2="510" stroke="#c97c1e" stroke-width="1.5"/>
+  <polygon points="600,510 595,500 605,500" fill="#c97c1e"/>
+
+  <!-- Divider before residual band -->
+  <line x1="60" y1="530" x2="1140" y2="530" stroke="#ddd" stroke-width="1"/>
+  <text x="60" y="560" font-size="11" fill="#999" letter-spacing="2">RESIDUAL — THE VERDICT</text>
+
+  <!-- Empty residual: complete (amber, meaningful path) -->
+  <rect x="620" y="580" width="300" height="120" rx="6" fill="#ffffff" stroke="#c97c1e" stroke-width="2"/>
+  <text x="636" y="610" font-size="15" fill="#c97c1e" font-weight="bold">Residual = ∅</text>
+  <text x="636" y="634" font-size="14" fill="#333" font-weight="bold">complete(spec, binding)</text>
+  <text x="636" y="656" font-size="12" fill="#666">The enforceable form of the funnel</text>
+  <text x="636" y="674" font-size="12" fill="#666">principle. Dispatch may proceed.</text>
+
+  <!-- Non-empty residual -->
+  <rect x="280" y="580" width="300" height="120" rx="6" fill="#ffffff" stroke="#ddd" stroke-width="1.5"/>
+  <text x="296" y="610" font-size="15" fill="#333" font-weight="bold">Residual ≠ ∅</text>
+  <text x="296" y="634" font-size="12" fill="#666">Each entry attributes to one axis:</text>
+  <text x="296" y="654" font-size="12" fill="#666">shape → Schema · asks → Prompt</text>
+  <text x="296" y="672" font-size="12" fill="#666">variance → Model · invention → Context</text>
+  <text x="296" y="692" font-size="12" fill="#333">VerdictEvent, pointed upstream.</text>
+
+  <!-- Branch arrows from verdict point -->
+  <line x1="600" y1="510" x2="430" y2="580" stroke="#999" stroke-width="1.5"/>
+  <polygon points="430,580 442,577 435,569" fill="#999"/>
+  <line x1="600" y1="510" x2="770" y2="580" stroke="#c97c1e" stroke-width="1.5"/>
+  <polygon points="770,580 758,577 765,569" fill="#c97c1e"/>
+
+  <!-- Feedback loop: residual -> spec (dashed) -->
+  <path d="M 280 640 L 180 640 L 180 390" fill="none" stroke="#999" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <polygon points="180,390 175,400 185,400" fill="#999"/>
+  <text x="70" y="620" font-size="11" fill="#666">re-enters as a</text>
+  <text x="70" y="636" font-size="11" fill="#666">fresh forward chain</text>
+
+  <!-- Footer note -->
+  <line x1="60" y1="724" x2="1140" y2="724" stroke="#ddd" stroke-width="1"/>
+  <text x="60" y="746" font-size="11" fill="#999">Conformance: the spec is legal. Completeness: the spec is sufficient for its pinned binding. Independent gates — neither implies the other.</text>
+</svg>

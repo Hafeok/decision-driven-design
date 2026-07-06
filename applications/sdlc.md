@@ -2,9 +2,25 @@
 
 > **Non-normative example · Status: projected.** This is a clean derivation of DDD applied to code generation, not yet a reported result from a running system. The reference implementation (product-cli) is being built against it. Read it as a design, and weight the open questions accordingly.
 >
+> Status terms are normative, defined by the [Completeness Exercise](../docs/completeness-exercise.md) tiers: *projected* = Tier-1 evidence only (clean derivation, no dangling edges); *reported* = Tier-2/3 evidence from a named system, residual recorded, run cited.
+>
 > Relies on framework concepts defined in the spec: [Task and TaskType](../docs/02-entity-reference.md#task), [the maturation curve](../docs/01-foundations.md#the-funnel-over-time-maturation), [the funnel](../docs/01-foundations.md#the-funnel-model-capability-tracks-constraint-density), [Decision and the two graphs](../docs/01-foundations.md#two-graphs-artifacts-and-decisions), and [SPMC](../docs/02-entity-reference.md#spmc-schema-prompt-model-context). This doc applies them; it does not re-derive them.
 
 ---
+
+## Promotion record
+
+Projections authored here have been frozen into more stable tiers of the ecosystem. A `frozen-as` edge records **location, not evidence**: a frozen claim remains *projected* until a named system reports against it. Authorship is directional; dependency is downward (`ai-development-foundations` RFC 0001) — this document derives from the DDD spec alone and depends on none of the artifacts below.
+
+| Projection in this document | Frozen as | Status here |
+|---|---|---|
+| Cell = one prompt, one artifact type, own model binding | `ai-development-contracts` · WorkUnit — the executable SPMC package; binding pinned per `ai-development-foundations` RFC 0002 | projected |
+| Cell-cluster handoff and gating | `ai-development-contracts` · Build seam (WorkUnit / VerdictEvent / CapabilityManifest), producer-owned per RFC 0001 | projected |
+| Gate/verifier consuming cell outputs independently | `ai-development-contracts` · VerdictEvent | projected |
+| Known/unknown routing at classify-and-dispatch | Kiln · QUEUE/EXPLORER mode switch | projected |
+| Broad worker as explorer-and-typifier | Prospector — exploration loop is Prospector's concern; EXPLORER in Kiln is firing only. Output re-enters engineered mode only as a frozen discovery record | projected |
+
+Reported-flip candidates exist where decision-cli already assembles bundles in `derived_from` order against the graph. A flip is a separate commit citing the run; it is never bundled with a promotion edge.
 
 ## The practice this replaces
 
