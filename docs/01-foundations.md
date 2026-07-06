@@ -135,7 +135,43 @@ The maturation curve is the funnel's companion picture:
 
 ![Maturation: the broad-worker stream narrows over time as recurring work is typed and descends into a widening fan of cheap, decomposed known-task clusters](assets/maturation.svg)
 
-## Design principle
+## Design principles
+
+Both principles are corollaries of one conservation law:
+
+> **The conservation of specification.** For a given task at a given assurance level, the specification demand is constant — fixed by the task, never by the system. Every system allocates that demand fully across four stores: **encoded** upstream (schema, prompt, context, binding — paid once, amortized over runs), **mechanical verification** (acceptance predicates — specification applied at the end instead of the beginning), **judgment** (a human head — the spec exists, unencoded, paid per run), and **escaped** (unallocated — transferred to the user as defect exposure). Nothing is ever removed from the total; it is only moved between stores. "We saved on spec and on review" parses as "we shipped the difference."
+
+![The conservation of specification: for a given task the total is constant — encoded specification before the model, mechanical verification after it, judgment paid per run, and what no store covers escapes as defect exposure. Allocation profiles for Explorer mode, under-engineered systems, and complete(spec, binding) at Level 4+](assets/conservation-of-specification.svg)
+
+The exercise residual ([Completeness Exercise](completeness-exercise.md)) measures the allocation: everything not encoded, priced. Maturation moves mass from judgment to encoded, because amortization wins the moment n > 1. Autonomy levels constrain the allocation: Level 4+ forces the judgment share to zero, leaving only encoded and mechanical. Circular verification — model-generated tests grading model-generated output — is allocation forgery: mass claimed in mechanical verification that was never in the system.
+
+The principles enforce the law at the system's two boundaries — knowledge in, effects out. One per pillar.
+
+### Principle 1 — No tacit dependencies *(specification pillar: the input boundary)*
+
+> Every piece of knowledge the system's behavior depends on is either **encoded** — explicit, machine-readable, transmitted in the bundle — or **declared** as a judgment point with a named owner. Nothing the system depends on may live only in someone's head.
+
+The model consumes what is transmitted; it has no access to what is assumed. Knowledge that is neither encoded nor declared does not disappear — it silently converts into per-run judgment verification, paid in review attention at every execution, discovered only when review misses.
+
+This is not an obligation to eliminate tacit knowledge. The Polanyi floor is real: some knowledge cannot be made explicit, and a principle that denies this invites hiding the floor to claim conformance. The obligation is to **map** the floor — the `annotation-needed` list is conformant; the unstated house convention is not. Explicit residue is a declared judgment point; silent residue is a defect.
+
+**Exercisable:** Tier 1 walks the encoded portion — every referent resolves or appears on the declared judgment list. Tier 3 detects violations empirically as cross-sample variance: N runs producing N internally consistent, mutually incompatible convention sets is the signature of an undeclared tacit dependency.
+
+### Principle 2 — Completeness gates action *(execution pillar: the output boundary)*
+
+> An LLM may commit an effect only through a specification that is **complete for its pinned binding** — complete(spec, binding), verified by the exercise at the tier the autonomy level demands — with **declared verification** of the output. Where human judgment substitutes for either, the substitution is declared and bounded by autonomy level. At full autonomy the judgment share is zero: encoded specification and mechanical verification cover the effect entirely.
+
+The gate sits at the effector, not at generation. Generation is cheap and reversible; effects are neither. This is what makes exploration legitimate rather than exempt: Explorer mode carries no completeness obligation *because* it commits no effects — all spec, all verification, all judgment collapse into the human reading the output. The obligation attaches the moment an effector does.
+
+Completeness is a relation, never an absolute. An unparameterized "the spec is complete" is a claim about no consumer and is void. And completeness of the spec does not verify the spec itself: validation — was the intent right, not merely met — remains outside this principle's scope. The principle governs whether under-specification can reach an effector, not total assurance.
+
+**Exercisable:** dispatch refuses a bundle lacking a completeness verdict at the required tier; every effect traces to a verdict with a declared consequence. Tier discipline follows autonomy: Tier 2 gates the seam for supervised operation; Tier 3 certifies before Level 4+, where no human inspects each output.
+
+### The pair
+
+Principle 1 makes the exercise possible — a graph containing undeclared tacit dependencies cannot be walked, so completeness cannot even be measured. Principle 2 makes the exercise consequential — a measurement that gates nothing is a report. Maturation is motion under both: the catalog is accumulated converted judgment, tacit knowledge migrating into encoded specification as task types recur, driving the judgment share toward zero on exactly the paths that run most.
+
+## Design method
 
 1. **Identify the value actions.** What does the organization actually produce that creates value.
 2. **Trace backwards.** For each value action, what decisions had to happen for it to occur, and in what order. The chain ends at standing authority, at trivial execution, or at a sensing action — the input boundary where external reality enters the graph.
