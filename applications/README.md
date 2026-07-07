@@ -22,6 +22,6 @@ Applications are marked for what they are. A *projected* application is a clean 
 
 ## Applications
 
-- [**The software development lifecycle**](sdlc.md) — *projected.* Code generation under DDD: the steered coding agent dissolving into typed task clusters, the classify-and-dispatch gate, the broad worker as explorer-and-typifier, and the maturation toward a standard-task catalog. The first application, and the one the reference implementation (product-cli) is being built against.
+- [**The software development lifecycle**](sdlc.md) — *projected.* Code generation under DDD: the steered coding agent dissolving into typed task clusters, the classify-and-dispatch gate, the broad worker as explorer-and-typifier, and the maturation toward a standard-task catalog. The first application, the one whose derivation froze into a real ecosystem ([ai-development-foundations](https://github.com/Hafeok/ai-development-foundations), [product-framework](https://github.com/Hafeok/product-framework)), and the one the reference implementation (product-cli) is being built against.
 
 Planned, as they get pressure-tested: non-engineering work management (the household/family stress test), robotics sensing (strategic layer only), game AI (decision layer only).

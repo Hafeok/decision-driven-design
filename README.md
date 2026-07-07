@@ -77,7 +77,7 @@ Work-in-progress:
 
 Worked applications live in [`applications/`](applications). Each is marked *projected* (clean derivation, not yet run) or *reported* (a real system has run it), because a framework in love with its own generality is a failure mode.
 
-- **[The software development lifecycle](applications/sdlc.md)** — *projected.* Code generation under DDD: the steered coding agent dissolving into typed task clusters, classify-and-dispatch, the broad worker as explorer-and-typifier.
+- **[The software development lifecycle](applications/sdlc.md)** — *projected.* Code generation under DDD: the steered coding agent dissolving into typed task clusters, classify-and-dispatch, the broad worker as explorer-and-typifier — and the derivation frozen outward into a real ecosystem ([ai-development-foundations](https://github.com/Hafeok/ai-development-foundations), [product-framework](https://github.com/Hafeok/product-framework)).
 
 ## Discussion & license
 
