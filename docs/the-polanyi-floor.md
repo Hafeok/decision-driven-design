@@ -18,7 +18,7 @@ The Figma-to-UIIntent bridge (`interface-framework`) extracts what it can mechan
 
 ## Position in the conservation law
 
-The [conservation of specification](01-foundations.md#design-principles) allocates a constant demand across four stores: encoded, mechanical, judgment, escaped. The floor is the reason the judgment store exists as a *permanent* store rather than a staging area: knowledge below the floor cannot migrate to encoded, at any effort. It lives in judgment legitimately — provided it is declared there.
+The [conservation of specification](01-foundations.md#the-conservation-of-specification) allocates a constant demand across four stores: encoded, mechanical, judgment, escaped. The floor is the reason the judgment store exists as a *permanent* store rather than a staging area: knowledge below the floor cannot migrate to encoded, at any effort. It lives in judgment legitimately — provided it is declared there.
 
 ## The convergence result
 

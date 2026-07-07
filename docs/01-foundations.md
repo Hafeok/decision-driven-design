@@ -101,9 +101,45 @@ The role-as-context-bundle framing extends naturally: the bundle dictates the mo
 
 Treat model selection as a per-role design decision, not a deployment detail.
 
+## The conservation of specification
+
+> **The conservation of specification.** For a given task at a given assurance level, the specification demand is constant — fixed by the task, never by the system. Every system allocates that demand fully across four stores: **encoded** upstream (schema, prompt, context, binding — paid once, amortized over runs), **mechanical verification** (acceptance predicates — specification applied at the end instead of the beginning), **judgment** (a human head — the spec exists, unencoded, paid per run), and **escaped** (unallocated — transferred to the user as defect exposure). Nothing is ever removed from the total; it is only moved between stores. "We saved on spec and on review" parses as "we shipped the difference."
+
+![The conservation of specification: for a given task the total is constant — encoded specification before the model, mechanical verification after it, judgment paid per run, and what no store covers escapes as defect exposure. Allocation profiles for Explorer mode, under-engineered systems, and complete(spec, binding) at Level 4+](assets/conservation-of-specification.svg)
+
+The exercise residual ([Completeness Exercise](completeness-exercise.md)) measures the allocation: everything not encoded, priced. Maturation moves mass from judgment to encoded, because amortization wins the moment n > 1. Autonomy levels constrain the allocation: Level 4+ forces the judgment share to zero, leaving only encoded and mechanical. Circular verification — model-generated tests grading model-generated output — is allocation forgery: mass claimed in mechanical verification that was never in the system.
+
+### The environment clause: when the demand is finitely encodable
+
+For any given action, the knowledge required to perform it perfectly is a constant. Whether that constant can be **finitely encoded** is a property of the environment, not of the action:
+
+- **Closed environment** — stable and non-changing for the duration of the action. The action and its context can be described to their full extent; perfection has finite specification demand. Encode it all, and the demand is met.
+- **Open environment** — the environment can change while the action is in flight. The demand **diverges** as required assurance approaches 1: no finite knowledge fully specifies the shot, because the gust after the bullet leaves the barrel is irreducible. Firing a gun in wind is this case. Here an assurance level must be declared, and the residual demand carried in judgment or accepted as escape.
+
+Software is not found closed — it is **closable**. "Writing code" is fully describable only against a frozen boundary: pinned toolchain, frozen repo state, content-addressed context, pinned model binding. Remove the pins and software is windy — a silent model upgrade, a drifting external API, another writer mutating shared state are gusts. Computation is the one domain where closure can be **manufactured**, and the framework's machinery is exactly that manufacture: content-addressing, binding pinning (`ai-development-foundations` RFC 0002), hermetic bundles, frozen discovery records are wind-removal equipment. The discipline does not assume a stable environment; it builds one. This is why the judgment-share-zero endpoint is reachable in software and nowhere physical.
+
+Open environments do not break the law; they split the **Context axis by binding time**. What cannot be encoded is the value; what can be encoded is the policy plus the sensing obligation: the control law is specification, the wind reading is context that binds at fire-time instead of spec-time. **Frozen context** binds when the spec is authored; **sensed context** binds when the action fires. A domain's wind is measured by how much of its context is necessarily sensed — which orders the flow domains by exposure and explains why a flow over live external state carries conditional judgment where code authoring over a frozen repo carries none.
+
+**The last wind.** In a fully pinned software system every component is deterministic by construction except one: the model. It cannot be pinned by value, only by binding — the single stochastic element left inside the closed box. This is why Tier 3 of the Completeness Exercise is *sampled*: the sampling burden exists because, and only because, one component still has weather in it. It is also why residual variance is attributable at all — with everything else frozen, whatever varies is the model's.
+
+**The Rice boundary.** For computation, *describability* is total — the program is its own complete description. *Universal mechanical verifiability* is not: Rice's theorem bars any general decision procedure for non-trivial semantic properties of programs. This is not a hole in the law; it is why the mechanical store is scoped as it is — **declared, per-task acceptance predicates**, each individually decidable, never a proof of everything. Verification is chosen property by property; the properties not chosen sit in judgment or escape, on the ledger like everything else.
+
+Consequence for sequencing: build first where the environment is maximally closable — software — because it is the one place the law's endpoint is reachable; extend outward in order of wind.
+
+### Two projections, one law
+
+The two structures the rest of this document builds on are the same law viewed along different axes:
+
+- **The funnel is the law projected along the chain.** Constraint density rising toward the value action *is* the encoded store growing with position: each step downstream, more of the demand has already been allocated upstream, so the judgment and capability required of the next consumer falls. When an implementer role requires a large model, the allocation at that position is wrong — mass sitting in judgment that belongs in encoded.
+- **Maturation is the law projected along recurrence.** The maturation curve *is* mass moving from the judgment store to the encoded store as a task type recurs and amortization pays for conversion. Its asymptote is the [Polanyi floor](the-polanyi-floor.md): the curve converges to (1 − floor), never to 1.
+
+One law, two axes: allocation over *position* is the funnel; allocation over *time* is maturation. The [Completeness Exercise](completeness-exercise.md) is the law's measurement instrument, and the design principles below are its boundary enforcement.
+
 ## The funnel: model capability tracks constraint density
 
 Model selection per-role isn't independent across roles in a chain. There's a structural pattern that emerges when the chain is well-designed: constraint density rises monotonically from the input boundary to the value action, and the model capability needed falls correspondingly. Discovery roles work in open problem space and need frontier reasoning. Architecture and design narrow the space through synthesis. Specifications pin remaining problem-domain decisions. Implementation translates a well-specified problem into code in a known idiom. Deployment, at the limit, is `terraform apply`. The value action itself is deterministic code.
+
+> This is the [conservation of specification](#the-conservation-of-specification) projected along the chain: allocation as a function of position.
 
 ![The funnel principle: constraint density rises and model capability falls from the sensing/request boundary to the value action terminus](assets/funnel.svg)
 
@@ -125,6 +161,8 @@ The design target is the bottom of the funnel: the value action should be determ
 
 The funnel describes one chain at one moment — constraint rising and model capability falling along its length. The same descent happens to a *system* over time, and it is worth naming separately because it is where the framework's cost curve comes from.
 
+> This is the same law projected along recurrence: allocation as a function of time. Its asymptote is the [Polanyi floor](the-polanyi-floor.md).
+
 Complex artifact generation decomposes: a unit of delivered work (a feature, a campaign, a case) is rarely one artifact but a composition of recurring *sub-units of work* — call them tasks — each of which is itself a cluster of typed artifacts. Early in a system's life, none of these tasks are recognized. Each one is open problem space, so each needs a broad, high-capability worker (or a human) to work it out from scratch. As the same tasks recur, they get *typed* — their decomposition, ordering, and quality criteria get made once and frozen into a reusable type (see Task and TaskType in the entity reference). The next instance of a typed task inherits all that prior constraint for free and slides down to a small, cheap model.
 
 So constraint accumulates not only along a chain (the funnel) but across time, **as catalog structure**. The hard calls migrate out of the model's live reasoning and into versioned types that any model can execute against. The funnel is the spatial view of one chain constraining itself toward its terminus; maturation is the temporal view of a whole system constraining itself toward a stable architecture, where most incoming work decomposes entirely into already-known types and only the genuinely novel remainder needs a broad worker.
@@ -137,15 +175,7 @@ The maturation curve is the funnel's companion picture:
 
 ## Design principles
 
-Both principles are corollaries of one conservation law:
-
-> **The conservation of specification.** For a given task at a given assurance level, the specification demand is constant — fixed by the task, never by the system. Every system allocates that demand fully across four stores: **encoded** upstream (schema, prompt, context, binding — paid once, amortized over runs), **mechanical verification** (acceptance predicates — specification applied at the end instead of the beginning), **judgment** (a human head — the spec exists, unencoded, paid per run), and **escaped** (unallocated — transferred to the user as defect exposure). Nothing is ever removed from the total; it is only moved between stores. "We saved on spec and on review" parses as "we shipped the difference."
-
-![The conservation of specification: for a given task the total is constant — encoded specification before the model, mechanical verification after it, judgment paid per run, and what no store covers escapes as defect exposure. Allocation profiles for Explorer mode, under-engineered systems, and complete(spec, binding) at Level 4+](assets/conservation-of-specification.svg)
-
-The exercise residual ([Completeness Exercise](completeness-exercise.md)) measures the allocation: everything not encoded, priced. Maturation moves mass from judgment to encoded, because amortization wins the moment n > 1. Autonomy levels constrain the allocation: Level 4+ forces the judgment share to zero, leaving only encoded and mechanical. Circular verification — model-generated tests grading model-generated output — is allocation forgery: mass claimed in mechanical verification that was never in the system.
-
-The principles enforce the law at the system's two boundaries — knowledge in, effects out. One per pillar.
+Both principles are corollaries of [the law](#the-conservation-of-specification), enforcing it at the system's two boundaries — knowledge in, effects out. One per pillar.
 
 ### Principle 1 — No tacit dependencies *(specification pillar: the input boundary)*
 

@@ -84,7 +84,7 @@ The sections build on each other. Read them in order if you're new to the framew
 
 ### [§1. Introduction and motivation](docs/01-foundations.md) — *informative* — *start here*
 
-The framework's premise and core ideas. LLMs as forecasters; work as a chain of context-conditioned decisions; value actions as the terminus; roles and artifacts as the unit of organization and composition; the DAG, not the pipeline; the two graphs (artifact and decision) that meet at the session; the funnel principle that ties model capability to constraint density along a chain. About 10 pages. Read this first.
+The framework's premise and core ideas. LLMs as forecasters; work as a chain of context-conditioned decisions; value actions as the terminus; roles and artifacts as the unit of organization and composition; the DAG, not the pipeline; the two graphs (artifact and decision) that meet at the session; the conservation of specification and its two projections — the funnel principle that ties model capability to constraint density along a chain, and maturation that converts recurring judgment into catalog structure over time. About 12 pages. Read this first.
 
 ### [§2. Terminology and entity reference](docs/02-entity-reference.md) — *normative*
 
