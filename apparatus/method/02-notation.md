@@ -2,11 +2,11 @@
 
 > **Appendix A. Notation profile** — *informative.* A design language for drawing decision graphs, roles, artifacts, and systems. Not required for conformance; supplied as a uniform visual vocabulary for readers who want one.
 >
-> Borrowed terms (DAG, DMN, RDF, MCP, OCI, …) — see [Appendix C: Glossary](glossary.md).
+> Borrowed terms (DAG, DMN, RDF, MCP, OCI, …) — see [Appendix C: Glossary](../glossary.md).
 
 A design language for drawing decision graphs, roles, artifacts, and systems — and a thin set of conventions for rendering them inside this repo.
 
-This document does not invent a visual grammar. It borrows three established ones, redefines a small number of node semantics, and adds the handful of glyphs no standard has. The result is a profile — the way SysML is a profile of UML — not a new UML. Everything here renders as [Mermaid](https://mermaid.js.org/) in a fenced code block, which means GitHub renders it, diffs it, and lets contributors author diagrams as text rather than in a drawing tool. It is the formalization of what [`assets/overview.svg`](assets/overview.svg) already draws by hand.
+This document does not invent a visual grammar. It borrows three established ones, redefines a small number of node semantics, and adds the handful of glyphs no standard has. The result is a profile — the way SysML is a profile of UML — not a new UML. Everything here renders as [Mermaid](https://mermaid.js.org/) in a fenced code block, which means GitHub renders it, diffs it, and lets contributors author diagrams as text rather than in a drawing tool. It is the formalization of what [`../assets/overview.svg`](../assets/overview.svg) already draws by hand.
 
 ## Why borrow, not invent
 
@@ -97,7 +97,7 @@ flowchart LR
   classDef value fill:#fff8ec,stroke:#c97c1e,stroke-width:2.5px;
 ```
 
-The `classDef` block above is the canonical palette. Copy it verbatim into any DDD diagram; the colours match `assets/overview.svg`.
+The `classDef` block above is the canonical palette. Copy it verbatim into any DDD diagram; the colours match `../assets/overview.svg`.
 
 ## Worked example: the Engineering process
 
@@ -244,4 +244,4 @@ A note on scope, against the framework's own bar for additions: this profile int
 - Annotate role and autonomy level on every decision and action node. Omitting the level is the same mistake as omitting a type.
 - Put a state on every forward-flow artifact, and a ready/done gate wherever a chain converges. Draw a gate as a rhombus and write its predicate in a companion table — never cram the predicate into the diagram. Do not use "phase"; if you reach for it, you want a ready gate over artifact state instead.
 
-`assets/overview.svg` is the canonical illustration of this profile; new diagrams should match its conventions rather than introduce their own, and the palette below is taken from it.
+`../assets/overview.svg` is the canonical illustration of this profile; new diagrams should match its conventions rather than introduce their own, and the palette below is taken from it.

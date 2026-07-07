@@ -1,14 +1,14 @@
-# Implementing Decision-Driven Design
+# DDD Applied: Conformance Capabilities
 
-> **§4. Conformance capabilities** — *normative.* The capabilities a system must provide to be conformant with DDD: artifact graph, declarative queries, shape constraints, provenance model, session-scoped lineage, durable event substrate. Capability-framed; the specific technology stack illustrating them is non-normative.
+> **Apparatus §5 — normative.** The capabilities a system must provide to run the apparatus conformantly: artifact graph, declarative queries, shape constraints, provenance model, session-scoped lineage, durable event substrate. Capability-framed; the specific technology stack illustrating them is non-normative — it is the reference-implementation choice, not the architecture.
 >
-> Borrowed terms (DAG, DMN, RDF, MCP, OCI, …) — see [Appendix C: Glossary](glossary.md).
+> Borrowed terms (DAG, DMN, RDF, MCP, OCI, …) — see [Glossary](glossary.md).
 
-A reference for the implementation architecture that emerged from applying Decision-Driven Design to a concrete system. Companion to the foundational DDD documents (*Decision-Driven Design*, *DDD and the Five Levels of AI Autonomy*, *Decision-Driven Design: Entity Reference*).
+A reference for the implementation architecture that emerged from applying Decision-Driven Design to a concrete system. Companion to the [core law](../core/) and the rest of the apparatus tier — the [entity reference](02-entities.md), [encoding a domain](03-encoding-the-domain.md), and [the autonomy ladder](04-autonomy.md).
 
 ## 1. What this document is
 
-The foundational DDD documents articulate a framework: decisions are the work, artifacts are the unit of composition, value actions are the terminus, and the framework applies recursively to itself. They do not specify how to build the framework. This document fills that gap.
+The core and the earlier application documents articulate a framework: decisions are the work, artifacts are the unit of composition, value actions are the terminus, and the framework applies recursively to itself. They do not specify the substrate needed to build it. This document fills that gap.
 
 What follows is the implementation architecture that resulted from working through how to actually build a DDD-shaped system. It covers the capabilities the implementation depends on, the structural patterns that organize them, and the few non-obvious decisions that shape everything downstream. The framing is deliberately capability-driven: it names what a substrate must provide, not the specific products that supply it, so the patterns survive specific technology choices. Concrete commitments — RDF/Oxigraph/SPARQL/SHACL/PROV-O on the graph side, Rust on the orchestration side, Python on the LLM-worker side — are called out where they have shaped the design, but they are the reference-implementation choice, not the architecture. It is not a tutorial; it is the implementation analogue of the entity reference — vocabulary and patterns to refer back to.
 

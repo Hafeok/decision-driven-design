@@ -2,9 +2,9 @@
 
 > **Non-normative example · Status: projected.** This is a clean derivation of DDD applied to code generation, not yet a reported result from a running system. The reference implementation (product-cli) is being built against it. Read it as a design, and weight the open questions accordingly.
 >
-> Status terms are normative, defined by the [Completeness Exercise](../docs/08-completeness-exercise.md) tiers: *projected* = Tier-1 evidence only (clean derivation, no dangling edges); *reported* = Tier-2/3 evidence from a named system, residual recorded, run cited.
+> Status terms are normative, defined by the [Completeness Exercise](../core/02-completeness.md) tiers: *projected* = Tier-1 evidence only (clean derivation, no dangling edges); *reported* = Tier-2/3 evidence from a named system, residual recorded, run cited.
 >
-> Relies on framework concepts defined in the spec: [Task and TaskType](../docs/02-entity-reference.md#task), [the maturation curve](../docs/01-foundations.md#the-funnel-over-time-maturation), [the funnel](../docs/01-foundations.md#the-funnel-model-capability-tracks-constraint-density), [Decision and the two graphs](../docs/01-foundations.md#two-graphs-artifacts-and-decisions), and [SPMC](../docs/02-entity-reference.md#spmc-schema-prompt-model-context). This doc applies them; it does not re-derive them.
+> Relies on framework concepts defined in the spec: [Task and TaskType](../apparatus/02-entities.md#task), [the maturation curve](../core/04-projections.md#maturation-allocation-over-recurrence), [the funnel](../core/04-projections.md#the-funnel-allocation-over-position), [Decision and the two graphs](../apparatus/01-decisions-and-artifacts.md#two-graphs-artifacts-and-decisions), and [SPMC](../apparatus/02-entities.md#spmc-schema-prompt-model-context). This doc applies them; it does not re-derive them.
 
 ---
 
@@ -32,7 +32,7 @@ DDD says code is an artifact like any other — schema, producing session, subje
 
 ## The three levels, in this domain
 
-The framework's [composition levels](../docs/02-entity-reference.md#task) land in the SDLC as:
+The framework's [composition levels](../apparatus/02-entities.md#task) land in the SDLC as:
 
 - **Feature** — the value-anchored unit; the terminal value action is `shipped feature`.
 - **Task** — the typed unit. SDLC task types: *add-an-entity*, *expose-a-CRUD-API*, *add-an-auth-rule*, *wire-a-migration*. Each owns a cell cluster.
@@ -40,7 +40,7 @@ The framework's [composition levels](../docs/02-entity-reference.md#task) land i
 
 A CRUD-API task decomposes into a cluster like {contract, handler, integration tests, IaC route}; an add-entity task into {model class, migration, unit tests}; a pure refactor into {impl, tests} with no contract or IaC. The cluster is a property of the task type, declared once.
 
-The [Stable Dependency stack](../docs/02-entity-reference.md#task) is concrete here: the handler prompt (cell) changes least; the CRUD-API task type composes cells and never reaches up into a feature; the feature composes task types and never reaches into a cell. Standardizing the CRUD-API task type cannot break the handler prompt beneath it.
+The [Stable Dependency stack](../apparatus/02-entities.md#task) is concrete here: the handler prompt (cell) changes least; the CRUD-API task type composes cells and never reaches up into a feature; the feature composes task types and never reaches into a cell. Standardizing the CRUD-API task type cannot break the handler prompt beneath it.
 
 ## Where the cell boundaries fall
 
@@ -55,7 +55,7 @@ Over-split and you pay coordination cost for no gain; under-split and the black 
 
 ## The funnel, inside one feature
 
-The cells sit at different points on the [funnel](../docs/01-foundations.md#the-funnel-model-capability-tracks-constraint-density). The API contract is upstream — it sets constraints, the hard problem-domain calls concentrate there, it may want a strong reasoning model. The handler is downstream of it — the contract pinned the hard calls, so a small code-specialized model translates a well-specified problem into a known idiom. The IaC is further down still. Model binding follows the funnel inside the implementation, and the funnel discipline applies as a forcing function: if the handler cell needs a frontier model, the first question is not "is the model good enough" but "did the contract pin the calls it should have." Under-specification surfaces as model-size escalation in a named cell.
+The cells sit at different points on the [funnel](../core/04-projections.md#the-funnel-allocation-over-position). The API contract is upstream — it sets constraints, the hard problem-domain calls concentrate there, it may want a strong reasoning model. The handler is downstream of it — the contract pinned the hard calls, so a small code-specialized model translates a well-specified problem into a known idiom. The IaC is further down still. Model binding follows the funnel inside the implementation, and the funnel discipline applies as a forcing function: if the handler cell needs a frontier model, the first question is not "is the model good enough" but "did the contract pin the calls it should have." Under-specification surfaces as model-size escalation in a named cell.
 
 ## Classify and dispatch, at the task level
 
@@ -88,11 +88,11 @@ A feature is almost never wholly unknown — it is mostly known tasks plus maybe
 
 ## Maturation toward standard tasks
 
-This domain is the clearest instance of the [maturation curve](../docs/01-foundations.md#the-funnel-over-time-maturation). Early on, few task types exist; most tasks are unknown and go to a broad worker or human; each run mints types. As the catalog fills, features increasingly decompose into known tasks and the broad worker retires from the common ones. At maturity, "the architecture supports 80% of new features" means 80% of incoming features decompose entirely into known task types — and that 80% is exactly the [type-decomposability fitness function](../docs/02-entity-reference.md#fitness-function).
+This domain is the clearest instance of the [maturation curve](../core/04-projections.md#maturation-allocation-over-recurrence). Early on, few task types exist; most tasks are unknown and go to a broad worker or human; each run mints types. As the catalog fills, features increasingly decompose into known tasks and the broad worker retires from the common ones. At maturity, "the architecture supports 80% of new features" means 80% of incoming features decompose entirely into known task types — and that 80% is exactly the [type-decomposability fitness function](../apparatus/02-entities.md#fitness-function).
 
 "The set of standard tasks we do every time" is the SDLC's name for the task-type catalog reaching a fixpoint. A standard task is a task type with high eligibility, high autonomy, a stable cluster, and a coherence audit that hasn't fired in a long time. The descent to small models tracks this: early work is big-model/human-heavy, mature work runs the 80% on small code-specialized models because the constraint now lives in the catalog, not the model's reasoning.
 
-![Maturation curve](../docs/assets/maturation.svg)
+![Maturation curve](../core/assets/maturation.svg)
 
 ## The costs this decomposition introduces
 

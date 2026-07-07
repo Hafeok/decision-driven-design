@@ -2,11 +2,11 @@
 
 > **§5. Application method** — *informative.* The method for turning a real process into a DDD model: pick one value action, walk backward, let artifacts and decisions fall out of three questions per node. Methodological — describes how to use the specification, not what conformance requires.
 >
-> Borrowed terms (DAG, DMN, RDF, MCP, OCI, …) — see [Appendix C: Glossary](glossary.md).
+> Borrowed terms (DAG, DMN, RDF, MCP, OCI, …) — see [Appendix C: Glossary](../glossary.md).
 
 How to turn an actual process into a DDD model: start at the one thing the process produces, walk backward one hop at a time, and let the artifacts, roles, and decisions fall out of a small set of questions you ask at each node.
 
-This is the companion to [the notation](05-notation.md). The notation is how you *draw* the result; this is how you *derive* it. The method is value-backward by construction — "start from what the organization actually produces, and trace back through the decisions that had to occur for it to happen" — because anchoring on the value action is what keeps the map from sprawling into everything-anyone-ever-does.
+This is the companion to [the notation](02-notation.md). The notation is how you *draw* the result; this is how you *derive* it. The method is value-backward by construction — "start from what the organization actually produces, and trace back through the decisions that had to occur for it to happen" — because anchoring on the value action is what keeps the map from sprawling into everything-anyone-ever-does.
 
 The worked example throughout is **hiring**, whose terminal value action is a signed offer. It is deliberately not the Engineering process — the point is that the same procedure produces a map for any process.
 
