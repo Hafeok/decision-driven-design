@@ -78,7 +78,7 @@ This metric is what makes the framework's audit principle measurable at action b
 ### Application Status
 *Structural.*
 
-Every application document carries a status. The status vocabulary is defined normatively by the [Completeness Exercise](completeness-exercise.md) tiers. Two orthogonal axes; fusing them is a spec error.
+Every application document carries a status. The status vocabulary is defined normatively by the [Completeness Exercise](08-completeness-exercise.md) tiers. Two orthogonal axes; fusing them is a spec error.
 
 **Status — the evidence axis.**
 

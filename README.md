@@ -1,10 +1,16 @@
 # Decision-Driven Design
 
-**A framework for LLM systems to earn trust by having integrity using precision to create transparency.**
+**A framework for LLM systems that uses precision to create transparency — to earn trust.**
 
-In order to move to fully autonoumous systems driven by LLMs we need a way to trust that system. Decision Driven Design is build around the idea to create fully specified systems with traceability to every decision for every action. In order to for the people using the systems to trust them.
+Autonomous LLM systems will be trusted the way anything is trusted: through precise agreements, kept transparently. There is no trust without both. A precise agreement about LLM work is possible because of one law:
 
-Real organizational work is a graph of decisions terminating in value actions, not a single agent loop. DDD names every piece — roles, artifacts, sessions, audits — and gives each one a measurable path from human-checkpointed to fully autonomous.
+> **The conservation of specification.** For a given task at a given assurance level, the amount of specification required is constant. Every system allocates it fully across four stores: **encoded** upstream (schema, prompt, context, model binding — paid once, amortized), **mechanical verification** (specification applied at the end instead of the beginning), **judgment** (a human head — the spec exists, unencoded, paid per run), and **escaped** (unallocated — shipped to the user as defect exposure). Nothing is ever removed from the total; it is only moved between stores.
+
+![The conservation of specification: for a given task the total is constant — encoded specification before the model, mechanical verification after it, judgment paid per run, and what no store covers escapes as defect exposure. Allocation profiles for Explorer mode, under-engineered systems, and complete(spec, binding) at Level 4+](docs/assets/conservation-of-specification.svg)
+
+The law is what makes the agreement precise. For any piece of work, the four stores are the terms: *this* is encoded, *this* is mechanically verified, *this* is a named human's judgment, and nothing escapes unpriced. Transparency is the same terms kept inspectable — every decision recorded, every action traceable to one. Trust is then not a feeling about the model; it is an audit of an allocation. The law tells you what the agreement must contain in any given context; the framework is the machinery for writing that agreement down and keeping it: [the head of §1](docs/01-foundations.md#the-conservation-of-specification) states the law, the [Completeness Exercise](docs/08-completeness-exercise.md) measures the allocation, and the [Polanyi floor](docs/09-the-polanyi-floor.md) bounds what any agreement can promise.
+
+Real organizational work is a graph of decisions terminating in value actions, not a single agent loop. DDD names every piece — roles, artifacts, sessions, audits — and gives each one a measurable path from human-checkpointed to fully autonomous, a path whose ceiling is itself measured, not asserted.
 
 ---
 
@@ -67,14 +73,14 @@ This is not a product, and it is not a methodology being marketed. It is a speci
 | §3 | [Autonomy mapping](docs/03-autonomy-levels.md) | Informative |
 | §4 | [Conformance capabilities](docs/04-implementation.md) | **Normative** |
 | §5 | [Application method](docs/06-applying.md) | Informative |
+| §6 | [The Completeness Exercise](docs/08-completeness-exercise.md) | **Normative** |
 | App. A | [Notation profile](docs/05-notation.md) | Informative |
 | App. B | [Design rationale — the biology contrast](docs/07-biology-contrast.md) | Informative |
 | App. C | [Glossary of borrowed terms](docs/glossary.md) | Informative |
-| — | [The Completeness Exercise](docs/completeness-exercise.md) | **Normative track** (proposed) |
-| — | [The Polanyi Floor](docs/the-polanyi-floor.md) | **Normative track** (proposed) |
+| App. D | [The Polanyi floor](docs/09-the-polanyi-floor.md) | Informative |
 | — | [Non-normative examples](applications/) | Informative |
 
-**Normative** sections define what a system must provide to claim conformance to DDD: the vocabulary used to describe it (§2) and the capabilities required to support that vocabulary in implementation (§4). **Informative** sections motivate, explain, illustrate, or otherwise serve the normative core, but do not themselves constrain implementations.
+**Normative** sections define what a system must provide to claim conformance to DDD: the vocabulary used to describe it (§2), the capabilities required to support that vocabulary in implementation (§4), and the completeness exercise a specification must pass for its pinned consumer (§6). **Informative** sections motivate, explain, illustrate, or otherwise serve the normative core, but do not themselves constrain implementations.
 
 > Borrowed terms (DAG, DMN, RDF, MCP, OCI, …) are defined in [Appendix C: Glossary](docs/glossary.md) — open it in a side tab if any of those acronyms are unfamiliar.
 
@@ -98,6 +104,10 @@ How the framework maps to the standard 0–5 autonomy ladder, why autonomy is pe
 
 The architecture for actually building a DDD-shaped system, framed by the *capabilities* it requires — artifact graph, declarative queries, shape constraints, provenance model, session-scoped lineage, durable event substrate — rather than the products that supply them. A concrete reference-implementation stack (Rust + Oxigraph + SHACL + PROV-O + Python LLM workers) is called out where it shaped the design, but the patterns are meant to survive specific technology choices. Covers bundle assembly, the worker contract, emergent-decisions-during-action, the meta-loop, per-component autonomy, and the model and prompt catalogs. Read this when you want to build something.
 
+### [§6. The Completeness Exercise](docs/08-completeness-exercise.md) — *normative*
+
+Conformance says a specification is legal; completeness says it is sufficient for its pinned consumer. complete(spec, binding), the three exercise tiers, the residual with per-axis attribution, eight ordinary failure cases, and the normative definition of *projected*/*reported* application status. Read this to understand what the framework can actually promise — and how the promise is checked.
+
 ### [§5. Application method](docs/06-applying.md) — *informative*
 
 The method: pick one value action, walk backward one hop at a time, and let artifacts, roles, and decisions fall out of three questions asked at each node. Covers the identification heuristics (what counts as an artifact, a role, a decision, a sensing action), where to stop, how gates and gating processes reveal themselves, and how feedback edges are derived. Worked end-to-end on a hiring process. Read this when you want to map your own process.
@@ -114,13 +124,9 @@ Why DDD doesn't model the harness as a body. The biology metaphor — brain + dr
 
 Short definitions for the terms the docs use but don't define, because they come from outside the framework: DAG, DMN/DRD, BPMN, C4, Mermaid, RDF/SPARQL, SHACL, MCP, OCI, "frontier model." §2 covers DDD's own vocabulary; this appendix covers everything the docs *reference* from established work elsewhere.
 
-### [The Completeness Exercise](docs/completeness-exercise.md) — *proposed, normative track*
+### [Appendix D. The Polanyi floor](docs/09-the-polanyi-floor.md) — *informative*
 
-Conformance asks whether a spec is legal; completeness asks whether it is sufficient for its pinned consumer. This document defines `complete(spec, binding)` as a relation, the three-tier exercise that tests it (structural check, dry-run, sampled), the residual as a first-class artifact attributed per SPMC axis, and the *projected*/*reported* status vocabulary that application documents carry. Read this to understand why "that prompt doesn't work reliably" is a detectable specification failure, not a model mood.
-
-### [The Polanyi Floor](docs/the-polanyi-floor.md) — *proposed, normative track*
-
-Some knowledge can be used but not told. This document names the empirical boundary of what can be encoded — mapped per task type, never denied — and derives the convergence result: as a task type matures, its judgment store converges to its Polanyi floor. The floor is the asymptote of the maturation curve, a diagnostic fork between floor content and conversion negligence, and a measured autonomy ceiling per task type. Distinguished from the model-as-last-wind: one limits what can be encoded, the other what can be pinned.
+The empirical boundary of what can be encoded: mapped, never denied. Why a mature task type's judgment store converges to its floor, why the maturation curve has an asymptote, and why every task type has a measured autonomy ceiling rather than an asserted one.
 
 ---
 
@@ -135,7 +141,7 @@ Work-in-progress reference implementations:
 
 Worked applications of DDD to concrete domains live in [`/applications`](applications). The numbered sections above define the framework in the abstract; `/applications` takes a real domain and traces it through end to end — processes, roles, artifacts, task decomposition, the points where the domain pushes back. An application is *use*, not theory; when applying it forces new general claims, they are promoted into the specification and the application references them.
 
-Each application is marked *projected* (clean derivation, not yet exercised by a running system) or *reported* (something a real system has actually run), because a framework in love with its own generality is a failure mode. The status vocabulary is defined normatively by the [Completeness Exercise](docs/completeness-exercise.md) tiers, as the [Application Status](docs/02-entity-reference.md#application-status) entity.
+Each application is marked *projected* (clean derivation, not yet exercised by a running system) or *reported* (something a real system has actually run), because a framework in love with its own generality is a failure mode. The status vocabulary is defined normatively by the [Completeness Exercise](docs/08-completeness-exercise.md) tiers, as the [Application Status](docs/02-entity-reference.md#application-status) entity.
 
 - **[The software development lifecycle](applications/sdlc.md)** — *projected.* Code generation under DDD: the steered coding agent dissolving into typed task clusters, the classify-and-dispatch gate, the broad worker as explorer-and-typifier, and the maturation toward a standard-task catalog. The first application, and the one the reference implementation is being built against.
 

@@ -107,7 +107,7 @@ Treat model selection as a per-role design decision, not a deployment detail.
 
 ![The conservation of specification: for a given task the total is constant — encoded specification before the model, mechanical verification after it, judgment paid per run, and what no store covers escapes as defect exposure. Allocation profiles for Explorer mode, under-engineered systems, and complete(spec, binding) at Level 4+](assets/conservation-of-specification.svg)
 
-The exercise residual ([Completeness Exercise](completeness-exercise.md)) measures the allocation: everything not encoded, priced. Maturation moves mass from judgment to encoded, because amortization wins the moment n > 1. Autonomy levels constrain the allocation: Level 4+ forces the judgment share to zero, leaving only encoded and mechanical. Circular verification — model-generated tests grading model-generated output — is allocation forgery: mass claimed in mechanical verification that was never in the system.
+The exercise residual ([Completeness Exercise](08-completeness-exercise.md)) measures the allocation: everything not encoded, priced. Maturation moves mass from judgment to encoded, because amortization wins the moment n > 1. Autonomy levels constrain the allocation: Level 4+ forces the judgment share to zero, leaving only encoded and mechanical. Circular verification — model-generated tests grading model-generated output — is allocation forgery: mass claimed in mechanical verification that was never in the system.
 
 ### The environment clause: when the demand is finitely encodable
 
@@ -131,9 +131,9 @@ Consequence for sequencing: build first where the environment is maximally closa
 The two structures the rest of this document builds on are the same law viewed along different axes:
 
 - **The funnel is the law projected along the chain.** Constraint density rising toward the value action *is* the encoded store growing with position: each step downstream, more of the demand has already been allocated upstream, so the judgment and capability required of the next consumer falls. When an implementer role requires a large model, the allocation at that position is wrong — mass sitting in judgment that belongs in encoded.
-- **Maturation is the law projected along recurrence.** The maturation curve *is* mass moving from the judgment store to the encoded store as a task type recurs and amortization pays for conversion. Its asymptote is the [Polanyi floor](the-polanyi-floor.md): the curve converges to (1 − floor), never to 1.
+- **Maturation is the law projected along recurrence.** The maturation curve *is* mass moving from the judgment store to the encoded store as a task type recurs and amortization pays for conversion. Its asymptote is the [Polanyi floor](09-the-polanyi-floor.md): the curve converges to (1 − floor), never to 1.
 
-One law, two axes: allocation over *position* is the funnel; allocation over *time* is maturation. The [Completeness Exercise](completeness-exercise.md) is the law's measurement instrument, and the design principles below are its boundary enforcement.
+One law, two axes: allocation over *position* is the funnel; allocation over *time* is maturation. The [Completeness Exercise](08-completeness-exercise.md) is the law's measurement instrument, and the design principles below are its boundary enforcement.
 
 ## The funnel: model capability tracks constraint density
 
@@ -161,7 +161,7 @@ The design target is the bottom of the funnel: the value action should be determ
 
 The funnel describes one chain at one moment — constraint rising and model capability falling along its length. The same descent happens to a *system* over time, and it is worth naming separately because it is where the framework's cost curve comes from.
 
-> This is the same law projected along recurrence: allocation as a function of time. Its asymptote is the [Polanyi floor](the-polanyi-floor.md).
+> This is the same law projected along recurrence: allocation as a function of time. Its asymptote is the [Polanyi floor](09-the-polanyi-floor.md).
 
 Complex artifact generation decomposes: a unit of delivered work (a feature, a campaign, a case) is rarely one artifact but a composition of recurring *sub-units of work* — call them tasks — each of which is itself a cluster of typed artifacts. Early in a system's life, none of these tasks are recognized. Each one is open problem space, so each needs a broad, high-capability worker (or a human) to work it out from scratch. As the same tasks recur, they get *typed* — their decomposition, ordering, and quality criteria get made once and frozen into a reusable type (see Task and TaskType in the entity reference). The next instance of a typed task inherits all that prior constraint for free and slides down to a small, cheap model.
 
@@ -183,7 +183,7 @@ Both principles are corollaries of [the law](#the-conservation-of-specification)
 
 The model consumes what is transmitted; it has no access to what is assumed. Knowledge that is neither encoded nor declared does not disappear — it silently converts into per-run judgment verification, paid in review attention at every execution, discovered only when review misses.
 
-This is not an obligation to eliminate tacit knowledge. The [Polanyi floor](the-polanyi-floor.md) is real: some knowledge cannot be made explicit, and a principle that denies this invites hiding the floor to claim conformance. The obligation is to **map** the floor — the `annotation-needed` list is conformant; the unstated house convention is not. Explicit residue is a declared judgment point; silent residue is a defect.
+This is not an obligation to eliminate tacit knowledge. The [Polanyi floor](09-the-polanyi-floor.md) is real: some knowledge cannot be made explicit, and a principle that denies this invites hiding the floor to claim conformance. The obligation is to **map** the floor — the `annotation-needed` list is conformant; the unstated house convention is not. Explicit residue is a declared judgment point; silent residue is a defect.
 
 **Exercisable:** Tier 1 walks the encoded portion — every referent resolves or appears on the declared judgment list. Tier 3 detects violations empirically as cross-sample variance: N runs producing N internally consistent, mutually incompatible convention sets is the signature of an undeclared tacit dependency.
 

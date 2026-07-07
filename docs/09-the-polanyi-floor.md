@@ -2,7 +2,7 @@
 
 > Some knowledge can be used but not told. The Polanyi floor is the framework's name for the empirical boundary of what can be encoded — mapped, never denied, and measured per task type.
 
-**Status:** Proposed, normative track. *Projected* per the [Completeness Exercise](completeness-exercise.md) tier definitions.
+**Status:** Proposed, normative track. *Projected* per the [Completeness Exercise](08-completeness-exercise.md) tier definitions.
 
 ---
 
@@ -39,7 +39,7 @@ Three consequences:
 
 ## The floor is measured, not declared
 
-Nothing entitles a designer to assert where the floor sits. It is found empirically, by encode-exercise cycles: encode what appears encodable, run the [exercise](completeness-exercise.md), attribute the residual, encode again. What survives repeated cycles — the residual that reappears after every honest encoding attempt — is the floor for that task type, at that time. A floor claim is itself *projected* until exercised, and floors can move: better representations occasionally encode what a worse representation could not. The floor is an observation with a date on it, not a law of nature per task.
+Nothing entitles a designer to assert where the floor sits. It is found empirically, by encode-exercise cycles: encode what appears encodable, run the [exercise](08-completeness-exercise.md), attribute the residual, encode again. What survives repeated cycles — the residual that reappears after every honest encoding attempt — is the floor for that task type, at that time. A floor claim is itself *projected* until exercised, and floors can move: better representations occasionally encode what a worse representation could not. The floor is an observation with a date on it, not a law of nature per task.
 
 ## Two limits, not one
 
