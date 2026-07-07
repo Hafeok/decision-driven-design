@@ -71,6 +71,7 @@ This is not a product, and it is not a methodology being marketed. It is a speci
 | App. B | [Design rationale — the biology contrast](docs/07-biology-contrast.md) | Informative |
 | App. C | [Glossary of borrowed terms](docs/glossary.md) | Informative |
 | — | [The Completeness Exercise](docs/completeness-exercise.md) | **Normative track** (proposed) |
+| — | [The Polanyi Floor](docs/the-polanyi-floor.md) | **Normative track** (proposed) |
 | — | [Non-normative examples](applications/) | Informative |
 
 **Normative** sections define what a system must provide to claim conformance to DDD: the vocabulary used to describe it (§2) and the capabilities required to support that vocabulary in implementation (§4). **Informative** sections motivate, explain, illustrate, or otherwise serve the normative core, but do not themselves constrain implementations.
@@ -116,6 +117,10 @@ Short definitions for the terms the docs use but don't define, because they come
 ### [The Completeness Exercise](docs/completeness-exercise.md) — *proposed, normative track*
 
 Conformance asks whether a spec is legal; completeness asks whether it is sufficient for its pinned consumer. This document defines `complete(spec, binding)` as a relation, the three-tier exercise that tests it (structural check, dry-run, sampled), the residual as a first-class artifact attributed per SPMC axis, and the *projected*/*reported* status vocabulary that application documents carry. Read this to understand why "that prompt doesn't work reliably" is a detectable specification failure, not a model mood.
+
+### [The Polanyi Floor](docs/the-polanyi-floor.md) — *proposed, normative track*
+
+Some knowledge can be used but not told. This document names the empirical boundary of what can be encoded — mapped per task type, never denied — and derives the convergence result: as a task type matures, its judgment store converges to its Polanyi floor. The floor is the asymptote of the maturation curve, a diagnostic fork between floor content and conversion negligence, and a measured autonomy ceiling per task type. Distinguished from the model-as-last-wind: one limits what can be encoded, the other what can be pinned.
 
 ---
 

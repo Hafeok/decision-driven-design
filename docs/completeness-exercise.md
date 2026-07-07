@@ -71,7 +71,7 @@ Execute the bundle against the pinned binding with all effectors disabled — th
 
 Execute the bundle N times against the pinned binding, real or sandboxed effects, and measure the residual distribution. A spec that passes dry-run once and fails one run in five is not complete — it is complete-shaped.
 
-- **Proves:** semantic sufficiency at the declared confidence. This is the only honest test of it; Tiers 1–2 cannot reach past the Polanyi floor.
+- **Proves:** semantic sufficiency at the declared confidence. This is the only honest test of it; Tiers 1–2 cannot reach past the [Polanyi floor](the-polanyi-floor.md). Sampling is required because, in a fully pinned bundle, the model is the last stochastic component — the one element of the closed box that still has weather in it — which is also what makes residual variance attributable.
 - **Cost:** N model calls plus verification. Certification-grade, not per-commit.
 - **Residual form:** invention rate, escalation rate, verdict variance across runs.
 

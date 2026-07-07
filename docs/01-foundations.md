@@ -153,7 +153,7 @@ The principles enforce the law at the system's two boundaries — knowledge in, 
 
 The model consumes what is transmitted; it has no access to what is assumed. Knowledge that is neither encoded nor declared does not disappear — it silently converts into per-run judgment verification, paid in review attention at every execution, discovered only when review misses.
 
-This is not an obligation to eliminate tacit knowledge. The Polanyi floor is real: some knowledge cannot be made explicit, and a principle that denies this invites hiding the floor to claim conformance. The obligation is to **map** the floor — the `annotation-needed` list is conformant; the unstated house convention is not. Explicit residue is a declared judgment point; silent residue is a defect.
+This is not an obligation to eliminate tacit knowledge. The [Polanyi floor](the-polanyi-floor.md) is real: some knowledge cannot be made explicit, and a principle that denies this invites hiding the floor to claim conformance. The obligation is to **map** the floor — the `annotation-needed` list is conformant; the unstated house convention is not. Explicit residue is a declared judgment point; silent residue is a defect.
 
 **Exercisable:** Tier 1 walks the encoded portion — every referent resolves or appears on the declared judgment list. Tier 3 detects violations empirically as cross-sample variance: N runs producing N internally consistent, mutually incompatible convention sets is the signature of an undeclared tacit dependency.
 
