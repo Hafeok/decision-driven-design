@@ -1,20 +1,10 @@
-# Decision-Driven Design: Entity Reference
+# DDD Applied: Entity Reference
 
-> **§2. Terminology and entity reference** — *normative.* The framework's vocabulary, made precise. Anything claiming DDD conformance uses these entities as defined here.
+> **Apparatus §2 — normative.** The apparatus vocabulary, made precise. Anything claiming DDD conformance uses these entities as defined here. This is the reference you return to once [Decisions, Roles, and Artifacts](01-decisions-and-artifacts.md) has established the geometry and the [core](../core/) has established the law these entities exist to keep.
 >
-> Borrowed terms (DAG, DMN, RDF, MCP, OCI, …) — see [Appendix C: Glossary](glossary.md).
+> Borrowed terms (DAG, DMN, RDF, MCP, OCI, …) — see [Glossary](glossary.md).
 
-The framework's vocabulary, organized around its central inversion: decisions are the work, value actions are the terminus.
-
-## The inversion
-
-Current LLM agent frameworks treat the **tool call** as the primary output unit. An agent reasons — ephemerally, inside its context — and then acts via a tool call. The tool call is the thing: the function, the API invocation, the side effect. Everything before it is preamble.
-
-Decision-Driven Design inverts this. The **decision** is the primary output unit. A decision is a context-conditioned forecast that produces a durable, inspectable artifact. Most decisions never touch the world; they shape the context for other decisions. Tool calls — the moments the world actually changes — sit only at the terminal nodes of the graph, where a chain of decisions finally executes against external reality.
-
-The geometry of a real process has two world boundaries: **sensing actions** on the input side (the system reads from the world), and **value actions** on the output side (the system acts on the world). Everything in between is decisions. This isn't a refinement of agentic design — it's a different geometry. The agent loop is one node in the graph; the graph is the system. The work is the decisions, plural, distributed across roles, recorded as artifacts. The tool call is just where information enters or value lands.
-
-The vocabulary below makes this geometry precise.
+The apparatus vocabulary, organized around the inversion established in [§1](01-decisions-and-artifacts.md#the-inversion): decisions are the work, value actions are the terminus, and everything between the two world boundaries is decisions recorded as artifacts. These entities are how a real domain is arranged so that the [conservation law](../core/01-the-law.md) can actually be run and its allocation kept inspectable.
 
 ---
 
@@ -78,7 +68,7 @@ This metric is what makes the framework's audit principle measurable at action b
 ### Application Status
 *Structural.*
 
-Every application document carries a status. The status vocabulary is defined normatively by the [Completeness Exercise](08-completeness-exercise.md) tiers. Two orthogonal axes; fusing them is a spec error.
+Every application document carries a status. The status vocabulary is defined normatively by the [Completeness Exercise](../core/02-completeness.md) tiers. Two orthogonal axes; fusing them is a spec error.
 
 **Status — the evidence axis.**
 
@@ -589,7 +579,7 @@ In current LLM systems, value actions correspond to tool calls with side effects
 
 The concrete realization of a role when an LLM fills it. A role is filled by either a human or a worker.
 
-A worker is the binding of three things: a model (selected by capability tag, not by name), a prompt (the versioned execution guidance), and a permission scope (the tools and side effects it may use). It runs as the stateless `bundle → artifact` function of the worker contract (implementation doc §5); the model and prompt are resolved from the binding at dispatch, not baked into the worker.
+A worker is the binding of three things: a model (selected by capability tag, not by name), a prompt (the versioned execution guidance), and a permission scope (the tools and side effects it may use). It runs as the stateless `bundle → artifact` function of the worker contract (conformance doc §5); the model and prompt are resolved from the binding at dispatch, not baked into the worker.
 
 A worker sits behind the role interface. The only thing crossing a role boundary is the artifact, and that is governed by the role's authority — not the worker. Swap the worker, or replace it with a human, and the downstream graph is unaffected. This is the single-interface principle made literal: humans and workers are two fillers of one interface.
 

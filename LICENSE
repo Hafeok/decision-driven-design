@@ -1,6 +1,6 @@
 Decision-Driven Design — documentation and specification
 
-Copyright (c) 2026 Emil
+Copyright (c) 2026 Emil Okkels Klein
 
 This work is licensed under the Creative Commons Attribution 4.0
 International License (CC BY 4.0).
@@ -32,8 +32,8 @@ https://creativecommons.org/licenses/by/4.0/
 
 When citing this work, the suggested form is:
 
-  Emil. Decision-Driven Design: A framework for building systems with
-  LLMs. 2026. https://github.com/<owner>/decision-driven-design
+  Emil Okkels Klein. Decision-Driven Design: A framework for building
+  systems with LLMs. 2026. https://github.com/Hafeok/decision-driven-design
 
 ────────────────────────────────────────────────────────────────────────
 

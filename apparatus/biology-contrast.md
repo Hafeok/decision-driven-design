@@ -1,8 +1,8 @@
 # DDD and the biology contrast
 
-> **Appendix B. Design rationale — the biology contrast** — *informative.* Why DDD doesn't model the harness as a body. Sharpens what the specification chooses *not* to be by contrasting it with the biological metaphor.
+> **Appendix — design rationale, informative.** Why DDD doesn't model the harness as a body. Sharpens what the framework chooses *not* to be by contrasting it with the biological metaphor.
 >
-> Borrowed terms (DAG, DMN, RDF, MCP, OCI, …) — see [Appendix C: Glossary](glossary.md).
+> Borrowed terms (DAG, DMN, RDF, MCP, OCI, …) — see [Glossary](glossary.md).
 
 Why DDD doesn't model the harness as a body, what the biology metaphor gets right, and what it would cost to take seriously.
 
