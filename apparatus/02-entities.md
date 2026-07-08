@@ -577,9 +577,11 @@ In current LLM systems, value actions correspond to tool calls with side effects
 ### Worker
 *Primary.*
 
-The concrete realization of a role when an LLM fills it. A role is filled by either a human or a worker.
+The concrete realization of a role when an LLM fills it. A role is filled by either a human or a worker — and under the law's [actor spectrum](../core/01-the-law.md#the-environment-clause-when-the-demand-is-finitely-encodable), these are not two mechanisms but **one dispatch decision at two binding resolutions**. Filling a role means designating an actor whose certified capability envelope covers the role's requirements. For a worker the binding pins a distribution (model version + prompt version — instance-general, stable until changed); for a human it pins a classification envelope (seniority, certification, qualification — individual, expiring, institutionally maintained). Same selection logic, different verdict resolution.
 
 A worker is the binding of three things: a model (selected by capability tag, not by name), a prompt (the versioned execution guidance), and a permission scope (the tools and side effects it may use). It runs as the stateless `bundle → artifact` function of the worker contract (conformance doc §5); the model and prompt are resolved from the binding at dispatch, not baked into the worker.
+
+**Capability tags are the actor-general concept here, not a model-catalog convenience.** Human role-matching has run on them for centuries — rank, title, type rating, board certification are capability tags over human actors, cached verdicts of sampled qualification. The model catalog's tags extend an existing institution to the first bindable non-human actor; declaring requirements against tags rather than identities is what lets one role interface dispatch over both actor types without knowing which it got.
 
 A worker sits behind the role interface. The only thing crossing a role boundary is the artifact, and that is governed by the role's authority — not the worker. Swap the worker, or replace it with a human, and the downstream graph is unaffected. This is the single-interface principle made literal: humans and workers are two fillers of one interface.
 
@@ -587,7 +589,7 @@ Two authorities stay separate:
 - **Artifact authority** — what may be produced. Lives on the role. Interface-level; identical whether a human or a worker fills it.
 - **Permission scope** — what may be touched during execution: which tools and effect-producing actions, which secrets, which sandbox. Lives on the worker. Implementation-level.
 
-A worker binding is *valid* when its prompt targets the role, its model satisfies the role's form requirements and the prompt's capability requirements, and its permission scope covers the role's value actions. Validity is a static check. *Eligibility* — whether the binding is trusted to run, and at what autonomy level — is earned separately from session evidence, the same qualified/candidate/deprecated lifecycle the model catalog uses.
+A worker binding is *valid* when its prompt targets the role, its model satisfies the role's form requirements and the prompt's capability requirements, and its permission scope covers the role's value actions. Validity is a static check. *Eligibility* — whether the binding is trusted to run, and at what autonomy level — is earned separately from session evidence, the same qualified/candidate/deprecated lifecycle the model catalog uses. This lifecycle is the machine instance of human certification, with one resolution difference the [actor spectrum](../core/01-the-law.md#the-environment-clause-when-the-demand-is-finitely-encodable) predicts: a worker's eligibility verdict is stable until an SPMC axis changes (re-qualification is *event-driven*), while a human's decays with drift (re-qualification is *cadence-driven* — recertification, currency windows). A conformant system dispatching humans in roles should therefore attach expiry to human eligibility where it attaches version-invalidation to worker eligibility.
 
 Vocabulary note: "agent" in current LLM frameworks means the whole reasoning-and-acting loop; in DDD that loop is a worker filling one role.
 

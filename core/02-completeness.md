@@ -6,7 +6,7 @@
 
 ## The gap this closes
 
-A specification can satisfy every static criterion — schema-valid, derivation-clean, structurally coherent — and still force the consuming model to invent, because something the *consumer* needed was not in the input. Static criteria check the spec against the spec. Nothing static checks the spec against the consumer.
+A specification can satisfy every static criterion — schema-valid, derivation-clean, structurally coherent — and still force the consuming actor to invent, because something the *consumer* needed was not in the input. Static criteria check the spec against the spec. Nothing static checks the spec against the consumer.
 
 Today that failure is detected downstream: as output-quality variance, as escalation to a larger model, as re-prompting until something sticks. By the [funnel principle](04-projections.md#the-funnel-allocation-over-position) every one of those is upstream under-specification wearing a model-capability costume. There is no gate at the seam that catches it *before* execution. The Completeness Exercise is that gate.
 
@@ -25,7 +25,7 @@ Completeness is a relation, not a property:
 
 > **complete(spec, binding)** — a specification is complete for a pinned binding when exercising the spec against that binding produces an empty residual.
 
-There is no unparameterized "complete." A specification can be complete for one model binding and open for another. This is not a weakness of the definition; it is the funnel principle in predicate form. Constraint density in the spec and required capability in the consumer trade off — completeness names the point where the spec has discharged every obligation the pinned consumer cannot.
+There is no unparameterized "complete." A specification can be complete for one consumer and open for another — one model binding versus the next, a senior versus a junior human. This is not a weakness of the definition; it is the funnel principle in predicate form. Constraint density in the spec and required capability in the consumer trade off — completeness names the point where the spec has discharged every obligation the pinned consumer cannot.
 
 The binding must be **pinned**: a specific version of each of the four axes output quality rides on — **Schema** (the target shape), **Prompt** (the execution guidance), **Model**, and **Context** (the assembled input). The tuple is Specification Framework vocabulary (SPMC); the binding is pinned per `ai-development-foundations` RFC 0002. The exercise unit is one cell's bundle: one prompt, one artifact type, assembled in dependency order, with its own model binding — one cell, one binding, one verdict. At the contracts seam the serialized form of the exercised bundle is the WorkUnit with its CapabilityManifest (`ai-development-contracts`, Build seam); this document uses the framework vocabulary and notes the seam mapping once, here. Because the binding is pinned, the verdict is stable and cacheable — same spec, same binding, same result. When the binding changes — a model upgrade, a capability change — every cached completeness verdict against the old binding is void. Unpinned targets are exactly why informal completeness claims decay silently: there is no stable thing to have been complete *for*.
 
