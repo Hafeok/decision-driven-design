@@ -1,6 +1,6 @@
 # DDD Applied: The Autonomy Ladder
 
-> **Apparatus §4 — informative.** How the apparatus maps to the standard 0–5 autonomy ladder, why per-role autonomy is the unit, and why the ceiling of any role is the measured [Polanyi floor](../core/03-the-polanyi-floor.md) of its task type, never an assertion. Not required for conformance; supplied for readers already thinking in autonomy levels.
+> **Apparatus §4 — informative.** How the apparatus maps to the standard 0–5 autonomy ladder, why per-role autonomy is the unit, and why the ceiling of any role is the measured [Polanyi floor](../core/03-the-polanyi-floor.md) of its task type, never an assertion — with the caveat that, if the [zero-floor postulate](../core/03-the-polanyi-floor.md#the-zero-floor-postulate-for-digital-actions) holds, Level 5 is in principle reachable for every purely digital task type. Not required for conformance; supplied for readers already thinking in autonomy levels.
 >
 > Borrowed terms (DAG, DMN, RDF, MCP, OCI, …) — see [Glossary](glossary.md).
 

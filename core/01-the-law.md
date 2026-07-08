@@ -14,7 +14,9 @@ That is the entire subject of the framework: for a given decision, where does th
 
 ## The law
 
-> **Conservation of Specification.** For a given task at a given assurance level, the specification demand is constant — fixed by the task, never by the system. Every system allocates that demand fully across four stores. Nothing is ever removed from the total; it is only moved between stores.
+> **Conservation of Specification** — in full, the **Conservation of Specification Demand**. For a given task at a given assurance level, the specification demand is constant — fixed by the task, never by the system. Every system allocates that demand fully across four stores. Nothing is ever removed from the total; it is only moved between stores.
+
+The full name marks the conserved quantity precisely: it is the *demand* that is conserved, not any specification artifact. The law is a pair — an invariance premise (the demand is fixed by the task and assurance level, never by the system) and a conservation consequence (allocation moves between stores; the total never shrinks). The consequence is the load-bearing half, so the conservation word keeps the short name. Two things the law does *not* say: the constant is **known** (it is discovered, by encode-exercise cycles — the gap between fixed and known is the [Polanyi Floor](03-the-polanyi-floor.md)), and the constant is **freezable** (whether it can be encoded ahead of fire time is an environment property — next section).
 
 The four stores are the four places the knowledge required for a decision can live:
 
@@ -29,16 +31,45 @@ The consequence that makes the law useful: **you cannot reduce the total, only r
 
 This turns a vague quality conversation into an allocation audit. For any piece of work the four stores are the *terms of the agreement*: this much is encoded, this much is mechanically verified, this much is a named human's judgment, and nothing escapes unpriced. A system is trustworthy not because its model is good but because its allocation is fully accounted for and inspectable.
 
+## The demand is denominated in decisions
+
+The law states the demand is constant. This section states what the constant *is made of*: **the specification demand for an action is the set of decisions that govern it.** The constant is not an amount of text; it is a decision set, fixed by the task and the assurance level. What varies by system is where each decision gets made.
+
+This gives the law its decision-side reading, equivalent to the specification-side statement above: **every governing decision gets made — the only choice is by whom, when, and at what price.** To specify is to pre-make decisions; a specification is decisions in encoded, transmissible form. The two vocabularies are the same claim at two moments, which is why the framework is named for the unit (decisions) and the law for the demand (specification): Decision-Driven Design rests on the Conservation of Specification Demand precisely because that demand is denominated in decisions.
+
+Take a physical action to see the grain of it. Firing a rifle is one action, governed by many decisions: kneel or lie prone; how firmly the stock sits against the shoulder; how far the eye sits from the scope; when in the breathing cycle to squeeze. Each is a decision whether it is made deliberately, made tacitly by a trained body, or made by nobody at all. The action's specification — *how to do it to the declared standard* — decomposes exhaustively into these governing decisions.
+
+Three terms, in temporal order, and they must not be conflated:
+
+- **Facts** are what the action operates *on and in* — the target's distance, the wind reading, the repo's state. Facts are not demand items; they are the substrate, **inspected in order to act**. Inspecting them is the sensing side of the system.
+- **Decisions** are the demand — the constraints applied *before* the act that steer it toward the perfect outcome. Each decision consumes facts as input and contributes constraint as output.
+- **Verification** comes *after* the act — the encoded criterion the outcome is checked against.
+
+Inspect facts, decide, act, verify. The four stores are then four answers to the question *who made this decision*:
+
+- **Encoded** — decided once, upstream, frozen; execution replays a pre-made decision.
+- **Mechanical verification** — the decision is delegated to the executor, but its *outcome* is gated by an encoded criterion after the act.
+- **Judgment** — decided per-run, in a human head, unencoded.
+- **Escaped** — decided by *nobody*: it falls to the model's prior, a default, or physics. Defect exposure is precisely the set of unowned decisions.
+
+Denominating the demand in decisions also derives two things the law otherwise had to stipulate:
+
+**Assurance level is the granularity bound.** A decision belongs to the governing set if and only if varying it moves the outcome beyond the declared assurance tolerance. At barn-door assurance, eye relief is not in the set; at marksman assurance it is. This is *why* the law is parameterized on assurance: raising the assurance level admits more decisions into the demand. It also dissolves the infinite-regress objection — muscle-fiber recruitment is not a governing decision at any assurance level a shooter declares, because varying it within the body's trained envelope does not move the outcome past tolerance.
+
+**The [Polanyi Floor](03-the-polanyi-floor.md) is denominated in the same unit.** The floor is the subset of the governing decision set that provably governs — vary it and the outcome moves — yet resists articulation. The marksman's eye relief is a decision made below consciousness: real, operative, trained into the body, encodable only down to some fidelity and no further. The floor is not missing knowledge; it is owned-but-unarticulable decisions.
+
+This is also the theorem behind the framework's name. Specification decomposes into decisions; therefore driving a system by its specification *is* driving it by its decisions — decision-driven design, as derivation rather than slogan.
+
 ## The environment clause: when the demand is finitely encodable
 
 The law says the demand is constant. It does not say the demand is *finite*. Whether the specification for a decision can be **finitely encoded** is a property of the environment, not of the decision.
 
 - **Closed environment** — stable for the duration of the action. The action and its context can be described to their full extent; perfection has finite specification demand. Encode it all and the demand is met.
-- **Open environment** — the environment can change while the action is in flight. The demand **diverges** as required assurance approaches 1: no finite knowledge fully specifies the outcome, because the change after commitment is irreducible. Firing a gun in wind is this case — the gust after the bullet leaves the barrel cannot be pre-encoded. Here an assurance level must be *declared*, and the residual demand carried in judgment or accepted as escape.
+- **Open environment** — the environment can change while the action is in flight. The demand **diverges** only in the limit, as required assurance approaches 1: no finite knowledge fully specifies the outcome, because the change after commitment is irreducible. Firing a gun in wind is this case — the gust after the bullet leaves the barrel cannot be pre-encoded. At any *declared* assurance below the limit, the demand is finite and constant again — evaluated at fire time — and the law holds unchanged. What wind destroys is not the constancy of the demand but its **pre-encodability**: the flow variables cannot be frozen at authoring time, so their share of the demand must be either sensed at fire time, carried in judgment, or priced as escape. Open environments are the law's limit case, not its counterexample.
 
-Software is not found closed — it is **closable**. "Writing code" is fully describable only against a frozen boundary: pinned toolchain, frozen repo state, content-addressed context, pinned model binding. Remove the pins and software is windy — a silent model upgrade, a drifting external API, another writer mutating shared state are all gusts. Computation is the one domain where closure can be *manufactured*, and most of the framework's machinery is exactly that manufacture: content-addressing, binding pinning, hermetic bundles, frozen discovery records are wind-removal equipment. The discipline does not assume a stable environment; it builds one. This is why the judgment-share-zero endpoint is reachable in software and nowhere physical.
+Software is not found closed — it is **closable**. "Writing code" is fully describable only against a frozen boundary: pinned toolchain, frozen repo state, content-addressed context, pinned model binding. Remove the pins and software is windy — a silent model upgrade, a drifting external API, another writer mutating shared state are all gusts. Computation is the one domain where closure can be *manufactured*, and most of the framework's machinery is exactly that manufacture: content-addressing, binding pinning, hermetic bundles, frozen discovery records are wind-removal equipment. The discipline does not assume a stable environment; it builds one. This is the environment half of why the judgment-share-zero endpoint is reachable in software and nowhere physical; the floor half is the [zero-floor postulate](03-the-polanyi-floor.md#the-zero-floor-postulate-for-digital-actions).
 
-Open environments do not break the law; they split the context by **binding time**. What cannot be encoded is the *value*; what can be encoded is the *policy* plus the *sensing obligation*. Frozen context binds when the spec is authored; sensed context binds when the action fires. A domain's exposure to wind is measured by how much of its context is necessarily sensed rather than frozen.
+Open environments do not break the law; they split the context by **binding time**. What cannot be encoded is the *value*; what can be encoded is the *policy* plus the *sensing obligation*. In decision terms: the governing decision stays in the demand, but the **facts** it consumes can only be inspected at fire time — the wind-correction decision is encodable as policy; the wind reading is not. Frozen context binds when the spec is authored; sensed context binds when the action fires. A domain's exposure to wind is measured by how much of its context is necessarily sensed rather than frozen.
 
 **The last wind.** In a fully pinned software system every component is deterministic by construction except one: the model. It cannot be pinned by value, only by binding — the single stochastic element left inside the closed box. This is why the highest tier of the Completeness Exercise is *sampled*: the sampling burden exists because, and only because, one component still has weather in it. It is also why residual variance is attributable at all — with everything else frozen, whatever varies is the model's.
 
