@@ -14,11 +14,12 @@ Actor-type readings — the same law, read against one actor's physics:
 - [**The Actor's Capacity**](context-window.md) — *normative.* Context length as the model actor's total allocation budget: three of the four stores compete for one window. Why explore mode wants long context, why context length bounds action size, and the funnel's physical necessity (decomposition as capacity management).
 - [**Escape Under Pressure**](escape-under-pressure.md) — *normative.* The escaped store at fire time, actor-general: when demand exceeds capacity, the prior decides — defaults for a program, habit for a human, the weights for a model. Hallucination as an escaped decision surfaced as output, and the escape/wind taxonomy. Falsification design: [experiments/escape-wind](../experiments/escape-wind/DESIGN.md).
 
-Working notes — the knowability arc, staged for integration per its [dependency map](knowability-arc-dependency-map.md):
+Chapter extensions — insertion blocks and lemmas, each living in its chapter's subdirectory (all *projected*):
 
-- [**The Finite-Index Lemma**](finite-index-lemma.md) — when a task's governing decision set is finite, and therefore knowable in finite terms.
-- [**The Decidability Corollary (KC2 + KC3)**](decidability-corollary-kc2-kc3.md) — zero-floor implies membership and coverage are decidable.
-- [**Action, Target, and the Two Levers**](action-target-and-levers.md) — insertion block for the law: target success determines required specification; the two levers priced against distinct residual classes.
-- [**The Tier–Specification Inverse Law**](tier-specification-inverse-law.md) — insertion block for the floor: withholding encoded specification forces required actor tier upward.
+- [**Seam Demand Under Decomposition**](01-the-law/seam-demand.md) — the conservation identity for decomposition: splitting a decision set into separately-discharged parts manufactures seam demand, `|D_comp| = |D_single| + |S|`. Actor-neutral; consumed by [`apparatus/composition/`](../apparatus/composition/).
+- [**Action, Target, and the Two Levers**](01-the-law/action-target-and-levers.md) — what an action is (a decidable acceptance predicate — intents lack one), the success decomposition `1 − success = esc_escape + esc_wind`, `plan(p*)`, and the two levers (specification vs actor) priced per residual class.
+- [**The Finite-Index Lemma**](02-completeness/finite-index-lemma.md) — KC1, finiteness: when a task's governing decision set is finite, and therefore knowable in finite terms.
+- [**The Decidability Corollary (KC2 + KC3)**](02-completeness/decidability-corollary.md) — membership decidability and loop termination as a corollary of the zero-floor postulate; assembles the Knowability Theorem (KC1 + KC2 + KC3).
+- [**The Tier–Specification Inverse Law**](03-the-polanyi-floor/tier-specification-inverse-law.md) — derives, rather than asserts, why withholding encoded specification forces required actor tier upward — and why past a point that demand is met only by selection, not training.
 
 The through-line: the law states what any specification must account for; completeness measures it; the floor bounds it; the projections are how it shows up as a design discipline along a chain and across a system's life. Nothing in `apparatus/` adds a new law — it is all machinery for keeping this one.
