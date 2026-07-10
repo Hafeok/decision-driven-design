@@ -29,7 +29,7 @@ Three things worth declaring rather than ignoring:
 
 **Feedback composes the funnel with itself.** An operational finding does not traverse the funnel backwards on its way upstream — it lands at an upstream role's input and triggers a *fresh forward chain*. The receiving role uses its normal binding. Feedback is not counter-funnel; the funnel just composes with itself.
 
-The design target is the bottom of the funnel: the value action should be deterministic code. Anywhere it still requires model judgment, an upstream decision was deferred into execution, and the funnel discipline pushes that judgment back where it belongs.
+The design target is the bottom of the funnel: the value action should be deterministic code. Anywhere it still requires model judgment, an upstream decision was deferred into execution, and the funnel discipline pushes that judgment back where it belongs. The two-forms duality re-derives this endpoint exactly: as the executor's *delegated* decision set — those covered in criterion form only — shrinks to empty, the required executor converges to the degenerate actor, because a fully constraint-form bundle **is a program**. Model selection along the funnel is therefore monotone: constraint density up, delegated set down, cheapest qualified binding down — until the qualified binding is a process invocation. Read as a search problem, the funnel is the monotone destruction of *maneuvering room* — the same quantity exploration deliberately preserves; the two modes are one dial at its two ends.
 
 ## Maturation: allocation over recurrence
 

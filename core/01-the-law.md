@@ -21,7 +21,7 @@ The full name marks the conserved quantity precisely: it is the *demand* that is
 The four stores are the four places the knowledge required for a decision can live:
 
 - **Encoded** — explicit, transmitted in the action's input, in a form the executing actor can consume: a checklist or procedure for a human, a program for a machine, a schema-prompt-context bundle for a model. Paid once, amortized over every run.
-- **Mechanical verification** — the same specification applied at the *end* instead of the beginning: an encoded acceptance predicate that checks the output rather than shaping the input, evaluable without any actor's discretion.
+- **Mechanical verification** — the same specification in **criterion form**: an encoded acceptance predicate applied at the *end* instead of the beginning, checking the output rather than shaping the input, evaluable without any actor's discretion. *Mechanical* here means mechanically evaluable criterion — never machine-like execution; an actor's trained, automatic performance is not this store (see the judgment store's cost structure below).
 - **Judgment** — made per run by a **designated, accountable actor** from knowledge that is not encoded. Paid every run, as attention. Today the only actor type that can carry accountable unencoded specification is a human; whether any other actor type can qualify is an actor-relative question — the same relativity that governs the [floor](03-the-polanyi-floor.md#the-floor-is-actor--and-environment-relative).
 - **Escaped** — unallocated. Decided by no designated actor: it falls to a prior, a default, chance, or physics — and is therefore transferred to the user as defect exposure.
 
@@ -45,12 +45,18 @@ Three terms, in temporal order, and they must not be conflated:
 - **Decisions** are the demand — the constraints applied *before* the act that steer it toward the perfect outcome. Each decision consumes facts as input and contributes constraint as output.
 - **Verification** comes *after* the act — the encoded criterion the outcome is checked against.
 
-Inspect facts, decide, act, verify. The four stores are then four answers to the question *who made this decision*:
+Inspect facts, decide, act, verify.
+
+Verification sits after the act and is no part of the action — yet it sits inside the law, and the reason resolves what would otherwise look like a category slip. **Every governing decision admits two encoded forms.** In *constraint form* the specification applies before the act and pre-makes the decision: *hold the eye seven centimeters from the scope.* In *criterion form* the specification applies after the act, lets the executor make the decision, and rejects bad makings: *the group must fall within four minutes of angle.* Same decision, same knowledge, one specification — differing only in when it binds relative to the act. Mechanical verification is not a third kind of content; it is specification in criterion form, which is why constrain-and-generate and generate-and-test discharge the *same* demand at different cost profiles — retries, waste, and latency vary; the total never does. Nor is there double-counting: choosing an acceptance predicate is not additional demand, it is choosing a decision's form. A decision may even be covered in both forms at once — redundancy is a cost choice the law permits; only *uncovered and unpriced* is what it forbids.
+
+The four stores are then four answers to the question *who made this decision*:
 
 - **Encoded** — decided once, upstream, frozen; execution replays a pre-made decision.
 - **Mechanical verification** — the decision is delegated to the executor, but its *outcome* is gated by an encoded criterion after the act.
 - **Judgment** — decided per-run, in a human head, unencoded.
 - **Escaped** — decided by *nobody*: it falls to a prior, a default, chance, or physics. Defect exposure is precisely the set of unowned decisions.
+
+The judgment store has a **cost structure**, and training is what shapes it. A decision held in judgment can be made *deliberately* — expensive attention, every run — or *automatically*, by a body that trained it to second nature. Training is the human analogue of encoding: pay once, amortize over every run. But the storage medium is the actor, not an artifact — **embodiment is intra-actor encoding**, and the law's encoded store requires *extra*-actor encoding: transmissible, inspectable, ownable by the system. Embodied skill therefore stays in the judgment store at collapsed per-run cost; it never migrates to encoded or to mechanical verification, because it cannot be read off any ledger — only sampled, which is what qualification does. And the amortization has a price the two-store distinction makes visible: **embodiment buys cheap execution at the cost of articulability** — automatization pushes decisions below the actor's own reach, which is why the most trained experts articulate worst. For humans this trade was mandatory: embodiment was the only pay-once mechanism available. Encoding amortizes *without* the articulability price — which is, in one sentence, the economic case for the encoded store's existence.
 
 Denominating the demand in decisions also derives two things the law otherwise had to stipulate:
 
