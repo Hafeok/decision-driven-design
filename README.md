@@ -37,6 +37,7 @@ The concrete apparatus for running the law against a real domain: *how you actua
 - [**The Autonomy Ladder**](apparatus/04-autonomy.md) — per-role autonomy, ceilinged by the floor.
 - [**Conformance Capabilities**](apparatus/05-conformance.md) — *normative.* The substrate a conformant system must provide.
 - **Modeling toolkit** — [applying the method](apparatus/method/01-applying.md) (value-backward, worked on hiring) and [the notation](apparatus/method/02-notation.md) (Mermaid profile).
+- **Composition** — [partition](apparatus/composition/partition.md) (reach), [seam allocation](apparatus/composition/seam-allocation.md) (the four-motive law), and [seam–tier coupling](apparatus/composition/seam-tier-coupling.md): what composing actors buys, and what the seams cost — spending the [seam-demand identity](core/01-the-law/seam-demand.md) the law owns.
 
 The relationship is strict: **`core/` is the invariant, `apparatus/` is one concrete way to keep it.** Nothing in `apparatus/` introduces a new law. When you read "the funnel is a design discipline" or "the floor is an autonomy ceiling" in the apparatus tier, those are the core law showing up in apparatus terms.
 

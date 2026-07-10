@@ -15,6 +15,12 @@ Modeling toolkit:
 - [**method/01 — Applying DDD to a real process**](method/01-applying.md) — *informative.* Pick one value action, walk backward, let artifacts and roles fall out of three questions per node. Worked on hiring.
 - [**method/02 — The notation**](method/02-notation.md) — *informative.* A thin profile over DMN, BPMN, and C4, rendered as Mermaid, for drawing the result.
 
+Composition — what multiple actors buy when composed, and what the seams cost (all *projected*; consumes the [seam-demand identity](../core/01-the-law/seam-demand.md) from core):
+
+- [**Partition**](composition/partition.md) — actor composition for reach. A composite is an actor iff the joint action has a decidable acceptance predicate; partition buys reach (`⋃ Dᵢ`) at the cost of seam `|S|`; composition buys reach, not resolution. Good module boundaries are where `|S|` is locally minimal.
+- [**Seam Allocation**](composition/seam-allocation.md) — the four-motive law: reach, speed, assurance, and failover are four allocations of the same seam demand. Assurance can be worse than one actor; failover is monotone-safe; hedged failover pays in compute, gated on idempotency. Carries `plan_composition`.
+- [**Seam–Tier Coupling**](composition/seam-tier-coupling.md) — unencoded seam raises required tier *at the boundary* (why integration roles are senior); no free decomposition in tier currency; the interface contract as a one-time buy-down of recurring boundary cost; the seam as one object on two ledgers.
+
 Projected notes and campaign instruments:
 
 - [**Model-Actor Capacity**](model-actor-capacity.md) — *projected.* The active/total decomposition: the context window resolves into reach (total parameters) and resolution (active parameters), with a pre-declared escape-split prediction against dense vs MoE bindings.
