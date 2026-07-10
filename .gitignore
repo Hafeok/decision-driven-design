@@ -1,0 +1,6 @@
+# Windows Zone.Identifier files (WSL/NTFS alternate data streams)
+*:Zone.Identifier
+
+# Python
+__pycache__/
+*.pyc

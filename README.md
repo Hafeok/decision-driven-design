@@ -24,6 +24,8 @@ The law and its consequences, domain-independent. This is DDD in the abstract: *
 - [**Completeness**](core/02-completeness.md) — the instrument that reads the allocation. `complete(spec, binding)`, the three-tier exercise, the residual, eight ordinary failure cases.
 - [**The Polanyi Floor**](core/03-the-polanyi-floor.md) — the lower bound: knowledge that cannot move from judgment to encoded at any effort. The autonomy ceiling, measured not asserted.
 - [**The Two Projections**](core/04-projections.md) — the one law along two axes: the **funnel** (allocation over position in a chain) and **maturation** (allocation over recurrence in time).
+- [**The Actor's Capacity**](core/context-window.md) — the law read against the model actor: context length as the total allocation budget, why explore mode wants long context, and why context bounds action size.
+- [**Escape Under Pressure**](core/escape-under-pressure.md) — the law read at fire time: when demand exceeds capacity the prior decides; hallucination as an escaped decision surfaced as output, and the escape/wind taxonomy.
 
 ### [`apparatus/`](apparatus/) — DDD applied
 
@@ -72,6 +74,12 @@ Work-in-progress:
 
 - **[product-cli](https://github.com/Hafeok/product-cli)** — the process system for the Engineering process. Owns features, ADRs, test criteria, dependencies; builds the derived graph; assembles bundles; runs audits.
 - **[decision-cli](https://github.com/Hafeok/decision-cli)** — the companion orchestration system, designed against [application §5](apparatus/05-conformance.md).
+
+## Experiments
+
+Falsification harnesses for the framework's projected claims live in [`experiments/`](experiments). A design stays *projected* until linked runs are cited.
+
+- **[escape-wind](experiments/escape-wind/DESIGN.md)** — tests the escape/wind decomposition of [Escape Under Pressure](core/escape-under-pressure.md): three predictions, kill conditions declared before the run.
 
 ## Non-normative examples
 

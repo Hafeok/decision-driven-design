@@ -15,6 +15,12 @@ Modeling toolkit:
 - [**method/01 — Applying DDD to a real process**](method/01-applying.md) — *informative.* Pick one value action, walk backward, let artifacts and roles fall out of three questions per node. Worked on hiring.
 - [**method/02 — The notation**](method/02-notation.md) — *informative.* A thin profile over DMN, BPMN, and C4, rendered as Mermaid, for drawing the result.
 
+Projected notes and campaign instruments:
+
+- [**Model-Actor Capacity**](model-actor-capacity.md) — *projected.* The active/total decomposition: the context window resolves into reach (total parameters) and resolution (active parameters), with a pre-declared escape-split prediction against dense vs MoE bindings.
+- [**Task-Shape Corpus**](task-shape-corpus.md) — *instrument.* The two task shapes (breadth, depth) the escape-split campaign attributes against, the tagging discipline, and the capacity-selective seed corpus.
+- [**Difficulty-Ladder Protocol**](difficulty-ladder-protocol.md) — *instrument.* Laddering seeds into the measurable escape band, and the sub-step verification that makes depth-shape attribution valid.
+
 Appendices:
 
 - [**Biology contrast**](biology-contrast.md) — *informative.* Why DDD doesn't model the harness as a body.
