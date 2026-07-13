@@ -57,6 +57,8 @@ So the account yields a two-class taxonomy, and the classes have different owner
 
 The taxonomy is actor-general, as it must be. The human equivalent of wind is the qualified operator's residual error rate with the checklist fully followed — which is exactly what the human binding regime's recertification cadence exists to re-measure.
 
+**Attribution.** The escape/wind split re-labels the established **intrinsic/extrinsic** and **faithfulness/factuality** hallucination distinctions (Ji et al.; Huang et al.), and must be cited as such — see [Lineage and Limits §2.3](06-lineage-and-limits.md#23-the-escapewind-taxonomy-cite-the-existing-taxonomy). The terms are kept only because they carry *allocation-predictive* content the prior taxonomy does not: escape-class confabulation is reducible by re-allocating stores (encode more demand, sense more facts, decompose to relieve capacity), and wind-class is not. Ours is a gloss with a predictive rider, not a discovery.
+
 The operational rule that falls out: **audit the allocation first.** If the allocation has unpriced escape, the hallucination was specified in — no model upgrade fixes it, and blaming the actor is a category error. This is the funnel principle's sibling: hallucination at the implementation role signals upstream under-allocation, not a capability gap. Only once the allocation is clean is residual confabulation attributable to wind — and then, and only then, is it a binding question: measurable by sampling, answerable by actor choice.
 
 ## Epistemic guardrail

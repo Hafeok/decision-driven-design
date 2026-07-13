@@ -10,6 +10,8 @@ Autonomous LLM systems get trusted the way anything does: through precise agreem
 
 "We saved on spec *and* on review" parses as "we shipped the difference." The law turns a vague quality conversation into an allocation audit — and everything else in this repository is machinery for writing that allocation down and keeping it inspectable.
 
+**On register.** "Law" is used here the way *Tesler's Law* and *Ashby's Law* use it — as engineering homage, not a claim of physical-law status. Stated precisely this is the **Conservation Principle of Determination Demand: Tesler's Law of Conservation of Complexity, generalized** — denominated in decisions, extended with a fourth store (the *escaped* one Tesler lacked) and an assurance-level granularity bound, and holding as an accounting identity *within a fixed task decomposition*. Its rigorous ancestors are Ashby, Brooks, Meyer, and Kalman; its one genuinely new part is the **actor parameter** ([Actors](core/05-actors.md)). What it stands on, where it was corrected, and the falsification debts it still owes are set out in [Lineage and Limits](core/06-lineage-and-limits.md).
+
 ---
 
 ## The two tiers
@@ -24,6 +26,8 @@ The law and its consequences, domain-independent. This is DDD in the abstract: *
 - [**Completeness**](core/02-completeness.md) — the instrument that reads the allocation. `complete(spec, binding)`, the three-tier exercise, the residual, eight ordinary failure cases.
 - [**The Polanyi Floor**](core/03-the-polanyi-floor.md) — the lower bound: knowledge that cannot move from judgment to encoded at any effort. The autonomy ceiling, measured not asserted.
 - [**The Two Projections**](core/04-projections.md) — the one law along two axes: the **funnel** (allocation over position in a chain) and **maturation** (allocation over recurrence in time).
+- [**Actors**](core/05-actors.md) — the **actor parameter** the law leaves open: the pinning-resolution spectrum, the intrinsic floor located in the acceptance predicate, selection versus training (*selection intensity is inversely proportional to predicate closure*), and how composite actors allocate seam demand. The part of the framework with the least prior art.
+- [**Lineage and Limits**](core/06-lineage-and-limits.md) — the law's ledger: what it stands on (Ashby, Tesler, Brooks, Meyer, Kalman), where it was corrected, where it retreated, and the falsification debts it owes. **Read this to see what the framework does *not* claim.**
 - [**The Actor's Capacity**](core/context-window.md) — the law read against the model actor: context length as the total allocation budget, why explore mode wants long context, and why context bounds action size.
 - [**Escape Under Pressure**](core/escape-under-pressure.md) — the law read at fire time: when demand exceeds capacity the prior decides; hallucination as an escaped decision surfaced as output, and the escape/wind taxonomy.
 
@@ -63,7 +67,7 @@ Industrial automation was good at the value action itself — the assembly, the 
 
 ## Normative vs. informative
 
-**Normative** documents define what a system must provide to claim conformance: [the law](core/01-the-law.md) and [completeness](core/02-completeness.md) in core; the [entity reference](apparatus/02-entities.md) and [conformance capabilities](apparatus/05-conformance.md) in application. The [Polanyi floor](core/03-the-polanyi-floor.md) is on the normative track, currently *projected*. Everything else is **informative** — it motivates, explains, illustrates, or draws, but does not itself constrain implementations.
+**Normative** documents define what a system must provide to claim conformance: [the law](core/01-the-law.md), [completeness](core/02-completeness.md), [actors](core/05-actors.md), and [lineage and limits](core/06-lineage-and-limits.md) in core; the [entity reference](apparatus/02-entities.md) and [conformance capabilities](apparatus/05-conformance.md) in application. The [Polanyi floor](core/03-the-polanyi-floor.md) is on the normative track, currently *projected*. Everything else is **informative** — it motivates, explains, illustrates, or draws, but does not itself constrain implementations.
 
 Status terms (*projected* / *reported*) are defined normatively by the [Completeness Exercise tiers](core/02-completeness.md#application-status-is-defined-by-these-tiers).
 

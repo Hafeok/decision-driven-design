@@ -43,7 +43,7 @@ So constraint accumulates not only along a chain (the funnel) but across time, *
 
 This gives a measurable definition of architectural maturity: **the fraction of incoming work that decomposes entirely into already-known types.** It rises as the type catalogs fill and falls when the system enters a new domain — an operational signal, not a vibe. The broad worker never disappears; it becomes the *explorer* that handles the novel remainder and, in doing so, mints the new types that let the next instance descend. Cost and opacity are front-loaded into exploration and amortized into reusable structure.
 
-Its asymptote is the [Polanyi Floor](03-the-polanyi-floor.md): the maturation curve converges to (1 − floor), never to 1 — except, if the [zero-floor postulate](03-the-polanyi-floor.md#the-zero-floor-postulate-for-digital-actions) holds, for purely digital task types, whose asymptote is 1 itself. Whatever judgment remains at high recurrence is either floor content or conversion negligence, and the [diagnostic fork](03-the-polanyi-floor.md#the-convergence-result) tells them apart.
+Its asymptote is the [Polanyi Floor](03-the-polanyi-floor.md): the maturation curve converges to (1 − floor), never to 1 — except, if the [zero-floor postulate](03-the-polanyi-floor.md#the-zero-floor-postulate-the-floor-is-in-the-predicate) holds, for task types whose acceptance predicate is decidable over digital ground, whose asymptote is 1 itself. Whatever judgment remains at high recurrence is either floor content or conversion negligence, and the [diagnostic fork](03-the-polanyi-floor.md#the-convergence-result) tells them apart.
 
 ## One law, two axes
 

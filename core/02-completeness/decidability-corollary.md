@@ -24,7 +24,7 @@ KC3  loop termination         encode–exercise converges; esc→esc_wind is rea
 
 KC1 was proved independently of digitality (`KC1 ⊥ zero-floor`). KC2 and KC3 are the two that *require* the zero-floor condition, and they fall out of canon already present in `core/03`. This block does the reading; it postulates nothing.
 
-**The zero-floor condition (restated from `core/03`).** An action has intrinsic floor zero iff its governing decision set **and** its acceptance predicate both close over digital state. For such an action, the experience of the action is itself serializable data — Polanyi's precondition (unsharable experience → unsharable decisions) never obtains, so no decision is intrinsically actor-locked.
+**The zero-floor condition (restated from `core/03`, in its [narrowed form](../03-the-polanyi-floor.md#the-zero-floor-postulate-the-floor-is-in-the-predicate)).** The intrinsic floor is a property of the **acceptance predicate**: it is zero iff the predicate is **decidable over digital ground**. (The decision *set*'s finiteness is a separate condition, carried independently by KC1 / the finite-index lemma — `KC1 ⊥ zero-floor` — so the narrowing sharpens rather than disturbs this block: predicate-decidability is exactly the premise KC2 and KC3 consume.) For an action whose predicate is decidable over digital state, the experience of the action is itself serializable data — Polanyi's precondition (unsharable experience → unsharable decisions) never obtains, so no decision is intrinsically actor-locked.
 
 ---
 
