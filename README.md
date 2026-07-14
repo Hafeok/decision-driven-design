@@ -4,13 +4,13 @@
 
 Autonomous LLM systems get trusted the way anything does: through precise agreements, kept transparently. Decision-Driven Design makes both possible because it starts from a single claim about what an LLM decision *costs*.
 
-> **Conservation of Specification** (in full: the Conservation of Specification *Demand* — it is the demand that is conserved, not any artifact)**.** For a given task at a given assurance level, the specification demand is constant — fixed by the task, never by the system. Every system allocates it fully across four stores: **encoded** upstream (schema, prompt, context, model binding — paid once, amortized), **mechanical verification** (specification applied at the end instead of the beginning), **judgment** (a designated, accountable actor holding the spec unencoded — today, a human head — paid per run), and **escaped** (unallocated — shipped to the user as defect exposure). Nothing is ever removed from the total; it is only moved between stores.
+> **Conservation of Determination Demand** (the demand that a task's governing decisions constitute — it is the demand that is conserved, not any artifact)**.** For a given task at a given assurance level, the determination demand is constant — fixed by the task, never by the system. Every system allocates it fully across four stores: **encoded** upstream (schema, prompt, context, model binding — paid once, amortized), **mechanical verification** (an acceptance criterion applied at the end instead of the beginning), **judgment** (a designated, accountable actor reading ground unencoded — today, a human head — paid per run), and **escaped** (decided by nobody — shipped to the user as defect exposure). Nothing is ever removed from the total; it is only moved between stores.
 
-![The conservation of specification: for a given task the total is constant — encoded specification before the model, mechanical verification after it, judgment paid per run, and what no store covers escapes as defect exposure.](core/assets/conservation-of-specification.svg)
+![The conservation of determination demand: for a given task the total is constant — encoded specification before the model, mechanical verification after it, judgment paid per run, and what no store covers escapes as defect exposure.](core/assets/conservation-of-specification.svg)
 
 "We saved on spec *and* on review" parses as "we shipped the difference." The law turns a vague quality conversation into an allocation audit — and everything else in this repository is machinery for writing that allocation down and keeping it inspectable.
 
-**On register.** "Law" is used here the way *Tesler's Law* and *Ashby's Law* use it — as engineering homage, not a claim of physical-law status. Stated precisely this is the **Conservation Principle of Determination Demand: Tesler's Law of Conservation of Complexity, generalized** — denominated in decisions, extended with a fourth store (the *escaped* one Tesler lacked) and an assurance-level granularity bound, and holding as an accounting identity *within a fixed task decomposition*. Its rigorous ancestors are Ashby, Brooks, Meyer, and Kalman; its one genuinely new part is the **actor parameter** ([Actors](core/05-actors.md)). What it stands on, where it was corrected, and the falsification debts it still owes are set out in [Lineage and Limits](core/06-lineage-and-limits.md).
+**On register.** "Law" is used here the way *Tesler's Law* and *Ashby's Law* use it — as engineering homage, not a claim of physical-law status. Stated precisely this is the **Conservation Principle of Determination Demand: Tesler's Law of Conservation of Complexity, generalized** — denominated in decisions, extended with a fourth store (the *escaped* one Tesler lacked) and an assurance-level granularity bound, and holding as an accounting identity *within a fixed task decomposition*. Its rigorous ancestors are Ashby, Brooks, Meyer, and Kalman; its one genuinely new part is the **actor parameter** ([Actors](core/04-actors.md)). What it stands on, where it was corrected, and the falsification debts it still owes are set out in [Lineage and Limits](core/05-lineage-and-limits.md).
 
 ---
 
@@ -22,14 +22,17 @@ The framework is split into two directories, and the split is the point.
 
 The law and its consequences, domain-independent. This is DDD in the abstract: *what it takes to make a decision well, and what bounds that.*
 
-- [**The Law**](core/01-the-law.md) — conservation of specification, the environment clause (why software is *closable* and physical work is not), and the two design principles, one per boundary. **Start here.**
+- [**Determination**](core/00-determination.md) — the two primitives (**decisions** and **ground**), the admission tests that keep them honest, and the four stores a determination can live in. **Start here.**
+- [**The Law**](core/01-the-law.md) — conservation of determination demand, the environment clause (why software is *closable* and physical work is not), and the two design principles, one per boundary.
 - [**Completeness**](core/02-completeness.md) — the instrument that reads the allocation. `complete(spec, binding)`, the three-tier exercise, the residual, eight ordinary failure cases.
-- [**The Polanyi Floor**](core/03-the-polanyi-floor.md) — the lower bound: knowledge that cannot move from judgment to encoded at any effort. The autonomy ceiling, measured not asserted.
-- [**The Two Projections**](core/04-projections.md) — the one law along two axes: the **funnel** (allocation over position in a chain) and **maturation** (allocation over recurrence in time).
-- [**Actors**](core/05-actors.md) — the **actor parameter** the law leaves open: the pinning-resolution spectrum, the intrinsic floor located in the acceptance predicate, selection versus training (*selection intensity is inversely proportional to predicate closure*), and how composite actors allocate seam demand. The part of the framework with the least prior art.
-- [**Lineage and Limits**](core/06-lineage-and-limits.md) — the law's ledger: what it stands on (Ashby, Tesler, Brooks, Meyer, Kalman), where it was corrected, where it retreated, and the falsification debts it owes. **Read this to see what the framework does *not* claim.**
+- [**The Polanyi Floor**](core/03-the-polanyi-floor.md) — the lower bound: knowledge that cannot move from judgment to encoded at any effort. The autonomy ceiling, measured not asserted; sharpened into *the floor is in the predicate* in Actors §2.
+- [**Actors**](core/04-actors.md) — the **actor parameter** the law leaves open: the pinning-resolution spectrum, the intrinsic floor located in the acceptance predicate, selection versus training (*selection intensity is inversely proportional to predicate closure*), and how composite actors allocate seam demand. The part of the framework with the least prior art.
+- [**Lineage and Limits**](core/05-lineage-and-limits.md) — the law's ledger: what it stands on (Ashby, Tesler, Brooks, Meyer, Kalman), where it was corrected, where it retreated, and the falsification debts it owes. **Read this to see what the framework does *not* claim.**
+- [**Determination and Intelligence**](core/06-determination-and-intelligence.md) — why the framework is orthogonal to intelligence, and why the LLM-intelligence debate is structurally undecidable: every benchmark is a closing predicate, so evidence and claim never occupy the same territory.
+- [**The Two Projections**](core/projections.md) — the one law along two axes: the **funnel** (allocation over position in a chain) and **maturation** (allocation over recurrence in time).
 - [**The Actor's Capacity**](core/context-window.md) — the law read against the model actor: context length as the total allocation budget, why explore mode wants long context, and why context bounds action size.
 - [**Escape Under Pressure**](core/escape-under-pressure.md) — the law read at fire time: when demand exceeds capacity the prior decides; hallucination as an escaped decision surfaced as output, and the escape/wind taxonomy.
+- [**The Closure Principle**](core/closure-principle.md) & [**Adversarial Ground**](core/adversarial-ground.md) — two determinations about ground: an actor's own output is not ground (estimator divergence, cite Kalman), and ground you don't control is an attack surface you must verify, not encode.
 
 ### [`apparatus/`](apparatus/) — DDD applied
 
@@ -59,7 +62,7 @@ Industrial automation was good at the value action itself — the assembly, the 
 
 ## Reading order
 
-**New to the framework?** Read `core/` top to bottom (the law, then completeness, then the floor, then the projections), then `apparatus/` §1–§3. That path takes you from *why the law holds* to *how a domain is encoded to keep it*.
+**New to the framework?** Read `core/` top to bottom (determination, then the law, then completeness, then the floor, then actors), then `apparatus/` §1–§3. That path takes you from *what a determination is* through *why the law holds* to *how a domain is encoded to keep it*.
 
 **Here to build?** Skim [the law](core/01-the-law.md) and [completeness](core/02-completeness.md), then go straight to [application §2 (entities)](apparatus/02-entities.md), [§3 (encoding)](apparatus/03-encoding-the-domain.md), and [§5 (conformance)](apparatus/05-conformance.md).
 
@@ -67,7 +70,7 @@ Industrial automation was good at the value action itself — the assembly, the 
 
 ## Normative vs. informative
 
-**Normative** documents define what a system must provide to claim conformance: [the law](core/01-the-law.md), [completeness](core/02-completeness.md), [actors](core/05-actors.md), and [lineage and limits](core/06-lineage-and-limits.md) in core; the [entity reference](apparatus/02-entities.md) and [conformance capabilities](apparatus/05-conformance.md) in application. The [Polanyi floor](core/03-the-polanyi-floor.md) is on the normative track, currently *projected*. Everything else is **informative** — it motivates, explains, illustrates, or draws, but does not itself constrain implementations.
+**Normative** documents define what a system must provide to claim conformance: [determination](core/00-determination.md), [the law](core/01-the-law.md), [completeness](core/02-completeness.md), [actors](core/04-actors.md), [lineage and limits](core/05-lineage-and-limits.md), and [determination and intelligence](core/06-determination-and-intelligence.md) in core; the [entity reference](apparatus/02-entities.md) and [conformance capabilities](apparatus/05-conformance.md) in application. The [Polanyi floor](core/03-the-polanyi-floor.md) is on the normative track, currently *projected*. Everything else is **informative** — it motivates, explains, illustrates, or draws, but does not itself constrain implementations.
 
 Status terms (*projected* / *reported*) are defined normatively by the [Completeness Exercise tiers](core/02-completeness.md#application-status-is-defined-by-these-tiers).
 

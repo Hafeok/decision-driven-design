@@ -99,7 +99,7 @@ Zero-floor supplies KC2 (membership decidability) and KC3 (loop termination) for
 ## 6. Corollaries
 
 **C1 — The granularity bound is a spectral cut.**
-"Assurance level = granularity bound" becomes precise: α selects τ, τ selects a cutoff in `O`'s sensitivity spectrum, and `|D(t,α)|` is the number of modes above the cut. Raising assurance lowers the cut and admits more decisions. This is the mathematical content of *specification demand is fixed by the task*: the spectrum belongs to the task, the cut belongs to the assurance level, and `|D|` is determined by both — by no one's discretion, and never by the system.
+"Assurance level = granularity bound" becomes precise: α selects τ, τ selects a cutoff in `O`'s sensitivity spectrum, and `|D(t,α)|` is the number of modes above the cut. Raising assurance lowers the cut and admits more decisions. This is the mathematical content of *determination demand is fixed by the task*: the spectrum belongs to the task, the cut belongs to the assurance level, and `|D|` is determined by both — by no one's discretion, and never by the system.
 
 **C2 — The invariant is τ-effective rank, not coordinate count.**
 The lemma fixed a basis `Θ = ∏ Θ_i`. The τ-live *count* is basis-dependent: a rotation can spread one live coordinate across many. What is basis-invariant is the **τ-effective dimension** — the rank of `O`'s sensitivity above τ, not the coordinate count. The rigorous invariant is therefore

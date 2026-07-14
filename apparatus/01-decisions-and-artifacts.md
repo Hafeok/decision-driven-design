@@ -1,6 +1,6 @@
 # DDD Applied: Decisions, Roles, and Artifacts
 
-> **Apparatus §1 — informative.** The [core](../core/) states one law: for a decision, the specification demand is constant and lives across four stores. This tier is that law *run against a real domain*. Before the roles, bundles, and orchestration, this document establishes the geometry they all sit in: work is a graph of decisions between two world boundaries, decisions are private and artifacts are what crosses between them, and an LLM-run process makes a second graph — the decisions themselves — recordable for the first time.
+> **Apparatus §1 — informative.** The [core](../core/) states one law: for a decision, the determination demand is constant and lives across four stores. This tier is that law *run against a real domain*. Before the roles, bundles, and orchestration, this document establishes the geometry they all sit in: work is a graph of decisions between two world boundaries, decisions are private and artifacts are what crosses between them, and an LLM-run process makes a second graph — the decisions themselves — recordable for the first time.
 
 ## From law to apparatus
 
@@ -93,7 +93,7 @@ So **form-of-context becomes a model-selection constraint per role**: a role med
 
 ## Model selection is per-role
 
-Form is one dimension; there are others. Some roles need deep reasoning over ambiguous, multi-source context (architectural calls, prioritization, design critiques); others make narrow, high-frequency judgments (classifying a ticket, sanity-checking output). Some sit on a critical path with strict latency requirements; others run in batch. The role-as-context-bundle framing extends naturally: **the bundle dictates the model.** A digital twin of a real process will typically use a mix — a frontier multimodal model for the design lead, a strong reasoning model for the architect, a fast cheap model for triage, a code-specialized model for the implementer. Picking one model for the whole twin is the equivalent of staffing every role with the same person regardless of skill, seniority, or specialty. Along a single chain the selection typically follows the [funnel](../core/04-projections.md#the-funnel-allocation-over-position) — bigger models upstream, smaller toward the value action.
+Form is one dimension; there are others. Some roles need deep reasoning over ambiguous, multi-source context (architectural calls, prioritization, design critiques); others make narrow, high-frequency judgments (classifying a ticket, sanity-checking output). Some sit on a critical path with strict latency requirements; others run in batch. The role-as-context-bundle framing extends naturally: **the bundle dictates the model.** A digital twin of a real process will typically use a mix — a frontier multimodal model for the design lead, a strong reasoning model for the architect, a fast cheap model for triage, a code-specialized model for the implementer. Picking one model for the whole twin is the equivalent of staffing every role with the same person regardless of skill, seniority, or specialty. Along a single chain the selection typically follows the [funnel](../core/projections.md#the-funnel-allocation-over-position) — bigger models upstream, smaller toward the value action.
 
 Treat model selection as a per-role design decision, not a deployment detail.
 
@@ -114,7 +114,7 @@ The full method is worked in [method/01](method/01-applying.md); the shape of it
 - Artifacts make context transfer concrete and inspectable. If a step fails, you can read what it had to work with — and what it didn't.
 - Stable schemas make the system composable: roles swapped, models upgraded, branches added, without rewriting the graph.
 - Value anchoring prevents sprawl.
-- The [funnel](../core/04-projections.md#the-funnel-allocation-over-position) turns model bindings into a forcing function on upstream rigor — under-specification surfaces as model-size escalation rather than silent failure.
+- The [funnel](../core/projections.md#the-funnel-allocation-over-position) turns model bindings into a forcing function on upstream rigor — under-specification surfaces as model-size escalation rather than silent failure.
 - It gives an honest failure criterion: when a step underperforms, the first question is "did it have the context a competent human in this role would have?" — not "is the model good enough?" Most of the time the gap is contextual, and that is where the engineering is.
 
 Next: [the entity reference](02-entities.md) makes this vocabulary precise, then [encoding the domain](03-encoding-the-domain.md) covers how context, the bundle, phases, and task types actually package a domain for the graph.

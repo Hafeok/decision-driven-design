@@ -1,6 +1,6 @@
 # The Actor's Capacity: Context Length as Allocation Budget
 
-Core §N — normative. A property of the law read against one actor type. The Conservation of Specification law quantifies over all actors and hard-codes none; this section works out what the law's four stores cost *physically* when the actor is a language model. The result is that context length is not a performance parameter but the size of the actor's total allocation capacity for a single action — and from that, both the model-size choice and the maximum action size follow as theorems rather than heuristics.
+Core §N — normative. A property of the law read against one actor type. The Conservation of Determination Demand law quantifies over all actors and hard-codes none; this section works out what the law's four stores cost *physically* when the actor is a language model. The result is that context length is not a performance parameter but the size of the actor's total allocation capacity for a single action — and from that, both the model-size choice and the maximum action size follow as theorems rather than heuristics.
 
 ## The stores have a location
 
@@ -28,7 +28,7 @@ This reframes the model-size choice precisely. You do not reach for a large mode
 
 This is the load-bearing result. The law fixes the demand by task and assurance level. For a model actor, the *entire* demand — every window-resident store's share — must fit in the context at fire time, because that is where those stores live. Therefore:
 
-> An action is executable by a model actor only if its total window-resident specification demand fits the model's context.
+> An action is executable by a model actor only if its total window-resident determination demand fits the model's context.
 
 Context length is the maximum action size the actor can take. This is not a soft limit that degrades gracefully; it is the physical boundary of what one action can demand of one model.
 
@@ -43,7 +43,7 @@ These two results connect into something the law had not previously exhibited. E
 - **Engineered mode** spends window on encoded specification and leaves little judgment room. Small judgment share — so small models suffice — but the specification was paid up front and occupies the window as encoding.
 - **Explore mode** leaves the window empty of encoding and spends it on judgment. Needs the large window — but the specification was deferred, not paid.
 
-Same finite resource, allocated to opposite stores. This is the Conservation of Specification showing up as a *spatial* constraint inside a single actor at a single moment. Everywhere else in the framework the conservation is temporal (maturation — allocation over recurrence) or positional (the funnel — allocation over position in a chain). Here it is neither: it is conservation across the physical capacity of one actor, at fire time. The two established projections are joined by this third reading — the law measured not over time or position but over the actor's own capacity.
+Same finite resource, allocated to opposite stores. This is the Conservation of Determination Demand showing up as a *spatial* constraint inside a single actor at a single moment. Everywhere else in the framework the conservation is temporal (maturation — allocation over recurrence) or positional (the funnel — allocation over position in a chain). Here it is neither: it is conservation across the physical capacity of one actor, at fire time. The two established projections are joined by this third reading — the law measured not over time or position but over the actor's own capacity.
 
 ## The escape valve is spatial, and so is the trap
 

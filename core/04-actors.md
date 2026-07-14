@@ -1,6 +1,6 @@
 # Actors
 
-> **Core §5 — normative.** The [law](01-the-law.md) quantifies over actors and hard-codes none. This chapter supplies the actor parameter the law leaves open, and works out what changes once it is filled: pinning resolution, the floor's true location, the selection/training split, and how composite actors allocate seam demand. It is the actor-type reading that [the actor's capacity](context-window.md) and [escape under pressure](escape-under-pressure.md) each specialize to one store.
+> **Core §4 — normative.** The [law](01-the-law.md) quantifies over actors and hard-codes none. This chapter supplies the actor parameter the law leaves open, and works out what changes once it is filled: pinning resolution, the floor's true location, the selection/training split, and how composite actors allocate seam demand. It is the actor-type reading that [the actor's capacity](context-window.md) and [escape under pressure](escape-under-pressure.md) each specialize to one store.
 
 **Status.** This is the part of the framework with the least prior art and the strongest claim to novelty. The classical results have an **actor slot that nobody filled in** — because until recently there was only ever one kind of thing to put in it — and this chapter fills it. The load-bearing claims:
 
@@ -13,7 +13,7 @@
 
 ## 1. The pinning-resolution spectrum
 
-An **actor** is anything that makes decisions against ground ([law §the unit](01-the-law.md#the-unit-a-decision) — the law hard-codes none). Actors are not interchangeable, and the axis on which they differ is **how tightly their behaviour can be pinned**:
+An **actor** is anything that makes decisions against ground ([§0](00-determination.md#the-two-primitives) — the framework hard-codes none; the [admission tests](00-determination.md#the-admission-tests-the-discipline-that-keeps-this-a-law) gate what counts). Actors are not interchangeable, and the axis on which they differ is **how tightly their behaviour can be pinned**:
 
 | Actor | Pinned | What you get | What you *don't* get |
 |---|---|---|---|
@@ -23,7 +23,7 @@ An **actor** is anything that makes decisions against ground ([law §the unit](0
 
 The spectrum runs **by value → by binding → by classification**, from *tightest* to *loosest*. It is the same spectrum the law names in [the last wind](01-the-law.md#the-environment-clause-when-the-demand-is-finitely-encodable); the **last wind** is the executing actor's residual variance under its tightest available pinning — what remains after you have done everything you can to constrain it, and the irreducible cost of using that actor at all.
 
-**Why this axis is new.** The classical results have no theory of actors. Ashby's regulator is a black box with a variety count — he never asks *what kind of thing* is regulating, because in 1956 it did not vary. Tesler asks "user, developer, or platform" — all humans in different hats. Design by Contract assumes the checker is a program and the contract-author is a person, and never says so, because what else would they be. They are not wrong. They are **under-parameterised.** Each has an actor slot nobody filled in, because until recently there was nothing to put in it but *a person* or *a program* — and the distinction between those two was a light switch, not a spectrum. See [lineage §the actor parameter](06-lineage-and-limits.md).
+**Why this axis is new.** The classical results have no theory of actors. Ashby's regulator is a black box with a variety count — he never asks *what kind of thing* is regulating, because in 1956 it did not vary. Tesler asks "user, developer, or platform" — all humans in different hats. Design by Contract assumes the checker is a program and the contract-author is a person, and never says so, because what else would they be. They are not wrong. They are **under-parameterised.** Each has an actor slot nobody filled in, because until recently there was nothing to put in it but *a person* or *a program* — and the distinction between those two was a light switch, not a spectrum. See [lineage §the actor parameter](05-lineage-and-limits.md).
 
 ---
 
@@ -85,7 +85,7 @@ The tempting statement — *"surgeons are trained, elite soldiers are selected"*
 | Intelligence analyst | poor — "was that the right call" may never be checkable | heavy selection, notoriously weak training |
 | Special operations | poor **and adversarial** — the standard moves because an opponent is moving it | extreme selection |
 
-**This is the falsifiable form of the claim**, testable across professions: measure predicate closure independently (time-to-feedback, objectivity of the standard, stationarity of the standard) and predict the selection/training ratio. It is a [falsification debt booked openly](06-lineage-and-limits.md#5-what-is-still-owed) — and *testable from existing literature*, which is what makes it the cheapest of the debts to discharge.
+**This is the falsifiable form of the claim**, testable across professions: measure predicate closure independently (time-to-feedback, objectivity of the standard, stationarity of the standard) and predict the selection/training ratio. It is a [falsification debt booked openly](05-lineage-and-limits.md#5-what-is-still-owed) — and *testable from existing literature*, which is what makes it the cheapest of the debts to discharge.
 
 ### 3.2 What this predicts about models
 
@@ -146,7 +146,7 @@ This is the same decorrelation result the [seam-allocation diagnostic](../appara
 
 ## 5. The compound: harvesting the seam
 
-The seam is where the compound effect lives, and the loop is the [maturation projection](04-projections.md#maturation-allocation-over-recurrence) one level down.
+The seam is where the compound effect lives, and the loop is the [maturation projection](projections.md#maturation-allocation-over-recurrence) one level down.
 
 **Judgment at the seam is expensive per-run and does not amortise. Encoded seams are nearly free per-run and expensive to find.** But the orchestrator, running, **is performing the search** — and you are paying for it anyway. So:
 
@@ -174,13 +174,13 @@ Having a judgment store and an encoded store **is not enough.** Two stores with 
 
 > **The channel is the platform.** Not the graph, not the ledger, not the orchestrator — the harvest loop that carries a discovered coordination decision from the run that found it into every run that follows.
 
-The failure modes follow the [encode-vs-verify discipline](06-lineage-and-limits.md#4-what-survives-and-is-genuinely-ours): an encoding harvested from a *moving* source of truth goes stale and must be re-verified against it — *you can encode ground you control; you must re-verify ground you do not.* And a cached prior consumed as ground, biasing a determination toward an expired belief, is [estimator divergence](escape-under-pressure.md) — confident, well-reasoned, worse than nothing.
+The failure modes follow the [encode-vs-verify discipline](05-lineage-and-limits.md#4-what-survives-and-is-genuinely-ours): an encoding harvested from a *moving* source of truth goes stale and must be re-verified against it — *you can encode ground you control; you must re-verify ground you do not.* And a cached prior consumed as ground, biasing a determination toward an expired belief, is [estimator divergence](escape-under-pressure.md) — confident, well-reasoned, worse than nothing.
 
 ---
 
 ## 6. Re-indexing the classical results
 
-**This section is the contribution.** Everything above is machinery; this is what the machinery *buys*. The classical laws are correct, and stated for an **unexamined actor**. Supplying the actor parameter does not replace them — it **indexes** them, and the indexed versions make predictions the originals cannot. That test — *does filling the slot change the prediction?* — is what separates a real contribution from a re-labelling. It does. Full attribution in [lineage §1](06-lineage-and-limits.md#1-lineage-what-we-are-standing-on).
+**This section is the contribution.** Everything above is machinery; this is what the machinery *buys*. The classical laws are correct, and stated for an **unexamined actor**. Supplying the actor parameter does not replace them — it **indexes** them, and the indexed versions make predictions the originals cannot. That test — *does filling the slot change the prediction?* — is what separates a real contribution from a re-labelling. It does. Full attribution in [lineage §1](05-lineage-and-limits.md#1-lineage-what-we-are-standing-on).
 
 **Tesler — Conservation of Complexity.** *Original:* complexity is irreducible; the only question is *who deals with it* — user, developer, or platform. *Indexed:* those are three humans in different hats. Fill the slot and *who* becomes a variable with **structure**: the **price** of each destination differs by **pinning resolution**, so optimal allocation is not a matter of taste but of the actor spectrum — **and the optimum moved when a binding-pinned actor arrived.** Tesler's law cannot tell you that LLMs change where the complexity should sit. The indexed version can.
 

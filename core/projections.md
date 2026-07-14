@@ -2,7 +2,7 @@
 
 > **Core §4 — informative.** The [law](01-the-law.md) has two axes. Project the allocation along a chain's **position** and you get the funnel. Project it along a task type's **recurrence** in time and you get maturation. Same law, two pictures. Both are consequences, not new claims.
 
-The law says the specification demand for a decision is constant and lives somewhere across the four stores. Two questions turn that static statement into a design discipline:
+The law says the determination demand for a decision is constant and lives somewhere across the four stores. Two questions turn that static statement into a design discipline:
 
 - *Along one chain of decisions, where does the encoded store grow?* → the **funnel**.
 - *Across repeated runs of the same task type, where does mass move over time?* → **maturation**.

@@ -2,7 +2,7 @@
 
 > **Apparatus §3 — informative.** The [core](../core/) law says the way to make a decision well is to move its knowledge into the encoded store. This document is the *how*: the concrete machinery by which a domain's knowledge is packaged, transmitted, sequenced, and — as it recurs — frozen into reusable structure. If [§1](01-decisions-and-artifacts.md) established that artifacts are what flows and [§2](02-entities.md) named every entity, this is where the two meet the practical question: **what does the encoded store actually look like when you build it?**
 
-The encoded store is not an abstraction in a running system — it is files, schemas, and queries. This document walks the four things a builder actually assembles: the **context** a decision sees, the **bundle** that delivers it, the **phases** that sequence the graph, and the **task types** that let recurring work descend the [maturation curve](../core/04-projections.md#maturation-allocation-over-recurrence). Together they are the encoding apparatus — the concrete form the law's "encoded" store takes.
+The encoded store is not an abstraction in a running system — it is files, schemas, and queries. This document walks the four things a builder actually assembles: the **context** a decision sees, the **bundle** that delivers it, the **phases** that sequence the graph, and the **task types** that let recurring work descend the [maturation curve](../core/projections.md#maturation-allocation-over-recurrence). Together they are the encoding apparatus — the concrete form the law's "encoded" store takes.
 
 ## Context: what a decision sees
 
@@ -58,7 +58,7 @@ Because the [law](../core/01-the-law.md) fixes an action's governing decision se
 
 The capability half of the profile is not calculated from first principles — and does not need to be. Whether a binding can make a given kind of delegated decision at the declared assurance is exactly what Tier-3 qualification measures, and the binding's certified envelope is the lookup. **Dispatch is therefore a calculus over measured verdicts:** compute the demand profile mechanically, then select the cheapest qualified binding whose envelope covers it. Asserting capability from parameter counts or benchmarks instead would be precisely the capability folk wisdom the law exists to retire. The same epistemics as the [floor](../core/03-the-polanyi-floor.md): measured, never declared.
 
-The profile also restates the funnel operationally: tightening a spec converts decisions from criterion form to constraint form, which shrinks the delegated set, which lowers the cheapest qualified binding — see [the funnel's limit](../core/04-projections.md#the-funnel-allocation-over-position).
+The profile also restates the funnel operationally: tightening a spec converts decisions from criterion form to constraint form, which shrinks the delegated set, which lowers the cheapest qualified binding — see [the funnel's limit](../core/projections.md#the-funnel-allocation-over-position).
 
 ### Intent mode: the maneuvering room
 
@@ -75,7 +75,7 @@ The demand profile computes requirements for *engineered* mode, where the govern
 
 Toolset composition is therefore a minimization: **the toolset for an intent is the smallest set whose union of fact scopes covers the needed substrate, with minimal scope spilling outside the spotlit region.** Under-provisioned fails the reachability check with the missing facts named; over-provisioned dilutes odds and inflates surface. Both are detectable before the run, mechanically, because the scopes are computable.
 
-The duality in one sentence: **maneuvering room is the quantity the funnel exists to destroy and exploration exists to preserve.** Engineering succeeds by removing it, monotonically, down to the program at zero; exploration succeeds by having enough of it, spotlit. The explorer-to-typifier handoff of [maturation](../core/04-projections.md#maturation-allocation-over-recurrence) is precisely the moment a task's room begins to be deliberately destroyed.
+The duality in one sentence: **maneuvering room is the quantity the funnel exists to destroy and exploration exists to preserve.** Engineering succeeds by removing it, monotonically, down to the program at zero; exploration succeeds by having enough of it, spotlit. The explorer-to-typifier handoff of [maturation](../core/projections.md#maturation-allocation-over-recurrence) is precisely the moment a task's room begins to be deliberately destroyed.
 
 ## Phases: sequencing the graph
 
@@ -87,7 +87,7 @@ Phase exit criteria are a coarse-grained instance of the [ready predicate](02-en
 
 ## Task types: freezing recurring work into the catalog
 
-The most consequential part of the encoding apparatus is the one that makes a system get *cheaper* over time rather than just bigger. It is the concrete form of [maturation](../core/04-projections.md#maturation-allocation-over-recurrence).
+The most consequential part of the encoding apparatus is the one that makes a system get *cheaper* over time rather than just bigger. It is the concrete form of [maturation](../core/projections.md#maturation-allocation-over-recurrence).
 
 A unit of delivered work decomposes into three composition levels, forming a stability stack — dependencies point *down* the gradient, never up:
 

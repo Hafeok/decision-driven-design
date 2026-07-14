@@ -67,7 +67,7 @@ a place to put it.
 
 ## The single budget was hiding two
 
-The window bounds *how much specification demand can be present at fire time* — the
+The window bounds *how much determination demand can be present at fire time* — the
 mass of stores that must physically co-reside. But being present is not being
 processed. A decision that is resident in the window still has to be *made*, and
 for a model actor the act of making it is computation over the resident material.
@@ -134,7 +134,7 @@ escape store, and it is only visible if escape is attributed by cause, not aggre
 
 ## Why this matters if it holds
 
-The through-line the law has been driving toward: **specification demand is fixed by the
+The through-line the law has been driving toward: **determination demand is fixed by the
 task, and the only choice is store allocation.** For a model actor, "which model" has so
 far been an experience-driven guess. If the active/total decomposition holds against
 evidence, the guess becomes a derivation:

@@ -8,7 +8,7 @@
   <rect width="1200" height="760" fill="#fafaf8"/>
 
   <!-- Title -->
-  <text x="60" y="52" font-size="22" fill="#333" font-weight="bold">The Conservation of Specification</text>
+  <text x="60" y="52" font-size="22" fill="#333" font-weight="bold">The Conservation of Determination Demand</text>
   <text x="60" y="76" font-size="13" fill="#666">For a given task at a given assurance level the total is constant — only the allocation moves. The gap is what's missing.</text>
   <line x1="60" y1="96" x2="1140" y2="96" stroke="#ddd" stroke-width="1"/>
 

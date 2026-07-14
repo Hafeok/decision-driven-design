@@ -1,6 +1,6 @@
 # Completeness: Measuring the Allocation
 
-> **Core §2 — normative track.** The [law](01-the-law.md) says the specification demand is constant and allocated across four stores. This document is the instrument that *reads* that allocation. A specification is **conformant** when it is legal; it is **complete** when, exercised against its pinned binding, the residual is empty. Everything not encoded shows up here, priced.
+> **Core §2 — normative track.** The [law](01-the-law.md) says the determination demand is constant and allocated across four stores. This document is the instrument that *reads* that allocation. A specification is **conformant** when it is legal; it is **complete** when, exercised against its pinned binding, the residual is empty. Everything not encoded shows up here, priced.
 
 **Status:** Proposed, normative track. By its own definitions this document is *projected* — Tier-1 evidence only. It becomes *reported* when a named system runs the exercise and the run is cited here. Candidate for promotion to the Specification Framework foundation once a second framework consumes it — the same route the two pillars themselves traveled (see § Genealogy).
 
@@ -8,7 +8,7 @@
 
 A specification can satisfy every static criterion — schema-valid, derivation-clean, structurally coherent — and still force the consuming actor to invent, because something the *consumer* needed was not in the input. Static criteria check the spec against the spec. Nothing static checks the spec against the consumer.
 
-Today that failure is detected downstream: as output-quality variance, as escalation to a larger model, as re-prompting until something sticks. By the [funnel principle](04-projections.md#the-funnel-allocation-over-position) every one of those is upstream under-specification wearing a model-capability costume. There is no gate at the seam that catches it *before* execution. The Completeness Exercise is that gate.
+Today that failure is detected downstream: as output-quality variance, as escalation to a larger model, as re-prompting until something sticks. By the [funnel principle](projections.md#the-funnel-allocation-over-position) every one of those is upstream under-specification wearing a model-capability costume. There is no gate at the seam that catches it *before* execution. The Completeness Exercise is that gate.
 
 Two properties, two independent checks:
 
@@ -78,7 +78,7 @@ The residual is the useful artifact — the exercise exists to produce it. A non
 | Correct input, inconsistent reasoning across samples | Model (floor too low — or spec not decomposed far enough) |
 | Model invented facts, or requested information mid-run | Context |
 
-The residual re-enters as *input* to a fresh forward chain — it does not travel the funnel backwards. Feedback does not invert the funnel; the funnel [composes with itself](04-projections.md#the-funnel-allocation-over-position).
+The residual re-enters as *input* to a fresh forward chain — it does not travel the funnel backwards. Feedback does not invert the funnel; the funnel [composes with itself](projections.md#the-funnel-allocation-over-position).
 
 ## Why ordinary practice fails the exercise
 

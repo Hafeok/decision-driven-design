@@ -1,20 +1,20 @@
 # Lineage and Limits
 
-> **Core §6 — normative.** What the framework is standing on, where it was wrong and has been corrected, where it overreached and has retreated, and what it still owes. An external, literature-grounded adversarial review found real flaws; this chapter credits the prior art the framework was reinventing, records the corrections applied to the other chapters, and books the falsification debts openly. The governing principle: **cite where we are additive, retreat where we are not, and never claim physical-law status for a heuristic.**
+> **Core §5 — normative.** What the framework is standing on, where it was wrong and has been corrected, where it overreached and has retreated, and what it still owes. An external, literature-grounded adversarial review found real flaws; this chapter credits the prior art the framework was reinventing, records the corrections applied to the other chapters, and books the falsification debts openly. The governing principle: **cite where we are additive, retreat where we are not, and never claim physical-law status for a heuristic.**
 
-**Read this as the ledger for the framework's own claims.** Where it conflicts with an older phrasing elsewhere in the repository, this chapter and the chapters it corrects ([the law](01-the-law.md), [the floor](03-the-polanyi-floor.md), [actors](05-actors.md), [escape under pressure](escape-under-pressure.md)) win.
+**Read this as the ledger for the framework's own claims.** Where it conflicts with an older phrasing elsewhere in the repository, this chapter and the chapters it corrects ([the law](01-the-law.md), [the floor](03-the-polanyi-floor.md), [actors](04-actors.md), [escape under pressure](escape-under-pressure.md)) win.
 
 ---
 
 ## 1. Lineage — what we are standing on
 
-The framework is not sui generis. It is a **synthesis and re-tooling** of at least six prior results, and it should say so plainly. For each: what they established, and what — if anything — DDD adds. The single contribution that is genuinely ours is the **actor parameter** ([§5](05-actors.md)) and the two results that follow only from supplying it; everything else below is prior art we index, not prior art we replace.
+The framework is not sui generis. It is a **synthesis and re-tooling** of at least six prior results, and it should say so plainly. For each: what they established, and what — if anything — DDD adds. The single contribution that is genuinely ours is the **actor parameter** ([§4](04-actors.md)) and the two results that follow only from supplying it; everything else below is prior art we index, not prior art we replace.
 
 ### 1.1 Ashby — the Law of Requisite Variety (1956)
 
 > *"Only variety can destroy variety."* A regulator must command at least as much variety as the disturbance it must absorb.
 
-This is the **rigorous ancestor of conservation**, and it is *better than our version in the one way that matters*: it has a **unit**. Ashby counts variety in states/bits and ties it to Shannon's Theorem 10. Our "specification demand" has no counting procedure, which is exactly why our "law" is weaker than his.
+This is the **rigorous ancestor of conservation**, and it is *better than our version in the one way that matters*: it has a **unit**. Ashby counts variety in states/bits and ties it to Shannon's Theorem 10. Our "determination demand" has no counting procedure, which is exactly why our "law" is weaker than his.
 
 **What DDD adds:** an *allocation* vocabulary — Ashby says the variety must exist somewhere; we say *where* it can live (four stores) and *who pays* for each. Real, but downstream of Ashby.
 
@@ -78,7 +78,7 @@ Three limits, all real, and **none of them is about determinism** — they hold 
 
 > **The intrinsic floor is zero for any decision whose *acceptance predicate is itself decidable over digital ground.* For those, path-degeneracy makes it robustly zero — infinitely many distinct determiners suffice, so no *particular* judgment is required. The floor is non-zero exactly when the acceptance predicate does not close — and whether it closes is, in general, undecidable.**
 
-This is *better* than the original claim, because it locates the floor precisely. "Does it compile," "is this valid JSON," "do the tests pass" — decidable predicates, floor zero, and there path-degeneracy means the model needs no particular judgment, only an adequate one. "Is this the right architecture," "is this secure against an adversary who hasn't attacked yet" — the predicate does not close, and the floor is non-zero *for that reason*. **Action, applied:** [the floor chapter](03-the-polanyi-floor.md#the-zero-floor-postulate-the-floor-is-in-the-predicate) now carries the narrowed postulate; [actors §2](05-actors.md#2-the-floor-is-in-the-predicate) draws the selection/training consequence from it.
+This is *better* than the original claim, because it locates the floor precisely. "Does it compile," "is this valid JSON," "do the tests pass" — decidable predicates, floor zero, and there path-degeneracy means the model needs no particular judgment, only an adequate one. "Is this the right architecture," "is this secure against an adversary who hasn't attacked yet" — the predicate does not close, and the floor is non-zero *for that reason*. **Action, applied:** [the floor chapter](03-the-polanyi-floor.md#the-zero-floor-postulate-the-floor-is-in-the-predicate) now carries the narrowed postulate; [actors §2](04-actors.md#2-the-floor-is-in-the-predicate) draws the selection/training consequence from it.
 
 **Retire** "there is no tacit knowledge in digital work" as a slogan. Replace with: "the relational and somatic tacit component can approach zero on decidable-predicate tasks; a floor remains from undecidable predicates, inevitable model error, and collective tacit knowledge."
 
@@ -106,7 +106,7 @@ Stated without inflation. After the corrections, the defensible contributions:
 
 1. **The four-store allocation lens as a design-review instrument.** For each governing decision: encoded, checked, judged, or escaped — and is that the cheapest correct home at this assurance level? Good ergonomics even though the partition is definitional, not a discovery.
 2. **The Escaped store.** Naming *"decided by nobody = latent defect exposure"* as a first-class category is the framework's clearest original contribution over Tesler.
-3. **The actor parameter** ([§5](05-actors.md)) — and the two results that follow only from it: **the floor lives in the acceptance predicate** (so *selection intensity is inversely proportional to predicate closure*), and **seam demand allocates across the same four stores** (so *the compound requires a channel from judgment back into encoding*). This is the part with the least prior art.
+3. **The actor parameter** ([§4](04-actors.md)) — and the two results that follow only from it: **the floor lives in the acceptance predicate** (so *selection intensity is inversely proportional to predicate closure*), and **seam demand allocates across the same four stores** (so *the compound requires a channel from judgment back into encoding*). This is the part with the least prior art.
 4. **The encode-vs-verify discipline for uncontrolled ground.** *You can encode ground you control; you must mechanically verify ground you do not.* The end-to-end argument plus estimator-divergence, made concrete: any uncontrolled ground is two facts — your pinned copy and the mutable source of truth — and a lockfile pins the first, never the second.
 
 Everything else is either prior art we cite (conservation, contracts, requisite variety, observability) or overreach retreated (physical-law status, the immune licensing claim, the cross-domain unification).
@@ -118,7 +118,7 @@ Everything else is either prior art we cite (conservation, contracts, requisite 
 The falsification debt, booked openly:
 
 1. **A counting procedure for governing decisions.** Until one exists and is shown invariant across two architectures for one task at one assurance level, "conservation" is an accounting identity, not a law. The framework says so in print (§2.1).
-2. **Operationalise predicate closure.** [Actors §3](05-actors.md#3-selection-and-training)'s falsifiable claim needs an independent measure. Proposed proxies — **time-to-feedback**, **objectivity of the standard**, **stationarity of the standard** — are proxies, and are conceded as such.
+2. **Operationalise predicate closure.** [Actors §3](04-actors.md#3-selection-and-training)'s falsifiable claim needs an independent measure. Proposed proxies — **time-to-feedback**, **objectivity of the standard**, **stationarity of the standard** — are proxies, and are conceded as such.
 3. **The selection/training ratio, tested across professions.** This is *falsifiable from existing literature* — the cheapest debt to discharge, and the one that most directly tests the actor contribution.
 
 ---

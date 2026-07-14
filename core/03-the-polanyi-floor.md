@@ -4,6 +4,8 @@
 
 **Status:** Proposed, normative track. *Projected* per the [Completeness Exercise](02-completeness.md) tier definitions.
 
+> **Where the sharp result lives.** This chapter develops the floor as Polanyi did — a property of a (task, actor) transfer channel. Its sharpened, authoritative form — **the intrinsic floor is a property of the acceptance predicate, not of the decision** — is stated and defended in [Actors §2](04-actors.md#2-the-floor-is-in-the-predicate). Read this chapter for the mechanism and the measurement discipline; read Actors §2 for the result the framework now leads with.
+
 ## The observation
 
 Michael Polanyi: *we know more than we can tell.* A person recognizes a face instantly and cannot write down how. A reviewer rejects a design as wrong for the codebase and cannot enumerate the rule it violated. The knowledge is real, operative, and tacit — usable by its holder, unavailable to articulation.
@@ -19,7 +21,7 @@ At any moment the judgment store holds two populations:
 - **Unconverted** — encodable knowledge that has not yet been encoded, because conversion has not paid for itself: the task type has not recurred enough to amortize. Exploration is almost entirely this.
 - **Irreducible** — knowledge below the floor. No recurrence count converts it.
 
-[Maturation](04-projections.md#maturation-allocation-over-recurrence) moves mass out of the first population and cannot touch the second.
+[Maturation](projections.md#maturation-allocation-over-recurrence) moves mass out of the first population and cannot touch the second.
 
 ## The convergence result
 
@@ -60,9 +62,9 @@ The name survives the split, and sharpens under it. Both components are Polanyi'
 
 > **Postulate (narrowed).** The intrinsic floor is a property of the **acceptance predicate**, not of the decision. It is **zero wherever the predicate is decidable over digital ground**, and **non-zero exactly where the predicate does not close — and whether it closes is, in general, undecidable** (Rice).
 
-This is the corrected form of an earlier, stronger conjecture — *"if the governing decision set and the acceptance predicate both close over digital state, the intrinsic floor is zero"* — which external review found too strong. The retreat is recorded in full at [lineage §2.2](06-lineage-and-limits.md#22-the-zero-floor-postulate-retreat-to-the-acceptance-predicate); what survives is **sharper and more useful**, because it locates the floor precisely: in the predicate, not the decision. "Does it compile," "is this valid JSON," "do the tests pass" are decidable predicates — floor zero. "Is this the right architecture," "is this secure against an adversary who has not attacked yet" — the predicate does not close, and the floor is non-zero *for that reason*.
+This is the corrected form of an earlier, stronger conjecture — *"if the governing decision set and the acceptance predicate both close over digital state, the intrinsic floor is zero"* — which external review found too strong. The retreat is recorded in full at [lineage §2.2](05-lineage-and-limits.md#22-the-zero-floor-postulate-retreat-to-the-acceptance-predicate); what survives is **sharper and more useful**, because it locates the floor precisely: in the predicate, not the decision. "Does it compile," "is this valid JSON," "do the tests pass" are decidable predicates — floor zero. "Is this the right architecture," "is this secure against an adversary who has not attacked yet" — the predicate does not close, and the floor is non-zero *for that reason*.
 
-**Path-degeneracy makes the surviving claim robust.** Where the predicate *does* close, the floor is not merely zero — it is **robustly** zero, by [degeneracy](06-lineage-and-limits.md#6-required-citations) (Edelman & Gally, *PNAS* 2001: structurally different elements yielding the same function). Infinitely many distinct decision paths converge on an adequate act, so **no *particular* judgment is required — only an *adequate* one.** This is why a bound actor can be superhuman on closing-predicate tasks without "understanding" in any demanding sense: **adequacy is cheap when adequacy is checkable.** The consequence for how you obtain actors — *selection intensity is inversely proportional to predicate closure* — is worked out in [actors §2–3](05-actors.md#2-the-floor-is-in-the-predicate).
+**Path-degeneracy makes the surviving claim robust.** Where the predicate *does* close, the floor is not merely zero — it is **robustly** zero, by [degeneracy](05-lineage-and-limits.md#6-required-citations) (Edelman & Gally, *PNAS* 2001: structurally different elements yielding the same function). Infinitely many distinct decision paths converge on an adequate act, so **no *particular* judgment is required — only an *adequate* one.** This is why a bound actor can be superhuman on closing-predicate tasks without "understanding" in any demanding sense: **adequacy is cheap when adequacy is checkable.** The consequence for how you obtain actors — *selection intensity is inversely proportional to predicate closure* — is worked out in [actors §2–3](04-actors.md#2-the-floor-is-in-the-predicate).
 
 **The bound is three results, none about determinism.** They all hold in a fully deterministic universe, because they concern *decidability and knowability*, not whether the future is fixed:
 
