@@ -1,93 +1,146 @@
 # Decision-Driven Design
 
-**A framework for building LLM systems, resting on one law.**
+**A theory of where determinations come from, what they cost, and which actor should make each one.**
 
-Autonomous LLM systems get trusted the way anything does: through precise agreements, kept transparently. Decision-Driven Design makes both possible because it starts from a single claim about what an LLM decision *costs*.
-
-> **Conservation of Specification** (in full: the Conservation of Specification *Demand* — it is the demand that is conserved, not any artifact)**.** For a given task at a given assurance level, the specification demand is constant — fixed by the task, never by the system. Every system allocates it fully across four stores: **encoded** upstream (schema, prompt, context, model binding — paid once, amortized), **mechanical verification** (specification applied at the end instead of the beginning), **judgment** (a designated, accountable actor holding the spec unencoded — today, a human head — paid per run), and **escaped** (unallocated — shipped to the user as defect exposure). Nothing is ever removed from the total; it is only moved between stores.
-
-![The conservation of specification: for a given task the total is constant — encoded specification before the model, mechanical verification after it, judgment paid per run, and what no store covers escapes as defect exposure.](core/assets/conservation-of-specification.svg)
-
-"We saved on spec *and* on review" parses as "we shipped the difference." The law turns a vague quality conversation into an allocation audit — and everything else in this repository is machinery for writing that allocation down and keeping it inspectable.
+Version 4.0. This release adds the theoretical layer beneath the framework — and, following an
+external adversarial review, corrects and downgrades several claims that the earlier versions
+overstated. It is deliberately **smaller and better-attributed** than v3, and harder to knock down.
 
 ---
 
-## The two tiers
+## Start here: the one idea
 
-The framework is split into two directories, and the split is the point.
+Four classical results govern how work is allocated in engineered systems — Brooks's essential
+complexity, Tesler's conservation of complexity, Ashby's requisite variety, Meyer's contracts. Each
+quantifies over an **actor**: the thing that makes a determination against some ground. **None of them
+makes that actor explicit.** They had no reason to — for the whole history of these results there
+were two kinds of determiner, a person or a program, and the gap between them was a light switch, not
+a spectrum.
 
-### [`core/`](core/) — Decision-Driven Design itself
+A third kind now exists: **non-deterministic, yet with a distribution that can be frozen by binding.**
+Decision-Driven Design is what you get when you **fill in the actor slot** those results left empty —
+and discover that supplying the missing parameter *changes their predictions.*
 
-The law and its consequences, domain-independent. This is DDD in the abstract: *what it takes to make a decision well, and what bounds that.*
+Two consequences follow, and they are the framework's core contribution:
 
-- [**The Law**](core/01-the-law.md) — conservation of specification, the environment clause (why software is *closable* and physical work is not), and the two design principles, one per boundary. **Start here.**
-- [**Completeness**](core/02-completeness.md) — the instrument that reads the allocation. `complete(spec, binding)`, the three-tier exercise, the residual, eight ordinary failure cases.
-- [**The Polanyi Floor**](core/03-the-polanyi-floor.md) — the lower bound: knowledge that cannot move from judgment to encoded at any effort. The autonomy ceiling, measured not asserted.
-- [**The Two Projections**](core/04-projections.md) — the one law along two axes: the **funnel** (allocation over position in a chain) and **maturation** (allocation over recurrence in time).
-- [**The Actor's Capacity**](core/context-window.md) — the law read against the model actor: context length as the total allocation budget, why explore mode wants long context, and why context bounds action size.
-- [**Escape Under Pressure**](core/escape-under-pressure.md) — the law read at fire time: when demand exceeds capacity the prior decides; hallucination as an escaped decision surfaced as output, and the escape/wind taxonomy.
+1. **The irreducible floor of a task is a property of its *acceptance predicate*, not of the task.**
+   Zero where you can check the answer; non-zero where you cannot; and *whether you can* is, in
+   general, undecidable. → [`core/03-the-floor.md`](core/03-the-floor.md)
 
-### [`apparatus/`](apparatus/) — DDD applied
+2. **Selection intensity is inversely proportional to acceptance-predicate closure.** *Training* is
+   what you do when you can check the work. *Selection* is what you do when you cannot — you check the
+   worker instead. This is falsifiable across professions.
+   → [`core/04-actors.md`](core/04-actors.md)
 
-The concrete apparatus for running the law against a real domain: *how you actually build it.*
-
-- [**Decisions, Roles, and Artifacts**](apparatus/01-decisions-and-artifacts.md) — the geometry: work as a decision graph, the inversion, the two graphs that meet at the session.
-- [**Entity Reference**](apparatus/02-entities.md) — *normative.* Every entity, made precise.
-- [**Encoding a Domain**](apparatus/03-encoding-the-domain.md) — context, the bundle, SPMC, phases, task types: the concrete form the encoded store takes.
-- [**The Autonomy Ladder**](apparatus/04-autonomy.md) — per-role autonomy, ceilinged by the floor.
-- [**Conformance Capabilities**](apparatus/05-conformance.md) — *normative.* The substrate a conformant system must provide.
-- **Modeling toolkit** — [applying the method](apparatus/method/01-applying.md) (value-backward, worked on hiring) and [the notation](apparatus/method/02-notation.md) (Mermaid profile).
-- **Composition** — [partition](apparatus/composition/partition.md) (reach), [seam allocation](apparatus/composition/seam-allocation.md) (the four-motive law), and [seam–tier coupling](apparatus/composition/seam-tier-coupling.md): what composing actors buys, and what the seams cost — spending the [seam-demand identity](core/01-the-law/seam-demand.md) the law owns.
-
-The relationship is strict: **`core/` is the invariant, `apparatus/` is one concrete way to keep it.** Nothing in `apparatus/` introduces a new law. When you read "the funnel is a design discipline" or "the floor is an autonomy ceiling" in the apparatus tier, those are the core law showing up in apparatus terms.
+And a prediction: **model actors outperform human actors exactly where the acceptance predicate
+closes, and underperform exactly where it does not — the gap tracks *closure*, not *difficulty*.**
 
 ---
 
-## The premise, in one paragraph
+## What this is, and is not
 
-LLMs are knowledge forecasters: given a context, they predict what comes next. Humans work the same way. A work process — sales, design, research, engineering — is a chain of context-conditioned decisions terminating in a **value action** (a shipped feature, a closed deal, a treated patient). Most current agent design treats the **tool call** as the primary unit; DDD inverts this and treats the **decision** as the unit, with tool calls sitting only at the terminal nodes of a decision graph. This is not a refinement of agentic design — it is a different geometry, and for real organizational work the graph *upstream* of the agent loop is most of the engineering. See [apparatus §1](apparatus/01-decisions-and-artifacts.md).
+**It is** a two-primitive theory (decisions, and the ground they are determined against), an
+allocation lens (four stores: encoded, mechanically checked, judged, escaped), and an actor model
+(pinning resolution, the floor-in-the-predicate, seam composition).
 
-## Why now
+**It is not** a new physical law. The conservation claim is **Tesler's Law of Conservation of
+Complexity, generalised** — denominated in decisions, with a fourth store (the *escaped* one Tesler
+lacked) and an assurance-level bound. It has **no measurable unit**, so it is a **principle**, not a
+law, and the repository says so throughout. See [`core/01-the-principle.md`](core/01-the-principle.md)
+and, for the full record of what was corrected and why,
+[`meta/lineage-and-limits.md`](meta/lineage-and-limits.md).
 
-Industrial automation was good at the value action itself — the assembly, the transaction — and the upstream decisions were a human bottleneck the factory couldn't touch. In knowledge work the action and the decision often collapse into one step ("send this email" is both), and the chain of decisions upstream is most of the work. Factory automation couldn't help, because it couldn't decide. LLMs can. The dominant "AI factory" framing reaches for assembly lines: discrete tasks, deterministic flow. That fits when the answer is known and the goal is throughput; it fits poorly when the goal is to *decide.* Decision-Driven Design is what comes after the factory metaphor stops being useful.
+We publish the review and the retreats as first-class documents. A framework that states what it
+cannot support is worth more than one that overclaims.
 
 ---
 
 ## Reading order
 
-**New to the framework?** Read `core/` top to bottom (the law, then completeness, then the floor, then the projections), then `apparatus/` §1–§3. That path takes you from *why the law holds* to *how a domain is encoded to keep it*.
+### Core — the theory
 
-**Here to build?** Skim [the law](core/01-the-law.md) and [completeness](core/02-completeness.md), then go straight to [application §2 (entities)](apparatus/02-entities.md), [§3 (encoding)](apparatus/03-encoding-the-domain.md), and [§5 (conformance)](apparatus/05-conformance.md).
+The claim, from primitives to consequences. Read in order if you are new.
 
-**Here to map your own process?** [The law](core/01-the-law.md), then the [modeling toolkit](apparatus/method/01-applying.md).
+| | Document | What it establishes |
+|---|---|---|
+| 00 | [`core/00-determination.md`](core/00-determination.md) | The two primitives; the admission tests; *the act is a decision* |
+| 01 | [`core/01-the-principle.md`](core/01-the-principle.md) | The conservation principle; the four stores; the register question |
+| 02 | [`core/02-completeness.md`](core/02-completeness.md) | Why the stores are exhaustive — and why that is worth less than it looks |
+| 03 | [`core/03-the-floor.md`](core/03-the-floor.md) | **The floor is in the acceptance predicate** — the best original result |
+| 04 | [`core/04-actors.md`](core/04-actors.md) | **The missing parameter.** Pinning; selection vs. training; seams; the compound |
+| 05 | [`core/05-composition.md`](core/05-composition.md) | The seam-demand identity; orchestrator vs. swarm; the channel is the platform |
+| 06 | [`core/06-determination-and-intelligence.md`](core/06-determination-and-intelligence.md) | Determination ≠ intelligence; why the LLM debate is structurally undecidable |
 
-## Normative vs. informative
+### Apparatus — the mechanisms
 
-**Normative** documents define what a system must provide to claim conformance: [the law](core/01-the-law.md) and [completeness](core/02-completeness.md) in core; the [entity reference](apparatus/02-entities.md) and [conformance capabilities](apparatus/05-conformance.md) in application. The [Polanyi floor](core/03-the-polanyi-floor.md) is on the normative track, currently *projected*. Everything else is **informative** — it motivates, explains, illustrates, or draws, but does not itself constrain implementations.
+Operational results that fall out of the core. Read as needed.
 
-Status terms (*projected* / *reported*) are defined normatively by the [Completeness Exercise tiers](core/02-completeness.md#application-status-is-defined-by-these-tiers).
+| Document | What it gives you |
+|---|---|
+| [`apparatus/encode-verify.md`](apparatus/encode-verify.md) | *Encode ground you control; verify ground you don't* — and verify on a schedule |
+| [`apparatus/closure-principle.md`](apparatus/closure-principle.md) | *An actor's own output is not ground* — poisoned ground, and why Terraform can delete your database |
+| [`apparatus/adversarial-ground.md`](apparatus/adversarial-ground.md) | The attack surface of an actor is its ground, not its logic — across three fields |
+
+### Applications — the projections
+
+The framework, denominated in a domain.
+
+| Document | Domain |
+|---|---|
+| [`applications/sdlc/`](applications/sdlc/) | Software delivery — the agentic/DAG design framework (formerly the whole of v3) |
+
+### Meta — the honesty layer
+
+| Document | What it is |
+|---|---|
+| [`meta/lineage-and-limits.md`](meta/lineage-and-limits.md) | Full attribution, corrections, retreats, and the open falsification debts |
+| [`meta/consolidated-state.md`](meta/consolidated-state.md) | Single authoritative status: what stands, what is superseded, what is owed |
 
 ---
 
-## Reference implementations
+## What changed from v3
 
-Work-in-progress:
+v3 was the agentic-design framework: decisions as the unit of work, a DAG of roles, artifacts with
+schemas, backed by [`product-cli`](https://github.com/Hafeok/product-cli). **That framework is
+intact** — it now lives in [`applications/sdlc/`](applications/sdlc/) as the **engineering
+projection** of the general principle, which is exactly what it always was. What v4 adds is the layer
+*beneath* it: the theory that explains why the DAG design works, and the actor model that says which
+node each determination belongs to.
 
-- **[product-cli](https://github.com/Hafeok/product-cli)** — the process system for the Engineering process. Owns features, ADRs, test criteria, dependencies; builds the derived graph; assembles bundles; runs audits.
-- **[decision-cli](https://github.com/Hafeok/decision-cli)** — the companion orchestration system, designed against [application §5](apparatus/05-conformance.md).
+The register also changed. Following external review:
 
-## Experiments
+- **"Law" → "Principle."** No physical-law status without a measurable quantity (which we do not have;
+  Ashby did, and even he refused the term).
+- **Conservation** holds as an accounting identity *within a fixed decomposition* — re-decomposing can
+  *destroy* demand, so the decomposition is the highest-leverage decision.
+- **The immune-system "licensing" argument** is demoted to a suggestive parallel with known
+  disanalogies; **CRISPR** is the accurate compound-platform instance.
+- **The zero-floor postulate** is retreated to **the floor-in-the-predicate** result, which is
+  sharper and survives the theoretical limits (Rice, inevitable model error, collective tacit
+  knowledge).
 
-Falsification harnesses for the framework's projected claims live in [`experiments/`](experiments). A design stays *projected* until linked runs are cited.
+Full record: [`meta/lineage-and-limits.md`](meta/lineage-and-limits.md).
 
-- **[escape-wind](experiments/escape-wind/DESIGN.md)** — tests the escape/wind decomposition of [Escape Under Pressure](core/escape-under-pressure.md): three predictions, kill conditions declared before the run.
+---
 
-## Non-normative examples
+## Status
 
-Worked applications live in [`applications/`](applications). Each is marked *projected* (clean derivation, not yet run) or *reported* (a real system has run it), because a framework in love with its own generality is a failure mode.
+This is a working specification under active revision. The strongest claims — the floor-in-the-
+predicate, and *selection intensity tracks predicate closure* — are **falsifiable**, and the
+conditions are stated in the documents. The framework books its open debts openly
+([`meta/`](meta/)); the most important is a counting procedure for governing decisions that would let
+"conservation" be measured rather than merely asserted.
 
-- **[The software development lifecycle](applications/sdlc.md)** — *projected.* Code generation under DDD: the steered coding agent dissolving into typed task clusters, classify-and-dispatch, the broad worker as explorer-and-typifier — and the derivation frozen outward into a real ecosystem ([ai-development-foundations](https://github.com/Hafeok/ai-development-foundations), [product-framework](https://github.com/Hafeok/product-framework)).
+Reference implementation: [`product-cli`](https://github.com/Hafeok/product-cli) (the authoring layer
+for the SDLC projection).
 
-## Discussion & license
+## Standing on
 
-Issues and discussions are open — the strongest pressure on the framework has come from applying it past software development. Documents are released under [CC BY 4.0](LICENSE).
+Tesler (conservation of complexity) · Ashby (requisite variety) · Brooks (essential complexity) ·
+Meyer & Hoare (contracts) · Saltzer, Reed & Clark (end-to-end) · Kalman (observability) · Polanyi &
+Collins (tacit knowledge) · Rice (undecidability) · Edelman & Gally (degeneracy). Full attribution in
+[`meta/lineage-and-limits.md`](meta/lineage-and-limits.md).
+
+## License
+
+Spec text: **CC BY 4.0**. Any code and schemas: **Apache-2.0**.

@@ -1,6 +1,18 @@
-# Windows Zone.Identifier files (WSL/NTFS alternate data streams)
-*:Zone.Identifier
+# Build artifacts
+/target
+/dist
+/build
+node_modules/
 
-# Python
-__pycache__/
-*.pyc
+# Editor / OS
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Local notes not for publication
+/scratch
+*.local.md
+
+# The build-note file, once applied
+applications/sdlc/_CARRY_FORWARD_FROM_V3.md
