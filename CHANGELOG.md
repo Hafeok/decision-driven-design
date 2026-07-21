@@ -1,5 +1,27 @@
 # Changelog
 
+## 4.1 — The measure
+
+The measure — specification demand is verdict entropy, conservation is the chain rule
+(closing-predicate case); funnel/maturation corrected to judgment-demand projections; Danish
+glossary.
+
+### Added
+- **`core/07-projections.md`** — the funnel and maturation, corrected: both are **judgment-demand** (cost) projections, never *count* projections; explains the reference model's spurious feedback loops. Figures: `core/assets/projections.svg` (static), `core/assets/projections.html` (interactive).
+- **`core/08-the-measure.md`** — **the formal result**: for tasks whose acceptance predicate closes, specification demand is the Shannon entropy of the verdict, and conservation is the chain rule of entropy. One identity, three conditioning variables (decomposition → seam, actor → allocation, retrieval → RAG). Reproduction scripts (stdlib-only): `core/assets/measure-toy.py`, `core/assets/measure-actor-allocation.py`, `core/assets/measure-rag.py`.
+- **`i18n/ordliste-dansk.md`** — Danish glossary of the framework vocabulary.
+
+### Changed
+- **The counting-procedure debt moves from open to partially discharged.** For closing predicates, demand is measured (verdict entropy) and conservation is the chain rule — a *measured* invariant on the closing-predicate region. It remains open for open predicates, where the verdict function does not exist — the same boundary as the floor. See `meta/consolidated-state.md` §5.
+- The register is unchanged: still a **principle**, not a law. `core/08` strengthens how well the principle is grounded on the closing-predicate region, but the measure exists only where the predicate closes, so the general claim remains a principle.
+
+### Corrected
+- *"A better decomposition destroys demand"* — a better decomposition *pre-pays* more demand into the seam, buying cheaper parts; the total is invariant. Nothing is destroyed; it relocates. See `core/08` §4.
+- The funnel as a *count* projection — it is a *judgment-demand* (cost) projection; count is fixed by the task. See `core/07`.
+
+### Open debts (booked, not hidden)
+- The judgment/escape split: `core/08` folds escape into judgment; separating them needs an actor-capacity model — the natural next result.
+
 ## 4.0 — The theory layer, and the register correction
 
 ### Added
