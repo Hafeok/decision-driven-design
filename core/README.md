@@ -13,5 +13,7 @@ Read in order:
 - **04 — actors** · the missing parameter: pinning resolution, selection vs. training, seams, the compound
 - **05 — composition** · the seam-demand identity; orchestrator vs. swarm; the channel is the platform
 - **06 — determination and intelligence** · determination ≠ intelligence; the LLM debate is structurally undecidable
+- **07 — projections** · the funnel & maturation as judgment-demand projections; the count/cost correction
+- **08 — the measure** · demand = Shannon entropy of the verdict; conservation = the chain rule; the counting debt paid for closing predicates
 
-The load-bearing, falsifiable claims are in **03** and **04**. The honesty about register is in **01**.
+The load-bearing, falsifiable claims are in **03**, **04**, and **08**. The honesty about register is in **01**.

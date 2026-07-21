@@ -32,6 +32,11 @@ Two consequences follow, and they are the framework's core contribution:
    worker instead. This is falsifiable across professions.
    → [`core/04-actors.md`](core/04-actors.md)
 
+And, new in 4.1: for tasks whose acceptance predicate closes, **specification demand is measurable** —
+it is the Shannon entropy of the verdict, and conservation is the chain rule of entropy
+([`core/08`](core/08-the-measure.md)). The measure exists exactly where the predicate closes, and
+vanishes precisely at the floor.
+
 And a prediction: **model actors outperform human actors exactly where the acceptance predicate
 closes, and underperform exactly where it does not — the gap tracks *closure*, not *difficulty*.**
 
@@ -70,6 +75,8 @@ The claim, from primitives to consequences. Read in order if you are new.
 | 04 | [`core/04-actors.md`](core/04-actors.md) | **The missing parameter.** Pinning; selection vs. training; seams; the compound |
 | 05 | [`core/05-composition.md`](core/05-composition.md) | The seam-demand identity; orchestrator vs. swarm; the channel is the platform |
 | 06 | [`core/06-determination-and-intelligence.md`](core/06-determination-and-intelligence.md) | Determination ≠ intelligence; why the LLM debate is structurally undecidable |
+| 07 | [`core/07-projections.md`](core/07-projections.md) | The funnel & maturation as **judgment-demand** projections (not count); why the model's feedback loops appeared |
+| 08 | [`core/08-the-measure.md`](core/08-the-measure.md) | **Demand is Shannon entropy of the verdict; conservation is the chain rule.** The counting-procedure debt, paid for closing predicates |
 
 ### Apparatus — the mechanisms
 
@@ -95,6 +102,8 @@ The framework, denominated in a domain.
 |---|---|
 | [`meta/lineage-and-limits.md`](meta/lineage-and-limits.md) | Full attribution, corrections, retreats, and the open falsification debts |
 | [`meta/consolidated-state.md`](meta/consolidated-state.md) | Single authoritative status: what stands, what is superseded, what is owed |
+
+Danish glossary: [`i18n/ordliste-dansk.md`](i18n/ordliste-dansk.md).
 
 ---
 

@@ -246,6 +246,8 @@ exist to prevent.
 | The poisoned-ground **cross-domain unification** | **Retreated** → a *family*, not one mechanism. Opposite error directions must not be conflated. |
 | Escape- vs. wind-hallucination as novel | **Cite the prior taxonomy** (Ji et al.; Huang et al.) — ours is a gloss |
 | Quarks / quantum resonance | **Do not write it.** Fails both admission tests. The resemblance is **degeneracy** — a fact about many-to-one maps in mathematics, not evidence of determination. |
+| "A better decomposition destroys demand" | **Corrected (v4.1).** A better decomposition *pre-pays* more demand into the seam (higher mutual information), buying cheaper parts. The total H(verdict) is invariant. Nothing is destroyed; it relocates. See core/08 §4. |
+| The funnel as a *count* projection | **Corrected (v4.1).** The funnel is a *judgment-demand* (cost) projection; count is fixed by the task. See core/07. |
 
 **Artifacts needing revision:** `determination.md` (§7 immune licensing — cut), `adversarial-ground.md`
 (the unification — retreat to a family), `linkedin-plan.md` (post 4 and post 6 both lean on retreated
@@ -306,14 +308,22 @@ The eight-post sequence stands, with three edits:
 
 **The falsification debt, booked openly:**
 
-1. **A counting procedure for governing decisions.** Until one exists and is shown invariant across
-   two architectures for one task at one assurance level, "conservation" is an accounting identity,
-   not a law. *The framework must say so in print.*
+1. A counting procedure for governing decisions. **PARTIALLY DISCHARGED (v4.1).** For closing
+   predicates, demand is the Shannon entropy of the verdict and conservation is the chain rule of
+   entropy — see core/08-the-measure.md. This is a *measured* invariant, not an asserted one, on the
+   closing-predicate region. It remains open for OPEN predicates, where the verdict function (and
+   therefore the entropy) does not exist — which is the same boundary as the floor (core/03). The
+   debt is now bounded to exactly the region where the framework already says measurement fails.
 2. **Operationalise predicate closure.** §1.8's falsifiable claim needs an independent measure.
    Proposed proxies — **time-to-feedback**, **objectivity of the standard**, **stationarity of the
    standard** — are proxies, and must be conceded as such.
 3. **The selection/training ratio, tested across professions.** This is *falsifiable from existing
    literature* — which **unblocks Paper A §6**, previously gated on evidence campaigns E1–E4.
+
+- The judgment/escape split. core/08 folds escape into H(verdict|X) with judgment. Separating them
+  needs an actor-CAPACITY model: the point at which H(verdict|X) exceeds actor capacity is where
+  demand escapes. This is where the floor (core/03) finally gets a number. Not yet done — the
+  natural next result.
 
 **Product (see `ground-prd.md`):** rebuild Bicep on **compile-then-evaluate** (P0 — the current regex
 parser violates the never-re-derive rule) · close the **`binds` join** · **live verification** of Key

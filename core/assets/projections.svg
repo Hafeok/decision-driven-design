@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 430" font-family="-apple-system,Segoe UI,Roboto,sans-serif">
+  <defs>
+    <style>
+      .bg{fill:#0f1115}
+      .panel{fill:#161a21;stroke:#2a2f3a;stroke-width:1;rx:12}
+      .title{fill:#e8ecf2;font-size:15px;font-weight:600}
+      .axlab{fill:#8b95a5;font-size:11px}
+      .grid{stroke:#1e232c;stroke-width:1}
+      .ax{stroke:#2a2f3a;stroke-width:1.5}
+      .count{stroke:#5ad19a;stroke-width:2.5;fill:none;stroke-linecap:round}
+      .countdot{fill:#5ad19a}
+      .cost{stroke:#ff8a5c;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+      .costdot{fill:#ff8a5c}
+      .costarea{fill:#ff8a5c;opacity:.10}
+      .floor{stroke:#c05cff;stroke-width:1.5;stroke-dasharray:5 4;opacity:.85}
+      .clab{fill:#5ad19a;font-size:10.5px}
+      .flab{fill:#c05cff;font-size:10px}
+      .anno{fill:#ff8a5c;font-size:10.5px}
+      .head{fill:#e8ecf2;font-size:20px;font-weight:650}
+      .sub{fill:#8b95a5;font-size:12.5px}
+      .em-cost{fill:#ff8a5c;font-weight:600}
+      .em-count{fill:#5ad19a;font-weight:600}
+      .em-floor{fill:#c05cff;font-weight:600}
+      .leg{fill:#8b95a5;font-size:11.5px}
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="920" height="430"/>
+
+  <!-- header -->
+  <text class="head" x="30" y="40">The Two Projections</text>
+  <text class="sub" x="30" y="62">One compound, two axes. The <tspan class="em-count">count</tspan> of governing decisions is fixed by the task and stays flat.</text>
+  <text class="sub" x="30" y="80">Only <tspan class="em-cost">judgment demand</tspan> descends — bottoming out at the <tspan class="em-floor">floor</tspan>.</text>
+
+  <!-- ============ LEFT: FUNNEL ============ -->
+  <rect class="panel" x="30" y="100" width="410" height="300" rx="12"/>
+  <text class="title" x="52" y="128">Funnel · the depth projection</text>
+  <text class="axlab" x="52" y="146">within one run · x = decision depth</text>
+
+  <!-- plot box origin for left: x 80..410, y 165..350 -->
+  <!-- grid -->
+  <line class="grid" x1="80" y1="175" x2="410" y2="175"/>
+  <line class="grid" x1="80" y1="219" x2="410" y2="219"/>
+  <line class="grid" x1="80" y1="263" x2="410" y2="263"/>
+  <line class="grid" x1="80" y1="307" x2="410" y2="307"/>
+  <!-- axes -->
+  <line class="ax" x1="80" y1="165" x2="80" y2="350"/>
+  <line class="ax" x1="80" y1="350" x2="410" y2="350"/>
+  <text class="axlab" x="66" y="262" transform="rotate(-90 66 262)" text-anchor="middle">judgment demand →</text>
+  <text class="axlab" x="245" y="378" text-anchor="middle">decision depth →</text>
+
+  <!-- count: flat -->
+  <text class="clab" x="86" y="176">count — fixed by the task</text>
+  <line class="count" x1="90" y1="185" x2="400" y2="185"/>
+  <circle class="countdot" cx="90"  cy="185" r="3.5"/>
+  <circle class="countdot" cx="141" cy="185" r="3.5"/>
+  <circle class="countdot" cx="193" cy="185" r="3.5"/>
+  <circle class="countdot" cx="245" cy="185" r="3.5"/>
+  <circle class="countdot" cx="296" cy="185" r="3.5"/>
+  <circle class="countdot" cx="348" cy="185" r="3.5"/>
+  <circle class="countdot" cx="400" cy="185" r="3.5"/>
+
+  <!-- cost: exponential descent to floor (floor at y=307) -->
+  <path class="costarea" d="M90,350 L90,200 L141,247 L193,278 L245,295 L296,303 L348,306 L400,307 L400,350 Z"/>
+  <path class="cost" d="M90,200 L141,247 L193,278 L245,295 L296,303 L348,306 L400,307"/>
+  <circle class="costdot" cx="90"  cy="200" r="3.5"/>
+  <circle class="costdot" cx="141" cy="247" r="3.5"/>
+  <circle class="costdot" cx="193" cy="278" r="3.5"/>
+  <circle class="costdot" cx="245" cy="295" r="3.5"/>
+  <circle class="costdot" cx="296" cy="303" r="3.5"/>
+  <circle class="costdot" cx="348" cy="306" r="3.5"/>
+  <circle class="costdot" cx="400" cy="307" r="3.5"/>
+  <text class="anno" x="96" y="196">pay once, here</text>
+
+  <!-- floor -->
+  <line class="floor" x1="80" y1="307" x2="410" y2="307"/>
+  <text class="flab" x="410" y="301" text-anchor="end">floor — predicate doesn't close</text>
+
+  <!-- ============ RIGHT: MATURATION ============ -->
+  <rect class="panel" x="480" y="100" width="410" height="300" rx="12"/>
+  <text class="title" x="502" y="128">Maturation · the recurrence projection</text>
+  <text class="axlab" x="502" y="146">across runs · x = run number</text>
+
+  <!-- plot box origin for right: x 530..860, y 165..350 -->
+  <line class="grid" x1="530" y1="175" x2="860" y2="175"/>
+  <line class="grid" x1="530" y1="219" x2="860" y2="219"/>
+  <line class="grid" x1="530" y1="263" x2="860" y2="263"/>
+  <line class="grid" x1="530" y1="307" x2="860" y2="307"/>
+  <line class="ax" x1="530" y1="165" x2="530" y2="350"/>
+  <line class="ax" x1="530" y1="350" x2="860" y2="350"/>
+  <text class="axlab" x="516" y="262" transform="rotate(-90 516 262)" text-anchor="middle">judgment demand →</text>
+  <text class="axlab" x="695" y="378" text-anchor="middle">run number →</text>
+
+  <!-- count: flat -->
+  <text class="clab" x="536" y="176">count — fixed by the task</text>
+  <line class="count" x1="540" y1="185" x2="850" y2="185"/>
+  <circle class="countdot" cx="540" cy="185" r="3.5"/>
+  <circle class="countdot" cx="591" cy="185" r="3.5"/>
+  <circle class="countdot" cx="643" cy="185" r="3.5"/>
+  <circle class="countdot" cx="695" cy="185" r="3.5"/>
+  <circle class="countdot" cx="746" cy="185" r="3.5"/>
+  <circle class="countdot" cx="798" cy="185" r="3.5"/>
+  <circle class="countdot" cx="850" cy="185" r="3.5"/>
+
+  <!-- cost: same descent shape, across runs -->
+  <path class="costarea" d="M540,350 L540,200 L591,247 L643,278 L695,295 L746,303 L798,306 L850,307 L850,350 Z"/>
+  <path class="cost" d="M540,200 L591,247 L643,278 L695,295 L746,303 L798,306 L850,307"/>
+  <circle class="costdot" cx="540" cy="200" r="3.5"/>
+  <circle class="costdot" cx="591" cy="247" r="3.5"/>
+  <circle class="costdot" cx="643" cy="278" r="3.5"/>
+  <circle class="costdot" cx="695" cy="295" r="3.5"/>
+  <circle class="costdot" cx="746" cy="303" r="3.5"/>
+  <circle class="costdot" cx="798" cy="306" r="3.5"/>
+  <circle class="costdot" cx="850" cy="307" r="3.5"/>
+  <text class="anno" x="546" y="196">pay once, run 1</text>
+
+  <line class="floor" x1="530" y1="307" x2="860" y2="307"/>
+  <text class="flab" x="860" y="301" text-anchor="end">floor — predicate doesn't close</text>
+
+  <!-- shared caption -->
+  <text class="sub" x="30" y="420">Both measure judgment demand — decisions resolved by an actor, not inherited. Both bottom out at the floor. Same mechanism — pay once, inherit thereafter — drawn on two axes.</text>
+</svg>
