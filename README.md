@@ -2,7 +2,7 @@
 
 **A theory of where determinations come from, what they cost, and which actor should make each one.**
 
-Version 4.0. This release adds the theoretical layer beneath the framework — and, following an
+Version 4.3. This release adds the theoretical layer beneath the framework — and, following an
 external adversarial review, corrects and downgrades several claims that the earlier versions
 overstated. It is deliberately **smaller and better-attributed** than v3, and harder to knock down.
 
