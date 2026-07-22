@@ -1,5 +1,33 @@
 # Changelog
 
+## 4.2 — The floor mechanism
+
+### Added
+- core/09-the-floor-mechanism.md — escape = overflow ∩ open (the floor, with a formula);
+  p_err DERIVED from rate-distortion; the encode-fraction rule; hallucination as surfaced escape
+  with a three-cause taxonomy (missing / poisoned / overflowed ground) and three different fixes
+- apparatus/the-skill-floor.md — skills are specification without verification, hence floor-exposed
+- core/assets/floor-mechanism.py, core/assets/perr-rate-distortion.py
+
+### Closed
+- The soft error model is no longer assumed. p_err = H_b^-1(1 - C/n), from rate-distortion.
+
+### Attribution
+- meta/lineage-and-limits.md extended with §1.8-1.11: Shannon (entropy, chain rule,
+  rate-distortion), Cover & Thomas, Sims (rational inattention — capacity as an information
+  channel), Ji et al. / Huang et al. (hallucination taxonomies), and Kolmogorov/MDL as the
+  acknowledged alternative. core/08 and core/09 are APPLIED information theory; the mathematics
+  is Shannon's and the contribution is the identification.
+
+### Reclassified
+- "Measure demand on open predicates" moved from open debt to STATED BOUNDARY. It asks for
+  entropy without a random variable; measurement and closure have the same domain.
+
+### Corrected
+- The predicted context "U-curve" is retracted. The robust result is the encode-fraction rule:
+  raw ground past capacity is monotonic harm; encoded decisions help on both axes. The lever is
+  not context size.
+
 ## 4.1 — The measure
 
 The measure — specification demand is verdict entropy, conservation is the chain rule

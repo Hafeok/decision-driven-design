@@ -308,18 +308,27 @@ The eight-post sequence stands, with three edits:
 
 **The falsification debt, booked openly:**
 
-1. A counting procedure for governing decisions. **PARTIALLY DISCHARGED (v4.1).** For closing
-   predicates, demand is the Shannon entropy of the verdict and conservation is the chain rule of
-   entropy — see core/08-the-measure.md. This is a *measured* invariant, not an asserted one, on the
-   closing-predicate region. It remains open for OPEN predicates, where the verdict function (and
-   therefore the entropy) does not exist — which is the same boundary as the floor (core/03). The
-   debt is now bounded to exactly the region where the framework already says measurement fails.
-2. **Operationalise predicate closure.** §1.8's falsifiable claim needs an independent measure.
+1. **Operationalise predicate closure.** §1.8's falsifiable claim needs an independent measure.
    Proposed proxies — **time-to-feedback**, **objectivity of the standard**, **stationarity of the
    standard** — are proxies, and must be conceded as such.
-3. **The selection/training ratio, tested across professions.** This is *falsifiable from existing
+2. **The selection/training ratio, tested across professions.** This is *falsifiable from existing
    literature* — which **unblocks Paper A §6**, previously gated on evidence campaigns E1–E4.
 
+- The soft error model p_err. **CLOSED (v4.2).** Derived from binary rate-distortion:
+  p_err = H_b^-1(1 - C/n), the information-theoretic lower bound on per-decision error at
+  available rate r = C/n. Limits are exact (r>=1 -> 0; r->0 -> 0.5, recovering the hard-case
+  coin flip). Substituting it for the earlier assumed logistic changes the numbers and no
+  structural claim. See core/09 §4.1.
+- Measuring demand on OPEN predicates. **NOT A DEBT — A STATED BOUNDARY.** core/08 measures
+  demand as verdict entropy, which requires a verdict function; an open predicate is precisely
+  one that lacks it. Asking to measure demand there is asking for entropy without a random
+  variable. Measurement and closure have the same domain (core/08 §7). This is the framework's
+  limit, correctly drawn, and it coincides exactly with the floor. It should not appear on the
+  ledger as unpaid work.
+- Calibrating C_resolve and C_hold for a real actor. EMPIRICAL, not a proof: construct tasks of
+  known bit-demand, find where error rate departs from zero; that value is C_resolve for that
+  actor. Nobody has published such a measurement. Needs a rig, not more theory. This is now the
+  framework's principal open empirical item, alongside the selection/training study.
 - The judgment/escape split. core/08 folds escape into H(verdict|X) with judgment. Separating them
   needs an actor-CAPACITY model: the point at which H(verdict|X) exceeds actor capacity is where
   demand escapes. This is where the floor (core/03) finally gets a number. Not yet done — the
