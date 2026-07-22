@@ -77,6 +77,7 @@ The claim, from primitives to consequences. Read in order if you are new.
 | 06 | [`core/06-determination-and-intelligence.md`](core/06-determination-and-intelligence.md) | Determination ≠ intelligence; why the LLM debate is structurally undecidable |
 | 07 | [`core/07-projections.md`](core/07-projections.md) | The funnel & maturation as **judgment-demand** projections (not count); why the model's feedback loops appeared |
 | 08 | [`core/08-the-measure.md`](core/08-the-measure.md) | **Demand is Shannon entropy of the verdict; conservation is the chain rule.** The counting-procedure debt, paid for closing predicates |
+| 09 | [`core/09-the-floor-mechanism.md`](core/09-the-floor-mechanism.md) | **The floor mechanism.** Escape = overflow ∩ open; the encode-fraction rule; hallucination as surfaced escape |
 
 ### Apparatus — the mechanisms
 
@@ -87,6 +88,7 @@ Operational results that fall out of the core. Read as needed.
 | [`apparatus/encode-verify.md`](apparatus/encode-verify.md) | *Encode ground you control; verify ground you don't* — and verify on a schedule |
 | [`apparatus/closure-principle.md`](apparatus/closure-principle.md) | *An actor's own output is not ground* — poisoned ground, and why Terraform can delete your database |
 | [`apparatus/adversarial-ground.md`](apparatus/adversarial-ground.md) | The attack surface of an actor is its ground, not its logic — across three fields |
+| [`apparatus/the-skill-floor.md`](apparatus/the-skill-floor.md) | A skill without a per-invocation verifier is floor-exposed by construction |
 
 ### Applications — the projections
 

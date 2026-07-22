@@ -112,6 +112,123 @@ socialization).
 **Correction:** our floor decomposition (intrinsic + transfer) maps onto *relational and somatic*
 TK but **denies collective TK**, which Collins's whole program says exists. See §2.2.
 
+**Why §1.8–§1.11 exist.** v4.1 (`core/08-the-measure.md`) and v4.2 (`core/09-the-floor-mechanism.md`) rest
+almost entirely on information theory. Prior to this addendum, **Shannon appeared exactly once in the
+repository** — as a passing mention inside the Ashby section. That is an attribution failure of the
+same kind the framework corrected in v4.0, and it is corrected here on the same principle: **cite
+where we are additive, retreat where we are not.**
+
+The governing sentence for both new results:
+
+> **The mathematics is Shannon's. The claim is the *identification* — that specification demand *is*
+> verdict entropy, seam demand *is* mutual information, and resolve-overflow error *is* the
+> rate-distortion bound. Those identifications are modelling claims, they are falsifiable, and they
+> were tested. They are not mathematical discoveries.**
+
+### 1.8 Shannon — information theory (1948)
+
+**"A Mathematical Theory of Communication," *Bell System Technical Journal* 27.**
+
+This is the foundation of everything in `core/08` and `core/09`. Specifically:
+
+- **Entropy `H(X)`** — the measure of information in a random variable. `core/08` identifies
+  *specification demand* with `H(verdict)`. The unit (bits) is Shannon's; the quantity is Shannon's;
+  the identification with demand is ours.
+- **Conditional entropy `H(X|Y)` and mutual information `I(X;Y)`** — `core/08` identifies *runtime
+  demand of the parts* with `H(verdict|S)` and *seam demand* with `I(verdict;S)`.
+- **The chain rule**, `H(X) = H(X|Y) + I(X;Y)` — **this is what the framework calls "conservation."**
+  Conservation of specification demand, in the closing-predicate case, **is the chain rule of
+  entropy.** It is a theorem of 1948, not a discovery of this framework.
+
+**What DDD adds:** the identification, and the observation that three of the framework's separately
+stated claims (the seam identity, actor-relative store allocation, and the encode/verify split) are
+the same chain rule under three different conditioning variables. That mapping could have failed. It
+did not. **That is the contribution, and it is not the theorem.**
+
+**Correction to earlier framing:** any presentation of `core/08` that leads with "conservation is a
+theorem" without immediately naming Shannon is misleading. Lead with: *"conservation, on the
+closing-predicate region, is Shannon's chain rule — here is why that identification holds."*
+
+### 1.9 Shannon — rate-distortion theory (1948, 1959)
+
+**"Coding Theorems for a Discrete Source with a Fidelity Criterion," IRE Nat. Conv. Rec. (1959).**
+
+`core/09` §4.1 derives the per-decision error rate under resolve-overflow as
+
+> `p_err = H_b⁻¹(1 − r)`, `r = C_resolve / n`
+
+This is the **inverse of the binary rate-distortion function** `R(D) = 1 − H_b(D)` for a Bernoulli(½)
+source under Hamming distortion. It is Shannon's result. It gives the *information-theoretic lower
+bound* on achievable error at a given rate — no actor can do better.
+
+**What DDD adds:** the identification of *actor resolve capacity* with a channel rate, and therefore
+of *overflow escape* with forced rate-distortion. Also the observation that the hard-capacity model
+(chance error on shed decisions) is the `r → 0` limit of the same bound — the two regimes are one
+model.
+
+**What DDD must not claim:** that it derived a bound on error under capacity limits. It applied one.
+
+### 1.10 Cover & Thomas — the standard treatment
+
+**"Elements of Information Theory" (1991, 2nd ed. 2006).**
+
+The canonical reference for the chain rule, conditional entropy, mutual information, and
+rate-distortion as used throughout `core/08` and `core/09`. Any formal write-up should cite this for
+the machinery rather than re-deriving it, and any reviewer will expect it.
+
+### 1.11 Hallucination taxonomies — prior art for `core/09` §6
+
+`core/09` decomposes hallucination into three causes (missing / poisoned / overflowed ground). The
+existing literature already partitions hallucination, and must be credited:
+
+- **Ji et al. (2023), "Survey of Hallucination in Natural Language Generation," *ACM Computing
+  Surveys*** — the intrinsic/extrinsic and faithfulness/factuality distinctions.
+- **Huang et al. (2023), "A Survey on Hallucination in Large Language Models"** — the extended
+  taxonomy.
+- **Xu, Jain & Kankanhalli (2024), "Hallucination is Inevitable"** and **Kalai & Vempala** — the
+  non-zero lower bound on model error, already cited in `core/03`, and the reason `core/09`'s escape
+  cannot be driven to zero by capacity alone.
+
+**What DDD adds — and the honest limit of the claim.** The three-cause decomposition is *causal and
+derived from the store model* (a decision is made without correct ground iff the ground is absent,
+false, or unresolved), and it attaches a **different remedy to each cause** — add / re-verify /
+encode. That actionable split is the contribution. It is **not** a claim to have discovered that
+hallucinations have kinds; the surveys above already established that. Where DDD's categories overlap
+theirs, cite theirs.
+
+*Note also the standing correction from v4.0: the earlier "escape-hallucination vs.
+wind-hallucination" split was a relabelling of the existing taxonomy and was retreated. The
+three-cause version supersedes it and is defensible **because** it is derived rather than observed —
+but it still cites the surveys.*
+
+### Additional context worth acknowledging
+
+Two adjacent literatures that a reviewer will raise, and which the framework should acknowledge
+rather than be caught by:
+
+- **Minimum description length / Kolmogorov complexity** (Solomonoff, Kolmogorov, Rissanen) — an
+  alternative formalisation of "how much specification does this task require." `core/08` uses
+  Shannon entropy over a ground distribution instead, which is *weaker but computable*. Worth a
+  sentence in any paper explaining the choice: MDL would give a distribution-free measure but is
+  uncomputable; entropy is distribution-relative but calculable, which is what let us actually
+  compute the worked examples.
+- **Bounded rationality** (Simon, 1955) and **rational inattention** (Sims, 2003) — the economics
+  literature on agents with limited information-processing capacity, where Sims in particular models
+  attention as a Shannon channel with finite capacity. This is close prior art for `core/09`'s
+  capacity model and should be cited: **the move of treating a decision-maker's capacity as an
+  information channel is Sims's, not ours.** DDD's addition is the *verifier* condition — that
+  capacity overflow only produces escape where no check catches the shed decision.
+
+### The register sentence, for every future write-up
+
+> **`core/08` and `core/09` are applied information theory. Shannon supplied the entropy, the chain
+> rule, and the rate-distortion bound; Sims supplied the channel model of a capacity-limited
+> decision-maker. What this framework contributes is the identification of specification demand with
+> verdict entropy, of seam demand with mutual information, and of escape with the intersection of
+> rate-distortion-forced error and absent verification — together with the demonstration that those
+> identifications hold without leftover on worked examples. The mathematics is not ours. The mapping
+> is, and the mapping is what is falsifiable.**
+
 ---
 
 ## 2. Corrections — where the framework was wrong
@@ -307,6 +424,13 @@ the cross-domain unification, universal "act is a decision" as anything more tha
 | Immune degeneracy | **Edelman & Gally**, *PNAS* 2001; **Tononi/Sporns/Edelman** 1999 | replaces diversity/redundancy |
 | Immune tolerance is leaky | **Klein/Kyewski/Allen/Hogquist**, *Nat Rev Immunol* 2014 | corrects the "mechanical check" cell |
 | Hallucination taxonomy | **Ji et al.**; **Huang et al.** | our terms are a gloss on theirs |
+| Demand = verdict entropy; the unit (bits) | **Shannon 1948** | the measure is his; the identification is ours |
+| Conservation = chain rule; seam = mutual information | **Shannon 1948**; **Cover & Thomas** | *the theorem is Shannon's* — say so first |
+| `p_err` under resolve-overflow | **Shannon 1959** (rate-distortion) | we applied a bound, did not derive one |
+| Capacity as an information channel | **Sims 2003** (rational inattention); **Simon 1955** | the channel model of a decision-maker is Sims's |
+| Hallucination has kinds | **Ji et al. 2023**; **Huang et al. 2023** | our contribution is the *causal* split + distinct remedies |
+| Error cannot be driven to zero | **Xu et al. 2024**; **Kalai & Vempala** | already cited in `core/03`; also bounds `core/09` |
+| Alternative demand formalisation | **Kolmogorov / MDL** | acknowledge the road not taken, and why |
 
 ---
 

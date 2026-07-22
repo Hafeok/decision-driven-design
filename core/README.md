@@ -15,5 +15,6 @@ Read in order:
 - **06 — determination and intelligence** · determination ≠ intelligence; the LLM debate is structurally undecidable
 - **07 — projections** · the funnel & maturation as judgment-demand projections; the count/cost correction
 - **08 — the measure** · demand = Shannon entropy of the verdict; conservation = the chain rule; the counting debt paid for closing predicates
+- **09 — the floor mechanism** · escape = overflow ∩ open; p_err derived from rate-distortion; hallucination as surfaced escape
 
-The load-bearing, falsifiable claims are in **03**, **04**, and **08**. The honesty about register is in **01**.
+The load-bearing, falsifiable claims are in **03**, **04**, **08**, and **09**. The honesty about register is in **01**.
