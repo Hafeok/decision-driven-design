@@ -201,6 +201,36 @@ wind-hallucination" split was a relabelling of the existing taxonomy and was ret
 three-cause version supersedes it and is defensible **because** it is derived rather than observed —
 but it still cites the surveys.*
 
+### 1.12 Martin — the Stable Dependencies Principle (1990s; Agile Software Development, 2002)
+
+"Depend in the direction of stability." A package should depend only on packages more stable
+than itself; instability I = Ce/(Ca+Ce).
+
+apparatus/prefix-stability.md applies this to cached prefixes, which are totally-ordered
+dependency chains by mechanism (causal attention).
+
+What DDD adds: (a) a substitute instability metric that fits a prefix, since Martin's
+afferent/efferent coupling ratio does not transfer — instability = expected RE-DERIVATION RATE;
+(b) the observation that the cache makes SDP violations MEASURABLE rather than a design smell,
+with an immediate cost equal to the length of everything after the mislocated content; and
+(c) the diagnostic that an SDP violation in a prefix is simultaneously a cache defect and a
+SPECIFICATION defect.
+
+What DDD must not claim: the ordering principle. That is Martin's.
+
+### 1.13 Smith — the weighted shortest processing time rule (1956)
+
+W. E. Smith, "Various optimizers for single-stage production," Naval Research Logistics
+Quarterly 3.
+
+The optimal prefix ordering in apparatus/prefix-stability.md §3 is Smith's rule: sort by
+ascending (weight / processing time) — here, ascending (re-derivation rate / length).
+
+NOTE A CORRECTION: an earlier formulation of this result claimed ascending RE-DERIVATION RATE
+was optimal. That is false, and brute-force search falsifies it whenever a volatile segment is
+long. The correct rule is the per-token normalisation, which is Smith's, established in 1956.
+The framework applied a known scheduling result; it did not derive a new one.
+
 ### Additional context worth acknowledging
 
 Two adjacent literatures that a reviewer will raise, and which the framework should acknowledge
@@ -431,6 +461,8 @@ the cross-domain unification, universal "act is a decision" as anything more tha
 | Hallucination has kinds | **Ji et al. 2023**; **Huang et al. 2023** | our contribution is the *causal* split + distinct remedies |
 | Error cannot be driven to zero | **Xu et al. 2024**; **Kalai & Vempala** | already cited in `core/03`; also bounds `core/09` |
 | Alternative demand formalisation | **Kolmogorov / MDL** | acknowledge the road not taken, and why |
+| Prefix ordering by stability | Martin (SDP) | the ordering principle is his |
+| The optimal ordering is rate/length | Smith 1956 (WSPT) | a known scheduling result, applied |
 
 ---
 

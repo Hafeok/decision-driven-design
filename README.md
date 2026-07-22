@@ -89,6 +89,7 @@ Operational results that fall out of the core. Read as needed.
 | [`apparatus/closure-principle.md`](apparatus/closure-principle.md) | *An actor's own output is not ground* — poisoned ground, and why Terraform can delete your database |
 | [`apparatus/adversarial-ground.md`](apparatus/adversarial-ground.md) | The attack surface of an actor is its ground, not its logic — across three fields |
 | [`apparatus/the-skill-floor.md`](apparatus/the-skill-floor.md) | A skill without a per-invocation verifier is floor-exposed by construction |
+| [`apparatus/prefix-stability.md`](apparatus/prefix-stability.md) | A prefix is a dependency chain: Martin's SDP, the optimal ordering, and cache invalidation as a specification audit |
 
 ### Applications — the projections
 

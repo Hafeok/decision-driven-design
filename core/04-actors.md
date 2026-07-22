@@ -103,46 +103,258 @@ cheap when adequacy is checkable.**
 
 The sharpest consequence of §2, and a prediction none of the classical results can make.
 
-> ## **Training is what you do when the acceptance predicate closes.**
-> ## **Selection is what you do when it does not.**
+Selection and training are two ways to **acquire an actor whose capability envelope covers the
+residual**. Both cost something. So the allocation between them is not a switch — it is a budget,
+struck against a constraint.
 
-**Why.** Training requires a *reliable error signal* — you must be able to tell, and tell soon,
-whether the actor's output was right. That is the mechanical-verification store applied to the
-**actor's development**. If the predicate closes, the check is available, the loop runs, and **you
-can manufacture the actor.**
+> ## **Closure decides whether training is *available*. Cost decides the *ratio* when it is.**
+
+### Why closure is a hard constraint, not a price
+
+Training requires a **reliable error signal** — you must be able to tell, and tell soon, whether the
+actor's output was right. That is the mechanical-verification store, applied to the *actor's
+development* rather than to the act.
+
+If the predicate closes, the check exists, the loop runs, and **you can manufacture the actor.**
 
 If the predicate does *not* close, the mechanical store is **structurally unavailable** for actor
-development. There is no reliable feedback to train against. So the verification demand — which is
-conserved, and does not vanish — **relocates from the act to the actor.**
+development. There is no reliable feedback to train against. This is **not a high price — it is no
+price at any price.** You cannot buy what is not for sale. So the verification demand, which is
+conserved and does not vanish, **relocates from the act onto the actor.**
 
 > **You cannot check the work, so you check the worker.**
 >
 > **Selection is verification relocated from the act onto the actor's identity.**
 
-This is why selection is brutal and high-attrition: you are measuring a property you **cannot
+Which is why selection is brutal and high-attrition: you are measuring a property you **cannot
 manufacture.**
 
-### 3.1 The honest version — it is a gradient, not a dichotomy
+### Why cost decides the rest
 
-The tempting statement — *"surgeons are trained, elite soldiers are selected"* — **is false as
-stated, and must not be used.** Surgeons are heavily selected (admissions, the match, residency
-attrition). Soldiers are heavily trained, for years, after selection.
+Where the predicate *does* close, training is available — but availability is not free. Training has a
+price: roughly **time-to-competence × cost-per-unit-time × washout rate.** Selection also has a price.
+An organisation allocates between them by relative cost, exactly as the conservation logic would
+predict for any fixed demand with two supply routes.
 
-> **Both are selected and trained. What differs is the *ratio*, and the ratio tracks predicate
-> closure.**
+So you select for whatever you have decided **not to pay to train** — whether because you *can't*
+(open predicate: training unavailable) or because you *won't* (closing predicate: training too
+expensive). Both produce selection; only the first is forced.
+
+> **selection intensity ≈ f(closure) × g(training cost)**
 >
-> **Selection intensity is inversely proportional to acceptance-predicate closure.**
+> Low closure **forces** selection regardless of cost. High closure lets **cost** decide the ratio.
 
-| Profession | Predicate closure | Ratio |
+---
+
+## 3.1 The gradient, and what the two factors explain
+
+The tempting statement — *"surgeons are trained, elite soldiers are selected"* — **is false as stated
+and must not be used.** Surgeons are heavily selected (admissions, the match, residency attrition).
+Soldiers are heavily trained, for years, after selection. **Both are both.** What differs is the
+ratio.
+
+| Profession | Predicate closure | Training cost | Selection intensity | Why |
+|---|---|---|---|---|
+| **Accountant** | high — objective, checkable, soon | moderate | **low** | training available *and* cheap; little reason to select hard |
+| **Airline pilot** | high — sim checks, recurrent evaluation, immediate objective failure | **high** | **moderate–high** | training available but expensive → select to avoid wasting it |
+| **Cardiac surgeon** | mostly closes — graft patency, survival, M&M review | **very high** — a decade, enormous supervision cost | **high** | *this is the anomaly the closure-only version could not explain*: closure is high, yet selection is brutal — because training cost is enormous |
+| **Intelligence analyst** | poor — "was that the right call" may never be checkable | n/a — unavailable | **high** | selection **forced** by openness |
+| **Special operations** | poor **and adversarial** — the standard moves because an opponent moves it | n/a — unavailable | **extreme** | forced, and the envelope must cover an adversarial residual |
+
+**The two factors are visibly separable.** Compare **surgeon** and **accountant**: closure is
+comparable, selection intensity is wildly different — and training cost is the difference. Compare
+**surgeon** and **intelligence analyst**: selection intensity is comparable, but for entirely
+different reasons — one *won't* pay, the other *can't* buy. A single-factor model cannot distinguish
+those cases; this one does.
+
+### The falsifiable form
+
+This is the framework's most testable claim, and the two-factor version sharpens it:
+
+> **Two professions with comparable predicate closure should differ in selection intensity in
+> proportion to their training costs.**
+
+That is checkable against existing professional data, with both factors independently measurable:
+
+- **Closure** — time-to-feedback, objectivity of the standard, stationarity of the standard.
+- **Training cost** — time-to-competence × cost-per-unit-time × washout rate.
+
+**Guard against unfalsifiability.** "Cost" must be operationalised by that proxy and fixed in
+advance. Otherwise any observed ratio can be explained post hoc by positing an unmeasured cost —
+which is exactly the failure mode the conservation claim was corrected for in v4.0. **Pre-register the
+cost proxy, or the claim is not a claim.**
+
+---
+
+## 3.1a Worked example: military selection, and why it needs two factors
+
+Special-operations selection is the case most often cited for the closure-only claim, and it is
+precisely the case that **requires both factors.** It is also where this framework is most at risk of
+mythologising, so the discipline below is deliberate.
+
+### Two clusters in one course
+
+A selection course filters for two different things, and the model says they are different in kind:
+
+- **Filters for the untrainable** — capabilities whose acceptance predicate does not close.
+  *Calm and decision quality under lethal, ambiguous, adversarial stress* is the clean case: you
+  cannot generate the training signal without generating the stress, the proxy is never the real
+  thing, and the standard is **non-stationary because an opponent is moving it.** Training is
+  unavailable, not merely costly. `f(closure) → 0`; selection is **forced.**
+- **Filters for trainability itself** — predicting who will survive the pipeline *behind* the course.
+  The training that follows is fantastically expensive (years, live ordnance, scarce instructors,
+  irreplaceable slots), so you filter hard to avoid spending it on someone who washes out in year
+  two. This is `g(training cost)`, and it is **economics, not impossibility.**
+
+**Both mechanisms produce brutal attrition. Only the first is forced.** A closure-only model cannot
+distinguish them; the two-factor model can, and must.
+
+### What is *not* an example: teamwork
+
+Teamwork is frequently listed as a selected-for, untrainable quality. **It is not**, and including it
+would be a category error the framework should refuse.
+
+Teamwork is **heavily trained** — arguably the majority of what these units do after selection: drills,
+immediate-action procedures, SOPs, thousands of repetitions until unit response is automatic. And its
+predicate **closes reasonably well**: was the room cleared, did the team move as one, was the sector
+covered — checkable, checkable soon, against a standard that mostly holds still. It is close to the
+*paradigm* of a trainable capability, which is precisely why the pipeline behind selection is so long
+and so expensive.
+
+What may be selected for is something narrower — a *disposition* to subordinate self to the team under
+stress. The capability itself is manufactured. **Listing trained capabilities as untrainable is how
+this analysis degrades into mythology; apply the admission tests and let them fail things.**
+
+### The tiered structure: the funnel, applied to actors
+
+Higher tiers (e.g. Delta, DEVGRU) select from candidates who have **already completed** a lower
+pipeline. This has a structural consequence the framework predicts:
+
+> **By tier N+1, the trainable capabilities have already been trained. The candidate pool is
+> pre-filtered on exactly what training can manufacture — so the residual left to select on is
+> disproportionately the predicate-open part.**
+
+This is the **funnel** (`core/07`) applied to actor acquisition rather than decisions: each tier pays
+down the trainable demand once, and the tier above inherits a population where that demand is
+resolved, concentrating its selection budget on a residual that is smaller and more valuable. Same
+structure, same asymptote — the floor.
+
+**The prediction:**
+
+> **Ascending the tiers, selection criteria should shift in *kind* — from trainability proxies
+> (endurance, will-to-continue, pipeline survival) toward predicate-open capabilities (judgment under
+> ambiguity, decision quality with incomplete information, extended unsupervised problem-solving).**
+
+### What this prediction must beat
+
+**The discriminating test matters, because there is a simpler rival explanation.** Tiered selection
+might recruit from prior graduates purely for **scarcity and evaluation economics** — the pool is
+pre-vetted and cheap to assess — with no implication about predicate closure at all. That rival uses
+the same cost mechanism and is arguably simpler.
+
+So the tier-shift claim discriminates **only if the criteria change in kind, not merely in standard.**
+Higher tiers being *harder* is consistent with both explanations and therefore evidence for neither.
+Higher tiers testing *different things* — ambiguity and judgment where lower tiers tested endurance and
+persistence — is what the two-factor model uniquely predicts.
+
+*Status: **projected.** This is what the model implies, testable against public accounts of selection
+criteria. It is not offered as established fact; published descriptions of these programmes are partial
+and frequently romanticised, and the framework should be the first to say so.*
+
+---
+
+## 3.1b Worked example: LLM training
+
+The military case is illustrative but its evidence is thin. **This one has published data**, and it
+tests whether the two-factor model is general or merely a story about humans. Both arms operate, and
+one of them produces a live, falsifiable claim about a problem the field currently cares about.
+
+### Closure gates availability — the same constraint, in silicon
+
+Training an LLM requires an error signal, exactly as human training does. So closure decides what is
+trainable:
+
+| Regime | Predicate | Consequence |
 |---|---|---|
-| Airline pilot | high — sim checks, recurrent evaluation, immediate objective failure | heavy training, moderate selection |
-| Cardiac surgeon | mostly closes — graft patency, survival, M&M review; checkable, and checkable *soon* | heavy training, real but slower selection |
-| Intelligence analyst | poor — "was that the right call" may never be checkable | heavy selection, notoriously weak training |
-| Special operations | poor **and adversarial** — the standard moves because an opponent is moving it | extreme selection |
+| **Pretraining / SFT** | **Closes totally.** The next token is *in the corpus*. Loss is exact, immediate, stationary. | Training is maximally available → **scale data and compute**; do not select. |
+| **RLHF / RLAIF** | **Does not close.** "Is this response good?" has no ground truth; the standard varies by rater and drifts. | Training is unavailable *directly* — so the field **manufactures a closing predicate** (below). |
+| **RLVR (verifiable rewards)** | **Closes.** Did the proof check, did the tests pass, did it compile. | RL works markedly better here — **closure selecting which domains are trainable.** |
 
-**This is the falsifiable form of the claim**, and it is testable across professions: measure
-predicate closure independently (time-to-feedback, objectivity of the standard, stationarity of the
-standard) and predict the selection/training ratio.
+The migration of RL effort toward math and code is the field discovering empirically what closure
+predicts structurally: **you can only train where you can check.** That shift is not a matter of
+convenience; it is the closure condition choosing the domains.
+
+### The reward model is a manufactured closing predicate
+
+This is the sharpest instance in the whole framework, because it shows what happens when the
+constraint is **refused rather than obeyed**.
+
+You cannot train against an open predicate — no signal. So RLHF does not train against the open
+predicate. It **builds a reward model**: an artificial, computable stand-in that *closes*, and trains
+against that instead.
+
+> **A reward model is a manufactured closing predicate, constructed because training against the open
+> one is impossible.**
+
+And the consequence follows immediately, without needing to be observed first:
+
+> **Reward hacking is the gap between the manufactured closure and the open predicate it proxies.**
+> The model optimises the predicate it was actually given. That is not a defect in the model; it is
+> the *definition* of what it was asked to do.
+
+**Which makes this a prediction, not a redescription:** specification gaming is **unavoidable**
+wherever an open predicate is proxied by a manufactured closed one — not a bug to be engineered away
+by better reward modelling. Better reward models shrink the gap; they cannot close it, because closing
+it would mean the original predicate was not open after all. The framework says where the residual
+must live, and it is the same place the floor lives (`core/03`, `core/09`).
+
+### Cost decides the ratio — selection substituting for training
+
+Where the predicate *does* close, the field allocates between training and selection by **cost**,
+exactly as the model predicts:
+
+- **Best-of-N / rejection sampling** — generate N candidates and *select*, rather than training the
+  model to produce the answer directly. Chosen because inference-time selection is **cheaper than
+  another training run**, not because training is impossible. Textbook `g(training cost)`.
+- **Checkpoint selection** — train many, evaluate, keep the best. Training is fully available; you are
+  simply cheaper at picking than at guaranteeing.
+- **Model routing / mixture-of-experts** — select which actor handles a query, rather than training one
+  actor to handle everything.
+
+And the **tiered structure** has a direct analogue: **distillation.** A large model is trained
+(expensive), then a smaller one inherits its capability and concentrates its budget on the residual.
+That is the funnel applied to actors again — pay once at the expensive tier, inherit below.
+
+### The distinction that must not be blurred: actors vs. acts
+
+**This is where the analogy would overreach, and it must be kept clean.**
+
+- **Checkpoint selection, routing, and distillation select *actors*** — they filter or produce a
+  determiner with a particular capability envelope. This is genuinely the same mechanism as human
+  selection.
+- **Best-of-N and rejection sampling select *acts*** — they filter *outputs* from a single, unchanged
+  actor. The actor's envelope is untouched.
+
+Both are selection-substituting-for-training in the cost sense, and both are legitimate instances of
+`g(training cost)`. But only the first is selection in the sense §3 defines — *verification relocated
+onto the actor's identity.* Act-selection is verification relocated onto **the output**, which is
+simply the mechanical store doing its job.
+
+**Collapsing the two would reduce the claim to "people use argmax."** Keep them separate: act-selection
+is a mechanical check; actor-selection is the capability filter.
+
+### Why this example carries more weight than the military one
+
+Its evidence is **published and quantitative** rather than partial and romanticised. The closure
+mapping is checkable against training regimes; the cost arm is visible in deployed architecture
+choices; and the reward-hacking claim is falsifiable *now*:
+
+> **Falsification.** Exhibit a reward model that provably closes over the open predicate it proxies —
+> i.e. a manufactured closure with no residual gap — and the claim fails. The framework predicts none
+> exists, for the same reason `core/03` predicts a non-zero floor: whether the proxy closes over the
+> target is itself generally undecidable.
+
+---
 
 ### 3.2 What this predicts about models
 

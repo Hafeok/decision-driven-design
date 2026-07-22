@@ -1,5 +1,42 @@
 # Changelog
 
+## 4.3 — Prefix stability (the operational layer)
+
+### Added
+- apparatus/prefix-stability.md — a cached prefix is a dependency chain, so Martin's Stable
+  Dependencies Principle governs it. Instability = expected re-derivation rate. The optimal
+  ordering is Smith's rule (ascending rate/length), derived and brute-force verified.
+- apparatus/assets/prefix-stability-check.py — verification, including the falsification of
+  the naive ordering rule.
+
+### Results
+- THE CACHE IS A DETECTOR. An SDP violation in a prefix is simultaneously a cache defect and a
+  specification defect: stable content depending on volatile content means a decision was
+  encoded whose ground still moves. Invalidation telemetry is therefore automated detection of
+  mislocated encoding. (Caveat: fires on the prefix only; a volatile suffix is the suffix
+  working correctly.)
+- COST AND QUALITY DO NOT TRADE OFF. The stable prefix IS the encoded store (core/08), and the
+  lever on escape is the encode fraction (core/09). Maximising cache hit rate and minimising
+  escape are therefore the same optimisation.
+
+### Corrected
+- SELECTION VS TRAINING IS TWO-FACTOR, not closure alone (core/04 §3). Closure decides whether
+  training is AVAILABLE; cost decides the RATIO when it is. Openness makes training's cost
+  infinite (no error signal), so selection is forced; where the predicate closes you select for
+  what you decided not to PAY to train. Explains the shipped table's anomaly (surgeons: high
+  closure AND brutal selection, because training cost is enormous). Sharper falsifiable form:
+  two professions with comparable closure should differ in selection intensity in proportion to
+  training cost. Cost proxy must be PRE-REGISTERED (time-to-competence x cost-per-unit-time x
+  washout rate) or the claim is unfalsifiable.
+- "Order by ascending re-derivation rate" was WRONG and is retracted. It fails whenever a
+  volatile segment is long (brute force: waste 551 vs optimum 151). The correct rule is Smith's:
+  ascending rate PER TOKEN. The shipped INV-6 ordering (ground -> decisions -> task) remains
+  correct because in a typical prefix the two rules agree; any tool that AUTOMATES ordering must
+  use the per-token form.
+
+### Attribution
+- Martin (Stable Dependencies Principle) and Smith 1956 (WSPT) added to meta/lineage-and-limits.md.
+
 ## 4.2 — The floor mechanism
 
 ### Added
