@@ -1,139 +1,174 @@
-# v4.2 Patch Application Report
+# v4.3 Patch Application Report
 
-Applied per `PATCH.md` in the v4.2 patch package. All new files were copied verbatim
-(byte-identical to the package, verified with `diff`). No prose, numbers, tables, or equations in
-`core/09-the-floor-mechanism.md` or `apparatus/the-skill-floor.md` were altered. This file
-replaces the v4.1 report, which remains available in git history.
+Applied per `PATCH.md` in the v4.3 patch package. All new files were copied verbatim
+(byte-identical to the package, verified with `diff`). No prose, numbers, tables, or equations
+were altered anywhere. This file replaces the v4.2 report, which remains available in git
+history.
 
 ## 1. Prerequisite check
 
-`core/08-the-measure.md` **existed** before any patch action was taken (v4.1 is applied), so
-`core/09`'s cross-references to it resolve. Proceeded.
+Both prerequisites **existed** before any patch action was taken:
 
-## 2. Script verification — both ran; boundary values exact
+- `core/08-the-measure.md` — present (v4.1 applied) ✔
+- `core/09-the-floor-mechanism.md` — present (v4.2 applied) ✔
 
-- `python3 core/assets/floor-mechanism.py` — ran clean (exit 0). Hard-capacity table shows
-  escape 0.000 only at C=40 with escape and retries rising together as C falls, and the
-  **all-verified (`n_B=0`) case shows escape = 0 at every capacity, including C=0**
-  (`check: all-verified at C=0 -> escape=0.000`) — overflow alone is retries, not floor. ✔
-- `python3 core/assets/perr-rate-distortion.py` — ran clean (exit 0). Derived bound prints
-  **p_err = 0.0000 at r = 1.000** and **p_err = 0.5000 at r = 0.000**, exactly the required
-  boundary values; both structural re-runs print STRUCTURE SURVIVES. ✔
-- The tables in `core/09` §3, §4.1, and §4.2 match the script outputs figure-for-figure
-  (e.g. 2.49/2.51 at C=30; p_err 0.0130 at r=0.90; escape 6.96 → 2.70 → 0.00 on the
-  fixed-budget encode shift).
+`apparatus/prefix-stability.md` §6 depends on both; its cross-references resolve. Proceeded.
 
-## 3. Attribution merge — merged AND deleted
+## 2. New files — dropped in byte-identical
 
-- **Merged.** The full contents of `meta/lineage-addendum-v41-v42.md` are now in
-  `meta/lineage-and-limits.md`: the addendum preamble and governing sentence, sections
-  **§1.8** (Shannon, information theory), **§1.9** (Shannon, rate-distortion), **§1.10**
-  (Cover & Thomas), **§1.11** (hallucination taxonomies), the "Additional context worth
-  acknowledging" block (Kolmogorov/MDL; Simon/Sims), and "The register sentence, for every
-  future write-up" — inserted between §1.7 and §2, with heading levels matched to the file's
-  existing `### 1.x` style. The **§6 citation table** was extended with all seven addendum rows
-  (Shannon 1948 ×2, Shannon 1959, Sims 2003/Simon 1955, Ji/Huang 2023, Xu et al./Kalai &
-  Vempala, Kolmogorov/MDL).
-- **Governing sentence survives verbatim:** "The mathematics is Shannon's. The claim is the
-  *identification* — that specification demand *is* verdict entropy, seam demand *is* mutual
-  information, and resolve-overflow error *is* the rate-distortion bound. …" — present once, in
-  the §1.8 preamble blockquote.
-- **Deleted.** `meta/lineage-addendum-v41-v42.md` was removed after the merge. The attribution
-  now lives in exactly one place.
-- One adaptation, disclosed: the addendum's delivery-vehicle framing (its title and its
-  "**Location:** append to…" line) was dropped, and its lead-in label "**Why this exists.**" —
-  which referred to the addendum file itself — became "**Why §1.8–§1.11 exist.**" so the merged
-  text has an antecedent. Every sentence after the label is verbatim.
+- `apparatus/prefix-stability.md` — copied verbatim from the package; `diff` confirms
+  byte-identical. Not one word of its prose was edited.
+- `apparatus/assets/prefix-stability-check.py` — copied verbatim; byte-identical.
+  `apparatus/assets/` did not exist and was created.
 
-## 4. Ledger edits to `meta/consolidated-state.md` — all three landed
+## 3. The core/04 §3 replacement — a precise account
 
-All three sub-edits are present in §5, verified in the final file:
+The package's `core/04-section-3-patch.md` was used as the delivery vehicle, exactly as
+PATCH.md Edits §0 directs. The splice was done by line range programmatically, with anchor
+assertions on both files, and the replaced region was verified byte-identical to the vehicle's
+corresponding lines afterward.
 
-**(a) CLOSED — the p_err item** (note: the pre-patch ledger carried no literal "soft error
-curve is assumed" line — PATCH.md's wording anticipates this with "If the open-items list
-carries…" — so the closure entry was added to the open-items list as the record of closure):
+**Replaced:**
 
-> - The soft error model p_err. **CLOSED (v4.2).** Derived from binary rate-distortion:
->   p_err = H_b^-1(1 - C/n), the information-theoretic lower bound on per-decision error at
->   available rate r = C/n. Limits are exact (r>=1 -> 0; r->0 -> 0.5, recovering the hard-case
->   coin flip). Substituting it for the earlier assumed logistic changes the numbers and no
->   structural claim. See core/09 §4.1.
+- The entire former `## 3. Selection and training` (the closure-only version, including the
+  "Training is what you do when the acceptance predicate closes / Selection is what you do when
+  it does not" headline) — replaced by the two-factor §3 ("Closure decides whether training is
+  *available*. Cost decides the *ratio* when it is."), with its two sub-arguments (closure as a
+  hard constraint, not a price; cost decides the rest) and the
+  `selection intensity ≈ f(closure) × g(training cost)` formulation.
+- The entire former `### 3.1 The honest version — it is a gradient, not a dichotomy` (four-row
+  profession table, single-factor falsifiable form) — replaced by
+  `## 3.1 The gradient, and what the two factors explain` (five-row table including the
+  accountant row and the cardiac-surgeon anomaly, the two-factor separability argument, the
+  sharpened falsifiable form, and the **pre-registration guard** — see §6 below).
 
-**(b) RECLASSIFIED — restated, not deleted.** The entry asking for demand measurement on open
-predicates (the open-predicate residual of §5's former item 1, the counting-procedure debt) was
-**replaced** with the stated-boundary entry, reasoning intact:
+**Inserted (new, after §3.1 and before §3.2):**
 
-> - Measuring demand on OPEN predicates. **NOT A DEBT — A STATED BOUNDARY.** core/08 measures
->   demand as verdict entropy, which requires a verdict function; an open predicate is precisely
->   one that lacks it. Asking to measure demand there is asking for entropy without a random
->   variable. Measurement and closure have the same domain (core/08 §7). This is the framework's
->   limit, correctly drawn, and it coincides exactly with the floor. It should not appear on the
->   ledger as unpaid work.
+- `## 3.1a Worked example: military selection, and why it needs two factors` — the two clusters
+  (untrainable vs. trainability-filter), the explicit **exclusion of teamwork** as a category
+  error, the tiered structure as the funnel applied to actor acquisition, the **scarcity /
+  evaluation-economics rival explanation** and its discriminating test (criteria must change in
+  kind, not merely in standard), marked *projected*.
+- `## 3.1b Worked example: LLM training` — closure gating availability (pretraining/SFT closes;
+  RLHF does not → the reward model as a **manufactured closing predicate**, reward hacking as
+  the gap; RLVR closes), cost deciding the ratio (best-of-N, checkpoint selection, routing,
+  distillation), the **actor-selection vs. act-selection** distinction, and the falsification
+  condition.
 
-The remaining numbered debts (operationalise closure; selection/training ratio) were renumbered
-1–2; the closing-predicate discharge remains recorded inside the replacement text ("core/08
-measures demand as verdict entropy") and in CHANGELOG 4.1.
+**Left completely untouched:**
 
-**(c) ADDED — the new open item:**
+- `### 3.2 What this predicts about models` — verified unchanged by git diff; not a character
+  of it was modified.
+- Everything else in `core/04-actors.md`: §1, §2, §4, §5, §6, §7 — all unchanged.
 
-> - Calibrating C_resolve and C_hold for a real actor. EMPIRICAL, not a proof: construct tasks of
->   known bit-demand, find where error rate departs from zero; that value is C_resolve for that
->   actor. Nobody has published such a measurement. Needs a rig, not more theory. This is now the
->   framework's principal open empirical item, alongside the selection/training study.
+**Not carried over from the vehicle:** its front matter (title, "Applies to", "Why" preamble)
+and its trailing "## What this does not change" section — both are vehicle commentary, not
+replacement text.
 
-## 5. Dead-link check — no dead links
+**Deleted:** `core/04-section-3-patch.md` was applied and never committed to the repository —
+it existed only in the extracted patch package, so the repo never contained it. The
+"apply it and delete it" instruction is satisfied: no delivery vehicle ships with v4.3.
 
-Neither new doc uses `[…](…)` markdown links; all internal references are backtick path/section
-references. Every referenced target was checked and exists:
+**One mechanical joint, disclosed:** a `---` horizontal rule was placed between the end of
+§3.1b and the untouched `### 3.2`, matching the separator convention the copied sections use
+between themselves (§3 | §3.1 | §3.1a | §3.1b). No text of §3.2 was touched.
 
-- `core/09-the-floor-mechanism.md` references: `core/03`, `core/05`, `core/06`, `core/08`
-  (including `core/08` §7, which exists: "Where the measure stops"), `core/01` (via skill-floor),
-  `apparatus/closure-principle.md`, `apparatus/the-skill-floor.md`, `assets/floor-mechanism.py`,
-  `assets/perr-rate-distortion.py` (both relative to `core/`) — all resolve.
-- `apparatus/the-skill-floor.md` references: `core/01`, `core/03`, `core/05`,
-  `apparatus/encode-verify.md`, `apparatus/closure-principle.md`, `applications/sdlc` — all
-  resolve.
-- The new README rows link to `core/09-the-floor-mechanism.md` and `apparatus/the-skill-floor.md`
-  — both resolve.
+## 4. Wiring edits
 
-**Dead links found: none.** One non-link mention: `apparatus/the-skill-floor.md` cites
-"`ground-prd`", which is not a file in this repository — a pre-existing pattern
-(`meta/consolidated-state.md` §5 already references `ground-prd.md`); backtick mention, not a
-markdown link, left as shipped.
+- `README.md` — the `apparatus/prefix-stability.md` row appended to the Apparatus table,
+  PATCH.md's exact text.
+- `apparatus/README.md` — the **prefix-stability** index line appended, PATCH.md's exact text.
 
-## 6. Flagged but not changed
+## 5. Attribution — both sections and both citation rows landed
 
-- **`meta/consolidated-state.md` §5, the judgment/escape-split bullet** still ends "Not yet done —
-  the natural next result." `core/09` §7 now closes exactly that seam, so the bullet is arguably
-  stale — but PATCH.md §4 specifies only sub-edits (a), (b), (c) and does not touch this bullet,
-  so it was left as-is.
-- **`core/09` §4 heading uses "law"** ("The soft-capacity law"). This is the shipped document's
-  own text, sanctioned by PATCH.md ("the soft law with `p_err` derived from rate-distortion"),
-  copied verbatim per the hard constraint. None of the wiring or ledger text added by this patch
-  uses "law" for the framework's claim; the CHANGELOG "law" hits are the historical 4.0/4.1
-  entries.
-- **`apparatus/README.md`** closing line still reads "All three are instances of one discipline…"
-  though the index now lists four documents. PATCH.md specifies only the added index line; left
-  as-is.
-- **`README.md` "Status" / "What this is, and is not"** carry-overs flagged in the v4.1 report
-  (the "no measurable unit" sentence; the counting-procedure debt as "most important") remain, and
-  are not in PATCH.md's v4.2 edit list; left as-is.
+- `meta/lineage-and-limits.md` gained **§1.12 Martin — the Stable Dependencies Principle** and
+  **§1.13 Smith — the weighted shortest processing time rule (1956)**, inserted directly after
+  §1.11 (before "Additional context worth acknowledging"), following the §1.8–1.11 pattern.
+  PATCH.md's exact text, verbatim.
+- **The §1.13 correction survives verbatim**: "NOTE A CORRECTION: an earlier formulation of
+  this result claimed ascending RE-DERIVATION RATE was optimal. That is false… The framework
+  applied a known scheduling result; it did not derive a new one." — present, untouched.
+- The §6 citation table gained both rows: *Prefix ordering by stability* → Martin (SDP), and
+  *The optimal ordering is rate/length* → Smith 1956 (WSPT).
+
+## 6. Load-bearing caveats — all verified present, none softened
+
+- **Pre-registration guard** (core/04 §3.1): "Pre-register the cost proxy, or the claim is not
+  a claim." — present, with the proxy fixed as time-to-competence × cost-per-unit-time ×
+  washout rate.
+- **Teamwork exclusion** (core/04 §3.1a): "a category error the framework should refuse" —
+  present in full, including "Listing trained capabilities as untrainable is how this analysis
+  degrades into mythology."
+- **Scarcity rival** (core/04 §3.1a): the "scarcity and evaluation economics" rival
+  explanation and the in-kind-not-in-standard discriminating test — present, with the
+  *projected* status marker.
+- **Actor-selection vs. act-selection** (core/04 §3.1b): present, including "Collapsing the two
+  would reduce the claim to 'people use argmax.'"
+- **§1.13 ordering-rule correction** — present verbatim (above).
+- **CHANGELOG Corrected section** carries both corrections: the selection/training two-factor
+  fix and the ordering-rule retraction ("was WRONG and is retracted… 551 vs optimum 151").
+
+## 7. Script verification — the expected falsification pattern, exactly
+
+`python3 apparatus/assets/prefix-stability-check.py` ran clean (stdlib only, exit 0). Four
+cases, with precisely the required pattern:
+
+| Case | ascending rate | ascending rate/len |
+|---|---|---|
+| 1 — typical | match=True (78.00) | match=True (78.00) |
+| 2 — stress (volatile huge) | **match=False, waste 551.00** | match=True, **waste 151.00** |
+| 3 — random mix | **match=False, waste 1312.50** | match=True, waste 557.50 |
+| 4 — realistic prefix | match=True (108.75) | match=True (108.75) |
+
+This matches the table in `apparatus/prefix-stability.md` §3 (551/151; 1312/557 — the doc
+rounds the .50s) and the CHANGELOG's "waste 551 vs optimum 151". The failures are the point:
+they are the falsification of the naive rule. Nothing was "fixed."
+
+## 8. Dead-link check — no dead links
+
+Every markdown link in the edited files (`README.md` — including the new
+`apparatus/prefix-stability.md` row) and every backtick path reference in the new/edited
+content (`apparatus/encode-verify.md`, `apparatus/closure-principle.md`, `core/00`, `core/03`,
+`core/05`, `core/07`, `core/08`, `core/09`, `assets/prefix-stability-check.py` relative to
+`apparatus/`) was checked against the filesystem. **Dead links found: none.** The
+`prefix-stability.md` references to the `ground` PRD / INV-6 are mentions of the external
+reference tooling, not repository links — the same pre-existing pattern the v4.2 report noted.
+
+## 9. Register check
+
+No new content uses "law" for the framework's own claim. Grep over the new/edited regions
+finds zero occurrences; "law" remains only in the shipped homage senses (Tesler's, Ashby's)
+and historical changelog entries. Martin's SDP is consistently a "Principle."
+
+## 10. Flagged but not changed (per the hard constraints)
+
+- **Heading levels in core/04 §3:** the copied sections arrive as `## 3.1`, `## 3.1a`,
+  `## 3.1b` (H2, verbatim from the vehicle, whose internal `### Why closure…`-style
+  sub-headings depend on that level), while the untouched `### 3.2` remains H3. The levels are
+  inconsistent within §3, but normalising them would mean restructuring final documents and/or
+  touching §3.2 — both forbidden. Left as delivered.
+- **Stale single-factor statements elsewhere:** the closure-only formulation
+  ("selection intensity is inversely proportional to predicate closure") still appears in
+  `core/04` outside the replaced region — the header claim list, §6 (Polanyi/Collins), §7 —
+  and in `README.md` "Start here" item 2 and the Status section. PATCH.md's edit list does not
+  touch these, so they were left as-is; they now lag the corrected two-factor §3.
+- **`apparatus/README.md`** closing line still reads "All three are instances of one
+  discipline…" though the index now lists five documents — pre-existing (flagged in the v4.2
+  report), and PATCH.md specifies only the added index line.
 - No number, table, or equation discrepancies were found between the new docs and the script
-  outputs — nothing to report under the copy-error rule.
+  output — nothing to report under the copy-error rule. No caveat was tidied; the ones that
+  read deliberately awkwardly (the §3.1 "or the claim is not a claim" guard; §1.13's
+  self-correction) ship exactly as written.
 
 ## Summary
 
-The v4.2 patch applied cleanly on a verified v4.1 base: `core/09-the-floor-mechanism.md`,
-`apparatus/the-skill-floor.md`, and the two reproduction scripts were dropped in byte-identical
-to the package; the README, core index, and apparatus index were wired with PATCH.md's exact
-rows; the attribution addendum was merged into `meta/lineage-and-limits.md` as §1.8–§1.11 plus
-seven §6 citation rows — with the governing "The mathematics is Shannon's…" sentence surviving
-verbatim — and the addendum file was then deleted; all three consolidated-state ledger sub-edits
-landed (p_err CLOSED, open-predicate measurement RECLASSIFIED as a stated boundary rather than
-deleted, and the C_resolve/C_hold calibration item ADDED as the principal open empirical item);
-and the v4.2 changelog entry was added with its Attribution and Reclassified subsections. Both
-scripts run on stdlib Python with the exact required boundary behaviour — escape is zero for the
-all-verified case at every capacity, and the derived p_err is 0.0000 at r ≥ 1.0 and 0.5000 at
-r = 0 — every internal reference in the new documents resolves, and the register is unchanged:
-the framework's own claim remains a principle, with "law" appearing only in the shipped
-documents' homage sense.
+The v4.3 patch applied cleanly on a verified v4.1+v4.2 base: both prerequisite files existed;
+`apparatus/prefix-stability.md` and `apparatus/assets/prefix-stability-check.py` were dropped
+in byte-identical; `core/04-actors.md` §3–§3.1 were replaced with the two-factor correction
+and §3.1a/§3.1b inserted, with §3.2 verified untouched and the delivery vehicle never entering
+the repository; the README and apparatus index were wired with PATCH.md's exact rows; §1.12
+(Martin) and §1.13 (Smith) landed in the lineage with the ordering-rule correction verbatim,
+plus both §6 citation rows; the CHANGELOG 4.3 entry carries both corrections; the verification
+script produces exactly the required falsification pattern (naive rule fails on cases 2 and 3,
+Smith's rule optimal on all four); every internal reference resolves; and the register is
+unchanged — the framework's claim remains a principle.
