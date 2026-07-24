@@ -1,5 +1,85 @@
 # Changelog
 
+## 4.4 — Accountability, the second actor axis, and the operational layer
+
+### Added
+- core/05-accountability.md — accountability capacity as a second actor axis, independent of
+  pinning resolution. Conditions (persistence, stake, sanctionability) derived from the pricing
+  structure of the escaped store. Answerability and liability separated. Introduces the assurance
+  tower.
+- apparatus/tool-surfaces.md — tools reallocate demand; exporters / resolvers / verifiers; class is
+  a property of (tool, task, consumption)
+- apparatus/tool-contract.md — ground-first tool contract for local agents; the harness binds
+  toolsets, the model never picks them
+- applications/sdlc/production-as-ground.md — production as the only real ground; DORA read as
+  demand; the three tiers of feedback loop
+
+### Corrected
+- Re-decomposition RELOCATES demand into the seam; it does not destroy it. meta/lineage §3.1 and
+  meta/consolidated-state §1.4 retired to core/09 §4's position. The counterexample booked as
+  strongest against conservation is resolved, not conceded.
+- core/00 §6.1 — the immune floor is predicate-closure, not encoding-capacity. Capacity closes the
+  encoded store only; the floor is there because the organism cannot check a novel response.
+- core/01 — judgment store splits executor from accountable party.
+
+**Still outstanding in this release** — the two patches delivered separately, not applied here:
+- Closure condition generalised: "digital ground" -> "ground the actor can inspect". The floor is a
+  property of the <actor, predicate> pair, which the substrate phrasing could not support.
+- core/04 §1 — pinning resolution defined by where a constraint attaches. Closes the
+  temperature-zero objection. Last wind and pinning mode are independent quantities.
+
+### Renumbered
+- core/05..09 shift to core/06..10 to seat accountability after the actor model.
+
+### Results
+- THE FORBIDDEN STATE WAS NOT WELL-DEFINED. A classical program reads ground and determines choices,
+  so actorhood alone cannot qualify an actor for the Judgment store — otherwise a program-executed
+  determination would be Judgment rather than Escaped and the forbidden state would be unreachable
+  by construction.
+- THE THREE CONDITIONS ARE DERIVED, NOT IMPORTED. Escape is forbidden because it is unpriced; a
+  price borne by nothing is not a price (stake); the bill arrives after the act, so the bearer must
+  still exist (persistence); and it must be deliverable (sanctionability).
+- REVOCABILITY IS WHY THE LOOSEST-PINNED ACTOR IS THE ONE THAT CAN ANSWER. An envelope that could
+  not be withdrawn could not be a stake. The property that makes an actor hardest to constrain is
+  the property that makes it able to answer. Pinning by value leaves nothing to revoke.
+- THE CHAIN MUST BE ATTRIBUTABLE AND TAMPER-EVIDENT, NOT INTERNALLY HELD. "Knows why it decided"
+  fails on the only actor with full capacity: humans confabulate, exactly as core/03 and core/04 §3
+  predict. Inversion: on the provenance condition a model with an immutable ledger can OUTPERFORM a
+  human. The barrier to model accountability was never the chain; it is stake and sanctionability.
+- ANSWERABILITY != LIABILITY. Strict liability is consequence without account; the blameless
+  postmortem is account with liability suspended — a purchase, not a softening.
+- ASSURANCE TOWER. The declaration passes 00's own admission test, so it is a governing decision;
+  exogenous, it would be the forbidden state as the framework's own precondition. Descent gives
+  FINITENESS; well-formedness — reaching an accountability-bearing actor — gives TERMINATION.
+- THE LLM MUST NEVER PICK TOOLS (scoped — see open tension), derived rather than asserted: tool
+  selection is a governing decision resolved under load with no available verifier. Harness binding
+  moves it to the encoded store AND makes the open set computable before the run.
+- FEEDBACK LOOPS ARE VERIFICATION, AND MOST ARE WASTE. Three tiers: static technical (should be a
+  validator), ground-dependent technical (progressive delivery), user response (irreducible).
+  Diagnostic: the fraction of change failures that were tier one is the fraction that was
+  self-inflicted.
+- THE AI/BATCH-SIZE FINDING is the framework's best external corroboration: DORA measured that AI
+  adoption worsens delivery performance via increased batch size; the framework derives it —
+  generation capacity outran verification capacity and the surplus went to escape.
+
+### Booked honestly
+- PROPORTIONALITY IS EXOGENOUS. The framework determines who must answer and for which
+  determinations. It does NOT determine what the consequence should be.
+- MODEL INCAPACITY IS CONTINGENT, NOT NECESSARY. Today's towers terminate at the OPERATOR, not the
+  model. Corporate personhood is the existence proof that accountability-bearing actors can be
+  manufactured.
+- THE TOWER'S DESCENT ARGUMENT IS NOT LICENSED BY core/09. H(verdict) exists only where the
+  acceptance predicate closes, and a tolerance declaration generally has none. The descent claim
+  rests on governing-set CARDINALITY, which core/09 §1 explicitly demotes as a measure of demand.
+- core/05 is entirely PROJECTED. No exercised evidence; falsifiers stated per claim.
+- Batch size and feedback latency are NOT the framework's contributions (Reinertsen, Lean).
+- The 2024 DORA cluster anomaly (medium CFR below high) is recorded as an OPEN DISCREPANCY, with
+  the available defence explicitly labelled weak rather than accepted.
+- The DORA check is retrodiction against published findings; the response-level data is not public.
+
+### Attribution
+- DORA/Forsgren-Humble-Kim and Reinertsen added to meta/lineage-and-limits.md.
+
 ## 4.3 — Prefix stability (the operational layer)
 
 ### Added
