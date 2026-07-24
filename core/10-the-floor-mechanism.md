@@ -87,6 +87,10 @@ Three prior results unify here: `core/03`'s "floor is in the predicate" is condi
 matched-pair invariant is *why* verification removes floor (it converts escape into retry — the check
 is the thing that catches the shed error); and `core/09`'s bits are the unit throughout.
 
+**The worked instance.** `core/00` §6.1's immune floor is this intersection, with the two conjuncts
+satisfied for different reasons: overflow because the antigen space exceeds the genome, and openness
+because the organism has no verdict function over that space.
+
 ---
 
 ## 4. The soft-capacity law, and a corrected prediction

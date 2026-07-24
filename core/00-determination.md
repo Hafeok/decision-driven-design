@@ -153,10 +153,19 @@ populating the judgment store when no single actor can carry the demand.*
 
 ### 6.1 The organism cannot encode the determinations
 
-The antigen space is larger than the genome and shifts within a lifetime. The determinations
-*cannot* be pre-encoded — an irreducible floor, in the framework's exact sense: determination
-that cannot be moved off the in-the-moment actor no matter how much evolutionary training is
-applied. The genome is finite; the antigen space is not; **the gap is the floor.**
+The antigen space is larger than the genome and shifts within a lifetime, so the determinations
+**cannot be pre-encoded.** State precisely what that does and does not establish.
+
+It closes the **encoded** store. Capacity overflow alone would not produce a floor: a determination
+that cannot be encoded can still be verified out, and where a check exists adequacy stays cheap
+(`core/03`).
+
+**The floor is there because the predicate does not close.** The organism cannot check, before or
+after, whether a response to a novel antigen was correct. There is no verdict function over the
+antigen space; autoimmunity is precisely the uncaught error, and it arrives as damage rather than as
+a verdict. Encoding is unavailable by capacity and verification is unavailable by openness, so the
+determination falls to the in-the-moment actor on every encounter. **That is the floor, in the
+framework's exact sense.**
 
 So what does the organism encode instead?
 
