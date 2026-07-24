@@ -73,6 +73,7 @@ The claim, from primitives to consequences. Read in order if you are new.
 | 02 | [`core/02-completeness.md`](core/02-completeness.md) | Why the stores are exhaustive — and why that is worth less than it looks |
 | 03 | [`core/03-the-floor.md`](core/03-the-floor.md) | **The floor is in the acceptance predicate** — the best original result |
 | 04 | [`core/04-actors.md`](core/04-actors.md) | **The missing parameter.** Pinning; selection vs. training; seams; the compound |
+| 05 | [`core/05-accountability.md`](core/05-accountability.md) | The second actor axis: what makes an actor able to hold a determination, not merely produce one; persistence, stake, sanctionability; answerability vs liability; the assurance tower |
 | 06 | [`core/06-composition.md`](core/06-composition.md) | The seam-demand identity; orchestrator vs. swarm; the channel is the platform |
 | 07 | [`core/07-determination-and-intelligence.md`](core/07-determination-and-intelligence.md) | Determination ≠ intelligence; why the LLM debate is structurally undecidable |
 | 08 | [`core/08-projections.md`](core/08-projections.md) | The funnel & maturation as **judgment-demand** projections (not count); why the model's feedback loops appeared |
@@ -90,6 +91,8 @@ Operational results that fall out of the core. Read as needed.
 | [`apparatus/adversarial-ground.md`](apparatus/adversarial-ground.md) | The attack surface of an actor is its ground, not its logic — across three fields |
 | [`apparatus/the-skill-floor.md`](apparatus/the-skill-floor.md) | A skill without a per-invocation verifier is floor-exposed by construction |
 | [`apparatus/prefix-stability.md`](apparatus/prefix-stability.md) | A prefix is a dependency chain: Martin's SDP, the optimal ordering, and cache invalidation as a specification audit |
+| [`apparatus/tool-surfaces.md`](apparatus/tool-surfaces.md) | Tools reallocate demand: exporters, resolvers, verifiers — and why class depends on the task, not the tool |
+| [`apparatus/tool-contract.md`](apparatus/tool-contract.md) | What a tool must declare for a DDD-native local agent; why the harness binds tools and the model never picks them |
 
 ### Applications — the projections
 
@@ -98,6 +101,7 @@ The framework, denominated in a domain.
 | Document | Domain |
 |---|---|
 | [`applications/sdlc/`](applications/sdlc/) | Software delivery — the agentic/DAG design framework (formerly the whole of v3) |
+| [`applications/sdlc/production-as-ground.md`](applications/sdlc/production-as-ground.md) | Production is the only real ground; DORA read as demand; which feedback loops are waste |
 
 ### Meta — the honesty layer
 

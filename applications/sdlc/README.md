@@ -49,6 +49,10 @@ These are the v3 documents, retained. Read `core/` for *why*; read these for *ho
    SPARQL for bundle assembly, the event substrate, the worker contract, emergent decisions during
    action, the meta-loop, the model catalog.
 
+Written against v4:
+
+- **production-as-ground** · pre-production predicates close over substitute ground; DORA's four keys instrument the encode/verify gap; the three tiers of feedback loop and which are eliminable
+
 > **Note.** These four documents are carried forward from v3 and are **not yet fully reconciled** with
 > the v4 register (they may still say "law" where `core/` now says "principle," and may still lean on
 > the pre-review immune framing). Reconciling them is tracked in
