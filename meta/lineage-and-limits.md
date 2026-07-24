@@ -84,8 +84,9 @@ the contract halves.
 
 Already answers *"at what layer should a function or check live"* — a sharper, older version of
 our "by whom / when" question for the checking store. Later work (Moors, 2002) showed some
-functions **migrate into the substrate and vanish as separate concerns** — which is our single
-most important counterexample (see §3.1).
+functions **migrate into the substrate**, appearing there as part of its interface contract rather
+than as separate application concerns — which was booked as our single most important
+counterexample, and is resolved as relocation into the seam (see §3.1).
 
 **What DDD adds:** generalization beyond network layers to actors of different kinds. Credit them
 for the placement question.
@@ -367,34 +368,31 @@ predictive, so **credit the prior taxonomy.**
 
 ---
 
-## 3. The strongest counterexample, admitted
+## 3. The strongest counterexample, resolved
 
-### 3.1 Architecture can *destroy* demand, not just relocate it
+### 3.1 Architecture relocates demand into the seam — the counterexample, resolved
 
-Conservation says demand is fixed by the task and can only move between stores. But **re-conceiving
-the task boundary can eliminate whole classes of governing decisions:**
+This was booked as the strongest counterexample to conservation, and `core/09` §4 resolves it. The
+examples are real; the destruction reading was an artifact of counting the parts and not the seam.
 
-- Idempotent / content-addressed designs (Nix-style builds) delete ordering and rebuild decisions.
-- CRDTs delete conflict-resolution and reconciliation decisions.
-- Declarative substrates absorb functions that were application concerns (Moors 2002, on end-to-end).
+- **Content-addressed designs** (Nix-style builds) do not delete ordering decisions. They make the
+  determination once, in deciding **what constitutes identity of a build input** — whether timestamps,
+  build paths, or compiler versions are inside the hash. That is where the difficulty of such systems
+  is known to concentrate.
+- **CRDTs** do not delete conflict-resolution decisions. They make the determination once, in the
+  choice between add-wins, remove-wins, and last-writer-wins semantics. That is where the difficulty
+  of CRDT design is known to concentrate.
+- **Declarative substrates** absorb application concerns into the substrate's own interface contract,
+  which is the seam under another name.
 
-If demand can be **destroyed** by re-drawing the task boundary, then "fixed by the task, invariant
-to the system" is false — *unless* "task" is redefined post hoc to absorb the change, which is the
-tautology trap.
+In each case the determination moved into the **seam**: the interface contract the decomposition
+brings into existence. Count the seam and the total is invariant. The parts are cheaper because
+somebody pre-paid.
 
-**Resolution, stated honestly.** We concede one of two positions and must pick openly:
-
-1. **Weak (defensible):** demand is conserved *for a fixed task decomposition*. Changing the
-   decomposition changes the demand. This is true, useful, and no longer a "law" — it is an
-   accounting identity within a chosen boundary.
-2. **Strong (indefensible):** demand is fixed by "the task itself" independent of decomposition.
-   This is false, per the counterexamples, unless rescued by tautology.
-
-**We take position 1.** Conservation holds *within a decomposition*; choosing the decomposition is
-itself a governing decision (the highest-leverage one), and a better decomposition genuinely
-lowers total demand. This is consistent with Brooks (you cannot remove *essential* complexity, but
-the boundary of "essential" moves when you re-conceive the problem) and it is the correct
-engineering advice anyway: **the decomposition is the decision that matters most.**
+**The resolution is no longer a choice between a weak and a strong position.** For any conditioning
+variable, `H(V) = I(V;X) + H(V|X)`; a decomposition is such a variable; the total is therefore
+invariant by the chain rule, not by concession (`core/09` §4). What genuinely changes the total is
+changing the task or the declared tolerance — not re-drawing boundaries within one.
 
 ---
 

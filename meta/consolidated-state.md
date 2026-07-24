@@ -57,9 +57,10 @@ did not have it.
 > **Within a fixed task decomposition, determination demand is conserved.** Reduce one store and
 > the demand relocates; it does not vanish.
 >
-> **Choosing the decomposition is itself the highest-leverage governing decision** — and a better
-> decomposition genuinely *destroys* demand (CRDTs delete conflict-resolution decisions;
-> content-addressed builds delete ordering decisions).
+> **Choosing the decomposition is itself the highest-leverage governing decision** — not because a
+> better decomposition destroys demand, but because it **pre-pays demand into the seam**, where it is
+> encoded once and inherited by every run rather than resolved per run. CRDTs and content-addressed
+> builds are the standard examples and both are relocation, not destruction (`core/09` §4).
 
 **This is Tesler's Law of Conservation of Complexity, generalised** — denominated in decisions, with
 a fourth store and an assurance-level granularity bound. **Cite Tesler. Cite Ashby** (who had a
