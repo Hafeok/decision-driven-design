@@ -232,6 +232,26 @@ was optimal. That is false, and brute-force search falsifies it whenever a volat
 long. The correct rule is the per-token normalisation, which is Smith's, established in 1956.
 The framework applied a known scheduling result; it did not derive a new one.
 
+### 1.14 DORA / Forsgren, Humble & Kim — the DevOps research programme
+
+Accelerate (2018) and the annual State of DevOps reports.
+
+applications/sdlc/production-as-ground.md reads DORA's four key metrics as instrumentation of the
+encode/verify gap, and treats DORA's findings as external corroboration.
+
+What DDD adds: an explanation of WHY the metrics work (§2-3), and one derived prediction DORA has
+not tested (§7). What DDD explicitly does NOT add: the batch-size result, which predates both and
+belongs to Reinertsen and Lean queueing theory (§5). The framework offers a redescription there,
+not an explanation DORA lacks, and says so.
+
+The DORA correspondence is retrodiction against PUBLISHED findings. DORA's response-level data is
+not public; no statistical validation was performed and none is claimed.
+
+### 1.15 Reinertsen — product development flow / queueing theory
+
+The batch-size and feedback-latency results. Cited so that production-as-ground does not appear to
+claim them.
+
 ### Additional context worth acknowledging
 
 Two adjacent literatures that a reviewer will raise, and which the framework should acknowledge
@@ -461,6 +481,8 @@ the cross-domain unification, universal "act is a decision" as anything more tha
 | Alternative demand formalisation | **Kolmogorov / MDL** | acknowledge the road not taken, and why |
 | Prefix ordering by stability | Martin (SDP) | the ordering principle is his |
 | The optimal ordering is rate/length | Smith 1956 (WSPT) | a known scheduling result, applied |
+| DORA metrics read as demand | Forsgren/Humble/Kim, DORA reports | corroboration; the explanation is ours, the findings are theirs |
+| Batch size, feedback latency | Reinertsen; Lean | NOT our contribution — redescription only |
 
 ---
 
