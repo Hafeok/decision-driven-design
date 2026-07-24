@@ -1,6 +1,6 @@
 # An Information-Theoretic Account of Specification Demand
 
-**A formal note.** Location: `core/08-the-measure.md`. Reproduction scripts in
+**A formal note.** Location: `core/09-the-measure.md`. Reproduction scripts in
 `core/assets/measure-*.py`. Also suitable as a standalone paper
 (*"Specification Demand Is Verdict Entropy: Conservation as the Chain Rule"*).
 
@@ -116,7 +116,7 @@ The identity is not merely descriptive. For a fixed task, ranging over all decom
   `I(verdict;S) = H(verdict)` — the decomposition already contains the *entire* answer. The only way
   to make the parts trivial is to put all the demand in the seam. This is the exact, quantitative
   form of the framework's claim that demand is conserved, not escapable.
-- **The maturation/funnel asymptote** (`core/07`) is `H(verdict) − I(verdict;S_encoded)`: as you
+- **The maturation/funnel asymptote** (`core/08`) is `H(verdict) − I(verdict;S_encoded)`: as you
   harvest more of the answer into the encoded decomposition, runtime demand falls toward the
   residual the encoding hasn't captured — never below what the *open* part of the predicate leaves
   undetermined.
@@ -198,7 +198,7 @@ allocation.
 
 Three of the framework's claims that read as independent —
 
-- the **seam identity** (`core/05`),
+- the **seam identity** (`core/06`),
 - the **actor-relative store allocation** (`core/04`),
 - the **encode/verify split** (`apparatus/encode-verify.md`),
 

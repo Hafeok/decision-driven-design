@@ -61,7 +61,7 @@ can tell when you've landed there because the predicate closes.
 
 This is why machines reach superhuman performance on closing-predicate tasks without anything worth
 calling understanding: **adequacy is cheap where adequacy is checkable.** (The consequences for the
-intelligence debate are drawn out in `06-determination-and-intelligence.md`.)
+intelligence debate are drawn out in `07-determination-and-intelligence.md`.)
 
 ---
 

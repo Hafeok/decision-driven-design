@@ -1,10 +1,10 @@
 """
-DERIVING p_err FROM RATE-DISTORTION — closing the last real hole in core/09.
+DERIVING p_err FROM RATE-DISTORTION — closing the last real hole in core/10.
 
 The question: when an actor must resolve H bits of residual demand but has resolve
 capacity C bits, what is the error rate on the decisions it cannot resolve?
 
-In core/09 I ASSUMED a logistic. That was a modelling choice, not a derivation.
+In core/10 I ASSUMED a logistic. That was a modelling choice, not a derivation.
 Shannon's rate-distortion theory answers this exactly, and it is the RIGHT frame:
 'what happens when you push more bits through a channel than its capacity' is
 literally the question.
@@ -69,7 +69,7 @@ print("  In between: p_err = Hb^-1(1-r), a THEOREM, not a fitted curve.")
 print("\nThis replaces the assumed logistic with a derived lower bound.")
 
 print("\n\n=== DOES THE FLOOR RESULT SURVIVE THE SUBSTITUTION? ===")
-print("Re-run core/09's soft results with the DERIVED p_err instead of the logistic.\n")
+print("Re-run core/10's soft results with the DERIVED p_err instead of the logistic.\n")
 T=40
 print("(1) adding RAW ground (no encoding) — does it still monotonically harm?")
 print(f"{'rawR':>6} {'demand n':>9} {'C':>5} {'r':>6} {'p_err':>8} {'escape':>8}")

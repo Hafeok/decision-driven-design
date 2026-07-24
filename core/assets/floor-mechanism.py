@@ -1,5 +1,5 @@
 """
-Reproduction script for core/09 — The Floor Mechanism.
+Reproduction script for core/10 — The Floor Mechanism.
 Two regimes: hard capacity (the intersection result) and soft capacity (the encode-fraction law).
 stdlib only. Run: python3 floor_mechanism.py
 """

@@ -234,7 +234,7 @@ pipeline. This has a structural consequence the framework predicts:
 > pre-filtered on exactly what training can manufacture — so the residual left to select on is
 > disproportionately the predicate-open part.**
 
-This is the **funnel** (`core/07`) applied to actor acquisition rather than decisions: each tier pays
+This is the **funnel** (`core/08`) applied to actor acquisition rather than decisions: each tier pays
 down the trainable demand once, and the tier above inherits a population where that demand is
 resolved, concentrating its selection budget on a residual that is smaller and more valuable. Same
 structure, same asymptote — the floor.
@@ -306,7 +306,7 @@ And the consequence follows immediately, without needing to be observed first:
 wherever an open predicate is proxied by a manufactured closed one — not a bug to be engineered away
 by better reward modelling. Better reward models shrink the gap; they cannot close it, because closing
 it would mean the original predicate was not open after all. The framework says where the residual
-must live, and it is the same place the floor lives (`core/03`, `core/09`).
+must live, and it is the same place the floor lives (`core/03`, `core/10`).
 
 ### Cost decides the ratio — selection substituting for training
 
