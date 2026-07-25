@@ -2,7 +2,7 @@
 
 **Location:** `apparatus/the-skill-floor.md`. A direct consequence of the floor result
 (`core/03`, and the hard-capacity proof) applied to *skills* — any invokable capability that says
-what it does. Depends on the matched-pair invariant (`core/05`) and the encode/verify split
+what it does. Depends on the matched-pair invariant (`core/06`) and the encode/verify split
 (`apparatus/encode-verify.md`).
 
 **Status:** the mechanism is derived and demonstrated (hard-capacity toy). The practical claim —
@@ -28,7 +28,7 @@ holds.*
 A skill declares **what** it does. It almost never ships a **criterion-form check** that fires, per
 invocation, confirming it did that thing on *this* input against *this* ground. In the store
 vocabulary (`core/01`): a skill is an **encoded** constraint with no **mechanical** partner. It is
-exactly the case the matched-pair invariant (`core/05`) forbids — encoding moved into place without a
+exactly the case the matched-pair invariant (`core/06`) forbids — encoding moved into place without a
 check on the seam.
 
 The floor result (`core/03`, hard-capacity proof) says what that means precisely. Escape requires
@@ -103,7 +103,7 @@ verifier.
 > check that fires on *this* run, against *this* ground, and can **fail closed.**
 
 Not *"we tested it."* A criterion, in criterion form, executed at invocation. That is the matched
-pair (`core/05`) applied to skills: the encoded capability and its mechanical check, shipped
+pair (`core/06`) applied to skills: the encoded capability and its mechanical check, shipped
 together, or not trusted. Test 3 of the hard-capacity proof is the guarantee — when every decision is
 verified, overflow produces *retries, not escape*, at any capacity. Verification converts silent
 floor-escape into visible, recoverable cost. That conversion is the whole value.

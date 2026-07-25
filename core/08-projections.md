@@ -1,7 +1,7 @@
 # Projections
 
-**Location:** `core/07-projections.md`. Depends on the principle (`01`), the floor (`03`), and the
-compound loop in composition (`05`). Patch addition to the shipped 4.0 core.
+**Location:** `core/08-projections.md`. Depends on the principle (`01`), the floor (`03`), and the
+compound loop in composition (`06`). Patch addition to the shipped 4.0 core.
 
 **Status:** the correction in this document (funnel as *cost*, not *count*) resolves a modelling
 error that produced spurious feedback loops in the reference model. That diagnostic history is
@@ -121,7 +121,7 @@ re-derive the same ground repeatedly.
 > **Descend without encoding → judgment demand stays flat or spikes → no funnel, only re-derivation.**
 
 This is the same condition maturation carries, on the other axis. Maturation forms only if the
-harvest channel exists to carry the encoding from one run to the next (`05`, "the channel is the
+harvest channel exists to carry the encoding from one run to the next (`06`, "the channel is the
 platform"). The funnel forms only if the encoding is carried from one *level* to the next within a
 run.
 
@@ -140,7 +140,7 @@ loops "at odd times" — and those loops were an artifact of measuring the wrong
 
 Here is the mechanism. Under the count model, decisions were expected to decrease monotonically as
 the run descended. But real runs do not behave that way: a decision deep in the funnel *surfaces new
-governing decisions* — the seam demand `|D_comp| = |D_single| + |S|` (`05`), appearing whenever a
+governing decisions* — the seam demand `|D_comp| = |D_single| + |S|` (`06`), appearing whenever a
 decision decomposes. Under the count model, that looks like the funnel **widening back out at the
 wrong moment**: the count went *up* where the model said it should go *down*, and a feedback loop
 appeared to fire for no reason.
@@ -179,7 +179,7 @@ decisions does not fall (and may locally rise as seams open); the **judgment dem
 
 **Maturation — the recurrence / time projection.**
 Across runs, judgment demand per run descends as encoded ground accumulates in the platform —
-*conditional on the harvest channel existing* (`05`). Run N+1 inherits what run N encoded. Again the
+*conditional on the harvest channel existing* (`06`). Run N+1 inherits what run N encoded. Again the
 count is fixed by the task; the **judgment demand** falls.
 
 Both are the compound. Both are conditional on the encoded store actually receiving the harvest. The

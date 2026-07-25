@@ -83,7 +83,7 @@ watches the wrong clock.
 
 The flu vaccine is the biological instance: re-harvested annually because the virus is ground you do
 not control, so the encoding goes stale and must be re-verified against a moving source of truth
-(`core/05`, and `apparatus/closure-principle.md` on original antigenic sin).
+(`core/06`, and `apparatus/closure-principle.md` on original antigenic sin).
 
 ---
 

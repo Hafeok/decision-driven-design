@@ -55,10 +55,17 @@ Every governing decision is determined by exactly one of four sources (`00`, §3
 |---|---|---|---|---|
 | **Encoded** | constraint | before the act | a rule | amortises · cheap to state, **expensive to find** |
 | **Mechanical** | criterion | after the act | a check | pays the **executability tax** · cheap to trust |
-| **Judgment** | — | during the act | an actor reading ground | does not amortise · walks out the door |
+| **Judgment** | — | during the act | an actor reading ground, **with an accountable party named** | does not amortise · walks out the door |
 | **Escaped** | — | never | nobody | defect exposure · **the only forbidden state** |
 
 **{rule, check, actor, nothing}.** There is no fifth source.
+
+**Two roles, not one.** The judgment store names an **executor** — the actor that determines this
+run — and an **accountable party** that bears the determination. For human actors these coincide,
+which is why the earlier statement could fuse them without visible error. For model actors they
+must be split: the model holds the judgment, a named accountability-bearing actor holds the
+consequence (`core/05` §6). **A judgment allocation naming no accountable party is not an
+allocation. It is Escaped with an executor attached.**
 
 ### This partition is definitional — and we say so
 

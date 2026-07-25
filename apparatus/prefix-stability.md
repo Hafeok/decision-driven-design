@@ -2,8 +2,8 @@
 
 **Location:** `apparatus/prefix-stability.md`. Connects the caching invariant already shipped in the
 reference tooling (`ground` PRD, INV-6) to the theory that now explains it. Depends on the
-encode/verify split (`apparatus/encode-verify.md`), the measure (`core/08`), and the floor mechanism
-(`core/09`). Verification: `assets/prefix-stability-check.py` (brute-forces all orderings and
+encode/verify split (`apparatus/encode-verify.md`), the measure (`core/09`), and the floor mechanism
+(`core/10`). Verification: `assets/prefix-stability-check.py` (brute-forces all orderings and
 confirms the rule in §3, including the case that falsifies the naive version).
 
 **Standing on:** **Robert C. Martin, the Stable Dependencies Principle** (*Agile Software
@@ -164,7 +164,7 @@ defects — each one is an encoded decision whose ground is not stable enough to
 operationalised.
 
 **Enforce the boundary.** A segment asserted as encoded that exceeds a re-derivation threshold should
-**fail a check**, not merely warn — the matched-pair discipline (`core/05`) applied to the prefix
+**fail a check**, not merely warn — the matched-pair discipline (`core/06`) applied to the prefix
 itself. Encoding something unstable is exactly how demand escapes later, when the stale encoding is
 consumed as ground (`apparatus/closure-principle.md`).
 
@@ -172,13 +172,13 @@ consumed as ground (`apparatus/closure-principle.md`).
 
 ## 6. Relation to the rest of the framework
 
-**The cacheable boundary and the store boundary are the same boundary.** `core/08` splits demand into
+**The cacheable boundary and the store boundary are the same boundary.** `core/09` splits demand into
 `I(verdict;X)` (encoded — does not vary per run) and `H(verdict|X)` (residual — varies per run). The
 stable prefix *is* the encoded part; the volatile suffix *is* the residual. Prefix caching does not
 merely resemble the encoded/judgment split — **it is that split, serialised in the order the cache can
 exploit.**
 
-**And cost and quality stop being a trade-off.** `core/09` shows the lever on escape is the **encode
+**And cost and quality stop being a trade-off.** `core/10` shows the lever on escape is the **encode
 fraction**, not context size. Encoded content is exactly the cacheable content. Therefore:
 
 > **Maximising cache hit rate and minimising escape are the same optimisation.** Raising the encode

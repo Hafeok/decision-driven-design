@@ -57,9 +57,10 @@ did not have it.
 > **Within a fixed task decomposition, determination demand is conserved.** Reduce one store and
 > the demand relocates; it does not vanish.
 >
-> **Choosing the decomposition is itself the highest-leverage governing decision** — and a better
-> decomposition genuinely *destroys* demand (CRDTs delete conflict-resolution decisions;
-> content-addressed builds delete ordering decisions).
+> **Choosing the decomposition is itself the highest-leverage governing decision** — not because a
+> better decomposition destroys demand, but because it **pre-pays demand into the seam**, where it is
+> encoded once and inherited by every run rather than resolved per run. CRDTs and content-addressed
+> builds are the standard examples and both are relocation, not destruction (`core/09` §4).
 
 **This is Tesler's Law of Conservation of Complexity, generalised** — denominated in decisions, with
 a fourth store and an assurance-level granularity bound. **Cite Tesler. Cite Ashby** (who had a
@@ -183,7 +184,7 @@ The orchestrator was silently absorbing the exceptions. Encode the rule, remove 
 
 ### 1.11 Determination is not intelligence
 
-*Full treatment: `core/06-determination-and-intelligence.md`.*
+*Full treatment: `core/07-determination-and-intelligence.md`.*
 
 **The framework is orthogonal to intelligence, and this is a feature.**
 
@@ -246,8 +247,8 @@ exist to prevent.
 | The poisoned-ground **cross-domain unification** | **Retreated** → a *family*, not one mechanism. Opposite error directions must not be conflated. |
 | Escape- vs. wind-hallucination as novel | **Cite the prior taxonomy** (Ji et al.; Huang et al.) — ours is a gloss |
 | Quarks / quantum resonance | **Do not write it.** Fails both admission tests. The resemblance is **degeneracy** — a fact about many-to-one maps in mathematics, not evidence of determination. |
-| "A better decomposition destroys demand" | **Corrected (v4.1).** A better decomposition *pre-pays* more demand into the seam (higher mutual information), buying cheaper parts. The total H(verdict) is invariant. Nothing is destroyed; it relocates. See core/08 §4. |
-| The funnel as a *count* projection | **Corrected (v4.1).** The funnel is a *judgment-demand* (cost) projection; count is fixed by the task. See core/07. |
+| "A better decomposition destroys demand" | **Corrected (v4.1).** A better decomposition *pre-pays* more demand into the seam (higher mutual information), buying cheaper parts. The total H(verdict) is invariant. Nothing is destroyed; it relocates. See core/09 §4. |
+| The funnel as a *count* projection | **Corrected (v4.1).** The funnel is a *judgment-demand* (cost) projection; count is fixed by the task. See core/08. |
 
 **Artifacts needing revision:** `determination.md` (§7 immune licensing — cut), `adversarial-ground.md`
 (the unification — retreat to a family), `linkedin-plan.md` (post 4 and post 6 both lean on retreated
@@ -262,7 +263,7 @@ claims — see §4).
 | `03-the-floor.md` | the floor | **superseded** by the floor-in-the-predicate result (`core/04` §2) |
 | `04-actors.md` | pinning spectrum · floor-in-predicate · selection vs. training · composite actors & seams · the compound loop · **re-indexing the classical results** | **current — the contribution** |
 | `05-lineage-and-limits.md` | attribution · corrections · retreats · the falsification debts | **current** (= `ddd-revision.md`) |
-| `06-determination-and-intelligence.md` | determination ≠ intelligence · the invalid inference refused · **the debate is structurally undecidable** | **current** |
+| `07-determination-and-intelligence.md` | determination ≠ intelligence · the invalid inference refused · **the debate is structurally undecidable** | **current** |
 | `closure-principle.md` | an actor's own output is not ground | current; cite **Kalman** |
 | `adversarial-ground.md` | ground as attack surface | **retreat the unification** to "a family, not one mechanism" |
 
@@ -318,18 +319,18 @@ The eight-post sequence stands, with three edits:
   p_err = H_b^-1(1 - C/n), the information-theoretic lower bound on per-decision error at
   available rate r = C/n. Limits are exact (r>=1 -> 0; r->0 -> 0.5, recovering the hard-case
   coin flip). Substituting it for the earlier assumed logistic changes the numbers and no
-  structural claim. See core/09 §4.1.
-- Measuring demand on OPEN predicates. **NOT A DEBT — A STATED BOUNDARY.** core/08 measures
+  structural claim. See core/10 §4.1.
+- Measuring demand on OPEN predicates. **NOT A DEBT — A STATED BOUNDARY.** core/09 measures
   demand as verdict entropy, which requires a verdict function; an open predicate is precisely
   one that lacks it. Asking to measure demand there is asking for entropy without a random
-  variable. Measurement and closure have the same domain (core/08 §7). This is the framework's
+  variable. Measurement and closure have the same domain (core/09 §7). This is the framework's
   limit, correctly drawn, and it coincides exactly with the floor. It should not appear on the
   ledger as unpaid work.
 - Calibrating C_resolve and C_hold for a real actor. EMPIRICAL, not a proof: construct tasks of
   known bit-demand, find where error rate departs from zero; that value is C_resolve for that
   actor. Nobody has published such a measurement. Needs a rig, not more theory. This is now the
   framework's principal open empirical item, alongside the selection/training study.
-- The judgment/escape split. core/08 folds escape into H(verdict|X) with judgment. Separating them
+- The judgment/escape split. core/09 folds escape into H(verdict|X) with judgment. Separating them
   needs an actor-CAPACITY model: the point at which H(verdict|X) exceeds actor capacity is where
   demand escapes. This is where the floor (core/03) finally gets a number. Not yet done — the
   natural next result.

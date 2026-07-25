@@ -8,7 +8,7 @@ that forced real corrections. Both kinds of pressure are welcome. Especially the
 
 - **Falsification.** The load-bearing claims are meant to be falsifiable. If you can exhibit an open
   predicate whose performance is nonetheless reliably assessable, or a closing predicate where
-  path-degeneracy fails, you have broken `core/03` and `core/06`. Say so, in an issue.
+  path-degeneracy fails, you have broken `core/03` and `core/07`. Say so, in an issue.
 - **Counterexamples to conservation.** The principle holds only *within a fixed decomposition*. If you
   find a case where it fails even there, that matters.
 - **Prior art we missed.** The framework is a synthesis and credits its ancestors (`meta/lineage-and-limits.md`).

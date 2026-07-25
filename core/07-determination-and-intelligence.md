@@ -1,6 +1,6 @@
 # Determination Is Not Intelligence
 
-**Destination:** `core/06-determination-and-intelligence.md`
+**Destination:** `core/07-determination-and-intelligence.md`
 
 **Status.** The positive claim (*determination ≠ intelligence*) is a **consequence** of the
 admission tests and is not optional — the framework collapses without it. The negative result

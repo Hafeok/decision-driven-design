@@ -18,7 +18,7 @@ Nothing here is deprecated. The reframing is a promotion: what looked like the f
 | Ground | the repo, the schemas, the live environment, the source of truth |
 | The four stores | encoded constraint · CI check · human/model judgment · the unhandled case |
 | Actor (`04`) | a role in the DAG — human, model, or program, pinned accordingly |
-| Seam demand (`05`) | the interface contract between roles; the orchestration layer |
+| Seam demand (`06`) | the interface contract between roles; the orchestration layer |
 | Encode/verify (`apparatus`) | pinning controlled ground; verifying third-party APIs and live env |
 | Floor-in-the-predicate (`03`) | which decisions a model can own (closing predicate) vs. which need a human |
 
@@ -49,6 +49,10 @@ These are the v3 documents, retained. Read `core/` for *why*; read these for *ho
    SPARQL for bundle assembly, the event substrate, the worker contract, emergent decisions during
    action, the meta-loop, the model catalog.
 
+Written against v4:
+
+- **production-as-ground** · pre-production predicates close over substitute ground; DORA's four keys instrument the encode/verify gap; the three tiers of feedback loop and which are eliminable
+
 > **Note.** These four documents are carried forward from v3 and are **not yet fully reconciled** with
 > the v4 register (they may still say "law" where `core/` now says "principle," and may still lean on
 > the pre-review immune framing). Reconciling them is tracked in
@@ -66,7 +70,7 @@ owned by a model iff its acceptance predicate closes over digital ground; otherw
 selected for competence on open predicates (a senior, a domain expert). *Autonomy is bounded by
 closure.*
 
-**The orchestration layer is a seam**, and `core/05` prices it: an orchestrator is cheap to specify
+**The orchestration layer is a seam**, and `core/06` prices it: an orchestrator is cheap to specify
 and expensive per run, a bottleneck, and the poisonable centre of the system. The compound move —
 harvesting recurring coordination decisions into encoded rules, with a check on each — is how a
 DDD-shaped system gets cheaper over time instead of paying full judgment cost on every run.

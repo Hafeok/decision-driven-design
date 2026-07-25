@@ -1,8 +1,8 @@
 # The Floor Mechanism
 
-**Location:** `core/09-the-floor-mechanism.md`. Completes `core/03` (the floor is in the acceptance
+**Location:** `core/10-the-floor-mechanism.md`. Completes `core/03` (the floor is in the acceptance
 predicate) by supplying the *mechanism*: how, and exactly when, demand escapes. Depends on the
-measure (`core/08`), the matched-pair invariant (`core/05`), and the closure principle
+measure (`core/09`), the matched-pair invariant (`core/06`), and the closure principle
 (`apparatus/closure-principle.md`). Reproduction: `assets/floor-mechanism.py` and `assets/perr-rate-distortion.py`.
 
 **Status.** The mechanism is derived and demonstrated on toys (hard and soft capacity). The
@@ -18,7 +18,7 @@ numbers and **no structural claim**.
 ## 1. What `core/03` left open
 
 `core/03` located the floor: it lives in the **acceptance predicate**, non-zero exactly where the
-predicate does not close. And `core/08` measured demand in bits and split it into encoded
+predicate does not close. And `core/09` measured demand in bits and split it into encoded
 (`I(verdict;X)`) and everything-else (`H(verdict|X)`). But "everything else" fuses **judgment** and
 **escape** — the chain rule cleaves "encoded" from "the rest," not "carried" from "shed."
 
@@ -83,9 +83,13 @@ With a formula, in bits:
 
 > **floor = (chance error rate) × max(0, demand − C_resolve) × (open fraction)**
 
-Three prior results unify here: `core/03`'s "floor is in the predicate" is condition (2); `core/05`'s
+Three prior results unify here: `core/03`'s "floor is in the predicate" is condition (2); `core/06`'s
 matched-pair invariant is *why* verification removes floor (it converts escape into retry — the check
-is the thing that catches the shed error); and `core/08`'s bits are the unit throughout.
+is the thing that catches the shed error); and `core/09`'s bits are the unit throughout.
+
+**The worked instance.** `core/00` §6.1's immune floor is this intersection, with the two conjuncts
+satisfied for different reasons: overflow because the antigen space exceeds the genome, and openness
+because the organism has no verdict function over that space.
 
 ---
 
@@ -168,7 +172,7 @@ orthogonal to `p_err`. The intersection structure (§3) does not depend on the e
 ## 5. The skill-floor corollary
 
 A **skill** — any invokable capability that says what it does but ships no per-invocation check — is
-**specification without verification**: an encoded constraint with no mechanical partner (`core/05`).
+**specification without verification**: an encoded constraint with no mechanical partner (`core/06`).
 It satisfies condition (2) by construction, so the moment condition (1) is met (a loaded context), it
 sits in the escape intersection and fails *silently*.
 
@@ -215,7 +219,7 @@ context only helps one.** Overflow is the one that *inverts* the usual advice.
 one of three ground-failures*; the intuition "the model is hallucinating / deluded" is a fine pump and
 a poor formalism — it imports intentionality the mechanism does not need. Say what escapes and why.
 
-**Relation to the intelligence result (`core/06`).** The overflow cause concentrates in **open**
+**Relation to the intelligence result (`core/07`).** The overflow cause concentrates in **open**
 decisions — the closing ones are caught (retried) or benchmarked (visible). So a benchmark, being a
 closing predicate, measures exactly the region where overflow-hallucination is *invisible*. Two
 actors at identical load can look identical on the benchmark and diverge wildly in deployment. *Passed
@@ -225,7 +229,7 @@ validation, failed inspection* is this, observed.
 
 ## 7. What is now closed, and what remains
 
-**Closed.** The judgment/escape seam that `core/08` left fused. Escape is the intersection of overflow
+**Closed.** The judgment/escape seam that `core/09` left fused. Escape is the intersection of overflow
 and open (hard case) / `open_residual × p_err` with `p_err = H_b⁻¹(1 − C/n)` (soft case, **derived**
 from rate-distortion, §4.1). The floor is the escape that both exceeds capacity *and* has no verifier
 — *the demand you can neither resolve nor catch.* This is `core/03`'s "predicate doesn't close" given
@@ -238,13 +242,13 @@ and that value *is* `C_resolve` for that actor. Nobody has published such a meas
 novel empirical contribution and it needs a rig, not more theory.
 
 The toys are demonstrations, not certification — an outside reviewer should check the identification,
-as with `core/08`.
+as with `core/09`.
 
 **Not open — a boundary.** Measuring demand on **open** predicates is sometimes listed as an
-outstanding debt. It is not. `core/08` measures demand as verdict *entropy*, which requires a verdict
+outstanding debt. It is not. `core/09` measures demand as verdict *entropy*, which requires a verdict
 function; an open predicate is precisely one that lacks it. Asking to measure demand there is asking
 for entropy without a random variable. **This is the framework's stated limit, not an unpaid debt**,
-and it coincides exactly with the floor: measurement and closure have the same domain (`core/08` §7).
+and it coincides exactly with the floor: measurement and closure have the same domain (`core/09` §7).
 
 ---
 

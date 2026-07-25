@@ -2,7 +2,7 @@
 
 **Location:** `meta/lineage-and-limits.md`. This is the honesty layer — the record of what the
 framework stands on, what external adversarial review corrected, and what it still owes. The edits
-it prescribes have been applied across `core/00`–`core/06`; this document is the standing account of
+it prescribes have been applied across `core/00`–`core/07`; this document is the standing account of
 *why* they were made.
 
 **Purpose.** An adversarial review (external, literature-grounded) found real flaws. This
@@ -84,8 +84,9 @@ the contract halves.
 
 Already answers *"at what layer should a function or check live"* — a sharper, older version of
 our "by whom / when" question for the checking store. Later work (Moors, 2002) showed some
-functions **migrate into the substrate and vanish as separate concerns** — which is our single
-most important counterexample (see §3.1).
+functions **migrate into the substrate**, appearing there as part of its interface contract rather
+than as separate application concerns — which was booked as our single most important
+counterexample, and is resolved as relocation into the seam (see §3.1).
 
 **What DDD adds:** generalization beyond network layers to actors of different kinds. Credit them
 for the placement question.
@@ -112,7 +113,7 @@ socialization).
 **Correction:** our floor decomposition (intrinsic + transfer) maps onto *relational and somatic*
 TK but **denies collective TK**, which Collins's whole program says exists. See §2.2.
 
-**Why §1.8–§1.11 exist.** v4.1 (`core/08-the-measure.md`) and v4.2 (`core/09-the-floor-mechanism.md`) rest
+**Why §1.8–§1.11 exist.** v4.1 (`core/09-the-measure.md`) and v4.2 (`core/10-the-floor-mechanism.md`) rest
 almost entirely on information theory. Prior to this addendum, **Shannon appeared exactly once in the
 repository** — as a passing mention inside the Ashby section. That is an attribution failure of the
 same kind the framework corrected in v4.0, and it is corrected here on the same principle: **cite
@@ -129,12 +130,12 @@ The governing sentence for both new results:
 
 **"A Mathematical Theory of Communication," *Bell System Technical Journal* 27.**
 
-This is the foundation of everything in `core/08` and `core/09`. Specifically:
+This is the foundation of everything in `core/09` and `core/10`. Specifically:
 
-- **Entropy `H(X)`** — the measure of information in a random variable. `core/08` identifies
+- **Entropy `H(X)`** — the measure of information in a random variable. `core/09` identifies
   *specification demand* with `H(verdict)`. The unit (bits) is Shannon's; the quantity is Shannon's;
   the identification with demand is ours.
-- **Conditional entropy `H(X|Y)` and mutual information `I(X;Y)`** — `core/08` identifies *runtime
+- **Conditional entropy `H(X|Y)` and mutual information `I(X;Y)`** — `core/09` identifies *runtime
   demand of the parts* with `H(verdict|S)` and *seam demand* with `I(verdict;S)`.
 - **The chain rule**, `H(X) = H(X|Y) + I(X;Y)` — **this is what the framework calls "conservation."**
   Conservation of specification demand, in the closing-predicate case, **is the chain rule of
@@ -145,7 +146,7 @@ stated claims (the seam identity, actor-relative store allocation, and the encod
 the same chain rule under three different conditioning variables. That mapping could have failed. It
 did not. **That is the contribution, and it is not the theorem.**
 
-**Correction to earlier framing:** any presentation of `core/08` that leads with "conservation is a
+**Correction to earlier framing:** any presentation of `core/09` that leads with "conservation is a
 theorem" without immediately naming Shannon is misleading. Lead with: *"conservation, on the
 closing-predicate region, is Shannon's chain rule — here is why that identification holds."*
 
@@ -153,7 +154,7 @@ closing-predicate region, is Shannon's chain rule — here is why that identific
 
 **"Coding Theorems for a Discrete Source with a Fidelity Criterion," IRE Nat. Conv. Rec. (1959).**
 
-`core/09` §4.1 derives the per-decision error rate under resolve-overflow as
+`core/10` §4.1 derives the per-decision error rate under resolve-overflow as
 
 > `p_err = H_b⁻¹(1 − r)`, `r = C_resolve / n`
 
@@ -173,12 +174,12 @@ model.
 **"Elements of Information Theory" (1991, 2nd ed. 2006).**
 
 The canonical reference for the chain rule, conditional entropy, mutual information, and
-rate-distortion as used throughout `core/08` and `core/09`. Any formal write-up should cite this for
+rate-distortion as used throughout `core/09` and `core/10`. Any formal write-up should cite this for
 the machinery rather than re-deriving it, and any reviewer will expect it.
 
-### 1.11 Hallucination taxonomies — prior art for `core/09` §6
+### 1.11 Hallucination taxonomies — prior art for `core/10` §6
 
-`core/09` decomposes hallucination into three causes (missing / poisoned / overflowed ground). The
+`core/10` decomposes hallucination into three causes (missing / poisoned / overflowed ground). The
 existing literature already partitions hallucination, and must be credited:
 
 - **Ji et al. (2023), "Survey of Hallucination in Natural Language Generation," *ACM Computing
@@ -186,7 +187,7 @@ existing literature already partitions hallucination, and must be credited:
 - **Huang et al. (2023), "A Survey on Hallucination in Large Language Models"** — the extended
   taxonomy.
 - **Xu, Jain & Kankanhalli (2024), "Hallucination is Inevitable"** and **Kalai & Vempala** — the
-  non-zero lower bound on model error, already cited in `core/03`, and the reason `core/09`'s escape
+  non-zero lower bound on model error, already cited in `core/03`, and the reason `core/10`'s escape
   cannot be driven to zero by capacity alone.
 
 **What DDD adds — and the honest limit of the claim.** The three-cause decomposition is *causal and
@@ -231,27 +232,47 @@ was optimal. That is false, and brute-force search falsifies it whenever a volat
 long. The correct rule is the per-token normalisation, which is Smith's, established in 1956.
 The framework applied a known scheduling result; it did not derive a new one.
 
+### 1.14 DORA / Forsgren, Humble & Kim — the DevOps research programme
+
+Accelerate (2018) and the annual State of DevOps reports.
+
+applications/sdlc/production-as-ground.md reads DORA's four key metrics as instrumentation of the
+encode/verify gap, and treats DORA's findings as external corroboration.
+
+What DDD adds: an explanation of WHY the metrics work (§2-3), and one derived prediction DORA has
+not tested (§7). What DDD explicitly does NOT add: the batch-size result, which predates both and
+belongs to Reinertsen and Lean queueing theory (§5). The framework offers a redescription there,
+not an explanation DORA lacks, and says so.
+
+The DORA correspondence is retrodiction against PUBLISHED findings. DORA's response-level data is
+not public; no statistical validation was performed and none is claimed.
+
+### 1.15 Reinertsen — product development flow / queueing theory
+
+The batch-size and feedback-latency results. Cited so that production-as-ground does not appear to
+claim them.
+
 ### Additional context worth acknowledging
 
 Two adjacent literatures that a reviewer will raise, and which the framework should acknowledge
 rather than be caught by:
 
 - **Minimum description length / Kolmogorov complexity** (Solomonoff, Kolmogorov, Rissanen) — an
-  alternative formalisation of "how much specification does this task require." `core/08` uses
+  alternative formalisation of "how much specification does this task require." `core/09` uses
   Shannon entropy over a ground distribution instead, which is *weaker but computable*. Worth a
   sentence in any paper explaining the choice: MDL would give a distribution-free measure but is
   uncomputable; entropy is distribution-relative but calculable, which is what let us actually
   compute the worked examples.
 - **Bounded rationality** (Simon, 1955) and **rational inattention** (Sims, 2003) — the economics
   literature on agents with limited information-processing capacity, where Sims in particular models
-  attention as a Shannon channel with finite capacity. This is close prior art for `core/09`'s
+  attention as a Shannon channel with finite capacity. This is close prior art for `core/10`'s
   capacity model and should be cited: **the move of treating a decision-maker's capacity as an
   information channel is Sims's, not ours.** DDD's addition is the *verifier* condition — that
   capacity overflow only produces escape where no check catches the shed decision.
 
 ### The register sentence, for every future write-up
 
-> **`core/08` and `core/09` are applied information theory. Shannon supplied the entropy, the chain
+> **`core/09` and `core/10` are applied information theory. Shannon supplied the entropy, the chain
 > rule, and the rate-distortion bound; Sims supplied the channel model of a capacity-limited
 > decision-maker. What this framework contributes is the identification of specification demand with
 > verdict entropy, of seam demand with mutual information, and of escape with the intersection of
@@ -367,34 +388,31 @@ predictive, so **credit the prior taxonomy.**
 
 ---
 
-## 3. The strongest counterexample, admitted
+## 3. The strongest counterexample, resolved
 
-### 3.1 Architecture can *destroy* demand, not just relocate it
+### 3.1 Architecture relocates demand into the seam — the counterexample, resolved
 
-Conservation says demand is fixed by the task and can only move between stores. But **re-conceiving
-the task boundary can eliminate whole classes of governing decisions:**
+This was booked as the strongest counterexample to conservation, and `core/09` §4 resolves it. The
+examples are real; the destruction reading was an artifact of counting the parts and not the seam.
 
-- Idempotent / content-addressed designs (Nix-style builds) delete ordering and rebuild decisions.
-- CRDTs delete conflict-resolution and reconciliation decisions.
-- Declarative substrates absorb functions that were application concerns (Moors 2002, on end-to-end).
+- **Content-addressed designs** (Nix-style builds) do not delete ordering decisions. They make the
+  determination once, in deciding **what constitutes identity of a build input** — whether timestamps,
+  build paths, or compiler versions are inside the hash. That is where the difficulty of such systems
+  is known to concentrate.
+- **CRDTs** do not delete conflict-resolution decisions. They make the determination once, in the
+  choice between add-wins, remove-wins, and last-writer-wins semantics. That is where the difficulty
+  of CRDT design is known to concentrate.
+- **Declarative substrates** absorb application concerns into the substrate's own interface contract,
+  which is the seam under another name.
 
-If demand can be **destroyed** by re-drawing the task boundary, then "fixed by the task, invariant
-to the system" is false — *unless* "task" is redefined post hoc to absorb the change, which is the
-tautology trap.
+In each case the determination moved into the **seam**: the interface contract the decomposition
+brings into existence. Count the seam and the total is invariant. The parts are cheaper because
+somebody pre-paid.
 
-**Resolution, stated honestly.** We concede one of two positions and must pick openly:
-
-1. **Weak (defensible):** demand is conserved *for a fixed task decomposition*. Changing the
-   decomposition changes the demand. This is true, useful, and no longer a "law" — it is an
-   accounting identity within a chosen boundary.
-2. **Strong (indefensible):** demand is fixed by "the task itself" independent of decomposition.
-   This is false, per the counterexamples, unless rescued by tautology.
-
-**We take position 1.** Conservation holds *within a decomposition*; choosing the decomposition is
-itself a governing decision (the highest-leverage one), and a better decomposition genuinely
-lowers total demand. This is consistent with Brooks (you cannot remove *essential* complexity, but
-the boundary of "essential" moves when you re-conceive the problem) and it is the correct
-engineering advice anyway: **the decomposition is the decision that matters most.**
+**The resolution is no longer a choice between a weak and a strong position.** For any conditioning
+variable, `H(V) = I(V;X) + H(V|X)`; a decomposition is such a variable; the total is therefore
+invariant by the chain rule, not by concession (`core/09` §4). What genuinely changes the total is
+changing the task or the declared tolerance — not re-drawing boundaries within one.
 
 ---
 
@@ -459,10 +477,12 @@ the cross-domain unification, universal "act is a decision" as anything more tha
 | `p_err` under resolve-overflow | **Shannon 1959** (rate-distortion) | we applied a bound, did not derive one |
 | Capacity as an information channel | **Sims 2003** (rational inattention); **Simon 1955** | the channel model of a decision-maker is Sims's |
 | Hallucination has kinds | **Ji et al. 2023**; **Huang et al. 2023** | our contribution is the *causal* split + distinct remedies |
-| Error cannot be driven to zero | **Xu et al. 2024**; **Kalai & Vempala** | already cited in `core/03`; also bounds `core/09` |
+| Error cannot be driven to zero | **Xu et al. 2024**; **Kalai & Vempala** | already cited in `core/03`; also bounds `core/10` |
 | Alternative demand formalisation | **Kolmogorov / MDL** | acknowledge the road not taken, and why |
 | Prefix ordering by stability | Martin (SDP) | the ordering principle is his |
 | The optimal ordering is rate/length | Smith 1956 (WSPT) | a known scheduling result, applied |
+| DORA metrics read as demand | Forsgren/Humble/Kim, DORA reports | corroboration; the explanation is ours, the findings are theirs |
+| Batch size, feedback latency | Reinertsen; Lean | NOT our contribution — redescription only |
 
 ---
 

@@ -11,10 +11,11 @@ Read in order:
 - **02 — completeness** · the stores are exhaustive by construction — and why that is a warning, not a boast
 - **03 — the floor** · the intrinsic floor lives in the *acceptance predicate* — the framework's best original result
 - **04 — actors** · the missing parameter: pinning resolution, selection vs. training, seams, the compound
-- **05 — composition** · the seam-demand identity; orchestrator vs. swarm; the channel is the platform
-- **06 — determination and intelligence** · determination ≠ intelligence; the LLM debate is structurally undecidable
-- **07 — projections** · the funnel & maturation as judgment-demand projections; the count/cost correction
-- **08 — the measure** · demand = Shannon entropy of the verdict; conservation = the chain rule; the counting debt paid for closing predicates
-- **09 — the floor mechanism** · escape = overflow ∩ open; p_err derived from rate-distortion; hallucination as surfaced escape
+- **05 — accountability** · the second actor axis, independent of pinning resolution and running opposite to it; the three conditions derived from escape's pricing; the chain must be attributable, not remembered; answerability and liability come apart; the assurance tower
+- **06 — composition** · the seam-demand identity; orchestrator vs. swarm; the channel is the platform
+- **07 — determination and intelligence** · determination ≠ intelligence; the LLM debate is structurally undecidable
+- **08 — projections** · the funnel & maturation as judgment-demand projections; the count/cost correction
+- **09 — the measure** · demand = Shannon entropy of the verdict; conservation = the chain rule; the counting debt paid for closing predicates
+- **10 — the floor mechanism** · escape = overflow ∩ open; p_err derived from rate-distortion; hallucination as surfaced escape
 
-The load-bearing, falsifiable claims are in **03**, **04**, **08**, and **09**. The honesty about register is in **01**.
+The load-bearing, falsifiable claims are in **03**, **04**, **09**, and **10**. The honesty about register is in **01**.
