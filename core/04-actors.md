@@ -60,9 +60,10 @@ locates the floor precisely.
 
 > **The intrinsic floor is a property of the acceptance predicate, not of the decision.**
 >
-> Zero wherever the predicate is **decidable over digital ground**. There, *path-degeneracy* makes
-> it robustly zero: infinitely many structurally different determiners suffice, so **no particular
-> judgment is required — only an adequate one.**
+> Zero wherever the predicate is **closed for the arrangement over ground it can inspect**
+> (`core/03`, effective closure). There, *path-degeneracy* makes it robustly zero: infinitely many
+> structurally different determiners suffice, so **no particular judgment is required — only an
+> adequate one.**
 >
 > Non-zero exactly where the predicate does not close. **And whether it closes is, in general,
 > undecidable** (Rice).
@@ -82,9 +83,9 @@ whether the future is fixed:
 
 *A note on the determinism objection.* A strong-determinism premise ("know every variable and the
 future is fixed") does **not** rescue the original zero-floor claim. It imports the entire physical
-state, which is the opposite of *"closes over **digital** ground"* — the whole content of zero-floor
-is that the relevant ground is **small and closed**, and universal determinism makes it **maximal
-and open**. And the objections above are about decidability, which determinism does not touch.
+state, which is the opposite of *"closed for the arrangement over ground it can **inspect**"* — the
+whole content of zero-floor is that the relevant ground is **small and closed**, and universal
+determinism makes it **maximal and open**. And the objections above are about decidability, which determinism does not touch.
 
 ### 2.2 Path-degeneracy is what makes the surviving claim robust
 

@@ -225,8 +225,8 @@ about — so `H(verdict)` is **undefined** and the measure does not exist.
 
 This is not a gap to be patched. It is the **same boundary** the floor result already draws:
 
-> **The information-theoretic measure of demand exists if and only if the acceptance predicate
-> closes over digital ground. It vanishes exactly at the floor.**
+> **The information-theoretic measure of demand exists if and only if the acceptance predicate is
+> closed for the arrangement over ground it can inspect. It vanishes exactly at the floor.**
 
 Which is the elegant, and honest, consequence: we have measured demand precisely on the region where
 the framework says the floor is zero, and the measure *itself* goes silent precisely where the floor
