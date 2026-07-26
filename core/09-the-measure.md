@@ -206,12 +206,14 @@ Three of the framework's claims that read as independent —
 actor's encoding, or a retrieval policy. Different `X`, same `I(verdict;X) + H(verdict|X) =
 H(verdict)`.
 
-**One caveat carried forward, and it is where the next work is.** In all three, *escape* is folded
-into `H(verdict|X)` together with *judgment* — the identity separates "encoded" from "everything
-else," not "judged" from "escaped." Splitting those two requires a model of actor **capacity**: how
-much of `H(verdict|X)` a given actor can actually carry versus sheds into escape. **The floor lives
-in that split, and it is not yet done.** It is the natural next result: the point at which
-`H(verdict|X)` exceeds actor capacity is where demand begins to escape.
+**One caveat, now paid down.** In all three, *escape* is folded into `H(verdict|X)` together with
+*judgment* — the identity separates "encoded" from "everything else," not "judged" from "escaped."
+Splitting those two required a model of actor **capacity**, and `core/10-the-floor-mechanism.md`
+supplies it: hold and resolve capacity in bits, effective capacity `min(C_hold, C_resolve)`, the two
+overflow modes, and the intersection result `escape = overflow ∩ open` with a formula in bits, plus
+a soft-capacity law derived from rate-distortion theory. The point at which `H(verdict|X)` exceeds
+effective capacity is where demand begins to escape — derived and demonstrated, not conjectured
+(`core/10` §§2–4).
 
 ---
 
@@ -238,6 +240,16 @@ predicates.** For open predicates it remains what it was — a principle, an acc
 a measured invariant. The note does not extend the framework's reach; it *proves* the part that was
 already inside the decidable region, and marks the boundary sharply.
 
+**A second silence, inside the boundary.** Even where it exists, `H(verdict)` prices the
+**verdict**, not the **search**: it is the information required to *specify* the correct answer over
+the ground the task faces, and it says nothing about the cost of *computing* one. Two tasks with
+identical verdict entropy can differ unboundedly in generation cost — a lookup table and a SAT
+instance over the same input space carry the same `H(verdict)`, and one is answered by indexing
+while the other is NP-hard to solve. Closure decides whether the floor is zero and whether the
+measure exists; generation cost is a second, independent variable the measure does not see
+(`core/03` §2, `core/04` §2). The two quantities this release separates must not be re-fused through
+the measure.
+
 ---
 
 ## 8. Caveats, booked
@@ -255,13 +267,7 @@ Three, none fatal, all required in any write-up:
    faces different demand in different deployment environments — but it is an added parameter, not a
    free lunch.
 
-3. **Escape is not yet separated from judgment.** In every instance (§6), `H(verdict|X)` bundles
-   *judged* and *escaped* together — the identity cleaves "encoded" from "everything else," not
-   "judged" from "escaped." Separating them needs an actor-**capacity** model (how much of
-   `H(verdict|X)` an actor can carry before shedding into escape). The floor lives in that split. It
-   is the next result, and it is not done.
-
-4. **Three instances is credibility, not certification.** The identity is general (it is the chain
+3. **Three instances is credibility, not certification.** The identity is general (it is the chain
    rule), and it has now been exercised on three conditioning variables — decomposition, actor
    encoding, and (empirically, with distractors) retrieval — all on closing-predicate tasks. That is
    real triangulation, not a single toy. But chained seams, multi-actor compositions, and non-uniform
