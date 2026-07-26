@@ -59,7 +59,8 @@ The apparatus holds against this without strain:
 | The seam-demand identity | *decisions created between decomposed decisions* |
 | Poisoned ground | *corrupting what a determination reads against* |
 | The encode/verify split | *whether you author the ground a determination reads* |
-| Assurance level | *which choices count as decisions at all* |
+| Tolerance | *which choices count as decisions at all* |
+| Assurance | *how much evidence the allocation must carry* |
 
 Nothing needs a third primitive. Nothing is left over.
 
