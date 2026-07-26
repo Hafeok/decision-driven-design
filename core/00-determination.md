@@ -157,8 +157,8 @@ The antigen space is larger than the genome and shifts within a lifetime, so the
 **cannot be pre-encoded.** State precisely what that does and does not establish.
 
 It closes the **encoded** store. Capacity overflow alone would not produce a floor: a determination
-that cannot be encoded can still be verified out, and where a check exists adequacy stays cheap
-(`core/03`).
+that cannot be encoded can still be verified out, and where a check exists no particular determiner
+is required (`core/03`).
 
 **The floor is there because the predicate does not close.** The organism cannot check, before or
 after, whether a response to a novel antigen was correct. There is no verdict function over the

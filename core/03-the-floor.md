@@ -60,8 +60,10 @@ particular expert would take; you need *any* path that lands inside the acceptan
 can tell when you've landed there because the predicate closes.
 
 This is why machines reach superhuman performance on closing-predicate tasks without anything worth
-calling understanding: **adequacy is cheap where adequacy is checkable.** (The consequences for the
-intelligence debate are drawn out in `07-determination-and-intelligence.md`.)
+calling understanding: **no particular determiner is required where adequacy is checkable.** What
+closure removes is the demand for a *specific* judgment — not the cost of producing an adequate one.
+Those are separate quantities, and the floor result governs only the first (`core/04` §2.2). (The
+consequences for the intelligence debate are drawn out in `07-determination-and-intelligence.md`.)
 
 ---
 

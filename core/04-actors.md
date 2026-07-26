@@ -94,8 +94,15 @@ the same function).
 
 Infinitely many distinct decision paths converge on an adequate act. The determination does not
 require the *right* path, only *a sufficient* one. This is why models can be superhuman at tasks
-with closing predicates despite having no "understanding" in any demanding sense — **adequacy is
-cheap when adequacy is checkable.**
+with closing predicates despite having no "understanding" in any demanding sense — **no particular
+determiner is required when adequacy is checkable.**
+
+**Degeneracy is about identity, not price.** That many paths land inside the acceptance region does
+not make reaching it cheap: satisfiability is checkable in linear time, may admit astronomically many
+models, and remains NP-hard to solve. Closure sets the floor to zero; **generation cost is a second,
+independent variable**, and the floor result quantifies only the first. This is `core/04` §3's
+two-factor form — closure decides availability, cost decides ratio — applied to output generation
+rather than actor acquisition.
 
 ---
 
