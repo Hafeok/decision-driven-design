@@ -39,6 +39,11 @@ The **last wind** is the executing actor's residual variance under the tightest 
 It is what remains after you have done everything you can to constrain the actor, and it is the
 irreducible cost of using that actor at all.
 
+**The last wind prices dispersion, not risk.** Variance is not risk: a zero-variance actor can be
+reliably wrong. Assurance requires expected loss and tail risk, not dispersion alone — bias and
+correlated error belong to the residual account and are not carried by variance. The last wind
+prices only the dispersion component.
+
 **Why this axis is new.** The classical results have no theory of actors. Ashby's regulator is a
 black box with a variety count — he never asks *what kind of thing* is regulating, because in 1956
 it did not vary. Tesler asks "user, developer, or platform" — all humans in different hats. Design
@@ -60,9 +65,10 @@ locates the floor precisely.
 
 > **The intrinsic floor is a property of the acceptance predicate, not of the decision.**
 >
-> Zero wherever the predicate is **decidable over digital ground**. There, *path-degeneracy* makes
-> it robustly zero: infinitely many structurally different determiners suffice, so **no particular
-> judgment is required — only an adequate one.**
+> Zero wherever the predicate is **closed for the arrangement over ground it can inspect**
+> (`core/03`, effective closure). There, *path-degeneracy* makes it robustly zero: infinitely many
+> structurally different determiners suffice, so **no particular judgment is required — only an
+> adequate one.**
 >
 > Non-zero exactly where the predicate does not close. **And whether it closes is, in general,
 > undecidable** (Rice).
@@ -82,9 +88,9 @@ whether the future is fixed:
 
 *A note on the determinism objection.* A strong-determinism premise ("know every variable and the
 future is fixed") does **not** rescue the original zero-floor claim. It imports the entire physical
-state, which is the opposite of *"closes over **digital** ground"* — the whole content of zero-floor
-is that the relevant ground is **small and closed**, and universal determinism makes it **maximal
-and open**. And the objections above are about decidability, which determinism does not touch.
+state, which is the opposite of *"closed for the arrangement over ground it can **inspect**"* — the
+whole content of zero-floor is that the relevant ground is **small and closed**, and universal
+determinism makes it **maximal and open**. And the objections above are about decidability, which determinism does not touch.
 
 ### 2.2 Path-degeneracy is what makes the surviving claim robust
 
@@ -94,8 +100,15 @@ the same function).
 
 Infinitely many distinct decision paths converge on an adequate act. The determination does not
 require the *right* path, only *a sufficient* one. This is why models can be superhuman at tasks
-with closing predicates despite having no "understanding" in any demanding sense — **adequacy is
-cheap when adequacy is checkable.**
+with closing predicates despite having no "understanding" in any demanding sense — **no particular
+determiner is required when adequacy is checkable.**
+
+**Degeneracy is about identity, not price.** That many paths land inside the acceptance region does
+not make reaching it cheap: satisfiability is checkable in linear time, may admit astronomically many
+models, and remains NP-hard to solve. Closure sets the floor to zero; **generation cost is a second,
+independent variable**, and the floor result quantifies only the first. This is `core/04` §3's
+two-factor form — closure decides availability, cost decides ratio — applied to output generation
+rather than actor acquisition.
 
 ---
 
@@ -128,6 +141,19 @@ conserved and does not vanish, **relocates from the act onto the actor.**
 
 Which is why selection is brutal and high-attrition: you are measuring a property you **cannot
 manufacture.**
+
+**Resolution is not correct determination.** Where the predicate does not close, determination falls
+to judgment in the operational sense: someone still acts, and is accountable for having acted. It
+does not follow that judgment *determines correctly* — open cases include answers that exist but are
+not computable, unavailable ground, contested or moving criteria, under-specified tasks, questions
+that are normative, and outcomes that are irreducibly stochastic. The framework's claim is the
+first, not the second:
+
+> **Where direct acceptance evidence is unavailable, trust shifts from output verification toward
+> the process, institution, and accountable principal that authorises the act.**
+
+*You check the worker* — without any implication that workers solve undecidable predicates. This is
+the point at which §3 and `core/05` join.
 
 ### Why cost decides the rest
 

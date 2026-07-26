@@ -34,10 +34,14 @@ law that overclaims.
 
 Two qualifiers carry the whole weight, and both are concessions the review forced:
 
-**"At a declared assurance level."** Assurance is the *granularity bound*. A choice is a governing
-decision iff varying it moves the outcome past tolerance (`00`, admission tests). Change the
-tolerance and you change the set. Without a declared assurance level the decision set is not even
-well-formed.
+**"At a declared assurance level."** Two distinct variables live under this qualifier and must not
+be fused: **tolerance** — which outcome deviations are acceptable — and **assurance** — the strength
+of evidence that tolerance is met. The granularity bound is **tolerance-indexed**: a choice is a
+governing decision iff varying it moves the outcome past *tolerance* (`00`, admission tests). Change
+the tolerance and you change the set. Assurance then governs how much evidence the allocation must
+carry — which is what `core/05` §7's tower is built on: **the tower is a tower of assurance
+declarations, and the thing each declares is a tolerance.** Two systems can share a tolerance and
+differ in required assurance. Without a declared tolerance the decision set is not even well-formed.
 
 **"Within a fixed decomposition."** This is the important one. **Conservation holds within a chosen
 task decomposition — not across decompositions.** Re-drawing the task boundary can *destroy* demand

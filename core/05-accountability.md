@@ -36,7 +36,7 @@ It is not sufficient. Something else is required, and core does not currently sa
 
 ---
 
-## 2. Accountability capacity is a second axis, independent of pinning resolution
+## 2. Accountability completeness is a second axis, independent of pinning resolution
 
 `04` ranks actors by **pinning resolution** — by value → by binding → by classification, tightest to
 loosest. That axis answers *how reliably will this actor determine what was determined for it.* It
@@ -47,8 +47,20 @@ classical program is the **tightest**-pinned actor and has **zero** accountabili
 human is the loosest-pinned and is the only current instance with full capacity. On this axis the
 spectrum runs the other way.
 
-> **Accountability capacity is a second axis of the actor model — independent of pinning resolution,
-> in the sense that it is not recoverable from it — and the scarcer of the two.**
+> **Accountability completeness is a property of an arrangement, not a capacity of an actor. An
+> execution is accountability-complete when it is linked to a persistent responsible principal, an
+> attributable record, a defined stake, and an enforceable consequence path.**
+>
+> It is independent of pinning resolution, in the sense that it is not recoverable from it — and it
+> is the scarcer of the two properties.
+
+A model does not simply *lack* sanctionability. Persistence depends on identity rules and continuity
+of obligation; stake depends on property, role, bond, reputation, or delegated interest;
+sanctionability depends on an authority with enforceable jurisdiction — all properties of a
+relationship among executor, principal, record, and sanctioning authority. A deployment arrangement
+attaches consequence to an operator, vendor, owner, or insurer. §7 already says today's towers
+terminate at the operator — the arrangement framing is what makes that statement structural rather
+than an aside.
 
 *Independent, not orthogonal.* The axes are not unrelated: §7 shows they are linked through
 revocability. What holds is the weaker and more useful claim — knowing how tightly an actor can be
@@ -64,23 +76,29 @@ structure — so the bearer must still exist when it arrives: **persistence**. A
 deliverable: **sanctionability**.
 
 All three fall out of the one state the principle forbids, which is why accountability is a
-structural concern of the framework rather than an ethical annexe to it.
+structural concern of the framework rather than an ethical annexe to it. **Nothing in that
+derivation requires the bearer to be a single actor.** It now constrains the arrangement.
 
-- **Persistence** — the actor continues to exist beyond the act.
-- **Stake** — something of the actor's can be taken.
-- **Sanctionability** — the actor has standing such that a sanction can be applied and can land.
+- **Persistence** — the responsible element continues to exist beyond the act.
+- **Stake** — something of the bearer's can be taken.
+- **Sanctionability** — the bearer has standing such that a sanction can be applied and can land.
 
 **Persistence is the root, not one condition among three.** Stake requires something surviving to be
 taken; sanctionability requires a target existing at sanction time. The other two stand on it.
 
-| Actor | Pinning resolution | Accountability capacity |
-|---|---|---|
-| **Classical program** | tightest (by value) | **none** — no persistence as a deciding thing, no stake, nothing to sanction |
-| **Model** | middle (by binding) | **none currently** — see §7; the incapacity is contingent |
-| **Human** | loosest (by classification) | **full** — persists, holds stake, is sanctionable |
+The table reports **which arrangements are currently available** for each actor, not what the actor
+intrinsically is:
 
-*Falsifier:* an actor bearing consequence without persistence — a sanction landing on something that
-no longer exists in any sense that affects it.
+| Actor | Pinning resolution | Accountability arrangements available |
+|---|---|---|
+| **Classical program** | tightest (by value) | no arrangement terminates on the program itself; it terminates on the author or operator |
+| **Model** | middle (by binding) | none terminating on the model — see §7; the incapacity is contingent |
+| **Human** | loosest (by classification) | **full** — persists, holds stake, is sanctionable in its own person |
+
+*Falsifier:* an accountability-complete arrangement in which **no element** persists across the
+act–sanction interval. Estates, successor liability, post-hoc credential revocation and reputational
+effects surviving personnel change all show persistence living in the **obligation chain** rather
+than the executor — the arrangement framing accommodates these; the actor framing did not.
 
 ---
 
@@ -123,23 +141,44 @@ Decision records, contracts, signatures, stamped calculation packages, flight re
 logs exist *because* internal chains are unreliable — not as supplements to reliable ones.
 Retrospective narrative repair is the failure mode these instruments are built against.
 
-**Consequence (inversion).** On the provenance condition alone, an actor with an externalised
-immutable record can *outperform* a human: every determination attributed, every input recorded, no
-confabulation, no post-hoc repair. **The barrier to model accountability was never the chain.**
-Models can win on the chain. The barrier is stake and sanctionability.
+**Consequence (inversion, narrowed to provenance).** On the provenance condition, an actor with an
+externalised record can exceed a human — but the claim must be honest about its baseline and its
+scope. The comparison is against *unaided human recollection*, which is not the human accountability
+system: that system already includes contracts, signatures, witnesses, logs and procedural review.
+And a ledger delivers less than the word "accountability" suggests. Separate five things the claim
+is tempted to run together:
+
+| Property | What a ledger gives |
+|---|---|
+| Provenance | yes — artifact identity, timestamps, capture |
+| Traceability | yes — linkage across steps |
+| Explanation | **no** — recorded is not explained |
+| Causal responsibility | **no** |
+| Liability | **no** — requires the arrangement |
+
+Tamper-evident is not true; a complete record is not complete ground. The defensible claim: **on
+artifact-level provenance specifically**, an engineered ledger can exceed unaided recollection — one
+component of accountability, not the whole. **The barrier to model accountability was never the
+chain.** Models can win on the chain. The barrier is stake and sanctionability.
 
 *Falsifier:* a domain where accountability is successfully assigned on an actor's self-report with
 no attributable external record, and survives contest.
 
 ---
 
-## 5. Answerability and liability are separable
+## 5. Answerability, liability, and control are separable
 
-Accountability decomposes into two obligations that come apart in practice and must not be fused:
+Accountability decomposes into three components that come apart in practice and must not be fused:
 
 - **Answerability** — the obligation to produce the chain: which determinations were made, by whom,
   against what ground.
 - **Liability** — bearing the consequence.
+- **Control** — who had authority to make the determination, who could have prevented or overridden
+  it, who selected and configured the executor.
+
+A party can be answerable and liable with no control — unfair, and ineffective; a party with control
+can shed liability through organisational design. For model deployments, **selection and
+configuration authority is usually more consequential than execution.**
 
 They are separated deliberately in real practice:
 
@@ -183,6 +222,11 @@ resolved by nobody. Overflow ∩ open.
 Note what this does **not** claim: that model-executed determinations are always escape. A model
 executing under a named accountable human is a well-formed Judgment allocation. What is forbidden is
 the allocation that names no one.
+
+This is also where the actor model joins this chapter: where direct acceptance evidence is
+unavailable, trust shifts from output verification toward the process, institution, and accountable
+principal that authorises the act (`core/04` §3) — resolution with accountability, not a claim of
+correct determination.
 
 ---
 

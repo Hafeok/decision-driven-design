@@ -11,9 +11,9 @@ the decision.**
 
 > **The intrinsic floor is a property of the acceptance predicate, not of the decision.**
 >
-> **Zero** wherever the predicate is **decidable over digital ground** — and there,
-> *path-degeneracy* makes it *robustly* zero: infinitely many structurally different determiners
-> suffice, so **no *particular* judgment is required, only an *adequate* one.**
+> **Zero** wherever the predicate is **closed for the arrangement over ground it can inspect** — and
+> there, *path-degeneracy* makes it *robustly* zero: infinitely many structurally different
+> determiners suffice, so **no *particular* judgment is required, only an *adequate* one.**
 >
 > **Non-zero** exactly where the predicate does not close — and **whether it closes is, in general,
 > undecidable** (Rice's theorem).
@@ -24,6 +24,17 @@ run, in judgment.
 
 The result relocates that floor. It is not a property of *how hard the decision is*. It is a
 property of **whether you can check the answer.**
+
+**Effective closure, defined.** A predicate is **closed for an arrangement** when the relevant
+ground is observable and adequacy can be evaluated within declared resource, latency, and confidence
+bounds. **Decidable** is reserved for the formal special case. Formal decidability is the wrong
+instrument in both directions: any bounded finite domain is decidable by exhaustive lookup — making
+practically open predicates formally closed — while a decidable checker may require infeasible time,
+memory, observation or precision. Where precision is needed, decompose — logical decidability,
+observational closure, computational feasibility, economic feasibility, assurance sufficiency — and
+operational closure is the conjunction of whichever are relevant to the arrangement. This is a
+strengthening, not a retreat: the framework has been using closure as an engineering property
+throughout, and this makes the usage honest.
 
 ---
 
@@ -36,8 +47,8 @@ Consider what each store requires:
   met — i.e. it requires the **acceptance predicate to be computable.**
 - **Judgment** is what carries whatever the first two cannot.
 
-If the acceptance predicate is **decidable over digital ground**, then the mechanical store is
-available: you can check the answer. And if you can check the answer, you do not need the *right*
+If the acceptance predicate is **closed for the arrangement over ground it can inspect**, then the
+mechanical store is available: you can check the answer. And if you can check the answer, you do not need the *right*
 determiner — you need only an *adequate* one, because you can verify adequacy directly. The floor is
 zero: no particular judgment is load-bearing.
 
@@ -60,8 +71,10 @@ particular expert would take; you need *any* path that lands inside the acceptan
 can tell when you've landed there because the predicate closes.
 
 This is why machines reach superhuman performance on closing-predicate tasks without anything worth
-calling understanding: **adequacy is cheap where adequacy is checkable.** (The consequences for the
-intelligence debate are drawn out in `07-determination-and-intelligence.md`.)
+calling understanding: **no particular determiner is required where adequacy is checkable.** What
+closure removes is the demand for a *specific* judgment — not the cost of producing an adequate one.
+Those are separate quantities, and the floor result governs only the first (`core/04` §2.2). (The
+consequences for the intelligence debate are drawn out in `07-determination-and-intelligence.md`.)
 
 ---
 
@@ -90,9 +103,10 @@ exactly the assertion Collins's program contradicts.
 A strong-determinism premise — *"if every variable of the universe is known, the future is fixed"* —
 does **not** rescue a zero floor on open predicates, for two reasons:
 
-1. **It imports the entire physical state**, which is the *opposite* of "closes over **digital**
-   ground." The whole content of the zero-floor case is that the relevant ground is **small and
-   closed.** Universal determinism makes it **maximal and open** — it changes the subject.
+1. **It imports the entire physical state**, which is the *opposite* of "closed for the arrangement
+   over ground it can **inspect**." The whole content of the zero-floor case is that the relevant
+   ground is **small and closed.** Universal determinism makes it **maximal and open** — it changes
+   the subject.
 2. **The objections are about decidability, not predictability.** Rice's theorem and inevitable model
    error are true whether or not the universe is deterministic. Determinism is simply the wrong tool
    against them.
@@ -111,7 +125,7 @@ something you could establish, when in general you cannot (Rice).
 What survives is **better**, because it *locates* the floor precisely instead of asserting its
 absence:
 
-> The floor lives in the **acceptance predicate.** Decidable predicate → zero, robustly. Open
+> The floor lives in the **acceptance predicate.** Closed predicate → zero, robustly. Open
 > predicate → non-zero, necessarily. Whether a given predicate is decidable → itself undecidable in
 > general.
 

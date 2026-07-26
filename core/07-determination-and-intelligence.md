@@ -52,13 +52,21 @@ Recall the floor result (`core/04`, §2):
 
 Read that again with intelligence in mind. It says:
 
-> ## **A closing predicate makes intelligence unnecessary.**
+> ## **A closing predicate makes intelligence unnecessary *for trust*.**
 >
-> **Adequacy is cheap where adequacy is checkable.**
+> **Where adequacy is checkable, confidence in an output need not depend on attributing
+> intelligence to its producer.**
 
 You do not need to *understand* chess to play it superhumanly — you need a search and an evaluation
 function. You do not need to understand a codebase to make its tests pass. **Every domain that fell
 to machines fell because someone found a closing predicate — not because someone built a mind.**
+
+**What this does not say.** It does not say the output is cheap to produce. Closure removes the
+demand for a *particular* determiner; it does not price the search for an adequate one. Chess is the
+illustration and the caveat at once: the predicate closed, and it still took the field decades to
+build a search and an evaluation function good enough to exploit it. Intelligence — or whatever we
+are calling sophisticated search — may remain fully load-bearing for **generation** while ceasing to
+be load-bearing for **trust**. Only the second claim is the framework's.
 
 Which inverts the usual question. The interesting one is not *"does determination prove
 intelligence?"* It is:
@@ -121,7 +129,8 @@ This is not a temporary state of ignorance pending better benchmarks. It is **st
 > predicate.**
 >
 > The moment you construct one, **you have closed the predicate** — and you have moved the question
-> into the region where degeneracy says *adequacy is cheap and intelligence is unnecessary*.
+> into the region where degeneracy says *no particular determiner is required, and intelligence is
+> unnecessary for trust*.
 
 The measuring instrument destroys the thing it was built to measure. Not metaphorically —
 **definitionally.**
@@ -139,15 +148,22 @@ you cannot grade those either. The same unverifiability that blocks the believer
 
 > *"Look how well it reasons about X."*
 
-**Every benchmark you cite is a closed predicate** — that is what makes it a benchmark. And on closed
-predicates, **the framework says intelligence is not required**: path-degeneracy, adequacy is cheap
-where adequacy is checkable.
+**Every benchmark you cite is a closed predicate** — that is what makes it a benchmark. And on a
+closed predicate, path-degeneracy says **no particular determiner is required.** So a passing score
+establishes that the producer reached the acceptance region. What it establishes *about the producer*
+depends on a second variable the score does not report:
 
-**Your evidence is drawn entirely from the region where your conclusion does not follow.**
+- **Where generation is cheap**, passing is no evidence about the producer at all. Any adequate path
+  would have done, and many were available.
+- **Where generation is hard**, passing *is* evidence — of **search competence over a closed
+  predicate**. That is a real property, and it is not nothing.
 
-Worse: **every impressive benchmark result is, structurally, evidence *against* the relevance of the
-benchmark.** The better the score, the more certainly it was obtainable without the thing you are
-trying to demonstrate.
+But it is not the property under dispute. **Whether search competence over closed predicates
+constitutes intelligence is precisely the contested question**, and a score computed inside the
+closed region cannot answer a question about performance outside it.
+
+**Your evidence is real and still does not reach your conclusion** — not because it measures nothing,
+but because it measures in the region where the disputed capacity is not what is being exercised.
 
 ### 4.3 The shape of the deadlock
 
@@ -173,12 +189,20 @@ this is where the claim becomes **falsifiable**:
 **Either** exhibit an open predicate on which performance can nonetheless be reliably assessed — which
 would mean the predicate was not open, and the framework's classification of it was wrong;
 
-**or** show that path-degeneracy fails somewhere — that on some class of *closing* predicates, adequacy
-is **not** cheap, and only a narrow band of determiners can reach it. That would mean intelligence is
-load-bearing on some closed predicates after all, and the framework's central claim about degeneracy
-is false.
+**or** show that *identity*-degeneracy fails somewhere — that on some class of *closing* predicates a
+**particular** determiner is required, and adequacy cannot be reached by structurally different
+paths. That would mean the floor is non-zero on a closed predicate, and the framework's central claim
+about degeneracy is false.
 
-**Either would falsify this document.** Neither has been done.
+**The first has not been done. The second has not been done.**
+
+**A third form of this falsifier was offered in earlier versions of this document and has been met.**
+It asked for a closing predicate on which *adequacy is not cheap and only a narrow band of
+determiners can reach it*. Satisfiability answers it: linear to check, NP-hard to solve. That
+falsifier was badly posed — it fused identity-degeneracy with generation cost — and its refutation
+retires the cost reading rather than the floor result (see `core/03` and `core/04` §2). **It is
+recorded rather than removed**, because a framework that quietly deletes a met falsifier is worth
+less than one that keeps the receipt.
 
 Until one is, the honest position is:
 
