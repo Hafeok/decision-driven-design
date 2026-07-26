@@ -39,6 +39,11 @@ The **last wind** is the executing actor's residual variance under the tightest 
 It is what remains after you have done everything you can to constrain the actor, and it is the
 irreducible cost of using that actor at all.
 
+**The last wind prices dispersion, not risk.** Variance is not risk: a zero-variance actor can be
+reliably wrong. Assurance requires expected loss and tail risk, not dispersion alone — bias and
+correlated error belong to the residual account and are not carried by variance. The last wind
+prices only the dispersion component.
+
 **Why this axis is new.** The classical results have no theory of actors. Ashby's regulator is a
 black box with a variety count — he never asks *what kind of thing* is regulating, because in 1956
 it did not vary. Tesler asks "user, developer, or platform" — all humans in different hats. Design
@@ -136,6 +141,19 @@ conserved and does not vanish, **relocates from the act onto the actor.**
 
 Which is why selection is brutal and high-attrition: you are measuring a property you **cannot
 manufacture.**
+
+**Resolution is not correct determination.** Where the predicate does not close, determination falls
+to judgment in the operational sense: someone still acts, and is accountable for having acted. It
+does not follow that judgment *determines correctly* — open cases include answers that exist but are
+not computable, unavailable ground, contested or moving criteria, under-specified tasks, questions
+that are normative, and outcomes that are irreducibly stochastic. The framework's claim is the
+first, not the second:
+
+> **Where direct acceptance evidence is unavailable, trust shifts from output verification toward
+> the process, institution, and accountable principal that authorises the act.**
+
+*You check the worker* — without any implication that workers solve undecidable predicates. This is
+the point at which §3 and `core/05` join.
 
 ### Why cost decides the rest
 

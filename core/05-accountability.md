@@ -223,6 +223,11 @@ Note what this does **not** claim: that model-executed determinations are always
 executing under a named accountable human is a well-formed Judgment allocation. What is forbidden is
 the allocation that names no one.
 
+This is also where the actor model joins this chapter: where direct acceptance evidence is
+unavailable, trust shifts from output verification toward the process, institution, and accountable
+principal that authorises the act (`core/04` §3) — resolution with accountability, not a claim of
+correct determination.
+
 ---
 
 ## 7. The assurance tower
