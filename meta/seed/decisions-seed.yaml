@@ -1,0 +1,61 @@
+# Seed decisions — the decisions settled in the scaffolding session, pre-drafted so the
+# branch agent lands rather than invents them. Schema per meta/graph-tool-ontology.md §2.
+# Emil is the principal on all; VERIFY the bases resolve to landed claim IDs before commit.
+
+decisions:
+
+  - id: DDD-dec-01
+    question: >
+      Where does the graph tool live — extending product-cli's ontology, or as a sibling
+      with its own ontology on product-core?
+    resolution: >
+      Sibling on product-core with its own ontology. Claims and decisions have a different
+      lifecycle from commands and events; coupling the framework graph to the product tool
+      would tie two release cadences together.
+    commitmentLevel: policy
+    basis: [DDD-tool-01]
+    assurance: >
+      Foundation inventory against product-cli's public README; architecture reviewed in
+      session; revisit trigger below.
+    principal: Emil
+    made: 2026-07-28 — graph scaffolding session
+    reviewTrigger: >
+      product-core generalisation proves insufficient for claim/decision node kinds, or
+      maintenance of the sibling exceeds the coupling cost it avoids.
+
+  - id: DDD-dec-02
+    question: >
+      Sequencing — does tool building precede or follow the measure paper?
+    resolution: >
+      Papers before tool. Paper 1 finishes first (related work, softenings, reproduction
+      pass, arXiv); the tool's first real exercise is the paper's feedback cycle. Only the
+      markdown scaffolding and the validator land now.
+    commitmentLevel: policy
+    basis: [DDD-tool-01, DDD-measure-01]
+    assurance: >
+      Session review; the tool's own shakedown criterion (graph-tool-mvp §5) depends on a
+      real revision cycle existing, which the paper supplies.
+    principal: Emil
+    made: 2026-07-28 — graph scaffolding session
+    reviewTrigger: >
+      Paper 1 stalls past its estimated week by a wide margin, or a canon revision arrives
+      from another source first.
+
+  - id: DDD-dec-03
+    question: >
+      Do format, process, and content version together or separately?
+    resolution: >
+      Separately. spec/ holds the claim format (format version, migration notes); process
+      documents version with the way of working; claim content versions per claim via
+      changed. Claims declare the format they conform to; validation runs against the
+      declared version.
+    commitmentLevel: policy
+    basis: [DDD-tool-01, DDD-org-02]
+    assurance: >
+      Stable Dependency Principle applied to the graph's own artifacts; enforced by
+      scripts/validate-claims.py honouring declared format versions.
+    principal: Emil
+    made: 2026-07-28 — graph scaffolding session
+    reviewTrigger: >
+      A content change appears to require a spec edit (the tell that it was a format
+      change in disguise), or format churn outpaces content churn.

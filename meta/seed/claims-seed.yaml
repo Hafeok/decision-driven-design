@@ -1,0 +1,481 @@
+# Seed claims — extracted from projections, VERIFY AGAINST LIVE REPO BEFORE LANDING
+# Source: foundation-revision §11 claim-status table + measure-paper-context + measure-paper-draft,
+# all at canon v4.4/v4.5 as pinned in those documents. Emil: strike or restatus anything wrong.
+# One file per claim once in core/claims/; single file here for review convenience.
+
+format: 1        # applies to every claim below; per-file `format: 1` on split into core/claims/
+
+claims:
+
+  # ── measure ────────────────────────────────────────────────────────────────
+
+  - id: DDD-measure-01
+    kind: empirical
+    statement: >
+      Specification demand is verdict entropy: for a task whose acceptance predicate closes,
+      the demand engineers experience as specification burden is H(V) over the ground
+      distribution.
+    status: projected
+    region: closing predicates only
+    evidence:
+      - kind: computation
+        ref: core/assets/measure-toy.py
+        note: computable and non-degenerate; NOT confirmatory — the identification is a
+          modelling claim
+    falsifier: >
+      A decomposition with high I(V;S) reliably has a cheap interface contract, or an actor
+      with high I(V;E) performs no better unaided.
+    breaks: >
+      The measure paper's identification; Shannon untouched; the framework reverts to
+      accounting discipline on this region.
+    owner: paper-2
+    changed: v4.5
+
+  - id: DDD-measure-02
+    kind: formal
+    statement: >
+      Given the identification (DDD-measure-01), conservation on the closing region is the
+      chain rule of entropy: H(V) = I(V;X) + H(V|X) for any conditioning variable X.
+    status: established
+    region: closing predicates only, conditional on DDD-measure-01
+    credits: The theorem is Shannon's (1948); only the identification is ours.
+    evidence:
+      - kind: derivation
+        ref: core/08-the-measure.md
+    falsifier: none — arithmetic; the conditional claim fires with DDD-measure-01
+    owner: paper-1
+    changed: v4.5
+
+  - id: DDD-measure-03
+    kind: formal
+    statement: >
+      The seam of a decomposition is I(V;S); a decomposition with cheaper parts has pre-paid
+      more demand into the seam, and H(V|S) is minimised exactly when I(V;S) is maximised.
+    status: reported
+    region: closing predicates; exercised on the date task
+    evidence:
+      - kind: asset
+        ref: core/assets/measure-toy.py
+        note: both decompositions sum to 25.493 bits; reproduces exactly
+    falsifier: >
+      Any decomposition of a closed task whose parts-plus-seam total departs from H(V).
+    breaks: DDD-measure-02's applicability to seams
+    owner: paper-1
+    changed: v4.4
+
+  - id: DDD-measure-04
+    kind: formal
+    statement: >
+      Store allocation is actor-relative while total demand is actor-invariant: H(V) never
+      mentions the actor; I(V;E) and H(V|E) split it per actor encoding.
+    status: reported
+    region: closing predicates; exercised on the date task, three actors
+    evidence:
+      - kind: asset
+        ref: core/assets/measure-actor-allocation.py
+        note: three actors, identical totals; reproduces exactly
+    falsifier: >
+      An actor encoding on a closed task whose I(V;E) + H(V|E) departs from H(V), or a
+      demonstration that the "constant across actors" reading collapses into per-actor
+      difficulty.
+    breaks: the exact form of "fixed by the task, never by the system"
+    owner: paper-1
+    changed: v4.4
+
+  - id: DDD-measure-05
+    kind: empirical
+    statement: >
+      The identification survives an estimated channel: on a simulated RAG task, I(A;R) and
+      H(A|R) estimated from samples sum to H(A) within estimator error across retrieval
+      qualities.
+    status: reported
+    region: simulation only; a tractability result, not evidence of conservation
+    evidence:
+      - kind: asset
+        ref: core/assets/measure-rag.py
+        note: 40k samples; answer generated independently of retrieval, so closer to
+          construction than measurement — never present as conservation in the wild
+    falsifier: >
+      Estimation on a real deployed retrieval system fails to recover the identity within
+      error bars.
+    owner: paper-1
+    changed: v4.4
+
+  - id: DDD-measure-06
+    kind: formal
+    statement: >
+      The measure exists iff the acceptance predicate operationally closes; H(V) is undefined
+      exactly where the framework's floor result locates non-zero floor.
+    status: established
+    region: everywhere — this claim is about the boundary itself
+    evidence:
+      - kind: derivation
+        ref: core/08-the-measure.md
+        note: near-definitional on the measure side; the force of the claim is the
+          coincidence with core/03's independently derived floor. Claim the boundary as
+          principled, not as convergent evidence.
+    test: a task with an open predicate for which a defensible verdict function exists anyway
+    owner: paper-1
+    changed: v4.5
+
+  - id: DDD-measure-07
+    kind: empirical
+    statement: >
+      I(V;S) predicts the engineering cost of an interface (specification effort, boundary
+      defect rate, time to stabilise); I(V;E) predicts which decisions an actor gets right
+      unaided.
+    status: projected
+    region: closing predicates, production systems
+    evidence: []
+    falsifier: >
+      Correlation absent after controlling for task difficulty, across several genuine
+      decompositions in production.
+    breaks: DDD-measure-01 — this is its falsifier run as a campaign
+    owner: paper-2
+    changed: v4.5
+
+  - id: DDD-measure-08
+    kind: formal
+    statement: >
+      RETIRED — "a better decomposition destroys demand." Cheaper parts were purchased by a
+      higher-information seam; the destruction was an artifact of not counting I(V;S).
+    status: retired
+    region: —
+    supersedes: none — superseded BY DDD-measure-03
+    evidence:
+      - kind: computation
+        ref: core/assets/measure-toy.py
+        note: the computation that overturned the canon position; the loop's first firing
+    changed: v4.4
+
+  # ── frame (actor-indexed determination) ────────────────────────────────────
+
+  - id: DDD-frame-01
+    kind: conceptual
+    statement: >
+      Unresolved determination is indexed by the tuple ⟨task, ground, acceptance relation,
+      tolerance, arrangement, assurance⟩, not by the task alone.
+    status: projected
+    region: everywhere the framework claims scope
+    test: explanatory utility and counterexamples — a case where varying the arrangement
+      cannot change any of the tuple-dependent properties
+    owner: none        # program material; a synthesis paper at most
+    changed: v4.4
+
+  - id: DDD-frame-02
+    kind: conceptual
+    statement: >
+      Behavioural commitments attach at three levels — outcome, policy, principal — which
+      compose and are not actor species.
+    status: projected
+    region: engineered arrangements
+    test: boundary-case coverage; an arrangement whose commitments resist the three-level coding
+    owner: none
+    changed: v4.4
+
+  - id: DDD-frame-03
+    kind: conceptual
+    statement: >
+      The source of a resolution and the mechanism assuring it are separate dimensions; the
+      four-store model conflated them.
+    status: projected
+    region: engineered arrangements
+    test: case-study coding reliability across independent coders
+    owner: none
+    changed: v4.4
+
+  - id: DDD-frame-04
+    kind: empirical
+    statement: >
+      Escaped decisions — consequential resolutions with no adequate source-and-assurance
+      combination — predict ungoverned failure modes and design-review findings.
+    status: projected
+    region: deployed systems and organisations
+    evidence: []
+    falsifier: >
+      Escaped-decision analysis identifies nothing that ordinary workflow review does not,
+      across a set of incident postmortems.
+    owner: paper-4
+    changed: v4.4
+
+  - id: DDD-frame-05
+    kind: formal
+    statement: >
+      Under a sound terminating operational checker with complete declared ground, producer
+      identity is not epistemically necessary for the checked property — and nothing more:
+      not cheap generation, not normative completeness, not accountability.
+    status: projected
+    region: operationally closed predicates
+    falsifier: >
+      A checked property whose epistemic standing still requires producer identity despite
+      the stated conditions holding.
+    owner: none        # candidate for formalisation alongside paper-3
+    changed: v4.4
+
+  - id: DDD-frame-06
+    kind: formal
+    statement: >
+      Closure is distinct from generation cost: verification being cheap implies nothing
+      about the density or accessibility of the acceptance region.
+    status: reported
+    region: everywhere
+    evidence:
+      - kind: derivation
+        ref: counterexamples — proof discovery, cryptographic preimages, single-candidate
+          predicates
+    falsifier: >
+      A demonstrated entailment from operational closure to bounded generation cost.
+    owner: none
+    changed: v4.4
+
+  - id: DDD-frame-07
+    kind: empirical
+    statement: >
+      Operational evaluability, feedback density, and ground accessibility predict the
+      comparative advantage of computationally assisted arrangements over unaided situated
+      judgment, after controlling for difficulty and resources (H1–H5).
+    status: projected
+    region: task markets and deployed arrangements
+    evidence: []
+    falsifier: >
+      Evaluability adds no predictive variance after controls, or highly evaluable tasks
+      systematically favour unaided judgment at equal ground and checking access.
+    owner: paper-4
+    changed: v4.4
+
+  - id: DDD-frame-08
+    kind: normative
+    statement: >
+      Accountability is a relation (attribution, persistent principal, authority linkage,
+      stake, sanction path), not an intrinsic capacity; an arrangement naming an executor
+      but no principal is incomplete.
+    status: projected
+    region: consequential deployments
+    test: stakeholder and case studies — completeness of the relation predicting trust and
+      remediation outcomes better than executor identity
+    owner: paper-4
+    changed: v4.4
+
+  - id: DDD-frame-09
+    kind: formal
+    statement: >
+      RETIRED — "closed predicates make intelligence unnecessary." Does not follow from
+      producer-independence under verification; generation may still require whatever
+      capability the search demands.
+    status: retired
+    region: —
+    supersedes: none — corrected by DDD-frame-05 and DDD-frame-06 jointly
+    changed: v4.4
+
+  - id: DDD-frame-10
+    kind: formal
+    statement: >
+      Determination demand is conserved as a scalar across arbitrary re-arrangements,
+      actor-generally and including open predicates.
+    status: projected
+    region: claimed everywhere; ESTABLISHED ONLY on closing predicates via DDD-measure-02
+    falsifier: >
+      A formalisation attempt yielding no stable measure off the closing region, persisting
+      after the escape/judgment split (paper-3) lands.
+    breaks: the framework's strongest general reading; the bounded reading survives
+    owner: paper-3
+    changed: v4.5
+
+  # ── floor ──────────────────────────────────────────────────────────────────
+
+  - id: DDD-floor-01
+    kind: formal
+    statement: >
+      H(V|X) bundles judged and escaped demand; cleaving them requires an actor-capacity
+      model, and the point where H(V|X) exceeds capacity is where demand begins to escape.
+    status: projected
+    region: closing predicates initially; the floor mechanism generally
+    falsifier: >
+      A capacity formalisation (rate–distortion per core/09) that fails to separate the two
+      or contradicts observed escape patterns.
+    owner: paper-3
+    changed: v4.5
+
+  # ── tool ───────────────────────────────────────────────────────────────────
+
+  - id: DDD-tool-01
+    kind: empirical
+    statement: >
+      An actor-assigned claim graph reduces the cost of exercising the framework: canon
+      changes propagate to affected projections and decisions without manual tracking, and
+      demotions are detected mechanically.
+    status: projected
+    region: this repo first; operational work second
+    evidence: []
+    falsifier: >
+      After one full canon-revision cycle, staleness or demotion still requires manual
+      audit, or maintenance exceeds the audit cost replaced.
+    breaks: nothing in core/ — the discipline reverts to convention and grep
+    owner: none
+    changed: v4.5
+
+  # ── org ────────────────────────────────────────────────────────────────────
+
+  - id: DDD-org-01
+    kind: empirical
+    statement: >
+      Graph discipline — status floors at the consumer boundary, manifests, correction flow
+      to a single canon — predicts organisational outcomes: pivot cost, trust damage from
+      shipping projected claims as established, decision-review latency after thesis change.
+    status: projected
+    region: organisations; parked
+    evidence: []
+    falsifier: >
+      Organisations measurably differing in graph discipline show no difference in pivot
+      cost or correction latency after size and sector controls.
+    owner: none        # paper-4 territory at the earliest
+    changed: v4.5
+
+  - id: DDD-org-02
+    kind: empirical
+    statement: >
+      The Stable Dependency Principle, statused: decisions whose reversal cost exceeds what
+      their basis claims' hazard can absorb (high commitment level on low-status claims)
+      concentrate pivot cost and produce incident-discovered cascades; organisations cannot
+      see these violations because their assumption layer carries no status field.
+    status: projected
+    region: organisations; the DDD graph as first instrument
+    evidence: []
+    falsifier: >
+      Decisions flagged by fragility (hazard × afferent decisions × reversal cost) generate
+      no more rework or incident findings than unflagged decisions of equal size.
+    breaks: the mechanism under DDD-org-01; the correlation claim could survive without it
+    credits: >
+      Martin's Stable Dependency Principle; here the stability axis is measured (status,
+      hazard) rather than computed from coupling.
+    owner: none
+    changed: v4.5
+
+  - id: DDD-org-03
+    kind: empirical
+    statement: >
+      Priority as a governed decision: backlogs ordered by decisions basedOn statused
+      value-claims — with claim priority set by value of information and decision priority
+      by cost of delay, reversal cost, and basis readiness — churn less and predict delivered
+      value better than intuition-ordered backlogs; roadmap churn is the cascade from
+      silently demoted value-claims.
+    status: projected
+    region: product organisations; agile teams as the natural instrument
+    evidence: []
+    falsifier: >
+      Teams with statused value-claims and explicit basedOn priority show no less roadmap
+      churn or no better value prediction than matched intuition-ordered teams; or churn
+      events do not trace to value-claim status changes on audit.
+    breaks: >
+      The PO-as-seam rendering loses its mechanism; the claim/decision split survives
+      unchanged.
+    credits: >
+      Reinertsen (cost of delay, WSJF) for the economic inputs; Bezos's Type 1/Type 2
+      doors, here given teeth as commitment levels setting status floors. The normative
+      residue — value weights — stays a principal-level decision; the graph makes it
+      auditable, not automatic.
+    owner: none        # org projection; parked with DDD-org-01/02
+    changed: v4.5
+
+  - id: DDD-org-04
+    kind: empirical
+    statement: >
+      Cross-domain retrodiction: the intensity of an industry's institutionalised graph
+      discipline — permits, licensure, stage-gates, mandatory inspection — is predicted by
+      reversal cost and feedback latency. Construction and manufacturing evolved formal
+      status floors because irreversibility forced them; software's informality is explained
+      by cheap retries, and its formalisation pressure rises with consequence and with
+      agent-generated code collapsing generation cost while verification cost stands.
+    status: projected
+    region: cross-industry; historical and institutional analysis as the instrument
+    evidence: []
+    falsifier: >
+      Industries matched on reversal cost and feedback latency showing grossly different
+      discipline intensity, or discipline intensity tracking regulation-historical accident
+      better than the two parameters after controls.
+    breaks: >
+      The org projection's claim to generality beyond software; the software-local claims
+      (org-01..03) survive on their own instruments.
+    credits: >
+      The mapping targets are prior art in each field — building codes, licensure, Cooper's
+      stage-gates, Toyota set-based engineering and A3; the claim is that two framework
+      parameters predict their distribution, not that the institutions are new.
+    owner: none        # cheapest evidence in the org area — analysis, not experiment
+    changed: v4.5
+
+  # ── agent ──────────────────────────────────────────────────────────────────
+
+
+  - id: DDD-agent-01
+    kind: empirical
+    statement: >
+      Long-running agent drift is escaped decisions caused by basis loss: context decay,
+      compaction, and distractors remove claim nodes from the agent's ground, so later
+      actions are decisions with no basedOn edge to the declared claims and revert to model
+      priors. Grounding the agent in a persistent external claim graph — basis as query, not
+      context residue, with per-decision claim citation — reduces drift relative to
+      context-carried instruction.
+    status: projected
+    region: long-running LLM agent sessions; product-core agent surface as the instrument
+    evidence:
+      - kind: derivation
+        ref: measure-rag distractor rows (DDD-measure-05)
+        note: the temporal analogue — I(V;context) decaying over turns pushes demand from
+          encoded back to judgment; drift is the session-length version of channel
+          degradation. Flagged — extension not yet computed.
+    falsifier: >
+      Instrumented comparison shows basis coverage (fraction of actions citing valid claim
+      refs) does not predict drift onset, or graph-grounded agents drift no less than
+      context-carried baselines at matched capability.
+    breaks: >
+      The runtime escaped-decision check as a drift remedy; the ontology's claim/decision
+      split survives — it just would not explain this failure mode.
+    owner: none        # the most immediately exploitable claim in the seed — instrumentable
+                       # on product-cli agent sessions at low cost
+    changed: v4.5
+
+  # ── sim (graph dynamics) ───────────────────────────────────────────────────
+
+  - id: DDD-sim-01
+    kind: empirical
+    statement: >
+      Cascade prediction: per-claim hazard rates derived from status, evidence, and falsifier
+      specificity, propagated by Monte Carlo along basedOn and includes edges, predict
+      realised review workload and cascade size after actual claim demotions.
+    status: projected
+    region: the DDD graph first; any statused claim/decision graph in principle
+    evidence: []
+    falsifier: >
+      After hazard calibration on accumulated transition history, simulated cascade
+      distributions predict realised post-demotion review workload no better than
+      edge-counting without hazards.
+    breaks: >
+      Prospective pivot-cost estimation and value-of-information prioritisation; the graph
+      remains descriptive, cascades known only retrospectively.
+    credits: >
+      Cascade models on dependency networks, PERT-style Monte Carlo risk analysis, Hawkes
+      self-excitation; the substrate — statused claim graphs with explicit falsifiers — is
+      what is new, not the machinery.
+    owner: none        # sequenced after the tool has logged ≥1 real revision cycle
+    changed: v4.5
+    notes: >
+      Value-of-information corollary: expected fragility reduction per claim tested ranks
+      which claim the next paper should pay. Converts DDD-org-01 from retrospective to
+      prospective if it holds.
+
+  - id: DDD-sim-02
+    kind: empirical
+    statement: >
+      Growth prediction: the areas where new claims and decisions will appear are predictable
+      from current graph activity via self-exciting attachment (activity and demotions in an
+      area raise the intensity of new nodes there).
+    status: projected
+    region: the DDD graph; explicitly weaker than DDD-sim-01 and statused separately
+    evidence: []
+    falsifier: >
+      Fitted attachment intensities predict next-quarter new-node areas no better than a
+      uniform or size-proportional baseline.
+    breaks: nothing downstream — DDD-sim-01 stands independently
+    owner: none
+    changed: v4.5
+
