@@ -1,0 +1,24 @@
+format: 1
+id: DDD-measure-09
+kind: conceptual
+statement: >
+  Specification demand is a measure, not a count: the cardinality of governing decisions
+  does not track demand, because a decision closing over a larger ground carries more
+  demand and decomposition creates decisions (the seam). Demand is how much distinction,
+  not how many decisions.
+status: reported
+region: closing predicates only
+evidence:
+- kind: asset
+  ref: core/assets/measure-toy.py
+  note: >-
+    decomposition A (4 groups) and B (2 groups) differ in decision/group count yet both
+    total 25.493 bits — count varies, demand is invariant
+test: >
+  A closing task on which a cardinality of governing decisions tracks demand invariantly
+  across decompositions, making the entropy measure unnecessary.
+owner: paper-1
+changed: v4.5
+notes: >
+  Extracted in the core/09 conversion (§1, "the move: demand is not a count"). The setup
+  proposition DDD-measure-01 presupposes but does not itself state; the seed missed it.

@@ -4,6 +4,29 @@
 `core/assets/measure-*.py`. Also suitable as a standalone paper
 (*"Specification Demand Is Verdict Entropy: Conservation as the Chain Rule"*).
 
+**Claims.** The propositions of this note are landed as claim nodes under `core/claims/`
+(`DDD-measure-*`); canon authority for each is its claim file, and this document is their
+exposition (`meta/way-of-working.md` §2, `meta/conversion-protocol.md`). The mapping:
+
+| Section | Proposition | Claim |
+|---|---|---|
+| §1 | Demand is a measure, not a count | `DDD-measure-09` |
+| §1 | Demand is verdict entropy (the identification) | `DDD-measure-01` |
+| §2 | Conservation is the chain rule | `DDD-measure-02` |
+| §2–§3 | Seam demand is `I(V;S)` | `DDD-measure-03` |
+| §4 | *"A better decomposition destroys demand"* — retired | `DDD-measure-08` |
+| §5 | You cannot decompose your way out (`H(V\|S)=0 ⟺ I(V;S)=H(V)`) | `DDD-measure-10` |
+| §5 | Maturation asymptote `H(V) − I(V;S_encoded)` | `DDD-measure-13` |
+| §5, §6.2 | Predictive claims (`I(V;S)` cost, `I(V;E)` performance) | `DDD-measure-07` |
+| §6.2 | Store allocation actor-relative, total actor-invariant | `DDD-measure-04` |
+| §6.3 | Identification survives an estimated channel (RAG) | `DDD-measure-05` |
+| §7 | The measure exists iff the predicate closes; vanishes at the floor | `DDD-measure-06` |
+| §7–§8 | The measure prices the verdict, not the search | `DDD-measure-11` |
+| §8 | Demand is relative to the ground distribution | `DDD-measure-12` |
+
+Where this prose and a claim disagree, the claim governs and the prose is the bug
+(flagged in the claim's `notes:`, per `meta/conversion-protocol.md` §5).
+
 **Status.** The central identity is a theorem (Shannon, 1948). The **claim** of this note is not
 the theorem — it is the *identification* of the framework's informal quantities with exact
 information-theoretic ones. That identification is a modelling claim, it is falsifiable, and on the

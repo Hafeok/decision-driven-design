@@ -1,0 +1,22 @@
+format: 1
+id: DDD-measure-13
+kind: formal
+statement: >
+  The maturation/funnel asymptote is H(verdict) − I(verdict;S_encoded): as encoded
+  decomposition harvests more of the verdict, runtime demand falls toward the residual the
+  encoding has not captured, never below what the open part of the predicate leaves
+  undetermined.
+status: reported
+region: closing predicates only, conditional on DDD-measure-01
+credits: The theorem is Shannon's (chain rule, 1948); only the identification is ours.
+evidence:
+- kind: derivation
+  ref: core/09-the-measure.md
+  note: §5, third bullet — the asymptote of the maturation/funnel projection (core/08) in measure terms
+falsifier: none — arithmetic given the chain rule; fires with DDD-measure-01
+owner: paper-1
+changed: v4.5
+notes: >
+  Extracted in the core/09 conversion (§5). Connects the measure to the maturation/funnel
+  projection in core/08-projections.md; the seed landed neither the asymptote formula nor
+  that link.
