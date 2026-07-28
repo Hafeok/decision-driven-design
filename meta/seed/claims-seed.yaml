@@ -177,6 +177,13 @@ claims:
       cannot change any of the tuple-dependent properties
     owner: none        # program material; a synthesis paper at most
     changed: v4.4
+    notes: >
+      UNVERIFIED — Emil review. The six-tuple index ⟨task, ground, acceptance relation,
+      tolerance, arrangement, assurance⟩ is Paper A / foundation-revision material and is
+      NOT stated in any core/ document. Canon carries the components severally (tolerance
+      and assurance separated in core/01 §"declared assurance level"; arrangement in
+      core/05 §2; ground and acceptance predicate in core/00, core/03) but never as this
+      named tuple. Cannot verify the tuple as a canon claim; flagged for Emil, not struck.
 
   - id: DDD-frame-02
     kind: conceptual
@@ -188,6 +195,12 @@ claims:
     test: boundary-case coverage; an arrangement whose commitments resist the three-level coding
     owner: none
     changed: v4.4
+    notes: >
+      UNVERIFIED — Emil review. The three commitment levels (outcome/policy/principal)
+      appear only in the session-authored scaffolding (meta/way-of-working §4,
+      meta/graph-tool-ontology §2) as the decision node's commitmentLevel, not in any
+      core/ document as a claim about behavioural commitments. Cannot verify against
+      canon; flagged, not struck.
 
   - id: DDD-frame-03
     kind: conceptual
@@ -198,7 +211,17 @@ claims:
     region: engineered arrangements
     test: case-study coding reliability across independent coders
     owner: none
-    changed: v4.4
+    changed: v4.5
+    notes: >
+      Verified against canon: core/05 §§1-2 (v4.5) makes accountability completeness a
+      second axis "independent of pinning resolution" — the source axis (where the
+      resolution's constraint attaches, core/04) and the assurance/accountability axis are
+      separate, and core/05 §1 states the four-store partition "turns on a distinction it
+      never draws". core/01 §"declared assurance level" (v4.5) separately splits tolerance
+      from assurance. FLAGGED for Emil: the seed's historical clause "the four-store model
+      conflated them" is the seed's gloss — canon says the store model did not draw the
+      distinction, which is weaker than active conflation. Kept projected (conceptual;
+      coding-reliability test unrun).
 
   - id: DDD-frame-04
     kind: empirical
@@ -213,6 +236,11 @@ claims:
       across a set of incident postmortems.
     owner: paper-4
     changed: v4.4
+    notes: >
+      Rests on the canon escaped-store concept (core/01; core/05 §1 "Escaped with an
+      executor attached"), but the predictive claim over incident data is unexercised —
+      correctly projected. Not canon-verifiable beyond the underlying category; the
+      empirical prediction is paper-4 work.
 
   - id: DDD-frame-05
     kind: formal
@@ -226,23 +254,47 @@ claims:
       A checked property whose epistemic standing still requires producer identity despite
       the stated conditions holding.
     owner: none        # candidate for formalisation alongside paper-3
-    changed: v4.4
+    changed: v4.5
+    notes: >
+      Verified against canon: core/07 §2 states the trust form directly — "confidence in
+      an output need not depend on attributing intelligence to its producer" — and §§2-3
+      supply the "and nothing more" scoping (closure does not price generation, per the
+      v4.5 generation-cost correction and core/09 §7; accountability is separate, core/05).
+      Kept projected: core/07 carries it as a derivation, unexercised, and it is named a
+      candidate for formalisation. Verified as stated, not restatused.
 
   - id: DDD-frame-06
     kind: formal
     statement: >
       Closure is distinct from generation cost: verification being cheap implies nothing
       about the density or accessibility of the acceptance region.
-    status: reported
+    status: established
     region: everywhere
+    credits: >
+      Cook-Levin (1971): satisfiability is checkable in linear time yet NP-hard to solve.
+      The theorem is Cook and Levin's; the identification of it as the closure/generation-
+      cost separation is the framework's.
     evidence:
       - kind: derivation
-        ref: counterexamples — proof discovery, cryptographic preimages, single-candidate
-          predicates
+        ref: core/07-determination-and-intelligence.md
+        note: §5 records the fused falsifier (identity-degeneracy vs generation cost) as
+          met by satisfiability, and keeps the receipt rather than deleting it
+      - kind: derivation
+        ref: core/04-actors.md
+        note: §2.2 — "Closure sets the floor to zero; generation cost is a second,
+          independent variable"; also core/09 §7 (v4.5), the second silence inside the
+          boundary
     falsifier: >
       A demonstrated entailment from operational closure to bounded generation cost.
     owner: none
-    changed: v4.4
+    changed: v4.5
+    notes: >
+      RESTATUSED reported -> established: the separation is theorem-backed (Cook-Levin)
+      and canon records it as a met falsifier (core/07 §5), which is stronger than
+      "reported". AMENDED evidence: the seed put a prose list ("proof discovery,
+      cryptographic preimages, single-candidate predicates") in the ref field — malformed
+      per spec §1 (ref is a repo path or citation) and those exemplars are not in canon.
+      Replaced with the canon derivation refs and the satisfiability exemplar that is.
 
   - id: DDD-frame-07
     kind: empirical
@@ -258,6 +310,11 @@ claims:
       systematically favour unaided judgment at equal ground and checking access.
     owner: paper-4
     changed: v4.4
+    notes: >
+      UNVERIFIED — Emil review. H1-H5 is the arrangement-study (paper-4) hypothesis set,
+      named in the program roadmap (meta/way-of-working §4, paper-4 row) but the
+      hypotheses themselves are Paper A / foundation-revision material, not stated in any
+      core/ document. Correctly projected and unexercised; flagged as not canon-grounded.
 
   - id: DDD-frame-08
     kind: normative
@@ -270,7 +327,15 @@ claims:
     test: stakeholder and case studies — completeness of the relation predicting trust and
       remediation outcomes better than executor identity
     owner: paper-4
-    changed: v4.4
+    changed: v4.5
+    notes: >
+      Conceptual core verified against canon: core/05 (v4.5, P1) states "Accountability
+      completeness is a property of an arrangement, not a capacity of an actor... linked to
+      a persistent responsible principal, an attributable record, a defined stake, and an
+      enforceable consequence path", and core/01/core/05 §1 "a judgment allocation naming
+      no accountable party is... Escaped with an executor attached". Kept projected: the
+      normative prediction (relation-completeness predicting trust/remediation) is
+      unexercised, needing the stated case studies.
 
   - id: DDD-frame-09
     kind: formal
@@ -280,8 +345,18 @@ claims:
       capability the search demands.
     status: retired
     region: —
-    supersedes: none — corrected by DDD-frame-05 and DDD-frame-06 jointly
-    changed: v4.4
+    changed: v4.5
+    notes: >
+      Verified retired against canon: core/07 §2 carries only the scoped form — "A closing
+      predicate makes intelligence unnecessary FOR TRUST" — and §5 records the unscoped
+      cost reading as a met falsifier (satisfiability: linear to check, NP-hard to solve),
+      retiring the generation-cost reading rather than the floor result. The v4.5
+      generation-cost correction (core/03, core/04 §2, core/07 §§2,4,4.2) is where canon
+      landed this. Corrected by DDD-frame-05 (producer-independence is for trust only) and
+      DDD-frame-06 (closure ≠ generation cost) jointly. AMENDED: the seed's malformed
+      "supersedes: none — corrected by..." moved here to notes; retired claims need
+      supersedes or a notes entry naming what killed it (spec §2), and no single claim
+      supersedes this one.
 
   - id: DDD-frame-10
     kind: formal
@@ -296,6 +371,14 @@ claims:
     breaks: the framework's strongest general reading; the bounded reading survives
     owner: paper-3
     changed: v4.5
+    notes: >
+      Verified against canon: core/09 §7 draws the boundary — "conservation of
+      specification demand is a theorem for closing predicates... For open predicates it
+      remains what it was — a principle, an accounting discipline, not a measured
+      invariant" — and core/01 §"the statement" keeps the register a principle. The
+      established-only-on-closing region matches DDD-measure-02 (via the chain rule). The
+      general open-predicate reading is correctly projected; canon does not support it as
+      more than a principle.
 
   # ── floor ──────────────────────────────────────────────────────────────────
 
@@ -356,6 +439,14 @@ claims:
     breaks: nothing in core/ — the discipline reverts to convention and grep
     owner: none
     changed: v4.5
+    notes: >
+      Session-authored; but the repo independently supports the claim node itself: it is
+      stated verbatim as DDD-tool-01 in meta/way-of-working §4 with this falsifier and
+      "what breaks", and it is the declared basis of decisions DDD-dec-01..03. Verified as
+      a faithful transcription of that canon node; the empirical reduction-of-cost
+      prediction remains projected and unexercised (its first exercise is paper 1's
+      feedback cycle, per meta/graph-tool-mvp §5). Not flagged UNVERIFIED — the node is in
+      canon.
 
   # ── org ────────────────────────────────────────────────────────────────────
 
@@ -373,6 +464,11 @@ claims:
       cost or correction latency after size and sector controls.
     owner: none        # paper-4 territory at the earliest
     changed: v4.5
+    notes: >
+      UNVERIFIED — session-authored; Emil review. The org-design projection is parked per
+      meta/way-of-working §4; no core/ or meta/ document states this predictive claim. The
+      underlying primitives (status floors, manifests, single-canon correction flow) are
+      canon (meta/way-of-working §§2-3), but the organisational-outcome prediction is not.
 
   - id: DDD-org-02
     kind: empirical
@@ -393,6 +489,10 @@ claims:
       hazard) rather than computed from coupling.
     owner: none
     changed: v4.5
+    notes: >
+      UNVERIFIED — session-authored; Emil review. The Martin SDP credit is genuine canon
+      prior art (meta/lineage-and-limits §1.12), but the statused-SDP organisational
+      prediction here is session-authored and stated in no core/ or meta/ document.
 
   - id: DDD-org-03
     kind: empirical
@@ -419,6 +519,11 @@ claims:
       auditable, not automatic.
     owner: none        # org projection; parked with DDD-org-01/02
     changed: v4.5
+    notes: >
+      UNVERIFIED — session-authored; Emil review. Reinertsen is canon prior art
+      (meta/lineage-and-limits); the PO-as-seam / governed-priority prediction is
+      session-authored and stated in no canon document. Depends on the commitment-level
+      vocabulary that DDD-frame-02 also flags as not-yet-in-core/.
 
   - id: DDD-org-04
     kind: empirical
@@ -445,6 +550,11 @@ claims:
       parameters predict their distribution, not that the institutions are new.
     owner: none        # cheapest evidence in the org area — analysis, not experiment
     changed: v4.5
+    notes: >
+      UNVERIFIED — session-authored; Emil review. Cross-domain retrodiction; no core/ or
+      meta/ document states it. The reversal-cost/feedback-latency parameters are framework
+      concepts (core/03, applications/sdlc) but their cross-industry predictive use is
+      session-authored.
 
   # ── agent ──────────────────────────────────────────────────────────────────
 
@@ -476,6 +586,13 @@ claims:
     owner: none        # the most immediately exploitable claim in the seed — instrumentable
                        # on product-cli agent sessions at low cost
     changed: v4.5
+    notes: >
+      UNVERIFIED — session-authored; Emil review. Stated in no core/ or meta/ document.
+      The measure-rag evidence entry is a claimed temporal ANALOGUE, not a run — the seed
+      itself marks it "extension not yet computed", so it is not confirmatory; measure-rag
+      reproduces (verified, DDD-measure-05) but the drift extension does not exist yet. The
+      claim is agent-drift theory applied to this repo's own agents (the basis-as-query
+      framing this branch's CLAUDE.md section instantiates).
 
   # ── sim (graph dynamics) ───────────────────────────────────────────────────
 
@@ -502,8 +619,12 @@ claims:
     owner: none        # sequenced after the tool has logged ≥1 real revision cycle
     changed: v4.5
     notes: >
+      UNVERIFIED — session-authored; Emil review. Cascade-prediction model stated in no
+      canon document; sequenced after the tool logs ≥1 real revision cycle, so
+      unexercisable now. Credits (Hawkes, PERT Monte Carlo, dependency-cascade models) are
+      genuine prior art but the statused-claim-graph substrate is the session's proposal.
       Value-of-information corollary: expected fragility reduction per claim tested ranks
-      which claim the next paper should pay. Converts DDD-org-01 from retrospective to
+      which claim the next paper should pay; converts DDD-org-01 from retrospective to
       prospective if it holds.
 
   - id: DDD-sim-02
@@ -521,4 +642,7 @@ claims:
     breaks: nothing downstream — DDD-sim-01 stands independently
     owner: none
     changed: v4.5
+    notes: >
+      UNVERIFIED — session-authored; Emil review. Growth-prediction model stated in no
+      canon document; explicitly weaker than DDD-sim-01 and statused separately.
 
