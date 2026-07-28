@@ -1,0 +1,14 @@
+id: DDD-dec-01
+question: |
+  Where does the graph tool live — extending product-cli's ontology, or as a sibling with its own ontology on product-core?
+resolution: |
+  Sibling on product-core with its own ontology. Claims and decisions have a different lifecycle from commands and events; coupling the framework graph to the product tool would tie two release cadences together.
+commitmentLevel: policy
+basis:
+- DDD-tool-01
+assurance: |
+  Foundation inventory against product-cli's public README; architecture reviewed in session; revisit trigger below.
+principal: Emil
+made: 2026-07-28 — graph scaffolding session
+reviewTrigger: |
+  product-core generalisation proves insufficient for claim/decision node kinds, or maintenance of the sibling exceeds the coupling cost it avoids.

@@ -1,0 +1,15 @@
+id: DDD-dec-03
+question: |
+  Do format, process, and content version together or separately?
+resolution: |
+  Separately. spec/ holds the claim format (format version, migration notes); process documents version with the way of working; claim content versions per claim via changed. Claims declare the format they conform to; validation runs against the declared version.
+commitmentLevel: policy
+basis:
+- DDD-tool-01
+- DDD-org-02
+assurance: |
+  Stable Dependency Principle applied to the graph's own artifacts; enforced by scripts/validate-claims.py honouring declared format versions.
+principal: Emil
+made: 2026-07-28 — graph scaffolding session
+reviewTrigger: |
+  A content change appears to require a spec edit (the tell that it was a format change in disguise), or format churn outpaces content churn.

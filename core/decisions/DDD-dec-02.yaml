@@ -1,0 +1,15 @@
+id: DDD-dec-02
+question: |
+  Sequencing — does tool building precede or follow the measure paper?
+resolution: |
+  Papers before tool. Paper 1 finishes first (related work, softenings, reproduction pass, arXiv); the tool's first real exercise is the paper's feedback cycle. Only the markdown scaffolding and the validator land now.
+commitmentLevel: policy
+basis:
+- DDD-tool-01
+- DDD-measure-01
+assurance: |
+  Session review; the tool's own shakedown criterion (graph-tool-mvp §5) depends on a real revision cycle existing, which the paper supplies.
+principal: Emil
+made: 2026-07-28 — graph scaffolding session
+reviewTrigger: |
+  Paper 1 stalls past its estimated week by a wide margin, or a canon revision arrives from another source first.
