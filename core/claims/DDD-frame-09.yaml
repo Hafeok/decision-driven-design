@@ -1,0 +1,10 @@
+format: 1
+id: DDD-frame-09
+kind: formal
+statement: |
+  RETIRED — "closed predicates make intelligence unnecessary." Does not follow from producer-independence under verification; generation may still require whatever capability the search demands.
+status: retired
+region: —
+changed: v4.5
+notes: |
+  Verified retired against canon: core/07 §2 carries only the scoped form — "A closing predicate makes intelligence unnecessary FOR TRUST" — and §5 records the unscoped cost reading as a met falsifier (satisfiability: linear to check, NP-hard to solve), retiring the generation-cost reading rather than the floor result. The v4.5 generation-cost correction (core/03, core/04 §2, core/07 §§2,4,4.2) is where canon landed this. Corrected by DDD-frame-05 (producer-independence is for trust only) and DDD-frame-06 (closure ≠ generation cost) jointly. AMENDED: the seed's malformed "supersedes: none — corrected by..." moved here to notes; retired claims need supersedes or a notes entry naming what killed it (spec §2), and no single claim supersedes this one.

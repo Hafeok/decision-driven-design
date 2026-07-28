@@ -1,0 +1,32 @@
+format: 1
+id: DDD-floor-01
+kind: formal
+statement: |
+  H(V|X) bundles judged and escaped demand; cleaving them requires an actor-capacity model, and demand escapes where residual demand exceeds effective capacity min(C_hold, C_resolve) AND the shed decisions carry no verifier — escape is the intersection overflow ∩ open, with overflow alone producing retries, not escape.
+status: reported
+region: |
+  closing/open decision mixes on hard- and soft-capacity toy actors; the formal write-up (paper-3) and any real-actor calibration remain open
+credits: |
+  Rate-distortion theory is Shannon's; p_err = Hb^-1(1 - C/n) is the standard bound. The identification of the escape mechanism with the intersection is ours.
+evidence:
+- kind: derivation
+  ref: core/10-the-floor-mechanism.md
+  note: >-
+    escape = overflow ∩ open (§3); p_err = Hb^-1(1 - C/n) derived from rate-distortion (§4.1),
+    not assumed
+- kind: asset
+  ref: core/assets/floor-mechanism.py
+  note: >-
+    hard-capacity table of core/10 §3 reproduces exactly (escape 0/2.49/3.99/5.99/9.97; all-verified
+    escape 0 at every capacity)
+- kind: asset
+  ref: core/assets/perr-rate-distortion.py
+  note: >-
+    derived p_err reproduces core/10 §4 limits (r>=1 -> 0, r->0 -> 0.5); soft-capacity structure
+    survives the substitution
+falsifier: |
+  An actor whose observed escape departs from the intersection — escape without overflow, escape on decisions with a held verifier, or no escape past capacity on open decisions.
+owner: paper-3
+changed: v4.5
+notes: |
+  Restatused projected -> reported in the verification pass: the seed, drafted from projections pinned at v4.4/v4.5, treated the actor-capacity model as future work, but live canon supplies it — core/10 derives and demonstrates it, and both assets reproduce. The seed statement also omitted the open conjunct (overflow alone is retries, not escape — core/10 §3); amended to the intersection form.

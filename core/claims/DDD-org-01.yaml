@@ -1,0 +1,14 @@
+format: 1
+id: DDD-org-01
+kind: empirical
+statement: |
+  Graph discipline — status floors at the consumer boundary, manifests, correction flow to a single canon — predicts organisational outcomes: pivot cost, trust damage from shipping projected claims as established, decision-review latency after thesis change.
+status: projected
+region: organisations; parked
+evidence: []
+falsifier: |
+  Organisations measurably differing in graph discipline show no difference in pivot cost or correction latency after size and sector controls.
+owner: none
+changed: v4.5
+notes: |
+  UNVERIFIED — session-authored; Emil review. The org-design projection is parked per meta/way-of-working §4; no core/ or meta/ document states this predictive claim. The underlying primitives (status floors, manifests, single-canon correction flow) are canon (meta/way-of-working §§2-3), but the organisational-outcome prediction is not.

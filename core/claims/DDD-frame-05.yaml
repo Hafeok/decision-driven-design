@@ -1,0 +1,13 @@
+format: 1
+id: DDD-frame-05
+kind: formal
+statement: |
+  Under a sound terminating operational checker with complete declared ground, producer identity is not epistemically necessary for the checked property — and nothing more: not cheap generation, not normative completeness, not accountability.
+status: projected
+region: operationally closed predicates
+falsifier: |
+  A checked property whose epistemic standing still requires producer identity despite the stated conditions holding.
+owner: none
+changed: v4.5
+notes: |
+  Verified against canon: core/07 §2 states the trust form directly — "confidence in an output need not depend on attributing intelligence to its producer" — and §§2-3 supply the "and nothing more" scoping (closure does not price generation, per the v4.5 generation-cost correction and core/09 §7; accountability is separate, core/05). Kept projected: core/07 carries it as a derivation, unexercised, and it is named a candidate for formalisation. Verified as stated, not restatused.

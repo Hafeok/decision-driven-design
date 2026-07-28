@@ -1,0 +1,18 @@
+format: 1
+id: DDD-org-02
+kind: empirical
+statement: |
+  The Stable Dependency Principle, statused: decisions whose reversal cost exceeds what their basis claims' hazard can absorb (high commitment level on low-status claims) concentrate pivot cost and produce incident-discovered cascades; organisations cannot see these violations because their assumption layer carries no status field.
+status: projected
+region: organisations; the DDD graph as first instrument
+credits: |
+  Martin's Stable Dependency Principle; here the stability axis is measured (status, hazard) rather than computed from coupling.
+evidence: []
+falsifier: |
+  Decisions flagged by fragility (hazard × afferent decisions × reversal cost) generate no more rework or incident findings than unflagged decisions of equal size.
+breaks: >-
+  the mechanism under DDD-org-01; the correlation claim could survive without it
+owner: none
+changed: v4.5
+notes: |
+  UNVERIFIED — session-authored; Emil review. The Martin SDP credit is genuine canon prior art (meta/lineage-and-limits §1.12), but the statused-SDP organisational prediction here is session-authored and stated in no core/ or meta/ document.

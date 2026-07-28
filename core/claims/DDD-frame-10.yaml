@@ -1,0 +1,16 @@
+format: 1
+id: DDD-frame-10
+kind: formal
+statement: |
+  Determination demand is conserved as a scalar across arbitrary re-arrangements, actor-generally and including open predicates.
+status: projected
+region: >-
+  claimed everywhere; ESTABLISHED ONLY on closing predicates via DDD-measure-02
+falsifier: |
+  A formalisation attempt yielding no stable measure off the closing region, persisting after the escape/judgment split (paper-3) lands.
+breaks: >-
+  the framework's strongest general reading; the bounded reading survives
+owner: paper-3
+changed: v4.5
+notes: |
+  Verified against canon: core/09 §7 draws the boundary — "conservation of specification demand is a theorem for closing predicates... For open predicates it remains what it was — a principle, an accounting discipline, not a measured invariant" — and core/01 §"the statement" keeps the register a principle. The established-only-on-closing region matches DDD-measure-02 (via the chain rule). The general open-predicate reading is correctly projected; canon does not support it as more than a principle.

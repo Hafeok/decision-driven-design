@@ -1,0 +1,18 @@
+format: 1
+id: DDD-measure-06
+kind: formal
+statement: |
+  The measure exists iff the acceptance predicate operationally closes; H(V) is undefined exactly where the framework's floor result locates non-zero floor.
+status: established
+region: everywhere — this claim is about the boundary itself
+evidence:
+- kind: derivation
+  ref: core/09-the-measure.md
+  note: >-
+    near-definitional on the measure side; the force of the claim is the coincidence with
+    core/03's independently derived floor. Claim the boundary as principled, not as convergent
+    evidence.
+test: >-
+  a task with an open predicate for which a defensible verdict function exists anyway
+owner: paper-1
+changed: v4.5

@@ -1,0 +1,15 @@
+format: 1
+id: DDD-measure-08
+kind: formal
+statement: |
+  RETIRED — "a better decomposition destroys demand." Cheaper parts were purchased by a higher-information seam; the destruction was an artifact of not counting I(V;S).
+status: retired
+region: —
+evidence:
+- kind: computation
+  ref: core/assets/measure-toy.py
+  note: >-
+    the computation that overturned the canon position; the loop's first firing
+changed: v4.5
+notes: |
+  Killed by the measure-toy computation (core/09 §4): the cheaper parts were bought by a higher-information seam. Corrected in canon at v4.1 (CHANGELOG 4.1, Corrected); the meta files carrying the destruction reading were harmonised at v4.4 (patch register P1). Superseded by DDD-measure-03, which carries the supersedes edge per spec §1 (corrections reference what they replaced).

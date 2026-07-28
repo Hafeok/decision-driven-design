@@ -1,0 +1,17 @@
+format: 1
+id: DDD-measure-03
+kind: formal
+statement: |
+  The seam of a decomposition is I(V;S); a decomposition with cheaper parts has pre-paid more demand into the seam, and H(V|S) is minimised exactly when I(V;S) is maximised.
+status: reported
+region: closing predicates; exercised on the date task
+evidence:
+- kind: asset
+  ref: core/assets/measure-toy.py
+  note: both decompositions sum to 25.493 bits; reproduces exactly
+falsifier: |
+  Any decomposition of a closed task whose parts-plus-seam total departs from H(V).
+breaks: DDD-measure-02's applicability to seams
+supersedes: DDD-measure-08
+owner: paper-1
+changed: v4.5
