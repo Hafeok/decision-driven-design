@@ -30,6 +30,10 @@ claims:
       accounting discipline on this region.
     owner: paper-2
     changed: v4.5
+    notes: >
+      Verified against core/09 §1 and §8. Bounded by core/09 §7 (v4.5): H(V) prices the
+      verdict, not the search — the identification must not be read as pricing
+      generation cost.
 
   - id: DDD-measure-02
     kind: formal
@@ -41,7 +45,7 @@ claims:
     credits: The theorem is Shannon's (1948); only the identification is ours.
     evidence:
       - kind: derivation
-        ref: core/08-the-measure.md
+        ref: core/09-the-measure.md
     falsifier: none — arithmetic; the conditional claim fires with DDD-measure-01
     owner: paper-1
     changed: v4.5
@@ -60,8 +64,9 @@ claims:
     falsifier: >
       Any decomposition of a closed task whose parts-plus-seam total departs from H(V).
     breaks: DDD-measure-02's applicability to seams
+    supersedes: DDD-measure-08
     owner: paper-1
-    changed: v4.4
+    changed: v4.5
 
   - id: DDD-measure-04
     kind: formal
@@ -80,7 +85,7 @@ claims:
       difficulty.
     breaks: the exact form of "fixed by the task, never by the system"
     owner: paper-1
-    changed: v4.4
+    changed: v4.5
 
   - id: DDD-measure-05
     kind: empirical
@@ -99,7 +104,13 @@ claims:
       Estimation on a real deployed retrieval system fails to recover the identity within
       error bars.
     owner: paper-1
-    changed: v4.4
+    changed: v4.5
+    notes: >
+      FLAGGED prose tension, not harmonised: core/09 §6.3 presents this as "conservation
+      of specification demand, measured on a deployed system pattern rather than a toy",
+      which overstates relative to this claim's region — the answer is generated
+      independently of retrieval by construction, so the run is closer to construction
+      than measurement. The claim keeps the honest form; the prose is the bug. Emil review.
 
   - id: DDD-measure-06
     kind: formal
@@ -110,7 +121,7 @@ claims:
     region: everywhere — this claim is about the boundary itself
     evidence:
       - kind: derivation
-        ref: core/08-the-measure.md
+        ref: core/09-the-measure.md
         note: near-definitional on the measure side; the force of the claim is the
           coincidence with core/03's independently derived floor. Claim the boundary as
           principled, not as convergent evidence.
@@ -141,12 +152,17 @@ claims:
       higher-information seam; the destruction was an artifact of not counting I(V;S).
     status: retired
     region: —
-    supersedes: none — superseded BY DDD-measure-03
     evidence:
       - kind: computation
         ref: core/assets/measure-toy.py
         note: the computation that overturned the canon position; the loop's first firing
-    changed: v4.4
+    changed: v4.5
+    notes: >
+      Killed by the measure-toy computation (core/09 §4): the cheaper parts were bought
+      by a higher-information seam. Corrected in canon at v4.1 (CHANGELOG 4.1,
+      Corrected); the meta files carrying the destruction reading were harmonised at
+      v4.4 (patch register P1). Superseded by DDD-measure-03, which carries the
+      supersedes edge per spec §1 (corrections reference what they replaced).
 
   # ── frame (actor-indexed determination) ────────────────────────────────────
 
@@ -287,14 +303,41 @@ claims:
     kind: formal
     statement: >
       H(V|X) bundles judged and escaped demand; cleaving them requires an actor-capacity
-      model, and the point where H(V|X) exceeds capacity is where demand begins to escape.
-    status: projected
-    region: closing predicates initially; the floor mechanism generally
+      model, and demand escapes where residual demand exceeds effective capacity
+      min(C_hold, C_resolve) AND the shed decisions carry no verifier — escape is the
+      intersection overflow ∩ open, with overflow alone producing retries, not escape.
+    status: reported
+    region: >
+      closing/open decision mixes on hard- and soft-capacity toy actors; the formal
+      write-up (paper-3) and any real-actor calibration remain open
+    evidence:
+      - kind: derivation
+        ref: core/10-the-floor-mechanism.md
+        note: escape = overflow ∩ open (§3); p_err = Hb^-1(1 - C/n) derived from
+          rate-distortion (§4.1), not assumed
+      - kind: asset
+        ref: core/assets/floor-mechanism.py
+        note: hard-capacity table of core/10 §3 reproduces exactly (escape
+          0/2.49/3.99/5.99/9.97; all-verified escape 0 at every capacity)
+      - kind: asset
+        ref: core/assets/perr-rate-distortion.py
+        note: derived p_err reproduces core/10 §4 limits (r>=1 -> 0, r->0 -> 0.5);
+          soft-capacity structure survives the substitution
     falsifier: >
-      A capacity formalisation (rate–distortion per core/09) that fails to separate the two
-      or contradicts observed escape patterns.
+      An actor whose observed escape departs from the intersection — escape without
+      overflow, escape on decisions with a held verifier, or no escape past capacity on
+      open decisions.
+    credits: >
+      Rate-distortion theory is Shannon's; p_err = Hb^-1(1 - C/n) is the standard bound.
+      The identification of the escape mechanism with the intersection is ours.
     owner: paper-3
     changed: v4.5
+    notes: >
+      Restatused projected -> reported in the verification pass: the seed, drafted from
+      projections pinned at v4.4/v4.5, treated the actor-capacity model as future work,
+      but live canon supplies it — core/10 derives and demonstrates it, and both assets
+      reproduce. The seed statement also omitted the open conjunct (overflow alone is
+      retries, not escape — core/10 §3); amended to the intersection form.
 
   # ── tool ───────────────────────────────────────────────────────────────────
 
