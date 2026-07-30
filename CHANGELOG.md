@@ -44,13 +44,16 @@ and re-pins where canon authority lives.
   the live claims carried `v4.5`. The v4.5 patch cluster (PR #11) had no changelog entry; it
   is added below. `README.md` is bumped to 4.6.
 
-### Flagged — graph-surfaced, not silently harmonised
-- **`core/01` §"the statement"** still asserts the retired reading —
-  *"Re-drawing the task boundary can destroy demand outright"* — the last live site of
-  `DDD-measure-08` in `core/`, deferred as out-of-scope by the v4.4 patch instruction
-  (commit `c64f360`). Recorded in `core/claims/DDD-measure-08.yaml` notes for the principal;
-  not edited in this pass. This is exactly the kind of contradiction the graph exists to
-  surface.
+### Corrected — the loop closed
+- **`core/01` §"the statement"** asserted the retired reading —
+  *"Re-drawing the task boundary can destroy demand outright"*, *"the one that can actually
+  lower the total"* — the last live site of `DDD-measure-08` in `core/`, deferred as
+  out-of-scope by the v4.4 patch instruction (commit `c64f360`). Landing the claim surfaced it;
+  it is now corrected to the relocation reading (`core/09` §4): re-decomposition relocates
+  demand into the seam, the total is invariant, and what changes the total is changing the task
+  or the declared tolerance. Recorded in `core/claims/DDD-measure-08.yaml` notes — the
+  correction loop the framework is built on, run on its own canon: repo → graph surfaces the
+  contradiction → canon revised.
 
 ## 4.5 — Generation cost, accountability as arrangement, and the assurance/tolerance split
 

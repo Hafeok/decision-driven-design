@@ -14,4 +14,12 @@ changed: v4.5
 notes: |
   Killed by the measure-toy computation (core/09 §4): the cheaper parts were bought by a higher-information seam. Corrected in canon at v4.1 (CHANGELOG 4.1, Corrected); the meta files carrying the destruction reading were harmonised at v4.4 (patch register P1). Superseded by DDD-measure-03, which carries the supersedes edge per spec §1 (corrections reference what they replaced).
 
-  FLAGGED — one live site of this retired reading survives in core/, and is NOT harmonised here (flag, don't silently harmonise): core/01 §"the statement" ("Within a fixed decomposition") still reads "Re-drawing the task boundary can *destroy* demand outright" and "the [decomposition] is ... the one that can actually lower the total". The v4.4 P1 patch (commit c64f360) fixed the meta/ sites and explicitly recorded "One live destruction claim remains in core/01 and is out of scope by instruction." The correct reading is core/09 §4 / consolidated-state P1.2: re-decomposition relocates demand into the seam, the total is invariant, and what changes the total is changing the task or tolerance — not re-drawing boundaries within one. Left for the principal to land in core/01; README's overview copy of the same stale line was corrected at v4.6 (an overview, not canon prose).
+  LANDED at v4.6 — the last live site of this retired reading in core/ is now corrected. core/01
+  §"the statement" ("Within a fixed decomposition") had read "Re-drawing the task boundary can
+  *destroy* demand outright" and "the [decomposition] ... the one that can actually lower the
+  total". The v4.4 P1 patch (commit c64f360) fixed the meta/ sites and explicitly recorded "One
+  live destruction claim remains in core/01 and is out of scope by instruction"; that straggler
+  was surfaced by this claim's landing and corrected to the relocation reading (core/09 §4 /
+  consolidated-state P1.2): re-decomposition relocates demand into the seam, the total is
+  invariant, and what changes the total is changing the task or tolerance. The correction loop
+  closed — repo → graph surfaces the contradiction → canon revised.
