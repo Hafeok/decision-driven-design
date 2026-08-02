@@ -1,0 +1,25 @@
+format: 1
+id: DDD-measure-08
+kind: formal
+statement: |
+  RETIRED — "a better decomposition destroys demand." Cheaper parts were purchased by a higher-information seam; the destruction was an artifact of not counting I(V;S).
+status: retired
+region: —
+evidence:
+- kind: computation
+  ref: core/assets/measure-toy.py
+  note: >-
+    the computation that overturned the canon position; the loop's first firing
+changed: v4.5
+notes: |
+  Killed by the measure-toy computation (core/09 §4): the cheaper parts were bought by a higher-information seam. Corrected in canon at v4.1 (CHANGELOG 4.1, Corrected); the meta files carrying the destruction reading were harmonised at v4.4 (patch register P1). Superseded by DDD-measure-03, which carries the supersedes edge per spec §1 (corrections reference what they replaced).
+
+  LANDED at v4.6 — the last live site of this retired reading in core/ is now corrected. core/01
+  §"the statement" ("Within a fixed decomposition") had read "Re-drawing the task boundary can
+  *destroy* demand outright" and "the [decomposition] ... the one that can actually lower the
+  total". The v4.4 P1 patch (commit c64f360) fixed the meta/ sites and explicitly recorded "One
+  live destruction claim remains in core/01 and is out of scope by instruction"; that straggler
+  was surfaced by this claim's landing and corrected to the relocation reading (core/09 §4 /
+  consolidated-state P1.2): re-decomposition relocates demand into the seam, the total is
+  invariant, and what changes the total is changing the task or tolerance. The correction loop
+  closed — repo → graph surfaces the contradiction → canon revised.

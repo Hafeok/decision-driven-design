@@ -1,0 +1,20 @@
+format: 1
+id: DDD-measure-01
+kind: empirical
+statement: |
+  Specification demand is verdict entropy: for a task whose acceptance predicate closes, the demand engineers experience as specification burden is H(V) over the ground distribution.
+status: projected
+region: closing predicates only
+evidence:
+- kind: computation
+  ref: core/assets/measure-toy.py
+  note: >-
+    computable and non-degenerate; NOT confirmatory — the identification is a modelling claim
+falsifier: |
+  A decomposition with high I(V;S) reliably has a cheap interface contract, or an actor with high I(V;E) performs no better unaided.
+breaks: |
+  The measure paper's identification; Shannon untouched; the framework reverts to accounting discipline on this region.
+owner: paper-2
+changed: v4.5
+notes: |
+  Verified against core/09 §1 and §8. Bounded by core/09 §7 (v4.5): H(V) prices the verdict, not the search — the identification must not be read as pricing generation cost.

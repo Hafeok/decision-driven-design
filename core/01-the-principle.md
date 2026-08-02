@@ -44,10 +44,14 @@ declarations, and the thing each declares is a tolerance.** Two systems can shar
 differ in required assurance. Without a declared tolerance the decision set is not even well-formed.
 
 **"Within a fixed decomposition."** This is the important one. **Conservation holds within a chosen
-task decomposition — not across decompositions.** Re-drawing the task boundary can *destroy* demand
-outright (see §3). So the principle is an accounting identity *relative to a decomposition*, and
-**choosing the decomposition is itself the highest-leverage governing decision** — the one that can
-actually lower the total.
+task decomposition — not across decompositions.** Re-drawing the task boundary *relocates* demand
+into the **seam** — the interface contract the decomposition brings into existence — where it is
+pre-paid once and inherited by every run, rather than resolved per run (`core/09` §4). The total is
+invariant under re-decomposition; what genuinely changes it is changing the task or the declared
+tolerance, not re-drawing boundaries within one. So the principle is an accounting identity
+*relative to a decomposition*, and **choosing the decomposition is itself the highest-leverage
+governing decision** — not because it lowers the total, but because it sets how much demand is
+pre-paid into the seam versus resolved, per run, in every part.
 
 ---
 

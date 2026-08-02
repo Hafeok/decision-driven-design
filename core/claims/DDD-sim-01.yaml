@@ -1,0 +1,18 @@
+format: 1
+id: DDD-sim-01
+kind: empirical
+statement: |
+  Cascade prediction: per-claim hazard rates derived from status, evidence, and falsifier specificity, propagated by Monte Carlo along basedOn and includes edges, predict realised review workload and cascade size after actual claim demotions.
+status: projected
+region: the DDD graph first; any statused claim/decision graph in principle
+credits: |
+  Cascade models on dependency networks, PERT-style Monte Carlo risk analysis, Hawkes self-excitation; the substrate — statused claim graphs with explicit falsifiers — is what is new, not the machinery.
+evidence: []
+falsifier: |
+  After hazard calibration on accumulated transition history, simulated cascade distributions predict realised post-demotion review workload no better than edge-counting without hazards.
+breaks: |
+  Prospective pivot-cost estimation and value-of-information prioritisation; the graph remains descriptive, cascades known only retrospectively.
+owner: none
+changed: v4.5
+notes: |
+  UNVERIFIED — session-authored; Emil review. Cascade-prediction model stated in no canon document; sequenced after the tool logs ≥1 real revision cycle, so unexercisable now. Credits (Hawkes, PERT Monte Carlo, dependency-cascade models) are genuine prior art but the statused-claim-graph substrate is the session's proposal. Value-of-information corollary: expected fragility reduction per claim tested ranks which claim the next paper should pay; converts DDD-org-01 from retrospective to prospective if it holds.

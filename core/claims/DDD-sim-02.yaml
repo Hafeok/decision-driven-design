@@ -1,0 +1,16 @@
+format: 1
+id: DDD-sim-02
+kind: empirical
+statement: |
+  Growth prediction: the areas where new claims and decisions will appear are predictable from current graph activity via self-exciting attachment (activity and demotions in an area raise the intensity of new nodes there).
+status: projected
+region: >-
+  the DDD graph; explicitly weaker than DDD-sim-01 and statused separately
+evidence: []
+falsifier: |
+  Fitted attachment intensities predict next-quarter new-node areas no better than a uniform or size-proportional baseline.
+breaks: nothing downstream — DDD-sim-01 stands independently
+owner: none
+changed: v4.5
+notes: |
+  UNVERIFIED — session-authored; Emil review. Growth-prediction model stated in no canon document; explicitly weaker than DDD-sim-01 and statused separately.

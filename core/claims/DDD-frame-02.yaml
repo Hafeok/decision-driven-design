@@ -1,0 +1,13 @@
+format: 1
+id: DDD-frame-02
+kind: conceptual
+statement: |
+  Behavioural commitments attach at three levels — outcome, policy, principal — which compose and are not actor species.
+status: projected
+region: engineered arrangements
+test: >-
+  boundary-case coverage; an arrangement whose commitments resist the three-level coding
+owner: none
+changed: v4.4
+notes: |
+  UNVERIFIED — Emil review. The three commitment levels (outcome/policy/principal) appear only in the session-authored scaffolding (meta/way-of-working §4, meta/graph-tool-ontology §2) as the decision node's commitmentLevel, not in any core/ document as a claim about behavioural commitments. Cannot verify against canon; flagged, not struck.

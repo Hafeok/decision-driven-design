@@ -1,0 +1,19 @@
+format: 1
+id: DDD-org-04
+kind: empirical
+statement: |
+  Cross-domain retrodiction: the intensity of an industry's institutionalised graph discipline — permits, licensure, stage-gates, mandatory inspection — is predicted by reversal cost and feedback latency. Construction and manufacturing evolved formal status floors because irreversibility forced them; software's informality is explained by cheap retries, and its formalisation pressure rises with consequence and with agent-generated code collapsing generation cost while verification cost stands.
+status: projected
+region: >-
+  cross-industry; historical and institutional analysis as the instrument
+credits: |
+  The mapping targets are prior art in each field — building codes, licensure, Cooper's stage-gates, Toyota set-based engineering and A3; the claim is that two framework parameters predict their distribution, not that the institutions are new.
+evidence: []
+falsifier: |
+  Industries matched on reversal cost and feedback latency showing grossly different discipline intensity, or discipline intensity tracking regulation-historical accident better than the two parameters after controls.
+breaks: |
+  The org projection's claim to generality beyond software; the software-local claims (org-01..03) survive on their own instruments.
+owner: none
+changed: v4.5
+notes: |
+  UNVERIFIED — session-authored; Emil review. Cross-domain retrodiction; no core/ or meta/ document states it. The reversal-cost/feedback-latency parameters are framework concepts (core/03, applications/sdlc) but their cross-industry predictive use is session-authored.

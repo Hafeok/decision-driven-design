@@ -1,0 +1,15 @@
+format: 1
+id: DDD-tool-01
+kind: empirical
+statement: |
+  An actor-assigned claim graph reduces the cost of exercising the framework: canon changes propagate to affected projections and decisions without manual tracking, and demotions are detected mechanically.
+status: projected
+region: this repo first; operational work second
+evidence: []
+falsifier: |
+  After one full canon-revision cycle, staleness or demotion still requires manual audit, or maintenance exceeds the audit cost replaced.
+breaks: nothing in core/ — the discipline reverts to convention and grep
+owner: none
+changed: v4.5
+notes: |
+  Session-authored; but the repo independently supports the claim node itself: it is stated verbatim as DDD-tool-01 in meta/way-of-working §4 with this falsifier and "what breaks", and it is the declared basis of decisions DDD-dec-01..03. Verified as a faithful transcription of that canon node; the empirical reduction-of-cost prediction remains projected and unexercised (its first exercise is paper 1's feedback cycle, per meta/graph-tool-mvp §5). Not flagged UNVERIFIED — the node is in canon.

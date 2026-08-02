@@ -1,0 +1,23 @@
+format: 1
+id: DDD-measure-12
+kind: conceptual
+statement: >
+  Demand is relative to the ground distribution: H(verdict) depends on P(input), so "fixed
+  by the task" must be read as "fixed by the task, the tolerance, and the ground
+  distribution" — the same validator faces different demand in different deployment
+  environments.
+status: reported
+region: closing predicates only
+evidence:
+- kind: derivation
+  ref: core/09-the-measure.md
+  note: §8 caveat 2 — the worked example used uniform P(input); entropy is distribution-relative by definition
+test: >
+  A closing task whose verdict entropy is invariant to P(input), which would make the
+  distribution parameter idle.
+owner: paper-1
+changed: v4.5
+notes: >
+  Extracted in the core/09 conversion (§8 caveat 2). A scoping proposition the seed folded
+  silently into DDD-measure-01/04's "fixed by the task"; landed explicitly so the added
+  parameter is visible.

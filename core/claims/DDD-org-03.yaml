@@ -1,0 +1,18 @@
+format: 1
+id: DDD-org-03
+kind: empirical
+statement: |
+  Priority as a governed decision: backlogs ordered by decisions basedOn statused value-claims — with claim priority set by value of information and decision priority by cost of delay, reversal cost, and basis readiness — churn less and predict delivered value better than intuition-ordered backlogs; roadmap churn is the cascade from silently demoted value-claims.
+status: projected
+region: product organisations; agile teams as the natural instrument
+credits: |
+  Reinertsen (cost of delay, WSJF) for the economic inputs; Bezos's Type 1/Type 2 doors, here given teeth as commitment levels setting status floors. The normative residue — value weights — stays a principal-level decision; the graph makes it auditable, not automatic.
+evidence: []
+falsifier: |
+  Teams with statused value-claims and explicit basedOn priority show no less roadmap churn or no better value prediction than matched intuition-ordered teams; or churn events do not trace to value-claim status changes on audit.
+breaks: |
+  The PO-as-seam rendering loses its mechanism; the claim/decision split survives unchanged.
+owner: none
+changed: v4.5
+notes: |
+  UNVERIFIED — session-authored; Emil review. Reinertsen is canon prior art (meta/lineage-and-limits); the PO-as-seam / governed-priority prediction is session-authored and stated in no canon document. Depends on the commitment-level vocabulary that DDD-frame-02 also flags as not-yet-in-core/.

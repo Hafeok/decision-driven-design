@@ -1,5 +1,100 @@
 # Changelog
 
+## 4.6 — The claim graph
+
+The framework's claims and decisions become **data**: one file per node, validated against a
+versioned schema. Files are a storage format; the graph is the object
+(`meta/way-of-working.md` §1). No `core/` argument changes — this release lands the substrate
+and re-pins where canon authority lives.
+
+### Added
+- **`core/claims/`** — the claim graph as files: one YAML node per claim (`DDD-<area>-<nn>`),
+  format version 1. 32 claims across `measure`, `frame`, `floor`, `tool`, `org`, `agent`,
+  `sim`. Canon authority for a converted claim moves from its prose to its claim file; the
+  prose becomes exposition that cites IDs.
+- **`core/decisions/`** — decision nodes (`DDD-dec-NN`), the volitional primitive; the
+  load-bearing edge is `decision --basedOn--> claim`. The three decisions settled in the
+  scaffolding session, landed with their bases verified to resolve.
+- **`spec/claim-format.md`** — the versioned claim schema (format 1) and validation rules.
+- **`scripts/validate-claims.py`** — validates claims and decisions against the spec.
+- **`meta/way-of-working.md`, `meta/conversion-protocol.md`, `meta/graph-tool-ontology.md`,
+  `meta/graph-tool-mvp.md`** — the program layer: the graph model, how prose converts to
+  claims, and the claim/decision ontology.
+- **`.claude/skills/claim-conversion/`** and **`CLAUDE.md`** — the conversion skill, and
+  agent guidance requiring every canon-changing commit to cite its claim-ID basis
+  (`DDD-agent-01`: basis as query, not context residue).
+
+### Changed
+- **`core/09-the-measure.md` becomes exposition citing claim IDs** — a Claims section maps
+  each section to its `DDD-measure-*` node. Five propositions the measure prose carried but
+  had not isolated landed as claims (`DDD-measure-09`..`13`). No argument text altered.
+- **`README.md`** — version and structure updated for the graph; the stale
+  *"re-decomposing can destroy demand"* line in the v3 comparison corrected to the relocation
+  reading (`DDD-measure-08` retired; `DDD-measure-03`).
+
+### Versioning — three axes, kept separate (`DDD-dec-03`)
+- **Canon version → 4.6.** The **claim format** version stays **1**. Each claim's **content**
+  version is its own `changed:` field. The landed claims carry `changed: v4.5` or earlier:
+  their content reflects canon as of v4.5, and the graph is a v4.6-introduced storage format,
+  not a re-statement of the claims. Format, process, and content version independently — the
+  decision this release instantiates.
+
+### Reconciled
+- **The version story.** `README.md` read `4.3`, this changelog's latest entry was `4.4`, and
+  the live claims carried `v4.5`. The v4.5 patch cluster (PR #11) had no changelog entry; it
+  is added below. `README.md` is bumped to 4.6.
+
+### Corrected — the loop closed
+- **`core/01` §"the statement"** asserted the retired reading —
+  *"Re-drawing the task boundary can destroy demand outright"*, *"the one that can actually
+  lower the total"* — the last live site of `DDD-measure-08` in `core/`, deferred as
+  out-of-scope by the v4.4 patch instruction (commit `c64f360`). Landing the claim surfaced it;
+  it is now corrected to the relocation reading (`core/09` §4): re-decomposition relocates
+  demand into the seam, the total is invariant, and what changes the total is changing the task
+  or the declared tolerance. Recorded in `core/claims/DDD-measure-08.yaml` notes — the
+  correction loop the framework is built on, run on its own canon: repo → graph surfaces the
+  contradiction → canon revised.
+
+## 4.5 — Generation cost, accountability as arrangement, and the assurance/tolerance split
+
+The v4.5 patch cluster (PR #11), recorded here retroactively as part of the 4.6 version
+reconciliation. Six corrections to `core/`, all separating quantities the prior canon fused.
+
+### Corrected
+- **Closure does not price generation.** The cost reading of path-degeneracy retired at
+  `core/03`, `core/04` §2, and `core/07` §§2, 4, 4.2. Closure sets the floor to zero and
+  makes intelligence unnecessary *for trust*; **generation cost is a second, independent
+  variable** the framework does not price. The met falsifier — satisfiability is linear to
+  check yet NP-hard to solve — is recorded in `core/07` §5 rather than deleted, and
+  `core/00` §6.1's *"adequacy stays cheap"* reworded to the identity reading.
+- **Accountability is a property of an arrangement, not an actor capacity** (`core/05`). The
+  §2 derivation from escape's pricing now constrains the arrangement; the table reports
+  available arrangements; the falsifier takes the no-persistent-element form; **control**
+  joins answerability and liability as a third component.
+- **Effective closure replaces decidability** (`core/03`, `core/04`, `core/09` §7). A
+  predicate is *closed for an arrangement* when ground is observable and adequacy evaluable
+  within declared resource, latency, and confidence bounds; *"decidable"* is reserved for the
+  formal special case. *"Digital ground"* retired at the live claim sites; the halting-problem
+  site and the superseded zero-floor claim preserved as quotations.
+- **Assurance is not tolerance** (`core/00`, `core/01`). Two variables separated under
+  *"declared assurance level"*: **tolerance** (which deviations are acceptable) and
+  **assurance** (strength of evidence that tolerance is met). The admission test is
+  tolerance-indexed; the assurance tower is a tower of assurance declarations, each declaring
+  a tolerance.
+- **Resolution is not correct determination** (`core/04`, `core/05`). Where the predicate is
+  open, *resolution* (someone acts and is accountable for acting) is distinguished from
+  *correct determination* (the act was right); trust shifts to the process, institution, and
+  accountable principal. Last wind prices only the dispersion component of the residual, not
+  risk.
+- **The measure prices the verdict, not the search** (`core/09` §7). Stated so the two
+  quantities this cluster separates cannot be re-fused through the measure. The stale caveat 3
+  (calling for an actor-capacity model that already exists in `core/10`) retired in favour of
+  a forward-reference, and its twin at §6.4 fixed.
+
+### Attribution
+- **Cook & Levin (1971)** — satisfiability's linear-check / NP-hard-solve gap, the worked
+  instance of closure being distinct from generation cost (`core/07` §5).
+
 ## 4.4 — Accountability, the second actor axis, and the operational layer
 
 ### Added

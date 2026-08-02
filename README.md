@@ -2,9 +2,11 @@
 
 **A theory of where determinations come from, what they cost, and which actor should make each one.**
 
-Version 4.3. This release adds the theoretical layer beneath the framework — and, following an
-external adversarial review, corrects and downgrades several claims that the earlier versions
-overstated. It is deliberately **smaller and better-attributed** than v3, and harder to knock down.
+Version 4.6. The framework is a **claim graph**: every claim it makes is a node with a status,
+evidence, and a falsifier, stored as data under [`core/claims/`](core/claims/) and validated
+against a versioned schema. This release lands that substrate; the theory itself is unchanged.
+It remains deliberately **smaller and better-attributed** than v3, and harder to knock down —
+and now says exactly which of its claims are proven, exercised, or still projected.
 
 ---
 
@@ -103,10 +105,24 @@ The framework, denominated in a domain.
 | [`applications/sdlc/`](applications/sdlc/) | Software delivery — the agentic/DAG design framework (formerly the whole of v3) |
 | [`applications/sdlc/production-as-ground.md`](applications/sdlc/production-as-ground.md) | Production is the only real ground; DORA read as demand; which feedback loops are waste |
 
-### Meta — the honesty layer
+### The graph — claims and decisions as data
+
+The framework as nodes. Files are storage; the graph is the object.
+
+| Path | What it is |
+|---|---|
+| [`core/claims/`](core/claims/) | One YAML node per claim (`DDD-<area>-<nn>`), with status, evidence, and falsifier. Canon authority for a converted claim lives here, not in its prose |
+| [`core/decisions/`](core/decisions/) | Decision nodes (`DDD-dec-NN`); the load-bearing edge is `decision --basedOn--> claim` |
+| [`spec/claim-format.md`](spec/claim-format.md) | The claim schema (format version 1) and its validation rules |
+| [`scripts/validate-claims.py`](scripts/validate-claims.py) | Validates `core/claims/` and `core/decisions/` against the spec |
+
+### Meta — the honesty layer and the program
 
 | Document | What it is |
 |---|---|
+| [`meta/way-of-working.md`](meta/way-of-working.md) | How work on the framework is structured: the graph model, projections, the correction loop. Governs the repo |
+| [`meta/conversion-protocol.md`](meta/conversion-protocol.md) | How `core/` prose becomes claim files |
+| [`meta/graph-tool-ontology.md`](meta/graph-tool-ontology.md) · [`meta/graph-tool-mvp.md`](meta/graph-tool-mvp.md) | The claim/decision ontology and the tool's MVP sketch |
 | [`meta/lineage-and-limits.md`](meta/lineage-and-limits.md) | Full attribution, corrections, retreats, and the open falsification debts |
 | [`meta/consolidated-state.md`](meta/consolidated-state.md) | Single authoritative status: what stands, what is superseded, what is owed |
 
@@ -127,8 +143,9 @@ The register also changed. Following external review:
 
 - **"Law" → "Principle."** No physical-law status without a measurable quantity (which we do not have;
   Ashby did, and even he refused the term).
-- **Conservation** holds as an accounting identity *within a fixed decomposition* — re-decomposing can
-  *destroy* demand, so the decomposition is the highest-leverage decision.
+- **Conservation** holds as an accounting identity *within a fixed decomposition* — re-decomposing
+  *relocates* demand into the seam (a cleaner split pre-pays more into the interface contract; the
+  total is invariant), so the decomposition is the highest-leverage decision. → [`core/09`](core/09-the-measure.md) §4, `DDD-measure-03`.
 - **The immune-system "licensing" argument** is demoted to a suggestive parallel with known
   disanalogies; **CRISPR** is the accurate compound-platform instance.
 - **The zero-floor postulate** is retreated to **the floor-in-the-predicate** result, which is
@@ -143,9 +160,12 @@ Full record: [`meta/lineage-and-limits.md`](meta/lineage-and-limits.md).
 
 This is a working specification under active revision. The strongest claims — the floor-in-the-
 predicate, and *selection intensity tracks predicate closure* — are **falsifiable**, and the
-conditions are stated in the documents. The framework books its open debts openly
-([`meta/`](meta/)); the most important is a counting procedure for governing decisions that would let
-"conservation" be measured rather than merely asserted.
+conditions are stated in the documents. Live status is now in the graph: every claim carries a
+status (`established` / `reported` / `projected` / `retired`) in [`core/claims/`](core/claims/).
+The counting-procedure debt — a measure of governing-decision demand shown invariant — is
+**paid for closing predicates** by the measure (`core/09`, `DDD-measure-01`/`02`/`06`) and marked
+as a **boundary, not an open debt**, off them; the framework books its remaining debts openly
+([`meta/`](meta/)).
 
 Reference implementation: [`product-cli`](https://github.com/Hafeok/product-cli) (the authoring layer
 for the SDLC projection).
