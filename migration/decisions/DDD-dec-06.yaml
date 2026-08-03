@@ -1,0 +1,14 @@
+id: DDD-dec-06
+question: |
+  When does the split execute, and under what name for the principle repo?
+resolution: |
+  Execution after the measure note ships, verified by a CHANGELOG or consolidated-state entry recording the shipped note — the split changes no claim's status and yields priority to work that does. Principle repo name: actor-indexed-determination, matching the settled frame-area vocabulary in spec/claim-format.md and Paper A's title.
+commitmentLevel: policy
+basis:
+- DDD-org-03
+assurance: |
+  Priority-as-governed-decision applied to the program's own sequencing. The kickoff prompt enforces the gate mechanically: the executing agent verifies the shipping record before acting.
+principal: Emil
+made: 2026-08-02 — repo split session
+reviewTrigger: |
+  The measure note's shipping is blocked beyond a quarter while split pressure (contributor confusion, cross-audience friction) accumulates.

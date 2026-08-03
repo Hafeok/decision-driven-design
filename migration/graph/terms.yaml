@@ -1,0 +1,38 @@
+# core/graph/terms.yaml — canonical term registry (format v1)
+#
+# The graph is source of truth for canonical definitions; docs embed them.
+#
+# Fields:
+#   id            term:<key>  — key matches the contract-block term key
+#   term          canonical surface form
+#   aliases       forms the body linter should match (optional)
+#   canonical_md  the EXACT markdown block docs must embed, byte-for-byte
+#                 (modulo leading/trailing whitespace). Edit here, never in the doc.
+#   established_by  the one core doc allowed to embed this term (its canonical home)
+#   status        settled | projected | draft
+#
+# Rules enforced by validate-core-order.py:
+#   - every term in a doc's `establishes` list exists here, and vice versa
+#   - established_by matches the doc that declares it
+#   - exactly one ddd:embed per id, in established_by; everywhere else, ddd:ref
+
+format: terms/v1
+terms:
+
+  - id: term:closure
+    term: closure
+    aliases: [closes, closed, closing]
+    established_by: 03-the-floor.md
+    status: settled
+    canonical_md: |
+      **Effective closure, defined.** A predicate is **closed for an arrangement** when the relevant
+      ground is observable and adequacy can be evaluated within declared resource, latency, and confidence
+      bounds. **Decidable** is reserved for the formal special case.
+
+  - id: term:floor
+    term: floor
+    aliases: [intrinsic floor]
+    established_by: 03-the-floor.md
+    status: settled
+    canonical_md: |
+      > **The intrinsic floor is a property of the acceptance predicate, not of the decision.**
