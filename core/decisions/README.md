@@ -9,7 +9,9 @@ load-bearing edge is `decision --basedOn--> claim` (`basis:`).
 than re-invented (`meta/graph-tool-ontology.md` §7 recommends backfilling the research
 repo's own decisions as day-one seed data). `DDD-dec-04..06` are the repo-split decisions
 from the repo split session — drafted in `migration/`, filed here on Emil's explicit
-authorisation. Emil is the accountable principal on all six.
+authorisation. `DDD-dec-07` is Emil's sequencing revision: it supersedes `DDD-dec-06`'s
+execution gate (the naming resolution stands). Emil is the accountable principal on all
+seven.
 
 **A decision is not falsifiable — it is superseded or revisited.** Each carries a
 `reviewTrigger`; a basis claim changing is always one (`meta/graph-tool-ontology.md` §4,

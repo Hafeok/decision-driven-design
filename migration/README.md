@@ -13,7 +13,8 @@ Everything the kickoff prompt requires, landed on the execution branch. Contents
 Gates before execution (both verified by the agent, neither performable by it):
 1. DDD-dec-04..06 present in `core/decisions/` — **MET 2026-08-03**
 2. Measure note shipped, recorded in CHANGELOG or consolidated-state (per DDD-dec-06) —
-   **OPEN**: no shipping entry exists yet; execution waits on it
+   **SUPERSEDED** by DDD-dec-07 (Emil, sequencing revision): the split may execute
+   immediately; DDD-dec-06's naming resolution stands
 
 ## Resolved judgment calls (⚑ ledger)
 
