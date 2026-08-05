@@ -1,9 +1,15 @@
 # The Skill Floor
 
-**Location:** `apparatus/the-skill-floor.md`. A direct consequence of the floor result
-(`core/03`, and the hard-capacity proof) applied to *skills* — any invokable capability that says
-what it does. Depends on the matched-pair invariant (`core/06`) and the encode/verify split
-(`apparatus/encode-verify.md`).
+**Location:** `apparatus/the-skill-floor.md`. A direct consequence of the floor result applied to
+*skills* — any invokable capability that says what it does. Depends on the matched-pair invariant
+and the encode/verify split (`apparatus/encode-verify.md`).
+
+Upstream basis (pinned in `graph/upstream.yaml`; the floor result and its canonical term live in
+the principle repo, not here):
+
+<!-- ddd:ref id=DDD-floor-01 -->
+<!-- ddd:ref id=term:floor -->
+<!-- ddd:ref id=term:seam-identity -->
 
 **Status:** the mechanism is derived and demonstrated (hard-capacity toy). The practical claim —
 that unverified skills are the systematic locus of silent failure under load — is reported from

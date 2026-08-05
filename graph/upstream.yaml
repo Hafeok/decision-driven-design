@@ -1,0 +1,36 @@
+# graph/upstream.yaml — cross-repo dependency pins (DDD-agent-01 applied to repositories)
+#
+# decision-driven-design depends on the actor-indexed-determination principle repo; never the
+# reverse. Every dependency is pinned at version AND status. The checker in
+# validate-core-order.py resolves these against the pinned ref (a shallow clone into a temp dir)
+# and raises:
+#   E12  a pinned id no longer exists upstream at ref
+#   E13  upstream canonical_md at ref differs from what a DDD doc embeds (only for embedded ids)
+#   W5   an upstream claim's status changed since status_at_pin — an escaped decision until the
+#        pin is consciously advanced (a governed decision, not a mechanical bump)
+#
+# Advancing a pin is a decision: when a pinned status has moved, record the advance as a decision
+# under core/decisions/ before bumping status_at_pin.
+
+format: upstream/v1
+upstream:
+  repo: https://github.com/Hafeok/actor-indexed-determination
+  ref: v5.0.0                       # tag, never a branch
+  pins:
+    # basis claims for DDD-dec-04 (the split decision itself rests on these)
+    - id: DDD-frame-01
+      status_at_pin: projected
+    - id: DDD-measure-01
+      status_at_pin: projected
+    # the floor mechanism the apparatus/skill-floor builds on
+    - id: DDD-floor-01
+      status_at_pin: reported
+    # canonical terms the software projection references
+    - id: term:closure
+      status_at_pin: settled
+    - id: term:floor
+      status_at_pin: settled
+    - id: term:conservation
+      status_at_pin: settled
+    - id: term:seam-identity
+      status_at_pin: settled

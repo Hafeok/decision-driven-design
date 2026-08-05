@@ -1,20 +1,30 @@
 # Contributing
 
-This framework benefits from contact with other people's domains. The strongest pressure on it so far
-has come from trying to apply it past software development — and from an external adversarial review
-that forced real corrections. Both kinds of pressure are welcome. Especially the second.
+This repository is the **software projection** of the actor-general principle. The framework benefits
+from contact with other people's domains, and from adversarial review. Where a contribution goes
+depends on what it targets:
 
-## What is most useful
+## Where issues go — the split
 
-- **Falsification.** The load-bearing claims are meant to be falsifiable. If you can exhibit an open
-  predicate whose performance is nonetheless reliably assessable, or a closing predicate where
-  path-degeneracy fails, you have broken `core/03` and `core/07`. Say so, in an issue.
-- **Counterexamples to conservation.** The principle holds only *within a fixed decomposition*. If you
-  find a case where it fails even there, that matters.
-- **Prior art we missed.** The framework is a synthesis and credits its ancestors (`meta/lineage-and-limits.md`).
-  If we are reinventing something uncredited, name it.
-- **Domain projections.** Applying the core to a domain that is not software — and finding where it
-  bends — is exactly the pressure the framework wants.
+- **Falsification of a core claim** — the floor, selection-vs-training, the measure, conservation,
+  determination-vs-intelligence — belongs in the **principle repository**
+  (`actor-indexed-determination`), as an issue against its `core/`. Those claims are canon there, not
+  here; this repository only pins them. If you can exhibit an open predicate whose performance is
+  nonetheless reliably assessable, or a closing predicate where path-degeneracy fails, that breaks the
+  principle — raise it upstream.
+- **Domain projections and software apparatus** — applying the principle to software (or another
+  domain) and finding where it bends, improvements to the tool contracts, the encode/verify apparatus,
+  the SDLC and organisation-design material — belong **here**.
+
+## What is most useful here
+
+- **Projection pressure.** Applying the core to a domain and finding where the rendering bends.
+- **Apparatus correctness.** The tool contracts, the skill floor, the encode/verify split.
+- **Pin hygiene.** If `graph/upstream.yaml` pins a stale status, or a pinned id has drifted, the
+  upstream check will flag it (W5/E12/E13) — advancing a pin is a governed decision, recorded under
+  `core/decisions/`.
+- **Prior art we missed.** The framework is a synthesis and credits its ancestors (upstream
+  `meta/lineage-and-limits.md`). If we are reinventing something uncredited, name it.
 
 ## What the framework will not do
 
@@ -25,8 +35,9 @@ that forced real corrections. Both kinds of pressure are welcome. Especially the
 
 ## Discipline
 
-Corrections propagate. A change to a `core/` claim must be reflected in `meta/consolidated-state.md`,
-which is the authoritative status document. Where documents conflict, `core/` wins, and
-`consolidated-state` records the resolution.
+Corrections propagate. A change to a projection-local claim must be reflected in
+`meta/consolidated-state.md`. Shared claims are canon upstream; where this repo and the principle repo
+conflict on a shared claim, the principle repo wins, and advancing a pin to absorb an upstream change
+is recorded as a decision under `core/decisions/`.
 
 Issues and discussions are open.

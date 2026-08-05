@@ -1,21 +1,15 @@
 # core/
 
-The theory layer — actor-general, denominated in **determinations**, not specifications. Nothing here
-references `apparatus/` or `applications/` definitionally; the dependency runs one way, downward from
-core.
+**This repository is the software projection.** The actor-general theory layer — the numbered core
+documents `00`–`11`, the canonical term graph, and the reproduction assets — is **canon in the
+principle repository** (`actor-indexed-determination`) and lives there, not here. This directory holds
+only what is local to the projection's own graph:
 
-Read in order:
+- `claims/` — the projection-local claims (`org`, `tool`, `sim`). Actor-general claims are pinned
+  upstream in `graph/upstream.yaml`.
+- `decisions/` — the program's decision nodes (`DDD-dec-01..07`), including the split decisions.
+  Decisions are volitional program acts; they live with the projection, not upstream.
 
-- **00 — determination** · the two primitives (decisions, ground); the admission tests; *the act is a decision*
-- **01 — the principle** · conservation of determination demand; the four stores; why it is a *principle*, not a law
-- **02 — completeness** · the stores are exhaustive by construction — and why that is a warning, not a boast
-- **03 — the floor** · the intrinsic floor lives in the *acceptance predicate* — the framework's best original result
-- **04 — actors** · the missing parameter: pinning resolution, selection vs. training, seams, the compound
-- **05 — accountability** · the second actor axis, independent of pinning resolution and running opposite to it; the three conditions derived from escape's pricing; the chain must be attributable, not remembered; answerability and liability come apart; the assurance tower
-- **06 — composition** · the seam-demand identity; orchestrator vs. swarm; the channel is the platform
-- **07 — determination and intelligence** · determination ≠ intelligence; the LLM debate is structurally undecidable
-- **08 — projections** · the funnel & maturation as judgment-demand projections; the count/cost correction
-- **09 — the measure** · demand = Shannon entropy of the verdict; conservation = the chain rule; the counting debt paid for closing predicates
-- **10 — the floor mechanism** · escape = overflow ∩ open; p_err derived from rate-distortion; hallucination as surfaced escape
-
-The load-bearing, falsifiable claims are in **03**, **04**, **09**, and **10**. The honesty about register is in **01**.
+The principle repo's canon is consumed by pin, not by copy: `graph/upstream.yaml` names every upstream
+id this repository depends on, at a version and a status, and `validate-core-order.py` checks them
+against a shallow clone of the pinned ref (basis-loss detection — `DDD-agent-01` applied to repos).

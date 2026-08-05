@@ -4,11 +4,20 @@ Guidance for agents working in the `decision-driven-design` repository.
 
 ## What this repo is
 
+**This repository is the software projection (split per `DDD-dec-04`).** The actor-general
+theory — the numbered core documents and the canonical term graph — is **canon in the principle
+repository** (`actor-indexed-determination`, tag `v5.0.0`), not here. Do not add or edit core
+theory documents in this repo; canon changes are issues and PRs against the principle repo.
+This repo holds the software apparatus, the SDLC and organisation-design projections, the graph
+tool's claims (`core/claims/`: `org`, `tool`, `sim`), and the program's decisions
+(`core/decisions/`). Shared claims are consumed by pin, not copy — `graph/upstream.yaml`, checked
+by `validate-core-order.py` against a shallow clone of the pinned ref.
+
 The framework is a **claim graph**, not a set of documents. Files are a storage format; the
-graph is the object. Read `meta/way-of-working.md` first — it governs the repo and every
-project that projects from it, and where it and older material disagree, it wins. It defines
-the three layers (framework in `core/`, program in `meta/`, projections in `projections/`),
-the status vocabulary, and the correction loop **repo → program → projection → repo**.
+graph is the object. Read `meta/way-of-working.md` — it governs the repo and every project that
+projects from it, and where it and older material disagree, it wins. It defines the three layers
+(framework, program in `meta/`, projections), the status vocabulary, and the correction loop
+**repo → program → projection → repo**.
 
 Then, before changing any claim or converting any prose:
 
