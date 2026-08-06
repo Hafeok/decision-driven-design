@@ -24,8 +24,8 @@ Ordering errors (E1–E5) as in v1. Transclusion errors:
 Warnings:
   W1  possible undeclared forward use (body linter; apply the deletion test)
   W2  required term never appears in body (stale import)
-  W3  graph object never embedded in any core doc (claims without
-      canonical_md are exempt — they simply don't participate)
+  W3  graph object WITH a canonical_md is embedded nowhere (registry-only
+      objects — terms/claims without canonical_md — are exempt by design)
   W4  established term has no graph entry yet (migration gap)
 
 Usage: python3 validate-core-order.py [core-dir]   (graph read from <core-dir>/graph/)
@@ -398,9 +398,12 @@ def main() -> int:
                 line = raw_text[: m.start()].count("\n") + 1
                 errors.append(f"E9 {p.name}:{line}: ref to unknown id '{m.group(1)}'")
 
-    for gid in graph:
-        if gid not in embedded_ids:
-            warnings.append(f"W3 graph object '{gid}' never embedded in any core doc")
+    for gid, obj in graph.items():
+        if gid not in embedded_ids and obj.get("canonical_md"):
+            warnings.append(
+                f"W3 graph object '{gid}' has a canonical_md but is embedded nowhere "
+                f"(registry-only objects — no canonical_md — are exempt)"
+            )
 
     # ---- pass 3: body linter for undeclared forward use --------------------
     for k, (j, q, raw) in sorted(established_by.items(), key=lambda kv: kv[1][0]):
