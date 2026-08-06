@@ -1,0 +1,17 @@
+id: DDD-dec-05
+question: |
+  Does organization design get its own repository in the split?
+resolution: |
+  No. Organization design stays a directory — applications/organizations/ in decision-driven-design, seeded from DDD-org-01..04. Promotion criterion: core-like documents of its own and an identified external checker, not before. A directory seam is nearly free and promotes losslessly.
+commitmentLevel: policy
+basis:
+- DDD-org-01
+- DDD-org-02
+- DDD-org-03
+- DDD-org-04
+assurance: |
+  Four claims, zero documents — the parts are too small for the seam. Seam-identity reasoning: paying full repo-boundary cost to cheapen parts that do not yet exist.
+principal: Emil
+made: 2026-08-02 — repo split session
+reviewTrigger: |
+  The organization material grows its own document set or attracts a distinct reviewer or checker audience.

@@ -12,6 +12,14 @@ test, and it is presented as such.
 
 ---
 
+**Upstream basis.** This document is part of the software projection; it builds on the
+principle repo's canon (`actor-indexed-determination`). The `core/NN` references below resolve
+there, pinned at a version and a status in `graph/upstream.yaml`:
+
+<!-- ddd:ref id=term:floor -->
+<!-- ddd:ref id=DDD-measure-01 -->
+<!-- ddd:ref id=DDD-floor-01 -->
+
 ## 1. The claim, stated carefully
 
 A tempting formulation is: *"you cannot know whether software works before it is in production."*

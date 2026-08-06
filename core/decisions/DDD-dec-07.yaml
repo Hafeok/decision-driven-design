@@ -1,0 +1,23 @@
+id: DDD-dec-07
+question: |
+  Does the split remain gated on the measure note shipping (DDD-dec-06), or decouple?
+resolution: |
+  Decouple; supersedes DDD-dec-06's execution gate. The split may execute immediately.
+  DDD-dec-06's naming resolution (actor-indexed-determination) stands. Priority ordering
+  is retained as guidance, not coupling: the related-work section remains the only open
+  task that changes a claim's status, and no further infrastructure work is scheduled
+  ahead of it.
+commitmentLevel: policy
+basis:
+- DDD-org-03
+assurance: |
+  Basis revision, not preference change: dec-06's gate protected principal attention from
+  a costly migration. The landed bundle (migration/, 4cd8a7a, 08c72e5) reduced execution
+  to a supervised agent run with all judgment calls pre-resolved, so the gate now binds
+  the principal's publication timing without protecting anything. Revisiting a decision
+  whose basis changed is the framework's own prescription (DDD-agent-01).
+principal: Emil
+made: 2026-08-02 — sequencing revision
+reviewTrigger: |
+  Infrastructure or migration work begins displacing status-changing work again — the
+  condition the original gate existed to prevent.

@@ -1,24 +1,23 @@
 # core/claims/
 
 The claim graph as files: one YAML file per claim node, `DDD-<area>-<nn>.yaml`, each declaring
-`format: 1` per `spec/claim-format.md`. Until the graph tool exists these files **are** the graph
-and grep is the query engine (`meta/way-of-working.md` §2).
+`format: 1` per `spec/claim-format.md`. These files **are** the graph and grep is the query engine.
 
 Canon authority for a converted claim lives here, not in the prose it was extracted from. Where a
-`core/` document and its claim disagree, the disagreement is a bug in the prose — flagged in the
-claim's `notes:`, not silently harmonised (`meta/conversion-protocol.md`).
+document and its claim disagree, the disagreement is a bug in the prose — flagged in the claim's
+`notes:`, not silently harmonised (`meta/conversion-protocol.md`).
 
-**Provenance.** These claims were split from `meta/seed/claims-seed.yaml`, which was drafted from
-projections pinned at v4.4/v4.5 and then verified against live canon in this branch. The
-verification outcomes — verified, restatused, struck, or flagged — are recorded per claim in
-`notes:` and in the branch commit history.
+**Areas held here (the software projection):** `org` (organisation-design projection), `tool` (the
+graph tool), `sim` (the tool's predictive models). The actor-general areas — `measure`, `frame`,
+`floor`, `agent` — are **canon in the principle repository** (`actor-indexed-determination`) and are
+pinned, where this repo depends on them, in `graph/upstream.yaml`. New areas are cheap; renumbering
+is forbidden; retired claims keep their IDs.
 
-**Areas:** `measure`, `frame` (actor-indexed determination), `floor`, `tool`, `org`, `agent`,
-`sim`. New areas are cheap; renumbering is forbidden; retired claims keep their IDs.
+**Flags awaiting Emil review.** Every claim held here is **projected** and **session-authored**
+(`UNVERIFIED — Emil review` in `notes:`) — the org and sim predictions and the tool claim. They are
+flagged, never struck, and never presented as canon.
 
-**Flags awaiting Emil review.** Claims whose `notes:` carry `UNVERIFIED` could not be confirmed
-from repo contents — either Paper A / foundation-revision material not yet in `core/`
-(`frame-01`, `frame-02`, `frame-07`) or session-authored predictions in the parked areas
-(`org-*`, `agent-01`, `sim-*`). They are flagged, never struck, and never presented as canon.
-
-**Validate:** `python3 scripts/validate-claims.py core/claims/`
+**Validate:**
+- `python3 scripts/validate-claims.py core/claims/`
+- `python3 scripts/validate-claims.py core/decisions/ --decisions`
+- `python3 validate-core-order.py core/` (resolves `graph/upstream.yaml` against the pinned ref)

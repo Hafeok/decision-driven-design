@@ -1,0 +1,15 @@
+id: DDD-dec-04
+question: |
+  Does the corpus stay one repository, or split into an actor-general principle repo and a software-projection repo?
+resolution: |
+  Split. An actor-general principle repo (working name: actor-indexed-determination, pending DDD-dec-06) holds core/, its claim graph, and the canon discipline. decision-driven-design becomes the principle's software projection and keeps the name — DDD is the engineering projection by construction. The repo seam traces the register boundary already settled in vocabulary: determination demand (general) vs specification demand (engineering).
+commitmentLevel: policy
+basis:
+- DDD-frame-01
+- DDD-measure-01
+assurance: |
+  Seam-identity reasoning applied to the split (cheaper audience-specific parts vs repo-boundary seam cost); checker-alignment: the two repos face disjoint checker populations (Paper A reviewers / information theorists vs engineers). Cross-repo edges are pinned at version and status with basis-loss detection (W5), per DDD-agent-01 applied to repositories. SDP direction enforced: the principle repo carries no reference to its dependents.
+principal: Emil
+made: 2026-08-02 — repo split session
+reviewTrigger: |
+  Cross-repo seam cost (pin maintenance, basis-loss churn, contributor confusion) exceeds the audience clarity it buys within two quarters — or DDD-frame-10's instability forces canon changes at a cadence pins cannot track.

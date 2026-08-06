@@ -9,6 +9,13 @@ exercised.
 
 ---
 
+**Upstream basis.** This document is part of the software projection; it builds on the
+principle repo's canon (`actor-indexed-determination`). The `core/NN` references below resolve
+there, pinned at a version and a status in `graph/upstream.yaml`:
+
+<!-- ddd:ref id=term:determination -->
+<!-- ddd:ref id=term:conservation -->
+
 ## The gap this closes
 
 The current treatment defines **ground** as *the read-only surface actors inspect in order to

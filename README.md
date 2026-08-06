@@ -1,12 +1,20 @@
 # Decision-Driven Design
 
-**A theory of where determinations come from, what they cost, and which actor should make each one.**
+**The software projection of the Conservation Principle of Determination Demand** — a theory of where
+determinations come from, what they cost, and which actor should make each one.
 
-Version 4.6. The framework is a **claim graph**: every claim it makes is a node with a status,
-evidence, and a falsifier, stored as data under [`core/claims/`](core/claims/) and validated
-against a versioned schema. This release lands that substrate; the theory itself is unchanged.
-It remains deliberately **smaller and better-attributed** than v3, and harder to knock down —
-and now says exactly which of its claims are proven, exercised, or still projected.
+> **This repository was split (`DDD-dec-04`).** The actor-general theory now lives in the principle
+> repository, [`actor-indexed-determination`](https://github.com/Hafeok/actor-indexed-determination)
+> (tag `v5.0.0`); *decision-driven-design* is its **software projection** and keeps the name. Core
+> canon is consumed by pin, not copy — see [`graph/upstream.yaml`](graph/upstream.yaml). Falsification
+> of a core claim is an issue for the principle repo; software apparatus and domain projections are
+> issues here. What remains in this repository: the tool contracts and apparatus, the SDLC and
+> organisation-design projections, the graph tool's claims and the program's decisions.
+
+The framework is a **claim graph**: every claim it makes is a node with a status, evidence, and a
+falsifier, stored as data and validated against a versioned schema. It remains deliberately **smaller
+and better-attributed** than v3, and harder to knock down — and says exactly which of its claims are
+proven, exercised, or still projected.
 
 ---
 
@@ -64,23 +72,17 @@ cannot support is worth more than one that overclaims.
 
 ## Reading order
 
-### Core — the theory
+### Core — the theory (upstream)
 
-The claim, from primitives to consequences. Read in order if you are new.
+The actor-general theory — `00` primitives through `11` the licensing instance, the canonical term
+graph, and the reproduction assets — is **canon in the principle repository**,
+[`actor-indexed-determination`](https://github.com/Hafeok/actor-indexed-determination), tag `v5.0.0`.
+It is not duplicated here. This repository pins the specific claims it depends on in
+[`graph/upstream.yaml`](graph/upstream.yaml); read the theory in the principle repo's `core/`.
 
-| | Document | What it establishes |
-|---|---|---|
-| 00 | [`core/00-determination.md`](core/00-determination.md) | The two primitives; the admission tests; *the act is a decision* |
-| 01 | [`core/01-the-principle.md`](core/01-the-principle.md) | The conservation principle; the four stores; the register question |
-| 02 | [`core/02-completeness.md`](core/02-completeness.md) | Why the stores are exhaustive — and why that is worth less than it looks |
-| 03 | [`core/03-the-floor.md`](core/03-the-floor.md) | **The floor is in the acceptance predicate** — the best original result |
-| 04 | [`core/04-actors.md`](core/04-actors.md) | **The missing parameter.** Pinning; selection vs. training; seams; the compound |
-| 05 | [`core/05-accountability.md`](core/05-accountability.md) | The second actor axis: what makes an actor able to hold a determination, not merely produce one; persistence, stake, sanctionability; answerability vs liability; the assurance tower |
-| 06 | [`core/06-composition.md`](core/06-composition.md) | The seam-demand identity; orchestrator vs. swarm; the channel is the platform |
-| 07 | [`core/07-determination-and-intelligence.md`](core/07-determination-and-intelligence.md) | Determination ≠ intelligence; why the LLM debate is structurally undecidable |
-| 08 | [`core/08-projections.md`](core/08-projections.md) | The funnel & maturation as **judgment-demand** projections (not count); why the model's feedback loops appeared |
-| 09 | [`core/09-the-measure.md`](core/09-the-measure.md) | **Demand is Shannon entropy of the verdict; conservation is the chain rule.** The counting-procedure debt, paid for closing predicates |
-| 10 | [`core/10-the-floor-mechanism.md`](core/10-the-floor-mechanism.md) | **The floor mechanism.** Escape = overflow ∩ open; the encode-fraction rule; hallucination as surfaced escape |
+The load-bearing, falsifiable results — the floor is in the acceptance predicate, selection intensity
+tracks predicate closure, demand is the Shannon entropy of the verdict, escape is overflow ∩ open —
+all live upstream. Falsification of any of them is an issue against the principle repo, not this one.
 
 ### Apparatus — the mechanisms
 
@@ -123,10 +125,11 @@ The framework as nodes. Files are storage; the graph is the object.
 | [`meta/way-of-working.md`](meta/way-of-working.md) | How work on the framework is structured: the graph model, projections, the correction loop. Governs the repo |
 | [`meta/conversion-protocol.md`](meta/conversion-protocol.md) | How `core/` prose becomes claim files |
 | [`meta/graph-tool-ontology.md`](meta/graph-tool-ontology.md) · [`meta/graph-tool-mvp.md`](meta/graph-tool-mvp.md) | The claim/decision ontology and the tool's MVP sketch |
-| [`meta/lineage-and-limits.md`](meta/lineage-and-limits.md) | Full attribution, corrections, retreats, and the open falsification debts |
-| [`meta/consolidated-state.md`](meta/consolidated-state.md) | Single authoritative status: what stands, what is superseded, what is owed |
+| `meta/lineage-and-limits.md` (upstream) | Full attribution, corrections, retreats, and the open falsification debts — canon in the principle repo |
+| [`meta/consolidated-state.md`](meta/consolidated-state.md) | Projection-local status (org, outreach, product); shared claims resolve upstream |
+| [`graph/upstream.yaml`](graph/upstream.yaml) | The cross-repo pins: every upstream id this repo depends on, at a version and a status |
 
-Danish glossary: [`i18n/ordliste-dansk.md`](i18n/ordliste-dansk.md).
+Danish glossary of core terms: in the principle repo (`i18n/ordliste-dansk.md`).
 
 ---
 

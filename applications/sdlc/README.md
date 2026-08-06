@@ -10,6 +10,14 @@ Nothing here is deprecated. The reframing is a promotion: what looked like the f
 
 ---
 
+**Upstream basis.** This document is part of the software projection; it builds on the
+principle repo's canon (`actor-indexed-determination`). The `core/NN` references below resolve
+there, pinned at a version and a status in `graph/upstream.yaml`:
+
+<!-- ddd:ref id=term:floor -->
+<!-- ddd:ref id=DDD-frame-01 -->
+<!-- ddd:ref id=term:seam-identity -->
+
 ## How this relates to `core/`
 
 | In `core/` (general) | Here (software) |

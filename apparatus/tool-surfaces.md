@@ -10,6 +10,14 @@ descriptive of the protocol as specified.
 
 ---
 
+**Upstream basis.** This document is part of the software projection; it builds on the
+principle repo's canon (`actor-indexed-determination`). The `core/NN` references below resolve
+there, pinned at a version and a status in `graph/upstream.yaml`:
+
+<!-- ddd:ref id=term:floor -->
+<!-- ddd:ref id=term:seam-identity -->
+<!-- ddd:ref id=DDD-floor-01 -->
+
 ## 1. The claim
 
 > **A tool call does not merely retrieve. It *reallocates demand*. Every call either resolves

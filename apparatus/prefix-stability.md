@@ -14,6 +14,14 @@ turns SDP violations into a **detector** for mislocated encoding.
 
 ---
 
+**Upstream basis.** This document is part of the software projection; it builds on the
+principle repo's canon (`actor-indexed-determination`). The `core/NN` references below resolve
+there, pinned at a version and a status in `graph/upstream.yaml`:
+
+<!-- ddd:ref id=term:seam-identity -->
+<!-- ddd:ref id=DDD-measure-01 -->
+<!-- ddd:ref id=DDD-floor-01 -->
+
 ## 1. A prefix is a dependency graph
 
 Causal attention makes every token after position `k` depend, structurally, on every token before it.

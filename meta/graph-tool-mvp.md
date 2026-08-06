@@ -6,6 +6,11 @@ afternoon belongs to the full tool (`DDD-tool-01`) and waits.
 **Principle.** The MVP adds no behaviour the convention does not already have — it mechanises grep.
 Claims stay markdown; manifests stay front-matter; the only executable is CI.
 
+**Post-split note.** The `core/09` and `core/assets/measure-*.py` this sketch reproduces are canon in
+the principle repository now (`actor-indexed-determination`); a reproduce-and-diff CI job for them runs
+there. Here, `graph/upstream.yaml` + `validate-core-order.py` check that the pins this repo depends on
+still resolve at the pinned ref.
+
 ---
 
 ## 1. Claims file
