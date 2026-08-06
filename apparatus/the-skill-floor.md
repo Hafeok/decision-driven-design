@@ -10,6 +10,7 @@ the principle repo, not here):
 <!-- ddd:ref id=DDD-floor-01 -->
 <!-- ddd:ref id=term:floor -->
 <!-- ddd:ref id=term:seam-identity -->
+<!-- ddd:ref id=term:conservation -->
 
 **Status:** the mechanism is derived and demonstrated (hard-capacity toy). The practical claim —
 that unverified skills are the systematic locus of silent failure under load — is reported from

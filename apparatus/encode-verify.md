@@ -5,6 +5,14 @@ some ground is yours and some is not. It is the spine of the reference tooling (
 
 ---
 
+**Upstream basis.** This document is part of the software projection; it builds on the
+principle repo's canon (`actor-indexed-determination`). The `core/NN` references below resolve
+there, pinned at a version and a status in `graph/upstream.yaml`:
+
+<!-- ddd:ref id=term:determination -->
+<!-- ddd:ref id=term:floor -->
+<!-- ddd:ref id=term:seam-identity -->
+
 ## The rule
 
 > **You can encode ground you control.**

@@ -11,6 +11,12 @@ kind a projected claim can have: three witnesses who never spoke to each other.
 
 ---
 
+**Upstream basis.** This document is part of the software projection; it builds on the
+principle repo's canon (`actor-indexed-determination`). The `core/NN` references below resolve
+there, pinned at a version and a status in `graph/upstream.yaml`:
+
+<!-- ddd:ref id=term:conservation -->
+
 ## The claim
 
 > **The attack surface of any actor is its ground, not its logic.**

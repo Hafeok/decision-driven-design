@@ -26,6 +26,8 @@ upstream:
     - id: DDD-floor-01
       status_at_pin: reported
     # canonical terms the software projection references
+    - id: term:determination
+      status_at_pin: settled
     - id: term:closure
       status_at_pin: settled
     - id: term:floor

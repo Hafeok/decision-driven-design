@@ -4,8 +4,15 @@
 it flows. This file governs the repo and every project that projects from it. Settled unless marked
 OPEN. Where this file and older material disagree, this file wins.
 
-**Intended location.** `meta/way-of-working.md` in the `decision-driven-design` repo, alongside
-`meta/lineage-and-limits.md`. A copy serves as the base context file for any working project.
+**Intended location.** `meta/way-of-working.md` in the `decision-driven-design` repo. A copy serves as
+the base context file for any working project.
+
+**Post-split note (`DDD-dec-04`).** The **framework** layer — the `core/` documents, the term graph,
+and `core/assets/` — is now canon in the principle repository (`actor-indexed-determination`, tag
+`v5.0.0`). Every `core/NN` and `core/assets/…` reference below is descriptive of that upstream layer,
+not a local path in this repository; this repo holds the **program** and the **projections**, and
+consumes the framework by pin (`graph/upstream.yaml`). `meta/lineage-and-limits.md` also lives
+upstream now.
 
 ---
 
