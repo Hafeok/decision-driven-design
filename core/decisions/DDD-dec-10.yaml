@@ -1,0 +1,41 @@
+id: DDD-dec-10
+question: |
+  Does the software projection adopt the boundary charter (R4), take the volume-optimisation cost layer, and advance the upstream pin?
+resolution: |
+  Adopt. The boundary charter (R4, Emil 2026-08-09; upstream decision DDD-dec-09) rules that the
+  principle layer is synchronic — one actor, one act, four stores, stateless between acts — and
+  that any statement requiring anything to persist between acts files with the projection. This
+  repository therefore takes the volume layer of the cost register:
+
+  - core/13-cost-projection.md — the projection's first numbered core document, numbered to
+    continue the upstream reading order (upstream canon ends at core/12): the two-part total
+    C(E, N), the degeneracy's volume corollary, the MDL optimisation and its marginal condition,
+    and the actor-table regime reading.
+  - DDD-cost-04 relocated whole from the principle repository — regime selection quantifies over
+    act volume. The ID travels with the claim; claims relocate, never renumber.
+  - DDD-cost-06 and DDD-cost-07 minted for the volume halves of the upstream splits: the N*
+    corollary of DDD-cost-02 and the N-denominated form of DDD-cost-03, each citing the pinned
+    upstream ID as basis.
+  - term act-volume established here (core/graph/terms.yaml, registry-only).
+  - core/assets/measure-mdl-volume.py as the reproducing asset (measure-* prefix kept, per R1).
+  - graph/upstream.yaml: ref advanced from v5.0.0 to the staged upstream branch
+    (claude/canon-session-1-wave-1-els7lf) so E12/E13/W5 resolve during staging; the pin bumps
+    to the merge/tag ref on Emil's upstream acceptance. Pins added: term:act, term:cost-register,
+    term:standing-cost, term:occasioned-cost, DDD-cost-01, DDD-cost-02, DDD-cost-03.
+  - validate-core-order.py extended: with numbered docs present it now also runs the upstream
+    checks, and pinned upstream ids satisfy requires/refs (the cross-repo backward edge).
+commitmentLevel: policy
+basis:
+- DDD-dec-04
+- DDD-cost-02
+- DDD-cost-03
+assurance: |
+  The pin advance is recorded here before the bump, per graph/upstream.yaml's header rule.
+  Validators: E12/E13/W5 resolve against the staged ref; the ordering validator's docs mode
+  covers the new document; the asset re-runs and reproduces its stated figures (all model-1
+  crossovers at N* = 124 on the date task; graded build-out under description-length pricing).
+principal: Emil
+made: 2026-08-09 — canon session (Wave 1 residual), ruled in-session
+reviewTrigger: |
+  Upstream acceptance lands at a ref other than the staged branch head (bump the pin and re-run
+  E12/E13/W5), or a future upstream document insertion collides with the projection's numbering.
