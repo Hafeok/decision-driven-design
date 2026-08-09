@@ -1,0 +1,29 @@
+format: 1
+id: DDD-cost-06
+kind: formal
+statement: |
+  Volume corollary of the degeneracy: under standing cost linear in I(V;E), every crossover sits at the same act volume N* = n·(α/β) and the whole frontier flips at once — a graded build-out over volume therefore requires standing cost priced as mechanism description length.
+status: reported
+region: |
+  identity consequence — any task with a defined verdict function; exercised on the date-validation task
+evidence:
+- kind: asset
+  ref: core/assets/measure-mdl-volume.py
+  note: >-
+    reproduces the corollary exactly: all crossovers at N* = n(α/β) = 124 on the date task; the
+    description-length form (model 2) then produces the graded build-out the information-linear
+    form cannot
+falsifier: |
+  — (identity consequence; fails only with the chain rule)
+credits: |
+  The identity is Shannon's chain rule; the two-part form is Rissanen's MDL. The degeneracy observation is the framework's — the per-act core is upstream DDD-cost-02.
+owner: none
+changed: v5.2 (2026-08-09, R4 carve)
+notes: |
+  Reported as arithmetic: the claim is an identity consequence exercised by the script, not an
+  empirical finding about any production system.
+
+  Split from DDD-cost-02 per the boundary charter (upstream DDD-dec-09; DDD-dec-10 here): the
+  upstream ID keeps the per-act statement (flat tradeoff, density identically 1, forced by
+  conservation); this claim carries the volume-quantified corollary and cites DDD-cost-02
+  (pinned in graph/upstream.yaml) as basis.

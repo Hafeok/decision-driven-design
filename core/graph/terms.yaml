@@ -1,0 +1,16 @@
+# core/graph/terms.yaml — the projection's own term registry.
+#
+# Terms established by this repository's numbered core documents. Upstream terms are never
+# duplicated here — they are pinned in graph/upstream.yaml and consumed by reference
+# (validate-core-order.py treats pinned ids as established upstream of every local doc).
+#
+# term:act-volume relocated here from the principle repository under the boundary charter
+# (upstream DDD-dec-09; DDD-dec-10 here): act volume persists between acts, so no upstream
+# statement may quantify over it.
+
+terms:
+  - id: term:act-volume
+    term: act-volume
+    aliases: [act volume]
+    established_by: 13-cost-projection.md
+    status: settled

@@ -1,5 +1,35 @@
 # Changelog
 
+## 4.7 — The volume layer (boundary charter)
+
+The boundary charter (R4, Emil 2026-08-09; upstream decision `DDD-dec-09`): the principle layer
+is synchronic — one actor, one act, four stores, stateless between acts — and anything requiring
+persistence between acts files with the projection. This release takes the volume layer of the
+cost register. Decision filed as `DDD-dec-10`.
+
+### Added
+- **`core/13-cost-projection.md`** — the projection's first numbered core document, numbered to
+  continue the upstream reading order (upstream canon ends at `core/12`): act volume and the
+  two-part total `C(E, N)`; the degeneracy's volume corollary (all information-priced crossovers
+  at `N* = n·(α/β)`); the MDL optimisation `L(mechanism) + N·H(V|E)` and its marginal condition;
+  the actor-table regime reading.
+- **`core/claims/DDD-cost-04.yaml`** — relocated whole from the principle repository (ID intact;
+  claims relocate, never renumber). **`DDD-cost-06`**, **`DDD-cost-07`** — the volume halves of
+  the upstream splits of `DDD-cost-02`/`DDD-cost-03`, citing the pinned upstream IDs as basis.
+- **`core/graph/terms.yaml`** — the projection's own term registry; `act-volume` relocated here.
+- **`core/assets/measure-mdl-volume.py`** — reproduces the corollary (every model-1 crossover at
+  `N* = 124` on the date task) and the graded build-out under description-length pricing.
+- **`core/decisions/DDD-dec-10.yaml`** — adopts the charter, records the relocation and the pin
+  advance.
+
+### Changed
+- **`graph/upstream.yaml`** — ref advanced from `v5.0.0` to the staged upstream branch (bumps to
+  the merge/tag ref on upstream acceptance); pins added for `term:act`, the three register terms,
+  and `DDD-cost-01..03`.
+- **`validate-core-order.py`** — with numbered docs present it now also runs the upstream checks
+  (E12/E13/W5), and pinned upstream ids satisfy `requires`/`ref` edges in local documents (the
+  cross-repo backward edge).
+
 ## 4.6 — The claim graph
 
 The framework's claims and decisions become **data**: one file per node, validated against a

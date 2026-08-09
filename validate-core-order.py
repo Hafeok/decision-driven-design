@@ -223,8 +223,21 @@ def resolve_upstream(upstream_yaml: Path, errors, warnings):
     return load_upstream_graph(tmp), pins
 
 
-def check_upstream(repo_root: Path, errors, warnings):
-    """Run E12/E13/W5 over graph/upstream.yaml against a shallow clone of the pinned ref."""
+def load_pinned_ids(repo_root: Path):
+    """The pin ids from graph/upstream.yaml, read locally (no clone). Pinned upstream ids
+    satisfy requires/refs in local docs: upstream precedes every local doc in the reading
+    order, so the cross-repo edge points backward by construction."""
+    upstream_yaml = repo_root / "graph" / "upstream.yaml"
+    if not upstream_yaml.is_file():
+        return set()
+    spec = yaml.safe_load(upstream_yaml.read_text(encoding="utf-8")) or {}
+    return {p.get("id", "") for p in (spec.get("upstream", {}).get("pins", []) or [])}
+
+
+def check_upstream(repo_root: Path, errors, warnings, local_ids=frozenset()):
+    """Run E12/E13/W5 over graph/upstream.yaml against a shallow clone of the pinned ref.
+    local_ids: ids in this repo's own graph — embeds/refs of those are checked by the local
+    passes (E6-E9), not against upstream."""
     upstream_yaml = repo_root / "graph" / "upstream.yaml"
     if not upstream_yaml.is_file():
         return
@@ -256,6 +269,8 @@ def check_upstream(repo_root: Path, errors, warnings):
             continue
         text = p.read_text(encoding="utf-8")
         for oid, content, line, closed in find_embeds(text):
+            if oid in local_ids:
+                continue  # local graph object — checked by the local passes
             if oid not in pinned:
                 errors.append(f"E13 {p.relative_to(repo_root)}:{line}: embeds unpinned upstream id '{oid}'")
                 continue
@@ -268,6 +283,8 @@ def check_upstream(repo_root: Path, errors, warnings):
                 )
         for m in REF_RE_ID.finditer(text):
             oid = m.group(1)
+            if oid in local_ids:
+                continue  # local graph object — checked by the local passes
             if oid not in pinned:
                 line = text[: m.start()].count("\n") + 1
                 warnings.append(
@@ -301,6 +318,7 @@ def main() -> int:
         return 0
 
     graph = load_graph(core)
+    pinned_ids = load_pinned_ids(repo_root)
     errors, warnings = [], []
     contracts, established_by, order = {}, {}, {}
     embedded_ids = {}  # id -> doc name
@@ -355,6 +373,11 @@ def main() -> int:
         for raw in c["requires"] + c["instances"]:
             k = term_key(raw)
             if k not in established_by:
+                if f"term:{k}" in pinned_ids:
+                    # established upstream, pinned — a backward edge by construction
+                    if not term_pattern(raw).search(body):
+                        warnings.append(f"W2 {p.name}: requires '{k}' but never uses it")
+                    continue
                 errors.append(f"E3 {p.name}: requires '{k}', established nowhere")
                 continue
             j, q, _ = established_by[k]
@@ -394,7 +417,7 @@ def main() -> int:
                 )
 
         for m in REF_RE.finditer(raw_text):
-            if m.group(1) not in graph:
+            if m.group(1) not in graph and m.group(1) not in pinned_ids:
                 line = raw_text[: m.start()].count("\n") + 1
                 errors.append(f"E9 {p.name}:{line}: ref to unknown id '{m.group(1)}'")
 
@@ -427,6 +450,9 @@ def main() -> int:
                     f"establishes it — forward pointer or escaped edge? "
                     f"(apply the deletion test)"
                 )
+
+    # ---- pass 4: cross-repo upstream resolution (E12/E13/W5) ---------------
+    check_upstream(repo_root, errors, warnings, local_ids=set(graph))
 
     for w in warnings:
         print(f"  warn  {w}")

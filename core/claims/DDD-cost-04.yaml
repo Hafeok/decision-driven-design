@@ -1,0 +1,26 @@
+format: 1
+id: DDD-cost-04
+kind: empirical
+statement: |
+  The 09 §6.2 actor table rows (program, weak model, mid model) are the cost-optimal encodings at three act-volume regimes: which allocation a cost-minimising arrangement selects is set by act volume.
+status: projected
+region: |
+  closing-predicate tasks with a computable encoding frontier; the date task is the worked instance
+evidence:
+- kind: asset
+  ref: core/assets/measure-mdl-volume.py
+  note: >-
+    the optimal-encoding-vs-volume sweep shows allocation richness monotone in N under both cost
+    models; the graded regime sequence exists only under description-length pricing
+falsifier: |
+  An optimal build-out ordering contradicting observed actor orderings — arrangements at rising volume adopting encodings in an order the cost model rules out.
+breaks: |
+  Nothing else in core/ — the demand identity and the actor table stand independently of the cost reading.
+owner: none
+changed: v5.2 (2026-08-09, R4 carve)
+notes: |
+  Relocated whole from the principle repository per the boundary charter (upstream DDD-dec-09;
+  DDD-dec-10 here): regime selection quantifies over act volume, which persists between acts.
+  The ID travels with the claim — claims relocate, never renumber, and IDs are never reused.
+  The statement's 09 §6.2 reference resolves in the principle repository (pinned in
+  graph/upstream.yaml); the evidence ref now points at this repository's volume asset.
