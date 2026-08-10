@@ -23,6 +23,7 @@ authority for each is its claim file, and this document is their exposition. The
 | §2 | Escape is doubly costly: escaped demand cannot be learned out of | `DDD-cost-16` | projected |
 | §2 | Open predicates stall the loop | `DDD-cost-17` | projected |
 | §2 | Drift is the counter-force; steady state is encoding rate = depreciation rate | `DDD-cost-18` | projected |
+| §3 | Rented arrangements pay standing supply at occasioned rates where the channel lacks persistence | `DDD-cost-19` | projected |
 
 Where this prose and a claim disagree, the claim governs and the prose is the bug.
 
@@ -91,3 +92,26 @@ failure mode and not an achievement.
   failure mode (basis: Abernathy & Wayne 1974, the Model T — organisational evidence, not a
   cost floor; the assessment's caveat is carried, not waived). *(Claim `DDD-cost-18`,
   projected.)*
+
+---
+
+## 3. The rented channel
+
+**A rented arrangement pays standing supply at occasioned rates where the rented channel lacks
+persistence.** Act-side encoding — context, retrieval, instructions, scaffolds — is standing
+supply in function: pay once, inherit every act. A memoryless channel re-transmits those bits at
+every act and meters them as occasioned. The prediction the claim carries: **metering tracks
+channel persistence** — as rented channels acquire memory, the meter differentiates.
+Corroborating instance, proposed-flagged: cached-token discount pricing is standing supply
+beginning to be metered as standing; the vendors' own pricing confirms the mechanism. *(Claim
+`DDD-cost-19`, projected.)*
+
+Two consequences stand with the claim. Renting without renter-side encoding produces spend
+linear-or-worse in act volume — the Novice flat (§1) at industrial scale. And no descent of the
+maturation curve is possible through a memoryless channel alone: the descent is a property of
+standing supply, and the channel holds none.
+
+The charter corollary (upstream `DDD-dec-09`; R4b, `DDD-dec-11`): **what is rented supplies
+Layer 1 only; the memory, if any, is the renter's own — the ledger is the arrangement's memory,
+and renting the actor never rents it.** This grounds why the rent-vs-own crossover exists at
+all (queue 2.10).

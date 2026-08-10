@@ -1,0 +1,27 @@
+format: 1
+id: DDD-cost-19
+kind: conceptual
+statement: |
+  A rented arrangement pays standing supply at occasioned rates where the rented channel lacks persistence: act-side encoding — context, retrieval, instructions, scaffolds — is standing supply in function, but a memoryless channel re-transmits it at every act and meters it as occasioned. The prediction: metering tracks channel persistence — as rented channels acquire memory, the meter differentiates.
+status: projected
+region: |
+  Rented arrangements at the volume layer; the claim is conditional on channel persistence, and its prediction ranges over the metering as persistence changes.
+evidence:
+  - kind: observation
+    ref: vendor cached-token discount pricing (rented-model market)
+    note: Corroborating instance, proposed-flagged (upgraded from note at GATE D) — standing supply beginning to be metered as standing, the meter differentiating as the channel acquires persistence. Single-domain; corroborates the mechanism, does not discriminate. Status unchanged by it.
+falsifier: |
+  A rented arrangement achieving the full maturation descent — per-act cost declining to the encoded floor — with neither renter-side standing supply nor channel-side persistence.
+breaks: |
+  The rent-vs-own crossover loses its grounding mechanism; the Novice-flat-at-scale reading of rented spend reverts to a pricing accident.
+owner: none
+changed: 2026-08-10, Wave 2 curation session
+notes: |
+  Ratified at Wave 2 GATE D with amendments (Emil, 2026-08-10): mechanistic form — "where the
+  rented channel lacks persistence" / "memoryless channel" — replacing the unconditional "has no
+  memory"; the metering-tracks-persistence prediction carried in the claim; the cached-token
+  instance upgraded from proposed-flagged note to proposed-flagged corroborating evidence;
+  falsifier amended to the neither-side form. Charter corollary carried as exposition in
+  core/14 §3: what is rented supplies Layer 1 only; the memory, if any, is the renter's own —
+  the ledger is the arrangement's memory, and renting the actor never rents it. Grounds the
+  rent-vs-own crossover (queue 2.10).
