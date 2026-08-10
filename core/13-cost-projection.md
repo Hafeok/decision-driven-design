@@ -32,6 +32,7 @@ The mapping:
 | §3 | MDL optimisation: cost = `L(mechanism)` + N·`H(V\|E)`; marginal condition `N* = n·ΔL/ΔR` | `DDD-cost-07` | projected |
 | §4 | The `09` §6.2 actor rows are the optimal encodings at three act-volume regimes | `DDD-cost-04` | projected (relocated) |
 | §5 | A closed predicate is amortised assurance: standing assurance cost divides over `N`, occasioned does not | `DDD-cost-10` | projected |
+| §6 | Claim-predicate coverage obeys the same `N*` economics | `DDD-cost-23` | projected |
 
 Where this prose and a claim disagree, the claim governs and the prose is the bug.
 
@@ -124,7 +125,25 @@ one mechanism whose cost can amortise at all. Adjacent, not identical, to the si
 
 ---
 
-## 6. Reproduce
+## 6. The claim layer's coverage economics
+
+Upstream canon extends the act machinery to claims — a claim is an act with a deferred verdict
+(`DDD-frame-12`, pinned) — and applies the two gates at that layer (`DDD-cost-22`, pinned). The
+instrument gate's economics file here, because they quantify over claim volume:
+
+> **Claim-predicate coverage obeys the same `N*` economics.** Instrumenting a claim class —
+> declared falsifier, metric, horizon — is a standing investment amortised over the claim-acts
+> of that class, worth building for claim classes made repeatedly.
+
+*(Claim `DDD-cost-23`, projected; the marginal condition is `DDD-cost-07`'s, read over claim
+volume.)* A product strategy, in this vocabulary, is a standing bet amortised over many
+claim-acts. Proxy machinery — OKR/KPI — is proxy closure on open claim predicates (existing
+Goodhart canon, cited as adjacent); the falsifier the claim carries is exactly the comparison
+against those baselines.
+
+---
+
+## 7. Reproduce
 
 One self-contained script regenerates every figure in this note:
 

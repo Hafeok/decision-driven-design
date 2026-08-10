@@ -1,0 +1,23 @@
+format: 1
+id: DDD-cost-21
+kind: conceptual
+statement: |
+  Ownership crosses over at sufficient act volume and sufficient closure: rent-and-encode (low standing investment, per-act context tax, descent capped by the channel) and own-and-train (large standing investment in training, deeper floor, surplus captured by the arrangement that controls the carrier) are two maturation curves — and training needs signal, signal needs verdicts, verdicts need the predicate to close.
+status: projected
+region: |
+  The volume layer; rests on the upstream locus claim (DDD-cost-20, pinned) and the rented-channel mechanism (DDD-cost-19). The closure condition is the claim's discriminating content.
+evidence: []
+falsifier: |
+  Own-and-train arrangements reaching deeper floors at equal volume on predicates that do not close, without proxy signal, at full control linkage — ownership crossovers observed independent of closure where the trainer governs weights, data, and record.
+breaks: |
+  The rent-vs-own fork loses its routing content; the selection-over-training axis reverts to a posited rather than derived structure.
+owner: none
+changed: 2026-08-10, Wave 2 curation session
+notes: |
+  Ratified at the pre-Gate-E hold with two amendments (Emil, 2026-08-10): surplus captured "by
+  the arrangement that controls the carrier"; falsifier carries the full-control-linkage
+  condition. Exposition carried with the claim: the crossover derives the selection-over-
+  training axis from the rental structure rather than positing it; fine-tuning-as-a-service is
+  the mixed store — rented carrier, trainable allocation, no control of base ground. Proposed-
+  flagged corollary, per the holding note: locating a client's crossover is an N*-type
+  calculation and a sellable service.

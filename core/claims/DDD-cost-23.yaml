@@ -1,0 +1,21 @@
+format: 1
+id: DDD-cost-23
+kind: conceptual
+statement: |
+  Claim-predicate coverage obeys the same N* economics: instrumenting a claim class — declared falsifier, metric, horizon — is a standing investment amortised over the claim-acts of that class, worth building for claim classes made repeatedly.
+status: projected
+region: |
+  The volume layer applied to deferred-verdict acts (upstream DDD-frame-12, DDD-cost-22, pinned); the marginal condition is DDD-cost-07's, read over claim volume.
+evidence: []
+falsifier: |
+  Instrumented claim-closure showing no reduction in escaped-claim incident classes relative to proxy-governed (OKR) baselines.
+breaks: |
+  The instrument gate's investment case at the claim layer; the gate itself (DDD-cost-22, pinned) stands, but building coverage for repeated claim classes loses its economics.
+owner: none
+changed: 2026-08-10, Wave 2 curation session
+notes: |
+  Wave 2 item 2.11, downstream half per R2's resolution (per-act gate structure upstream,
+  volume economics here). Falsifier as shipped by the holding note §10, verbatim. Exposition:
+  a product strategy, in this vocabulary, is a standing bet amortised over many claim-acts;
+  proxy machinery (OKR/KPI) is proxy closure on open claim predicates — existing Goodhart
+  canon, cited as adjacent, not re-claimed.

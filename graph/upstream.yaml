@@ -72,3 +72,11 @@ upstream:
     # the instrument bound the pending benchmarks-are-licences instance cites (GATE C carve)
     - id: DDD-cost-13
       status_at_pin: projected
+    # the locus claim core/14 §4's crossover rests on; the claim-layer bridge and gates
+    # core/13 §6's coverage economics rest on (Wave 2, 2026-08-10)
+    - id: DDD-cost-20
+      status_at_pin: projected
+    - id: DDD-frame-12
+      status_at_pin: projected
+    - id: DDD-cost-22
+      status_at_pin: projected

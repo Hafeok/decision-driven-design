@@ -24,6 +24,7 @@ authority for each is its claim file, and this document is their exposition. The
 | §2 | Open predicates stall the loop | `DDD-cost-17` | projected |
 | §2 | Drift is the counter-force; steady state is encoding rate = depreciation rate | `DDD-cost-18` | projected |
 | §3 | Rented arrangements pay standing supply at occasioned rates where the channel lacks persistence | `DDD-cost-19` | projected |
+| §4 | Ownership crosses over at sufficient act volume and sufficient closure | `DDD-cost-21` | projected |
 
 Where this prose and a claim disagree, the claim governs and the prose is the bug.
 
@@ -114,4 +115,26 @@ standing supply, and the channel holds none.
 The charter corollary (upstream `DDD-dec-09`; R4b, `DDD-dec-11`): **what is rented supplies
 Layer 1 only; the memory, if any, is the renter's own — the ledger is the arrangement's memory,
 and renting the actor never rents it.** This grounds why the rent-vs-own crossover exists at
-all (queue 2.10).
+all (§4).
+
+---
+
+## 4. Rent versus own: the crossover
+
+The locus distinction is upstream canon (`DDD-cost-20`, pinned): around-encoding is standing
+supply outside the carrier, delivered through the channel; within-encoding — training —
+converts judgment allocation to encoded allocation inside it, buying allocation, not capacity.
+Across acts the two loci trace two maturation curves:
+
+- **Rent-and-encode** — low standing investment, a per-act context tax (§3), descent capped by
+  the channel.
+- **Own-and-train** — large standing investment in training, a deeper floor, surplus captured
+  by the arrangement that controls the carrier.
+
+**Ownership crosses over at sufficient act volume *and* sufficient closure** — training needs
+signal, signal needs verdicts, verdicts need the predicate to close. *(Claim `DDD-cost-21`,
+projected.)* This derives the selection-over-training axis from the rental structure rather
+than positing it. Fine-tuning-as-a-service is the mixed store: rented carrier, trainable
+allocation, no control of base ground — the control linkage (`DDD-cost-20`'s precision point)
+is exactly what the mixed store lacks. Proposed-flagged corollary: locating a client's
+crossover is an N\*-type calculation and a sellable service.
