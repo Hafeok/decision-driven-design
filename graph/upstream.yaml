@@ -80,3 +80,6 @@ upstream:
       status_at_pin: projected
     - id: DDD-cost-22
       status_at_pin: projected
+    # the synchronic member of the time-and-assurance set (core/17; GATE G)
+    - id: DDD-cost-25
+      status_at_pin: projected

@@ -1,0 +1,21 @@
+format: 1
+id: DDD-cost-28
+kind: conceptual
+statement: |
+  Carrier assurance accrues at verdict speed: the calibration ledger builds only from matured verdicts, so an open-class instrument has a minimum build time set by verdict latency and required sample count — parallel claims compress the count term, never the latency floor — and when claimant turnover outpaces verdict latency, carrier assurance cannot accumulate.
+status: projected
+region: |
+  The calibration ledger's accrual (DDD-cost-24); claimant identities against their verdict horizons.
+evidence: []
+falsifier: |
+  Fast-minted open-class certification performing at par; full assurance transfer across version bumps at no loss.
+breaks: |
+  DDD-cost-24's validity condition loses its mechanism; the identity-unit question (DDD-dec-14) loses its load-bearing status.
+owner: none
+changed: 2026-08-10, Wave 2 curation session (GATE G)
+notes: |
+  §11(c), ratified at GATE G with the build-time phrase amended (Emil, 2026-08-10): verdict
+  latency and required sample count, parallel claims compressing the count term and never the
+  latency floor. Shipped falsifiers verbatim. Model versions churning faster than open-claim
+  verdict horizons is the type case; cross-identity transfer partial at best and
+  per-capability.

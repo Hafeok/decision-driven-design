@@ -1,0 +1,20 @@
+format: 1
+id: DDD-cost-27
+kind: conceptual
+statement: |
+  Mechanical assurance decays at the drift rate of the ground it read: a passing check is a stored statement about uncontrolled ground, so assurance is assurance-at-time; re-verification cadence is the standing cost of holding assurance above the declared level.
+status: projected
+region: |
+  Stored mechanical verdicts over uncontrolled ground; the decay quantifies over time between verifications.
+evidence: []
+falsifier: |
+  Stored check verdicts retaining declared assurance over drifting ground without re-verification — ground-incident rates flat in drift at zero cadence, absent compensating carrier detection class or encoded freshness supply.
+breaks: |
+  The cadence term of DDD-cost-29's substitution law; expiring certification and test-rot would be two phenomena, not one.
+owner: none
+changed: 2026-08-10, Wave 2 curation session (GATE G)
+notes: |
+  §11(b), claim ratified verbatim at GATE G (Emil, 2026-08-10); falsifier amended per the
+  ruling with the compensating-supplier exclusion. The revalidation-cadence half is held by
+  existing canon; what this claim adds is the decay-rate identification and its standing-cost
+  reading. The sclerotic branch (core/14 §2) is this decay outrunning re-supply.

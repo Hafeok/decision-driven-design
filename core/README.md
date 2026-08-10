@@ -5,13 +5,16 @@ documents `00`–`12`, the canonical term graph, and the per-act reproduction as
 the principle repository** (`actor-indexed-determination`) and lives there, not here. This directory
 holds what is local to the projection's own graph:
 
-- `13-cost-projection.md`, `14-maturation.md`, `15-routing-example.md` — the projection's numbered
-  core documents, numbered to continue the upstream reading order (upstream canon ends at
-  `core/12`). `13` is the volume layer of the cost register: everything that quantifies over act
-  volume, filed here under the boundary charter (upstream `DDD-dec-09`; `DDD-dec-10` here) — the
-  principle layer is synchronic, and anything requiring persistence between acts files with the
-  projection. `14` is the volume layer's dynamics (the maturation register), actor-general per
-  R4b (`DDD-dec-11`). `15` is the routing model's worked instance, stipulated and reproducing.
+- `13-cost-projection.md` … `17-time-and-assurance.md` — the projection's numbered core documents,
+  numbered to continue the upstream reading order (upstream canon ends at `core/12`). `13` is the
+  volume layer of the cost register: everything that quantifies over act volume, filed here under
+  the boundary charter (upstream `DDD-dec-09`; `DDD-dec-10` here) — the principle layer is
+  synchronic, and anything requiring persistence between acts files with the projection. `14` is
+  the volume layer's dynamics (the maturation register), actor-general per R4b (`DDD-dec-11`).
+  `15` is the routing model's worked instance, stipulated and reproducing. `16` is the calibration
+  ledger — the claim layer's carrier-assurance instrument (`DDD-dec-13`). `17` is the time
+  register of assurance: verdict-gap carriage, decay, accrual, and ground assurance with the recon
+  substitution law.
 - `claims/` — the projection-local claims (`org`, `tool`, `sim`) and the volume-denominated `cost`
   claims (`DDD-cost-04` relocated, `DDD-cost-06`/`07` split from the upstream per-act claims).
   Actor-general claims are pinned upstream in `graph/upstream.yaml`.
