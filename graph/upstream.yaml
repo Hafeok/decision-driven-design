@@ -17,9 +17,9 @@ upstream:
   repo: https://github.com/Hafeok/actor-indexed-determination
   # Advanced v5.0.0 -> v5.2.0 on Emil's upstream acceptance (merge e86fd23, tagged v5.2.0);
   # the advance is recorded in core/decisions/DDD-dec-10.
-  # STAGED (Wave 2, 2026-08-10): pinned against the Wave 2 upstream branch head per the
-  # session's standing mechanics; bump to the merge SHA/tag on Emil's upstream acceptance.
-  ref: claude/wave2-canon-curation-r3v571   # staging — merge SHA/tag on acceptance
+  # Advanced v5.2.0 -> v5.3.0 on Emil's upstream acceptance of the Wave 2 PR (merge 1db6772,
+  # tagged v5.3.0); Wave 2 rulings recorded in DDD-dec-11/13/14 here and DDD-dec-12 upstream.
+  ref: v5.3.0                       # tag, never a branch
   pins:
     # basis claims for DDD-dec-04 (the split decision itself rests on these)
     - id: DDD-frame-01
