@@ -9,8 +9,11 @@ reference: `mdl-cost-manufacturing-assessment-2026-08-08` resolves to
 `meta/mdl-cost-manufacturing-assessment-2026-08-08.md` in the principle repository at v5.3.0,
 filed there as "basis, not claims". Everything uncited is register-native (positioning prose or historical
 attribution), per the session's standing rules. The integration diff against the uploaded
-`measure-paper-draft.md` is `meta/measure-note-related-work-2026-08-10.patch`. Emil places the
-section himself.
+`measure-paper-draft.md` is `meta/measure-note-related-work-2026-08-10.patch`. Placement ratified
+by Emil at session close (2026-08-10): insert at line 294 of the uploaded draft, immediately after
+the `---` rule closing §7 and before the caveats heading; the section enters as §8 Related work,
+the caveats renumber to §9 and the one-line result to §10. The patch implements exactly this and
+was verified applying cleanly (`patch -p0`) against a fresh copy of the uploaded draft.
 
 ---
 
