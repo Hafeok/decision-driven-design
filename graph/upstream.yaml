@@ -15,7 +15,9 @@
 format: upstream/v1
 upstream:
   repo: https://github.com/Hafeok/actor-indexed-determination
-  ref: v5.0.0                       # tag, never a branch
+  # Advanced v5.0.0 -> v5.2.0 on Emil's upstream acceptance (merge e86fd23, tagged v5.2.0);
+  # the advance is recorded in core/decisions/DDD-dec-10.
+  ref: v5.2.0                       # tag, never a branch
   pins:
     # basis claims for DDD-dec-04 (the split decision itself rests on these)
     - id: DDD-frame-01
@@ -36,3 +38,18 @@ upstream:
       status_at_pin: settled
     - id: term:seam-identity
       status_at_pin: settled
+    # the per-act cost layer the volume projection (core/13) prices — DDD-dec-09/DDD-dec-10
+    - id: term:act
+      status_at_pin: settled
+    - id: term:cost-register
+      status_at_pin: settled
+    - id: term:standing-cost
+      status_at_pin: settled
+    - id: term:occasioned-cost
+      status_at_pin: settled
+    - id: DDD-cost-01
+      status_at_pin: projected
+    - id: DDD-cost-02
+      status_at_pin: reported
+    - id: DDD-cost-03
+      status_at_pin: projected

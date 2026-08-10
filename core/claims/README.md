@@ -8,14 +8,18 @@ document and its claim disagree, the disagreement is a bug in the prose — flag
 `notes:`, not silently harmonised (`meta/conversion-protocol.md`).
 
 **Areas held here (the software projection):** `org` (organisation-design projection), `tool` (the
-graph tool), `sim` (the tool's predictive models). The actor-general areas — `measure`, `frame`,
-`floor`, `agent` — are **canon in the principle repository** (`actor-indexed-determination`) and are
-pinned, where this repo depends on them, in `graph/upstream.yaml`. New areas are cheap; renumbering
-is forbidden; retired claims keep their IDs.
+graph tool), `sim` (the tool's predictive models), and the volume-denominated `cost` claims
+(`DDD-cost-04` relocated whole, `DDD-cost-06`/`07` split from the upstream per-act claims — the
+boundary charter, upstream `DDD-dec-09` / `DDD-dec-10` here). The actor-general areas — `measure`,
+`frame`, `floor`, `agent`, and the per-act `cost` claims — are **canon in the principle repository**
+(`actor-indexed-determination`) and are pinned, where this repo depends on them, in
+`graph/upstream.yaml`. New areas are cheap; renumbering is forbidden; retired claims keep their IDs;
+IDs travel with their claims when a claim relocates and are never reused.
 
-**Flags awaiting Emil review.** Every claim held here is **projected** and **session-authored**
-(`UNVERIFIED — Emil review` in `notes:`) — the org and sim predictions and the tool claim. They are
-flagged, never struck, and never presented as canon.
+**Flags awaiting Emil review.** The org and sim predictions and the tool claim are **projected**
+and **session-authored** (`UNVERIFIED — Emil review` in `notes:`) — flagged, never struck, and never
+presented as canon. The `cost` claims are not so flagged: they entered through the ratified canon
+sessions (statuses as filed; `DDD-cost-06` reported as arithmetic).
 
 **Validate:**
 - `python3 scripts/validate-claims.py core/claims/`
