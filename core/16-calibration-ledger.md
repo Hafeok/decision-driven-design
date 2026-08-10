@@ -2,7 +2,7 @@
 
 <!-- ddd:contract
 
-requires: [act, capability]
+requires: [capability]
 establishes: [calibration-ledger|calibration ledger]
 status: settled
 -->
