@@ -585,8 +585,14 @@ note and canon disagree, canon governs. Branches: `claude/wave2-canon-curation-r
 paper work; the M3/M4 principal decisions remain open and Emil's; `00`:158 and other carried
 items remain separate; the MDL correspondence remains projected pending its falsifiers.
 
-**Open at GATE H:** the Wave-2-proposed falsifier/test lines on `DDD-frame-12` and
-`DDD-cost-22` (flagged in their notes, awaiting strike-or-amend); the `core/06` compound
-section observed as un-carved diachronic material upstream (flagged at GATE B, no ruling
-sought — future charter application); pins staged at 26 against the upstream branch head, to
-be bumped to the merge SHA/tag on acceptance, upstream-first.
+**Ruled at the pre-Gate-H hold (Emil, 2026-08-10):** `DDD-frame-12`'s falsifier amended
+(act-and-ledger apparatus form), test verbatim; `DDD-cost-22`'s falsifier amended (declared
+risk acceptance excluded), test verbatim, with declared risk acceptance named in `10` §9's
+exposition as the out-of-scope third disposition — governed, unassured. 2.13 ratified as
+pending transfer: the cross-ref files into product-cli's decision register in the next
+session touching that repo, citing `DDD-cost-11`; no third PR.
+
+**Remaining open:** the `core/06` compound section observed as un-carved diachronic material
+upstream (flagged at GATE B, no ruling sought — future charter application); pins staged at
+26 against the upstream branch head, to be bumped to the v5.3.0 tag on Emil's acceptance of
+the upstream PR (Wave 1's precedent), upstream-first.
