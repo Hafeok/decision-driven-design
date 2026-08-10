@@ -1,0 +1,18 @@
+format: 1
+id: DDD-cost-16
+kind: empirical
+statement: |
+  Escape is doubly costly: escaped residual never reaches the predicate, so it generates no verdict — ungoverned now and invisible to maturation. Escaped demand cannot be learned out of.
+status: projected
+region: |
+  The volume layer; the escaped store's intersection with the return channel.
+evidence: []
+falsifier: |
+  Demonstrated maturation on distinctions whose resolutions were never checked.
+breaks: |
+  The double-cost argument for escape-prevention at the volume layer; escape would revert to a single-period governance cost.
+owner: none
+changed: 2026-08-10, Wave 2 curation session
+notes: |
+  Affirmed in session 2026-08-08 (holding note §1, rate bounds); filed downstream per R4b
+  (DDD-dec-11). Falsifier as carried by the note, verbatim.

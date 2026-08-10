@@ -1,0 +1,18 @@
+format: 1
+id: DDD-cost-15
+kind: empirical
+statement: |
+  Uncaptured verdicts mature nothing: an arrangement without an execution record pays full occasioned cost forever, regardless of volume. The record is a productive asset, not only an accountability one.
+status: projected
+region: |
+  The volume layer; all arrangements — the claim is exactly that volume without capture buys no descent.
+evidence: []
+falsifier: |
+  Arrangements with equal volume but no verdict capture showing declining occasioned cost anyway.
+breaks: |
+  Maturation's entry condition (DDD-cost-14); the record's status as productive asset reverts to accountability-only.
+owner: none
+changed: 2026-08-10, Wave 2 curation session
+notes: |
+  Affirmed in session 2026-08-08 (holding note §1, rate bounds — each a distinct claim); filed
+  downstream per R4b (DDD-dec-11). Falsifier as carried by the note, verbatim.

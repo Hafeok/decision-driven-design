@@ -5,11 +5,13 @@ documents `00`–`12`, the canonical term graph, and the per-act reproduction as
 the principle repository** (`actor-indexed-determination`) and lives there, not here. This directory
 holds what is local to the projection's own graph:
 
-- `13-cost-projection.md` — the projection's numbered core documents, numbered to continue the
-  upstream reading order (upstream canon ends at `core/12`). `13` is the volume layer of the cost
-  register: everything that quantifies over act volume, filed here under the boundary charter
-  (upstream `DDD-dec-09`; `DDD-dec-10` here) — the principle layer is synchronic, and anything
-  requiring persistence between acts files with the projection.
+- `13-cost-projection.md`, `14-maturation.md`, `15-routing-example.md` — the projection's numbered
+  core documents, numbered to continue the upstream reading order (upstream canon ends at
+  `core/12`). `13` is the volume layer of the cost register: everything that quantifies over act
+  volume, filed here under the boundary charter (upstream `DDD-dec-09`; `DDD-dec-10` here) — the
+  principle layer is synchronic, and anything requiring persistence between acts files with the
+  projection. `14` is the volume layer's dynamics (the maturation register), actor-general per
+  R4b (`DDD-dec-11`). `15` is the routing model's worked instance, stipulated and reproducing.
 - `claims/` — the projection-local claims (`org`, `tool`, `sim`) and the volume-denominated `cost`
   claims (`DDD-cost-04` relocated, `DDD-cost-06`/`07` split from the upstream per-act claims).
   Actor-general claims are pinned upstream in `graph/upstream.yaml`.
@@ -17,8 +19,16 @@ holds what is local to the projection's own graph:
   decisions. Decisions are volitional program acts; they live with the projection, not upstream.
 - `graph/terms.yaml` — terms established by this repository's own documents (`act-volume`).
   Upstream terms are never duplicated here.
-- `assets/` — computations backing this repository's reported claims (`measure-mdl-volume.py`);
-  they must reproduce.
+- `assets/` — computations backing this repository's reported claims (`measure-mdl-volume.py`,
+  `measure-routing-example.py`); they must reproduce.
+
+**Pending instance filings** (stubs, not canon until their evidence lands):
+
+- *Benchmarks are licences (bounded)* — the rented-model reading of the instrument bound
+  (upstream `DDD-cost-13`, pinned): eval scores as class certificates for actors nobody can
+  interview, bounded to declared-predicate carriage. Files when its evidence lands; the
+  open-class counterpart is the calibration ledger (queue item 2.12, pending). Stubbed at Wave 2
+  GATE C (Emil, 2026-08-10).
 
 The principle repo's canon is consumed by pin, not by copy: `graph/upstream.yaml` names every upstream
 id this repository depends on, at a version and a status, and `validate-core-order.py` checks them

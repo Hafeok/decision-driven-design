@@ -58,3 +58,17 @@ upstream:
     # the assurance-locus conversion core/13 §5's amortisation corollary rests on (GATE B carve)
     - id: DDD-cost-09
       status_at_pin: projected
+    # the routing layer core/15 exercises and core/14's register consumes (Wave 2, 2026-08-10)
+    - id: term:capability
+      status_at_pin: settled
+    - id: term:escape
+      status_at_pin: settled
+    - id: DDD-cost-08
+      status_at_pin: projected
+    - id: DDD-cost-11
+      status_at_pin: projected
+    - id: DDD-cost-12
+      status_at_pin: projected
+    # the instrument bound the pending benchmarks-are-licences instance cites (GATE C carve)
+    - id: DDD-cost-13
+      status_at_pin: projected

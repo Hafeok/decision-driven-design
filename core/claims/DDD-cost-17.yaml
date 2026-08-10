@@ -1,0 +1,19 @@
+format: 1
+id: DDD-cost-17
+kind: conceptual
+statement: |
+  Open predicates stall the maturation loop: with no verdict function there is no clean signal, and maturation on open-predicate distinctions runs only on proxy, delayed, or social feedback.
+status: projected
+region: |
+  The open-predicate portion of the arrangement's demand; the region the openness axis assigns to selection-over-training (Paper A orbit, Wave 3 pending).
+evidence: []
+falsifier: |
+  Maturation rates on open-predicate distinctions matching closed-predicate rates at equal volume, without identifiable proxy, delayed, or social feedback channels.
+breaks: |
+  The open-predicate residual term of DDD-cost-14's floor; the selection-over-training assignment loses its maturation-side mechanism.
+owner: none
+changed: 2026-08-10, Wave 2 curation session
+notes: |
+  Affirmed in session 2026-08-08 (holding note §1, rate bounds); filed downstream per R4b
+  (DDD-dec-11). Falsifier is Wave 2 proposed (the note ships none for this bound) — shown at
+  GATE D for amendment.
