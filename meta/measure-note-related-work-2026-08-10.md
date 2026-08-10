@@ -4,7 +4,10 @@ Ratified at Gate 3 line-level, 2026-08-10. Placement per Gate 1 ruling: inserted
 draft's §7 (Where the measure stops) and the caveats, which renumber to §9; the one-line result
 renumbers to §10. Citations: `[DDD-…]` markers resolve against the principle repository at
 v5.3.0 (`DDD-cost-01/02/03`, `DDD-cost-05`, `DDD-measure-02/11/12`) and this repository at head
-(`DDD-cost-06/07`). Everything uncited is register-native (positioning prose or historical
+(`DDD-cost-06/07`). Per Emil's Gate 4 ruling the manufacturing assessment is surfaced as a direct
+reference: `mdl-cost-manufacturing-assessment-2026-08-08` resolves to
+`meta/mdl-cost-manufacturing-assessment-2026-08-08.md` in the principle repository at v5.3.0,
+filed there as "basis, not claims". Everything uncited is register-native (positioning prose or historical
 attribution), per the session's standing rules. The integration diff against the uploaded
 `measure-paper-draft.md` is `meta/measure-note-related-work-2026-08-10.patch`. Emil places the
 section himself.
@@ -50,7 +53,8 @@ distinction can be priced ahead of another — so a graded build-out over volume
 standing side priced as description length, which is not a conserved quantity
 [DDD-cost-02; DDD-cost-06]. Where the framework has looked for this structure in production data,
 the evidence is consistent with the two-part form but cannot yet select the MDL form, and is filed
-as basis rather than confirmation [DDD-cost-03]. Within this note's own region a second, older
+as basis rather than confirmation [DDD-cost-03; mdl-cost-manufacturing-assessment-2026-08-08].
+Within this note's own region a second, older
 answer stands: entropy is relative to a declared ground distribution and computable from it
 [DDD-measure-12], and Kolmogorov complexity is neither — which is what makes demand
 deployment-relative. The note therefore concedes the standing side to description length entirely:

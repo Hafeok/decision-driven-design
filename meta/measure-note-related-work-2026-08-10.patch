@@ -1,6 +1,6 @@
 --- measure-paper-draft.md	2026-08-10 12:03:58.450872553 +0000
-+++ measure-paper-draft-integrated.md	2026-08-10 12:03:58.521590488 +0000
-@@ -292,7 +292,82 @@
++++ measure-paper-draft-integrated.md	2026-08-10 12:07:12.678571717 +0000
+@@ -292,7 +292,83 @@
  
  ---
  
@@ -44,7 +44,8 @@
 +standing side priced as description length, which is not a conserved quantity
 +[DDD-cost-02; DDD-cost-06]. Where the framework has looked for this structure in production data,
 +the evidence is consistent with the two-part form but cannot yet select the MDL form, and is filed
-+as basis rather than confirmation [DDD-cost-03]. Within this note's own region a second, older
++as basis rather than confirmation [DDD-cost-03; mdl-cost-manufacturing-assessment-2026-08-08].
++Within this note's own region a second, older
 +answer stands: entropy is relative to a declared ground distribution and computable from it
 +[DDD-measure-12], and Kolmogorov complexity is neither — which is what makes demand
 +deployment-relative. The note therefore concedes the standing side to description length entirely:
@@ -84,7 +85,7 @@
  
  **The theorem is Shannon's.** The chain rule is 1948. What is asserted here is the identification of
  demand with verdict entropy, seam with mutual information, and decomposition with conditioning. That is
-@@ -315,7 +390,7 @@
+@@ -315,7 +391,7 @@
  
  ---
  
