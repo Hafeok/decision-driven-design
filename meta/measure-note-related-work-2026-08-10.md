@@ -87,3 +87,47 @@ essential part is fixed by the task, invariant to tooling. That line receives an
 The exchange is even. The note gives Brooks's line the unit it lacked, and accepts from the
 identity the parameter Brooks did not have to name — the deployment the task actually faces. The
 distinction is inherited, not replaced.
+
+---
+
+## Closing report addendum — Emil's ruling on the `term:maturation` collision (2026-08-10)
+
+Recorded verbatim, per the ruling's own instruction; execution of items 1–3 deferred to the next
+canon contact.
+
+> RULING (Emil) — term:maturation collision: escaped seam, confirmed; disposition recorded,
+> execution deferred to next canon contact.
+> For this session (in scope): confirm the related-work section neither cites nor embeds
+> `term:maturation` (it shouldn't — maturation is not among the six positions); record this
+> ruling verbatim in your closing report; proceed. Additionally run one read-only check and
+> report: every downstream reference or embed of `term:maturation` — confirm each intends the
+> local (return-channel) sense, none the upstream (compound) sense.
+> For the next canon session (recorded now, filed then):
+>
+> 1. Decision (downstream, next free ID): the shadow is recorded as known and temporary —
+>    deliberate in destination (dec-11 governed the model's filing correctly), escaped in
+>    mechanism (no ruling governed ID reuse; the validator default resolved it). Resolution
+>    bound to the pending upstream diachronic carve (06/08 residue), at which the upstream
+>    establishment retires or re-words without the term, and downstream's establishment becomes
+>    sole.
+> 2. General rule, filed where graph rules live: establishing a term ID that collides with the
+>    pinned upstream registry requires an explicit decision reference; silent shadowing becomes
+>    a validator warning (new class), suppressible only by citing the governing decision ID.
+> 3. The upstream carve itself stays where the manifest put it: pending, taken at next upstream
+>    contact with 06/08, supersession pattern, not urgent — but its scope now explicitly
+>    includes the `term:maturation` establishment.
+
+**In-scope checks, executed 2026-08-10:**
+
+- **Section clean.** The related-work section, its integration patch, and the integrated draft
+  contain no occurrence of `term:maturation` — nor of the word "maturation" at all.
+- **Sense check, read-only, whole repository.** Exact-id occurrences of `term:maturation`:
+  `core/graph/terms.yaml` (the local establishment), `core/14-maturation.md:43` (the embed of
+  that establishment), `meta/holding-note-act-cost-2026-08-08.md:573` (the Wave 2 filing table).
+  Bare-word occurrences: `core/14-maturation.md` (establishing doc), `core/17-time-and-assurance.md`
+  (requires the local term; cites `14` §2), `core/README.md` (the maturation register, per
+  DDD-dec-11), claims `DDD-cost-14/15/16/17/19/21` (loop, signal, descent, curves),
+  `core/decisions/DDD-dec-11.yaml` (the model's filing), and the 2026-08-08 holding note
+  (the model throughout). **Every occurrence intends the local return-channel sense; none
+  invokes the upstream compound-over-repetition sense.** The upstream sense appears nowhere in
+  this repository.
