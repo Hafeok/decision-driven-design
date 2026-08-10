@@ -202,11 +202,67 @@ back.
 identification survives an *estimated* channel rather than an exactly computed one, which is the
 condition any deployed system presents. That is a claim about tractability, not about truth.
 
-### 5.3 What is unified
+### 5.3 `X` applied twice → chained seams
+
+Decompositions chain. Split the date task by month, and each month's sub-task can be split again by
+day-band. Conditioning iterates, and the chain rule iterates with it, still without approximation
+[DDD-measure-02]:
+
+> **`H(V) = I(V;S₁) + I(V;S₂|S₁) + H(V|S₁,S₂)`**
+
+The conditional term is an **internal seam**: the demand the second-level split absorbs, given what
+the first level already absorbed [DDD-measure-03]. On the date task, chaining the two decompositions
+of §4 — in both orders — gives:
+
+| Chain | level-1 seam | internal seam | parts | sum |
+|---|---|---|---|---|
+| **month, then day-band** | `I(V;M)` = 4.901 | `I(V;D\|M)` = 17.838 | 2.755 | **25.493** |
+| **day-band, then month** | `I(V;D)` = 14.474 | `I(V;M\|D)` = 8.265 | 2.755 | **25.493** |
+
+Three things are exact here, and none is an assumption. The level-1 seams are §4's seams, unchanged —
+the same split absorbs the same demand whether or not it is later refined. Both chains end at the
+same parts residual, 2.755 bits: the order of the chain does not change what remains, only how the
+seam divides between levels. And the two seam terms sum to the joint seam, 22.739 bits, in either
+order. **Chaining re-splits the seam; it cannot create or destroy demand.**
+
+This is the worked form of the framework's composition formalism, in which a composed arrangement's
+internal seams are exactly these conditional mutual-information terms under the same identity
+[term:seam-identity]. Iteration is arithmetic — the theorem is still Shannon's, applied twice. *A
+dedicated claim node for the iterated form is pending canon filing; until it lands, the citation
+basis is the chain rule and the seam identification, as above.*
+
+### 5.4 `P` varied → non-uniform ground
+
+The worked example uses a uniform ground distribution. `P` is a parameter of the definition (§2),
+not a convenience of the example, and the identity owes a demonstration under a skewed one
+[DDD-measure-12]. Re-running the task under two skewed deployments — benign, where valid inputs
+arrive nine times as often as invalid, and adversarial, the reverse — with both decompositions of §4:
+
+| Deployment | `H(V)·n` | A parts | A seam | B parts | B seam |
+|---|---|---|---|---|---|
+| **benign** (valid 9× invalid) | **4.357** | 3.781 | 0.576 | 2.586 | 1.771 |
+| **uniform** (the worked example) | **25.493** | 20.593 | 4.901 | 11.020 | 14.474 |
+| **adversarial** (invalid 9× valid) | **96.639** | 67.867 | 28.772 | 23.924 | 72.716 |
+
+Parts and seam sum to the row's whole, exactly, for both decompositions in every deployment. The
+identity is indifferent to
+the skew; the demand is not. The same validator, unchanged, faces roughly four times the uniform
+demand when invalid inputs dominate and about a sixth of it when they are rare. Where the demand
+sits moves too: the share decomposition B pre-pays into its seam is 41% of the whole on the benign
+ground, 57% on the uniform, and 75% on the adversarial. A decomposition's seam economics are a
+property of the task *and its deployment*. *Fixed by the task* is fixed by the task, the tolerance,
+and the ground distribution — now worked, not merely stated.
+
+### 5.5 What is unified
 
 Three claims that read as independent — the seam identity, the actor-relative store allocation, and the
 encode/verify split — are one identity under three choices of `X`. That a single conditioning argument
 recovers all three, with no additional assumptions, is the note's main structural result.
+
+The two further instances add no fourth claim. Chaining exercises the same identity iterated;
+the skewed ground exercises it with `P` varied. What they add is coverage: the identity has now been
+worked on five instances — three conditioning variables, one two-level chain, and three ground
+distributions — across two tasks.
 
 **One caveat carried forward, and it is where the next work is.** In all three, *escape* is folded into
 `H(V|X)` together with *judgment*. The identity cleaves what was encoded from everything else; it does
@@ -351,7 +407,7 @@ question: IB asks which representation to keep; this note asks what any represen
 whatever reason, must sum to. When the framework poses the keeping question, it is posed on IB's
 ground.
 
-**Rate–distortion.** The note's stated next result (§5.3, §9) is the split of `H(V|X)` into judged
+**Rate–distortion.** The note's stated next result (§5.5, §9) is the split of `H(V|X)` into judged
 and escaped demand, which requires a model of actor capacity — the bits an actor can supply per
 act, with escape the residual exceeding them [DDD-cost-05]. Rate–distortion theory is the natural
 home for that split: what a channel must lose when the required rate exceeds the available one is
@@ -404,6 +460,7 @@ conditioning variable for a deployed system is estimation, with error bars.
 
 ## Reproduction
 
-Three self-contained scripts regenerate every figure above: `measure-toy.py` for §4,
-`measure-actor-allocation.py` for §5.1, and `measure-rag.py` for §5.2. All three were re-run against
-this draft and reproduce the stated values.
+Five self-contained scripts regenerate every figure above: `measure-toy.py` for §4,
+`measure-actor-allocation.py` for §5.1, `measure-rag.py` for §5.2, `measure-chained-seams.py` for
+§5.3, and `measure-nonuniform-ground.py` for §5.4 — the last two in `assets/` beside this note. All
+five were re-run against this draft and reproduce the stated values.
