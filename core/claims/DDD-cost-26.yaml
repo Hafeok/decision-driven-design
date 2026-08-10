@@ -1,0 +1,19 @@
+format: 1
+id: DDD-cost-26
+kind: conceptual
+statement: |
+  A late-closing predicate is open at act time: the check exists but has not happened, so assurance across the verdict gap can only be carried — every declared verdict horizon is a declared span of carrier-borne assurance.
+status: projected
+region: |
+  Predicates with declared verdict horizons; the gap between act and verdict event.
+evidence: []
+falsifier: |
+  Arrangements sustaining declared α across long verdict gaps with no identifiable carrier and no loss.
+breaks: |
+  The carrier-borne reading of verdict horizons; DDD-cost-28's accrual mechanism would lose its object.
+owner: none
+changed: 2026-08-10, Wave 2 curation session (GATE G)
+notes: |
+  §11(a), ratified verbatim at GATE G (Emil, 2026-08-10); shipped falsifier verbatim. Partially
+  held by existing canon: operational closure includes latency bounds (upstream, v4.5); what
+  this claim adds is the carrier-bridged reading of the gap.

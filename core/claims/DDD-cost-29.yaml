@@ -1,0 +1,24 @@
+format: 1
+id: DDD-cost-29
+kind: conceptual
+statement: |
+  Ground assurance has three suppliers — encoded (validators, freshness constraints), carried (the actor's anomaly-detection capability), and occasioned (recon: fresh observation at a cadence) — and carrier detection class and recon cadence are substitutes: weaker actors require more frequent ground checks, the cadence computable from the decay machinery as exposure per act ≈ λ·t·(1−d)·(1−c) held under the assurance-implied bound, with λ the drift or adversary rate, d detection class, c encoded coverage.
+status: projected
+region: |
+  Arrangements whose checks read declared ground that can be poisoned or drift; adversarial and non-adversarial λ alike.
+evidence:
+  - kind: asset
+    ref: core/assets/recon-cadence-demo.py
+    note: Stipulated coefficients; exercises the substitution law (~35x recon-interval spread across actor classes; adversary tempo compressing all cadences tenfold, detection class dominant). Demonstration, not a test of the correspondence.
+falsifier: |
+  Recon frequency and actor class failing to trade off in ground-incident rates at matched α.
+breaks: |
+  The three-supplier budget reading of ground assurance; the prompt-injection instance reverts from predicted structure to isolated phenomenon.
+owner: none
+changed: 2026-08-10, Wave 2 curation session (GATE G)
+notes: |
+  §11(e), ratified verbatim at GATE G (Emil, 2026-08-10) — claim, exposition, prompt-injection
+  instance, shipped falsifier, and the asset name recon-cadence-demo.py as shipped. Degenerate
+  actors have zero detection class — classical input-validation practice predicted, not
+  assumed. The prompt-injection instance: poisoned ground meeting insufficient detection class
+  at zero recon cadence; agent defence is a ground-assurance budget across the three suppliers.

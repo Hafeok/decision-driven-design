@@ -1,0 +1,36 @@
+format: 1
+id: DDD-dec-11
+kind: decision
+statement: |
+  R4b, ruled (a): decision-driven-design is the actor-general name of the ledger method; engineering is its home domain, not its boundary. This repository is the canonical home of Layer 2 as such — ledger-layer general canon files here, alongside its engineering instances.
+principal: Emil
+made: 2026-08-10, Wave 2 curation session (GATE A); ruled in-session
+resolution: |
+  Rule option (a) of the R4b fork the boundary charter left open (holding note §12; charter
+  recorded upstream as DDD-dec-09, adopted here as DDD-dec-10). Ledgers exist outside
+  engineering — after-action reviews and service records are the method's non-engineering
+  instances — so DDD names the method actor-generally; engineering is where it lives, not where
+  it stops. Consequences:
+
+  - This repository holds Layer 2 general canon and engineering instances together. The
+    upstream repository stays silent on inter-act persistence beyond DDD-dec-09, which stands
+    as the sole upstream acknowledgment of the layer — no thin upstream anchors are filed.
+  - Wave 2 re-sorts accordingly: the maturation model (queue 2.8), the calibration construct
+    (2.12), time-and-assurance §11(a)-(c), the diachronic halves of channel-memory (2.9) and
+    rent-vs-own (2.10), and all N/k/horizon quantities file here as actor-general canon, into
+    or adjacent to core/13-cost-projection.md. Claims-as-acts (2.11) files as the bridge
+    definition; §11(d) files upstream.
+  - R3 is scoped by this ruling (R3 recorded upstream as DDD-dec-12): R3 governs only
+    synchronic general claims with single-domain evidence. Layer 2 claims, channel-memory
+    included, file here by layer regardless of evidence breadth.
+  - Rider: this repository deliberately holds both Layer 2 general canon and engineering
+    instances. If their stability diverges, that is a future seam under the reflexive
+    corollary (upstream meta/repo-topology.md) — split at its crossover, not before.
+basedOn:
+  - DDD-dec-09
+  - DDD-dec-10
+notes: |
+  Ruled by Emil at Wave 2 GATE A (2026-08-10). The charter's falsifier (holding note §12)
+  remains live: a load-bearing actor-principle claim that cannot be stated without inter-act
+  persistence, or a ledger-layer claim fully expressible per-act, would reopen the charter and
+  with it this sub-ruling.

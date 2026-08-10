@@ -1,0 +1,23 @@
+format: 1
+id: DDD-dec-13
+kind: decision
+statement: |
+  The calibration ledger is promoted from parked construct to load-bearing: it is the instrument class the claim layer's carrier-assurance gate names, filed as core/16-calibration-ledger.md with claim DDD-cost-24.
+principal: Emil
+made: 2026-08-10, Wave 2 curation session (GATE F); ruled in-session
+resolution: |
+  Ratify the promotion, carved as presented: the construct files at core/16 with DDD-cost-24
+  (projected, validity condition in the claim body); the promotion is this record; the
+  identity-unit question files open as DDD-dec-14. The model-market-gap resolution stays
+  Wave 3, qualified by the validity condition — the ledger resolves the gap only for claimant
+  identities that outlive their verdict horizons.
+basedOn:
+  - DDD-cost-13
+  - DDD-cost-19
+  - DDD-cost-22
+  - DDD-cost-24
+notes: |
+  The basis field records the three-way convergence by ID, per the ruling: DDD-cost-13 — the
+  bound naming the missing instrument class; DDD-cost-19's corollary — the ledger as the
+  ownable memory; DDD-cost-22 — the carrier-assurance gate awaiting its instrument. The
+  accrual machinery defers to GATE G with §11.

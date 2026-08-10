@@ -1,0 +1,21 @@
+format: 1
+id: DDD-dec-14
+kind: decision
+statement: |
+  OPEN — the identity-unit question: what is the claimant identity whose calibration ledger accumulates — person, role, model version, model lineage, or arrangement? Deliberately unresolved; owner Emil.
+principal: Emil
+made: 2026-08-10, Wave 2 curation session (GATE F); filed open in-session
+resolution: |
+  OPEN. No resolution is recorded here, deliberately: the identity unit is a Decision Ledger
+  PRD design decision, and resolving it in canon would pre-empt the design work. Conditional
+  transfer note, as ruled: transfers when a Decision Ledger PRD exists in a repo Emil
+  designates; until then this record is the decision's home, and any product-cli or L-track
+  work touching the identity unit cites this ID rather than resolving it.
+basedOn:
+  - DDD-cost-24
+  - DDD-dec-13
+notes: |
+  The validity condition of DDD-cost-24 is what makes this question load-bearing: the ledger
+  exists only for identities that outlive their verdict horizons, so the choice of identity
+  unit decides which actors the instrument can certify at all — model-version churn against
+  open-claim horizons is the type case (§11(c)'s turnover bound, pending GATE G).

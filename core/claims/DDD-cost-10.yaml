@@ -1,0 +1,22 @@
+format: 1
+id: DDD-cost-10
+kind: conceptual
+statement: |
+  A closed predicate is amortised assurance: the standing mechanism's cost divides over act volume while occasioned carrier supply does not, so closure converts the act's assurance cost from volume-linear to volume-amortised.
+status: projected
+region: |
+  The volume layer; rests on the upstream locus conversion (DDD-cost-09, pinned) and the two-part total C(E, N). Holds wherever the pinned per-act register does.
+evidence: []
+falsifier: |
+  Check-coverage investment failing to reduce cumulative assurance cost at any volume against carrier supply at declared-equal assurance.
+breaks: |
+  Selection-pipeline economics loses its explanation; the volume argument for predicate discipline reduces to the per-act locus claim alone.
+owner: none
+changed: 2026-08-10, Wave 2 curation session (GATE B carve)
+notes: |
+  The affirmed headline phrase (Emil, holding note §5; ratified at Wave 2 GATE B) files here per
+  the GATE B carve: the upstream half (DDD-cost-09) is the synchronic locus conversion; this
+  claim is its amortisation corollary over act volume. Illustration, carried as exposition:
+  selection-pipeline economics — enormous standing investment because the per-act assurance it
+  enables cannot be bought otherwise. Adjacent, not identical, to the sign flip (upstream
+  DDD-cost-11): locus and amortisation here, class consequences there.

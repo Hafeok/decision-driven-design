@@ -14,3 +14,35 @@ terms:
     aliases: [act volume]
     established_by: 13-cost-projection.md
     status: settled
+  # Wave 2 (2026-08-10): the maturation register — Layer 2 general canon per R4b (DDD-dec-11)
+  - id: term:maturation
+    term: maturation
+    established_by: 14-maturation.md
+    status: settled
+    canonical_md: |
+      > **Maturation** — the return channel spanning the act in reverse: from the mechanical store
+      > (post-act verdicts) into the encoded store (pre-act standing supply). A maturing arrangement
+      > is one where that loop is closed.
+  - id: term:waterline
+    term: waterline
+    established_by: 14-maturation.md
+    status: settled
+    canonical_md: |
+      > The **waterline** — the descending crossover threshold: the `N*` below which a distinction is
+      > not yet worth standing at current volume. Cumulative acts push it down.
+  - id: term:maturity
+    term: maturity
+    established_by: 14-maturation.md
+    status: settled
+    canonical_md: |
+      > **Maturity** is the distance between an arrangement's actual allocation and the
+      > volume-and-drift-optimal allocation — not the fraction encoded.
+  # Wave 2 GATE F (2026-08-10): the claim layer's carrier-assurance instrument (DDD-dec-13)
+  - id: term:calibration-ledger
+    term: calibration-ledger
+    aliases: [calibration ledger]
+    established_by: 16-calibration-ledger.md
+    status: settled
+    canonical_md: |
+      > The **calibration ledger** — a claimant's record across claims whose predicates later
+      > closed: a matured-verdict certificate.

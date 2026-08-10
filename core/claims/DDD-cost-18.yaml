@@ -1,0 +1,22 @@
+format: 1
+id: DDD-cost-18
+kind: empirical
+statement: |
+  Drift is the counter-force: encoded bits depreciate at the drift rate of the ground they encode; steady state is encoding rate matching drift-driven depreciation, and over-encoding — standing allocation exceeding the volume-and-drift optimum — is a real failure mode.
+status: projected
+region: |
+  The volume layer at equilibrium; the sclerotic stage is the claim's failure-mode content.
+evidence:
+  - kind: paper
+    ref: Abernathy, W. J. & Wayne, K. (1974), "Limits of the Learning Curve", Harvard Business Review 52(5)
+    note: The Model T case — organisational evidence for over-encoding as failure, not a cost floor; the manufacturing assessment's caveat is carried, not waived.
+falsifier: |
+  High-drift domains showing encoded fractions equal to low-drift domains at equal volume.
+breaks: |
+  The equilibrium reading of maturity (distance-to-optimal, not fraction-encoded); the sclerotic stage loses its mechanism.
+owner: none
+changed: 2026-08-10, Wave 2 curation session
+notes: |
+  Affirmed in session 2026-08-08 (holding note §1, rate bounds); filed downstream per R4b
+  (DDD-dec-11). Falsifier as carried by the note, verbatim. Evidence entry is basis-grade
+  (organisational case), not discriminating; status stays projected.

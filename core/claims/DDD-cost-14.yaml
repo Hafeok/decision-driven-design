@@ -1,0 +1,21 @@
+format: 1
+id: DDD-cost-14
+kind: conceptual
+statement: |
+  Maturation is the return channel spanning the act in reverse — post-act verdicts encoding into pre-act standing supply — and its schedule follows the cost layer: cumulative acts push the waterline down, distinctions encode in information-density order as each crosses its N*, and per-act occasioned cost declines stepwise toward a floor of open-predicate residual plus below-waterline tail.
+status: projected
+region: |
+  The volume layer; arrangements with verdict capture (DDD-cost-15 is the entry condition). The schedule inherits DDD-cost-07's marginal condition; the floor decomposition holds wherever the predicate-closure boundary does.
+evidence: []
+falsifier: |
+  Arrangements with captured verdicts and stable ground whose per-act occasioned cost either declines independently of encoding order or declines below the open-predicate residual.
+breaks: |
+  The maturation register of core/14; maturity (distance-to-optimal) loses its schedule, though the rate bounds (DDD-cost-15..18) stand independently.
+owner: none
+changed: 2026-08-10, Wave 2 curation session
+notes: |
+  Affirmed in session 2026-08-08 (holding note §1, construal of funnel/inverted-funnel
+  confirmed); filed downstream per R4b (DDD-dec-11) — the schedule quantifies over cumulative
+  acts. Falsifier Wave-2 proposed, amended and ratified at the pre-Gate-E hold (Emil,
+  2026-08-10): preconditions distributed over both disjuncts. The maturation-curve figure is a
+  Context& projection, not canon.
