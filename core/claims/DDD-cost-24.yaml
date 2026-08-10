@@ -1,0 +1,22 @@
+format: 1
+id: DDD-cost-24
+kind: conceptual
+statement: |
+  The calibration ledger — a claimant's record across claims whose predicates later closed — is the assurance instrument for open-predicate carriage: a matured-verdict certificate where no answer-keyed instrument reaches (DDD-cost-13, pinned). It applies to human and model claimants by the same mechanism. Validity condition: the instrument exists only for claimant identities that outlive their verdict horizons; cross-identity transfer (including model version succession) is partial at best and per-capability.
+status: projected
+region: |
+  The carrier-assurance gate at the claim layer (upstream DDD-cost-22, pinned), where the target predicate is open; bounded by the validity condition the statement carries.
+evidence: []
+falsifier: |
+  Claimant calibration failing to predict subsequent claim outcomes better than seniority or confidence at matched claim mix.
+breaks: |
+  The carrier-assurance gate loses its named instrument class; open-predicate delegation reverts to certificates the instrument bound (DDD-cost-13) shows cannot reach it.
+owner: none
+changed: 2026-08-10, Wave 2 curation session (GATE F)
+notes: |
+  Ratified at Wave 2 GATE F with amendments (Emil, 2026-08-10): validity condition carried in
+  the claim body; falsifier at matched claim mix. Promotion to load-bearing recorded in
+  DDD-dec-13; identity-unit question open in DDD-dec-14. The accrual machinery (verdict-speed
+  accrual, minimum build time, the turnover bound's decay form) is deferred to the
+  time-and-assurance register (queue §11, GATE G). The model-market-gap resolution stays
+  Wave 3, qualified by the validity condition.

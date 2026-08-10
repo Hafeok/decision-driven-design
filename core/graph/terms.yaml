@@ -37,3 +37,12 @@ terms:
     canonical_md: |
       > **Maturity** is the distance between an arrangement's actual allocation and the
       > volume-and-drift-optimal allocation — not the fraction encoded.
+  # Wave 2 GATE F (2026-08-10): the claim layer's carrier-assurance instrument (DDD-dec-13)
+  - id: term:calibration-ledger
+    term: calibration-ledger
+    aliases: [calibration ledger]
+    established_by: 16-calibration-ledger.md
+    status: settled
+    canonical_md: |
+      > The **calibration ledger** — a claimant's record across claims whose predicates later
+      > closed: a matured-verdict certificate.
