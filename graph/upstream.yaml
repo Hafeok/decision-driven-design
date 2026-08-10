@@ -15,10 +15,9 @@
 format: upstream/v1
 upstream:
   repo: https://github.com/Hafeok/actor-indexed-determination
-  # STAGING PIN (DDD-dec-10): the act-primitive + R4-carve branch, pending Emil's upstream
-  # acceptance — bumps to the merge/tag ref (v5.2.0) on acceptance, then reverts to the
-  # tag-never-a-branch rule. The advance from v5.0.0 is recorded in core/decisions/DDD-dec-10.
-  ref: claude/canon-session-1-wave-1-els7lf
+  # Advanced v5.0.0 -> v5.2.0 on Emil's upstream acceptance (merge e86fd23, tagged v5.2.0);
+  # the advance is recorded in core/decisions/DDD-dec-10.
+  ref: v5.2.0                       # tag, never a branch
   pins:
     # basis claims for DDD-dec-04 (the split decision itself rests on these)
     - id: DDD-frame-01
