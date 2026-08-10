@@ -17,7 +17,9 @@ upstream:
   repo: https://github.com/Hafeok/actor-indexed-determination
   # Advanced v5.0.0 -> v5.2.0 on Emil's upstream acceptance (merge e86fd23, tagged v5.2.0);
   # the advance is recorded in core/decisions/DDD-dec-10.
-  ref: v5.2.0                       # tag, never a branch
+  # STAGED (Wave 2, 2026-08-10): pinned against the Wave 2 upstream branch head per the
+  # session's standing mechanics; bump to the merge SHA/tag on Emil's upstream acceptance.
+  ref: claude/wave2-canon-curation-r3v571   # staging — merge SHA/tag on acceptance
   pins:
     # basis claims for DDD-dec-04 (the split decision itself rests on these)
     - id: DDD-frame-01
@@ -52,4 +54,7 @@ upstream:
     - id: DDD-cost-02
       status_at_pin: reported
     - id: DDD-cost-03
+      status_at_pin: projected
+    # the assurance-locus conversion core/13 §5's amortisation corollary rests on (GATE B carve)
+    - id: DDD-cost-09
       status_at_pin: projected

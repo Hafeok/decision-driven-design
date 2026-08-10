@@ -20,6 +20,7 @@ by construction.
 <!-- ddd:ref id=DDD-cost-01 -->
 <!-- ddd:ref id=DDD-cost-02 -->
 <!-- ddd:ref id=DDD-cost-03 -->
+<!-- ddd:ref id=DDD-cost-09 -->
 
 **Claims.** The propositions of this note are landed as claim nodes under `core/claims/`
 (`DDD-cost-*`); canon authority for each is its claim file, and this document is their exposition.
@@ -30,6 +31,7 @@ The mapping:
 | §2 | Volume corollary: all information-priced crossovers at `N* = n·(α/β)` | `DDD-cost-06` | reported (arithmetic) |
 | §3 | MDL optimisation: cost = `L(mechanism)` + N·`H(V\|E)`; marginal condition `N* = n·ΔL/ΔR` | `DDD-cost-07` | projected |
 | §4 | The `09` §6.2 actor rows are the optimal encodings at three act-volume regimes | `DDD-cost-04` | projected (relocated) |
+| §5 | A closed predicate is amortised assurance: standing assurance cost divides over `N`, occasioned does not | `DDD-cost-10` | projected |
 
 Where this prose and a claim disagree, the claim governs and the prose is the bug.
 
@@ -101,7 +103,28 @@ relocated whole per `DDD-dec-09`/`DDD-dec-10` — ID intact.)*
 
 ---
 
-## 5. Reproduce
+## 5. A closed predicate is amortised assurance
+
+The upstream register establishes the locus conversion (`DDD-cost-09`, pinned): closing a
+predicate converts a property's assurance supply from occasioned — at the act, at the carrier's
+class price — to standing, independent of the act. Across acts, the conversion is what the
+affirmed phrase names:
+
+> **A closed predicate is amortised assurance.** The standing mechanism's cost divides over act
+> volume; occasioned carrier supply does not. Closure converts the act's assurance cost from
+> volume-linear to volume-amortised.
+
+*(Claim `DDD-cost-10`, citing `DDD-cost-09` as pinned basis.)*
+
+The illustration is selection-pipeline economics: the standing investment behind selection is
+enormous because the per-act assurance it enables cannot be bought otherwise — where predicates
+stay open, carrier assurance is the only supply, so the pipeline that produces carriers is the
+one mechanism whose cost can amortise at all. Adjacent, not identical, to the sign flip (upstream
+`DDD-cost-11`): locus and amortisation here, class consequences there.
+
+---
+
+## 6. Reproduce
 
 One self-contained script regenerates every figure in this note:
 
