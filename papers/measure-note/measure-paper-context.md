@@ -132,7 +132,9 @@ concession before boundary reads as argument, not apology.
   verdict, `A` the answer (§5.2's verdict variable), `X` conditioning variable, `S`
   decomposition, `E` actor encoding, `R` retrieval, `P` ground distribution, `n` points. Worked
   tables report the `H(V)·n` scale, marked `·n` in every header; §5.2's RAG table is per-act
-  bits and carries no `·n`. (A future revision may unify `A` with `V`; ruled not-now at Gate 4.)
+  bits and carries no `·n`. (A future revision may unify `A` with `V`; ruled not-now at Gate 4.
+  That same pass must rename the decomposition labels **A**/**B** of §4 and §5.4, which collide
+  with `A` the answer.)
 - Fetch the live repos before producing file changes; hold at every gate; flag additions Emil
   did not confirm.
 - Commits citing canon carry a `Basis:` line naming the claim and term IDs they rest on.
