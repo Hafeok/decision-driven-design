@@ -75,6 +75,15 @@ note supplies it for the region where it exists.
 Demand is the information required to specify the correct answer over the ground the task faces. Not how
 many decisions — **how much distinction**.
 
+**Notation.** `H(·)` denotes Shannon entropy in bits, `H(V) = −Σᵥ P(v) log₂ P(v)`; `H(·|·)`
+conditional entropy; `I(·;·)` mutual information. All are taken with respect to the ground
+distribution `P`.
+
+**Scale.** `D = H(V)` is demand per act: one input drawn from `P`, one verdict rendered. The worked
+tables report `H(V)·n`, the demand of a single pass over an input space of `n` points, which keeps
+the figures in whole bits; because `n` multiplies every term, the identity of §3 holds in either
+scale.
+
 Three properties follow immediately, and each answers something the counting approach could not.
 
 **It is representation-independent.** `H(V)` is a property of the verdict function and the ground
@@ -173,7 +182,7 @@ actor's judgment.
 
 On the same date task:
 
-| Actor | encodes | `I(V;E)` | `H(V\|E)` | sum |
+| Actor | encodes | `I(V;E)·n` | `H(V\|E)·n` | sum |
 |---|---|---|---|---|
 | **Program** | the exact verdict | 25.493 | 0.000 | **25.493** |
 | **Weak model** | `D ≤ 28` | 14.474 | 11.020 | **25.493** |
@@ -220,7 +229,7 @@ The conditional term is an **internal seam**: the demand the second-level split 
 the first level already absorbed [DDD-measure-03]. On the date task, chaining the two decompositions
 of §4 — in both orders — gives:
 
-| Chain | level-1 seam | internal seam | parts | sum |
+| Chain | level-1 seam `·n` | internal seam `·n` | parts `·n` | sum |
 |---|---|---|---|---|
 | **month, then day-band** | `I(V;M)` = 4.901 | `I(V;D\|M)` = 17.838 | 2.755 | **25.493** |
 | **day-band, then month** | `I(V;D)` = 14.474 | `I(V;M\|D)` = 8.265 | 2.755 | **25.493** |
@@ -245,7 +254,7 @@ not a convenience of the example, and the identity owes a demonstration under a 
 [DDD-measure-12]. Re-running the task under two skewed deployments — benign, where valid inputs
 arrive nine times as often as invalid, and adversarial, the reverse — with both decompositions of §4:
 
-| Deployment | `H(V)·n` | A parts | A seam | B parts | B seam |
+| Deployment | `H(V)·n` | A parts `·n` | A seam `·n` | B parts `·n` | B seam `·n` |
 |---|---|---|---|---|---|
 | **benign** (valid 9× invalid) | **4.357** | 3.781 | 0.576 | 2.586 | 1.771 |
 | **uniform** (the worked example) | **25.493** | 20.593 | 4.901 | 11.020 | 14.474 |
