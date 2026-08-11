@@ -225,11 +225,12 @@ same parts residual, 2.755 bits: the order of the chain does not change what rem
 seam divides between levels. And the two seam terms sum to the joint seam, 22.739 bits, in either
 order. **Chaining re-splits the seam; it cannot create or destroy demand.**
 
-This is the worked form of the framework's composition formalism, in which a composed arrangement's
-internal seams are exactly these conditional mutual-information terms under the same identity
-[term:seam-identity]. Iteration is arithmetic — the theorem is still Shannon's, applied twice. *A
-dedicated claim node for the iterated form is pending canon filing; until it lands, the citation
-basis is the chain rule and the seam identification, as above.*
+This is the same iterated identity the framework's composition formalism names for a composed
+arrangement's internal seams — there the conditioning variables are actor encodings rather than
+sub-decompositions; the arithmetic is identical, the instance distinct, and the multi-actor case
+remains unworked here [term:seam-identity]. Iteration is arithmetic — the theorem is still
+Shannon's, applied twice. *A dedicated claim node for the iterated form is pending canon filing;
+until it lands, the citation basis is the chain rule and the seam identification, as above.*
 
 ### 5.4 `P` varied → non-uniform ground
 
@@ -261,8 +262,8 @@ recovers all three, with no additional assumptions, is the note's main structura
 
 The two further instances add no fourth claim. Chaining exercises the same identity iterated;
 the skewed ground exercises it with `P` varied. What they add is coverage: the identity has now been
-worked on five instances — three conditioning variables, one two-level chain, and three ground
-distributions — across two tasks.
+worked on five instances — the three conditioning variables, a two-level chain, and a
+ground-distribution sweep across three deployments — on two tasks.
 
 **One caveat carried forward, and it is where the next work is.** In all three, *escape* is folded into
 `H(V|X)` together with *judgment*. The identity cleaves what was encoded from everything else; it does
@@ -287,7 +288,7 @@ specification demand *is* verdict entropy.
 | The identification is **computable** — the framework's quantities can be evaluated for concrete tasks rather than merely defined | That conservation is empirically true. The identity needs no testing |
 | It is **non-degenerate** — values are non-trivial, neither zero nor everything, and they move as the framework says they should | That the identification is the *correct* one |
 | The framework's qualitative claims appear with the **right signs and magnitudes** — a higher-information split really does buy cheaper parts; distractors really do push demand back to judgment | That information-theoretic demand predicts any **engineering** quantity |
-| No contradiction appears across three different conditioning variables on two different tasks | Anything whatsoever about open predicates |
+| No contradiction appears across five worked instances on two tasks — three conditioning variables, an iterated chain, and a three-deployment ground sweep | Anything whatsoever about open predicates |
 
 **So where does falsifiable content live?** In the identification, which is a modelling claim, and
 modelling claims fail by failure of correspondence rather than by arithmetic. The correspondence that
@@ -432,16 +433,18 @@ a modelling result and is never to be presented as a mathematical one.
 
 **Demand is relative to the ground distribution.** The worked example uses a uniform `P`. Real
 deployments do not, and the same task carries different demand under different input distributions. This
-is a genuine added parameter.
+is no longer only stated: §5.4 works the sweep, and the demand moves while the identity holds. It
+remains a genuine added parameter.
 
 **Escape is not separated from judgment.** `H(V|X)` bundles both. The split requires an actor-capacity
 model and is the natural next result.
 
-**Three instances is credibility, not certification.** The identity is general because it is the chain
-rule, and it has been exercised on three conditioning variables across two tasks. Chained seams,
-multi-actor compositions, and non-uniform ground should be worked before this is relied upon, and the
-framing should be certified by an information theorist. The theorem is exact; identifying the right
-conditioning variable for a deployed system is estimation, with error bars.
+**Five instances is credibility, not certification.** The identity is general because it is the chain
+rule, and it has now been exercised on three conditioning variables, an iterated chain, and a
+three-deployment ground sweep, across two tasks. Of the cases previously owed, chained seams and
+non-uniform ground are worked (§5.3, §5.4); multi-actor composition remains. The framing should be
+certified by an information theorist. The theorem is exact; identifying the right conditioning
+variable for a deployed system is estimation, with error bars.
 
 **The correspondence to engineering quantities is untested** — §6, and the most important of these.
 
