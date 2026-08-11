@@ -4,6 +4,9 @@
 
 *Emil — Context&. Formal note.*
 
+*This note is a projection of `actor-indexed-determination` at `v5.3.0` and `decision-driven-design`
+at `v0.4.0`; bracketed claim identifiers resolve against these refs.*
+
 ---
 
 ## Abstract
@@ -19,7 +22,9 @@ assigns over the distribution of ground the task faces. Conservation is then the
 conditioning on any variable `X` splits the total into what `X` encoded, `I(V;X)`, and what remains,
 `H(V|X)`. Three claims previously stated separately — seam demand under decomposition, store allocation
 across actors, and the encode/verify split in retrieval-augmented generation — are this one identity
-under three choices of `X`.
+under three choices of `X`. Two further instances — the identity iterated across a two-level
+decomposition, and a ground-distribution sweep — extend the worked coverage without adding a fourth
+claim.
 
 **The theorem is Shannon's.** What is claimed here is the identification, which is a modelling claim and
 is falsifiable in a way arithmetic is not. We are explicit about what our computations do and do not
@@ -183,7 +188,8 @@ it splits.
 ### 5.2 `X` = a retrieval policy → the encode/verify split
 
 Retrieval-augmented generation is the same structure in deployment: retrieval converts ground into
-encoded specification, leaving the model to carry the residual as judgment. With `R` the retrieval:
+encoded specification, leaving the model to carry the residual as judgment. With `A` the answer —
+this task's verdict variable — and `R` the retrieval:
 
 | retrieval (hit / distractor) | `I(A;R)` | `H(A\|R)` | sum |
 |---|---|---|---|
@@ -311,6 +317,13 @@ different paper and it is the one that would make this a measured result rather 
 measure exists, it is exact, it is computable, its boundary is principled, and it unifies three prior
 claims. Whether it is the *right* measure of the thing engineers experience as specification burden is
 open, stated, and testable.
+
+A final consequence belongs in this section, because it governs how the note is to be used. **The
+measure's job is to exist, not to be computed.** Its existence on the closing region is what makes
+conservation a theorem rather than a maxim, and proxy pricing an approximation to something exact
+rather than to nothing (§8). Practice runs count-free on the audit — where does each decision sit,
+not how many bits does it carry — and proxy-priced on the optimisation, in money, hours, or tokens,
+never on live entropy. Necessary for the warrant, unnecessary for the operation [DDD-frame-11].
 
 ---
 
