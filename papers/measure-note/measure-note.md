@@ -466,8 +466,8 @@ variable for a deployed system is estimation, with error bars.
 ## 10. The result in one line
 
 > **For a task whose acceptance predicate closes, specification demand is the Shannon entropy of the
-> verdict. Conditioning on any variable `X` splits it by the chain rule into what `X` encoded and what
-> remains, which always sum to the whole. `X` a decomposition gives the seam; `X` an actor's encoding
+> verdict over the ground the task faces. Conditioning on any variable `X` splits it by the chain
+> rule into what `X` encoded and what remains, which always sum to the whole. `X` a decomposition gives the seam; `X` an actor's encoding
 > gives the store allocation, total actor-invariant and split actor-relative; `X` a retrieval policy
 > gives the encode/verify split. Conservation of specification demand is the chain rule of entropy —
 > where the predicate closes, and only there.**
