@@ -1,11 +1,12 @@
-# Specification Demand Is Verdict Entropy
+# Determination Demand Is Verdict Entropy
 
 ### Conservation as the Chain Rule
 
 *Emil — Context&. Formal note.*
 
 *This note is a projection of `actor-indexed-determination` at `v5.3.0` and `decision-driven-design`
-at `v0.4.0`; bracketed claim identifiers resolve against these refs.*
+at `d8fd8e6`; bracketed claim identifiers and the assets named under Reproduction resolve against
+these refs.*
 
 ---
 
@@ -17,7 +18,7 @@ argument has carried a standing debt. Without a counting procedure shown invaria
 architectures of one task, conservation is an accounting discipline rather than a measured quantity.
 
 This note pays the debt on a bounded region. For a task whose acceptance predicate closes, we identify
-specification demand with the Shannon entropy of the **verdict** — the correct output the predicate
+determination demand with the Shannon entropy of the **verdict** — the correct output the predicate
 assigns over the distribution of ground the task faces. Conservation is then the chain rule of entropy:
 conditioning on any variable `X` splits the total into what `X` encoded, `I(V;X)`, and what remains,
 `H(V|X)`. Three claims previously stated separately — seam demand under decomposition, store allocation
@@ -25,6 +26,10 @@ across actors, and the encode/verify split in retrieval-augmented generation —
 under three choices of `X`. Two further instances — the identity iterated across a two-level
 decomposition, and a ground-distribution sweep — extend the worked coverage without adding a fourth
 claim.
+
+**Demand is not cost.** Entropy prices what each act must resolve. Description length prices the
+mechanism that supplies it. Two classifiers with identical demand can therefore differ without bound in
+what supplying it costs, and the measure is silent on that difference by construction (§2.1).
 
 **The theorem is Shannon's.** What is claimed here is the identification, which is a modelling claim and
 is falsifiable in a way arithmetic is not. We are explicit about what our computations do and do not
@@ -61,19 +66,45 @@ Ashby had one. Requisite variety is stated in bits, and the framework's central 
 quantity of determination must be supplied from somewhere — is Ashby's shape without Ashby's unit. This
 note supplies it for the region where it exists.
 
+### 1.1 What demand is, independently of its measure
+
+An identification is contestable only if the thing identified has a characterisation independent of the
+thing it is identified with. Demand has one, and it is prior to this note.
+
+The companion framework treats each **act** — the bounded episode of determination running from its
+first governing decision to an expressed outcome — as governed by decisions that must each be supplied
+from one of four sources: a **rule** that fixes the decision before the act, a **check** that applies a
+criterion after it, an **actor** that resolves it during the act by reading ground, or nothing at all,
+in which case the decision is **escaped** — determined never, by nobody [term:store; term:act;
+term:escape]. There is no fifth source. **Demand is what must be supplied.**
+
+This characterisation is count-free. It asks where each governing decision sits, not how much any of
+them carries, and it is available whether or not the acceptance predicate closes [DDD-frame-11]. That is
+what makes the identification below a claim rather than a definition: demand is specified here without
+reference to entropy, and the proposal is that entropy measures it. What fixes the demand is the task,
+the declared **tolerance**, and the distribution of ground the task faces; what resolves it is the
+actor, and the measure never mentions one [term:tolerance; term:actor].
+
+One distinction follows immediately and governs the rest of the note. Demand is what must be supplied;
+it is not what supplying it costs. That distinction is §2.1's, and this note measures demand.
+
 ---
 
 ## 2. The definition
 
-> **Definition.** For a task with an acceptance predicate that closes, let the **verdict** `V` be the
-> correct output the predicate assigns to each point of the input space, and let `P` be the distribution
-> over inputs the task actually faces — the **ground distribution**. The **specification demand** of the
-> task is the Shannon entropy of the verdict:
+> **Definition (determination demand).** *(In the engineering projection this same quantity is
+> denominated in the vocabulary of the domain and called* **specification demand** *; the measure below
+> is identical either way.)* For a task with an acceptance predicate that closes, let the **verdict** `V`
+> be the correct output the predicate assigns to each point of the input space, and let `P` be the
+> distribution over inputs the task actually faces — the **ground distribution**. The **determination
+> demand** of the task is the Shannon entropy of the verdict:
 >
 > **`D = H(V)`**, in bits.
 
-Demand is the information required to specify the correct answer over the ground the task faces. Not how
-many decisions — **how much distinction**.
+[term:verdict] Demand is the information required to specify the correct answer over the ground the task
+faces. Not how many decisions — **how much distinction**. And the correct *answer*, not the mapping from
+inputs to answers: the mapping is a mechanism, mechanisms are priced by description length, and §2.1
+separates the two.
 
 **Notation.** `H(·)` denotes Shannon entropy in bits, `H(V) = −Σᵥ P(v) log₂ P(v)`; `H(·|·)`
 conditional entropy; `I(·;·)` mutual information. All are taken with respect to the ground
@@ -97,6 +128,48 @@ same validator faces different demand in an environment where inputs are nearly 
 where they are adversarial. That is an added parameter and it is the honest one: *fixed by the task* is
 properly *fixed by the task, the tolerance, and the ground distribution*.
 
+### 2.1 Demand is not cost
+
+The definition invites one misreading above all others, and the framework's answer to it is prior to
+this note. **Demand says what must be supplied; cost says what supplying it that way is worth**
+[DDD-cost-01].
+
+The two sides of the identity below denominate in the same unit — bits of one act's verdict — and differ
+in **locus of supply**. What a mechanism fixes before any act is supplied by a *standing artifact*,
+built once and present at each act. What is left is supplied by a *contemporaneous event*: an actor's
+judgment, spent at the act and again at the next. A **cost register** prices that difference, and the
+demand register cannot see it — **standing cost** for the price of building and holding the artifact,
+**occasioned cost** for the price of the per-act event [term:cost-register; term:standing-cost;
+term:occasioned-cost].
+
+The two sides are not priced in the same currency, and the identity is why. Pricing the standing side by
+what the mechanism captures — `I(V;E)`, for `E` the encoding a mechanism fixes before the act (§5.1) —
+is degenerate: conservation forces `ΔI(V;E) = −ΔH(V|E)` exactly, so every distinction removes precisely
+as many occasioned bits as it adds standing ones, and no distinction can be priced ahead of another
+[DDD-cost-02]. Pricing distinctions apart therefore requires the standing
+side priced as the **description length** of the mechanism, which is not a conserved quantity, with
+entropy pricing only the occasioned side — MDL's `L(model)` and `L(data|model)`, read as per-act rates
+[DDD-cost-03]. That correspondence is a modelling claim and is projected, not measured; §8 places it
+against the literature.
+
+**The consequence is a divergence, and it is worth stating as one.** Take two binary classifiers over
+the same input space of `n` points, both returning `0` and `1` equally often under `P`. The first
+returns the first input bit. The second reads an incompressible lookup table. Both face `H(V) = 1` bit
+per act — that is arithmetic, and the measure cannot tell them apart. Their mechanisms differ by
+everything: a sentence against `n` bits of table. **Same demand, standing costs differing by a factor of
+`n`.** The measure is not failing here. It is measuring demand, and the two classifiers do not differ in
+demand; they differ in the price of one way of supplying it, which is the other register's business.
+
+A second divergence runs on a different axis and must not be fused with the first. Two tasks with
+identical verdict entropy can differ unboundedly in the cost of *computing* an answer — a lookup table
+and a satisfiability instance over the same input space carry the same `H(V)`, and one is answered by
+indexing while the other is NP-hard to solve [DDD-measure-11; DDD-frame-06]. The measure prices the
+verdict, not the search.
+
+So the measure is silent on two things by construction: what a mechanism costs to describe, and what an
+answer costs to compute. Both silences are stated in the framework's own canon rather than conceded
+here, and neither is a defect in the identification. They are why demand needs a register of its own.
+
 ---
 
 ## 3. Conservation is the chain rule
@@ -114,7 +187,7 @@ Read through the framework's vocabulary, the terms map exactly:
 
 | Information quantity | Framework quantity |
 |---|---|
-| `H(V)` | total specification demand, fixed by the task |
+| `H(V)` | total determination demand, fixed by the task |
 | `I(V;X)` | demand **encoded** by `X` — paid once, inherited by every run |
 | `H(V|X)` | demand **remaining** — what must still be resolved at run time |
 
@@ -296,7 +369,7 @@ better to say so directly than to let a reader discover it.
 `I(V;X) + H(V|X) = H(V)` holds for every joint distribution. Computing it on a date validator and
 finding it holds establishes nothing about the framework. Estimating it from 40,000 samples and finding
 it holds within a hundredth of a bit establishes that the estimator works. Neither is evidence that
-specification demand *is* verdict entropy.
+determination demand *is* verdict entropy.
 
 | What the computations do establish | What they do not |
 |---|---|
@@ -365,7 +438,7 @@ built from different materials draw the same line is the best available evidence
 is tracking something real.
 
 The consequence for the framework is a bounded claim, which is the correct kind. **Conservation of
-specification demand is a theorem for closing predicates.** Off that region it remains what it was — an
+determination demand is a theorem for closing predicates.** Off that region it remains what it was — an
 accounting discipline, a principle rather than a measured invariant — and this note does not extend its
 reach. It proves the part that was already inside the decidable region and marks the edge sharply.
 
@@ -379,7 +452,7 @@ falsifiable content lives — are §6's, and are not reargued here.
 
 **Shannon (1948).** The theorem is Shannon's, and so is every formal object in this note: entropy,
 mutual information, and the chain rule that carries conservation are used exactly as 1948 states
-them. What the note contributes is the identification alone — specification demand as verdict
+them. What the note contributes is the identification alone — determination demand as verdict
 entropy (§2) — and that is a modelling claim, with its failure mode stated in §6. Nothing here
 strengthens, extends, or tests Shannon's result. The dependence runs one way: where the
 identification fails, the theorem is untouched; where it holds, every formal property the note
@@ -396,19 +469,16 @@ the note concedes Ashby's own caution: he had the unit in hand and still decline
 than a principle, and this note does the same.
 
 **Kolmogorov complexity and MDL.** The nearest objection arrives from here: why entropy rather
-than description length? The framework's answer is that the two are not rivals — they price
-different sides of the act. What must be resolved at the act, over the ground the act faces, is
-occasioned, and entropy prices it; the mechanism built once, before any act, is standing, and
-description length prices it [DDD-cost-01; DDD-cost-03]. On this reading MDL's two-part form,
-`L(model) + L(data|model)`, is not a competing measure of demand. Read as per-act rates it is the
-cost decomposition laid over the same conserved identity [DDD-cost-03], and over `N` acts it
-becomes `L(mechanism) + N·H(V|E)`, with computable crossover volumes at which a distinction flips
-from occasioned to standing [DDD-cost-07]. The identity itself forces this division of labour:
-pricing the standing side in captured information, `I(V;E)`, is degenerate, because conservation
-makes the tradeoff exactly flat — every distinction buys precisely what it costs, and no
-distinction can be priced ahead of another — so a graded build-out over volume requires the
-standing side priced as description length, which is not a conserved quantity
-[DDD-cost-02; DDD-cost-06]. Where the framework has looked for this structure in production data,
+than description length? §2.1 answers it in full — the two are not rivals, they price different
+sides of the act — and what remains for this section is where that answer leaves the literature.
+MDL's two-part form, `L(model) + L(data|model)`, is not a competing measure of demand. Read as
+per-act rates it is the cost decomposition laid over the same conserved identity [DDD-cost-03],
+and over `N` acts it becomes `L(mechanism) + N·H(V|E)`, with computable crossover volumes at which
+a distinction flips from occasioned to standing — the volume layer, downstream of this note
+[DDD-cost-06; DDD-cost-07]. That layer exists only because the standing side is priced as
+description length: the degeneracy of §2.1 is what rules out pricing it in captured information,
+and a graded build-out over acts needs a standing quantity that is not conserved [DDD-cost-02].
+Where the framework has looked for this structure in production data,
 the evidence is consistent with the two-part form but cannot yet select the MDL form, and is filed
 as basis rather than confirmation [DDD-cost-03; mdl-cost-manufacturing-assessment-2026-08-08].
 Within this note's own region a second, older
@@ -474,11 +544,11 @@ variable for a deployed system is estimation, with error bars.
 
 ## 10. The result in one line
 
-> **For a task whose acceptance predicate closes, specification demand is the Shannon entropy of the
+> **For a task whose acceptance predicate closes, determination demand is the Shannon entropy of the
 > verdict over the ground the task faces. Conditioning on any variable `X` splits it by the chain
 > rule into what `X` encoded and what remains, which always sum to the whole. `X` a decomposition gives the seam; `X` an actor's encoding
 > gives the store allocation, total actor-invariant and split actor-relative; `X` a retrieval policy
-> gives the encode/verify split. Conservation of specification demand is the chain rule of entropy —
+> gives the encode/verify split. Conservation of determination demand is the chain rule of entropy —
 > where the predicate closes, and only there.**
 
 ---
