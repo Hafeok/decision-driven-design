@@ -22,9 +22,8 @@ determination demand with the Shannon entropy of the **verdict** — the correct
 assigns over the distribution of ground the task faces. Conservation is then the chain rule of entropy:
 conditioning on any variable `X` splits the total into the verdict information `X` carries, `I(V;X)`, and
 what remains, `H(V|X)`. Three claims previously stated separately — seam demand under decomposition,
-store allocation across actors, and the encode/verify split in retrieval-augmented generation — are this
-one identity
-under three choices of `X`. Two further instances — the identity iterated across a two-level
+store allocation across actors, and the encode/verify split — are this one identity under three choices
+of `X`. Two further instances — the identity iterated across a two-level
 decomposition, and a ground-distribution sweep — extend the worked coverage without adding a fourth
 claim.
 
@@ -62,7 +61,7 @@ The deeper failure is that cardinality is the wrong kind of quantity. A decision
 between two thousand cases carries more demand than one that discriminates between two, and counting
 treats them alike. Demand is extensive; a count is not.
 
-So demand is not a count. It is a measure, and it needs a unit.
+So demand is not a count. It is a measure, and it needs a unit [DDD-measure-09].
 
 Ashby had one. Requisite variety is stated in bits, and the framework's central claim — that a fixed
 quantity of determination must be supplied from somewhere — is Ashby's shape without Ashby's unit. This
@@ -106,7 +105,8 @@ it is not what supplying it costs. That distinction is §2.1's, and this note me
 [term:verdict] Demand is the information required to specify the correct answer over the ground the task
 faces. Not how many decisions — **how much distinction**. And the correct *answer*, not the mapping from
 inputs to answers: the mapping is a mechanism, mechanisms are priced by description length, and §2.1
-separates the two.
+separates the two. The definition's phrase *the correct output the predicate assigns* holds for some
+task classes and not others; §2.2 says which, and what `V` is in the rest.
 
 **Notation.** `H(·)` denotes Shannon entropy in bits, `H(V) = −Σᵥ P(v) log₂ P(v)`; `H(·|·)`
 conditional entropy; `I(·;·)` mutual information. All are taken with respect to the ground
@@ -171,6 +171,36 @@ verdict, not the search.
 So the measure is silent on two things by construction: what a mechanism costs to describe, and what an
 answer costs to compute. Both silences are stated in the framework's own canon rather than conceded
 here, and neither is a defect in the identification. They are why demand needs a register of its own.
+
+### 2.2 What `V` is, and for which tasks
+
+An acceptance predicate evaluates an outcome: it settles whether a candidate is acceptable at the
+declared tolerance [term:acceptance-predicate]. Written out, it is a relation `A(x, y) ∈ {0,1}` over an
+input `x` and a candidate `y` — not, in general, a function from `x` to a unique `y`. Four task classes
+follow, and `V` is a different object in each.
+
+| Task class | What the predicate supplies | `V` for this construction |
+|---|---|---|
+| **Decision** — accept or reject an input | one bit per input | the accept/reject bit; `H(V) ≤ 1` per act |
+| **Function** — one correct output per input | a unique `y` for each `x` | that output; the definition applies as written |
+| **Relation** — several acceptable outputs per input | an acceptance set `{y : A(x,y)}` | not determined without a further choice |
+| **Verification** — judge a candidate already in hand | one bit per pair `(x, y)` | the accept/reject bit, over the distribution of pairs |
+
+**This note's worked instances are decision and function tasks.** The date validator of §4 is a decision
+task, one bit per input. §5.2's simulation yields one answer per act, which is the function shape.
+Nothing here is worked on a relation task.
+
+**Relations have no verdict function, and the construction does not quietly supply one.** Where several
+outputs are acceptable, `H(V)` is undefined until something selects among them — a tie-break, a
+canonical form, or a declared distribution over the acceptance set — and each is a modelling choice
+that changes the number. Declaring which is in force is part of declaring the task. Leaving it
+undeclared and computing anyway is an error this construction will not detect.
+
+**The entropy of a verification verdict is not the entropy of the generation task.** A verification
+verdict is one bit; the answer it accepts may carry many, and the two must never be substituted for one
+another. The framework separates them deliberately: closure is distinct from generation cost, and
+verification being cheap implies nothing about the density or accessibility of the acceptance region
+[DDD-frame-06]. The measure prices the verdict, not the search (§2.1) [DDD-measure-11].
 
 ---
 
@@ -318,7 +348,8 @@ On the same date task:
 | **Weak model** | `D ≤ 28` | 14.474 | 11.020 | **25.493** |
 | **Mid model** | `D ≤ 28`, plus whether the month is February | 20.964 | 4.529 | **25.493** |
 
-**The total is actor-invariant; the allocation is actor-relative.** This distinction is the point, and it
+**The total is actor-invariant; the allocation is actor-relative** [DDD-measure-04]. This distinction is
+the point, and it
 rules out a tempting misreading. Demand is **not** constant *by* actor — that would mean each actor has
 its own conserved quantity, which is difficulty under another name and says nothing. Demand is constant
 *across* actors and allocated *by* actor. The same `H(V)` faces all three; the actor determines only how
@@ -336,12 +367,13 @@ exceeding them, is a named next result and is not worked here [DDD-cost-05; DDD-
 allocation above is the split an ideal user of `E` would face — a lower bound on what the actor must
 resolve, not a measurement of what it will.
 
-### 5.2 `X` = a retrieval policy → the encode/verify split
+### 5.2 `X` = what is supplied before the act → the encode/verify split
 
-Retrieval-augmented generation has the same structure. What retrieval makes available before the answer
-is produced is admissible conditioning (§3.1), and the identity splits the answer's uncertainty into
-what the retrieval carries and what is left. With `A` the answer — this task's verdict variable — and
-`R` the retrieval:
+Retrieval-augmented generation motivates this instance; it is not what is simulated, and the section is
+named for what is. The structure is the framework's **encode/verify split** [term:encode-verify-split]:
+part of what an act needs is supplied to it in advance, and the rest is left to whatever acts. As
+conditioning that is the identity again, with `X` the material supplied before the answer — admissible
+by construction (§3.1). With `A` the answer, this instance's verdict variable, and `R` what is supplied:
 
 | retrieval (hit / distractor) | `I(A;R)` | `H(A\|R)` | sum |
 |---|---|---|---|
@@ -352,15 +384,43 @@ what the retrieval carries and what is left. With `A` the answer — this task's
 | 0.90 / 0.05 | 2.136 | 0.474 | **2.610** |
 | 1.00 / 0.00 | 2.612 | 0.000 | **2.612** |
 
-Quantities estimated from 40,000 samples through a simulated retrieval process with imperfect hit rate
-and plausible distractors. Better retrieval moves demand from the residual into what the retrieval
-carries; distractors push it back. `H(A|R)` is the ideal-observer residual on the same reading as §5.1:
-a model that cannot exploit everything `R` carries faces more than the table shows, never less
-[DDD-cost-05].
+Better supply moves demand from the residual into what `R` carries; distractors push it back.
+
+**The generating model, in full.** It is stipulated rather than learned, and it contains neither
+documents nor a model.
+
+- `A` is drawn independently at each act from a fixed eight-outcome prior
+  `w = (0.30, 0.22, 0.16, 0.12, 0.09, 0.06, 0.03, 0.02)`. Its population entropy is exactly
+  `H(A) = 2.6126` bits.
+- `R` is a single categorical symbol in `{0,…,7, NULL}`. It carries no document identity, no document
+  content, and no hit flag.
+- With probability `p_hit`, `R` is the answer. With probability `p_dist`, `R` is a **distractor**: an
+  independent draw from the same prior `w`, so a plausible wrong answer rather than an arbitrary one.
+  Otherwise `R` is `NULL`.
+- **The supplying process therefore depends on the answer by construction**, maximally so on a hit.
+  That is what makes this a simulated channel and not a measurement of a retrieval system
+  [DDD-measure-05].
+- Estimation is plug-in — entropies from empirical counts over 40,000 sampled acts per row, no bias
+  correction.
+
+**What the table tests, and what it cannot.** `I(A;R)` is computed as `H(A) − H(A|R)`, so the sum
+column is exact by construction and tests nothing. Presenting it as a check would be the
+arithmetic-as-evidence error §6 exists to prevent. What the run does test is whether a plug-in
+estimator recovers the conditional entropy of a channel it is not given in closed form. It does:
+against the analytic joint, the mean estimate over 200 replicates is within 0.002 bits at every
+setting, and a single 40,000-sample run carries a standard deviation of 0.005 to 0.010 bits.
+
+**Why the totals move.** Each row re-estimates `H(A)` from its own fresh sample, so the totals differ by
+estimator noise and nothing else. Over 200 independent replicates at `N = 40,000`, plug-in `H(A)` has
+mean 2.6117 bits, standard deviation 0.0049, and a central 95% range of `[2.601, 2.621]`, with a bias of
+−0.0008. Every total in the table falls inside that range, and the population value they scatter about
+is 2.6126.
 
 **What this instance is for, precisely.** It is not a measurement of conservation — §6. It shows the
-identification survives an *estimated* channel rather than an exactly computed one, which is the
-condition any deployed system presents. That is a claim about tractability, not about truth.
+quantities are estimable from samples at a useful accuracy, which is the condition any deployed system
+presents. That is a claim about tractability, not about truth. And `H(A|R)` remains the ideal-observer
+residual, on the same reading as §5.1: something that cannot exploit everything `R` carries faces more
+than the table shows, never less [DDD-cost-05].
 
 ### 5.3 `X` applied twice → chained seams
 
@@ -462,10 +522,34 @@ If a decomposition with high `I(V;S)` reliably has a *cheap* interface, or an ac
 performs no better without help, then the identification is wrong — and Shannon is untouched, because
 none of it was ever in question.
 
-**That correspondence has not been tested here.** A protocol is straightforward: take a task with
-several genuine decompositions in production, compute `I(V;S)` for each against the observed input
-distribution, and correlate against interface specification effort and boundary defect density. It is a
-different paper and it is the one that would make this a measured result rather than a well-founded one.
+**That correspondence has not been tested here, and a bare correlation would not test it.** Take a task
+with several genuine decompositions in production and compute `I(V;S)` for each against the observed
+input distribution. Three things must then be fixed in advance.
+
+**The direction.** Across admissible decompositions of one task, higher `I(V;S)` predicts *higher*
+interface specification effort, *higher* boundary defect density, and *longer* time to stabilise. The
+prediction is monotone and it is the identification's, not a hedge. A reliable inverse association —
+high-information seams that are cheap to agree and stable in production — falsifies the identification
+and leaves Shannon untouched [DDD-measure-01; DDD-measure-07].
+
+**The controls.** Interface size, domain complexity, team experience, coupling and change frequency,
+tooling, decomposition discoverability, traffic volume, and organisational boundaries all move
+interface cost independently of `I(V;S)`; a study that does not hold them is measuring the organisation
+rather than the seam. Imbalance in the verdict distribution is the sharpest of them, and structural
+rather than incidental: a skewed `P` lowers `H(V)` and every seam term in the same stroke
+[DDD-measure-12], so it enters as a covariate and never as noise.
+
+**The baselines.** `I(V;S)` must be set against number of interface states, schema or contract
+description length, cyclomatic or logical complexity, interface surface area, input/output
+dimensionality, and the description length of the routing rule. The last is not a rival measure, and
+the framework says which it is before the data arrives: `L(routing rule)` is the standing side of §2.1,
+priced in description length, while `I(V;S)` is the demand the seam carries [DDD-cost-03]. **The
+prediction is that both load and neither subsumes the other** — that `I(V;S)` retains association after
+`L(routing rule)` is controlled. If it does not, the demand register is idle where it matters most and
+the distinction this note is built on buys nothing.
+
+It is a different paper and it is the one that would make this a measured result rather than a
+well-founded one.
 
 **What this note claims, then, is narrower than it first appears and firmer than an assertion.** A
 measure exists, it is exact, it is computable, its boundary is principled, and it unifies three prior
@@ -652,8 +736,8 @@ variable for a deployed system is estimation, with error bars.
 > **For a task whose acceptance predicate closes, determination demand is the Shannon entropy of the
 > verdict over the ground the task faces. Conditioning on any variable `X` splits it by the chain
 > rule into what `X` encoded and what remains, which always sum to the whole. `X` a decomposition gives the seam; `X` an actor's encoding
-> gives the store allocation, total actor-invariant and split actor-relative; `X` a retrieval policy
-> gives the encode/verify split. Conservation of determination demand is the chain rule of entropy —
+> gives the store allocation, total actor-invariant and split actor-relative; `X` what is supplied
+> before the act gives the encode/verify split. Conservation of determination demand is the chain rule of entropy —
 > where the predicate closes, and only there.**
 
 ---
@@ -664,3 +748,8 @@ Five self-contained scripts regenerate every figure above: `measure-toy.py` for 
 `measure-actor-allocation.py` for §5.1, `measure-rag.py` for §5.2, `measure-chained-seams.py` for
 §5.3, and `measure-nonuniform-ground.py` for §5.4 — the last two in `assets/` beside this note. All
 five were re-run against this draft and reproduce the stated values.
+
+§5.2's replicate figures — the estimator's standard deviation, central range, and bias — characterise
+the estimator `measure-rag.py` uses and are not printed by it. They are reproduced by running the same
+plug-in estimator over 200 independent samples of `N = 40,000` acts from the prior `w` and the channel
+stated in §5.2; every parameter needed is given there.
