@@ -408,7 +408,7 @@ column is exact by construction and tests nothing. Presenting it as a check woul
 arithmetic-as-evidence error §6 exists to prevent. What the run does test is whether a plug-in
 estimator recovers the conditional entropy of a channel it is not given in closed form. It does:
 against the analytic joint, the mean estimate over 200 replicates is within 0.002 bits at every
-setting, and a single 40,000-sample run carries a standard deviation of 0.005 to 0.010 bits.
+setting, and a single 40,000-sample run carries a standard deviation of up to 0.010 bits.
 
 **Why the totals move.** Each row re-estimates `H(A)` from its own fresh sample, so the totals differ by
 estimator noise and nothing else. Over 200 independent replicates at `N = 40,000`, plug-in `H(A)` has
