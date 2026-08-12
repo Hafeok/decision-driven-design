@@ -20,9 +20,10 @@ architectures of one task, conservation is an accounting discipline rather than 
 This note pays the debt on a bounded region. For a task whose acceptance predicate closes, we identify
 determination demand with the Shannon entropy of the **verdict** — the correct output the predicate
 assigns over the distribution of ground the task faces. Conservation is then the chain rule of entropy:
-conditioning on any variable `X` splits the total into what `X` encoded, `I(V;X)`, and what remains,
-`H(V|X)`. Three claims previously stated separately — seam demand under decomposition, store allocation
-across actors, and the encode/verify split in retrieval-augmented generation — are this one identity
+conditioning on any variable `X` splits the total into the verdict information `X` carries, `I(V;X)`, and
+what remains, `H(V|X)`. Three claims previously stated separately — seam demand under decomposition,
+store allocation across actors, and the encode/verify split in retrieval-augmented generation — are this
+one identity
 under three choices of `X`. Two further instances — the identity iterated across a two-level
 decomposition, and a ground-distribution sweep — extend the worked coverage without adding a fourth
 claim.
@@ -179,17 +180,18 @@ approximation:
 
 > **`H(V) = I(V;X) + H(V|X)`**
 >
-> total demand = what `X` encoded + what remains to resolve given `X`
+> total demand = the verdict information `X` carries + what remains to resolve given `X`
 
 That is the whole formal content of this note. Everything below is a choice of `X`.
 
-Read through the framework's vocabulary, the terms map exactly:
+Read through the framework's vocabulary, the terms map across. The left column is arithmetic; the right
+column is the reading proposed in §2, and the two must not be confused:
 
-| Information quantity | Framework quantity |
+| Information quantity (arithmetic) | Framework reading (under the identification) |
 |---|---|
 | `H(V)` | total determination demand, fixed by the task |
-| `I(V;X)` | demand **encoded** by `X` — paid once, inherited by every run |
-| `H(V|X)` | demand **remaining** — what must still be resolved at run time |
+| `I(V;X)` | verdict information carried by `X` — **encoded demand** |
+| `H(V\|X)` | verdict uncertainty remaining given `X` — **residual demand** |
 
 **Conservation within a fixed structure is now forced rather than asserted.** Fix `X`, and
 `I(V;X) + H(V|X)` cannot fail to equal `H(V)`. Moving work between what the structure encodes and what
@@ -197,6 +199,47 @@ the parts must resolve is a zero-sum transfer, exactly.
 
 We are aware of how this reads, and §6 says it plainly: the fact that an identity holds is not evidence
 for anything. The content of this note is the identification in §2, not the arithmetic in §3.
+
+### 3.1 Which variables the reading applies to
+
+The arithmetic above holds for any `X` whatever. The engineering reading does not, and the note owes a
+condition saying which variables carry it.
+
+Mutual information is symmetric and observational: `I(V;X) = I(X;V)`. It establishes that `X` and the
+verdict are statistically dependent. On its own it does not establish that anyone constructed `X`, that
+information flows causally from `X` to the verdict, that an engineering cost was paid, or that `X` is
+even available when the act happens. Two of those the framework supplies elsewhere; two it does not
+claim at all.
+
+**Availability is supplied by a condition on `X`.** The encoded store is by definition what is fixed
+*before* the act, by a rule [term:encoded; term:act]. Read as a restriction on conditioning variables:
+
+> **Admissibility.** A conditioning variable `X` is **admissible** if it is a function of ground
+> available at the act, and of what the arrangement has standing before it, and not of the verdict
+> itself. It must be computable by something that has not been handed the answer.
+
+**Cost is supplied by a different register**, and deliberately not by `I(V;X)`: what a mechanism costs
+to build and hold is standing cost, priced by description length (§2.1). Whether `I(V;X)` predicts it
+is the open correspondence of §6 [DDD-measure-07].
+
+**Deliberate construction and causal flow are not claimed at all.** `I(V;X)` is verdict information
+carried by `X`. Where this note calls that quantity *encoded* or *pre-paid*, the word is its name under
+the identification of §2, never a property of mutual information.
+
+The condition does real work. Choosing `X = V` gives `I(V;X) = H(V)` and `H(V|X) = 0` — the whole of
+the demand in the conditioning variable, obtained tautologically. Without a restriction, §4's *you
+cannot decompose your way out of the work* would be close to tautological with it. `X = V` is
+inadmissible: the verdict is not ground available before the verdict.
+
+What admissibility does **not** exclude is a mechanism that *computes* the verdict from ground. §5.1's
+program does exactly that and reaches `H(V|E) = 0` legitimately. The difference is between building the
+answer and being handed it. So §4's result survives with its content restored rather than lost: the
+residual reaches zero only when some admissible mechanism determines the whole verdict, and §2.1 prices
+what standing up that mechanism costs. The work is not escaped. It is relocated to the standing side
+and paid there.
+
+*A dedicated claim node for the admissibility condition is pending canon filing; until it lands, the
+citation basis is the encoded store's definition and the act, as above.*
 
 ---
 
@@ -215,30 +258,42 @@ Now take two decompositions — two ways of splitting the task so that sub-tasks
 | **A** — split by month | 4 | 20.593 | 4.901 | **25.493** |
 | **B** — split by day, `≤28` vs `≥29` | 2 | 11.020 | 14.474 | **25.493** |
 
-Here `I(V;S)` is **seam demand**: what the decomposition itself absorbed. The framework had previously
-asserted a seam identity, `|D_comp| = |D_single| + |S|`. It is not an assertion. It is the chain rule,
-with the seam identified as the mutual information between the decomposition and the answer.
+Both decompositions here are admissible (§3.1): each is a function of the input, computable before the
+verdict is known. `I(V;S)` is the **verdict information carried by the decomposition**; under the
+identification its name is **seam demand** [term:seam-information]. The framework had previously
+asserted a seam identity, `|D_comp| = |D_single| + |S|` [term:seam-identity]. It is not an assertion. It
+is the chain rule, with the seam identified as the mutual information between the decomposition and the
+answer.
 
 **What this computation corrected.** Decomposition B's parts are dramatically cheaper than A's — 11.0
 bits against 20.6. The framework's earlier language called this *a better decomposition destroying
 demand*, and treated it as the strongest counterexample to conservation.
 
 It is not destruction. B moved more demand into the seam, from 4.9 bits to 14.5. B's split already knows
-where the valid/invalid boundary lives — at day 29 — and that knowledge is not free. It is mutual
-information, pre-paid into the structure.
+where the valid/invalid boundary lives — at day 29. That knowledge is verdict information carried by the
+decomposition, and under the identification we call it demand pre-paid into the structure
+[DDD-measure-03].
 
 > **A better decomposition pre-pays more demand into the seam, buying cheaper parts. The total is
 > invariant.** The destruction was always an artifact of not counting the seam.
+
+**What that does not say.** A higher-information seam is not thereby a more expensive one. `I(V;S)`
+is symmetric and observational (§3.1): it measures how much the split says about the answer, and
+nothing about what discovering, agreeing, implementing, or maintaining the split costs. Those are
+standing costs (§2.1). Whether the two track each other is the untested correspondence of §6
+[DDD-measure-07], and it is where this reading would fail: a split with high `I(V;S)` may be obvious
+and cheap, and if that is reliably so, the identification is wrong.
 
 This is worth dwelling on because it is the only place in the framework's history where a computation
 overturned a stated position. The counterexample had been booked as unresolved for some time. It was not
 a counterexample; it was a measurement error.
 
-**Two predictions follow that are not postdictions.** Ranging over all decompositions of a fixed task:
-`H(V|S)` is minimised exactly when `I(V;S)` is maximised, so **you cannot make the parts easier without a
-higher-information seam** — a quantitative tradeoff curve for any concrete task. And `H(V|S) = 0`
-requires `I(V;S) = H(V)`: the only way to make the parts trivial is to put the entire answer in the
-decomposition. **You cannot decompose your way out of the work.**
+**Two predictions follow that are not postdictions.** Ranging over all admissible decompositions of a
+fixed task: `H(V|S)` is minimised exactly when `I(V;S)` is maximised, so **you cannot make the parts
+easier without a higher-information seam** — a quantitative tradeoff curve for any concrete task. And
+`H(V|S) = 0` requires `I(V;S) = H(V)`: the parts become trivial only when the decomposition determines
+the entire verdict, which §2.1 prices and §3.1 shows is not an escape [DDD-measure-10]. **You cannot
+decompose your way out of the work.**
 
 ---
 
@@ -249,9 +304,10 @@ separately, with no new machinery.
 
 ### 5.1 `X` = an actor's encoding → store allocation
 
-Let `E` be what an actor can encode before acting — its capacity to compute something about the input in
-advance. Then `H(V) = I(V;E) + H(V|E)` reads as: total demand = encoded by this actor + left to this
-actor's judgment.
+Let `E` be what an actor encodes before acting — what it has computed about the input in advance of the
+verdict. `E` is admissible by construction (§3.1): it is fixed before the act. Then
+`H(V) = I(V;E) + H(V|E)` reads as: total demand = carried by this actor's encoding + left to this actor
+at the act.
 
 On the same date task:
 
@@ -267,11 +323,24 @@ its own conserved quantity, which is difficulty under another name and says noth
 *across* actors and allocated *by* actor. The same `H(V)` faces all three; the actor determines only how
 it splits.
 
+The program's row is worth reading against §3.1. It reaches `H(V|E) = 0` by computing the verdict from
+the input, which is admissible, and it pays for that in standing cost (§2.1). Zero residual is not
+demand destroyed; it is demand supplied entirely by a mechanism.
+
+**`H(V|E)` is the ideal-observer residual, not the actor's burden.** Conditional entropy assumes
+something that can exploit every statistical relationship `E` carries. A real actor may fail to use
+information that is present, and it then faces more than `H(V|E)`, never less. The gap is capacity, and
+capacity sits outside the identity: the bits an actor can supply per act, with escape the residual
+exceeding them, is a named next result and is not worked here [DDD-cost-05; DDD-floor-01]. So the
+allocation above is the split an ideal user of `E` would face — a lower bound on what the actor must
+resolve, not a measurement of what it will.
+
 ### 5.2 `X` = a retrieval policy → the encode/verify split
 
-Retrieval-augmented generation is the same structure in deployment: retrieval converts ground into
-encoded specification, leaving the model to carry the residual as judgment. With `A` the answer —
-this task's verdict variable — and `R` the retrieval:
+Retrieval-augmented generation has the same structure. What retrieval makes available before the answer
+is produced is admissible conditioning (§3.1), and the identity splits the answer's uncertainty into
+what the retrieval carries and what is left. With `A` the answer — this task's verdict variable — and
+`R` the retrieval:
 
 | retrieval (hit / distractor) | `I(A;R)` | `H(A\|R)` | sum |
 |---|---|---|---|
@@ -283,8 +352,10 @@ this task's verdict variable — and `R` the retrieval:
 | 1.00 / 0.00 | 2.612 | 0.000 | **2.612** |
 
 Quantities estimated from 40,000 samples through a simulated retrieval process with imperfect hit rate
-and plausible distractors. Better retrieval moves demand from judgment into encoded; distractors push it
-back.
+and plausible distractors. Better retrieval moves demand from the residual into what the retrieval
+carries; distractors push it back. `H(A|R)` is the ideal-observer residual on the same reading as §5.1:
+a model that cannot exploit everything `R` carries faces more than the table shows, never less
+[DDD-cost-05].
 
 **What this instance is for, precisely.** It is not a measurement of conservation — §6. It shows the
 identification survives an *estimated* channel rather than an exactly computed one, which is the
@@ -298,8 +369,8 @@ day-band. Conditioning iterates, and the chain rule iterates with it, still with
 
 > **`H(V) = I(V;S₁) + I(V;S₂|S₁) + H(V|S₁,S₂)`**
 
-The conditional term is an **internal seam**: the demand the second-level split absorbs, given what
-the first level already absorbed [DDD-measure-03]. On the date task, chaining the two decompositions
+The conditional term is an **internal seam**: the demand the second-level split carries, given what
+the first level already carries [DDD-measure-03]. On the date task, chaining the two decompositions
 of §4 — in both orders — gives:
 
 | Chain | level-1 seam `·n` | internal seam `·n` | parts `·n` | sum |
@@ -308,7 +379,7 @@ of §4 — in both orders — gives:
 | **day-band, then month** | `I(V;D)` = 14.474 | `I(V;M\|D)` = 8.265 | 2.755 | **25.493** |
 
 Three things are exact here, and none is an assumption. The level-1 seams are §4's seams, unchanged —
-the same split absorbs the same demand whether or not it is later refined. Both chains end at the
+the same split carries the same demand whether or not it is later refined. Both chains end at the
 same parts residual, 2.755 bits: the order of the chain does not change what remains, only how the
 seam divides between levels. And the two seam terms sum to the joint seam, 22.739 bits, in either
 order. **Chaining re-splits the seam; it cannot create or destroy demand.**
@@ -337,7 +408,7 @@ Parts and seam sum to the row's whole, exactly, for both decompositions in every
 identity is indifferent to
 the skew; the demand is not. The same validator, unchanged, faces roughly four times the uniform
 demand when invalid inputs dominate and about a sixth of it when they are rare. Where the demand
-sits moves too: the share decomposition B pre-pays into its seam is 41% of the whole on the benign
+sits moves too: the share decomposition B carries in its seam is 41% of the whole on the benign
 ground, 57% on the uniform, and 75% on the adversarial. A decomposition's seam economics are a
 property of the task *and its deployment*. *Fixed by the task* is fixed by the task, the tolerance,
 and the ground distribution — now worked, not merely stated.
@@ -354,7 +425,7 @@ worked on five instances — the three conditioning variables, a two-level chain
 ground-distribution sweep across three deployments — on two tasks.
 
 **One caveat carried forward, and it is where the next work is.** In all three, *escape* is folded into
-`H(V|X)` together with *judgment*. The identity cleaves what was encoded from everything else; it does
+`H(V|X)` together with *judgment*. The identity cleaves what `X` carries from everything else; it does
 not cleave what an actor resolves from what it sheds. Separating those requires a model of actor
 **capacity** — the point at which `H(V|X)` exceeds what an actor can carry is where demand begins to
 escape. The floor lives in that split, and it is not done here.
