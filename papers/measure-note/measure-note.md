@@ -17,14 +17,14 @@ decision gets made, and design choices relocate the demand between stores rather
 argument has carried a standing debt. Without a counting procedure shown invariant across two
 architectures of one task, conservation is an accounting discipline rather than a measured quantity.
 
-This note pays the debt on a bounded region. For a task whose acceptance predicate closes, we identify
-determination demand with the Shannon entropy of the **verdict** — the correct output the predicate
-assigns over the distribution of ground the task faces. Conservation is then the chain rule of entropy:
-conditioning on any variable `X` splits the total into the verdict information `X` carries, `I(V;X)`, and
-what remains, `H(V|X)`. Three claims previously stated separately — seam demand under decomposition,
-store allocation across actors, and the encode/verify split — are this one identity under three choices
-of `X`. Two further instances — the identity iterated across a two-level
-decomposition, and a ground-distribution sweep — extend the worked coverage without adding a fourth
+This note supplies that procedure on a bounded region. For a task whose acceptance predicate closes,
+we identify determination demand with the Shannon entropy of the **verdict** — the correct output the
+predicate assigns over the distribution of ground the task faces. Conservation is then the chain rule
+of entropy: conditioning on any variable `X` splits the total into the verdict information `X` carries,
+`I(V;X)`, and what remains, `H(V|X)`. Three claims previously stated separately — seam demand under
+decomposition, store allocation across actors, and the encode/verify split — are this one identity
+under three choices of `X`. Two further instances, the identity iterated across a two-level
+decomposition and a ground-distribution sweep, extend the worked coverage without adding a fourth
 claim.
 
 **Demand is not cost.** Entropy prices what each act must resolve. Description length prices the
@@ -63,9 +63,11 @@ treats them alike. Demand is extensive; a count is not.
 
 So demand is not a count. It is a measure, and it needs a unit [DDD-measure-09].
 
-Ashby had one. Requisite variety is stated in bits, and the framework's central claim — that a fixed
-quantity of determination must be supplied from somewhere — is Ashby's shape without Ashby's unit. This
-note supplies it for the region where it exists.
+Ashby had one. Variety is defined as a count or as its logarithm to base 2, and in that form its unit
+is the bit (Ashby 1956, §7/7); the Law of Requisite Variety is stated in exactly that logarithmic form
+(§11/7). The framework's central claim — that a fixed quantity of determination must be supplied from
+somewhere — is Ashby's shape without Ashby's unit. This note supplies it for the region where it
+exists.
 
 ### 1.1 What demand is, independently of its measure
 
@@ -108,14 +110,18 @@ inputs to answers: the mapping is a mechanism, mechanisms are priced by descript
 separates the two. The definition's phrase *the correct output the predicate assigns* holds for some
 task classes and not others; §2.2 says which, and what `V` is in the rest.
 
-**Notation.** `H(·)` denotes Shannon entropy in bits, `H(V) = −Σᵥ P(v) log₂ P(v)`; `H(·|·)`
+**Notation.** `H(·)` denotes Shannon entropy in bits, `H(V) = −Σ_v P(v) log₂ P(v)`; `H(·|·)`
 conditional entropy; `I(·;·)` mutual information. All are taken with respect to the ground
 distribution `P`.
 
-**Scale.** `D = H(V)` is demand per act: one input drawn from `P`, one verdict rendered. The worked
-tables report `H(V)·n`, the demand of a single pass over an input space of `n` points, which keeps
-the figures in whole bits; because `n` multiplies every term, the identity of §3 holds in either
-scale.
+**Scale.** `D = H(V)` is demand per act, and per act is what demand is rather than how it is reported
+(§1.1): one input drawn from `P`, one verdict rendered. The worked tables multiply by `n`, the number
+of points in the input space, purely to keep the figures in whole bits. **That product is a display
+scale and nothing more.** `nH(V)` is the entropy of `n` independent draws from the same verdict
+distribution; it is not the information required to label each of `n` distinct points exactly once,
+which is a different quantity depending on the order of visits and on what is already known. Because
+`n` multiplies every term, the identity of §3 holds in either scale, and every claim in this note is a
+per-act claim.
 
 Three properties follow immediately, and each answers something the counting approach could not.
 
@@ -146,9 +152,9 @@ term:occasioned-cost].
 
 The two sides are not priced in the same currency, and the identity is why. Pricing the standing side by
 what the mechanism captures — `I(V;E)`, for `E` the encoding a mechanism fixes before the act (§5.1) —
-is degenerate: conservation forces `ΔI(V;E) = −ΔH(V|E)` exactly, so every distinction removes precisely
-as many occasioned bits as it adds standing ones, and no distinction can be priced ahead of another
-[DDD-cost-02]. Pricing distinctions apart therefore requires the standing
+is degenerate: conservation forces the two sides to move in exact opposition, so every distinction
+removes precisely as many occasioned bits as it adds standing ones, and no distinction can be priced
+ahead of another [DDD-cost-02]. Pricing distinctions apart therefore requires the standing
 side priced as the **description length** of the mechanism, which is not a conserved quantity, with
 entropy pricing only the occasioned side — MDL's `L(model)` and `L(data|model)`, read as per-act rates
 [DDD-cost-03]. That correspondence is a modelling claim and is projected, not measured; §8 places it
@@ -224,12 +230,11 @@ column is the reading proposed in §2, and the two must not be confused:
 | `I(V;X)` | verdict information carried by `X` — **encoded demand** |
 | `H(V\|X)` | verdict uncertainty remaining given `X` — **residual demand** |
 
-**Conservation within a fixed structure is now forced rather than asserted.** Fix `X`, and
-`I(V;X) + H(V|X)` cannot fail to equal `H(V)`. Moving work between what the structure encodes and what
-the parts must resolve is a zero-sum transfer, exactly.
-
-We are aware of how this reads, and §6 says it plainly: the fact that an identity holds is not evidence
-for anything. The content of this note is the identification in §2, not the arithmetic in §3.
+**Within a fixed structure the split is exact rather than asserted.** Fix `X`, and
+`I(V;X) + H(V|X)` cannot fail to equal `H(V)`. Moving demand between what the structure carries and
+what the parts must resolve is a zero-sum transfer, exactly. That exactness is the chain rule's. It
+becomes a statement about *conservation* only under the identification of §2, and an identity holding
+is not evidence for an identification — §6.
 
 ### 3.1 Which variables the reading applies to
 
@@ -277,7 +282,7 @@ citation basis is the encoded store's definition and the act, as above.*
 ## 4. Worked example, and the correction it forced
 
 Take a task small enough to compute exhaustively: validate a two-field date `(M, D)` with
-`M ∈ {1,2,3,4}` and `D ∈ {1,…,31}`, inputs uniform. The verdict is `VALID ⟺ D ≤ days(M)`, with
+`M ∈ {1,2,3,4}` and `D ∈ {1,…,31}`, inputs uniform. The verdict is `VALID` iff `D ≤ days(M)`, with
 `days = {Jan 31, Feb 28, Mar 31, Apr 30}`. There are `n = 124` points, of which 120 are valid.
 
 Total demand: `H(V)·n = 25.493` bits.
@@ -408,7 +413,9 @@ column is exact by construction and tests nothing. Presenting it as a check woul
 arithmetic-as-evidence error §6 exists to prevent. What the run does test is whether a plug-in
 estimator recovers the conditional entropy of a channel it is not given in closed form. It does:
 against the analytic joint, the mean estimate over 200 replicates is within 0.002 bits at every
-setting, and a single 40,000-sample run carries a standard deviation of up to 0.010 bits.
+setting, and a single 40,000-sample run carries a standard deviation of up to 0.010 bits. The final row
+is the exception and not an error: at `p_hit = 1` the residual is identically zero, so there is nothing
+to estimate and no deviation to report.
 
 **Why the totals move.** Each row re-estimates `H(A)` from its own fresh sample, so the totals differ by
 estimator noise and nothing else. Over 200 independent replicates at `N = 40,000`, plug-in `H(A)` has
@@ -647,10 +654,11 @@ strengthens, extends, or tests Shannon's result. The dependence runs one way: wh
 identification fails, the theorem is untouched; where it holds, every formal property the note
 uses is inherited, not proved.
 
-**Ashby.** Requisite variety (1956) is the rigorous ancestor, and the nearest one. Ashby stated
-the regulator's burden in bits — the unit this framework lacked, as §1 records — and the
-framework's conservation claim is Ashby's shape: a fixed quantity of disturbance that must be met
-with variety from somewhere (§1). This note is the framework arriving where Ashby already stood,
+**Ashby.** Requisite variety (Ashby 1956) is the rigorous ancestor, and the nearest one. The unit is
+his: variety measured as a logarithm to base 2, with the bit named as its unit (§7/7), and the law
+itself stated logarithmically as `V_O ≥ V_D − V_R` (§11/7, with the general statement at §11/9). The
+framework's conservation claim is Ashby's shape: a fixed quantity of disturbance that must be met with
+variety from somewhere (§1). This note is the framework arriving where Ashby already stood,
 and it arrives on a restricted region: the measure exists exactly where the acceptance predicate
 closes (§7). What is added to Ashby is therefore not a stronger claim but a narrower one — an
 exact domain on which the variety accounting is a theorem rather than a maxim. Off that domain,
@@ -674,9 +682,14 @@ Within this note's own region a second, older
 answer stands: entropy is relative to a declared ground distribution and computable from it
 [DDD-measure-12], and Kolmogorov complexity is neither — which is what makes demand
 deployment-relative. The note therefore concedes the standing side to description length entirely:
-entropy cannot price the mechanism, and the cost layer built on this identity is MDL's.
+entropy cannot price the mechanism, and the cost layer built on this identity is MDL's. That concession
+should not be read as a tidy division of labour. Description length reaches an aspect of specification
+that entropy cannot reach at all, and the two classifiers of §2.1 are the proof: they are
+indistinguishable to the measure this note proposes and unmistakable to the other. Any account wanting
+both must carry two registers and say at every point which one is speaking. This note carries one, and
+that is a limitation of the note rather than a property of the subject.
 
-**Information bottleneck.** Tishby, Pereira and Bialek's bottleneck (1999) is the closest formal
+**Information bottleneck.** The bottleneck of Tishby, Pereira and Bialek (1999) is the closest formal
 machinery: `I(V;X)` set against `H(V|X)` is structurally a bottleneck functional. The difference
 is what is done with it. IB optimises: it seeks the representation that best trades compression
 against relevance, under a tradeoff parameter. This note optimises nothing. The chain rule split
@@ -692,39 +705,40 @@ ground.
 **Rate–distortion.** The note's stated next result (§5.5, §9) is the split of `H(V|X)` into judged
 and escaped demand, which requires a model of actor capacity — the bits an actor can supply per
 act, with escape the residual exceeding them [DDD-cost-05]. Rate–distortion theory is the natural
-home for that split: what a channel must lose when the required rate exceeds the available one is
-rate–distortion's founding question. The note states the result and defers to it; nothing of its
-content is anticipated here.
+home for that split: what must be given up when the required rate exceeds the available one is
+rate–distortion's founding question (Shannon 1959). The deferral should be stated cautiously, because the theory does
+not apply on the strength of the analogy. Rate–distortion is defined relative to a **reproduction
+variable** and a **distortion function**, and the framework has named neither: what an overloaded actor
+produces in place of the correct verdict, and how badly a given substitution counts against tolerance,
+are open questions rather than notational ones. Until they are answered the appeal is a direction of
+work, not a result. The note states the split and defers; nothing of its content is anticipated here.
 
 **Brooks.** Brooks drew the line between essential and accidental complexity, and held that the
 essential part is fixed by the task, invariant to tooling. That line receives an exact form here:
 `H(V)` never mentions the actor (§2). It also receives a correction, already carried in §2 and §9:
 *fixed by the task* is properly *fixed by the task, the tolerance, and the ground distribution*.
-The exchange is even. The note gives Brooks's line the unit it lacked, and accepts from the
-identity the parameter Brooks did not have to name — the deployment the task actually faces. The
-distinction is inherited, not replaced.
+The exchange is even, and narrower than it may sound. The note offers Brooks's distinction a unit on
+the region where the measure exists, and only for the part of essential complexity that verdict entropy
+captures — which is not all of it: what a mechanism costs to describe and what an answer costs to
+compute are both essential in Brooks's sense and both invisible here (§2.1). In return the note accepts
+from the identity a parameter Brooks did not have to name — the deployment the task actually faces. The
+distinction is inherited, not replaced, and not fully measured.
 
 ---
 
 ## 9. Caveats
 
-**The theorem is Shannon's.** The chain rule is 1948. What is asserted here is the identification of
-demand with verdict entropy, seam with mutual information, and decomposition with conditioning. That is
-a modelling result and is never to be presented as a mathematical one.
+What the computations establish and what they do not is §6's, and the scope condition is §7's; neither
+is restated here. Three items are booked rather than restated, and the last is the one that matters.
 
-**Demand is relative to the ground distribution.** The worked example uses a uniform `P`. Real
-deployments do not, and the same task carries different demand under different input distributions. This
-is no longer only stated: §5.4 works the sweep, and the demand moves while the identity holds. It
-remains a genuine added parameter.
+**Escape is not separated from judgment.** `H(V|X)` bundles both, and cleaving them needs an
+actor-capacity model — stated as the next result and not worked here (§5.1, §5.5)
+[DDD-cost-05; DDD-floor-01].
 
-**Escape is not separated from judgment.** `H(V|X)` bundles both. The split requires an actor-capacity
-model and is the natural next result.
-
-**Five instances is credibility, not certification.** The identity is general because it is the chain
-rule, and it has now been exercised on three conditioning variables, an iterated chain, and a
-three-deployment ground sweep, across two tasks. Of the cases previously owed, chained seams and
-non-uniform ground are worked (§5.3, §5.4); multi-actor composition remains. The framing should be
-certified by an information theorist. The theorem is exact; identifying the right conditioning
+**Multi-actor composition remains unworked.** Of the instances previously owed, chained seams and
+non-uniform ground are done (§5.3, §5.4); the composed-arrangement case is not
+[term:seam-identity]. Five worked instances is credibility, not certification, and the framing should
+be certified by an information theorist. The theorem is exact; identifying the right conditioning
 variable for a deployed system is estimation, with error bars.
 
 **The correspondence to engineering quantities is untested** — §6, and the most important of these.
@@ -753,3 +767,91 @@ five were re-run against this draft and reproduce the stated values.
 the estimator `measure-rag.py` uses and are not printed by it. They are reproduced by running the same
 plug-in estimator over 200 independent samples of `N = 40,000` acts from the prior `w` and the channel
 stated in §5.2; every parameter needed is given there.
+
+---
+
+## References
+
+Ashby, W. R. (1956). *An Introduction to Cybernetics*. Chapman & Hall, London. Variety and the bit,
+§7/7; the Law of Requisite Variety in logarithmic form, §11/7, with the general statement at §11/9.
+
+Brooks, F. P. (1987). No Silver Bullet: Essence and Accidents of Software Engineering. *IEEE Computer*
+20(4):10–19.
+
+Cook, S. A. (1971). The Complexity of Theorem-Proving Procedures. In *Proceedings of the 3rd Annual ACM
+Symposium on Theory of Computing*, 151–158.
+
+Cover, T. M. and Thomas, J. A. (2006). *Elements of Information Theory*, 2nd edition.
+Wiley-Interscience.
+
+Kolmogorov, A. N. (1965). Three Approaches to the Quantitative Definition of Information. *Problemy
+Peredachi Informatsii* 1(1):3–11; English translation, *Problems of Information Transmission*
+1(1):1–7.
+
+Levin, L. A. (1973). Universal Sequential Search Problems. *Problemy Peredachi Informatsii*
+9(3):115–116; English translation, *Problems of Information Transmission* 9(3):265–266.
+
+Rissanen, J. (1978). Modeling by Shortest Data Description. *Automatica* 14(5):465–471.
+
+Shannon, C. E. (1948). A Mathematical Theory of Communication. *Bell System Technical Journal*
+27(3):379–423 and 27(4):623–656.
+
+Shannon, C. E. (1959). Coding Theorems for a Discrete Source with a Fidelity Criterion. *IRE
+International Convention Record* 7:142–163.
+
+Tishby, N., Pereira, F. C. and Bialek, W. (1999). The Information Bottleneck Method. In *Proceedings of
+the 37th Annual Allerton Conference on Communication, Control and Computing*, 368–377.
+
+---
+
+## Appendix A. Cited claims and terms
+
+The note cites nodes in the companion framework's claim graph. Statements below are reproduced word-for-word
+from the graph at the refs pinned in the front matter, so the note can be checked without it. **Status**
+is the graph's own: *established* is argued and unchallenged, *reported* is exercised by a reproducing
+computation, *projected* is proposed with a falsifier and not yet met, *retired* is superseded.
+
+### Claims
+
+| ID | Status | Statement |
+|---|---|---|
+| `DDD-cost-01` | projected | Bits are per-act on both sides of the demand identity; the asymmetry between I(V;E) and H(V\|E) is locus of supply — a standing artifact built before any act versus a contemporaneous event paid at each act. |
+| `DDD-cost-02` | reported | Degeneracy: a cost model whose standing side is linear in I(V;E) is flat — conservation forces dI = -dR exactly, so every distinction removes precisely as many occasioned bits as it adds standing bits and no distinction can be priced ahead of another; pricing distinctions apart requires standing cost priced as mechanism description length, which is not a conserved quantity. |
+| `DDD-cost-03` | projected | MDL correspondence, rate form: description length prices the standing side of determination supply and entropy prices the occasioned side — MDL's L(model) and L(data\|model), read as per-act rates. |
+| `DDD-cost-05` | projected | Capacity is the bits an actor can supply per act; escape is the residual exceeding capacity — the per-act denomination of core/11's capacity model. |
+| `DDD-cost-06` | reported | Volume corollary of the degeneracy: under standing cost linear in I(V;E), every crossover sits at the same act volume N* = n·(α/β) and the whole frontier flips at once — a graded build-out over volume therefore requires standing cost priced as mechanism description length. |
+| `DDD-cost-07` | projected | MDL optimisation: supply cost across N acts decomposes as L(mechanism) + N·H(V\|E), and distinctions flip from occasioned to standing at computable crossover volumes N* = n·ΔL/ΔR, ordered by information density — residual removed per unit of mechanism description. |
+| `DDD-floor-01` | reported | H(V\|X) bundles judged and escaped demand; cleaving them requires an actor-capacity model, and demand escapes where residual demand exceeds effective capacity min(C_hold, C_resolve) AND the shed decisions carry no verifier — escape is the intersection overflow ∩ open, with overflow alone producing retries, not escape. |
+| `DDD-frame-06` | established | Closure is distinct from generation cost: verification being cheap implies nothing about the density or accessibility of the acceptance region. |
+| `DDD-frame-11` | projected | The governance question — is every decision governing the act in a declared store, none escaped? — is well-formed on the total domain, including open predicates where the measure does not exist; the cost question — how much is in each store? — exists only where the predicate closes. The framework's governed domain is strictly wider than its measured domain. |
+| `DDD-measure-01` | projected | Specification demand is verdict entropy: for a task whose acceptance predicate closes, the demand engineers experience as specification burden is H(V) over the ground distribution. |
+| `DDD-measure-02` | established | Given the identification (DDD-measure-01), conservation on the closing region is the chain rule of entropy: H(V) = I(V;X) + H(V\|X) for any conditioning variable X. |
+| `DDD-measure-03` | reported | The seam of a decomposition is I(V;S); a decomposition with cheaper parts has pre-paid more demand into the seam, and H(V\|S) is minimised exactly when I(V;S) is maximised. |
+| `DDD-measure-04` | reported | Store allocation is actor-relative while total demand is actor-invariant: H(V) never mentions the actor; I(V;E) and H(V\|E) split it per actor encoding. |
+| `DDD-measure-05` | reported | The identification survives an estimated channel: on a simulated RAG task, I(A;R) and H(A\|R) estimated from samples sum to H(A) within estimator error across retrieval qualities. |
+| `DDD-measure-06` | established | The measure exists iff the acceptance predicate operationally closes; H(V) is undefined exactly where the framework's floor result locates non-zero floor. |
+| `DDD-measure-07` | projected | I(V;S) predicts the engineering cost of an interface (specification effort, boundary defect rate, time to stabilise); I(V;E) predicts which decisions an actor gets right unaided. |
+| `DDD-measure-09` | reported | Specification demand is a measure, not a count: the cardinality of governing decisions does not track demand, because a decision closing over a larger ground carries more demand and decomposition creates decisions (the seam). Demand is how much distinction, not how many decisions. |
+| `DDD-measure-10` | established | You cannot decompose your way out of the work: for a fixed closing task, H(V\|S) = 0 requires I(V;S) = H(V) — the parts become trivial only when the decomposition already encodes the entire verdict. Demand is conserved, not escapable by re-decomposition. |
+| `DDD-measure-11` | reported | The measure prices the verdict, not the search: H(verdict) is a property of the verdict function and the ground distribution and says nothing about the cost of computing a correct answer. Two tasks with identical verdict entropy can differ unboundedly in generation cost, so the measure must not be read as pricing generation. |
+| `DDD-measure-12` | reported | Demand is relative to the ground distribution: H(verdict) depends on P(input), so "fixed by the task" must be read as "fixed by the task, the tolerance, and the ground distribution" — the same validator faces different demand in different deployment environments. |
+
+### Terms
+
+| ID | Term | Canonical wording |
+|---|---|---|
+| `term:acceptance-predicate` | acceptance-predicate | The **acceptance predicate** is the criterion that settles whether an outcome is acceptable at the declared tolerance. Everything about a task's checkability — and therefore its floor — lives here. |
+| `term:act` | act | The **act** — the bounded episode of determination running from its first governing decision to an expressed outcome; the unit demand is counted in. Derived, not primitive: an act is decisions resolved against ground. Its exact individuation is earned in `09` — one verdict, one act, where the measure exists. |
+| `term:actor` | actor | An **actor** is a system that resolves decisions by reading ground: variation in declared ground can alter the resolution through an internal pathway that selects among alternatives. A thermostat qualifies; a falling rock does not. Actorhood does not require intelligence. |
+| `term:closure` | closure | **Effective closure, defined.** A predicate is **closed for an arrangement** when the relevant ground is observable and adequacy can be evaluated within declared resource, latency, and confidence bounds. **Decidable** is reserved for the formal special case. |
+| `term:cost-register` | cost-register | — registry entry; no canonical wording pinned |
+| `term:encode-verify-split` | encode-verify-split | The **encode/verify split** — the division of a determination's demand between pre-resolving ground into the encoded store before the act and verifying the residual mechanically after it. |
+| `term:encoded` | encoded | **Encoded** — a constraint, fixed *before* the act, by a rule. It amortises: cheap to state, **expensive to find**. |
+| `term:escape` | escape | **Escaped** — determined *never*, by nobody: decided-by-nobody as a first-class category. Latent defect exposure. **The only forbidden state.** |
+| `term:occasioned-cost` | occasioned-cost | — registry entry; no canonical wording pinned |
+| `term:seam-identity` | seam-identity | **\|D_comp\| = \|D_single\| + \|S\|** |
+| `term:seam-information` | seam-information | **I(verdict ; S)** is **seam demand** — what the *decomposition choice* absorbed. |
+| `term:standing-cost` | standing-cost | — registry entry; no canonical wording pinned |
+| `term:store` | store | **{rule, check, actor, nothing}.** There is no fifth source. |
+| `term:tolerance` | tolerance | **Tolerance** is the declared boundary of acceptable outcome deviation. It indexes everything: a choice is a governing decision, and a fact is ground, only relative to a declared tolerance. Without one, the decision set is not well-formed. |
+| `term:verdict` | verdict | **Definition (determination demand).** *(In the engineering projection this same quantity is denominated in the vocabulary of the domain and called* **specification demand** *; the measure below is identical either way.)* For a task with a decidable acceptance predicate, let the **verdict** be the correct output the predicate assigns to each point of the input space, and let `P` be the distribution over inputs (the *ground distribution*). The **determination demand** of the task is the Shannon entropy of the verdict: **D = H(verdict)**, measured in **bits**. |
