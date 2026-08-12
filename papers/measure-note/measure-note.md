@@ -38,10 +38,11 @@ establish: they show the identification is computable and non-degenerate, not th
 correspondence that would make it a measured result — that `I(V;S)` predicts the engineering cost of an
 interface — is stated as a protocol and not run.
 
-The measure has a sharp boundary. Entropy of a verdict requires a verdict function, and an open
-acceptance predicate is one that lacks it. So the measure exists exactly where the predicate closes and
-vanishes exactly at the floor. We argue this coincidence is the strongest evidence the identification is
-the right one.
+The measure has a sharp boundary, stated as a scope condition: the construction applies where the task
+supplies an operationally usable verdict function and a ground distribution that can be estimated.
+Outside that region the framework's independently derived floor becomes non-zero and the measure goes
+silent, for the same reason in both cases. That coincidence is worth noticing. It is not evidence, and
+the note does not use it as any.
 
 ---
 
@@ -482,36 +483,69 @@ never on live entropy. Necessary for the warrant, unnecessary for the operation 
 
 ## 7. Where the measure stops
 
-`H(V)` requires a verdict function. An acceptance predicate that does not close is precisely one that
-lacks a verdict function — there is no ground truth to have entropy about. So `H(V)` is undefined, and
-the measure does not exist.
+The boundary is a scope condition, and it is best stated as one.
 
-> **The measure exists if and only if the acceptance predicate closes. It vanishes exactly at the
-> floor.**
+> **The construction applies where the task supplies an operationally usable verdict function and a
+> ground distribution that can be estimated.**
 
-*Closes* here means **operationally**: the acceptance procedure can be executed over available ground
-within declared resource, latency, and confidence bounds. Formal decidability is the wrong criterion in
-both directions — any bounded finite domain is decidable by lookup, and a decidable checker may require
-infeasible resources.
+Three requirements sit inside that sentence, and they fail in different ways. Collapsing them is the
+error the section is written to avoid.
 
-**This coincidence is the note's strongest argument and it should not be read as a limitation.** The
-companion framework locates the irreducible floor of a task in its acceptance predicate: the floor is
-non-zero exactly where the predicate does not close, because verification is then structurally
-unavailable and the demand falls to whoever is present. That result was derived independently, on
-entirely different grounds, before this measure existed.
+**Existence.** `H(V)` requires a verdict function. Where the acceptance predicate assigns no correct
+output to a point of the input space, there is no ground truth to have entropy about, `H(V)` is
+undefined, and there is nothing to measure.
 
-The measure goes silent in exactly that region.
+**Availability.** A verdict function can exist without being usable. A predicate that assigns a definite
+verdict to every input, but whose acceptance procedure cannot be executed over available ground within
+declared resource, latency, and confidence bounds, does not close [term:closure] — and `H(V)` then
+exists mathematically while being unavailable in practice. These are two failures, not one. The second
+says nothing about existence. Formal decidability is the wrong criterion for either: any bounded finite
+domain is decidable by lookup, and a decidable checker may require infeasible resources.
 
-A measure that stopped at an arbitrary boundary would invite suspicion that the boundary was chosen. This
-one stops where an independently derived result says measurement must fail, and it stops there for the
-same reason: no verdict function. **Measurement and closure have the same domain.** That two arguments
-built from different materials draw the same line is the best available evidence that the identification
-is tracking something real.
+**Estimability.** Closure is not sufficient. `H(V)` is taken with respect to `P` (§2), so `P` must be
+known well enough to estimate. Where the deployment distribution is unknown, unstable, non-stationary,
+or only partly observable, the demand is well defined and cannot be computed [DDD-measure-12]. A
+verdict function alone does not deliver a number.
 
-The consequence for the framework is a bounded claim, which is the correct kind. **Conservation of
-determination demand is a theorem for closing predicates.** Off that region it remains what it was — an
-accounting discipline, a principle rather than a measured invariant — and this note does not extend its
-reach. It proves the part that was already inside the decidable region and marks the edge sharply.
+### 7.1 What the boundary does not claim
+
+**An open predicate does not abolish measurement.** Where evaluators disagree there are distributions
+over their judgments; where preferences are elicited there are distributions over preferences; where
+outputs are scored there are distributions over scores. Those are measurable, and some are informative.
+What is unavailable outside the scope condition is *this construction* — a deterministic verdict
+function to take the entropy of — and not measurement as such. The note claims the domain of its own
+construction and nothing wider.
+
+The framework holds the same thing from the other side. Its governance question — is every governing
+decision in a declared store, none escaped? — is well-formed on open predicates exactly where the
+measure is not, and its domain is strictly wider than the measure's [DDD-frame-11]. Nothing about the
+measure's silence licenses a claim that determination is unaccountable where the measure stops.
+
+### 7.2 The coincidence, and what it is worth
+
+The construction's domain was not chosen to match the framework's floor. The framework locates a task's
+irreducible floor in its acceptance predicate — the floor is non-zero where the predicate does not
+close, because verification is then structurally unavailable and the demand falls to whoever is present
+— and that result was derived on different grounds, before this measure existed. The measure goes
+silent in the same region, and for the same reason: no verdict function. **Measurement and closure have
+the same domain** [DDD-measure-06].
+
+That is worth noticing and it is not evidence. The two arguments share a premise — the closure of the
+acceptance predicate — so their agreement about where the line falls is close to definitional on the
+measure's side. What is not definitional is that the line was drawn twice, from different materials,
+with neither drawing fitted to the other. That makes the boundary **principled rather than arbitrary**.
+It does not make the identification true, and the note does not argue that it does.
+
+**One thing this section narrows, and one it does not.** What is narrowed is what the note argues: the
+scope condition above, and no claim about measurement beyond it. What is not narrowed is the
+identification, which the companion framework carries as a projected claim with the correspondence of
+§6 as its falsifier [DDD-measure-01]. The note presents that claim at the strength its own framework
+gives it — neither more nor less — and narrowing an argument is not weakening a claim.
+
+The consequence is a bounded result, which is the correct kind. **Conservation of determination demand
+is a theorem for closing predicates.** Off that region it remains what it was — an accounting
+discipline, a principle rather than a measured invariant — and this note does not extend its reach. It
+proves the part inside the boundary and marks the edge.
 
 ---
 
