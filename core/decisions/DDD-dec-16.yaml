@@ -1,0 +1,63 @@
+format: 1
+id: DDD-dec-16
+kind: decision
+statement: |
+  The software projection adopts the escape-mechanism scope correction (upstream DDD-dec-15) and advances the upstream pin, although no validator forces the advance: DDD-floor-01's statement moved while its status did not, so the pin would have stayed silently stale.
+principal: Emil
+made: 2026-08-13, escape reconciliation session (GATE 3 draft, on the GATE 2 ruling); ruled in-session
+resolution: |
+  Adopt and advance. Upstream DDD-dec-15 re-scopes term:escape-mechanism and DDD-floor-01: overflow
+  ∩ open is the mechanism of capacity-generated escape, sufficient for escape and never necessary
+  for it. Escape as such is unchanged — term:escape, pinned here at settled, is not amended, and
+  this repository's escape vocabulary rests on that definition rather than on the mechanism.
+
+  Why this is a decision and not a bump. The pin checker fires nothing here:
+
+  - E12 does not fire — every pinned id still exists upstream at the new ref.
+  - E13 does not fire — no document in this repository embeds term:escape or the mechanism terms,
+    so no canonical_md is transcluded and none can diverge.
+  - W5 does not fire — DDD-floor-01 is pinned at status_at_pin: reported and stays reported, since
+    the assets support the re-scoped statement in full.
+
+  So the mechanical checks would have carried this repository forward against a superseded
+  statement without a word. That is exactly the case graph/upstream.yaml's header reserves for a
+  governed advance: the pinned claim's *statement* moved, and only its status is instrumented.
+  Recording the advance before the bump, per that header's rule.
+
+  The advance:
+
+  - graph/upstream.yaml ref advanced from v5.3.0 to the staged upstream branch
+    (claude/canon-escape-definition-lqsgk9) so the checks resolve during staging; the pin bumps to
+    the merge/tag ref on Emil's acceptance of the upstream PR, upstream-first, per the Wave-1
+    precedent (DDD-dec-10) and Wave 2's.
+  - No pins added and no pins removed. In particular term:escape-mechanism, term:capacity and
+    term:overflow are **not** pinned by this decision — see the exposure recorded below, which is
+    named and deliberately left unbundled.
+  - DDD-floor-01's status_at_pin stays reported.
+
+  Claims in this repository that touch escape are re-checked and none weakens. DDD-cost-16
+  (escape is doubly costly) rests on escaped residual never reaching the predicate, which is
+  term:escape's category and not the mechanism's. DDD-cost-23's falsifier counts escaped-claim
+  incident classes, likewise. Neither cites overflow, capacity, or the intersection.
+basedOn:
+  - DDD-dec-04
+  - DDD-dec-15
+  - DDD-floor-01
+  - DDD-cost-16
+notes: |
+  NAMED EXPOSURE, deliberately unbundled (Emil, GATE 2). Four apparatus documents build directly on
+  the corrected mechanism with no pin and therefore no mechanical check on it:
+  apparatus/tool-contract.md (the escape set as "core/10: overflow ∩ open"; the load term in
+  escape = open_residual × p_err(load)), apparatus/tool-surfaces.md (the taxonomy "follows from
+  core/10's escape conditions"), apparatus/the-skill-floor.md (an unverified skill "escapes its
+  overflow, by the floor result"), apparatus/prefix-stability.md (the encode-fraction lever).
+  This correction reaches all four. None is wrong under it — each argues the sufficiency direction,
+  which is untouched — but none would have been flagged had the correction gone the other way.
+  Two separate defects are visible here and neither is repaired in this session: the missing pins
+  (a registry seam, on the canon freight list) and six stale references citing the mechanism as
+  core/10 when it is core/11 (core/10 upstream is the cost register). Both predate this session.
+
+  UNVERIFIED — Emil review: the empty-option-set generator (predicted-ground holding note,
+  2026-08-11) was not examined upstream and is named unexamined in DDD-dec-15. If it later files as
+  a third route to unsupplied determination, it files upstream as synchronic material under R4
+  (DDD-dec-09) and reaches this repository as a further pin advance, not as content here.
