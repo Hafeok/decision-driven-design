@@ -19,12 +19,12 @@ upstream:
   # the advance is recorded in core/decisions/DDD-dec-10.
   # Advanced v5.2.0 -> v5.3.0 on Emil's upstream acceptance of the Wave 2 PR (merge 1db6772,
   # tagged v5.3.0); Wave 2 rulings recorded in DDD-dec-11/13/14 here and DDD-dec-12 upstream.
-  # STAGED against the upstream branch head for the escape reconciliation (DDD-dec-15 upstream,
-  # DDD-dec-16 here); bumps to the merge/tag ref on Emil's acceptance of the upstream PR,
-  # upstream-first, per the Wave-1 precedent (DDD-dec-10). No pin added, none removed, and
-  # DDD-floor-01 stays at status_at_pin: reported — its statement moved, its status did not, so
-  # nothing in E12/E13/W5 forces this advance and it is governed rather than mechanical.
-  ref: claude/canon-escape-definition-lqsgk9   # STAGED branch; bumps to the tag on acceptance
+  # Advanced v5.3.0 -> v5.4.0 on Emil's upstream acceptance of the escape reconciliation PR
+  # (merge 3bf739e, tagged v5.4.0); the ruling is DDD-dec-15 upstream, the advance DDD-dec-16
+  # here. No pin added, none removed, and DDD-floor-01 stays at status_at_pin: reported — its
+  # statement moved, its status did not, so nothing in E12/E13/W5 forced this advance. It is
+  # governed rather than mechanical, which is why it carries a decision.
+  ref: v5.4.0                       # tag, never a branch
   pins:
     # basis claims for DDD-dec-04 (the split decision itself rests on these)
     - id: DDD-frame-01
