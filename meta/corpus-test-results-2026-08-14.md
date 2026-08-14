@@ -201,3 +201,213 @@ expectation is why they are in.
 selections, and the A-03 PR number flag.**
 
 — end of Gate 1 re-report —
+
+---
+
+# Gate 1 closed (Emil, 2026-08-14): A-03 = PR #17 (the number governs; descriptor recorded as
+wrong); both gate selections approved; the eleven-row sample approved without substitution;
+SR-7 populations confirmed 12 / 79 / 2. Recorded per the ruling: upstream contributes only 2
+of 11 rows because upstream decisions are constitutionally rare — that asymmetry is itself
+weak evidence about where decision volume lives, and Gate 4 must say so rather than let the
+ratio pass unremarked.
+
+# Test A — the expression table (working draft, grows row by row)
+
+## Vocabulary used, fixed before the first row
+
+- **Store** (canon, `term:store` at v5.4.0): `{rule, check, actor, nothing}`. Positions from
+  `core/02`: encoded/rule = *before*, as a constraint; mechanical/check = *after*, as a
+  criterion; judgment/actor = *during*, by an actor reading ground. `core/02` line 78
+  explicitly permits one decision held in more than one store — "a constraint before *and* a
+  criterion after… defence in depth" — which bears on the counterexample channel and is
+  recorded here before any row is classified.
+- **Timing** (SR-5, primary): the store's supply position — *before* / *by-the-act* / *after*.
+  Where a decision is held in two stores, both positions are recorded, dominant first.
+- **Binary (derived column)**: the note's §13.2 predicate — *is the resolution complete before
+  the act, or does the act complete it?* Recorded per row; losses against the three-way are
+  the SR-5 finding.
+- **Region**: named axes plus a region predicate. Every axis is invented (SR-6); each is
+  logged in the axis registry (§ below) with the SR-4 quality mark: **resolvable** (an
+  extractor's predicate closes over it at act time) or **nameable** (statable, not
+  mechanically evaluable).
+- **Delivery** (Q16/Q18): mechanical / judgement-mediated, **per act-site** (edge colouring,
+  §13.6). Presumed-discharge sites named where observed.
+- **Time**: active working time to express the row (analysis, verification against source,
+  writing). Caveat declared now for the Gate 4 cost note: this is agent working time in an
+  environment with the repos in hand, not human hand time; the two are not interchangeable
+  and the cost criterion will be read with that stated.
+
+## Row 1 — `DDD-dec-15` (upstream, ratified at v5.4.0; the supersession)
+
+**Acts governed.** Canon edits and citations touching escape vocabulary from 2026-08-13
+onward: any act writing or citing `term:escape-mechanism`, `DDD-floor-01`, `DDD-cost-05`,
+`DDD-cost-08`, or the corrected prose sites (11 §3/§6/§7/§8, 05 §6/§7, 10 §5), upstream and —
+via the pin — downstream.
+
+**Store.** `rule` — the corrected scope is encoded in `terms.yaml` and the claim files;
+canonical text governs, prose is exposition. Fits exactly one cell.
+
+**Region.** Axes: `artefact-path` (resolvable — diff paths against the enumerated corrected
+sites), `term-reference` (resolvable — canonical term IDs are grep-able tokens in any diff or
+citation). Predicate: *act touches a listed artefact-path ∨ act's content references
+term:escape-mechanism / DDD-floor-01 / the overflow∩open form*. An extractor closes over
+both axes today.
+
+**Timing.** before (rule). **Binary:** before — no loss on this row.
+
+**Delivery, per act-site.** Upstream canon sessions: judgement-mediated (the agent must fetch
+the claim; `Basis:` commit lines are the protocol; the validators check structure, not the
+corrected semantics — misapplication per Q16 remains possible). Downstream: the pin's
+mechanical channel (E12/E13/W5) demonstrably did **not** deliver this correction — the pin
+instruments status, not statement, and DDD-dec-16's resolution says in terms the checks
+"would have carried this repository forward against a superseded statement without a word".
+That is **presumed discharge** (Q18) observed verbatim in ratified canon: the artefact
+recording the pass is identical to the artefact recording the skip. Delivery of the
+correction downstream was judgement-mediated (a governed advance).
+
+**Expresses fully?** Yes. The row needed no invention beyond the two axes; the delivery
+vocabulary did real work (the presumed-discharge reading of W5's silence is *more* precise
+than the prose it summarises). **Time:** ~14 min.
+
+## Row 2 — `DDD-dec-09` (upstream, ratified at v5.4.0; the boundary charter — expected to resist)
+
+**Acts governed.** Filing acts in both canon registers: creating, relocating, or re-scoping a
+claim or term — the act of deciding *where* a statement lives.
+
+**Store.** `rule` — the sorting test is encoded ("does the statement require anything to
+persist between acts?"). Fits one cell.
+
+**Region.** Axes: `act-kind` (resolvable — the act creates/moves a file under `core/claims/`
+or `core/graph/` in either repo), `canon-registry` (resolvable — which repo). Predicate:
+*act-kind = claim/term filing ∧ canon-registry ∈ {upstream, downstream}*.
+
+**The resistance, materialised as predicted — but not where expected.** The region expresses
+and an extractor closes over it; what the region does *not* carry is the decision's content.
+The charter's discriminating input — is the statement synchronic or diachronic? — is not a
+coordinate of the act; it is the input to the decision's own verdict, and it is
+judgement-evaluable (no extractor reads "quantifies over persistence" off a diff). Logged in
+the registry as `statement-temporality`, **nameable**, with the finding: **charter decisions
+have low-information regions; their content lives in the predicate, and the region vocabulary
+was never designed to carry it.** This is a nameable class, not a diffuse failure: expression
+succeeds, but the expressive payload sits in Q24's predicate node, not in Q2's region. The
+proposed vocabulary survives only because the note carries both.
+
+**Timing.** before. **Binary:** before.
+
+**Delivery.** Judgement-mediated at every site — no validator evaluates temporality; the
+charter reaches a filing act only if the session recalls it. Misapplication is live (Q16
+middle row): DDD-dec-09's own notes record a *correctly governed pre-charter* basis to
+distinguish it from misapplication, which is the kind of distinction only judgement carries.
+
+**Expresses fully?** Yes, with the low-information-region finding recorded. **Time:** ~18 min.
+
+## Row 3 — `DDD-dec-02` (downstream, ratified; the plainly judgement-mediated delivery)
+
+**Acts governed.** Work-selection acts in the programme, 2026-07-28 → paper-1-ships: tool
+building beyond the markdown scaffolding and the validator is deferred.
+
+**Store.** `rule` (a filed policy). Fits one cell.
+
+**Region.** Axes: `work-target` (resolvable — an extractor classifies a session's diff by
+path/artefact class: graph-tool implementation vs paper vs scaffolding), `milestone-phase`
+(resolvable — paper-1-shipped is readable from the repo, exactly as DDD-dec-06 later used a
+CHANGELOG/consolidated-state entry as its execution verification). Predicate: *work-target =
+tool-implementation ∧ milestone-phase = before-paper-1-shipped* → defer.
+
+**Timing.** before. **Binary:** before.
+
+**Delivery.** Judgement-mediated at every act-site, with no mechanical carrier even possible
+at the time: no hook, no CI, nothing intercepts a session that starts building the tool. The
+decision reaches an act only through prompt text or recall. This is the clean Q16 middle-row
+specimen the sample needed, and its failure mode is the note's: an act violating it would
+leave the register looking exactly as it does when things work.
+
+**One further observation, recorded for the table not for a verdict.** The `reviewTrigger`
+field ("Paper 1 stalls past its estimated week by a wide margin") is a proto-`revisit_if`: a
+declared ground assumption (the estimate) with a tolerance — but the tolerance ("wide
+margin") is nameable, not resolvable. The register was already reaching for Q14's mechanism
+in July, without the vocabulary.
+
+**Expresses fully?** Yes. **Time:** ~11 min.
+
+## Row 4 — `DDD-dec-14` (downstream, ratified, OPEN)
+
+**Acts governed.** Any product-cli or L-track act bearing on the claimant-identity unit: the
+act must cite DDD-dec-14 and must not resolve the question.
+
+**Store — two levels, and the vocabulary keeps them apart.** The *second-order* decision
+(hold the question open; cite, don't resolve; transfer on a named condition) is `rule`,
+filed, fits one cell. The *first-order* question (which identity unit?) has **no store
+assignment because it has no resolution** — and that is not escape: it is Q3's `open` state,
+declared, deliberately unresolved, under observation, owner named. Without the four-state
+typing this row is unclassifiable except as a spurious `nothing`; with it, the row expresses.
+
+**Region.** Axes: `track` (partially resolvable — ledger crates and `.decisions/` paths
+classify most acts), `question-topic` (**nameable only** — "does this act bear on the
+identity unit?" closes for no extractor; the first genuinely judgement-evaluable axis in the
+table). Predicate: *track ∈ {product-cli L-track, calibration-ledger work} ∧ question-topic =
+identity-unit* → cite, do not resolve.
+
+**Beyond-region machinery required (question 5 will cite this row).** The transfer note —
+"transfers when a Decision Ledger PRD exists in a repo Emil designates" — is not a region
+over axes; it is a **conditional home**: an event-triggered predicate over future repo state.
+Simple axis regions do not express it; Q24's predicate node (specification separate from
+executability) does.
+
+**Timing.** Second-order rule: before. First-order question: **the timing predicate is
+undefined — there is no resolution to time.** The three-way column reads `—(open)`; the
+binary column can only say *not-before*, which would file the row with occasioned resolution
+and escape and thereby erase exactly the declaredness that makes it open. **This is a real
+SR-5 loss, on the sample's first open row: the binary predicate has no value for `open` that
+does not misread it.**
+
+**Delivery.** Judgement-mediated; nothing intercepts an edit that quietly resolves the
+identity unit.
+
+**Expresses fully?** Partial — expressible only with Q3's state vocabulary and Q24's
+predicate machinery alongside region/timing/delivery; timing is undefined at the first-order
+level. The failure is a **nameable class: open decisions have no resolution to time.**
+**Time:** ~20 min.
+
+## Row 5 — `DDD-dec-16` (downstream, ratified; the pin advance — expected to resist)
+
+**Acts governed.** Standing: every downstream act consuming upstream escape vocabulary, and
+every validator run resolving the pin. Occasioning act (past): the advance itself, governed
+by `upstream.yaml`'s header rule ("advancing a pin is a decision").
+
+**Store — the contest, and its resolution.** The standing pin is `rule` (encoded, literal
+data in `upstream.yaml`); the validator (E12/E13/W5) is `check` — after, as a criterion. Two
+carriers. Canon resolves the contest before it starts: `core/02` line 78 permits a decision
+held as "a constraint before *and* a criterion after" as defence in depth, and Q21
+independently requires the same split (the pin is the commitment; the check that the pin
+holds is the assurance gate; "two objects, and they should not be filed as one"). Assignment:
+**rule, with a check-after gate over part of its surface** — recorded as canon-licensed
+dual holding, *not* as a two-cell counterexample. The counterexample channel stays empty on
+this row, with the note that SR-1's "fits two" wording and canon's defence-in-depth clause
+need reconciling at Gate 4.
+
+**Region.** Axes: `canon-registry` (resolvable), `artefact-path` (resolvable — apparatus
+docs, claims citing escape), `pinned-id` (resolvable — the pin list is literal). Predicate:
+*registry = downstream ∧ (act touches a pinned id ∨ act cites escape vocabulary)*.
+
+**The named exposure is region vocabulary already in use.** The four apparatus documents
+building on the mechanism with no pin are, in Q3 terms, a **declared uncovered region under
+observation** — filed in the decision's own notes, deliberately unbundled. The register was
+again reaching for the note's vocabulary before it existed.
+
+**Timing.** before (rule); the gate's position is after. **Binary:** before — and here the
+derived column starts to blur: it reads identically for the pin (whose mechanical check runs
+after) and for row 3 (which has no mechanical carrier at all). The three-way plus delivery
+columns keep those apart; the binary alone cannot.
+
+**Delivery.** Split across the decision's own surface, per path: mechanical for the
+instrumented half (id existence, embed divergence, status movement — CI-run, after), and
+judgement-mediated for the statement-moved half, where the decision itself documents the
+mechanical channel's presumed discharge (see row 1). One decision, one region, two delivery
+types by path — §13.6's edge-colouring claim ("a path is only as mechanical as its weakest
+edge") instantiated in ratified canon.
+
+**Expresses fully?** Yes — and the row that was expected to resist instead produced the
+table's richest expression, *because* the vocabulary's two-object splits (Q21, store-vs-gate;
+delivery-per-path) are exactly what the decision's own prose spends paragraphs doing by hand.
+**Time:** ~19 min.
