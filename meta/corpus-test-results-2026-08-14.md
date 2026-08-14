@@ -1166,3 +1166,96 @@ freight list. Nothing was filed anywhere but this document.
 **GATE 4 — holding for Emil's ruling on earning (evidence-plus-ruling, explicitly): the
 criterion-1 arithmetic on the 11-row base, the —(open) classification, the cost verdict
 with the agent-time caveat weighed, and the earning decision itself.**
+
+---
+
+# Gate 4 closed (Emil, 2026-08-14) — the earning rulings
+
+**Criterion 1: met.** The —(open) rows count as **expressing fully under the fourth
+value** — because the fourth value is itself one of the additions on trial: Q3's typing is
+in the priced set, and two rows being unclassifiable without it is not a failure of the
+vocabulary but the strongest adoption argument in the table. Both readings recorded —
+**11/11 with the additions, 9/11-plus-one-nameable-class without them** — the first
+governs, and the gap between them is criterion-1's real finding. On the base: ≥10/12 was
+declared against a 12-row plan; 11/11 on the ruled 11-row sample exceeds it proportionally,
+met without arithmetic charity.
+
+**Criterion 3: met.** Median at the bar with all 22 axes paying first-invention cost, and
+rows 8–11 demonstrating the marginal-cost decline — a full-register pass is mostly marginal
+rows. The agent-time caveat is recorded and then discounted for the honest reason: agent
+working time is the relevant currency for the instrument being contemplated; nobody
+proposed a human hand-pass.
+
+**Criteria 2 and 4: met as reported.**
+
+**The earning decision: EARNED.** All four criteria hold; the additions get their canon
+session. Scope as evidenced, not as dreamed: the Q1 resolvable-predicate gate; Q3's
+four-state typing with the —(open) timing value; the position/region vocabulary with the
+22-axis registry draft as seed artefact; and the delivery vocabulary (Q15, Q17, Q18,
+presumed discharge) — folding the already-queued delivery filings into that session rather
+than running two. The four register corroborations (reviewTrigger→revisit_if above all)
+file as evidence in the relevant claims' basis. The exhaustiveness/defence-in-depth
+wording seam stays on the freight list — a different session's job.
+
+**Consequences ruled for the queue.** Question 3's evidence changes the capacity session
+before it runs: eleven rows and seven gates never invoked a magnitude — the corpus answered
+the scoping session's central question in advance; the cleave's observed demand is for
+membership-and-delivery, with magnitude entering (if at all) only for overload. The
+capacity prompt regenerates smaller, citing this table. Question 2's matched pair is the
+maturity-state answer with dates on it — five weeks from nameable to resolvable — and files
+with the typing claim's evidence.
+
+---
+
+# Gate 5 — Close: the session manifest
+
+**This document is the exercise's complete record. It files at `meta/`, beside the holding
+notes. Nothing in it is canon; every ruling above is Emil's, recorded verbatim in the gate
+closures; the earned canon session is where filings happen, not here.**
+
+## Standing rulings — applied, with outcomes
+
+| Ruling | Applied as | Outcome |
+|---|---|---|
+| SR-1 — partition stands | Store column classified per canon `{rule, check, actor, nothing}`; retirement never on trial | Partition survived all 11 rows; counterexample channel empty; mechanical *after* position expressed natively |
+| SR-2 — sample composition | Original labels voided at Gate 1 (Emil); 11-row replacement proposed and approved without substitution | All constraint slots filled; three expected-to-resist rows named in advance; no substitution for expressing badly |
+| SR-3 — Test B at gate level | A-01 all five gates; A-02 at GATE F; A-03 at PR #17's close; selections argued and approved | 7/7 gates: delivery type determinable; four-kind improvisation typology; the A-01 Gate 1 centrepiece |
+| SR-4 — invent-and-mark | Every axis logged with forcing decision and quality mark | 22 axes; 20 resolvable (one partial), 2 nameable; registry = F-1 first draft |
+| SR-5 — hybrid timing | Three-way primary, binary derived | Binary loses on 3/11 (two open rows; no-unwrap's after-position erased) — the hybrid's verdict, ruled at Gate 2 |
+| SR-6 — invention cost is adoption cost | Registry state verified empty at Gate 1; framing carried to Gate 4 | Zero registries existed; the draft here is the first anywhere |
+| SR-7 — acceptance status | Read as found at head (Emil, Gate 1), acceptance dates recorded | 12 pre-batch / 79 batch / 2 pending; no vocabulary element fit only one population (pending n=2 caveat) |
+| SR-8 — ordering discipline | Full table completed and committed before any question evidence | Held; question evidence drafted only at Gate 4 |
+| SR-9 — document identity | Checked at first upload (absent — held) and at re-supply (passed) | 1,375 lines / 13,622 words / sha256 `5d8aede1…398cb`; §13.10, §13.11, Q1–Q24 verified |
+| SR-10 — earning criteria | Four outcomes reported as evidence at Gate 4; Emil's ruling closed it | **Earned** — all four met; arithmetic: 11/11 under the fourth value (governs), 9/11+nameable-class without it |
+
+## The earning ruling, with its arithmetic (recorded)
+
+Criterion 1 met at 11/11 on the ruled 11-row base (—(open) rows express fully under the
+fourth value, which is itself in the priced set; the gap between the two readings is the
+criterion's real finding). Criterion 2 met at 20/22 resolvable (91%). Criterion 3 met at
+median 15 min/decision with first-invention cost included and marginal decline
+demonstrated; agent time ruled the relevant currency. Criterion 4 met at 7/7 gates with a
+non-trivial honoured/improvised yield. **Earned: the vocabulary-and-delivery canon
+session, scoped as evidenced** — Q1 gate, Q3 four-state typing with —(open), region
+vocabulary with the registry seed, delivery vocabulary (Q15/Q17/Q18/presumed discharge)
+absorbing the queued delivery filings.
+
+## The queue, as ruled at Gate 4
+
+1. **Vocabulary-and-delivery canon session** (earned 2026-08-14; scope above).
+2. **Capacity scoping** — regenerated smaller, citing this table's question-3 evidence
+   (membership-and-delivery carried everything; magnitude at most for overload).
+3. **Freight** — including the exhaustiveness/defence-in-depth wording seam found here.
+4. **Wave 3.**
+
+## Session provenance
+
+Interactive exercise, 2026-08-14, five gates, Emil ruling at every gate; conducted on
+branch `claude/prompt-corpus-test-exercise-ljgvpg`; inputs: the corpus-test session prompt
+(v2, rulings baked in), the ground-axes holding note (identity above), and
+`assessment-ground-axes-rev5.md` (advisory). Repos read: `actor-indexed-determination` at
+tag v5.4.0, `decision-driven-design` at head `87b28b0`, `product-cli` at head `d506ac9`
+(read-only). No canon file, claim, decision, term, or ledger record was created or
+modified anywhere in this session; this document is the only artefact.
+
+— end —
