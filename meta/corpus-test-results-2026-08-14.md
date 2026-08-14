@@ -957,3 +957,212 @@ standing set mechanical, one act delivered *outward* to the principal by protoco
    construction; the count of surfaced improvisations is a floor, not a total.
 
 **GATE 3 — holding on the per-gate findings.**
+
+---
+
+# Gate 3 closed (Emil, 2026-08-14): findings ratified. A-01 Gate 1 is the exercise's
+centrepiece and presents at Gate 4 as the delivery filings' strongest single evidence, with
+the reflexive chain recorded. The four-kind improvisation typology is the report's framing;
+the un-annotated-follow-through base rate (one in seven gates, mildest form) is the
+condition under which a delivered-vs-emitted check earns its keep. The over-honouring
+caution: additions-with-none-relaxed is still proxy-authoring, safe here by a
+delivery-and-ruling story, not a non-event. A-02's conversion finding confirms the
+minting-gate thesis; the Test A/Test B crossing at DDD-dec-14 worked as designed.
+
+# Gate 4 — Synthesis
+
+Everything below is evidence for Emil's rulings; no verdicts are drawn where a ruling is
+reserved. Nothing files in canon from this session.
+
+## 1. What expressed cleanly, and what did not
+
+Eleven of eleven sample rows express in the proposed vocabulary (graph + position + timing
++ delivery, over canon's store partition per SR-1). Nine express fully. Two — DDD-dec-14
+and the What-boundaries risk acceptance — express only with Q3's four-state typing carried
+alongside, because **an open decision has no resolution for the timing predicate to read**:
+one nameable failure class, no diffuse scatter. The most valuable rows were the ones
+selected in advance to resist: the boundary charter exposed the low-information-region
+property of charter decisions (content lives in Q24's predicate, not Q2's region), and
+no-unwrap fired the SR-5 probe exactly as designed.
+
+**The hybrid's verdict (ruled at Gate 2, stated here).** The binary timing predicate loses
+on 3 of 11 rows: the two open rows, where it has no honest value, and no-unwrap, where it
+attaches timing to resolution-authoring while the store question is determination-supply.
+Canon's three-way timing is not redundant; the binary does not suffice as primary. SR-1's
+partition survives the whole table — the counterexample channel is empty (§6 below).
+
+**Corroboration the test did not go looking for (recorded prominently, per the Gate 2
+ruling).** The registers were reaching for this vocabulary before it existed, under
+improvised names: DDD-dec-02's `reviewTrigger` is a proto-`revisit_if` whose tolerance
+("a wide margin") is nameable where the ratified `revisit_if` five weeks later is hash-pinned
+and resolvable; rust-class-enforced-here's "granularity limit" paragraph is an
+axis-granularity statement (class ⊋ language) written two days before the note named the
+machinery; DDD-dec-16's named exposure is a declared uncovered region under observation.
+Additions that describe what practice already does under improvised names are additions
+with evidence — a different epistemic position from additions that impose structure. And
+DDD-dec-16, expected to resist, instead spent paragraphs doing by hand what the columns do
+structurally: the adoption argument in miniature.
+
+## 2. The axis registry: count, character, resolvable fraction
+
+22 axes invented across 11 decisions; **20 resolvable (one partial), 2 nameable** — a 91%
+resolvable fraction. Character: the two nameable axes both come from canon-register rows
+whose discriminating content is semantic (charter temporality, question bearing); every
+product-cli axis resolves, because toolchain acts are already mediated by extractable
+artefacts. Reuse was visible within one afternoon: rows 8–11 drew on registry axes invented
+earlier and ran faster (12–15 min against the early rows' 14–20). Per SR-6, carried into
+this gate: **the invention cost above is the adoption cost** — no axis pre-existed, and the
+registry now drafted (F-1) is the first anywhere after fourteen months of practice.
+
+## 3. The populations, read separately (SR-7)
+
+Sample coverage: 5 canon-ratified rows; 3 batch-accepted (2026-08-13); 1 pre-batch
+(2026-08-11); 2 pending. Findings: **no vocabulary element fit only one population** — the
+finding-condition SR-7 named did not occur, with the caveat that the pending population is
+n=2. What the pending rows evidence about authoring habit: the register's authors reach
+natively for risk-acceptance-with-horizon and constraint-at-entry shapes — the newest
+unratified material is already in the vocabulary's easiest cells. The batch/pre-batch split
+showed no expression difference; its value was provenance legibility (the acceptance-date
+column kept the #42 collapse readable).
+
+**The upstream asymmetry (ruled at Gate 1, stated here).** Upstream contributes 2 of 11
+rows because upstream decisions are constitutionally rare: 4 decisions total upstream
+against 12 downstream, 46 in `.ddd`, 93 in the ledger. That gradient — decision volume
+concentrating toward the tool layer while the stable layer stays sparse — is itself weak
+evidence about where decision volume lives, and it runs in the direction §13.9's
+drift-ordering predicts (the stable registry accumulates fewest new decisions). Weak
+evidence, stated rather than passed over.
+
+## 4. The six questions — evidence rows (rulings are Emil's)
+
+**Q1 — do *inert* and *open* collapse? (open ruling 2.)** The corpus exercised `open`
+twice, and both times its distinctive features did real work: under-observation, a horizon
+or transfer condition, an owner. `inert` was needed **zero** times in 11 rows — no sampled
+decision declares "no outcome-relevant alternative here". Evidence: `open`'s distinctness
+from governed/escaped is earning its keep; the inert/open *pair* got no discriminating data
+because inert never appeared. This corpus cannot settle the collapse; it can report that
+one half of the pair is doing all the observed work.
+
+**Q2 — judgement-evaluable: type or maturity state? (ruling 12.)** The register contains a
+matched pair five weeks apart: DDD-dec-02's `reviewTrigger` (July: a ground assumption with
+a judgement-read tolerance, "wide margin") and no-unwrap's `revisit_if` (August: the same
+slot, hash-pinned, mechanically evaluable — status and content sha256). The same
+revisitation slot moved from judgement-read to mechanically evaluable as the register's
+formats matured. One of the two nameable axes (`question-topic`) also part-resolves today
+via path heuristics. Evidence points toward **maturity state**: the corpus contains an axis
+that made the transition.
+
+**Q3 — are the B1 reductions one account or several? (ruling 16; live pair shared-budget
+§7.3 vs membership §13.7.)** Across all 11 expressions and all 7 examined gates, **no
+classification ever invoked a magnitude**: every store, delivery, and failure reading was
+carried by presence/arrival objects — is a resolution filed, did it arrive, is there
+anything to deliver (row 11's nothing-to-deliver is §13.7's internal location expressed as
+the absence of a delivery failure mode). The budget was never needed. Evidence: on this
+corpus the membership-style account carried everything the expressions required; nothing
+here distinguishes the two accounts *for each other*, but nothing needed the second.
+
+**Q4 — is `I(V;E)` the internalised store? (ruling 17.)** Thin evidence, honestly stated.
+The corpus expressed the external/internal split without measure vocabulary: external
+standing supply (rows 1–10, artefacts with delivery failure modes) against
+arrangement-internal supply (row 11, structural, nothing to deliver, no failure mode). The
+split the ruling asks about surfaced operationally as *delivery-failure-mode present or
+absent*; whether the measure's `I(V;E)` is its right formal home did not arise in
+expression work and this test contributes no data on it beyond the operational split
+existing.
+
+**Q5 — what fraction of applicability statements needed graph or temporal predicates beyond
+simple axis regions?** Three clear cases and one softer in 11 rows (**~27–36%**):
+DDD-dec-14's conditional home (transfer on a future repo event), the `revisit_if` row's
+claim-death trigger, the floors row's stranding clause (quantification over membership and
+acceptance state), and — softer — the accept-group row's self-referential region (predicate
+over ledger state). Character note: all four sit in decisions *about* the graph and ledger
+machinery itself; the plain-work decisions (sequencing, lint, boundaries) needed only
+simple regions. The beyond-region need concentrates where the register governs itself.
+
+**Q6 — did any decision fail to fit exactly one store cell? (the counterexample channel.)**
+**Empty.** No row fits zero cells. Three rows (5, 6, 7) are held in two stores in the exact
+configuration canon licenses as defence in depth (`core/02:78` — a constraint before and a
+criterion after). Ruled at Gate 2: they classify as canon licenses, and the wording gap
+between `term:exhaustiveness` ("determined by exactly one of") and the defence-in-depth
+clause goes to the freight list as a genuine seam — the sweep's finding, a canon session's
+job.
+
+## 5. Test B synthesis, and the centrepiece
+
+**The centrepiece (ruled at Gate 3).** A-01 Gate 1 is §13.10's fidelity-ceiling claim with
+a live instance in the project's own record, end to end: a governing input (the
+predicted-ground holding note) failed to arrive; the session did not improvise it from the
+advisory summary; the non-arrival was surfaced, ruled, and the slot held open —
+`DDD-dec-15` carries the UNVERIFIED block to this day. This is the delivery filings'
+strongest single piece of evidence. **The reflexive chain, for the record:** the artefact
+that failed to arrive there also failed to arrive at this session's first gate, was caught
+by SR-9 both times, and in each case the catch mechanism was a session refusing to
+substitute a summary for a source. The failure mode is real, recurrent, and detectable —
+the profile of a thing worth filing vocabulary for.
+
+**The typology (ratified framing).** Four kinds of improvisation in seven gates: ruled-in
+scope extensions; over-honouring proxy criteria; conversion of improvised content to
+governed objects at a minting gate (A-02 — including DDD-dec-14, this exercise's own row
+4: the Test A/Test B crossing worked as designed); and un-annotated follow-through. Three
+of the four are the register working as designed. **The fourth is the finding**: one
+instance in seven gates, in its mildest form (follow-through on a ratified item,
+unannotated rather than unauthorised) — a low, nonzero base rate, which is precisely the
+condition under which the delivered-versus-emitted check earns its keep. At base rate zero
+the check is dead weight; at a high rate the practice is broken; observed: neither.
+
+**The over-honouring caution (ruled at Gate 3, carried into synthesis).** A-01 Gate 5's
+session-authored criteria (baseline-warning-profile, reference-closure) added constraints
+and relaxed none — the benign direction, but still **proxy-authoring**: a session writing
+specification the principal never delivered. It was safe here because the additions were
+conservative, surfaced in the report, and ratified by merge — which is itself a
+delivery-and-ruling story, not an absence of the phenomenon. Filed as evidence for open
+ruling 22 (surfacing authored proxies as a standing obligation on LLM actors), not as a
+non-event.
+
+## 6. SR-10 — the four earning criteria, outcomes as evidence
+
+**Criterion 1 — expression (declared: ≥10 of 12 express fully under three-way timing;
+failures a nameable class).** The ruled sample is 11 rows, not 12 — the arithmetic is
+Emil's deferred ruling, presented both ways without pre-classification: if the two —(open)
+rows count as *expressing fully under the four-state vocabulary* (their store, region, and
+delivery columns are complete; only the timing predicate is inapplicable, by the nature of
+open), the count is **11 of 11**. If they count as the failure class, the count is **9 of
+11 with one clean nameable class** ("open decisions have no resolution to time") and zero
+diffuse failures. Both readings satisfy the criterion's second half; whether either
+satisfies its first half on an 11-row base is the ruling.
+
+**Criterion 2 — predicate quality (declared: majority of invented axes resolvable).**
+**20 of 22, 91%** — met on any reading, with the two nameable axes characterised (semantic
+content, canon registers) rather than scattered.
+
+**Criterion 3 — cost (declared: median ≤15 min/decision).** Median **15 min**, exactly at
+the bar; range 11–20; total ≈2h47m for Test A. The caveat, weighed as ruled: the measured
+actor is an agent with the repositories in hand — not human hand time, and the two are not
+interchangeable. Two directions to weigh: a human pass plausibly runs slower per row; but
+the measured pass paid **first-invention cost on all 22 axes**, and the within-afternoon
+trend (later rows faster, reusing registry axes) says marginal cost falls as the registry
+fills. A full-register pass would be mostly marginal-cost rows. Presented as evidence;
+the feasibility verdict is the ruling.
+
+**Criterion 4 — Test B yield (declared: delivery type determinable at most examined gates;
+at least one non-trivial honoured-vs-improvised distinction).** Delivery type determinable
+at **7 of 7** examined gates; honoured-versus-improvised observable at all seven,
+non-trivially at six, yielding the four-kind typology, the centrepiece delivery-failure
+instance, and the nonzero un-annotated base rate. **Met**, with the standing limit that
+surfaced-improvisation counts are floors.
+
+## 7. The cost note
+
+The session priced roughly 6,000 words of unexercised §13 reasoning against 11 real
+decisions and 7 real gates in one working session: Test A ≈2h47m, Test B by hand ≈1.5h,
+gate reports and synthesis on top. The note's own wager — "a class that will not express is
+learned for the cost of an afternoon, with nothing entering canon" — held on cost, and the
+afternoon returned: one nameable non-expressing class (open vs timing), one decisive
+column-design result (the binary loses; three-way primary), a 22-axis registry draft at 91%
+resolvable, four corroborations from the register's own history, a live delivery-failure
+centrepiece, and one genuine canon seam (exhaustiveness vs defence-in-depth) for the
+freight list. Nothing was filed anywhere but this document.
+
+**GATE 4 — holding for Emil's ruling on earning (evidence-plus-ruling, explicitly): the
+criterion-1 arithmetic on the 11-row base, the —(open) classification, the cost verdict
+with the agent-time caveat weighed, and the earning decision itself.**
