@@ -411,3 +411,299 @@ edge") instantiated in ratified canon.
 table's richest expression, *because* the vocabulary's two-object splits (Q21, store-vs-gate;
 delivery-per-path) are exactly what the decision's own prose spends paragraphs doing by hand.
 **Time:** ~19 min.
+
+## Row 6 — `dec/ddd/rust-class-enforced-here` (F-batch representative; experiment; accepted 2026-08-13, batch)
+
+**Acts governed.** From the Rust adapter's fixture acceptance onward: contract-surface edits
+to this workspace's Rust sources, via the MCP write path — rejected until a seam declaration
+covers them. Simultaneously an experiment: the acts it governs are the first live reading of
+the friction falsifier.
+
+**Store.** `rule` (the `intercept_by_class.code: enforce` config) with a `check` gate (the
+write-interceptor evaluates the applied edit and restores on an undeclared boundary) —
+canon's defence-in-depth holding again; assigned rule-with-gate, one decision.
+
+**Region.** Axes: `repo` (resolvable), `artifact-class` (resolvable — declared by the
+adapter), `edit-kind` (resolvable — the contract-surface classifier is *implemented*, in
+`ddd-core/src/surface.rs`; the extractor is running code, not a sketch), `milestone-phase`
+(resolvable — adapter shipped). Predicate: *repo = product-cli ∧ artifact-class = code ∧
+edit-kind = contract-surface ∧ phase ≥ adapter-accepted* → reject unless a seam declaration
+covers the boundary.
+
+**The region carries a recorded granularity defect, in the decision's own words.** The
+available axis is `artifact-class`, the intended region was `language = Rust`; both adapters
+declare class `code`, so C# is swept in unintentionally — harmless here, priced not paid.
+The decision's "granularity limit" paragraph *is* an axis-granularity statement: the register
+documented a region/axis mismatch two days before the note named the machinery.
+
+**The Q6 carve expresses.** Basis type `experiment` with the declaration preceding the acts
+("adopted to find out", ref `docs/ddd-m6-experiment.md`) — the authored-basis carve between
+exploration and incident holds on a real row: acts in this region are exploration, and the
+same acts without the declaration would be incident material. The sample's only experiment
+row does the work it was picked for.
+
+**Timing.** before (rule); the interceptor's position is after-the-edit within the act
+envelope (evaluate, then restore). **Binary:** before.
+
+**Delivery — per act-site, the repo says it itself.** Mechanical at the MCP write path;
+**not delivered at the CLI act-site** (`product domain new` is not intercepted; `ddd what
+--strict` is the gate there, which is actor-triggered and therefore judgement-mediated under
+Q19's trigger test). One decision, two act-sites, two delivery types — the edge-colouring
+again, and this time the variance is documented in the consuming repo's own CLAUDE.md.
+
+**Expresses fully?** Yes. **Time:** ~16 min.
+
+## Row 7 — `dec/rust/no-unwrap` (mechanical, after; the SR-5 probe; accepted 2026-08-13, batch)
+
+**Acts governed.** Every Rust code-writing act in the workspace outside the fixture globs: no
+`unwrap`.
+
+**Store — the contested assignment, landed.** Filed as a claim, re-typed to constraint
+(F-7b); held in **two stores by canon's own licence**: `rule` before (the
+`[workspace.lints.clippy]` manifest entry — encoded constraint, and the decision's rationale
+says "enforced twice by arrangement") and `check` after (the CI clippy gate). Canon
+`core/02:78` names this exact configuration defence in depth. Assignment recorded as
+rule+check dual holding; **dominant carrier: check** — the criterion is what actually stops
+a violating act, the manifest entry alone stops nothing.
+
+**Timing — where the SR-5 probe fires.** Three-way: **after** (the dominant carrier is a
+criterion applied after the act; the rule half sits before). Binary derived column: the
+resolution (the criterion's content) was complete *before* any governed act — so the binary
+reads **before**. **The derived column here classifies a mechanically-supplied, after-position
+row identically with rows 1–3 and 5, erasing the mechanical store's defining position. That
+is SR-1's point demonstrated on data, on exactly the row selected in advance to probe it.**
+The two predicates attach timing to different events — resolution-authoring versus
+determination-supply — and only the three-way carries the second.
+
+**Region.** Axes: `language` (resolvable), `path-scope` (resolvable — workspace members
+minus the ignore globs, literal data). Predicate: *language = Rust ∧ path ∈ workspace \
+fixtures*.
+
+**Delivery.** Mechanical at the CI act-site (act-triggered, per Q19). At the local
+developer/agent act-site the same check is **actor-triggered** (`cargo clippy` must be
+invoked), which under Q19's trigger test makes local delivery judgement-mediated even though
+the criterion itself is mechanical — the delivery type belongs to the pair, not the check
+(open ruling 11's pair reading, holding on data).
+
+**The `revisit_if` edge is Q14 made literal.** DDD-gates-01 pinned at
+`reported@2026-08-06` with a content sha256: a declared tolerance on a ground assumption,
+mechanically evaluable (status or content movement fires a reopen finding). The register
+already implements reading-triggered revisitation for this row.
+
+**Expresses fully?** Yes. **Time:** ~17 min.
+
+## Row 8 — `dec:hafeok.ddd/…PKVNE` — the What-boundaries risk acceptance (**PENDING**)
+
+**Statement.** "The 24 undeclared What boundaries stay undeclared; exposure accepted until
+review."
+
+**Acts governed.** None operationally — that is the point. It is a decision *not* to govern:
+the 24 boundary contracts remain undeclared, the exposure accepted, a review horizon set.
+(Its accepted predecessor `…TCA7` priced the same exposure; this row extends the acceptance.)
+
+**Store — two levels again, resolving cleanly.** The acceptance itself is `rule` (filed, one
+cell). The 24 boundary determinations underneath are **not escaped and not governed**: they
+are Q3 `open` — declared, deliberately unresolved, under observation with a horizon. Q4's
+hardest carve then does its work: if accepted exposure realises at one of these boundaries,
+that is *the arrangement working*, not an incident — a distinction the store partition alone
+cannot state and the four-state typing states in one word.
+
+**Region.** Axes: `boundary-id` (resolvable — the 24 are enumerated by `ddd what`),
+`review-horizon` (resolvable — a date; Q11's weak, task-specific time-as-coordinate).
+Predicate: *boundary ∈ {the 24} ∧ now < review-horizon* → exposure accepted.
+
+**Timing.** Acceptance: before. The underlying determinations: `—(open)` — the second open
+row, same nameable class as row 4, same binary-column failure (*not-before* misfiles a
+declared acceptance with escape).
+
+**Delivery.** Judgement-mediated (a calendar horizon, Q14's weak form; nothing fires it
+mechanically).
+
+**Population note (SR-7).** A pending row: authored, gate-clean, awaiting the principal's
+signature. What it evidences is authoring habit — the register's authors reach for
+risk-acceptance-with-horizon as a native shape.
+
+**Expresses fully?** Yes, given Q3+Q4; without them, no. **Time:** ~12 min.
+
+## Row 9 — `dec:hafeok.ledger/…643XY` — accept-group semantics (**PENDING**)
+
+**Statement (head).** "`ledger accept --group|--set` batches the act, never the signature" —
+one invocation, N acceptance records, each signing its own version hash; six rulings make it
+safe (enumerated-and-pinned selection, manifest-hash confirm, per-member gate, held members
+stop the run by name, …).
+
+**Acts governed.** Batch-acceptance invocations, and code changes to the verb.
+
+**Store.** `rule` before (the six rulings, encoded in the verb) with `check` gates at entry
+(manifest hash presented back; per-member gate; refusal on a held member). Much of it is
+Q21-constraint style: the unsafe states are refused at entry rather than policed after.
+
+**Region.** Axes: `command` (resolvable — argv, the most literal extractor in the table),
+`actor-identity` (resolvable — git-config email, mechanically corroborated; L009 binds
+committer to acceptor). Predicate: *command = ledger accept --group|--set* → the six rulings
+bind.
+
+**Timing.** before; gates at entry. **Binary:** before.
+
+**Delivery.** Mechanical at the CLI act-site — the verb is the act-site, so delivery is
+act-triggered by construction.
+
+**Self-reference, recorded for question 5's evidence later.** This decision's own acceptance
+act — it is pending — will be governed by the verb it specifies. The region contains the act
+that ratifies it. Expressible, but only because the region predicate ranges over ledger
+state, not over a static coordinate.
+
+**Expresses fully?** Yes. **Time:** ~13 min.
+
+## Row 10 — `dec:hafeok.ddd/…M7XWA` — the watched-edge / `revisit_if` ruling (accepted 2026-08-13, batch)
+
+**Statement (two versions — a supersession inside the ledger).** V1 filed the open question
+(distinct edge kind, or retire at the F-batch; `watched:` markers meanwhile, never read as
+ground). V2 records Emil's ruling: a watched-not-grounding edge **is** a distinct edge type,
+`revisit_if` — this claim's death reopens the decision; never inside `based_on`; a status
+movement produces a reopen finding, never a basis-loss one.
+
+**Acts governed.** Ontology acts: filing decisions that track a claim without resting on it,
+in the `.ddd` register (format 7) and the ledger (spec v1.5 / format 4).
+
+**Store.** `rule` (the edge vocabulary is encoded in the formats; the gate validates the
+schema). One cell, with the schema check as its after-gate.
+
+**Region.** Axes: `artefact-kind` (resolvable — `.ddd` decision files, ledger change-sets),
+`edge-kind` (resolvable — the syntax distinguishes `revisit_if` from `based_on`),
+`format-version` (resolvable). Predicate: *artefact-kind ∈ {ddd-decision, ledger-change-set}
+∧ edge-kind = watched-not-grounding* → file as `revisit_if`, never as ground.
+
+**The content is Q14, ratified.** "This claim's death reopens the decision" is an
+event-triggered predicate over graph state — a declared tolerance on a ground assumption,
+evaluated at read time, pinned with status and content hash (row 7 carries a live instance).
+The row is simultaneously *expressible in* the note's vocabulary and *about* that
+vocabulary's Q14/open-ruling-8 machinery: the register ruled the mechanism into its ontology
+the day the note was finishing. Recorded as table data; the question-2/question-5 readings
+wait for synthesis (SR-8).
+
+**Timing.** before. **Binary:** before. The trigger it defines is a *future-conditional* —
+"on this claim's death" — which no static region expresses; second beyond-region case after
+row 4's conditional home.
+
+**Delivery.** Mechanical at gate/reindex act-sites (the schema and graph stages);
+judgement-mediated at authoring sites.
+
+**Expresses fully?** Yes, with the beyond-region trigger noted. **Time:** ~15 min.
+
+## Row 11 — `dec:hafeok.ledger/…60TD3` — tolerance floors unconstructible (accepted **2026-08-11**, pre-batch)
+
+**Statement.** A set's tolerance is a floor; a version may override only upward; a
+below-floor state is **unconstructible rather than policed**; effective tier is hashed
+content via the floor pinned at version creation; raising a floor strands every member below
+it until re-accepted.
+
+**Acts governed.** Version and set construction in the ledger; floor raises.
+
+**Store.** `rule` — in its strongest form: the option space itself lacks the violating
+state. No check ever needs to run because no act can produce the state a check would catch.
+Fits one cell, and it is the table's purest single-store row.
+
+**Region.** Axes: `artefact-kind` (resolvable — sets, versions), `operation` (resolvable —
+create-version, raise-floor). Predicate: *artefact-kind ∈ {set, version} ∧ operation ∈
+{create, raise-floor}*.
+
+**Timing.** before — and the row completes the table's timing spread deliberately: row 11 is
+before+mechanical (constraint at entry), row 7 is after+mechanical (criterion), row 3 is
+before+judgement-mediated. Q21's regulation/constraint split lands here as data: this is
+constraint (refusal at entry), and clippy is a criterion after — different mechanisms the
+binary column reads identically. **Binary:** before.
+
+**Delivery.** Mechanical by construction at every act-site that goes through the format;
+no act-triggered retrieval is even needed, because there is nothing to retrieve — the
+resolution is structural. (Nearest thing in the table to §13.7's *internal* standing supply:
+no delivery failure mode because there is nothing to deliver.)
+
+**The stranding clause is a graph consequence.** "Raising a floor strands every member below
+it until re-accepted" quantifies over membership and acceptance state — a consequence rule
+over ledger graph state, the third beyond-region case.
+
+**Expresses fully?** Yes. **Time:** ~12 min.
+
+## The axis registry — first draft (F-1; SR-4, SR-6)
+
+Every axis below was invented in this session; none existed anywhere before it (SR-6,
+verified at Gate 1). The invention cost of this registry **is** the adoption cost, carried
+to Gate 4. Quality per the applicability note's revised gate: **resolvable** = an extractor's
+predicate closes at act time; **nameable** = statable, not mechanically evaluable.
+
+| # | Axis | Forced by (first) | Also used by | Quality | Extractor sketch |
+|---|---|---|---|---|---|
+| 1 | `artefact-path` | Row 1 (DDD-dec-15) | 5 | resolvable | diff paths vs an enumerated site list |
+| 2 | `term-reference` | Row 1 | 5 | resolvable | canonical term IDs grep-able in diff/citation |
+| 3 | `act-kind` | Row 2 (DDD-dec-09) | — | resolvable | operation class from the tool/command performing the act |
+| 4 | `canon-registry` (repo) | Row 2 | 5, 6 | resolvable | which repository the act writes |
+| 5 | `statement-temporality` | Row 2 | — | **nameable** | none closes — judgement reads "quantifies over persistence"; content-in-predicate finding |
+| 6 | `work-target` | Row 3 (DDD-dec-02) | — | resolvable | diff paths → artefact class |
+| 7 | `milestone-phase` | Row 3 | 6 | resolvable | repo-state milestone markers (CHANGELOG entry, adapter shipped) |
+| 8 | `track` | Row 4 (DDD-dec-14) | — | resolvable (partial) | path classification; boundary cases leak |
+| 9 | `question-topic` | Row 4 | — | **nameable** | none closes — semantic bearing on the identity-unit question |
+| 10 | `pinned-id` | Row 5 (DDD-dec-16) | — | resolvable | literal pin list |
+| 11 | `artifact-class` | Row 6 (rust-class…) | — | resolvable | adapter declaration; **recorded granularity defect: class ⊋ language** |
+| 12 | `edit-kind` (contract-surface) | Row 6 | — | resolvable | classifier implemented in `ddd-core/src/surface.rs` |
+| 13 | `language` | Row 6 | 7 | resolvable | file extension / adapter |
+| 14 | `path-scope` | Row 7 (no-unwrap) | — | resolvable | workspace members minus ignore globs, literal |
+| 15 | `boundary-id` | Row 8 (…PKVNE) | — | resolvable | the 24 enumerated by `ddd what` |
+| 16 | `review-horizon` | Row 8 | — | resolvable | a date; Q11's weak time-as-coordinate |
+| 17 | `command` (argv) | Row 9 (…643XY) | — | resolvable | argv — the most literal extractor in the table |
+| 18 | `actor-identity` | Row 9 | — | resolvable | git-config email, mechanically corroborated (L009) |
+| 19 | `artefact-kind` | Row 10 (…M7XWA) | 11 | resolvable | file/record type |
+| 20 | `edge-kind` | Row 10 | — | resolvable | `revisit_if` vs `based_on` syntax |
+| 21 | `format-version` | Row 10 | — | resolvable | format field, literal |
+| 22 | `operation` | Row 11 (…60TD3) | — | resolvable | verb performed on the artefact |
+
+**Registry totals: 22 axes, 20 resolvable (one partial), 2 nameable.** Both nameable axes
+come from canon-register rows whose content is semantic (charter temporality, question
+bearing); every product-cli axis resolves, which is unsurprising — the corpus source is a
+toolchain whose acts are already mediated by extractable artefacts.
+
+**Beyond-region machinery, tallied for question 5 (evidence drafting deferred per SR-8):**
+three cases — row 4's conditional home (event-triggered transfer), row 10's future-conditional
+trigger (claim-death reopen), row 11's stranding clause (quantification over membership and
+acceptance state). Row 9's self-referential region (predicate over ledger state) is a fourth,
+softer case.
+
+## Summary table
+
+| Row | Decision | Register | Status / date | Store (canon) | Timing (3-way) | Binary (derived) | Delivery (dominant site) | Expresses? | Time |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | DDD-dec-15 | upstream | ratified | rule | before | before | judgement (canon sessions); presumed-discharge case named | full | 14m |
+| 2 | DDD-dec-09 | upstream | ratified | rule | before | before | judgement | full (low-information region) | 18m |
+| 3 | DDD-dec-02 | downstream | ratified | rule | before | before | judgement (no mechanical carrier possible) | full | 11m |
+| 4 | DDD-dec-14 | downstream | ratified, OPEN | rule (2nd-order); —(open) 1st-order | before / **—(open)** | **no honest value** | judgement | **partial — nameable class: open has no resolution to time** | 20m |
+| 5 | DDD-dec-16 | downstream | ratified | rule (+check gate, canon-licensed) | before (+after gate) | before | split by path: mechanical + judgement | full | 19m |
+| 6 | rust-class-enforced-here | .ddd + ledger | accepted 08-13 (batch) | rule (+check gate) | before (+after gate) | before | mechanical (MCP) / **absent at CLI site** | full | 16m |
+| 7 | no-unwrap | .ddd + ledger | accepted 08-13 (batch) | **rule+check dual (canon-licensed); dominant check** | **after** | before ← **SR-5 loss fires** | mechanical (CI) / judgement-triggered locally | full | 17m |
+| 8 | …PKVNE What-boundaries | ledger | **pending** | rule (acceptance); open underneath | before / —(open) | no honest value | judgement (calendar horizon) | full given Q3+Q4 | 12m |
+| 9 | …643XY accept-group | ledger | **pending** | rule (+entry gates) | before | before | mechanical (verb = act-site) | full | 13m |
+| 10 | …M7XWA revisit_if | ledger | accepted 08-13 (batch) | rule (+schema gate) | before | before | mechanical (gate/reindex) / judgement (authoring) | full | 15m |
+| 11 | …60TD3 floors | ledger | accepted **08-11** (pre-batch) | rule (purest single-store row) | before | before | mechanical by construction | full | 12m |
+
+**Failure column, populated:** 11 of 11 rows express; 2 of 11 (rows 4, 8) express only
+partially/conditionally, and both failures are the **same nameable class — open decisions
+(and open sub-regions) have no resolution for the timing predicate to read.** No diffuse
+scatter. The binary derived column loses information on three rows (4, 8: no honest value;
+7: after-position erased) and survives on eight.
+
+**Counterexample channel (question 6, status only per SR-8):** empty. No row fits zero
+cells. Rows 5, 6, 7 are held in two stores *in canon's own defence-in-depth sense*
+(`core/02:78`) — recorded for Gate 4 as a wording reconciliation between SR-1's "fits two"
+and canon's licence, not as a counterexample.
+
+**Time: median 15 min/decision** (range 11–20; total ≈ 2h47m of active expression work
+across 11 rows), with the declared caveat that this is agent working time.
+
+**Suspicious-speed check (standing note), run.** The expressions averaged ~15 minutes, not
+seconds, and the check is passed structurally: every region predicate above names its
+extractor or is marked nameable — 20 of 22 axes carry an extractor sketch an implementer
+could act on, and the two that do not are marked as exactly that. The predicates are
+resolvable in the note's sense, not prose in predicate syntax.
+
+**GATE 2 — holding on the complete table.** SR-8 satisfied: all rows classified, failure and
+invented-axis columns populated, timing recorded three-way with the derived binary. No
+question evidence drafted yet.
