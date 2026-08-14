@@ -707,3 +707,253 @@ resolvable in the note's sense, not prose in predicate syntax.
 **GATE 2 — holding on the complete table.** SR-8 satisfied: all rows classified, failure and
 invented-axis columns populated, timing recorded three-way with the derived binary. No
 question evidence drafted yet.
+
+---
+
+# Gate 2 closed (Emil, 2026-08-14): table ratified. The SR-5 probe accepted as decisive
+(binary loses on 3 of 11; Gate 4 states it as the hybrid's verdict). The
+exhaustiveness/defence-in-depth wording gap goes to the freight list as a genuine seam;
+rows 5–7 classify as canon licenses. The two unplanned observations (reviewTrigger as
+proto-revisit_if; the granularity paragraph as an axis statement) to be recorded prominently
+at Gate 4. SR-10 arithmetic flagged for Gate 4, not pre-classified: criteria were declared
+against 12 rows, the ruled sample is 11, and the disposition of the two —(open) rows under
+the fourth value is Emil's ruling to make with the criteria in front of him; the cost bar
+(15-minute median at the bar, agent-time caveat) weighed there too.
+
+# Test B — gate-level reconstruction (by hand; SR-3)
+
+## Method, and the recoverability limit stated first
+
+Per SR-3, each examined gate is reconstructed as: the **delivered governing set** (what
+reached the session: prompt contents, rulings, pinned canon at the ref) versus the **emitted
+proxy** (what the record shows the session treated as acceptance criteria), then what was
+honoured and what was improvised beyond it. Improvisations are the phenomenon observed, not
+indictments. No tooling was built; sources are the merged PR bodies, commit trails, decision
+files, the archived Wave 2 closure manifest (`meta/holding-note-act-cost-2026-08-08.md`
+§14), and the repositories at the relevant refs.
+
+**Limit.** The session prompts for all three act-sites are not preserved in any repository.
+The delivered set is therefore reconstructed from its recoverable components: standing repo
+instructions (CLAUDE.md at the session ref — mechanically delivered at session start),
+delivered input documents (holding notes, assessments) where archived, and rulings recorded
+in decision files, commit messages, and gate annotations. Where an item's provenance cannot
+be established, it is marked *provenance unrecoverable* rather than classified. This is
+§1.2's declared-space limit applying to Test B itself: the reconstruction sees only what the
+record declares.
+
+## A-01 — the escape reconciliation session (deep case: every gate)
+
+Upstream PR #8 (2 commits, merged `3bf739e`, tagged v5.4.0) + downstream PR #19 (3 commits,
+merged `87b28b0`). Canon authority DDD-dec-15/DDD-dec-16; the PR bodies are the session's
+emitted self-description, unusually itemised.
+
+### Gate 1 — scope and identity
+
+**Delivered.** The convening premise: three holding notes independently reporting canon's
+escape definition as too narrow; Claude's advisory assessment of the predicted-ground note
+(asserting "canon's escape is capacity-generated"); pinned canon at v5.3.0; the standing
+CLAUDE.md set (validators, zero-W4, asset re-runs, flag-don't-guess, supersession
+discipline). One delivered input **failed to arrive**: the predicted-ground holding note
+itself ("the source note did not reach the session; only Claude's advisory assessment of it
+was available" — DDD-dec-15 notes).
+
+**Emitted.** The session tested the convening premise against the repository and found it
+false: `term:escape` was already supply-general; the narrowness sat one level down. The
+GATE 1 ruling records the error's source by name (the advisory assessment's conflation of
+`term:escape` with `DDD-cost-05`/`term:escape-mechanism`).
+
+**Honoured.** "The repo is ground truth, always" — the delivered standing instruction was
+honoured *against* the delivered convening premise, which is the strongest form of honouring
+available: the session refused its own tasking on repo evidence, at the gate, under ruling.
+
+**Improvised, then governed.** Nothing silent. The generator-2 slot is the finding: an
+undelivered governing input was **detected, named, and held open by ruling** rather than
+improvised from the advisory summary ("Emil ruled the slot held open at GATE 1"; the
+UNVERIFIED block in DDD-dec-15 records it as unexamined). A session-level delivery failure,
+surfaced as such — §13.10's fidelity ceiling observed at the act-site level: the constraint
+that never arrived was not honoured *and the proxy says so*, which is the legible half of
+the failure mode.
+
+### Gate 2 — the correction's shape
+
+**Delivered.** Gate 1's ruling (correct the mechanism's scope; do not widen the definition);
+the falsifier already filed on DDD-floor-01 ("escape without overflow").
+
+**Emitted.** The scope correction as run: the filed falsifier executed against six
+instances (five ratified, one from the unratified applicability note); the open conjunct
+survived, the overflow conjunct did not; explicitly **no necessity claim minted for the
+surviving conjunct** ("an absence of counter-instances across six cases does not warrant a
+universal, and filing one would repeat the error this decision corrects").
+
+**Honoured.** Running a *filed* falsifier rather than proposing a widening honours the
+claim-format discipline; declining the universal honours "never present an identity holding
+as evidence". The downstream GATE 2 ruling (named exposure, deliberately unbundled) shows
+scope discipline delivered and honoured across the repo boundary.
+
+**Improvised, then governed.** The open-conjunct flaw ("ill-defined where no actor was
+assigned") — a finding beyond the tasking, flagged for a later session rather than repaired
+(Emil, GATE 2). Improvisation converted to a governed deferral at the gate.
+
+### Gate 3 — the draft
+
+**Delivered.** Gate 2's ruling naming the correction sites (the Missing row, the routing
+sentence, the mechanism's disjunct).
+
+**Emitted.** Commit `1ba3ef9` (upstream), `79bb532` (downstream): the supersession draft —
+plus **one clause beyond the named scope**: `11` §6's lead sentence ("Escape has exactly
+three sources" → "Escape that surfaces as output…").
+
+**Honoured / improvised.** The named sites were drafted as ruled. The lead-sentence
+narrowing is a clean improvisation instance: beyond the delivered ruling, argued in place
+("leaving the unrestricted quantifier would reintroduce the corrected defect one section
+after correcting it"), and **ruled in at the gate** — the record's standard pattern:
+improvise → surface → ruling converts it to delivered.
+
+### Gate 4 — the sweep and the extension
+
+**Delivered.** Gate 3's ruled scope; the standing basis-citation discipline.
+
+**Emitted.** The basis-impact sweep (method provenance unrecoverable — whether the prompt
+ordered a sweep or the session invented it is not in the record), which found the same
+defect in unnamed nodes; the scope extension to DDD-cost-05, `10` §5's pull-quote **plus
+one summary-table row beyond the pull-quote named in the ruling** (argued: "carries the
+identical clause"), DDD-cost-08's breaks field, and the lineage novelty statement; the
+named-not-repaired list (09 §6, README:23, consolidated-state, cost-03 notes) — deferral
+boundary drawn by ruling (Emil, GATE 4).
+
+**Honoured / improvised.** The extension carries its warrant in the decision text (same
+defect, one clause each, correcting decision already exists, nodes unpinned) — an
+improvised scope change routed through an explicit ruling. The summary-row addition is the
+micro-scale instance of the same pattern. The sweep's own boundary (what it did *not*
+repair) was itself ruled, so even the deferral is governed.
+
+### Gate 5 — the downstream staging
+
+**Delivered.** The Wave-1 precedent (DDD-dec-10: upstream-first, pin staged against branch
+head, bumped on acceptance) — standing ratified canon, i.e. mechanically-retrievable
+delivered material; `upstream.yaml`'s header rule (advancing a pin is a decision).
+
+**Emitted.** Commits `c95a3db`/`6ff7282`: the staged advance, DDD-dec-16, and PR #19's
+verification table — E12/E13/W5 checked *and shown not to fire*, with the conclusion that
+the advance must therefore be governed rather than mechanical.
+
+**Honoured.** The precedent was followed exactly; the header rule was honoured in the
+strongest way — by demonstrating the mechanical channel's silence and filing the decision
+the silence required.
+
+**Improvised.** The emitted acceptance criteria beyond the delivered standing set: the
+**baseline-warning-profile comparison** ("warning profile identical to baseline: 52 W1,
+7 W2" — no delivered instruction requires it), and the **reference-closure sweep** ("every
+claim id, decision id, term id, file path and cited section resolves" — an
+operationalisation of "the repo is ground truth" that no delivered text states as a check).
+Both are session-authored proxy criteria: conservative, surfaced, itemised in the PR body.
+This is §13.10's authored-proxy pipeline observed in the wild — and the emitted proxy
+*over-honours* the delivered set (adds constraints, none relaxed).
+
+### A-01 summary row
+
+Delivery type at every gate: determinable (standing set mechanical at session start;
+rulings delivered interactively at gates; one input undelivered and detected). Emitted
+proxy at every gate: recoverable from PR bodies and decision files, itemised. Improvisation
+count: five instances, all surfaced and converted to rulings or named checks; zero silent
+instances *recoverable from the record* — with the honest limit that a silent improvisation
+is by definition what this reconstruction cannot see (§1.2 again).
+
+## A-02 — the Wave 2 curation session, at GATE F (the calibration-ledger promotion)
+
+Downstream PR #15, commit `3f9014d`; manifest row 2.12; delivered source = holding note §10.
+
+**Delivered at the gate.** §10 of the 2026-08-08 holding note: the claim layer, the
+calibration ledger as "per-claimant accuracy across matured predicates", the promotion
+"from parked construct to load-bearing, **pending Emil's ratification**"; a construal flag
+("confirm or strike"); two falsifiers, one of them "claimant calibration failing to predict
+subsequent claim outcomes better than seniority or confidence". Plus the session walk
+(gates A–H, Emil ruling at every gate — recorded in the closure manifest) and pinned canon
+at v5.2.0/staged.
+
+**Emitted at the gate.** `core/16-calibration-ledger.md`; `DDD-cost-24` (projected);
+`DDD-dec-13` (the promotion, ruled); **`DDD-dec-14` (the identity-unit question, filed
+OPEN)**; `term:calibration-ledger` settled. Manifest row: "projected; promotion recorded;
+identity unit OPEN."
+
+**Honoured.** The pending-ratification status was honoured precisely: the promotion filed
+as a *decision* (DDD-dec-13), not as an assumed fact. The delivered falsifier appears in
+DDD-cost-24 **amended at the gate by ruling** — "at matched claim mix" added, and the
+claim's own notes record the amendment as Emil's ("Ratified at Wave 2 GATE F with
+amendments"). Delivered content honoured through, not around, the gate.
+
+**Improvised, then governed — the gate's finding.** Two session-authored additions with no
+counterpart in the delivered §10: the **validity condition** ("the instrument exists only
+for claimant identities that outlive their verdict horizons; cross-identity transfer …
+partial at best") — carried into the claim body by ruling, and subsequently load-bearing
+(it qualifies Wave 3's model-market-gap row in the manifest); and the **identity-unit
+question itself** — §10 says "claimant" throughout without fixing what a claimant is; the
+session surfaced the underspecification and filed it as an open decision with an owner
+rather than resolving it silently. The strongest single Test B observation: **at a minting
+gate, the improvised material was not just surfaced but became two of the register's
+load-bearing objects** (DDD-dec-14 is this exercise's own sample row 4), and the delivered
+text alone would have shipped a claim with an undefined subject.
+
+**Delivery type at the gate.** Determinable: the holding note delivered as a session input;
+the ruling interactive; the standing set mechanical. (One site-level footnote for the
+record: the downstream branch `session-yield-2026-08-08` carries the holding note's date,
+not the session's — per the manifest, the branch naming was itself ruled at GATE A.)
+
+## A-03 — the measure-note completion session (PR #17), at the closing gate
+
+Seven commits; the close spans the Gate 5 commit (`1ccf76e` — context v2, reviewer brief)
+and two post-Gate-5 commits (`65451fa` notation/scale sweep; `3692612` the A/B
+decomposition-label collision note).
+
+**Delivered at the close.** The 2026-08-11 session walk (named in the PR body as the
+governing structure, all five gates ruled); the Gate 4 ruling with an out-of-band
+protocol — Emil cuts `v0.4.0` at `5455fcf`, the front-matter pin line resolving against
+it; the Gate 5 remit: the reviewer brief (the outreach instrument) and the context-doc
+regeneration; the standing set (assets must reproduce, numbers trace to computations,
+Basis: lines).
+
+**Emitted at the close.** `reviewer-brief.md`; `measure-paper-context.md` v2 (pinned to
+v5.3.0/v0.4.0, settled OPEN items marked with their rulings); the pin line; the PR body's
+own acceptance checklist — including an unchecked box handing the tag-cut act to the
+principal ("Before merge: Emil cuts v0.4.0… out of band, per the Gate 4 ruling").
+
+**Honoured.** The Gate 4/5 remits emitted one-for-one; the out-of-band act was **handed to
+the principal rather than performed** — the delivered protocol honoured at the actor
+boundary, visible as an unchecked checkbox in the emitted record. Every number-traces-to-
+asset criterion restated in the PR body.
+
+**Improvised.** The two post-Gate-5 commits are the close's improvisation tail, and they
+differ instructively: `65451fa` (notation and scale block in §2, table-header scale sweep)
+reads as follow-through on Gate 4's ratified "notation gap closed" — an extension of a
+ruled item, not annotated with its own ruling; `3692612` records a **found defect** (the
+A/B decomposition-label collision) into the context note rather than fixing prose silently —
+a surfaced finding in the Gate 2 tradition. Also improvised, earlier but visible at the
+close: "one flagged abstract sentence" carried in the emitted assembly — a
+session-flagged item awaiting the principal, i.e. an authored proxy marking its own
+uncertainty.
+
+**Delivery type at the gate.** Determinable: walk delivered in-prompt, rulings interactive,
+standing set mechanical, one act delivered *outward* to the principal by protocol.
+
+## Test B per-gate findings, tallied for Gate 4 (statements of criteria outcomes deferred)
+
+1. **Delivery type was determinable at all seven examined gates** (A-01 ×5, A-02 ×1,
+   A-03 ×1), from the record alone.
+2. **Honoured-versus-improvised was observable at every examined gate**, non-trivially at
+   six of seven: the register's practice has a stable pattern — improvise → surface →
+   convert to ruling — and its emitted proxies are unusually legible because PR bodies
+   itemise their own acceptance criteria.
+3. **The improvisations found are of four kinds:** scope extensions argued and ruled in
+   (A-01 gates 3–4); session-authored acceptance criteria that over-honour the delivered
+   set (A-01 gate 5's baseline-profile and reference-closure checks); session-authored
+   *content* converted to governed objects at the gate (A-02: the validity condition,
+   DDD-dec-14); and un-annotated follow-through on ruled items (A-03's notation sweep — the
+   only observed improvisation not explicitly routed through a ruling).
+4. **One session-level delivery failure was found in the record — already detected by the
+   session itself** (A-01 gate 1: the undelivered predicted-ground note), and the emitted
+   proxy names the non-arrival. §13.10's fidelity-ceiling claim has a live instance:
+   the constraint that never arrived was not honoured, and the record shows exactly that.
+5. **Recoverability limit, restated:** silent improvisation is invisible to this method by
+   construction; the count of surfaced improvisations is a floor, not a total.
+
+**GATE 3 — holding on the per-gate findings.**
