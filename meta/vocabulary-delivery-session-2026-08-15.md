@@ -348,3 +348,148 @@ profile identical to baseline (52 W1, 7 W2).
 **Still holding at GATE 2** for: F-1 as redrafted; F-2 as redrafted; the declared-empty two-part
 ruling; and the ground-01 join (note's gate + Q19's axis marking in one statement) — approve or
 split.
+
+---
+
+# Gate 2 closed (Emil, 2026-08-15) — rulings recorded
+
+1. **F-1 approved, join kept**, for Q19's reason: an axis nobody can extract at act time cannot
+   support mechanical delivery, and the corpus evidenced both halves at once. Conditions met:
+   the join named as this filing's own; the region carries the corpus's bound (binds where acts
+   are mediated by extractable artefacts; semantic-content decisions carry nameable axes at the
+   weaker standing named).
+2. **F-2 approved as restructured** — orthogonal typing governing, four-state mapping recorded
+   as the corpus's exercise of it, honest limit stated. One sentence added to the evidence
+   field: rows 4 and 8 varied resolution independently of coverage — the one orthogonality the
+   corpus did test, and it held.
+3. **The structural observation promoted to stated**: declared-empty is a coverage value,
+   deliberately-open a resolution value; the inert/open collapse question dissolves by
+   construction — the ground-axes note's open ruling 2, answered, findable from the claim.
+4. **Declared-empty: files now**, as the coverage value it already is — omitting one of four
+   values from a filed enumeration because the corpus did not draw it would leave the
+   enumeration incomplete on ratification; zero corpus draws recorded as its evidence status.
+   **Shape: it is a claim** — declared-empty asserts no choice in the region moves the outcome
+   past tolerance, an admission-test assertion, attributable and falsifiable by one act; a claim
+   with a claimant, subject to claimant calibration. Not a decision kind, not a bare record.
+   Recorded as answering the applicability note's ruling 2, note as source, this session the
+   ruling site. (Emil's ruling names the calibration instrument; carried upstream as "claimant
+   calibration" under the Stable Dependency Principle — the instrument's term is filed with this
+   projection. Noted in the claim.)
+5. **Beyond-region evidence entry on DDD-ground-01 approved.**
+
+Rulings applied in upstream commit `f8f57ca`.
+
+# Gate 3 — F-3: delivery (holding)
+
+## Drafts committed (upstream `d3674ce`; downstream this commit)
+
+**The establishing document — number, title, skeleton proposed.** `core/18-delivery.md`,
+title "Delivery", contract `requires: [store, mechanical, judgment, escape, assurance, act,
+maturation]`, `establishes: [delivery, undelivered, presumed-discharge]`, status **draft**.
+Number reasoning: the split's document sequence is continuous — this projection carries 13–17
+(cost-projection, maturation, routing-example, calibration-ledger, time-and-assurance) — so the
+next free number globally is 18; if Emil means upstream-local numbering, 13 is the alternative
+and the file renames on ruling. Skeleton, deliberately minimal (establishes and points): §1 the
+axis (term:delivery embedded; supply-versus-arrival; the trigger test), §2 the failure
+(term:undelivered embedded; adds no condition to escape), §3 the record property
+(term:presumed-discharge embedded; the source/assurance record asymmetry), §4 what the document
+does not do (no store, no maturation amendment, no generator closed).
+
+**Terms** (registry, `established_by: 18-delivery.md`, status **draft**, canonical_md matching
+the doc's embeds byte-for-byte — E6 green):
+
+- `term:delivery` — mechanical (act triggers retrieval) / judgment-mediated (only if an actor
+  recalls it); a property of a decision **at an act-site**, never of the decision alone; a path
+  is only as mechanical as its weakest edge.
+- `term:undelivered` — filed, adequate, never reached the act; determined by nobody: escape,
+  with the ledger showing coverage.
+- `term:presumed-discharge` — a gate's pass meaning never-reached; a property of the record, so
+  it stays mechanisable.
+
+Canonical texts use canon's "judgment" spelling (matching `term:judgment` and the document
+register); claim prose keeps the corpus's "judgement". Flagged, not hidden.
+
+**Claims upstream:**
+
+- **`DDD-delivery-01`** (conceptual, projected) — filing is not encoding: a decision sits in
+  I(V;X) only to the extent the arrangement delivers it at the act; store allocation cannot be
+  read off artefacts; paid-once-inherited belongs to mechanical delivery specifically. Region
+  states the SR-1 boundary in terms: not a fifth store, not a new axis; an undelivered
+  decision's store assignment is nothing — escape — exactly as the partition already reads it.
+  Evidence: rows 1/5 (the pin channel silent while the statement moved), row 6 (per-site
+  divergence), 7-of-7 determinability, the 1-in-7 un-annotated base rate. Falsifier: the note's
+  Q15 row (ledger-counted and delivery-counted allocation agree across a corpus).
+- **`DDD-delivery-02`** (conceptual, projected) — undelivered as escape generator: sufficient,
+  never necessary, joining DDD-dec-15's recorded generators (capacity shortfall,
+  no-applicable-filed-source); distinguishing feature in the statement — the ledger shows
+  coverage, escape that presents as governance. Region draws the 10 §9 boundary (inadequate
+  assurance on a filed source is governed, not escaped). Evidence: the A-01 Gate 1 centrepiece
+  with the reflexive chain — including this session's own third instance (the applicability
+  note arriving only after the identity check reported it absent) — and DDD-dec-16's verbatim
+  presumed-discharge record. The generator-2 slot untouched, stated in the claim's notes.
+- **`DDD-delivery-03`** (conceptual, projected) — compounding: unretrieved decision plus
+  unretrieved check over the same act are correlated failures (same actor, same budget, same
+  position), removing gate independence. **Flagged in the draft as the thinnest-evidenced
+  filing**: no sampled act exhibited the correlated double miss; the corpus supplies the
+  condition that makes the check worth having (1-in-7, low and nonzero), and the note's
+  prediction files as the falsifier (mechanise-checks-vs-mechanise-retrieval, content
+  constant). DDD-frame-05 explicitly untouched in breaks.
+
+**Claim downstream:**
+
+- **`DDD-delivery-04`** (conceptual, projected) — maturation retrieval-dependence: the
+  paid-once-inherited property holds only where the harvest channel delivers at the consuming
+  act; the channel condition includes delivery at each future run's act-sites, not only receipt
+  of the harvest into the encoded store. Diachronic, hence downstream (R4); this ID per the
+  Gate 1 ruling. Evidence: rows 1/5, row 6, row 3 (DDD-dec-02 — standing, no carrier,
+  inheriting nothing per run by itself). Pin dependency stated in the claim's notes: rests on
+  upstream `term:delivery` and `DDD-delivery-01`, which do not exist at the pinned v5.4.0 —
+  `graph/upstream.yaml` is staged at GATE 5 per the DDD-dec-10/16 pattern and bumped on
+  acceptance; until then the claim declares its upstream basis explicitly not yet pinned.
+
+## R-2 exposure check — reported, nothing amended
+
+Carried from the prior delivery prompt: do `DDD-cost-09`, `DDD-cost-08`, and the maturation
+return channel want a named delivery condition?
+
+1. **`DDD-cost-09` — yes, mildly; reported, not amended.** Its "assurance-by-check ... supplied
+   standing — independent of the act" holds **per act-site, not per decision**: the corpus's
+   no-unwrap row carries the same criterion act-triggered in CI and actor-triggered locally —
+   judgement-mediated under the trigger test — so a closed predicate is amortised assurance
+   only at act-sites where the check's delivery is mechanical. Candidate amendment if Emil
+   rules it: a region or notes qualifier "at act-sites where the check is act-triggered";
+   DDD-delivery-01 states the general condition without touching cost-09.
+2. **`DDD-cost-08` — exposure named, no amendment wanted on its own terms.** The claim governs
+   selection economics and survives as stated; what delivery conditions is its *benefit*
+   arithmetic — the assurance gate adds independent protection only where the gate's delivery
+   is not correlated with the decision's (DDD-delivery-03's case: both judgement-mediated,
+   same actor, same budget). Its breaks field already carries DDD-dec-15's correction.
+   Candidate on acceptance: a notes cross-reference to DDD-delivery-03; nothing stronger.
+3. **The maturation return channel — yes, and the condition is filed rather than reported
+   loose.** Core/08's "the channel must exist" is authoring-side (harvest received into the
+   encoded store); the corpus showed the consuming side failing while the authoring side held
+   (rows 1/5; row 6 per-site). The named delivery condition is DDD-delivery-04, downstream,
+   with upstream prose unamended (R4 — the consequence is diachronic).
+
+## Validation
+
+Upstream: 45 claims valid, 4 decisions valid; core-order 0 errors, zero W4; warning delta from
+baseline exactly **+1 W1** — `00-primitives.md:207`, "*A note on delivery.*", a rhetorical use
+of the word predating the term, now read as a forward pointer. False positive; reported, not
+repaired (candidate one-word rewording for a canon session if Emil wants the profile clean).
+Downstream: 25 claims valid, 12 decisions valid; core-order 0 errors, 0 warnings; 26 pins
+resolve against v5.4.0.
+
+## GATE 3 — holding
+
+For Emil's ruling:
+
+1. The establishing document: number (18 proposed; 13 the repo-local alternative), title,
+   skeleton, and its draft status.
+2. The three terms as drafted (values, canonical texts, draft status; the judgment/judgement
+   spelling split flagged above).
+3. DDD-delivery-01/02/03 as drafted — including delivery-03's thin-evidence flag.
+4. DDD-delivery-04 as drafted downstream, with the pin staging deferred to GATE 5.
+5. The R-2 exposure check outcomes — in particular whether cost-09 takes the per-act-site
+   qualifier now or on acceptance, and whether cost-08 takes the notes cross-reference.
+6. The +1 W1 false positive — leave reported, or queue the one-word rewording.
