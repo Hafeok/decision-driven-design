@@ -493,3 +493,81 @@ For Emil's ruling:
 5. The R-2 exposure check outcomes — in particular whether cost-09 takes the per-act-site
    qualifier now or on acceptance, and whether cost-08 takes the notes cross-reference.
 6. The +1 W1 false positive — leave reported, or queue the one-word rewording.
+
+---
+
+# Gate 3 closed (Emil, 2026-08-15) — rulings recorded
+
+1. **Number: `core/13-delivery.md`, upstream-local.** The projection's 13–17 is a downstream
+   sequence; a global sequence across two repos would couple numbering across the charter
+   boundary the split exists to keep separate. Renamed on the ruling. Title, skeleton, draft
+   status approved.
+2. **Terms approved as drafted**, including the spelling split — canonical texts take canon's
+   "judgment" (matching term:judgment); claim prose keeps the corpus's "judgement". Recorded
+   for the manifest as deliberate.
+3. **DDD-delivery-01/02/03 approved.** Delivery-03's thin-evidence flag stands — the claim
+   files on its falsifier's strength, the correct standing for a claim whose test is a
+   prediction. Delivery-02's evidence field now states the third arrival-failure instance was
+   minted during the filing.
+4. **DDD-delivery-04 approved**; pin staging at Gate 5 per the dec-10/16 pattern.
+5. **R-2: both amendments taken now** — deferring would leave a ratified claim knowingly
+   slightly wrong across the merge. DDD-cost-09's region gains the per-act-site qualifier;
+   DDD-cost-08's notes gain the compounding cross-reference; both `changed` fields bumped,
+   statements untouched; both recorded as scope extensions in the session's decision node
+   **DDD-dec-17** (upstream, drafted at GATE 3, grows to close — the DDD-cost-05 pattern).
+   Maturation condition as DDD-delivery-04, upstream prose unamended: confirmed correct under
+   R4.
+6. **The +1 W1: reworded.** 00-primitives' closing aside "A note on delivery" → "A note on
+   **presentation**" (the session's word; the registry does not own it). Recorded for the
+   manifest as a term-collision repair, not a content edit — the term:maturation divergence
+   pattern caught before it became one. Warning profile back to exact baseline (52 W1, 7 W2).
+
+Applied in upstream commits `e3832bf` (rulings) and `cc5e8f9` (F-4 draft, below).
+
+# Gate 4 — F-4 and the registry seed (holding)
+
+## F-4 — `DDD-ground-04` (upstream, normative, projected; commit `cc5e8f9`)
+
+A retro-filed decision carries **when the gap was uncovered** (distinct from when the act
+occurred) and **that it was retro-filed**; without both, retro-filing launders escape into
+coverage and a sweep reading the register reports clean. Region: binds at filing, register- and
+actor-general. **The session's thinnest evidence base, flagged in the draft as ruled at Gate 1:
+the corpus sampled no retro-filed row, the evidence field is empty, and the claim files
+projected on its falsifier's strength** — the laundering risk is the argument, urgent because
+the escape correction and the undelivered generator make retro-filing more attractive (it is
+the only mechanism converting a silent completion into a visible node) and nothing currently
+marks it. Notes carry: the §13.5 pinning-versus-resolution distinction (a retro-filed test pins
+but did not constrain — the mark keeps a register from conflating them); the symmetry with
+DDD-delivery-02 (ledger-shows-coverage is the same presentation failure in space that unmarked
+retro-filing is in time); the decision-format finding restated (format lives in the validator
+and practice; enforcement deliberately not built this session); and the note's unresolved flag,
+left for Emil — whether retro-filing is the discharge mechanism for the escape generators, and
+whether the retro-filing act is itself a claim-layer act as declared-empty was ruled to be.
+
+## The registry seed — `graph/axis-registry.yaml` (downstream, this commit)
+
+Seeded per the Gate 1 ruling: machine-read YAML in `graph/`, headed **ARTEFACT, NOT CANON**,
+with the header stating that validators do not yet check it and that no tooling accompanied the
+seeding. Contents: the corpus table's 22 axes verbatim — axis, forcing row, reuse, quality
+(resolvable / resolvable-partial / nameable), extractor sketch, and the recorded granularity
+defect on `artifact-class`; totals as ratified (20 resolvable, one partial; 2 nameable). The
+header carries the SR-6 provenance (no axis registry existed anywhere before the corpus test;
+invention cost is adoption cost) and points the quality mark at DDD-ground-01's maturity-state
+evidence. Parses clean (22 axes); downstream validators unaffected (0 errors, 0 warnings).
+
+## Validation at this gate
+
+Upstream: 46 claims, 5 decisions valid; core-order 0 errors, zero W4; warning profile at exact
+baseline (52 W1, 7 W2). Downstream: 25 claims, 12 decisions valid; core-order clean; registry
+seed parses.
+
+## GATE 4 — holding
+
+For Emil's ruling:
+
+1. **DDD-ground-04 as drafted** — including the empty evidence field with the flag, and the
+   two sub-questions left open in its notes (discharge-mechanism; retro-filing as claim-layer
+   act).
+2. **The registry seed as drafted** — header, format (`axis-registry/v1`), and content
+   fidelity to the corpus table.
+3. Anything Emil wants carried differently into DDD-dec-17 before Gate 5 extends it.
