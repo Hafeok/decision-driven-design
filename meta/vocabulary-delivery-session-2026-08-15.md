@@ -1,6 +1,7 @@
 # Vocabulary-and-delivery session — the earned canon session (2026-08-15)
 
-**Status: DRAFT pending GATE 1 ruling. Nothing here is canon. Nothing has been filed.**
+**Status: GATE 1 closed (Emil); holding at GATE 2. Drafts on the feature branches; nothing
+merged; every filing pends its gate's ruling.**
 
 Session prompt: `prompt-vocabulary-delivery.md` (four filings, five gates). Interactive canon
 curation; every gate holds for Emil's ruling; merge nothing. Evidence base:
@@ -192,3 +193,106 @@ For Emil's ruling:
 
 Nothing has been drafted into `core/` in either repository. Drafting begins at the GATE 2 step on
 the Gate 1 ruling.
+
+---
+
+# Gate 1 closed (Emil, 2026-08-15) — rulings recorded
+
+1. Node map and both new areas approved; `ground` and `delivery` minted; `delivery` spans repos
+   on the `cost` precedent.
+2. F-2 stays two claims (DDD-ground-02, DDD-ground-03), each with its own falsifier — typing and
+   the timing value fail independently; one claim would weld them.
+3. DDD-delivery-04 downstream under that ID, not DDD-cost-30 — area coherence beats
+   registry-local numbering; the claim is delivery's consequence for maturation, not cost's.
+4. Registry seed: `graph/axis-registry.yaml`, headed artefact-not-canon; machine-read files live
+   in `graph/`; `meta/` would misfile it as evidence. Header states validators do not yet check
+   it. No validator work this session.
+5. Terms establish in a **new minimal upstream core document** at the next free number —
+   delivery is an axis of the same rank as timing; registry-only terms would break the
+   `established_by` convention. The doc hosts the three delivery terms and the prose homes of
+   DDD-delivery-01/02/03; number, title, and skeleton proposed at GATE 3. Minimal — the corpus
+   evidence carries the weight; the doc establishes and points.
+6. Date conflict handled as proposed: drafts cite repo dates (DDD-dec-02 made 2026-07-28,
+   interval ~2.5 weeks); "five weeks" dropped everywhere; the ratified corpus record stays
+   unamended. **Erratum, recorded here:** the corpus document's "five weeks apart" (§4 Q2) and
+   "five weeks from nameable to resolvable" (the earning ruling), and the session prompt's
+   2026-07-08 date, do not match the repository; the interval is roughly two and a half weeks.
+   The evidence — nameable maturing to resolvable — stands on the dates that are true.
+7. Populations stated wherever drafts cite the corpus: 5 ratified, 4 accepted-not-ratified,
+   2 pending.
+8. The four applicability-note-sourced elements: the note supplied (announced 362 lines / 2,494
+   words, sha256 `4afe380c…`); identity to verify on receipt; the note's wording then governs,
+   superseding the prompt's paraphrase; provenance marked in each draft.
+9. The generator-2 slot stays untouched.
+
+# Gate 2 — F-1 and F-2 drafts (holding)
+
+## Identity check on the supplied applicability note: **FAILED — ABSENT. Holding.**
+
+The Gate 1 ruling announced the ground-applicability note as supplied now (362 lines / 2,494
+words, sha256 `4afe380c…`). It did not arrive. The session's upload directory contains exactly
+one file — the original session package zip (`9417eba2-vocabdeliverypackage.zip`, sha256
+`b360527a…`, four files, note not among them). Searched: uploads, scratchpad, both repositories,
+by name (`*applicab*`), by line count (362), and by hash fragment (`4afe380c`) — the only
+occurrence of the hash anywhere is the ruling text itself. An absent copy is the identity
+check's limiting case; nothing is reconstructed.
+
+This is the third instance of the reflexive chain the corpus test recorded: the same failure
+mode (a governing input announced, not arrived) at A-01's Gate 1, at the corpus session's Gate 1,
+and now here — caught each time by an identity check refusing to substitute. Recorded as session
+data adjacent to F-3's evidence; nothing files from it.
+
+**Consequence, per flag-don't-guess:** the four note-sourced elements are drafted as the
+prompt's paraphrase and carry a `PENDING — Emil review` mark naming the non-arrival; the note's
+wording governs on receipt, per the ruling. Everything not resting on the note is drafted in
+full.
+
+## Drafts committed (upstream feature branch, commit `83af130`)
+
+**`DDD-ground-01`** (normative, projected) — the applicability gate. Statement: files with a
+resolvable applicability predicate over declared axes or an explicit universal declaration; each
+axis marked mechanically-evaluable or judgement-evaluable; non-evaluation never silently becomes
+non-applicability. Region carries the evidenced bound (binds fully where acts are mediated by
+extractable artefacts; semantic-content decisions may carry nameable axes with the weaker
+standing named). Evidence: the 22-axis registry (20 resolvable, one partial, 2 nameable, 91%)
+and the matched pair at repo dates, with the erratum cross-referenced. Falsifier from the note's
+Q1 row; test names the counterexample hunt. The axis-type field files as a maturity state per
+the Gate 4 consequence ruling. PENDING mark: the statement's first sentence sources to the
+absent note.
+
+**`DDD-ground-02`** (conceptual, projected) — the four-state typing: governed / declared-empty /
+open / uncovered-undeclared; only the fourth is a finding; typing classifies ground per region,
+not decisions. Evidence: open exercised twice with its distinctive features doing real work
+(rows 4, 8; §4 Q1), and the criterion-1 gap (11/11 with, 9/11-plus-class without). Falsifier:
+a miss assignable to no single state, or open's features doing no discriminating work.
+**FLAGGED for this gate's ruling: whether the declared-empty limb files now or waits** — the
+corpus exercised it zero times, and its wording ("ruling-2") sources to the absent note. The
+orthogonal-properties framing and the Unknown-is-never-a-pass rule are deliberately kept OUT of
+the statement and held in notes pending the note.
+
+**`DDD-ground-03`** (conceptual, projected) — the `—(open)` timing value. Statement: an open
+decision has no resolution for a timing predicate to read; the timing vocabulary carries the
+fourth value alongside before/during/after; any predicate without it misfiles open decisions.
+Additive — none of term:encoded / term:mechanical / term:judgment is amended. Evidence: the two
+no-honest-value rows and totality over the corpus; the SR-5 verdict (binary loses 3 of 11,
+including no-unwrap's after-position erasure). Breaks: criterion-1's governing reading reverts
+to 9/11-plus-class.
+
+## Validation
+
+Upstream, all three validators pass at the draft commit: `validate-claims.py core/claims/`
+(42 claims valid), `validate-claims.py core/decisions/ --decisions` (4 valid),
+`validate-core-order.py core/` — 0 errors, zero W4, warning profile **identical to baseline:
+52 W1, 7 W2** (checked with and without the new files).
+
+## GATE 2 — holding
+
+For Emil's ruling:
+
+1. **The applicability note's non-arrival** — re-supply it (identity re-checked on receipt, its
+   wording then governs the four marked elements), or rule the paraphrase sufficient.
+2. **F-1 (DDD-ground-01)** as drafted — statement, region bound, maturity-state field, evidence
+   at repo dates.
+3. **F-2 (DDD-ground-02/03)** as drafted — including the flagged ruling: does `declared-empty`
+   file now (per the applicability note's ruling-2 answer) or wait? The corpus did not exercise
+   it.
