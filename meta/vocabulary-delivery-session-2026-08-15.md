@@ -685,8 +685,10 @@ filed here.
 ## PRs — upstream-first
 
 Opened at this gate, merge on Emil's acceptance only (sequence per the Gate 4 ruling: upstream
-accepted → Emil tags v5.5.0 → pin bumps to the tag → downstream accepted). Links recorded in
-the Gate 5 report.
+accepted → Emil tags v5.5.0 → pin bumps to the tag → downstream accepted):
+
+- Upstream: https://github.com/Hafeok/actor-indexed-determination/pull/10
+- Downstream: https://github.com/Hafeok/decision-driven-design/pull/21
 
 **GATE 5 — holding** for Emil's acceptance of the upstream PR, the v5.5.0 tag, the pin bump,
 and the downstream acceptance.
