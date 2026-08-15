@@ -296,3 +296,55 @@ For Emil's ruling:
 3. **F-2 (DDD-ground-02/03)** as drafted — including the flagged ruling: does `declared-empty`
    file now (per the applicability note's ruling-2 answer) or wait? The corpus did not exercise
    it.
+
+## Applicability note received — identity check PASSED; drafts rebuilt (commit `dd500c3` upstream)
+
+The note arrived after the first Gate 2 report: 362 lines / 2,494 words / sha256
+`4afe380ceab252aa29b7579a57fdad94e32792f690e096c2d02a4e74dd34500d` — exact match to the ruling's
+announcement. Per the Gate 1 ruling its wording governs the four note-sourced elements; the
+prompt's paraphrase is superseded, PENDING marks replaced with provenance marks in all three
+drafts ("sourced from the 2026-08-12 applicability note, unratified, filed here on corpus
+evidence").
+
+**What the note changed in the drafts:**
+
+- **DDD-ground-01** — statement rebuilt on the note's Q1: "a governing decision must declare a
+  resolvable applicability predicate, unless it explicitly declares universal applicability";
+  the note's Q1 falsifier adopted (ceremonial universal predicates). The note states the
+  predicate abstraction as wider than factored axes, and the corpus's beyond-region tally
+  (§4 Q5, ~27–36% needing graph or temporal predicates) is added as evidence for exactly that
+  framing. The axis-marking clause (mechanically-evaluable / judgement-evaluable) joins from
+  ground-axes Q19 — the note's Q1 does not mention axes — and the join is named in the draft as
+  this filing's, required by the prompt's F-1 and evidenced by the corpus.
+- **DDD-ground-02** — restated as the note's Q3 **orthogonal typing**: source coverage
+  (covered · declared-empty · undeclared · unknown), resolution (resolved · deliberately-open ·
+  unknown), assurance (adequate · inadequate · unknown); only `undeclared` a finding;
+  `deliberately-open` a resolution value carrying a deferred verdict; `Unknown` never a pass.
+  The corpus's four-state exercise maps in the draft's notes (governed ↔ covered ∧ resolved;
+  inert ↔ declared-empty; open ↔ deliberately-open; uncovered-undeclared ↔ undeclared) with the
+  honest limit stated: orthogonality itself is only partially exercised (rows 4 and 8 vary
+  resolution independently of coverage; assurance was not varied).
+- **DDD-ground-03** — subject updated to "resolution is deliberately-open"; otherwise as
+  drafted.
+
+**Two new findings for this gate's ruling:**
+
+- **The two notes conflict on Q3's shape, and the later-dated note carries the superseded
+  form.** The applicability note (2026-08-12) replaces the first draft's four states with the
+  orthogonal axes; the ground-axes note as packaged (revision 8, 2026-08-13 — the corpus
+  session's source) still carries the four states. The prompt and the Gate 1 ruling follow the
+  applicability note; recorded in DDD-ground-02's notes, not harmonised. A structural
+  observation is recorded alongside, not asserted: the orthogonal split answers the ground-axes
+  note's inert/open collapse question by construction — they sit on different axes.
+- **"Ruling-2" has no answer to point at.** The prompt's declared-empty flag reads "per the
+  applicability note's ruling-2 answer", but the note's ruling 2 is an **open question** — "is
+  declared-empty a decision kind, a resolution value, or a conventional applicability record?"
+  So the Gate 2 ruling on declared-empty is now two-part: does it file now or wait (corpus
+  exercised it zero times), and if now, in which of the three shapes?
+
+Validators re-run at the redraft commit: 42 claims valid; core-order 0 errors, zero W4, warning
+profile identical to baseline (52 W1, 7 W2).
+
+**Still holding at GATE 2** for: F-1 as redrafted; F-2 as redrafted; the declared-empty two-part
+ruling; and the ground-01 join (note's gate + Q19's axis marking in one statement) — approve or
+split.
