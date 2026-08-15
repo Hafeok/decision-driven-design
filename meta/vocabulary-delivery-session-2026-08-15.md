@@ -571,3 +571,122 @@ For Emil's ruling:
 2. **The registry seed as drafted** — header, format (`axis-registry/v1`), and content
    fidelity to the corpus table.
 3. Anything Emil wants carried differently into DDD-dec-17 before Gate 5 extends it.
+
+---
+
+# Gate 4 closed (Emil, 2026-08-15; ruling re-issued — the original did not arrive) — recorded
+
+1. **DDD-ground-04 approved as drafted**, empty evidence field and all. Both sub-questions
+   ruled and recorded in the claim's notes and DDD-dec-17: retro-filing is the ledger-side
+   discharge mechanism for the escape generators, discharging only with both fields present —
+   the fields turn retro-filing from concealment into remedy; and the retro-filing act is a
+   claim-layer act, the sibling ruling to Gate 2's declared-empty ruling.
+2. **Registry seed approved** with the promotion-path header line added: canon on (1) a
+   validator reading it plus (2) a ratification act; until both, artefact.
+3. **DDD-dec-17 extended** with the sub-question rulings, the meta/sessions working convention
+   recommended to the freight session (evidence: five arrival failures — manuscript, review,
+   predicted-ground note, the applicability note at this session's Gate 1, and this ruling's
+   own non-arrival; cost: the Test B reconstruction floor), and the reflexive chain stated
+   once in full, this gate's instance included (a ruling is a delivered governing artefact;
+   its non-arrival is the phenomenon — judged the same failure class).
+4. **Source identity recorded** for the manifest: this session filed from ground-axes rev 8
+   (1,375 / 13,622 / `5d8aede1…`) and the applicability note (362 / 2,494 / `4afe380c…`); a
+   rev-14 successor exists (1,869 lines, `ac47441f…`, adding Q25–Q30), assessed separately,
+   touching nothing in the four filings.
+
+Applied in upstream commit `acf284b`.
+
+# Gate 5 — close (holding)
+
+## Basis-impact sweep — weakenings reported, not repaired
+
+Touched nodes: DDD-cost-09 (region qualifier), DDD-cost-08 (notes cross-reference),
+00-primitives (word swap), plus the eight new claims, three new terms, one new document, and
+two decisions. Every citing node re-checked:
+
+| Citing node | Reads | Impact |
+|---|---|---|
+| DDD-cost-11 (upstream) | "adjacent, not identical, to DDD-cost-09" | none — relationship statement only |
+| core/10-cost.md §6 + summary row | "supplied standing — independent of the act" | prose is exposition and now reads unqualified against the qualified region; candidate one-line annotation for a later canon session; claim statement itself unchanged |
+| DDD-cost-12/13/22, DDD-dec-15 (cite cost-08) | gate structure, contrapositive | none — cost-08's statement and region unchanged; notes-only cross-reference |
+| **DDD-cost-10 (downstream)** + core/13-cost-projection.md:111 | "standing, independent of the act", amortisation corollary | **mild genuine weakening, reported**: the corollary inherits the per-act-site condition — cost divides over act volume at act-sites where the check is act-triggered; unamended; nothing demotes (no statement moved, no computation fails) |
+| core/15-routing-example.md | exercises DDD-cost-08's two gates | benefit arithmetic now conditioned by DDD-delivery-03 (correlated-delivery case); reported |
+| "A note on delivery" (00-primitives) | — | no citing node; swap is collision repair only |
+
+Recorded in DDD-dec-18's resolution as the adopting repo's record.
+
+## Reference closure
+
+Every claim ID, decision ID, term ID, file path, and cited section in the changed files of both
+repositories resolves against the union of the two registries, checked mechanically. One
+deliberate exception, reported: DDD-delivery-04's notes mention `DDD-cost-30` as the
+**rejected alternative ID** from the Gate 1 ruling — a never-minted ID documenting a ruling,
+not a citation.
+
+## Validators — final state
+
+Upstream: 46 claims, 5 decisions valid; core-order 14 documents, 65 terms, 0 errors, zero W4;
+warning profile at exact baseline (52 W1, 7 W2). Downstream: 25 claims, 13 decisions valid;
+core-order 0 errors, 0 warnings; **28 pins resolve against the staged ref, 0 basis-loss
+warnings**.
+
+## Pin staging — DDD-dec-18
+
+`graph/upstream.yaml` ref advanced v5.4.0 → the staged upstream branch (checks resolve during
+staging, the DDD-dec-16 pattern); bumps to tag v5.5.0 on Emil's acceptance of the upstream PR,
+before the downstream PR is accepted, per the Gate 4 ruling. Pins added: `term:delivery`
+(status_at_pin: draft — flips to settled on ratification, which W5 will then instrument) and
+`DDD-delivery-01` (projected). The advance is governed, not mechanical, for the recorded
+reason: DDD-cost-09's region moved while its status stayed projected — the
+statement-moved-silently case for the second time, and itself an instance of the session's own
+presumed-discharge vocabulary. DDD-dec-18 records the advance, the added pins, and the sweep's
+weakenings.
+
+## The manifest
+
+**Filed (upstream, area `ground`):** DDD-ground-01 (applicability gate + axis-type field as
+maturity state); DDD-ground-02 (orthogonal coverage/resolution/assurance typing;
+declared-empty ruled in as a coverage value whose filing is a claim-layer act); DDD-ground-03
+(the —(open) timing value); DDD-ground-04 (retro-filing's two fields, with both Gate 4
+rulings).
+**Filed (upstream, area `delivery`):** core/13-delivery.md (draft, minimal — establishes and
+points); term:delivery, term:undelivered, term:presumed-discharge (status draft);
+DDD-delivery-01 (filing is not encoding); DDD-delivery-02 (undelivered as escape generator);
+DDD-delivery-03 (compounding). Scope extensions by Gate 3 ruling, recorded in DDD-dec-17:
+DDD-cost-09 region qualifier; DDD-cost-08 notes cross-reference. Term-collision repair:
+00-primitives "delivery" → "presentation". Session decision: DDD-dec-17.
+**Filed (downstream):** DDD-delivery-04 (maturation retrieval-dependence); the axis-registry
+seed (graph/axis-registry.yaml, artefact-not-canon, promotion path stated); the staged pin
+advance and DDD-dec-18; this session document.
+
+**Flagged beyond evidence (in the drafts themselves, per scoped-as-evidenced):**
+DDD-delivery-03 — no sampled act exhibited the correlated double miss; files on falsifier
+strength (ruled the correct standing at Gate 3). DDD-ground-04 — no retro-filed row sampled;
+evidence field empty; files on falsifier strength with the laundering risk as argument.
+DDD-ground-02 — declared-empty at zero corpus draws (ruled in regardless, enumeration
+completeness); orthogonality only partially exercised (assurance never varied — rows 4 and 8
+tested the coverage/resolution orthogonality, which held).
+
+**Stayed out (per the prompt's out-of-scope list and rulings):** the store re-derivation
+(SR-1 stands; the counterexample channel closed empty); any amendment to term:escape or the
+escape mechanism; the empty-option-set generator (open and unexamined, exactly as DDD-dec-15
+holds it); everything on the freight list including the exhaustiveness/defence-in-depth seam;
+all instrument and tooling work (no validator reads the axis registry; no delivery evaluator;
+no retro-filing enforcement); capacity material (the scoping session consumes the corpus's
+question-3 evidence next); Generator 2; Wave 3; Paper A.
+
+**Deliberate register notes:** canonical term texts take canon's "judgment" (matching
+term:judgment); claim prose keeps the corpus's "judgement" — ruled deliberate at Gate 3, not
+drift. The corpus record's "five weeks" erratum stands recorded at Gate 1; drafts carry repo
+dates. Source identity: filed from ground-axes rev 8 (`5d8aede1…`) and the applicability note
+(`4afe380c…`); rev-14 (`ac47441f…`, Q25–Q30) exists, assessed separately, touches nothing
+filed here.
+
+## PRs — upstream-first
+
+Opened at this gate, merge on Emil's acceptance only (sequence per the Gate 4 ruling: upstream
+accepted → Emil tags v5.5.0 → pin bumps to the tag → downstream accepted). Links recorded in
+the Gate 5 report.
+
+**GATE 5 — holding** for Emil's acceptance of the upstream PR, the v5.5.0 tag, the pin bump,
+and the downstream acceptance.

@@ -10,6 +10,11 @@
 # it (SR-6, verified at that session's Gate 1 — no axis registry existed in any repository
 # after fourteen months of practice). The invention cost of this registry is the adoption cost.
 #
+# Promotion path (ruled at the session's Gate 4, so provisional status is a stated path rather
+# than indefinite limbo): this file becomes canon when (1) a validator reads it — an E/W code
+# resolving axes against decision records — and (2) a ratification act records the promotion as
+# a decision. Until both, artefact.
+#
 # Vocabulary (upstream, pending ratification at the session's close):
 #   quality: resolvable — an extractor's predicate closes over the axis at act time
 #            nameable   — statable, not mechanically evaluable

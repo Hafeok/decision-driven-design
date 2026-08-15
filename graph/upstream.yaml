@@ -24,7 +24,15 @@ upstream:
   # here. No pin added, none removed, and DDD-floor-01 stays at status_at_pin: reported — its
   # statement moved, its status did not, so nothing in E12/E13/W5 forced this advance. It is
   # governed rather than mechanical, which is why it carries a decision.
-  ref: v5.4.0                       # tag, never a branch
+  # STAGED advance v5.4.0 -> v5.5.0 (vocabulary-and-delivery session, 2026-08-15): ref points
+  # at the staged upstream branch so the checks resolve during staging, exactly as the v5.4.0
+  # advance did; bumps to the tag v5.5.0 on Emil's acceptance of the upstream PR, before the
+  # downstream PR is accepted (Emil's GATE 4 ruling). The advance is DDD-dec-18 here, the
+  # session ruling DDD-dec-17 upstream. Two pins added (term:delivery, DDD-delivery-01 — the
+  # basis of DDD-delivery-04). Note for W5's silence: DDD-cost-09's region moved at v5.5 while
+  # its status stayed projected — the statement-moved-silently case again, which is why this
+  # advance is governed rather than mechanical.
+  ref: claude/earned-canon-vocab-delivery-k4ngl4   # staged; bumps to tag v5.5.0 on acceptance
   pins:
     # basis claims for DDD-dec-04 (the split decision itself rests on these)
     - id: DDD-frame-01
@@ -87,4 +95,10 @@ upstream:
       status_at_pin: projected
     # the synchronic member of the time-and-assurance set (core/17; GATE G)
     - id: DDD-cost-25
+      status_at_pin: projected
+    # the delivery vocabulary DDD-delivery-04 rests on (vocabulary-and-delivery session,
+    # 2026-08-15; staged with the v5.5.0 advance, DDD-dec-18)
+    - id: term:delivery
+      status_at_pin: draft
+    - id: DDD-delivery-01
       status_at_pin: projected
