@@ -692,3 +692,45 @@ accepted → Emil tags v5.5.0 → pin bumps to the tag → downstream accepted):
 
 **GATE 5 — holding** for Emil's acceptance of the upstream PR, the v5.5.0 tag, the pin bump,
 and the downstream acceptance.
+
+---
+
+# Gate 5 closed (Emil, 2026-08-15) — ACCEPTED; closing rulings recorded
+
+Sequence confirmed as ruled: Emil merges upstream PR #10 and cuts v5.5.0; the session bumps
+the pin from the staged branch to the tag and flips the DDD-dec-17/18 draft statuses; then
+downstream PR #21 stands for Emil's acceptance. This session is subscribed to both PRs; review
+comments and CI are reported, substantive responses on Emil's ruling only.
+
+**Three closing remarks, ruled into the record:**
+
+1. **The dec-18 finding is the session's own vocabulary catching the pin system.** W5 silent
+   while DDD-cost-09's region moved — the statement-moved-silently case a second time, and it
+   is presumed discharge: the pin's pass meaning never-checked-for-this. The session filed a
+   term and then found its referent in the instrument watching the filing — two layers of the
+   same defect named in one afternoon, and the strongest argument yet that the E13/W5
+   instrumentation wants extending to regions and statements. **Freight list, with DDD-dec-18
+   as the evidence.**
+2. **The cost-10 weakening was handled exactly right** — reported, not repaired, candidate
+   annotation named for a later session. The amortisation corollary inheriting the
+   act-triggered condition is true and mild; silently patching it would have been the session
+   exceeding its ruled scope to fix a consequence of its own ruled scope.
+3. **The flagged-beyond-evidence list is the honest ledger of what this session owes**: four
+   debts, each named with what would pay it — how projected claims should enter canon.
+
+**Queue correction (Emil's ruling, superseding the closing line as previously drafted):**
+**the capacity scoping session is cancelled.** The rev-14 assessment (issued while this
+session was in flight) found the note's own B1 re-booking did the scoping session's work
+against live canon — the model is ratified; the residual is two freight-sized rulings
+(whether shared-budget and membership are one account; whether C_resolve extends to retrieval
+and authoring draws). The capacity residue moves to the freight session with the corpus's
+question-3 evidence and the b1-reconciliation note as basis. The queue after this merge:
+**freight** (carrying the capacity residue, the E13/W5 region/statement instrumentation
+extension with dec-18 as evidence, the core/11 §7 four-vs-five prose defect, the
+meta/sessions convention, and everything accumulated), then the **Q25/Q27/Q30 filing wave**,
+then **Wave 3 and Paper A**. The manifest's earlier "capacity next" line is superseded by
+this ruling.
+
+**Remaining mechanical steps, on the tag:** pin bump to v5.5.0; DDD-dec-18 draft markers
+flipped and its `made` finalised; DDD-dec-17's draft markers flipped (post-merge, so as a
+small follow-up commit upstream, routed as Emil prefers).
