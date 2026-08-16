@@ -1,0 +1,132 @@
+# graph/axis-registry.yaml — the axis registry, first instance
+#
+# ARTEFACT, NOT CANON. Seeded from the corpus test's axis-registry draft
+# (meta/corpus-test-results-2026-08-14.md, "The axis registry — first draft", ratified as a
+# record at that session's Gate 2; seeded here by the vocabulary-and-delivery session's Gate 1
+# ruling, 2026-08-15). Validators do not yet check this file — no E/W code reads it, and no
+# tooling work accompanied the seeding (ruled: none this session).
+#
+# Every axis below was invented in the corpus test of 2026-08-14; none existed anywhere before
+# it (SR-6, verified at that session's Gate 1 — no axis registry existed in any repository
+# after fourteen months of practice). The invention cost of this registry is the adoption cost.
+#
+# Promotion path (ruled at the session's Gate 4, so provisional status is a stated path rather
+# than indefinite limbo): this file becomes canon when (1) a validator reads it — an E/W code
+# resolving axes against decision records — and (2) a ratification act records the promotion as
+# a decision. Until both, artefact.
+#
+# Vocabulary (upstream, pending ratification at the session's close):
+#   quality: resolvable — an extractor's predicate closes over the axis at act time
+#            nameable   — statable, not mechanically evaluable
+#   The quality mark is a maturity state, not a fixed type (DDD-ground-01, the matched-pair
+#   evidence): axes are expected to move nameable -> resolvable as formats mature.
+#
+# Corpus sample the axes were forced by: 11 rows — 5 canon-ratified, 4 accepted-not-ratified,
+# 2 pending. Row numbers below are the corpus table's.
+
+format: axis-registry/v1
+status: artefact-not-canon
+seeded: 2026-08-15, vocabulary-and-delivery session (GATE 4), from the corpus test of 2026-08-14
+axes:
+  - axis: artefact-path
+    forced_by: "row 1 (DDD-dec-15)"
+    also_used_by: ["row 5"]
+    quality: resolvable
+    extractor: diff paths against an enumerated site list
+  - axis: term-reference
+    forced_by: "row 1 (DDD-dec-15)"
+    also_used_by: ["row 5"]
+    quality: resolvable
+    extractor: canonical term IDs grep-able in diff or citation
+  - axis: act-kind
+    forced_by: "row 2 (DDD-dec-09)"
+    quality: resolvable
+    extractor: operation class from the tool or command performing the act
+  - axis: canon-registry
+    forced_by: "row 2 (DDD-dec-09)"
+    also_used_by: ["row 5", "row 6"]
+    quality: resolvable
+    extractor: which repository the act writes
+  - axis: statement-temporality
+    forced_by: "row 2 (DDD-dec-09)"
+    quality: nameable
+    extractor: none closes — judgement reads "quantifies over persistence"; the
+      content-in-predicate finding (charter decisions have low-information regions)
+  - axis: work-target
+    forced_by: "row 3 (DDD-dec-02)"
+    quality: resolvable
+    extractor: diff paths to artefact class
+  - axis: milestone-phase
+    forced_by: "row 3 (DDD-dec-02)"
+    also_used_by: ["row 6"]
+    quality: resolvable
+    extractor: repo-state milestone markers (CHANGELOG entry, adapter shipped)
+  - axis: track
+    forced_by: "row 4 (DDD-dec-14)"
+    quality: resolvable-partial
+    extractor: path classification; boundary cases leak
+  - axis: question-topic
+    forced_by: "row 4 (DDD-dec-14)"
+    quality: nameable
+    extractor: none closes — semantic bearing on the identity-unit question
+  - axis: pinned-id
+    forced_by: "row 5 (DDD-dec-16)"
+    quality: resolvable
+    extractor: literal pin list
+  - axis: artifact-class
+    forced_by: "row 6 (rust-class-enforced-here)"
+    quality: resolvable
+    extractor: adapter declaration
+    note: "recorded granularity defect: class superset of language — the register documented a
+      region/axis mismatch two days before the vocabulary named the machinery"
+  - axis: edit-kind
+    forced_by: "row 6 (rust-class-enforced-here)"
+    quality: resolvable
+    extractor: contract-surface classifier implemented in ddd-core/src/surface.rs — running
+      code, not a sketch
+  - axis: language
+    forced_by: "row 6 (rust-class-enforced-here)"
+    also_used_by: ["row 7"]
+    quality: resolvable
+    extractor: file extension / adapter
+  - axis: path-scope
+    forced_by: "row 7 (no-unwrap)"
+    quality: resolvable
+    extractor: workspace members minus ignore globs, literal
+  - axis: boundary-id
+    forced_by: "row 8 (What-boundaries acceptance)"
+    quality: resolvable
+    extractor: the 24 enumerated by `ddd what`
+  - axis: review-horizon
+    forced_by: "row 8 (What-boundaries acceptance)"
+    quality: resolvable
+    extractor: a date; the weak, task-specific time-as-coordinate
+  - axis: command
+    forced_by: "row 9 (accept-group semantics)"
+    quality: resolvable
+    extractor: argv — the most literal extractor in the table
+  - axis: actor-identity
+    forced_by: "row 9 (accept-group semantics)"
+    quality: resolvable
+    extractor: git-config email, mechanically corroborated (L009 binds committer to acceptor)
+  - axis: artefact-kind
+    forced_by: "row 10 (revisit_if ruling)"
+    also_used_by: ["row 11"]
+    quality: resolvable
+    extractor: file or record type
+  - axis: edge-kind
+    forced_by: "row 10 (revisit_if ruling)"
+    quality: resolvable
+    extractor: revisit_if versus based_on syntax
+  - axis: format-version
+    forced_by: "row 10 (revisit_if ruling)"
+    quality: resolvable
+    extractor: format field, literal
+  - axis: operation
+    forced_by: "row 11 (tolerance floors)"
+    quality: resolvable
+    extractor: verb performed on the artefact
+
+# Totals, as ratified in the corpus record: 22 axes; 20 resolvable (one of them partial),
+# 2 nameable. Both nameable axes come from canon-register rows whose discriminating content is
+# semantic; every product-cli axis resolves.

@@ -1,0 +1,64 @@
+format: 1
+id: DDD-dec-18
+kind: decision
+statement: |
+  The software projection adopts the vocabulary-and-delivery filings (upstream DDD-dec-17) and advances the upstream pin v5.4.0 -> v5.5.0 with two pins added (term:delivery, DDD-delivery-01), although no validator forces the advance: DDD-cost-09's region moved while its status did not, so the pin would have stayed silently stale — the statement-moved-silently case for the second time.
+principal: Emil
+made: 2026-08-15, vocabulary-and-delivery session (GATE 5, on the GATE 3/4 rulings); upstream accepted and v5.5.0 cut on Emil's approval, 2026-08-16
+resolution: |
+  Final. The GATE 4 sequence completed as ruled: the upstream PR accepted (merge e8663b8,
+  2026-08-16), v5.5.0 cut on Emil's approval — an annotated tag at the merge commit, cut
+  through the release workflow accepted alongside — and the ref here bumped from the staged
+  branch to the tag. The downstream PR stands for Emil's acceptance.
+
+  Adopt and advance. Upstream DDD-dec-17 files the corpus-earned vocabulary: the ground area
+  (applicability gate, orthogonal coverage/resolution/assurance typing, the —(open) timing
+  value, retro-filing's two fields) and the delivery area (core/13-delivery.md establishing
+  term:delivery, term:undelivered, term:presumed-discharge; filing-is-not-encoding;
+  undelivered-as-escape-generator; compounding), with two scope extensions (DDD-cost-09's
+  per-act-site region qualifier; DDD-cost-08's compounding cross-reference).
+
+  Why this is a decision and not a bump, second instance of the DDD-dec-16 case: the pin
+  checker fires nothing here. E12 does not fire (every pinned id exists at the staged ref);
+  E13 does not fire (no document here embeds the moved material); W5 does not fire (DDD-cost-09
+  is pinned at status_at_pin: projected and stays projected — its region moved, and only status
+  is instrumented). The mechanical channel is silent while a pinned claim's content moved,
+  which is graph/upstream.yaml's reserved case for a governed advance — and is itself the
+  phenomenon this session's vocabulary names (presumed discharge: the artefact recording the
+  pass identical to the artefact recording the skip; the first instance is recorded in
+  DDD-dec-16's own resolution and was corpus row 5's evidence).
+
+  The advance:
+
+  - graph/upstream.yaml ref advanced from v5.4.0 to the staged upstream branch so E12/E13/W5
+    resolved during staging, then bumped to the tag v5.5.0 on acceptance (2026-08-16), per the
+    header's rule and the DDD-dec-10/16 precedent.
+  - Pins added: term:delivery (status_at_pin: draft — flips to settled on ratification, which
+    W5 will then instrument) and DDD-delivery-01 (status_at_pin: projected). These are the
+    upstream basis of DDD-delivery-04, filed here this session under the delivery area's
+    cross-repo span (the cost precedent, DDD-dec-09).
+  - This repository's own filings adopted alongside: DDD-delivery-04 (maturation
+    retrieval-dependence) and the axis-registry seed artefact (graph/axis-registry.yaml,
+    artefact-not-canon, promotion path stated in its header).
+
+  Weakenings found by the session's basis-impact sweep, reported here and not repaired
+  (recorded in the session document's manifest): DDD-cost-10 and core/13-cost-projection.md:111
+  carry "standing, independent of the act", which now reads under DDD-cost-09's per-act-site
+  qualifier — the amortisation corollary inherits the condition that the check is act-triggered
+  at the site; core/15-routing-example.md exercises DDD-cost-08's gates, whose benefit
+  arithmetic DDD-delivery-03 now conditions. Candidate one-line annotations for a later canon
+  session; nothing demotes — no statement moved here, and no computation fails.
+basedOn:
+  - DDD-dec-17
+  - DDD-dec-16
+  - DDD-dec-10
+  - DDD-dec-09
+  - DDD-cost-09
+  - term:delivery
+notes: |
+  Upstream accepted; the pin is at the tag; downstream PR #21 stands for Emil's acceptance.
+  The session record is
+  meta/vocabulary-delivery-session-2026-08-15.md; the manifest there names what filed, what was
+  flagged beyond evidence, and what stayed out. Source identity for the session's inputs
+  (ground-axes note rev 8, 5d8aede1…; applicability note, 4afe380c…; the rev-14 successor
+  ac47441f… named but not filed from) is recorded in DDD-dec-17's notes and the manifest.

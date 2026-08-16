@@ -1,0 +1,56 @@
+format: 1
+id: DDD-delivery-04
+kind: conceptual
+statement: |
+  Maturation's paid-once-inherited-by-every-run property holds only where the harvest channel delivers at the consuming act: standing supply that is judgement-mediated at an act-site does not amortise reliably, so maturation's channel condition ("the channel must exist") includes delivery at each future run's act-sites, not only receipt of the harvest into the encoded store.
+status: projected
+region: |
+  Diachronic — quantifies over repetition across runs, which is why it files with the projection
+  and not upstream (DDD-dec-09's charter). Governs the consuming-side half of the channel
+  condition; the authoring-side half (the harvest actually reaching the encoded store) is
+  upstream core/08's as stated. Per act-site, inheriting term:delivery's edge-colouring
+  (upstream, pinned on acceptance): the same standing decision amortises at a mechanically
+  delivered site and not at a judgement-mediated one.
+evidence:
+  - kind: observation
+    ref: "meta/corpus-test-results-2026-08-14.md — rows 1 and 5 (DDD-dec-15/16)"
+    note: |
+      A standing mechanical channel that did not deliver: the pin's checks (E12/E13/W5)
+      instrument status, not statement, and the escape-scope correction crossed the repo boundary
+      by governed judgement instead — the paid-once property failing at exactly the half the
+      channel did not carry. Corpus sample: 11 rows (5 canon-ratified, 4 accepted-not-ratified,
+      2 pending).
+  - kind: observation
+    ref: "meta/corpus-test-results-2026-08-14.md — row 6 and row 3"
+    note: |
+      Row 6: one standing decision, two act-sites, two delivery types — mechanically delivered
+      (and inheriting per run) at the MCP write path, absent at the CLI act-site, the variance
+      documented in the consuming repo's own instructions. Row 3 (DDD-dec-02): a standing policy
+      with no mechanical carrier possible at the time — it reaches an act only through prompt
+      text or recall, and its failure mode leaves the register looking exactly as it does when
+      things work: filed, standing, and inheriting nothing per run by itself.
+falsifier: |
+  A corpus in which judgement-mediated standing decisions show the same per-run inheritance as mechanically delivered ones — delivery type failing to predict amortisation at matched content.
+test: |
+  Track per-run arrival of standing decisions across act-sites of both delivery types over a working period; the claim fails if inheritance rates do not separate by delivery type.
+breaks: |
+  The projection's amortisation arithmetic (standing cost dividing over act volume) loses its delivery premise for judgement-mediated sites; upstream maturation (term:maturation, core/08) is untouched — this claim conditions its projection, not its statement.
+owner: none
+changed: 2026-08-15, vocabulary-and-delivery session (GATE 3 draft)
+notes: |
+  Filed from the vocabulary-and-delivery session (earned by the corpus test, Emil's Gate 4
+  ruling 2026-08-14; interactive curation, Emil ruling at every gate; drafts pending ruling).
+  Sourced from the ground-axes holding note (2026-08-13, unratified, Q15's consequence), filed
+  here on corpus evidence. Area delivery spans repositories on the cost precedent (DDD-dec-09);
+  this ID downstream rather than DDD-cost-30 per the session's Gate 1 ruling — the claim is
+  delivery's consequence for maturation, not cost's.
+
+  Pin dependency, staged at Gate 5 per the DDD-dec-10/16 pattern: rests on upstream
+  term:delivery and DDD-delivery-01, which exist on the upstream session branch and not at the
+  currently pinned ref (v5.4.0); graph/upstream.yaml is staged against the upstream branch when
+  the upstream PR exists and bumped to the tag on acceptance. Until then this claim is a draft
+  whose upstream basis is explicitly not yet pinned.
+
+  The R-2 exposure check on the maturation return channel is reported in the session document
+  (meta/vocabulary-delivery-session-2026-08-15.md, Gate 3): this claim is the report's outcome —
+  the channel condition's consuming-side half named here, upstream prose unamended.
