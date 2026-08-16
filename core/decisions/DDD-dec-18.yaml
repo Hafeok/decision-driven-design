@@ -2,13 +2,14 @@ format: 1
 id: DDD-dec-18
 kind: decision
 statement: |
-  The software projection adopts the vocabulary-and-delivery filings (upstream DDD-dec-17) and stages the upstream pin advance v5.4.0 -> v5.5.0 with two pins added (term:delivery, DDD-delivery-01), although no validator forces the advance: DDD-cost-09's region moved while its status did not, so the pin would have stayed silently stale — the statement-moved-silently case for the second time.
+  The software projection adopts the vocabulary-and-delivery filings (upstream DDD-dec-17) and advances the upstream pin v5.4.0 -> v5.5.0 with two pins added (term:delivery, DDD-delivery-01), although no validator forces the advance: DDD-cost-09's region moved while its status did not, so the pin would have stayed silently stale — the statement-moved-silently case for the second time.
 principal: Emil
-made: 2026-08-15, vocabulary-and-delivery session (GATE 5 draft, on the GATE 3/4 rulings); staged pending upstream acceptance
+made: 2026-08-15, vocabulary-and-delivery session (GATE 5, on the GATE 3/4 rulings); upstream accepted and v5.5.0 cut on Emil's approval, 2026-08-16
 resolution: |
-  DRAFT — staged; final on Emil's acceptance of the upstream PR. Sequence per Emil's GATE 4
-  ruling: upstream PR accepted first, Emil tags v5.5.0, the ref here bumps from the staged
-  branch to the tag, and only then is the downstream PR accepted.
+  Final. The GATE 4 sequence completed as ruled: the upstream PR accepted (merge e8663b8,
+  2026-08-16), v5.5.0 cut on Emil's approval — an annotated tag at the merge commit, cut
+  through the release workflow accepted alongside — and the ref here bumped from the staged
+  branch to the tag. The downstream PR stands for Emil's acceptance.
 
   Adopt and advance. Upstream DDD-dec-17 files the corpus-earned vocabulary: the ground area
   (applicability gate, orthogonal coverage/resolution/assurance typing, the —(open) timing
@@ -29,9 +30,9 @@ resolution: |
 
   The advance:
 
-  - graph/upstream.yaml ref advanced from v5.4.0 to the staged upstream branch
-    (claude/earned-canon-vocab-delivery-k4ngl4) so E12/E13/W5 resolve during staging; bumps to
-    the tag v5.5.0 on acceptance, per the header's rule and the DDD-dec-10/16 precedent.
+  - graph/upstream.yaml ref advanced from v5.4.0 to the staged upstream branch so E12/E13/W5
+    resolved during staging, then bumped to the tag v5.5.0 on acceptance (2026-08-16), per the
+    header's rule and the DDD-dec-10/16 precedent.
   - Pins added: term:delivery (status_at_pin: draft — flips to settled on ratification, which
     W5 will then instrument) and DDD-delivery-01 (status_at_pin: projected). These are the
     upstream basis of DDD-delivery-04, filed here this session under the delivery area's
@@ -55,7 +56,8 @@ basedOn:
   - DDD-cost-09
   - term:delivery
 notes: |
-  DRAFT pending upstream acceptance and Emil's GATE 5 ruling. The session record is
+  Upstream accepted; the pin is at the tag; downstream PR #21 stands for Emil's acceptance.
+  The session record is
   meta/vocabulary-delivery-session-2026-08-15.md; the manifest there names what filed, what was
   flagged beyond evidence, and what stayed out. Source identity for the session's inputs
   (ground-axes note rev 8, 5d8aede1…; applicability note, 4afe380c…; the rev-14 successor

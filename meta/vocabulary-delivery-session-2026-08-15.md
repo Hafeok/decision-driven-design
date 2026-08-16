@@ -734,3 +734,21 @@ this ruling.
 **Remaining mechanical steps, on the tag:** pin bump to v5.5.0; DDD-dec-18 draft markers
 flipped and its `made` finalised; DDD-dec-17's draft markers flipped (post-merge, so as a
 small follow-up commit upstream, routed as Emil prefers).
+
+## Tag cut — sequence completed (2026-08-16)
+
+Upstream PR #10 merged (`e8663b8`); **v5.5.0 cut on Emil's approval** — an annotated tag at
+the merge commit, cut through the release workflow accepted alongside (upstream PR #11:
+releases declared by a validated descriptor, cut from the Actions tab). One arrival note for
+the record: the session's own attempt to push the tag was refused (403 — session credentials
+are scoped to the designated branch; tag refs denied), so the tag went through Emil's
+workflow, which is the better channel anyway: the cut is now itself a governed, validated,
+recorded act.
+
+Completed on the tag: `graph/upstream.yaml` bumped from the staged branch to `ref: v5.5.0`
+("tag, never a branch" restored) with the advance recorded in the header on the
+DDD-dec-10/16 pattern; DDD-dec-18 flipped to final (sequence recorded in its resolution;
+statement now reads "advances"). Validators at the bump: 25 claims, 13 decisions valid;
+core-order 0 errors, 0 warnings; **28 pins resolve against v5.5.0, 0 basis-loss warnings**.
+The DDD-dec-17 draft-marker flip is prepared as a small commit on the upstream session
+branch, held for Emil's routing. **Downstream PR #21 stands for Emil's acceptance.**
