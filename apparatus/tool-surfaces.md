@@ -1,11 +1,11 @@
 # Tool Surfaces
 
 **Location:** `apparatus/tool-surfaces.md`. An operational consequence of the floor mechanism
-(`core/10`) applied to the tools an actor is given. Depends on the encode/verify split
+(`core/11`) applied to the tools an actor is given. Depends on the encode/verify split
 (`apparatus/encode-verify.md`) and the skill floor (`apparatus/the-skill-floor.md`). MCP is used as
 the worked example; the classes are protocol-independent and should outlive it.
 
-**Status:** derived. The taxonomy follows from `core/10`'s escape conditions; the MCP mapping is
+**Status:** derived. The taxonomy follows from `core/11`'s escape conditions; the MCP mapping is
 descriptive of the protocol as specified.
 
 ---
@@ -24,7 +24,7 @@ there, pinned at a version and a status in `graph/upstream.yaml`:
 > decisions the actor would otherwise have had to make, or creates new ones by handing over
 > uninterpreted content.**
 >
-> **Choosing an actor's tools is therefore choosing its floor** (`core/10`): the open decisions a
+> **Choosing an actor's tools is therefore choosing its floor** (`core/11`): the open decisions a
 > toolset leaves behind are precisely the ones that escape under load.
 
 This is why tool selection is a specification decision and not a convenience decision.
@@ -41,7 +41,7 @@ Return unstructured or unbounded content that the actor must interpret. The call
 decisions**: *where is the relevant part, what structure does this have, what does it mean here.*
 None of those has a verifier the actor holds.
 
-Worst case on both `core/10` conditions at once — they **raise resolve load** (the content occupies
+Worst case on both `core/11` conditions at once — they **raise resolve load** (the content occupies
 the window) *and* **add open decisions** (the interpretation is unchecked).
 
 *Examples:* raw `resources/read`; `cat`, `grep -r`, `git log` consumed as text.
@@ -62,7 +62,7 @@ lookup.
 ### Verifiers
 
 Supply a **closing predicate on the actor's own output.** They do not provide ground; they provide a
-check. Under `core/10` this is the class that converts *escape* into *retry* — the single thing that
+check. Under `core/11` this is the class that converts *escape* into *retry* — the single thing that
 removes floor-escape.
 
 *Examples:* a test-runner's exit code; a type-checker's verdict; a schema validator.
@@ -146,7 +146,7 @@ absent from the layer, and something above the layer must supply it.*
 ## 5. What this makes possible
 
 The harness's job, and it is **diagnostic rather than optimising** — which matters, because it
-sidesteps the unmeasured `C_resolve` (`core/10` §7) entirely.
+sidesteps the unmeasured `C_resolve` (`core/11` §7) entirely.
 
 > **Compute the open decision set under a candidate toolset, and show the user what remains open.**
 
@@ -161,7 +161,7 @@ that resolves or verifies what was previously left to judgment.**
 
 Three moves, in order of value:
 
-1. **Add verifiers.** Converts escape into retry (`core/10` §3, Test 3). The only move that removes
+1. **Add verifiers.** Converts escape into retry (`core/11` §3, Test 3). The only move that removes
    floor-escape rather than relocating it.
 2. **Replace exporters with resolvers.** Attacks both terms of `escape = open_residual × p_err(load)`
    at once: fewer open decisions *and* lower resolve load, since the resolution happens outside the

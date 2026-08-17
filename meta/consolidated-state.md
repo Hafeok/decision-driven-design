@@ -52,6 +52,7 @@ The eight-post sequence stands, with three edits:
 ## 4. The split
 
 Executed per `DDD-dec-04..07`. The actor-general canon moved to the principle repository
-(`actor-indexed-determination`) at tag `v5.0.0`; this repository became its software projection and
+(`actor-indexed-determination`) at tag `v5.0.0`; the pin has advanced since and `graph/upstream.yaml`
+is authoritative for it. This repository became its software projection and
 kept the name. No claim's status changed in the split. Cross-repo dependencies are pinned and
 status-checked in `graph/upstream.yaml` (basis-loss detection, `DDD-agent-01` applied to repos).

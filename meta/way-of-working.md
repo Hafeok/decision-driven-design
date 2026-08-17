@@ -8,9 +8,9 @@ OPEN. Where this file and older material disagree, this file wins.
 the base context file for any working project.
 
 **Post-split note (`DDD-dec-04`).** The **framework** layer — the `core/` documents, the term graph,
-and `core/assets/` — is now canon in the principle repository (`actor-indexed-determination`, tag
-`v5.0.0`). Every `core/NN` and `core/assets/…` reference below is descriptive of that upstream layer,
-not a local path in this repository; this repo holds the **program** and the **projections**, and
+and `core/assets/` — is now canon in the principle repository (`actor-indexed-determination`, split
+at tag `v5.0.0`; the live pin is in `graph/upstream.yaml`). Every `core/NN` and `core/assets/…`
+reference below is descriptive of that upstream layer, not a local path in this repository; this repo holds the **program** and the **projections**, and
 consumes the framework by pin (`graph/upstream.yaml`). `meta/lineage-and-limits.md` also lives
 upstream now.
 

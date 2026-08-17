@@ -25,10 +25,14 @@ it).
 | **A-8** | **STANDS+** | Booked as the `v5.3.0` gap; upstream `CHANGELOG.md` stops at **v5.2.0**, so **three** versions are missing (v5.3.0, v5.4.0, v5.5.0 — tags exist for all three). Separately, `releases/` holds only `v5.5.0.yaml` (itself a retro-cut). Whether already-cut tags get retro release descriptors is a **convention question, not freight** — flagged, not taken. |
 | **A-9** | **STANDS** | `DDD-cost-03`'s **`breaks:`** field (not `notes:`) reads *"The capacity/escape denomination (`DDD-cost-05`) survives"*, which carries the superseded identity reading. The corrected form already exists at `DDD-cost-08`'s `breaks:` — *"`DDD-cost-05`'s per-act denomination of the capacity model's escape term stands"* — and is the exact template. One line. |
 
-**Adjacent instances of the A-2/A-3 identity form, found in the sweep and not booked anywhere:**
-`core/05`:12 (the document header's forward-reference gloss, upstream) and downstream `README.md`:84
-(*"escape is overflow ∩ open"* in the load-bearing-results sentence). Same one-clause repair. Ruling
-sought at GATE 1: sweep them in with A-2/A-3, or leave them for a later manifest.
+**Items added by the verification pass, swept in on Emil's GATE 1 ruling:**
+
+| Item | Disposition | Finding |
+|---|---|---|
+| **A-2b** | **DONE** | `core/05`:12 (upstream) — the document header's forward-reference gloss carried the identity form. Corrected to the capacity-generated scope. |
+| **A-3b** | **DONE** | Downstream `README.md`:84 — *"escape is overflow ∩ open"* in the load-bearing-results sentence. Same correction. |
+| **A-6b** | **DONE** | Found while repairing A-6: `apparatus/tool-contract.md`:149 carried the identity form too (*"the escape set (`core/10`: overflow ∩ open)"*). Both defects in one line — the stale document number **and** the superseded quantifier. Repaired for both. |
+| **A-6c** | **DONE** | Found in the same sweep: downstream `README.md`:78 described upstream canon as *"`00` primitives through `11` the licensing instance"*. The licensing instance is `12`; `13` is delivery. Same renumbering-residue family as A-6, one line, corrected to *"`00` primitives through `13` delivery"*. |
 
 ---
 

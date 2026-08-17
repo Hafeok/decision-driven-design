@@ -3,7 +3,7 @@
 **Location:** `apparatus/prefix-stability.md`. Connects the caching invariant already shipped in the
 reference tooling (`ground` PRD, INV-6) to the theory that now explains it. Depends on the
 encode/verify split (`apparatus/encode-verify.md`), the measure (`core/09`), and the floor mechanism
-(`core/10`). Verification: `assets/prefix-stability-check.py` (brute-forces all orderings and
+(`core/11`). Verification: `assets/prefix-stability-check.py` (brute-forces all orderings and
 confirms the rule in §3, including the case that falsifies the naive version).
 
 **Standing on:** **Robert C. Martin, the Stable Dependencies Principle** (*Agile Software
@@ -186,7 +186,7 @@ stable prefix *is* the encoded part; the volatile suffix *is* the residual. Pref
 merely resemble the encoded/judgment split — **it is that split, serialised in the order the cache can
 exploit.**
 
-**And cost and quality stop being a trade-off.** `core/10` shows the lever on escape is the **encode
+**And cost and quality stop being a trade-off.** `core/11` shows the lever on escape is the **encode
 fraction**, not context size. Encoded content is exactly the cacheable content. Therefore:
 
 > **Maximising cache hit rate and minimising escape are the same optimisation.** Raising the encode
