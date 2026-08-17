@@ -1,0 +1,27 @@
+# meta/sessions/
+
+Session arrival records. One directory per session, named `YYYY-MM-DD-<slug>/`, holding the
+**prompt** and its **bootstrap** as committed *before* the session ran.
+
+**Why this exists.** Five sessions arrived without a durable record of what they were asked to do:
+the prompt lived only in the invocation, so a session's own charter could not be cited, diffed, or
+checked against what the session actually did. `DDD-dec-17` records those five arrival failures.
+Committing the prompt first makes the charter a repo object — quotable at every gate, and auditable
+afterwards against the commits the session produced.
+
+**The convention.** Before a session begins work:
+
+1. `meta/sessions/YYYY-MM-DD-<slug>/prompt.md` — the session prompt, verbatim.
+2. `meta/sessions/YYYY-MM-DD-<slug>/bootstrap.md` — the invocation message and the session's
+   parameters (branch, base commits, gates, principal).
+
+Both land in the session's first commit, on the session's branch, before any canon is touched.
+
+A session's own scope is thereby fixed at arrival rather than reconstructed at close. Where a
+session's later work exceeds the committed prompt, the excess is visible as excess.
+
+**Index.**
+
+| Session | Type |
+|---|---|
+| `2026-08-17-freight/` | Interactive canon curation — the accumulated small-items list (batches A–G) |

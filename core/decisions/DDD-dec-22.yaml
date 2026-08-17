@@ -1,0 +1,89 @@
+format: 1
+id: DDD-dec-22
+kind: decision
+statement: |
+  Two extensions to the cross-repo pin checker, filed together because they are one instrument. W6: pins are instrumented on pinned CONTENT — statement, region and canonical_md — not only on status, because a pinned claim's statement or region moving while its status holds is the case W5 cannot see, and it has now been observed twice. W7: establishing a local term id that collides with the pinned upstream registry requires an explicit governing decision; silent shadowing is a warning, suppressible only by citing the decision id.
+principal: Emil
+made: 2026-08-17, freight session (Batch E, items E-1 and B-4); W7's rule ruled 2026-08-10 and filed here, W6 ruled in-session
+resolution: |
+  Implement both in validate-core-order.py's cross-repo pass, and instrument the existing pins.
+  Keep the implementation minimal: hash the pinned fields, warn on divergence; compare local ids
+  against the upstream registry, warn where no decision is cited. No new file, no new store, no
+  errors introduced — both are warnings, because both describe a state a human must read rather
+  than a state that is wrong on its face.
+
+  W6 — content instrumentation. Basis: DDD-dec-16 and DDD-dec-18, which record the same failure
+  twice in their own resolutions.
+
+  - DDD-dec-16 (v5.4): DDD-floor-01's statement moved under the escape scope correction while its
+    status stayed reported. E12 silent, E13 silent (nothing here embeds it), W5 silent.
+  - DDD-dec-18 (v5.5): DDD-cost-09's region gained the per-act-site qualifier while its status
+    stayed projected. Every channel silent again. That decision names it in canon's voice —
+    "only status is instrumented" — and calls it the statement-moved-silently case for the
+    second time.
+
+  Twice is the threshold. Both advances were governed correctly, by a human noticing; the
+  instrument now notices, and the decision to advance stays a decision. Each pin gains
+  content_hash: sha256:..., a digest over statement, region and canonical_md joined by a NUL
+  separator so text moving between fields changes the digest. A pin carrying no content_hash
+  warns as uninstrumented — which is what stops the field being optional in practice. All 28
+  existing pins are instrumented in this filing.
+
+  What W6 deliberately does NOT hash, and why. Status is excluded: W5 already instruments it, and
+  folding it in would make two classes fire for one movement. Notes, evidence, falsifier, breaks
+  and credits are excluded: the booked scope is "statements and regions", the two fields the
+  evidence is about, and widening it would make W6 fire on every annotation — including the
+  kind this very session filed across a dozen claims, which is exactly the noise that would get
+  the warning ignored. A stated limit, not an oversight: an evidence entry or a falsifier can
+  still move at a pinned ref with nothing firing.
+
+  One further limit, recorded because it is real. Registry-only terms — those with no
+  canonical_md, no statement and no region — all digest identically, so W6 cannot distinguish
+  one from another. It still fires when such a term GAINS content, which is the direction that
+  matters (a term acquiring canonical text is a term becoming embeddable). Three pins are in
+  this position today: term:cost-register, term:standing-cost, term:occasioned-cost.
+
+  W7 — shadow declaration. Basis: Emil's ruling of 2026-08-10, item 2, recorded verbatim in
+  meta/measure-note-related-work-2026-08-10.md: "establishing a term ID that collides with the
+  pinned upstream registry requires an explicit decision reference; silent shadowing becomes a
+  validator warning (new class), suppressible only by citing the governing decision ID."
+
+  The check ranges over the WHOLE upstream registry, never the pin list, and this is ratified
+  explicitly rather than left to the implementation. term:maturation — the instance that
+  motivated the rule — is not pinned. A pin-scoped check would have been silent on the one case
+  the rule exists for, which is the instrument missing its own reason to exist. The upstream
+  loader already indexes every upstream object, so the wider scope costs nothing.
+
+  Suppression is by citing a decision, never by a bare flag: a local entry carries
+  shadows_upstream: <decision-id>. The one live shadow, term:maturation, cites DDD-dec-21, filed
+  alongside this decision. A rename is the other legitimate response and needs no decision.
+
+  Verified rather than asserted. Both classes were exercised before filing. W7 fires on
+  term:maturation and on nothing else across five local objects. W6 fired on all 28 pins as
+  uninstrumented before the hashes were written and on none after. The negative test reproduced
+  DDD-dec-18's exact case against a modified upstream checkout — DDD-cost-09's region altered,
+  status untouched — and W6 fired on that pin alone, naming both digests. Run against the live
+  upstream branch this session is producing, W6 is silent: this session moved notes, breaks and
+  prose, and no pinned statement or region, which is what the instrument should say and does.
+basedOn:
+  - DDD-dec-16
+  - DDD-dec-18
+  - DDD-dec-21
+  - DDD-agent-01
+notes: |
+  Both items were booked separately — E-1 from the instrumentation batch, B-4 from the registry
+  batch — and were re-sequenced together at this session's GATE 1 on Emil's ruling. They edit the
+  same function, they are both warning classes on the same cross-repo pass, and filing them apart
+  would have produced two decisions describing one instrument.
+
+  Why this is DDD-agent-01 applied to the checker. That claim holds that long-running agent drift
+  is escaped decisions caused by basis loss, and that the remedy is basis as query rather than
+  context residue. A pin is a basis held as a query — it names an upstream id and a ref, and the
+  checker resolves it. Instrumenting only status left the query answering a narrower question
+  than the basis it stood for: the id existed and its status held, while what the claim said had
+  changed underneath. W6 makes the query ask what the basis actually is.
+
+  Not filed: no rule about what to DO when W6 fires beyond reading the change. The advance stays
+  a governed decision, per graph/upstream.yaml's own header rule and the DDD-dec-10/16/18
+  precedent. An automatic bump on divergence would convert exactly the decision this instrument
+  exists to surface into a mechanical one.

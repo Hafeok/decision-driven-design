@@ -27,11 +27,18 @@ Warnings:
   W3  graph object WITH a canonical_md is embedded nowhere (registry-only
       objects — terms/claims without canonical_md — are exempt by design)
   W4  established term has no graph entry yet (migration gap)
+  W6  a pinned upstream object's CONTENT moved while its status held — the
+      statement-moved-silently case (DDD-dec-16, DDD-dec-18); also fires for a
+      pin carrying no content_hash at all, which is an uninstrumented pin
+  W7  a local term id shadows an id in the pinned upstream registry with no
+      governing decision cited (DDD-dec-22); suppress by adding
+      shadows_upstream: <decision-id> to the local entry
 
 Usage: python3 validate-core-order.py [core-dir]   (graph read from <core-dir>/graph/)
 Exit 1 on any error. Requires PyYAML.
 """
 
+import hashlib
 import os
 import re
 import subprocess
@@ -174,6 +181,8 @@ def load_upstream_graph(clone_dir: Path):
             objs[d["id"]] = {
                 "status": str(d.get("status", "")),
                 "canonical_md": (d.get("canonical_md") or "").strip(),
+                "statement": (d.get("statement") or "").strip(),
+                "region": (d.get("region") or "").strip(),
             }
     gdir = core / "graph"
     if gdir.is_dir():
@@ -184,14 +193,32 @@ def load_upstream_graph(clone_dir: Path):
                     objs[term["id"]] = {
                         "status": str(term.get("status", "")),
                         "canonical_md": (term.get("canonical_md") or "").strip(),
+                        "statement": (term.get("statement") or "").strip(),
+                        "region": (term.get("region") or "").strip(),
                     }
             for claim in data.get("claims", []) or []:
                 if "id" in claim:
                     objs[claim["id"]] = {
                         "status": str(claim.get("status", "")),
                         "canonical_md": (claim.get("canonical_md") or "").strip(),
+                        "statement": (claim.get("statement") or "").strip(),
+                        "region": (claim.get("region") or "").strip(),
                     }
     return objs
+
+
+def pinned_content_digest(obj: dict) -> str:
+    """sha256 over the fields a pin is instrumented on: statement, region, canonical_md.
+
+    Status is NOT hashed — W5 already instruments it, and folding it in here would make one
+    class fire twice for the same movement. What this covers is the case W5 cannot see: a
+    pinned claim whose statement or region moves while its status holds, observed twice
+    (DDD-dec-16 on DDD-floor-01 at v5.4, DDD-dec-18 on DDD-cost-09 at v5.5) and silent both
+    times. Fields are joined with a separator that cannot occur in YAML block scalars, so
+    moving text between fields changes the digest.
+    """
+    parts = [obj.get("statement", ""), obj.get("region", ""), obj.get("canonical_md", "")]
+    return "sha256:" + hashlib.sha256("\x00".join(parts).encode("utf-8")).hexdigest()
 
 
 def resolve_upstream(upstream_yaml: Path, errors, warnings):
@@ -261,6 +288,22 @@ def check_upstream(repo_root: Path, errors, warnings, local_ids=frozenset()):
                 f"'{pin['status_at_pin']}' — a decision basedOn it is escaped until the pin "
                 f"is consciously advanced"
             )
+        # W6: content movement — the case status cannot see (DDD-dec-16, DDD-dec-18)
+        pinned_digest = pin.get("content_hash", "")
+        live_digest = pinned_content_digest(graph[oid])
+        if not pinned_digest:
+            warnings.append(
+                f"W6 uninstrumented pin: '{oid}' carries no content_hash — its statement and "
+                f"region can move at the pinned ref with nothing firing. Add "
+                f"content_hash: {live_digest}"
+            )
+        elif pinned_digest != live_digest:
+            warnings.append(
+                f"W6 pinned content moved: '{oid}' is pinned at content_hash "
+                f"{pinned_digest} but resolves to {live_digest} at the ref — the statement or "
+                f"region moved while the status held. Read the change, then advance the pin "
+                f"consciously (a governed decision, not a mechanical bump)"
+            )
 
     # E13: any DDD doc that EMBEDS a pinned id must match upstream canonical_md byte-for-byte;
     #      any ddd:ref to an unpinned/unknown id is a dangling cross-repo reference.
@@ -292,9 +335,33 @@ def check_upstream(repo_root: Path, errors, warnings, local_ids=frozenset()):
                     f"graph/upstream.yaml — add a pin or the reference is unversioned"
                 )
 
+    # W7: local term ids that shadow the pinned upstream registry.
+    #     Ranges over the WHOLE upstream registry, never the pin list — the instance that
+    #     motivated this rule (term:maturation) is not pinned, so a pin-scoped check would
+    #     miss the one case it exists for (DDD-dec-22, on Emil's ruling of 2026-08-10).
+    shadowed = 0
+    for gf in sorted((repo_root / "core" / "graph").glob("*.yaml")):
+        data = yaml.safe_load(gf.read_text(encoding="utf-8")) or {}
+        for entry in (data.get("terms", []) or []) + (data.get("claims", []) or []):
+            oid = entry.get("id", "")
+            if not oid or oid not in graph:
+                continue
+            shadowed += 1
+            governing = entry.get("shadows_upstream", "")
+            if not governing:
+                warnings.append(
+                    f"W7 undeclared shadow: '{oid}' is established locally "
+                    f"({entry.get('established_by', 'unknown doc')}) and also exists in the "
+                    f"upstream registry at the pinned ref, with no governing decision cited. "
+                    f"Establishing an id that collides with pinned upstream requires an "
+                    f"explicit decision — add shadows_upstream: <decision-id>, or rename"
+                )
+
     print(
         f"  upstream  {len(pins)} pins resolved against the pinned ref, "
-        f"{sum(1 for w in warnings if w.startswith('W5'))} basis-loss warnings"
+        f"{sum(1 for w in warnings if w.startswith('W5'))} basis-loss, "
+        f"{sum(1 for w in warnings if w.startswith('W6'))} content-drift, "
+        f"{shadowed} shadowed id(s)"
     )
 
 

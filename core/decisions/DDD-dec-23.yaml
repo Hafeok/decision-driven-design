@@ -1,0 +1,86 @@
+format: 1
+id: DDD-dec-23
+kind: decision
+statement: |
+  Ruling 16 closed. The three constructs proposed as reductions of B1 are not one account: the disposition framing (§13.1) is redundant against landed canon and is disposed; the shared-budget account (§7.3) and the membership account (§13.7) are two accounts, not one. Membership is the operable account on all evidence to date. The reduction of capacity to membership is unevidenced and stays open.
+principal: Emil
+made: 2026-08-17, freight session (Batch F, item F-1); ruled at GATE 5 on the evidence presented both ways
+resolution: |
+  Ruled on the source rather than on the booking. The freight manifest carried ruling 16 as a live
+  pair — shared budget against membership — while the ground-axes holding note books three
+  constructs and asks whether they are one account or three. Emil's GATE 4 ruling: the source
+  governs, present all three, and the third gets a stated disposal rather than an assumed one.
+
+  Construct 3 — the disposition framing (§13.1), judgement and escape as "two dispositions of
+  unencoded demand, separated by actor capability" — is DISPOSED as redundant. Its own revision-9
+  annotation reaches the finding: the framing was written when the actor-capacity model was booked
+  as blocked, the model is in fact ratified in live canon, and read against core/11's actual
+  machinery it adds nothing over term:capacity and term:escape-mechanism. Verified against those
+  terms at head. The construct proposes no observation the mechanism does not already make. It is
+  not a third account, and the disposal is recorded here so it does not stay formally undisposed.
+
+  Constructs 1 and 2 are TWO ACCOUNTS. Three pieces of evidence, each read for what it actually
+  establishes:
+
+  - Corpus question-3 is silence, not discrimination. Across 11 expressions and 7 gates no
+    classification ever invoked a magnitude, and the corpus test says so precisely: "nothing here
+    distinguishes the two accounts for each other, but nothing needed the second." Nothing in that
+    corpus was under load, so magnitude was never reached. An absence of need is not evidence of
+    reduction.
+  - The separation canon already ratified is DIRECTIONAL. DDD-dec-15 establishes that the
+    membership shape covers five instances of ratified canon the capacity shape does not — the
+    capacity account is sufficient for escape and never necessary. That is a one-way result:
+    membership reaches cases capacity cannot. It is not a reduction of capacity to membership, and
+    DDD-floor-01's falsifier limb two — escape on decisions with a held verifier — did not fire.
+  - The note's own author claims operability, not reduction: "Both may be needed (a capable actor
+    can still be overloaded), but membership is the operable one." §13.7's argument is that
+    capability is a set with extension where the budget was a scalar, which makes membership
+    checkable. Checkability is an instrumentation property, not an ontological one.
+
+  So: membership is the operable account for register work, and that is a statement about
+  instruments. Capacity-generated escape remains real, reported on two reproducing assets, and
+  neither account reduces to the other on any evidence in hand.
+
+  The reduction hypothesis — membership primary, the budget its lossy scalar summary, overflow a
+  membership failure under load — was drafted to filing quality at
+  meta/sessions/2026-08-17-freight/batch-f-evidence.md and is NOT filed. Emil's ruling directs the
+  reason to be recorded here verbatim:
+
+    Declining to file Reading A after drafting it to filing quality — because it would assert a
+    universal from an absence in the exact claim region where dec-15 corrected that error four
+    days ago — is the discipline at its best.
+
+  The hypothesis stays open, as a hypothesis, with the observation that would settle it: a
+  specimen under load whose classification differs between the two accounts. The corpus could not
+  supply one because it contained no such specimen.
+basedOn:
+  - DDD-dec-15
+  - DDD-floor-01
+  - term:escape
+  - term:capacity
+  - term:escape-mechanism
+notes: |
+  Filing scope, deliberately narrow: this decision closes an open ruling and mints no claim,
+  amends no statement, and moves no region. Both accounts already exist in canon — the capacity
+  one as term:escape-mechanism and DDD-floor-01, the membership one as term:escape and term:store
+  read together, exactly as DDD-dec-15 established. What was missing was a ruling on their
+  relation, and that is all this decision supplies.
+
+  The b1-reconciliation note's instruction to the sessions reading this evidence — "Report the
+  instances. Do not rule on the accounts. DDD-dec-15 settled the scope; it did not settle which
+  account is primary, and this session has no standing to" — was written for the corpus session
+  and was honoured here in the only way a session can honour it while a principal is present: the
+  session reported and drafted, and the principal ruled.
+
+  Adjacent and unresolved, recorded so it is not read as settled by this decision: whether the
+  capacity model should be indexed to the arrangement rather than the actor. Four convergent
+  sources, booked as its own successor item (meta/sessions/2026-08-17-freight/successor-items.md,
+  S-1). If it resolves toward the arrangement, the two accounts in this decision are both
+  re-indexed and their relation is re-examined on the new index — this ruling holds on the
+  vocabulary as it stands today, not on any successor to it.
+
+  The delivery claims (DDD-delivery-01/02/03, term:delivery, term:undelivered,
+  term:presumed-discharge) were examined as evidence and contribute none to the question. They
+  discriminate arrival, not magnitude, and are further membership-side machinery rather than a
+  test between the accounts. Recorded so a later session does not re-examine them expecting a
+  discriminator.

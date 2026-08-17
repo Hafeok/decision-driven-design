@@ -19,3 +19,30 @@ notes: |
   exists only for identities that outlive their verdict horizons, so the choice of identity
   unit decides which actors the instrument can certify at all — model-version churn against
   open-claim horizons is the type case (§11(c)'s turnover bound, pending GATE G).
+
+  Annotation, 2026-08-17 (freight session, item G-8; source: upstream
+  meta/holding-note-addendum-determinables.md, Q37, whose own routing line reads "the dec-14
+  annotation immediately, one line"). This decision stays OPEN and is NOT resolved here.
+
+  Q37 reframes the question rather than answering it. Under ground-indexed determination —
+  determination records indexed by ground (position, as-of, delivery, verdict), with the actor a
+  projection over the registry and capability inferred from the act stream rather than posited —
+  the identity unit becomes the JOIN KEY for one capability profile, and cross-version transfer
+  becomes profile inheritance, partial and per-region. That is a smaller question than the
+  ontological one this node currently poses: not "what kind of thing is the claimant identity"
+  but "what does the act stream join on".
+
+  Two things the reframing does not touch. DDD-cost-24's validity condition still decides which
+  actors the instrument can certify at all — a profile whose identity does not outlive its verdict
+  horizons is not rescued by being a join key. And the accountable principal refuses the inversion
+  outright: stake, sanction and consequence-bearing are institutional and are not inferable from
+  any act stream, so ground-indexing covers what an arrangement can resolve and never who answers.
+  Q37 states that carve as shipping with it, and the register guard verbatim: profiles describe
+  arrangements; a person is a component; this rates nothing and nobody.
+
+  Sequencing, recorded so the resolving session inherits it: take Q29 and Q37 together. Q37's own
+  argument is that six of Q29's seven parameters are ground-relations — "the profile was always a
+  ground-profile wearing a species name" — so resolving the identity unit from Q29's parameter set
+  alone would resolve it against a framing Q37 supersedes. Q37 routes downstream, after the
+  Q25/Q27 wave; this node's conditional transfer to a Decision Ledger PRD repo is unaffected and
+  still governs.

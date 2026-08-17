@@ -1,0 +1,72 @@
+format: 1
+id: DDD-dec-21
+kind: decision
+statement: |
+  The term:maturation shadow, recorded: this repository's term:maturation (the return channel, established by 14-maturation.md) and the principle repository's term:maturation (the compound over repetition, established by 08-projections.md) are two different objects under one id. Deliberate in destination, escaped in mechanism, known and temporary — the resolution is bound to the deferred 06/08 diachronic carve, at which the upstream establishment retires or re-words without the term and this establishment becomes sole.
+principal: Emil
+made: 2026-08-10, measure-note related-work session (ruling recorded verbatim, execution deferred); filed 2026-08-17, freight session, on the GATE 1 ruling splitting it out of the deferred carve
+resolution: |
+  Record the shadow; do not resolve it here. Emil's ruling of 2026-08-10 fixed the disposition
+  and deferred its filing to the next canon contact; the freight session is that contact, and
+  its GATE 1 ruling split this record out of Batch C so that it lands even though the carve
+  itself defers whole.
+
+  The disposition, in the ruling's own terms:
+
+  - **Deliberate in destination.** DDD-dec-11 governed the maturation model's filing correctly.
+    The model quantifies over persistence between acts, so it files with the projection under
+    the boundary charter (upstream DDD-dec-09; DDD-dec-10 here), and R4b puts it here as
+    actor-general rather than domain-scoped. Nothing about where the term was established is a
+    defect.
+  - **Escaped in mechanism.** No ruling governed id reuse across the two registries. The
+    validator's default resolved it — silently, by having no opinion — which is a governing
+    decision determined by nobody, and therefore escaped under term:escape. The escape is in the
+    id-allocation mechanism, not in the model.
+  - **Known and temporary.** Recorded here as such, with the resolution bound to the carve.
+
+  What the two objects actually are, so the record is checkable rather than assertive:
+
+  - Upstream: "Maturation is the compound over repetition: pay once, and every future run is
+    cheaper." An axis of the compound, paired with the funnel over depth.
+  - Here: "Maturation — the return channel spanning the act in reverse: from the mechanical
+    store (post-act verdicts) into the encoded store (pre-act standing supply). A maturing
+    arrangement is one where that loop is closed."
+
+  The 2026-08-10 session ran a read-only sense check over this whole repository and reported
+  that every occurrence of the id and of the bare word intends the local return-channel sense,
+  and that the upstream compound-over-repetition sense appears nowhere here. That check was
+  re-run at this session's GATE 1 verification and still holds. The two senses do not mix in
+  this repository, which is why the shadow has cost nothing so far and why it is safe to carry
+  it further.
+
+  Resolution path, named rather than executed. The upstream 06/08 diachronic carve retires or
+  re-words the upstream establishment without the term, at which point this establishment
+  becomes sole and this decision closes. That carve was deferred whole at this session's GATE 1
+  on Emil's ruling — three unruled design decisions sit inside it, and a carve that removes a
+  document's thesis is not freight. Its plan is filed at
+  meta/sessions/2026-08-17-freight/carve-plan-c1.md and is the successor session's seed.
+
+  Until then the shadow stands, declared. core/graph/terms.yaml's local entry carries
+  shadows_upstream: DDD-dec-21, which is what suppresses the W7 warning DDD-dec-22 introduces —
+  the general rule this instance motivated. A reader who meets either term now reaches this
+  record from the registry.
+basedOn:
+  - DDD-dec-11
+  - DDD-dec-10
+  - term:escape
+  - term:maturation
+notes: |
+  Filed seven days after the ruling that fixed it, which is itself the phenomenon the ruling
+  named: the disposition was decided on 2026-08-10 and existed only in a closing-report
+  addendum until now. The addendum is at meta/measure-note-related-work-2026-08-10.md and
+  records the ruling verbatim, including the instruction that execution was deferred to the
+  next canon contact.
+
+  Not filed, deliberately: no claim is minted. An id collision between two registries is a
+  bookkeeping fact about the graph's storage, not a proposition about determination, and
+  minting a claim for it would file housekeeping as a finding.
+
+  The three items of the 2026-08-10 ruling, and where each now sits. Item 1, this record: filed
+  here. Item 2, the general shadowing rule and its validator warning class: filed as DDD-dec-22,
+  with the check implemented in validate-core-order.py. Item 3, the carve itself: deferred whole
+  at GATE 1, plan filed, scope explicitly including the upstream term:maturation establishment.

@@ -760,8 +760,8 @@ variable for a deployed system is estimation, with error bars.
 
 Five self-contained scripts regenerate every figure above: `measure-toy.py` for §4,
 `measure-actor-allocation.py` for §5.1, `measure-rag.py` for §5.2, `measure-chained-seams.py` for
-§5.3, and `measure-nonuniform-ground.py` for §5.4 — the last two in `assets/` beside this note. All
-five were re-run against this draft and reproduce the stated values.
+§5.3, and `measure-nonuniform-ground.py` for §5.4. All five now live in the principle repository's
+`core/assets/`, at the pinned ref. All five were re-run and reproduce the stated values.
 
 §5.2's replicate figures — the estimator's standard deviation, central range, and bias — characterise
 the estimator `measure-rag.py` uses and are not printed by it. They are reproduced by running the same

@@ -16,3 +16,4 @@ node_modules/
 
 # The build-note file, once applied
 applications/sdlc/_CARRY_FORWARD_FROM_V3.md
+__pycache__/

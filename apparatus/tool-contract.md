@@ -1,7 +1,7 @@
 # The Tool Contract
 
 **Location:** proposed `apparatus/tool-contract.md`, or `applications/` if scoped to the local-agent
-harness specifically. Derives from the floor mechanism (`core/10`), the encode/verify split
+harness specifically. Derives from the floor mechanism (`core/11`), the encode/verify split
 (`apparatus/encode-verify.md`), and tool surfaces (`apparatus/tool-surfaces.md`). It is the
 tool-level counterpart of foundations RFC 0005 — **the same ground-relation requirement, one altitude
 down.**
@@ -120,14 +120,14 @@ the first does not.
 
 Whether the response size is **bounded**, and by what. Unbounded responses are the ground-exporter
 signature and the direct driver of the load term in `escape = open_residual × p_err(load)`
-(`core/10`). A tool that cannot bound its output must say so, so the harness can bound it at the call
+(`core/11`). A tool that cannot bound its output must say so, so the harness can bound it at the call
 site or decline to bind the tool at all.
 
 ### 2.5 Verdict
 
 Whether the call **supplies a closing predicate on the actor's own output** — a test result, a type
 check, a schema validation. This is the verifier class, and it is the only declaration that
-*subtracts* from the floor: it converts escape into retry (`core/10` §3).
+*subtracts* from the floor: it converts escape into retry (`core/11` §3).
 
 A verdict declares **what it checked** and, critically, **what it did not.** A test suite passing is a
 verdict on *the behaviour under test*, not on conventions, structure, or anything else. Overstating a
@@ -146,7 +146,8 @@ The harness supplies what tools cannot know, and it binds **before the run**.
 2. **Bind a toolset**, and from the tools' declarations compute:
    - which decisions are **resolved** by some bound tool,
    - which are **verified** by some bound verdict,
-   - which remain **open** — the escape set (`core/10`: overflow ∩ open).
+   - which remain **open** — the escape set (`core/11`: overflow ∩ open, the mechanism of
+     capacity-generated escape).
 3. **Freeze the binding.** The toolset is fixed for the run.
 
 ### 3.1 The LLM never picks tools

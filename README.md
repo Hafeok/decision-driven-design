@@ -5,8 +5,8 @@ determinations come from, what they cost, and which actor should make each one.
 
 > **This repository was split (`DDD-dec-04`).** The actor-general theory now lives in the principle
 > repository, [`actor-indexed-determination`](https://github.com/Hafeok/actor-indexed-determination)
-> (tag `v5.0.0`); *decision-driven-design* is its **software projection** and keeps the name. Core
-> canon is consumed by pin, not copy — see [`graph/upstream.yaml`](graph/upstream.yaml). Falsification
+> (split at tag `v5.0.0`, pin now advanced — see `graph/upstream.yaml`); *decision-driven-design* is
+> its **software projection** and keeps the name. Core canon is consumed by pin, not copy — see [`graph/upstream.yaml`](graph/upstream.yaml). Falsification
 > of a core claim is an issue for the principle repo; software apparatus and domain projections are
 > issues here. What remains in this repository: the tool contracts and apparatus, the SDLC and
 > organisation-design projections, the graph tool's claims and the program's decisions.
@@ -74,15 +74,16 @@ cannot support is worth more than one that overclaims.
 
 ### Core — the theory (upstream)
 
-The actor-general theory — `00` primitives through `11` the licensing instance, the canonical term
-graph, and the reproduction assets — is **canon in the principle repository**,
-[`actor-indexed-determination`](https://github.com/Hafeok/actor-indexed-determination), tag `v5.0.0`.
+The actor-general theory — `00` primitives through `13` delivery, the canonical term graph, and the
+reproduction assets — is **canon in the principle repository**,
+[`actor-indexed-determination`](https://github.com/Hafeok/actor-indexed-determination), at the tag
+pinned in [`graph/upstream.yaml`](graph/upstream.yaml) (`v5.5.0` at time of writing).
 It is not duplicated here. This repository pins the specific claims it depends on in
 [`graph/upstream.yaml`](graph/upstream.yaml); read the theory in the principle repo's `core/`.
 
 The load-bearing, falsifiable results — the floor is in the acceptance predicate, selection intensity
-tracks predicate closure, demand is the Shannon entropy of the verdict, escape is overflow ∩ open —
-all live upstream. Falsification of any of them is an issue against the principle repo, not this one.
+tracks predicate closure, demand is the Shannon entropy of the verdict, overflow ∩ open is the
+mechanism of capacity-generated escape — all live upstream. Falsification of any of them is an issue against the principle repo, not this one.
 
 ### Apparatus — the mechanisms
 
