@@ -32,7 +32,17 @@ upstream:
   # rather than mechanical for the recorded reason: DDD-cost-09's region moved at v5.5 while
   # its status stayed projected — the statement-moved-silently case a second time, and W5 was
   # silent throughout.
-  ref: v5.5.0                       # tag, never a branch
+  # Advanced v5.5.0 -> v5.6.0 at the Wave 3 session (2026-08-18), recording a MISS: this advance
+  # should have accompanied Emil's acceptance of the freight PR (upstream merge 01db788, tagged
+  # v5.6.0) and did not — caught by the Wave 3 GATE 1 survey, not by the instrument, because W6
+  # resolves against the ref you pinned and a missed advance leaves that ref internally
+  # consistent. The advance is DDD-dec-25 here; it fired nothing (0 basis-loss, 0 content-drift
+  # — v5.6.0's one pinned-claim change, DDD-floor-01, was notes-only, outside the instrumented
+  # fields). On Emil's acceptance of the Wave 3 upstream PR the ref bumps to v5.7.0 per the
+  # DDD-dec-10/16/18 pattern; predicted firing at that bump: none (DDD-frame-01's Wave 3 change
+  # is notes-only; frame-02/03/07 are not pinned), with pins for the new upstream nodes the
+  # annotations rest on (DDD-frame-14; DDD-hyp-04/05) added at the same act, per DDD-dec-25.
+  ref: v5.6.0                       # tag, never a branch
   pins:
     # basis claims for DDD-dec-04 (the split decision itself rests on these)
     - id: DDD-frame-01

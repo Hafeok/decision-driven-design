@@ -1,0 +1,56 @@
+format: 1
+id: DDD-dec-25
+kind: decision
+statement: |
+  The software projection advances the upstream pin v5.5.0 to v5.6.0, recording that this advance is late — it should have accompanied the freight PR's acceptance and did not, a miss caught by the Wave 3 survey rather than the instrument — and stages the v5.7.0 advance for Emil's acceptance of the Wave 3 upstream PR, with the two downstream annotations (the escape-cost mechanism named; the calibration-instrument qualification cross-linked) and the pins they will need.
+principal: Emil
+made: 2026-08-18, Wave 3 session (GATE 5 sweep, per the GATE 1 ruling on the pin observation and the GATE 4 close); draft-pending-ruling at the gate
+resolution: |
+  The miss, recorded honestly. Upstream tagged v5.6.0 at the freight PR's acceptance
+  (2026-08-17); this repository's ref stayed v5.5.0 with no recorded advance and no finding
+  fired. W6 could not see it: the instrument resolves pins against the ref you pinned, so a
+  missed advance leaves the pinned world internally consistent while the live one moves. The
+  gap was caught by the Wave 3 GATE 1 survey reading both repositories at head — a session
+  survey doing the instrument's job, which is itself the honest sentence the manifest carries.
+  W6's design is not thereby impugned (it instruments content movement at the ref, not ref
+  staleness); whether ref staleness deserves its own instrument is left to the successor queue,
+  not resolved here.
+
+  The advance to v5.6.0, governed per the dec-10/16/18 pattern. Firings at the advance: none —
+  0 basis-loss, 0 content-drift. v5.6.0's one pinned-claim change (DDD-floor-01, freight
+  transcription repair) was notes-only, outside the instrumented fields (statement, region,
+  canonical_md), and term:verdict — whose canonical text dec-19 re-stated at v5.6.0 — is not a
+  pinned id here. No pin added, none removed at this step.
+
+  The staged v5.7.0 advance, on Emil's acceptance of the Wave 3 upstream PR:
+
+  - the ref bumps to the v5.7.0 tag, upstream-first, per precedent;
+  - predicted firing: none — DDD-frame-01's Wave 3 change is notes-only; DDD-frame-02, -03 and
+    -07, whose statements moved, are not pinned; no local term shadows the three new upstream
+    terms (the one standing W7, term:maturation, predates this session);
+  - three pins are added at the bump, because the annotations below base on the ids:
+    DDD-frame-14 (basis of the DDD-cost-16 annotation), DDD-hyp-04 and DDD-hyp-05 (the
+    restated qualification the DDD-cost-24 annotation cross-links). They cannot be pinned at
+    v5.6.0, where the ids do not exist — pinning them now would fire E12, which is why the
+    addition is staged with the bump rather than performed here.
+
+  The two annotations, filed now (notes-level, no statement moves):
+
+  - DDD-cost-16 gains: its mechanism is named upstream — escaped residual generates no verdict
+    because the return channel consumes verdicts only (DDD-frame-14); escape produces outcomes,
+    and outcomes are invisible to maturation.
+  - DDD-cost-24 gains: its validity condition is restated upstream on DDD-hyp-04 and
+    DDD-hyp-05 with DDD-cost-13 cited, per the citation-scope convention — the upstream bodies
+    carry the content, this claim carries the cross-link.
+basedOn:
+  - DDD-dec-16
+  - DDD-dec-18
+  - DDD-dec-20
+  - DDD-cost-16
+  - DDD-cost-24
+  - DDD-agent-01
+notes: |
+  DRAFT-PENDING-RULING (GATE 5). The upstream session decision is DDD-dec-24 (upstream, citing
+  upstream ground only, per the freight convention); this decision is its downstream
+  counterpart, and the two reference each other's repositories only in the direction the
+  dependency allows.
