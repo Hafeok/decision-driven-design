@@ -115,6 +115,13 @@ affirmed phrase names:
 > volume; occasioned carrier supply does not. Closure converts the act's assurance cost from
 > volume-linear to volume-amortised.
 
+**Per act-site, inherited from the pinned basis.** `DDD-cost-09`'s standing locus holds at act-sites
+where the check is *act-triggered*; the same check *actor-triggered* at another site is
+judgement-mediated supply. The amortisation inherits that boundary — standing cost divides over the
+acts the check mechanically reaches, and over no others. One criterion can therefore amortise at one
+site and not at another: the corpus's no-unwrap row is the instance, act-triggered in CI and
+actor-triggered locally.
+
 *(Claim `DDD-cost-10`, citing `DDD-cost-09` as pinned basis.)*
 
 The illustration is selection-pipeline economics: the standing investment behind selection is

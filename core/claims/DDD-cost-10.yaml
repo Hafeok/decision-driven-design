@@ -5,14 +5,14 @@ statement: |
   A closed predicate is amortised assurance: the standing mechanism's cost divides over act volume while occasioned carrier supply does not, so closure converts the act's assurance cost from volume-linear to volume-amortised.
 status: projected
 region: |
-  The volume layer; rests on the upstream locus conversion (DDD-cost-09, pinned) and the two-part total C(E, N). Holds wherever the pinned per-act register does.
+  The volume layer; rests on the upstream locus conversion (DDD-cost-09, pinned) and the two-part total C(E, N). Holds wherever the pinned per-act register does — and therefore inherits the pinned claim's per-act-site qualifier: the amortisation holds at act-sites where the check is act-triggered, which is where DDD-cost-09 supplies the standing locus this claim divides over volume. The same check actor-triggered at another site is judgement-mediated supply, and standing cost does not divide over acts the check never reaches.
 evidence: []
 falsifier: |
   Check-coverage investment failing to reduce cumulative assurance cost at any volume against carrier supply at declared-equal assurance.
 breaks: |
   Selection-pipeline economics loses its explanation; the volume argument for predicate discipline reduces to the per-act locus claim alone.
 owner: none
-changed: 2026-08-10, Wave 2 curation session (GATE B carve)
+changed: 2026-08-17, freight session (region qualifier inherited from DDD-cost-09; statement, status, evidence, falsifier and owner unchanged)
 notes: |
   The affirmed headline phrase (Emil, holding note §5; ratified at Wave 2 GATE B) files here per
   the GATE B carve: the upstream half (DDD-cost-09) is the synchronic locus conversion; this
@@ -20,3 +20,16 @@ notes: |
   selection-pipeline economics — enormous standing investment because the per-act assurance it
   enables cannot be bought otherwise. Adjacent, not identical, to the sign flip (upstream
   DDD-cost-11): locus and amortisation here, class consequences there.
+
+  Inherited qualifier, 2026-08-17 (freight session, item D-6). DDD-cost-09's region gained a
+  per-act-site qualifier at v5.5 by scope extension (DDD-dec-18): assurance-by-check is supplied
+  standing at act-sites where the check is act-triggered; actor-triggered at another site it is
+  judgement-mediated supply with its own failure modes. This claim is that claim's amortisation
+  corollary over act volume, so the qualifier is not optional here — the cost that divides over
+  volume is the standing cost, and there is no standing supply to divide at a site the check does
+  not mechanically reach. The corpus no-unwrap row is the instance: one criterion, act-triggered
+  in CI and actor-triggered locally, amortising at the first site and not the second.
+
+  Adjacent and consistent: DDD-delivery-04 conditions the projection on the harvest channel
+  actually delivering. Same shape, different mechanism — that claim is about the return channel
+  across acts, this qualifier about where the check fires within one.

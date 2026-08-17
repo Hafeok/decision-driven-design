@@ -83,8 +83,8 @@ warrant, unnecessary for the operation** [`DDD-frame-11`].
 | §4 | Decomposition seam (both splits sum to 25.493) | `measure-toy.py` | upstream `v5.3.0` |
 | §5.1 | Actor store allocation (three sums = 25.493) | `measure-actor-allocation.py` | upstream `v5.3.0` |
 | §5.2 | Retrieval / encode-verify (`H(A)` ≈ 2.61 invariant) | `measure-rag.py` | upstream `v5.3.0` |
-| §5.3 | Chained seams (iterated chain rule, both orders) | `measure-chained-seams.py` | `assets/` here |
-| §5.4 | Non-uniform ground (three deployments) | `measure-nonuniform-ground.py` | `assets/` here |
+| §5.3 | Chained seams (iterated chain rule, both orders) | `measure-chained-seams.py` | upstream `core/assets/` (promoted 2026-08-17) |
+| §5.4 | Non-uniform ground (three deployments) | `measure-nonuniform-ground.py` | upstream `core/assets/` (promoted 2026-08-17) |
 
 Numbers appear in prose only from the scripts; every stated value re-runs. §5.2 is presented as
 a demonstration that the identification survives an estimated channel — never as conservation
@@ -172,10 +172,20 @@ ratification matters.
 
 **Recorded for the next canon session (not this project's to execute):**
 
-- Promote `measure-chained-seams.py` and `measure-nonuniform-ground.py` to upstream
-  `core/assets/`; file the iterated-form claim node (next free `DDD-measure-14`), at which point
-  §5.3's pending-node flag upgrades to the ID. The chained-seams asset is the worked instance
-  `06-composition.md` names as owed; cite it in the filing.
+- ~~Promote `measure-chained-seams.py` and `measure-nonuniform-ground.py` to upstream
+  `core/assets/`; file the iterated-form claim node (next free `DDD-measure-14`)~~ — **DONE,
+  freight session 2026-08-17.** Both assets are upstream and re-run there; `DDD-measure-14` is
+  filed at `reported` citing the chained-seams asset, and `DDD-measure-12` is wired to the
+  non-uniform asset. `DDD-measure-15` (admissibility) is filed alongside, at `projected`.
+  **Left for this paper's own session, deliberately** (manuscript citations are out of the freight
+  session's scope): §5.3's pending-node sentence and §3.1's pending-node sentence both still read
+  *"a dedicated claim node … is pending canon filing"*. Both nodes now exist — upgrade §5.3 to
+  `DDD-measure-14` and §3.1 to `DDD-measure-15`, and add both to Appendix A. Note that
+  `core/09` now carries admissibility as its own §2.1, so the paper's §3.1 can cite canon rather
+  than carry the condition alone.
+- The chained-seams asset is the worked instance `06-composition.md` named as owed; the filing
+  cites it, and `core/09` §9's caveat now records that two of its three owed instances (chained
+  seams, non-uniform ground) are worked while multi-actor composition stays owed.
 - The `term:maturation` collision items and the 06/08 carve, per the recorded ruling of
   2026-08-10 (see `meta/measure-note-related-work-2026-08-10.md`, closing addendum).
 
