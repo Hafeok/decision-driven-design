@@ -130,3 +130,20 @@ upstream:
     - id: DDD-delivery-01
       status_at_pin: projected
       content_hash: sha256:67377ef2294de814afd95026f2e7ad0bdb768516696395d05f1ed1645aa6d804
+    # Basis added by the freight session (2026-08-17): four upstream objects gained basedOn
+    # edges from decisions filed here — DDD-dec-20 (the session convention), DDD-dec-22 (the
+    # pin/shadow instrumentation) and DDD-dec-23 (ruling 16). Found by the GATE 6 basis-impact
+    # sweep, which is DDD-agent-01 applied to this repository: a basis cited without a pin is a
+    # basis that can move silently.
+    - id: DDD-agent-01
+      status_at_pin: projected
+      content_hash: sha256:95ec29b9c8c8e74f62cf3367fa6cdf1912baea6ec4767d7f04acfd88d2146536
+    - id: DDD-delivery-02
+      status_at_pin: projected
+      content_hash: sha256:0c24cd1cef1fcc2725133225636173546a8a0920cc9a43050ef3e71d8c459708
+    - id: term:capacity
+      status_at_pin: settled
+      content_hash: sha256:34f423630a8997facfdca12c55abec7f612cbe8e4cb855233929ccb734567916
+    - id: term:escape-mechanism
+      status_at_pin: settled
+      content_hash: sha256:ef90104fbc20240bf2cf70e01115ff2ebf0f77b063918208eda37c28c0f98701

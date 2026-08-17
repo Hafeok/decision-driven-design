@@ -1,4 +1,4 @@
-# Freight session manifest — verification against head
+# Freight session manifest — verification against head, and final dispositions
 
 **draft-pending-ruling.** Every manifest item checked against the three repositories at head before
 any repair. Verified 2026-08-17. Bases: upstream `4f58837` (v5.5.0 + the merged addendum),
@@ -112,3 +112,76 @@ it).
 
 **One item struck as already fixed: A-5.** Everything else is live at head. No item was found
 already-repaired en passant beyond A-5, and no item dissolved on inspection.
+
+---
+
+# Final dispositions (GATE 6)
+
+Every manifest item, with what actually happened. **28 booked, 4 added by the verification pass,
+32 accounted for.**
+
+## Closed — done at booked size
+
+| Item | Where it landed |
+|---|---|
+| **A-1** | `core/11` §7 names five instances; `05` §6 corrected at all three sites; repair recorded in `DDD-floor-01` notes; b1-note flag discharged |
+| **A-2 · A-2b · A-3 · A-3b** | identity form gone from `core/09` §6.4, `core/05`:12, `core/README`:23, downstream `README`:84 |
+| **A-4** | upstream `meta/consolidated-state.md` — both defects; the partiality's second reason recorded |
+| **A-6 · A-6b · A-6c** | 13 stale `core/10` refs → `core/11`; the identity form at `tool-contract`:149; the `00`–`13` range |
+| **A-7** | five pin statements now point at `graph/upstream.yaml` |
+| **A-8** | CHANGELOG v5.3.0, v5.4.0, v5.5.0 |
+| **A-9** | `DDD-cost-03` `breaks:` on `DDD-cost-08`'s template |
+| **B-1 · B-2 · B-3** | `DDD-dec-19`; `term:verdict` re-stated + re-projected; `core/02` §3's quantifier clause |
+| **D-1 · D-2 · D-3** | `DDD-measure-14`, `DDD-cost-30`, `DDD-measure-15` (+ `core/09` §2.1) |
+| **D-4 · D-5** | replicate band filed; `DDD-measure-05`'s FLAG cleared by repairing the prose |
+| **D-6** | `DDD-cost-10` region + `core/13` §5 |
+| **D-7** | both assets promoted, re-run upstream, `DDD-measure-12` wired |
+| **E-1 · B-4** | `DDD-dec-22`; W6 and W7 implemented, exercised, 32 pins instrumented |
+| **E-2** | `DDD-dec-20`; first instance is this session's own |
+| **F-1** | `DDD-dec-23` — ruling 16 closed |
+| **F-2** | `DDD-cost-05` notes — extension recorded, not adopted |
+| **F-3** | `term:escape-mechanism` scope note |
+| **G-7** | `product-cli` `dec/ddd/rejection-payload-basis` |
+| **G-8** | `DDD-dec-14` annotated, still OPEN |
+
+## Struck — already fixed
+
+**A-5.** Novelty statement corrected at `06b0603`, tagged into v5.4.0. Adjacent lines swept, no
+residue. Reported, not re-done.
+
+## Deferred — with the resistance named
+
+**C-1, the 06/08 diachronic carve.** Deferred whole at GATE 1. Not a budget problem: three of its
+steps are unruled design decisions, and a carve that removes a document's thesis is not freight.
+Plan filed at `carve-plan-c1.md`; booked as `successor-items.md` S-2. Two of the three items in the
+2026-08-10 ruling were split out and closed here (`DDD-dec-21`, `DDD-dec-22`), so nothing filed
+this session needs unpicking by the carve session.
+
+## Opened — named, not answered
+
+**S-1, the actor-versus-arrangement indexing question.** Surfaced by F-2's second constraint and
+F-3 turning out to be the same defect met from opposite ends. Four convergent sources, booked as a
+distinct successor entry on Emil's ruling. The escape session was convened on three-source
+convergence.
+
+## Consequences beyond the literal booking — each ruled
+
+| What | Why it wasn't creep |
+|---|---|
+| `core/09` §9 caveat 3 rewritten | D-1 and D-7 pay two of its three owed instances; canon calling a settled debt unpaid would be false prose. The third is explicitly **not** discharged. |
+| `core/09` gained §2.1 | A filed claim with no exposition home violates the repo's own mapping convention. |
+| `DDD-measure-12` gained asset evidence | A `reported` claim with no computation in `core/assets/` violates the repo's own rule; the move supplied it. |
+| Four pins added downstream | The GATE 6 sweep found four new `basedOn` edges on pinnable upstream objects with no pin — `DDD-agent-01` applied to this repository. |
+
+## Session totals
+
+| | |
+|---|---|
+| Claims filed | 3 (`DDD-measure-14`, `DDD-measure-15`, `DDD-cost-30`) |
+| Decisions filed | 5 (`DDD-dec-19` upstream; `DDD-dec-20`…`23` downstream) |
+| Claims amended | 6 (`DDD-floor-01`, `DDD-cost-03`, `DDD-cost-05`, `DDD-measure-05`, `DDD-measure-12`, `DDD-cost-10`) |
+| Terms superseded | 1 (`term:verdict`, re-projected) |
+| Terms annotated | 2 (`term:escape-mechanism` scope note; `term:maturation` shadow declaration) |
+| Assets promoted | 2, both re-run at their new home |
+| Pins: 28 → 32 | all 32 content-instrumented |
+| Warning classes added | 2 (W6, W7), each exercised positive, negative and live before filing |
