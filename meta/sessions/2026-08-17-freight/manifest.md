@@ -185,3 +185,27 @@ convergence.
 | Assets promoted | 2, both re-run at their new home |
 | Pins: 28 → 32 | all 32 content-instrumented |
 | Warning classes added | 2 (W6, W7), each exercised positive, negative and live before filing |
+
+---
+
+## Convention recorded at GATE 6 — upstream citation scope
+
+Emil's ruling, arising from `DDD-dec-19`'s draft, which cited the Wave-1 precedent as the pair
+`DDD-dec-09`/`DDD-dec-10` following `DDD-dec-15`'s ratified wording:
+
+> **An upstream decision cites upstream ground only.** The charter rule is *name the method, never
+> the repo*, and a dependent's decision id under upstream `core/` is a dependent reference whatever
+> the precedent says. The downstream **adoption record** is where cross-references live — which is
+> what the `DDD-dec-10`-pattern decisions exist for.
+
+`DDD-dec-19` trimmed to `DDD-dec-09`. **`DDD-dec-15` stands unrepaired**: it is ratified history,
+and history is not edited for consistency with a later reading. It is not propagated either — the
+convention is going-forward, and the distinction between those two is the point.
+
+Checked at the same time: this session's other new upstream nodes — `DDD-measure-14`,
+`DDD-measure-15`, `DDD-cost-30` — carry no dependent references.
+
+Pre-existing dependent references elsewhere under upstream `core/` (`DDD-dec-08`→`DDD-dec-01`,
+`DDD-dec-09`→`DDD-cost-04`, `DDD-dec-15`→`DDD-dec-10`, `DDD-dec-17`→`DDD-dec-18`/`DDD-delivery-04`,
+and four claims citing downstream decision ids) are **history and stay as filed**. They are
+recorded here so a later session finds them already looked at rather than reporting them as new.
