@@ -50,7 +50,21 @@ basedOn:
   - DDD-cost-24
   - DDD-agent-01
 notes: |
-  DRAFT-PENDING-RULING (GATE 5). The upstream session decision is DDD-dec-24 (upstream, citing
-  upstream ground only, per the freight convention); this decision is its downstream
-  counterpart, and the two reference each other's repositories only in the direction the
-  dependency allows.
+  Ratified at the GATE 5 acceptance (Emil, 2026-08-18). The upstream session decision is
+  DDD-dec-24 (upstream, citing upstream ground only, per the freight convention); this decision
+  is its downstream counterpart, and the two reference each other's repositories only in the
+  direction the dependency allows.
+
+  The staged step, performed: the Wave 3 upstream PR merged at 4d0d177 and the release
+  descriptor cut v5.7.0 there; the ref bumped v5.6.0 -> v5.7.0 and the three pins were added.
+
+  What the first run actually did, recorded rather than smoothed: W6 fired on all three NEW
+  pins. Not content drift — the pinned content was byte-identical at the tag — but a hash
+  transcription fault at pin time: the pin hashes were computed without the field
+  normalisation the instrument applies (each instrumented field is stripped before hashing),
+  so the pins were born stale. The hashes were recomputed with the instrument's own
+  normalisation and the second run is clean: 0 basis-loss, 0 content-drift, no new shadow.
+  Two facts follow. The content prediction held — nothing pinned moved between v5.6.0 and
+  v5.7.0 beyond what was predicted silent. And W6 caught a mis-transcribed pin within one
+  run of its creation, which is the instrument working on a failure class the session did
+  not predict it would meet — its second live verification, on an unplanned specimen.

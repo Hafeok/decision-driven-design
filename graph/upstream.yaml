@@ -38,11 +38,18 @@ upstream:
   # resolves against the ref you pinned and a missed advance leaves that ref internally
   # consistent. The advance is DDD-dec-25 here; it fired nothing (0 basis-loss, 0 content-drift
   # — v5.6.0's one pinned-claim change, DDD-floor-01, was notes-only, outside the instrumented
-  # fields). On Emil's acceptance of the Wave 3 upstream PR the ref bumps to v5.7.0 per the
-  # DDD-dec-10/16/18 pattern; predicted firing at that bump: none (DDD-frame-01's Wave 3 change
-  # is notes-only; frame-02/03/07 are not pinned), with pins for the new upstream nodes the
-  # annotations rest on (DDD-frame-14; DDD-hyp-04/05) added at the same act, per DDD-dec-25.
-  ref: v5.6.0                       # tag, never a branch
+  # fields).
+  # Advanced v5.6.0 -> v5.7.0 on Emil's acceptance of the Wave 3 upstream PR (merge 4d0d177,
+  # tagged v5.7.0 by the release descriptor landing on main), per the DDD-dec-10/16/18 pattern;
+  # the advance is DDD-dec-25 here, DDD-dec-24 upstream. Predicted firing at the bump: none
+  # (DDD-frame-01's Wave 3 change was notes-only; frame-02/03/07 are not pinned; no new term
+  # shadowed) — verified at the bump: 0 basis-loss, 0 content-drift, the one standing W7
+  # unchanged. Three pins added at the same act, the annotations' bases: DDD-frame-14
+  # (DDD-cost-16's named mechanism), DDD-hyp-04 and DDD-hyp-05 (DDD-cost-24's restated
+  # qualification). The three were briefly born stale — hashed without the instrument's field
+  # normalisation — and W6 caught the transcription within one run; corrected hashes verified
+  # clean (DDD-dec-25's notes carry the full record).
+  ref: v5.7.0                       # tag, never a branch
   pins:
     # basis claims for DDD-dec-04 (the split decision itself rests on these)
     - id: DDD-frame-01
@@ -157,3 +164,13 @@ upstream:
     - id: term:escape-mechanism
       status_at_pin: settled
       content_hash: sha256:ef90104fbc20240bf2cf70e01115ff2ebf0f77b063918208eda37c28c0f98701
+    # Wave 3 additions at the v5.7.0 advance (DDD-dec-25): the downstream annotations' bases
+    - id: DDD-frame-14
+      status_at_pin: projected
+      content_hash: sha256:1c162cce8f3a283e7176e2afd07eb4da1a6f6f05216f7ec72b7ac17007a92b4e
+    - id: DDD-hyp-04
+      status_at_pin: projected
+      content_hash: sha256:f07227a7f5be2f8fbe59ae0efbdd62fb813cf6a5f96fe0292cb0a054773caf9f
+    - id: DDD-hyp-05
+      status_at_pin: projected
+      content_hash: sha256:115bdd9e449d3929de9a96323e355503b950de3e001252e6dc0627bd7f041251
