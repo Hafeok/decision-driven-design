@@ -16,3 +16,10 @@ changed: 2026-08-10, Wave 2 curation session
 notes: |
   Affirmed in session 2026-08-08 (holding note §1, rate bounds); filed downstream per R4b
   (DDD-dec-11). Falsifier as carried by the note, verbatim.
+
+  Mechanism named upstream (Wave 3, 2026-08-18, DDD-dec-25): DDD-frame-14 — discharge lands a
+  determinate in two registers, an outcome always and a verdict only where governance has
+  declared a predicate, and every diachronic instrument runs on verdicts. This claim's "cannot
+  be learned out of" is that mechanism's consequence at the volume layer: escaped residual
+  produces outcomes only, and the return channel consumes verdicts only. Pin for DDD-frame-14
+  is added at the v5.7.0 ref bump, per DDD-dec-25.

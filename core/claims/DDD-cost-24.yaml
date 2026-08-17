@@ -20,3 +20,11 @@ notes: |
   accrual, minimum build time, the turnover bound's decay form) is deferred to the
   time-and-assurance register (queue §11, GATE G). The model-market-gap resolution stays
   Wave 3, qualified by the validity condition.
+
+  Cross-link (Wave 3, 2026-08-18, DDD-dec-25): the validity condition this claim carries is
+  restated upstream in the bodies of DDD-hyp-04 and DDD-hyp-05 with DDD-cost-13 cited — the
+  upstream repository cannot cite this claim, so the content travelled and the cross-link
+  lives here, per the citation-scope convention. hyp-04 additionally converts the condition
+  into methodology: executor-kind comparisons hold claimant-identity persistence constant, or
+  kind smuggles persistence. Pins for DDD-hyp-04/05 are added at the v5.7.0 ref bump, per
+  DDD-dec-25.
