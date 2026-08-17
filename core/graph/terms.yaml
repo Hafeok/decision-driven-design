@@ -19,6 +19,11 @@ terms:
     term: maturation
     established_by: 14-maturation.md
     status: settled
+    # Shadows the upstream registry's term:maturation ("the compound over repetition"),
+    # which is a different object under the same id. Known and temporary: the upstream
+    # establishment retires or re-words at the deferred 06/08 diachronic carve, at which
+    # point this establishment becomes sole. Governing decision below; W7 suppressed by it.
+    shadows_upstream: DDD-dec-21
     canonical_md: |
       > **Maturation** — the return channel spanning the act in reverse: from the mechanical store
       > (post-act verdicts) into the encoded store (pre-act standing supply). A maturing arrangement

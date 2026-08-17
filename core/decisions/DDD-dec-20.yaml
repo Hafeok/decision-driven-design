@@ -1,0 +1,70 @@
+format: 1
+id: DDD-dec-20
+kind: decision
+statement: |
+  The session-arrival convention: a session's prompt and its bootstrap are committed to meta/sessions/YYYY-MM-DD-<slug>/ before the session begins work, on the session's own branch, ahead of any canon edit. A session's charter is thereby a repo object — quotable at every gate and auditable afterwards against the commits the session produced — rather than an invocation-only artefact recoverable from its residue.
+principal: Emil
+made: 2026-08-17, freight session (Batch E, item E-2); recommended by upstream DDD-dec-17 and ruled in-session
+resolution: |
+  File the convention. Upstream DDD-dec-17 recorded it as "recommended to the freight session, not
+  filed here", with its evidence and its cost already priced; this decision is that
+  recommendation taken up, in the repository where working conventions live.
+
+  The evidence is five arrival failures across three sessions, recorded in DDD-dec-17: the
+  manuscript; the review; the predicted-ground note at the escape reconciliation; the
+  applicability note at the vocabulary session's first gate; and that session's own GATE 4
+  ruling, which did not arrive and was re-issued. A ruling is a delivered governing artefact,
+  so its non-arrival is the same failure class, not an analogy to it.
+
+  The cost is the corpus session's Test B reconstruction floor: delivered governing sets
+  recoverable only from their residue. What a session was asked to do could not be diffed
+  against what it did, because only one of the two was a file.
+
+  The convention, in full:
+
+  - Before a session begins work, two files land in one commit on the session's branch:
+    meta/sessions/YYYY-MM-DD-<slug>/prompt.md, the session prompt verbatim, and
+    meta/sessions/YYYY-MM-DD-<slug>/bootstrap.md, the invocation message and the session's
+    parameters — branch, base commits per repository, gate count, principal.
+  - The commit precedes any canon edit. Where the session's first act is anything else, the
+    convention has already failed for that session.
+  - meta/sessions/README.md carries the index and the convention's statement.
+
+  Deliberately not filed as a rule about what a prompt must contain. The convention makes the
+  charter durable; it says nothing about whether the charter is good, and a session whose work
+  exceeds its committed prompt is now visible as exceeding it, which is the whole mechanism.
+
+  Deliberately not automated. No validator checks that a session committed its prompt, and none
+  is proposed: the failure this corrects is an artefact never becoming a file, which a checker
+  reading files cannot see. The instrument here is the convention plus the gate discipline, not
+  a rule in validate-core-order.py.
+
+  Scope: this repository's sessions, and sessions that work across this repository and the
+  principle repository from a downstream branch. No upstream filing is made — the principle
+  repository is the stable layer and carries no reference to its dependents, and this is a
+  working convention of the programme rather than a claim about determination.
+basedOn:
+  - DDD-dec-17
+  - DDD-delivery-02
+  - term:delivery
+notes: |
+  First instance, and it is this session's own: meta/sessions/2026-08-17-freight/ landed at
+  96d0112 as the freight session's first act, before any repository was read for repair, with
+  meta/sessions/README.md stating the convention in the same commit. The session prompt
+  instructed exactly that and named the reason — "the session inaugurates the convention it
+  files at Batch E".
+
+  A second instance arrived mid-session and is worth recording, because it is the failure mode
+  rather than the convention. The ground-axes holding note (revision 18) had failed to reach
+  four sessions: the escape reconciliation, the corpus test's first gate, the vocabulary
+  session, and this session's GATE 1 — one more than DDD-dec-17 had counted for that artefact.
+  Emil ruled it filed rather than merely re-sent, and it is now
+  meta/holding-note-ground-axes-rev18.md (2092 lines, sha256 5925d03f...), committed with its
+  identity in the commit body and its unratified status intact.
+
+  The identity check earned its keep in the same exchange. The first artefact offered at that
+  gate was 187 lines / sha256 727b4731... — the Q34-Q38 addendum, already committed upstream,
+  not the ground-axes note. It was reported as a mismatch and not filed. Had it been accepted,
+  the arrival failure would have been recorded as closed while the note remained absent, which
+  is presumed discharge in its exact form (term:presumed-discharge, pinned): the artefact
+  recording the pass identical to the artefact recording the skip.

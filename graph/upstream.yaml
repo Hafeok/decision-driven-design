@@ -37,68 +37,96 @@ upstream:
     # basis claims for DDD-dec-04 (the split decision itself rests on these)
     - id: DDD-frame-01
       status_at_pin: projected
+      content_hash: sha256:6b74b5bfb34c6c722c9abf1185264ff5c6eee01d020c7fd4ad6804ba7a5bca64
     - id: DDD-measure-01
       status_at_pin: projected
+      content_hash: sha256:66b01ede631c0173d86696dca945ade53c9ffe37462bbe290a6df6b6de4b41ea
     # the floor mechanism the apparatus/skill-floor builds on
     - id: DDD-floor-01
       status_at_pin: reported
+      content_hash: sha256:4bbb0758b523be9c4f6b90078a6ad9828da906c351c341e23d4f2a7d76db3079
     # canonical terms the software projection references
     - id: term:determination
       status_at_pin: settled
+      content_hash: sha256:1f111d2182445e03150909667e433e564f624760df84c3841bd9f6fcbb759958
     - id: term:closure
       status_at_pin: settled
+      content_hash: sha256:6c4690378b86183cf421d509127b4548ba5cef4597078d8cb4290bb32c12a689
     - id: term:floor
       status_at_pin: settled
+      content_hash: sha256:daf43e076f83b338c1b37e826492083e05ea080ccf26cd911bbe632bf7c339b0
     - id: term:conservation
       status_at_pin: settled
+      content_hash: sha256:cade5469d18b4595f1a71692f06c9632aa3d898b8d34e3107685d4057adac3eb
     - id: term:seam-identity
       status_at_pin: settled
+      content_hash: sha256:7cf1e511e2b6eaa7852c737c2d4a65543f6f0bb739721ea80d8589b15089f2a5
     # the per-act cost layer the volume projection (core/13) prices — DDD-dec-09/DDD-dec-10
     - id: term:act
       status_at_pin: settled
+      content_hash: sha256:8b6c0d0d1d8699a1d2502f71e8dfe62cfd36ee10b2595c321feceea4bdab79b1
     - id: term:cost-register
       status_at_pin: settled
+      content_hash: sha256:96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7
     - id: term:standing-cost
       status_at_pin: settled
+      content_hash: sha256:96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7
     - id: term:occasioned-cost
       status_at_pin: settled
+      content_hash: sha256:96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7
     - id: DDD-cost-01
       status_at_pin: projected
+      content_hash: sha256:f82e87501b7e0a1765544a659ec0822596d9bf2f4a080dac8d775896923d5322
     - id: DDD-cost-02
       status_at_pin: reported
+      content_hash: sha256:7061864289f9702fea5632ae7224755fec10e32e052d0d0b6da40ab714771dc3
     - id: DDD-cost-03
       status_at_pin: projected
+      content_hash: sha256:e832b340ef9302fb78c255284af8af2f997e8fc6149142a15fa5b8f26d7d3b2f
     # the assurance-locus conversion core/13 §5's amortisation corollary rests on (GATE B carve)
     - id: DDD-cost-09
       status_at_pin: projected
+      content_hash: sha256:fecb317fb0b76a969b7f8f5eebdbfc94ea628faf75deb83142de7efb0dd4c013
     # the routing layer core/15 exercises and core/14's register consumes (Wave 2, 2026-08-10)
     - id: term:capability
       status_at_pin: settled
+      content_hash: sha256:52be5175582ef664b69d7c08ddf133e0953cea122d2e5984b39f18efe592fffc
     - id: term:escape
       status_at_pin: settled
+      content_hash: sha256:a74f87dd923a730934a330d1904b87acc3a90624f08ebda09b6e62a043bfd3ce
     - id: DDD-cost-08
       status_at_pin: projected
+      content_hash: sha256:498f3f8a316e804a358babd2ac369df1ff4a21edca609c129d378974d0e1e0fa
     - id: DDD-cost-11
       status_at_pin: projected
+      content_hash: sha256:72a3b18c33e2f024584ec70de61982d764b0631df2b0a5bf754f2d559b3f2c14
     - id: DDD-cost-12
       status_at_pin: projected
+      content_hash: sha256:9073c0687e7c12918647a708acfa4d3e2dccfcf4c8fe7d8228dd1dd948f543f1
     # the instrument bound the pending benchmarks-are-licences instance cites (GATE C carve)
     - id: DDD-cost-13
       status_at_pin: projected
+      content_hash: sha256:d6ebc759da1bf90e4de9d2bc5e2e1c817aff93485de923da9e13a68619385a06
     # the locus claim core/14 §4's crossover rests on; the claim-layer bridge and gates
     # core/13 §6's coverage economics rest on (Wave 2, 2026-08-10)
     - id: DDD-cost-20
       status_at_pin: projected
+      content_hash: sha256:f15de6f5feeefc688f27922ea8511c575773a8fd4b164b85740eb2408b1c1341
     - id: DDD-frame-12
       status_at_pin: projected
+      content_hash: sha256:9a6646479bc61e6973b78ba7e47b7d62a231466ef640e6e142893fa5f1f1766b
     - id: DDD-cost-22
       status_at_pin: projected
+      content_hash: sha256:155bb234bba1d89b66976500f06bbef7fca8326ec010df0cd5d757425490669c
     # the synchronic member of the time-and-assurance set (core/17; GATE G)
     - id: DDD-cost-25
       status_at_pin: projected
+      content_hash: sha256:e95a814aa1bee0a542aa6f087174a3f0b5080c8588cc799f1fafb480357f63ea
     # the delivery vocabulary DDD-delivery-04 rests on (vocabulary-and-delivery session,
     # 2026-08-15; staged with the v5.5.0 advance, DDD-dec-18)
     - id: term:delivery
       status_at_pin: draft
+      content_hash: sha256:1e7b2e4d5df5dad2869d966abe94f5d5677a4a2f4d3e0ff35356534f382ecac2
     - id: DDD-delivery-01
       status_at_pin: projected
+      content_hash: sha256:67377ef2294de814afd95026f2e7ad0bdb768516696395d05f1ed1645aa6d804
