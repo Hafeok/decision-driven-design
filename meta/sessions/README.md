@@ -25,3 +25,4 @@ session's later work exceeds the committed prompt, the excess is visible as exce
 | Session | Type |
 |---|---|
 | `2026-08-17-freight/` | Interactive canon curation — the accumulated small-items list (batches A–G) |
+| `2026-08-18-wave3/` | Interactive canon curation — the principle-layer filings (batches W/H/Q, map P) |
