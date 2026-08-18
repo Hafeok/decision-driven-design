@@ -4,9 +4,9 @@
 
 *Emil — Context&. Formal note.*
 
-*This note is a projection of `actor-indexed-determination` at `v5.3.0` and `decision-driven-design`
-at `d8fd8e6`; bracketed claim identifiers and the assets named under Reproduction resolve against
-these refs.*
+*This note is a projection of `actor-indexed-determination` at `v5.7.0` and `decision-driven-design`
+at `v0.4.0`; bracketed claim identifiers resolve against these refs, and the assets named under
+Reproduction resolve as stated there.*
 
 ---
 
@@ -112,7 +112,8 @@ task classes and not others; §2.2 says which, and what `V` is in the rest.
 
 **Notation.** `H(·)` denotes Shannon entropy in bits, `H(V) = −Σ_v P(v) log₂ P(v)`; `H(·|·)`
 conditional entropy; `I(·;·)` mutual information. All are taken with respect to the ground
-distribution `P`.
+distribution `P`. Two counts appear and are never interchangeable: `n` is the number of points in
+the input space, used below as a display scale, and `N` is a number of acts (§6, §9).
 
 **Scale.** `D = H(V)` is demand per act, and per act is what demand is rather than how it is reported
 (§1.1): one input drawn from `P`, one verdict rendered. The worked tables multiply by `n`, the number
@@ -920,8 +921,10 @@ variable for a deployed system is estimation, with error bars.
 Six self-contained scripts regenerate every figure above: `measure-toy.py` for §4,
 `measure-actor-allocation.py` for §5.1, `measure-rag.py` for §5.2, `measure-chained-seams.py` for
 §5.3, `measure-nonuniform-ground.py` for §5.4, and `measure-aggregate-discharge.py` for §6. All
-six live in the principle repository's `core/assets/`, at the pinned ref. All six were re-run and
-reproduce the stated values.
+six live in the principle repository's `core/assets/`. The first five resolve at the pinned ref
+`v5.7.0`; `measure-aggregate-discharge.py` is new with this note and lands upstream alongside it,
+so it resolves at the next tag rather than at the pin. All six were re-run and reproduce the
+stated values.
 
 `measure-aggregate-discharge.py` computes both sides of the inequality exactly rather than by
 sampling, and carries its content as assertions: subadditivity at every `N`, the i.i.d. control
@@ -984,12 +987,17 @@ computation, *projected* is proposed with a falsifier and not yet met, *retired*
 | `DDD-cost-01` | projected | Bits are per-act on both sides of the demand identity; the asymmetry between I(V;E) and H(V\|E) is locus of supply — a standing artifact built before any act versus a contemporaneous event paid at each act. |
 | `DDD-cost-02` | reported | Degeneracy: a cost model whose standing side is linear in I(V;E) is flat — conservation forces dI = -dR exactly, so every distinction removes precisely as many occasioned bits as it adds standing bits and no distinction can be priced ahead of another; pricing distinctions apart requires standing cost priced as mechanism description length, which is not a conserved quantity. |
 | `DDD-cost-03` | projected | MDL correspondence, rate form: description length prices the standing side of determination supply and entropy prices the occasioned side — MDL's L(model) and L(data\|model), read as per-act rates. |
-| `DDD-cost-05` | projected | Capacity is the bits an actor can supply per act; escape is the residual exceeding capacity — the per-act denomination of core/11's capacity model. |
+| `DDD-cost-05` | projected | Capacity is the bits an actor can supply per act; within core/11's capacity model the escape term is the residual exceeding capacity — the per-act denomination of that model. |
 | `DDD-cost-06` | reported | Volume corollary of the degeneracy: under standing cost linear in I(V;E), every crossover sits at the same act volume N* = n·(α/β) and the whole frontier flips at once — a graded build-out over volume therefore requires standing cost priced as mechanism description length. |
 | `DDD-cost-07` | projected | MDL optimisation: supply cost across N acts decomposes as L(mechanism) + N·H(V\|E), and distinctions flip from occasioned to standing at computable crossover volumes N* = n·ΔL/ΔR, ordered by information density — residual removed per unit of mechanism description. |
-| `DDD-floor-01` | reported | H(V\|X) bundles judged and escaped demand; cleaving them requires an actor-capacity model, and demand escapes where residual demand exceeds effective capacity min(C_hold, C_resolve) AND the shed decisions carry no verifier — escape is the intersection overflow ∩ open, with overflow alone producing retries, not escape. |
+| `DDD-cost-30` | projected | Demand and cost are two registers over the same act, and they answer different questions: the demand identity fixes, for every candidate encoding E, how much of the verdict each side must supply; the cost register prices what supplying it that way is worth. Demand says what must be supplied; cost says what supplying it that way is worth. The registers stay separate because only one of them is conserved — H(verdict) is fixed by the task, and L(mechanism) has no conservation identity. |
+| `DDD-floor-01` | reported | H(V\|X) bundles judged and escaped demand; cleaving them requires an actor-capacity model, and residual demand an actor has taken up escapes where it exceeds effective capacity min(C_hold, C_resolve) AND the shed decisions carry no verifier — overflow ∩ open is the mechanism of capacity-generated escape, sufficient for escape and not necessary for it, with overflow alone producing retries, not escape. |
+| `DDD-frame-05` | projected | Under a sound terminating operational checker with complete declared ground, producer identity is not epistemically necessary for the checked property — and nothing more: not cheap generation, not normative completeness, not accountability. |
 | `DDD-frame-06` | established | Closure is distinct from generation cost: verification being cheap implies nothing about the density or accessibility of the acceptance region. |
+| `DDD-frame-09` | retired | RETIRED — "closed predicates make intelligence unnecessary." Does not follow from producer-independence under verification; generation may still require whatever capability the search demands. |
 | `DDD-frame-11` | projected | The governance question — is every decision governing the act in a declared store, none escaped? — is well-formed on the total domain, including open predicates where the measure does not exist; the cost question — how much is in each store? — exists only where the predicate closes. The framework's governed domain is strictly wider than its measured domain. |
+| `DDD-frame-14` | projected | Discharge always produces a determinate, which lands in two registers: as an outcome — the determinate as it lands in the world, produced at every completed act — and as a verdict — the determinate as assessed by a declared predicate, produced only where governance has declared one; governance is thereby the conversion of outcomes into verdicts, and every diachronic instrument runs on verdicts alone. |
+| `DDD-frame-16` | projected | Discharge is act-indexed: standing supply is inherited per act and occasioned supply is produced per act, so there is no act-free discharge — governance never chooses whether demand is supplied, only by what, chosen in advance or defaulted at the act. |
 | `DDD-measure-01` | projected | Specification demand is verdict entropy: for a task whose acceptance predicate closes, the demand engineers experience as specification burden is H(V) over the ground distribution. |
 | `DDD-measure-02` | established | Given the identification (DDD-measure-01), conservation on the closing region is the chain rule of entropy: H(V) = I(V;X) + H(V\|X) for any conditioning variable X. |
 | `DDD-measure-03` | reported | The seam of a decomposition is I(V;S); a decomposition with cheaper parts has pre-paid more demand into the seam, and H(V\|S) is minimised exactly when I(V;S) is maximised. |
@@ -1001,6 +1009,8 @@ computation, *projected* is proposed with a falsifier and not yet met, *retired*
 | `DDD-measure-10` | established | You cannot decompose your way out of the work: for a fixed closing task, H(V\|S) = 0 requires I(V;S) = H(V) — the parts become trivial only when the decomposition already encodes the entire verdict. Demand is conserved, not escapable by re-decomposition. |
 | `DDD-measure-11` | reported | The measure prices the verdict, not the search: H(verdict) is a property of the verdict function and the ground distribution and says nothing about the cost of computing a correct answer. Two tasks with identical verdict entropy can differ unboundedly in generation cost, so the measure must not be read as pricing generation. |
 | `DDD-measure-12` | reported | Demand is relative to the ground distribution: H(verdict) depends on P(input), so "fixed by the task" must be read as "fixed by the task, the tolerance, and the ground distribution" — the same validator faces different demand in different deployment environments. |
+| `DDD-measure-14` | reported | The chain-rule identification iterates without approximation: conditioning a second time gives H(V) = I(V;S1) + I(V;S2\|S1) + H(V\|S1,S2), where the conditional mutual-information term is the internal seam — the demand the second-level split carries given what the first already carries. Chaining re-splits the seam between levels; it neither creates nor destroys demand, and the parts residual is invariant under the order of the chain. |
+| `DDD-measure-15` | projected | The engineering reading of the chain-rule identification holds only for admissible conditioning variables. A conditioning variable X is admissible where it is computable from ground available at the act and from what the arrangement has standing before it, and not from the verdict itself — computable by something that has not been handed the answer. The arithmetic holds for any X whatever; admissibility is what restricts the reading, not the identity. |
 
 ### Terms
 
@@ -1008,6 +1018,7 @@ computation, *projected* is proposed with a falsifier and not yet met, *retired*
 |---|---|---|
 | `term:acceptance-predicate` | acceptance-predicate | The **acceptance predicate** is the criterion that settles whether an outcome is acceptable at the declared tolerance. Everything about a task's checkability — and therefore its floor — lives here. |
 | `term:act` | act | The **act** — the bounded episode of determination running from its first governing decision to an expressed outcome; the unit demand is counted in. Derived, not primitive: an act is decisions resolved against ground. Its exact individuation is earned in `09` — one verdict, one act, where the measure exists. |
+| `term:act-individuation` | act-individuation | **Act individuation** — one act = one verdict of the acceptance predicate at the declared boundary, where the predicate's measure exists; batch boundaries are verdict boundaries. The individuation inherits the predicate's discipline and adds no free parameter. |
 | `term:actor` | actor | An **actor** is a system that resolves decisions by reading ground: variation in declared ground can alter the resolution through an internal pathway that selects among alternatives. A thermostat qualifies; a falling rock does not. Actorhood does not require intelligence. |
 | `term:closure` | closure | **Effective closure, defined.** A predicate is **closed for an arrangement** when the relevant ground is observable and adequacy can be evaluated within declared resource, latency, and confidence bounds. **Decidable** is reserved for the formal special case. |
 | `term:cost-register` | cost-register | — registry entry; no canonical wording pinned |
@@ -1015,9 +1026,10 @@ computation, *projected* is proposed with a falsifier and not yet met, *retired*
 | `term:encoded` | encoded | **Encoded** — a constraint, fixed *before* the act, by a rule. It amortises: cheap to state, **expensive to find**. |
 | `term:escape` | escape | **Escaped** — determined *never*, by nobody: decided-by-nobody as a first-class category. Latent defect exposure. **The only forbidden state.** |
 | `term:occasioned-cost` | occasioned-cost | — registry entry; no canonical wording pinned |
+| `term:outcome` | outcome | The **outcome** — the determinate as it lands in the world, produced at every completed act. The **verdict** is the same determinate as assessed by a declared predicate, produced only where governance has declared one. The world renders outcomes, never verdicts; governance is the conversion of outcomes into verdicts. |
 | `term:seam-identity` | seam-identity | **\|D_comp\| = \|D_single\| + \|S\|** |
 | `term:seam-information` | seam-information | **I(verdict ; S)** is **seam demand** — what the *decomposition choice* absorbed. |
 | `term:standing-cost` | standing-cost | — registry entry; no canonical wording pinned |
 | `term:store` | store | **{rule, check, actor, nothing}.** There is no fifth source. |
 | `term:tolerance` | tolerance | **Tolerance** is the declared boundary of acceptable outcome deviation. It indexes everything: a choice is a governing decision, and a fact is ground, only relative to a declared tolerance. Without one, the decision set is not well-formed. |
-| `term:verdict` | verdict | **Definition (determination demand).** *(In the engineering projection this same quantity is denominated in the vocabulary of the domain and called* **specification demand** *; the measure below is identical either way.)* For a task with a decidable acceptance predicate, let the **verdict** be the correct output the predicate assigns to each point of the input space, and let `P` be the distribution over inputs (the *ground distribution*). The **determination demand** of the task is the Shannon entropy of the verdict: **D = H(verdict)**, measured in **bits**. |
+| `term:verdict` | verdict | **Definition (determination demand).** *(In the engineering projection this same quantity is denominated in the vocabulary of the domain and called* **specification demand** *; the measure below is identical either way.)* For a task whose acceptance predicate **closes** for the arrangement (`term:closure`; *decidable* is the formal special case, not the requirement), the predicate evaluates outcomes, and the **task class** supplies one correct output per input point. The **verdict** is that induced assignment — the correct output over each point of the input space. Let `P` be the distribution over inputs (the *ground distribution*). The **determination demand** of the task is the Shannon entropy of the verdict: **D = H(verdict)**, measured in **bits**. Where the task class supplies no such assignment, the predicate still evaluates outcomes and there is no verdict to have entropy about — which is the boundary `09` §7 draws. |
