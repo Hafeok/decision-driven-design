@@ -1,0 +1,95 @@
+format: 1
+id: DDD-track-01
+kind: empirical
+statement: |
+  Pairing a vocabulary path with an owned governed act changes later conduct: learners who complete the determination track's capability rungs and then perform and record the discharge act govern subsequent judgement-mediated acts more often than learners who complete the capability rungs alone.
+status: projected
+region: |
+  Engineers learning the determination vocabulary from a track of this shape — an ordered path,
+  one worked decision held constant, a terminal act the learner owns. Diachronic by construction:
+  the claim quantifies over conduct after the track, so it files with the projection and not
+  upstream (DDD-dec-09's charter). Bounded to judgement-mediated acts (upstream term:delivery,
+  pinned): where an act mechanically triggers retrieval of a governing decision, the arrangement
+  supplies governance whatever the actor learned, and the claim makes no prediction. Nothing is
+  claimed about comprehension, recall, or self-reported confidence — only about acts.
+evidence: []
+falsifier: |
+  Learners who complete rungs 1-9 without owning the rung 10 act perform equivalently, on later judgement-mediated acts, to learners who also owned it — measured by whether a governing decision naming an axis, a ground citation, a declared assurance level, and a principal exists at the act. Equivalence fires the claim, and the pairing is decoration.
+breaks: |
+  Nothing in upstream canon. The track's rung structure loses its stated rationale: rungs 1-9
+  would be justifiable as a reference rather than as a path, rung 10 would lose its claim to be
+  the rung that matters, and the capability/competence framing in projections/tracks/README.md
+  would need restating or withdrawing. term:capability is untouched either way — capability being
+  the entry fee is a claim about what capability IS, not about whether pairing it with an act
+  changes conduct.
+test: |
+  Preregistered comparison, arrangement-controlled per the DDD-hyp-01..05 discipline: two groups
+  taking the identical nine rungs, differing only in whether the discharge act is performed and
+  recorded. Outcome read from the artefacts their later acts leave, never from self-report. The
+  confounds that must be controlled and are not yet: self-selection into completing rung 10;
+  whether the learner's team already keeps decision records (which supplies governance through
+  the arrangement rather than the learner); and act difficulty.
+owner: none
+changed: v0.5 (2026-08-18, Track 1 session — filed with the track's rungs 6-10)
+notes: |
+  [PROPOSED] Filed at Gate 3 of the Track 1 session. Emil ratifies; nothing here is settled.
+
+  ## Why this is one claim and not two
+
+  The statement pairs a path with an act because the pairing is what is asserted. Splitting it
+  into "the path teaches vocabulary" and "the act changes conduct" would produce one claim nobody
+  disputes and one with no falsifier attached to anything the track does. The unit of status
+  change is the unit of statement, and the unit here is the pairing.
+
+  ## Evidence is empty by discipline, not by omission
+
+  No cohort has taken this track; it was drafted on 2026-08-18 and has been read by nobody. The
+  falsifier is preregistration-shaped and unrun, following the DDD-hyp-01..05 pattern. Any
+  projection carrying this claim carries it as a prediction with an unrun falsifier, **never as a
+  finding**, and any teaching material citing it says so.
+
+  Note what this claim's own subject matter implies about it: the track asserts that recording an
+  act is what makes it governed, and this claim is the track's own record of what it is betting.
+  A track making this bet without filing it would be an escaped decision about a document whose
+  ninth rung is about escaped decisions.
+
+  ## The Q27 revision obligation — a positive requirement, not a note
+
+  Rung 3 carries a five-way ground-provenance taxonomy (controlled, observed, inferred,
+  institutional, missing) as **track-native expository scaffolding, marked non-canon in line at
+  each point of use**. It is not a partition claim and nothing in this claim rests on it; the
+  canon content of rung 3 is the ground definition alone.
+
+  The institutional slot's mechanism is upstream-gated on Q27 (trusted sources). **This claim
+  carries the dependency so it is discoverable from the claim graph rather than only from a
+  decision record:**
+
+    REVISION OBLIGATION — if Q27 lands upstream in any form that settles how authority,
+    convention, or social practice supply ground, projections/tracks/01-determination.md
+    rung 3 MUST be revised before the track is served to another cohort. A resolved Q27 may
+    restructure the five-way split rather than confirm it, and an unrevised track would then
+    carry a stale taxonomy on a teaching surface — the failure mode DDD-agent-01 names, at
+    the point where it reaches learners rather than agents.
+
+  The obligation binds the track document, not this claim's status: a Q27 landing does not
+  falsify the pairing claim, it invalidates one rung's scaffolding. The two are deliberately kept
+  apart so a revision trigger cannot be mistaken for a status transition.
+
+  ## What the track deliberately does not claim
+
+  The track makes no measurement claim of any kind and cites no measure — "learn the
+  determination vocabulary" has no acceptance predicate that closes, so a measure would be silent
+  there and citing one would be overreach. This claim is about acts and their artefacts, which
+  are countable without any of that machinery.
+
+  Both orderings open at drafting were ruled at Gate 3 and are recorded in DDD-dec-27: rung 7
+  stays after rung 5, with the dependency direction 5 -> 7 declared; and the one-decision charter
+  constraint is amended so that rung 10 carries a second, contested decision (a retention period)
+  while rungs 1-9 keep the retry decision unchanged.
+
+  The amendment matters to this claim's subject, not to its truth. The claim is about the pairing
+  of a capability path with an owned act, and it is now a claim about a path whose terminal act is
+  deliberately contested — which is the version the falsifier must be run against. A track using
+  an uncontested decision at rung 10 would be a different path, would need its own run, and is
+  what the Gate 3 finding judged to be teaching the wrong thing at the rung that carries the
+  stake.
