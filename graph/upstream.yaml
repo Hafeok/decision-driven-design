@@ -49,7 +49,16 @@ upstream:
   # qualification). The three were briefly born stale — hashed without the instrument's field
   # normalisation — and W6 caught the transcription within one run; corrected hashes verified
   # clean (DDD-dec-25's notes carry the full record).
-  ref: v5.7.0                       # tag, never a branch
+  # Advanced v5.7.0 -> v5.8.0 on Emil's acceptance of the Track 1 upstream PR (merge 9e92099,
+  # tagged v5.8.0 by the release descriptor landing on main), per the DDD-dec-10/16/18/25
+  # pattern; the advance is DDD-dec-28 here, DDD-dec-26 upstream. Predicted firing at the bump,
+  # stated before it ran: none — DDD-frame-02's v5.8.0 change was notes-only, and notes are
+  # outside the three fields pinned_content_digest hashes (statement, region, canonical_md).
+  # Verified at the bump: 65 existing pins, 0 missing, 0 content-drift, 0 status movement; the
+  # one standing W7 unchanged. Two pins added at the same act — term:commitment-level and
+  # term:residual-discretion, the mints this release carries, which could not be pinned before
+  # the tag existed because E12 resolves against the pinned ref.
+  ref: v5.8.0                       # tag, never a branch
   pins:
     # basis claims for DDD-dec-04 (the split decision itself rests on these)
     - id: DDD-frame-01
@@ -277,3 +286,11 @@ upstream:
     - id: DDD-ground-04
       status_at_pin: projected
       content_hash: sha256:36081b0a401d947f8b317b87bdc6879793c3a4476bfe0cdbe9bd3f2df6e4dd09
+    # [PROPOSED] The v5.8.0 mints (DDD-dec-28). Deliberately absent from the Gate 2/3 pin
+    # batches: they do not exist at v5.7.0, and pinning them there would have fired E12.
+    - id: term:commitment-level
+      status_at_pin: draft
+      content_hash: sha256:7714da9eb209a6839b862a36c0aecd48d411f6af18cab4b1acaa7a1dea032167
+    - id: term:residual-discretion
+      status_at_pin: draft
+      content_hash: sha256:77284b1467c8a100654279d5a3c86970c791badeb1d891e60f9618e13dc1541e

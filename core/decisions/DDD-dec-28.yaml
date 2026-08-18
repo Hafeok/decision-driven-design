@@ -1,0 +1,83 @@
+format: 1
+id: DDD-dec-28
+kind: decision
+statement: |
+  The upstream pin advances v5.7.0 -> v5.8.0 on Emil's acceptance of the Track 1 upstream pull request, and the two terms that release mints — term:commitment-level and term:residual-discretion — are pinned at the same act, having been unpinnable before the tag existed.
+principal: Emil
+made: 2026-08-18, Track 1 session (post-merge; upstream PR #15 merged as 9e92099, tagged v5.8.0)
+resolution: |
+  [PROPOSED] The advance, and what it fired.
+
+  ## The advance
+
+  graph/upstream.yaml ref: v5.7.0 -> v5.8.0. The tag exists at commit 9e92099, cut by
+  releases/v5.8.0.yaml landing on the default branch — no out-of-band step, no privileged local
+  credential in the path.
+
+  This is a governed act rather than a mechanical bump, per the standing rule in upstream.yaml's
+  own header, and it follows the DDD-dec-10/16/18/25 pattern: the advance is recorded here, the
+  upstream session ruling is DDD-dec-26.
+
+  ## Predicted before, verified after
+
+  The prediction was stated before the bump ran, so that the verification could disconfirm it:
+
+    PREDICTED FIRING: none. DDD-frame-02 is pinned and its statement changed at no point in
+    v5.8.0 — the release amends its NOTES only, and notes fall outside the three fields
+    pinned_content_digest hashes (statement, region, canonical_md). No pinned id was retired,
+    renamed, or restatused. No new upstream term shadows a local id.
+
+  VERIFIED AT THE BUMP, over all 65 pins carried forward:
+
+    - 0 missing (E12)
+    - 0 content-drift (W6) — DDD-frame-02's hash verifies unchanged, as predicted
+    - 0 status movement (W5)
+    - 1 shadowed id (W7), the standing one, unchanged
+
+  The prediction held. Recording it in this order matters: a bump whose firing is described only
+  afterwards cannot be distinguished from a bump whose firing was tolerated.
+
+  ## Two pins added at the same act
+
+  term:commitment-level and term:residual-discretion, both status_at_pin: draft, matching their
+  status upstream and their establishing document's.
+
+  They were deliberately absent from this session's Gate 2 and Gate 3 pin batches, and the
+  absence was not an oversight: **they did not exist at v5.7.0**, and E12 resolves pins against
+  the pinned ref, so pinning them earlier would have failed the cross-repo check outright. The
+  track cited both in prose at rungs 5 and 6 and said so at the point of use rather than carrying
+  a ddd:ref the instrument could not resolve. With the tag cut, both are pinnable and pinned.
+
+  Pin count 65 -> 67.
+
+  ## What this act does not do
+
+  It does not merge the downstream pull request; Emil ratifies. It does not add ddd:ref markers
+  for the two mints in projections/tracks/01-determination.md — the track's prose citations and
+  their "not in v5.7.0" notes remain as drafted, and converting them to markers is a follow-up
+  edit with its own review, not a silent rider on a pin advance.
+basis:
+  - DDD-dec-26
+  - DDD-dec-27
+  - DDD-agent-01
+  - DDD-frame-02
+notes: |
+  [PROPOSED] Filed at the post-merge step of the Track 1 session. Emil ratifies.
+
+  Numbering: decisions share one id space across the principle repo and this one. 26 was the
+  upstream session decision, 27 this session's downstream decision, 28 this advance.
+
+  ## The near-miss this advance produced, recorded because it is evidence
+
+  The instruction to bump arrived once before the merge had happened. The tag did not exist,
+  origin/main was unmoved, and upstream PR #15 was still open — verified by fetching tags and by
+  querying the forge directly, because a stale local view was the alternative explanation and had
+  to be excluded. The bump was not made, and the reason it was not made is worth keeping: a pin
+  file naming a ref that does not exist is a false record, and a decision filed alongside it
+  would have asserted an acceptance that had not occurred.
+
+  What the instruments would have done is the asymmetry now recorded in Wave 3 successor item 2.
+  A premature bump fails loudly — the clone cannot resolve the ref and E12 fires on every pin. A
+  missed bump is silent, because W5 and W6 resolve against the ref the pin names and a superseded
+  tag resolves cleanly. Detecting the silent direction needs the upstream tag list, an input no
+  validator currently reads. The item stays Wave 3's, unscoped, and is not begun.
