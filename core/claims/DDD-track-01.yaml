@@ -82,7 +82,14 @@ notes: |
   there and citing one would be overreach. This claim is about acts and their artefacts, which
   are countable without any of that machinery.
 
-  Two orderings stay open at filing and are recorded in DDD-dec-27: whether the retry example
-  holds for every audience, and whether closure (rung 7) belongs before commitment level (rung
-  5). Neither bears on this claim's truth — a different example or a different order would be the
-  same pairing claim about a different path, and would need the falsifier run again.
+  Both orderings open at drafting were ruled at Gate 3 and are recorded in DDD-dec-27: rung 7
+  stays after rung 5, with the dependency direction 5 -> 7 declared; and the one-decision charter
+  constraint is amended so that rung 10 carries a second, contested decision (a retention period)
+  while rungs 1-9 keep the retry decision unchanged.
+
+  The amendment matters to this claim's subject, not to its truth. The claim is about the pairing
+  of a capability path with an owned act, and it is now a claim about a path whose terminal act is
+  deliberately contested — which is the version the falsifier must be run against. A track using
+  an uncontested decision at rung 10 would be a different path, would need its own run, and is
+  what the Gate 3 finding judged to be teaching the wrong thing at the rung that carries the
+  stake.

@@ -1,8 +1,8 @@
 # Track 1 — Determination
 
-**A single ordered path through the determination vocabulary, taught against one decision that
-does not change.** Ten rungs. For software engineers; C#/.NET fluency assumed, framework
-vocabulary assumed absent.
+**A single ordered path through the determination vocabulary, taught against one decision held
+constant while the words change.** Ten rungs. For software engineers; C#/.NET fluency assumed,
+framework vocabulary assumed absent.
 
 > **[PROPOSED] — all ten rungs drafted, Gate 3, 2026-08-18.** Nothing here is ratified. Emil
 > merges and ratifies; this document proposes.
@@ -18,6 +18,7 @@ vocabulary assumed absent.
 | **Register** | engineering |
 | **Rendered** | 2026-08-18 |
 | **Filter** | the determination vocabulary: what a decision is, what resolves it, what it is resolved against, and how an arrangement commits in advance |
+| **Worked decisions** | retry-count, rungs 1–9 (uncontested by design); retention-period, rung 10 (contested by design — `DDD-dec-27` §9) |
 | **Status floor** | none — every projected or draft node is flagged **at the point of use**, not only here |
 | **Governing decision** | `DDD-dec-27` (rung order, filing, and the ground-provenance ruling) |
 | **Track claim** | `DDD-track-01` — carries the track's pre-registered falsifier and its `Q27` revision obligation |
@@ -111,7 +112,8 @@ later rung introduces.
 
 ## The decision
 
-One decision, unchanged across all ten rungs. It is deliberately unglamorous.
+One decision, unchanged across rungs 1 to 9. It is deliberately unglamorous, and deliberately
+uncontested — rung 10 says why, and changes it.
 
 ```csharp
 services.AddHttpClient<PaymentGatewayClient>()
@@ -864,6 +866,24 @@ chooses *whether* demand is supplied, only *by what*, chosen in advance or defau
 right now. Not recording it is not neutrality. It is choosing the arrangement default and
 declining to say so.
 
+### The decision changes here, and you are told why
+
+Rungs 1 through 9 used the retry count deliberately, and one property of it did the teaching:
+**nobody disputes the answer.** Three, five, ten — no one has a position worth defending, which
+left the vocabulary as the only thing in the room. That is what a worked example is for while the
+words are still new.
+
+It is the wrong property for this rung. A discharge you cannot disagree with teaches nothing
+about being the principal for one. Naming yourself accountable for a value nobody contests costs
+nothing, and a rung that costs nothing has not moved the stake it exists to move. So the worked
+example changes, once, here:
+
+> **How long do we keep customer support transcripts?**
+
+Pick your own equivalent if you have one — any axis where competent colleagues want different
+values for stated reasons. The retry count is still yours to discharge, and you should; but do it
+second, after you have felt what the first one costs.
+
 ### The act
 
 **One decision. A real one, in a system you work on. Recorded.**
@@ -873,7 +893,7 @@ rather than a note.
 
 | Field | What it must contain | Not sufficient |
 |---|---|---|
-| **axis** | the determinable, named — the dimension, not the value (rung 1) | "the retry thing" |
+| **axis** | the determinable, named — the dimension, not the value (rung 1) | "the data retention thing" |
 | **value** | the determinate now governing (rung 1) | — |
 | **ground cited** | what it is resolved against, with provenance and a date; **"none"** is a legitimate and valuable entry (rung 3) | "experience" |
 | **α — declared assurance level** | how strong the evidence must be that tolerance is met, stated before you look at what evidence exists (rung 8) | "it's tested" |
@@ -952,8 +972,42 @@ discovery that the decision was always governed. Write it as one.
 
 ### The worked example, finished
 
-The retry decision has followed you through nine rungs. Discharging it looks like this — and note
-that the value does not change:
+Two records. The first is the contested one; the second is the retry decision you have carried
+since rung 1, discharged in four lines because it is now easy.
+
+#### Transcript retention
+
+| Field | |
+|---|---|
+| **axis** | `retention-period` for customer support transcripts |
+| **value** | 24 months |
+| **ground cited** | the statutory minimum for the records class (institutional, verified against the regulation's text, 2026-08-18); the data processing agreement's ceiling (institutional, contractual); storage cost per month at current volume (controlled, measured); **support's argument that older transcripts resolve repeat cases: asserted, never measured — no ground exists for it** |
+| **α** | a legal review confirming the value sits inside both the statutory floor and the contractual ceiling, re-run whenever either moves — **met at filing, and it decays** |
+| **principal** | the named data protection owner. **Not** the platform team, **not** the engineer who set the cron job |
+| **retro-filed** | yes — value in force since the retention job shipped, gap uncovered 2026-08-18 |
+
+Notice four things this record does that the retry record could not.
+
+**The value is contested and the record does not hide it.** Legal wants the floor, support wants
+longer, and the ground line says which of those positions has ground behind it and which does not.
+"Asserted, never measured" is the single most useful line in the record, and writing it is a small
+act of nerve.
+
+**The ground is mostly institutional** — a statute, a contract — which rung 3 flagged as the least
+settled of the five kinds and the one whose mechanism is an open question upstream. You are
+governing against authority rather than against measurement, and the record says so rather than
+dressing it as a technical finding.
+
+**α is met and still decays.** The retry record's α was unmet, which is easy to write. This one
+was satisfied at filing and stops being satisfied the moment the regulation or the contract moves.
+A declared assurance level with a decay condition is doing more work than a green tick.
+
+**The principal is uncomfortable, which is the point.** The engineer who wrote the cron job is the
+executor. The platform team is a name. Neither answers to the regulator. Whoever does is the
+principal, and if the record cannot name them, you have found something more important than the
+retention period.
+
+#### Retry count
 
 | Field | |
 |---|---|
@@ -967,8 +1021,11 @@ that the value does not change:
 Nothing about the system changed. `3` is still `3`, and the code is untouched. What changed is
 that a decision which was escaped is now governed, its ground is stated including the part that is
 missing, its assurance level is declared and honestly recorded as unmet, and a person answers for
-it. **That is the discharge.** It took twenty minutes and it is the only rung on this track that
-altered anything.
+it. **That is the discharge**, and it is the whole of what rung 10 asks — the same five fields,
+whether the value is fought over or nobody has ever thought about it.
+
+Both took under an hour between them, and they are the only part of this track that altered
+anything.
 
 ### What you can now do
 
@@ -978,7 +1035,7 @@ Nothing new. **You have done something**, which is the difference the track was 
 
 ## Where this track ends
 
-Ten rungs, one decision, three actors, and no claim that you are now competent at anything.
+Ten rungs, two decisions, three actors, and no claim that you are now competent at anything.
 
 Rungs 1–9 gave you capability: vocabulary that makes things visible which were previously not
 even invisible — they were simply not the kind of thing you looked for. Rung 10 was the first act

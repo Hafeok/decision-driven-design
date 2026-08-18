@@ -14,6 +14,15 @@ re-registered, pinned, manifested.
 | **Register** | engineering — the same node the formal register states as a theorem is stated here as something you do on Tuesday |
 | **Status floor** | none, but every projected or draft node is **flagged at the point of use**, loudly |
 | **Unit** | the **rung** — one idea, one move in the worked decision, one thing you could not do before |
+| **Worked decision** | held constant while the vocabulary changes — that constancy is what lets a learner attribute the difficulty to the words rather than the example |
+
+**One exception to constancy, and it must be argued rather than taken.** A terminal rung that asks
+the learner to own an act needs something contested to be about: a discharge nobody can disagree
+with makes naming a principal free. Where a track's running example was chosen for being
+uncontested — which is right while the vocabulary is new — the terminal rung may introduce a
+second decision that is not. The switch is stated to the learner at the point it happens, with the
+reason, and recorded as an amendment to the track's own charter (`DDD-dec-27` §9 is the instance).
+A substitution made silently, or made because an example merely strained, is out of order.
 
 Tracks are audience-general in filing. **Audience is a manifest field, not a path segment.** A
 track's content is Layer 1 and actor-general; only its *example* is domain-specific. Filing by
@@ -52,4 +61,4 @@ canon and what would change that.
 
 | Track | Vocabulary | Worked decision | Status |
 |---|---|---|---|
-| `01-determination.md` | determinable, determinate, ground, actor, arrangement, commitment level, residual discretion, closure, assurance, escape, accountability | how many times do we retry a failed outbound call? | **[PROPOSED]** — all ten rungs drafted; claim `DDD-track-01` |
+| `01-determination.md` | determinable, determinate, ground, actor, arrangement, commitment level, residual discretion, closure, assurance, escape, accountability | retry count, rungs 1–9; transcript retention period, rung 10 | **[PROPOSED]** — all ten rungs drafted; claim `DDD-track-01` |

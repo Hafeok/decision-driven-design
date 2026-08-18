@@ -133,19 +133,35 @@ resolution: |
   precisely canon's W1 discipline — 59 declared forward pointers stand at v5.7.0 under the same
   rule — applied to a projection.
 
-  ### 7c. What Emil must rule
+  ### 7c. RULED (Emil, Gate 3) — self-containment governs; 7a's failure stays on the record
 
-  Which reading governs. Three options, with the session's recommendation:
+  **Two orders, two questions.** The document-granularity order is a dependency order over
+  **canon's argument**. The rung order is a delivery order over **a learner's encoding**. They
+  answer different questions, and deriving one from the other is the projection-as-source error
+  this repository exists to prevent. The Gate 1 instruction assumed a single order existed; it
+  does not, and the assumption is corrected here rather than quietly dropped.
 
-  - **(a) RECOMMENDED — self-containment governs; the charter constraint is restated to say so.**
-    The document-granularity order is canon's *exposition* order, and a pedagogical path has no
-    obligation to reproduce it: core/01 states escape early because the principle needs it early,
-    and the track reaches it last because a learner needs eight rungs of vocabulary before
-    "decided by nobody" means anything. The two orders answer different questions.
-  - **(b) Reorder the track to satisfy 7a.** This moves escape to roughly rung 3 and destroys the
-    arc the charter specifies. Not recommended, and it would be a charter change, not a fix.
-  - **(c) Construct a term-level dependency order upstream and check against that.** Honest, and
-    a wave of its own. Explicitly not begun here.
+  **The failing check is kept, not redefined away.** Three things bind:
+
+  1. `check-linear-extension.py` stays committed and runnable. Its result at this commit is
+     **FAIL, 20 forward edges over 121 both-taught pairs**, and that number stays in this record.
+  2. The reason it over-approximates is stated, with its demonstration: the check derives
+     "term X depends on term Y" from "X's establishing document's *argument* requires Y", not
+     from "X's definition needs Y". `term:governing-decision` is the demonstration — the check
+     reports it as depending on actor, arrangement, escape and ground, and it is a registry-only
+     term with **no canonical text at all**, so it can definitionally depend on nothing.
+  3. **Canon records no term-level dependency order anywhere.** established_by names a term's
+     home document; nothing names what a term's definition requires. The order the check needs
+     does not exist to be checked against.
+
+  Ruling (a) is therefore not "the check is wrong". It is "the check tests the wrong order for
+  this artefact, and the right order is not written down".
+
+  **Booked, explicitly not begun: whether canon should carry a term-level dependency order.**
+  This session surfaced the gap and cannot answer it — constructing that order means deciding,
+  per term, what its definition requires, which is a canon-wide pass and a wave of its own. It is
+  recorded here as an open question with no owner and no schedule. Nothing in this session
+  depends on its answer, and the do-not-bundle rule forbids starting it.
 
   ## 8. The two open orderings — answered as judgements, not polls
 
@@ -189,10 +205,17 @@ resolution: |
 
   Two corroborations from drafting rather than from argument. Rung 5 was written and needs nothing
   from rung 7: it stands alone. Rung 7 does need rung 5 — its closed/open table is about which
-  half of the decision can be committed at outcome level and assured. The dependency, as drafted,
-  runs 5 -> 7. And moving 7 before 5 makes the 7a check strictly worse, not better: it would put
-  core/03 vocabulary at rung 5 and core/14 vocabulary at rung 7, leaving the core/01 inversion
-  untouched.
+  half of the decision can be committed at outcome level and assured. And moving 7 before 5 makes
+  the 7a check strictly worse, not better: it would put core/03 vocabulary at rung 5 and core/14
+  vocabulary at rung 7, leaving the core/01 inversion untouched.
+
+  **RULED (Emil, Gate 3): rung 7 stays after rung 5, and the dependency direction 5 -> 7 is now a
+  declared act rather than a default.** The direction was previously a property of how the rungs
+  happened to be drafted; it is recorded here as a decision, so a later reordering has something
+  to argue against rather than a silence to fill. What was ruled is the direction, not merely the
+  sequence: commitment level is prior to closure in the delivery order because closure conditions
+  which commitments are *assurable*, and a learner who does not yet know what an arrangement can
+  fix in advance has nothing for closure to condition.
 
   ## 6. Instrument note, deliberately not built
 
@@ -200,6 +223,41 @@ resolution: |
   baseline commit, so a green run distinguishes a new warning from a standing one — is recorded
   as a **candidate instrument and nothing more**. It is not generalised into a validator this
   session (Emil, Gate 1). Booked, unbuilt, unbundled.
+  ## 9. RULED (Emil, Gate 3) — the one-decision constraint is amended for rung 10
+
+  The session charter required one worked decision unchanged across all ten rungs. **That
+  constraint is amended by this decision**, attributed to the Gate 3 finding that produced it.
+
+  **The finding.** The retry count was chosen for a property that does real work through rungs
+  1-9: nobody disputes the answer, so the vocabulary is the only thing in the room. At rung 10
+  that property inverts. A discharge nobody can disagree with makes naming a principal free, and
+  a rung whose cost is zero has not moved the stake it exists to move. The track was failing at
+  the one rung whose failure matters, and failing *because* of the constraint rather than despite
+  it.
+
+  **The amendment.** Rungs 1-9 keep the retry decision unchanged. **Rung 10 introduces a second,
+  contested decision** — a transcript retention period. The retry decision is still discharged at
+  rung 10, second, in four lines, precisely to show that the same five fields serve a decision
+  nobody argues about and one people do.
+
+  **Why a retention period rather than a credit limit or a refund threshold.** The ground is
+  institutional — a statute, a data processing agreement — which puts an *authority* disagreement
+  in front of the learner rather than a commercial one. Institutional ground is rung 3's least
+  settled kind and the one whose mechanism is Q27-gated upstream, so the rung the learner owns is
+  also the rung standing nearest the gap they will meet next. A commercial threshold would have
+  been contested without teaching that.
+
+  **The switch is explicit in the track, not silent.** Rung 10 opens by telling the learner that
+  rungs 1-9 used a decision whose answer was not in dispute so the vocabulary could be, and that
+  it changes here because a discharge you cannot disagree with teaches nothing about being the
+  principal for one. A silent substitution would have been the charter amended without a record —
+  in this document's own vocabulary, an escaped decision about a track whose ninth rung is about
+  escaped decisions.
+
+  **What the amendment does not license.** One substitution, at one rung, for the stated reason.
+  It does not license a track that changes example whenever an example strains; rungs 1-9's
+  constancy is the charter's load-bearing half and is untouched.
+
 basis:
   - DDD-agent-01
   - DDD-frame-01
