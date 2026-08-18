@@ -140,7 +140,7 @@ properly *fixed by the task, the tolerance, and the ground distribution*.
 
 The definition invites one misreading above all others, and the framework's answer to it is prior to
 this note. **Demand says what must be supplied; cost says what supplying it that way is worth**
-[DDD-cost-01].
+[DDD-cost-30; DDD-cost-01].
 
 The two sides of the identity below denominate in the same unit — bits of one act's verdict — and differ
 in **locus of supply**. What a mechanism fixes before any act is supplied by a *standing artifact*,
@@ -252,7 +252,8 @@ claim at all.
 
 > **Admissibility.** A conditioning variable `X` is **admissible** if it is a function of ground
 > available at the act, and of what the arrangement has standing before it, and not of the verdict
-> itself. It must be computable by something that has not been handed the answer.
+> itself. It must be computable by something that has not been handed the answer
+> [DDD-measure-15].
 
 **Cost is supplied by a different register**, and deliberately not by `I(V;X)`: what a mechanism costs
 to build and hold is standing cost, priced by description length (§2.1). Whether `I(V;X)` predicts it
@@ -274,8 +275,6 @@ residual reaches zero only when some admissible mechanism determines the whole v
 what standing up that mechanism costs. The work is not escaped. It is relocated to the standing side
 and paid there.
 
-*A dedicated claim node for the admissibility condition is pending canon filing; until it lands, the
-citation basis is the encoded store's definition and the act, as above.*
 
 ---
 
@@ -367,8 +366,9 @@ demand destroyed; it is demand supplied entirely by a mechanism.
 **`H(V|E)` is the ideal-observer residual, not the actor's burden.** Conditional entropy assumes
 something that can exploit every statistical relationship `E` carries. A real actor may fail to use
 information that is present, and it then faces more than `H(V|E)`, never less. The gap is capacity, and
-capacity sits outside the identity: the bits an actor can supply per act, with escape the residual
-exceeding them, is a named next result and is not worked here [DDD-cost-05; DDD-floor-01]. So the
+capacity sits outside the identity: the bits an actor can supply per act, with capacity shortfall
+one generator of escape, is a named next result and is not worked here [DDD-cost-05;
+DDD-floor-01]. So the
 allocation above is the split an ideal user of `E` would face — a lower bound on what the actor must
 resolve, not a measurement of what it will.
 
@@ -378,7 +378,9 @@ Retrieval-augmented generation motivates this instance; it is not what is simula
 named for what is. The structure is the framework's **encode/verify split** [term:encode-verify-split]:
 part of what an act needs is supplied to it in advance, and the rest is left to whatever acts. As
 conditioning that is the identity again, with `X` the material supplied before the answer — admissible
-by construction (§3.1). With `A` the answer, this instance's verdict variable, and `R` what is supplied:
+by construction (§3.1). With `A` the answer, this instance's verdict variable — a determinate
+assessed by a declared predicate, which is what makes it a verdict rather than merely an outcome
+[DDD-frame-14] — and `R` what is supplied:
 
 | retrieval (hit / distractor) | `I(A;R)` | `H(A\|R)` | sum |
 |---|---|---|---|
@@ -455,9 +457,8 @@ order. **Chaining re-splits the seam; it cannot create or destroy demand.**
 This is the same iterated identity the framework's composition formalism names for a composed
 arrangement's internal seams — there the conditioning variables are actor encodings rather than
 sub-decompositions; the arithmetic is identical, the instance distinct, and the multi-actor case
-remains unworked here [term:seam-identity]. Iteration is arithmetic — the theorem is still
-Shannon's, applied twice. *A dedicated claim node for the iterated form is pending canon filing;
-until it lands, the citation basis is the chain rule and the seam identification, as above.*
+remains unworked here [term:seam-identity; DDD-measure-14]. Iteration is arithmetic — the theorem
+is still Shannon's, applied twice.
 
 ### 5.4 `P` varied → non-uniform ground
 
@@ -729,14 +730,41 @@ known well enough to estimate. Where the deployment distribution is unknown, uns
 or only partly observable, the demand is well defined and cannot be computed [DDD-measure-12]. A
 verdict function alone does not deliver a number.
 
+**A rung above closure, and the note should name it.** The three requirements above are
+conditions for the measure to exist and be computable at all. There is a stronger condition, and
+some tasks meet it. Call a predicate **constructively closed** when the verdict is not merely
+checkable but **computed by rule** from ground available at the act — a procedure returns the
+correct output directly, and there is no candidate search to price. Closure asks whether adequacy
+can be *evaluated* within declared bounds [term:closure]; constructive closure asks whether the
+verdict can be *produced*. The date task of §4 is constructively closed, and that is why its
+entropies are exact and exhaustive rather than sampled: there `H(V)` is not merely defined and
+available but **computed**.
+
+**This does not trip the retirement it appears to approach.** The framework once held that closed
+predicates make intelligence unnecessary and retired the claim, because verification-closure
+bounds nothing about generation — checking can be cheap while the search stays expensive
+[DDD-frame-09, retired; DDD-frame-06; DDD-measure-11]. Constructive closure does not contradict
+that finding; it **sidesteps** it. Where the verdict is computed by rule there is no search left
+to be expensive, so the premise the retirement turns on is absent rather than denied — and the
+scoped survivor of that retirement, that producer identity is not necessary *for the checked
+property and nothing more*, is untouched either way [DDD-frame-05].
+
+*Canon's closure vocabulary does not currently carry the constructive/verification distinction:
+`term:closure` is stated in evaluative terms alone, and no claim node names the stronger rung. The
+two paragraphs above are a refinement proposed against that vocabulary as it stands, and a
+dedicated claim node is pending canon filing; until it lands, the citation basis is closure, the
+separation of closure from generation cost, and the measure's silence on search, as above.*
+
 ### 8.1 What the boundary does not claim
 
 **An open predicate does not abolish measurement.** Where evaluators disagree there are distributions
 over their judgments; where preferences are elicited there are distributions over preferences; where
 outputs are scored there are distributions over scores. Those are measurable, and some are informative.
 What is unavailable outside the scope condition is *this construction* — a deterministic verdict
-function to take the entropy of — and not measurement as such. The note claims the domain of its own
-construction and nothing wider.
+function to take the entropy of — and not measurement as such. The framework names the same
+boundary in register terms: every completed act lands an **outcome**, and a **verdict** exists only
+where governance has declared a predicate to assess it [DDD-frame-14; term:outcome]. The note
+claims the domain of its own construction and nothing wider.
 
 The framework holds the same thing from the other side. Its governance question — is every governing
 decision in a declared store, none escaped? — is well-formed on open predicates exactly where the
@@ -835,7 +863,7 @@ ground.
 
 **Rate–distortion.** The note's stated next result (§5.5, §10) is the split of `H(V|X)` into judged
 and escaped demand, which requires a model of actor capacity — the bits an actor can supply per
-act, with escape the residual exceeding them [DDD-cost-05]. Rate–distortion theory is the natural
+act, with residual an actor has taken up escaping where it exceeds them [DDD-cost-05]. Rate–distortion theory is the natural
 home for that split: what must be given up when the required rate exceeds the available one is
 rate–distortion's founding question (Shannon 1959). The deferral should be stated cautiously, because the theory does
 not apply on the strength of the analogy. Rate–distortion is defined relative to a **reproduction
