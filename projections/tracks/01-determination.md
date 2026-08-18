@@ -13,7 +13,7 @@ framework vocabulary assumed absent.
 
 | Field | Value |
 |---|---|
-| **Source canon** | `actor-indexed-determination` at **`v5.7.0`**, pinned in `graph/upstream.yaml` |
+| **Source canon** | `actor-indexed-determination` at **`v5.8.0`**, pinned in `graph/upstream.yaml` |
 | **Audience** | software engineers — C#/.NET fluency assumed, no framework vocabulary assumed |
 | **Register** | engineering |
 | **Rendered** | 2026-08-18 |
@@ -27,7 +27,7 @@ framework vocabulary assumed absent.
 node's first substantive use; the marker is what makes a stale citation mechanically detectable
 rather than a matter of someone remembering.
 
-| Node | Status at `v5.7.0` | First cited |
+| Node | Status at `v5.8.0` | First cited |
 |---|---|---|
 | `term:determinable` | settled | rung 1 |
 | `term:determinate` | settled | rung 1 |
@@ -45,10 +45,10 @@ rather than a matter of someone remembering.
 | `term:act` | settled | rung 4 |
 | `DDD-frame-01` | **projected** | rung 5 |
 | `DDD-frame-02` | **projected** | rung 5 |
-| `term:commitment-level` | **draft — not in `v5.7.0`** | rung 5 |
+| `term:commitment-level` | draft | rung 5 |
 | `term:capability` | settled | rung 5 |
 | `DDD-frame-08` | **projected** | rung 4 |
-| `term:residual-discretion` | **draft — not in `v5.7.0`** | rung 6 |
+| `term:residual-discretion` | draft | rung 6 |
 | `term:acceptance-predicate` | settled | rung 7 |
 | `term:closure` | settled | rung 7 |
 | `DDD-floor-02` | **projected** | rung 7 |
@@ -85,12 +85,6 @@ Each is legible from context at the point of use and is defined properly at its 
 fifth reading of the constraint fails, and is reported at Gate 3 rather than hidden here** — see
 `DDD-dec-27` §7 on the document-granularity check.
 
-> **Two nodes are pinned at a version that does not exist yet.** `term:commitment-level` and
-> `term:residual-discretion` are proposed upstream in this same session and are **not present at
-> `v5.7.0`**. They carry no `ddd:ref` marker and no pin until the upstream proposal is accepted
-> and the pin advances to `v5.8.0`. Rungs 5 and 6 cite them in prose and say so where they do.
-> This is the honest state, not an oversight: pinning an id that does not exist at the pinned ref
-> would fail the cross-repo check outright.
 
 ---
 
@@ -458,16 +452,13 @@ swap one actor for another.
 The three actors are not three kinds of thing. They are three **levels at which an arrangement
 commits behaviour in advance**.
 
-> **[PROPOSED — not in `v5.7.0`.]** `term:commitment-level` is proposed upstream in this same
-> session and does not exist at the pinned version, so it carries no `ddd:ref` marker yet. Its
-> content is `DDD-frame-02`, which is pinned and cited below. The marker and pin land when the
-> pin advances to `v5.8.0`.
-
+<!-- ddd:ref id=term:commitment-level -->
 > A **commitment level** is a level at which an arrangement fixes behaviour in advance:
-> **outcome-level** — permitted resolutions fixed directly; **policy-level** — the generating
-> procedure fixed; **principal-level** — a determiner selected by qualification and case-level
-> resolution delegated. The three compose, and they are levels of commitment, not species of
-> actor.
+> **outcome-level** — permitted resolutions fixed directly; **policy-level** — the
+> generating procedure fixed; **principal-level** — a determiner selected by qualification
+> and case-level resolution delegated. The three compose, and they are levels of
+> commitment, not species of actor: the question is never which of three kinds an actor
+> is, but at which levels the arrangement has committed.
 
 <!-- ddd:ref id=DDD-frame-02 -->
 *(`DDD-frame-02`, **projected** — behavioural commitments attach at three levels which compose
@@ -534,14 +525,11 @@ what is left over — and "left over" is where your incidents come from.
 
 Commitments do not reach everything. What they do not reach is **residual discretion**.
 
-> **[PROPOSED — not in `v5.7.0`.]** `term:residual-discretion` is proposed upstream in this same
-> session, carries no `ddd:ref` marker yet, and is pinned at the advance to `v5.8.0`. Its content
-> is `DDD-frame-02`, which is pinned and cited below.
-
+<!-- ddd:ref id=term:residual-discretion -->
 > **Residual discretion** is the outcome-relevant variation remaining at the act after the
 > arrangement's declared commitments are applied. It is not randomness: a deterministic
-> arrangement can carry substantial discretion across unfamiliar cases, a randomised one can be
-> tightly committed, and a zero-variance arrangement can be consistently wrong.
+> arrangement can carry substantial discretion across unfamiliar cases, a randomised one
+> can be tightly committed, and a zero-variance arrangement can be consistently wrong.
 
 <!-- ddd:ref id=DDD-frame-02 -->
 *(`DDD-frame-02`, **projected**.)*
