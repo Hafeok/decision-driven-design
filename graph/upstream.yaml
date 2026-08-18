@@ -226,3 +226,54 @@ upstream:
     - id: DDD-frame-13
       status_at_pin: projected
       content_hash: sha256:4add58e0f47c0ff22bb752d6b78aef7f591a14b17d610cdb06677439e0b33276
+    # [PROPOSED] Track 1, Gate 3 additions (2026-08-18, DDD-dec-27): the ids rungs 6-10 cite by
+    # ddd:ref, plus DDD-frame-08 for rung 4's accountable-principal row (flagged at Gate 2 as
+    # stated without a citation; the citation is the fix). Same ref (v5.7.0), no advance.
+    - id: DDD-frame-08
+      status_at_pin: projected
+      content_hash: sha256:cf73b307ede964603c2eb36863f4a4b7874894350e05ae467b300fcf54aa3590
+    - id: term:acceptance-predicate
+      status_at_pin: settled
+      content_hash: sha256:a3aaae2e710ffb955b30e2e4b0f8371b72c1ada7816ac698dab5e2310ee29e78
+    - id: DDD-floor-02
+      status_at_pin: projected
+      content_hash: sha256:a74887b02325764de735bc4b9969bdea91e734cb840f2ad55aeb80f5be5d714b
+    - id: DDD-frame-06
+      status_at_pin: established
+      content_hash: sha256:2fa9dce36e6fef592b8bf7dbf9764dfdc388a8079917b29452869663daaabb80
+    - id: DDD-frame-03
+      status_at_pin: projected
+      content_hash: sha256:f71c64f7940f63f29edecde9cb42ad9a3de2967a310b6465b32759014064e179
+    - id: term:assurance
+      status_at_pin: settled
+      content_hash: sha256:213f16a27a39027c1ef58c8704c31e6d916976b11666aa4cf2f64d966c26d8fc
+    - id: term:encoded
+      status_at_pin: settled
+      content_hash: sha256:3e3274a058655c57bbd4c0bfc0ac6a24a995a5a9d30d20544e118d32480e722f
+    - id: term:mechanical
+      status_at_pin: settled
+      content_hash: sha256:b3d940d3167c8e9e18667a224a13d98bad17509844930b3be9e49834014aa19e
+    - id: DDD-frame-15
+      status_at_pin: projected
+      content_hash: sha256:6d14509db3daaaf1773b6e6d24b6d6b742da2c7fa4f5f6bf18f2286a970df3f9
+    - id: DDD-frame-04
+      status_at_pin: projected
+      content_hash: sha256:eec0a4b49c4f996f68a8b83281e0990b829efd318964f803a16452fb4d32a0d3
+    - id: DDD-frame-16
+      status_at_pin: projected
+      content_hash: sha256:7cf83332fdc546715dbbdf25818c8ab27f62a3d342ec68adc078b070625f9ada
+    - id: term:accountability
+      status_at_pin: settled
+      content_hash: sha256:a986dc638137099841212e2b00556a5cdf3c935405e8afb0d085760c0c0c8f4c
+    - id: term:attribution
+      status_at_pin: settled
+      content_hash: sha256:cbc570744c278541e67b114f0b2874e9a379a2dfe68bef42e1b2e956fdd96174
+    - id: term:answerability
+      status_at_pin: settled
+      content_hash: sha256:4d98fd91bc0595f4298e3174b853083fa3c87762c5ef6424e0088f124d42896d
+    - id: term:liability
+      status_at_pin: settled
+      content_hash: sha256:5f9ffcaee2d32a67ebfc7793cbfe4d876017685a26552f10384d9f3ae83023b5
+    - id: DDD-ground-04
+      status_at_pin: projected
+      content_hash: sha256:36081b0a401d947f8b317b87bdc6879793c3a4476bfe0cdbe9bd3f2df6e4dd09

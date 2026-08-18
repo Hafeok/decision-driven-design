@@ -88,6 +88,112 @@ resolution: |
   pin land at the advance to v5.8.0 on Emil's acceptance of the upstream PR. Rungs 6-10 add their
   own pins at Gate 3.
 
+  ## 7. The linear-extension check — one reading passes, one FAILS
+
+  The charter requires the rung order to be a linear extension of the canon dependency partial
+  order. Both readings were computed, not asserted; the scripts are committed beside this
+  decision (meta/sessions/2026-08-18-track-1-determination/check-*.py).
+
+  ### 7a. Document granularity — FAILS, 20 forward edges
+
+  Canon records its dependency order in one place: each core document's ddd:contract, enforced by
+  validate-core-order.py. Lifting it to terms — term X depends on term Y iff X's establishing
+  document requires Y, transitively — and testing the rung order against it gives **20 forward
+  edges**, over 121 both-taught dependency pairs. They are not scattered. They concentrate in one
+  place: **the track teaches four core/01 terms late** — escape at rung 9, assurance, encoded and
+  mechanical at rung 8 — while teaching core/02's governing-decision at rung 2, core/03's
+  acceptance-predicate and closure at rung 7, and core/14's commitment-level and
+  residual-discretion at rungs 5 and 6.
+
+  This is not a drafting defect and no amount of redrafting removes it. It is a property of the
+  charter's specified rung order: escape is canon's earliest vocabulary and the track's climax.
+  Reporting it rather than quietly redefining the check is the point of this paragraph.
+
+  **Why the failing check may nonetheless be the wrong instrument.** The order it tests over-
+  approximates. "X depends on Y" is derived from "X's home document's argument uses Y", not from
+  "X's definition needs Y" — and term:governing-decision, which the check says depends on actor,
+  arrangement, escape and ground, is registry-only with no canonical text at all, so it can
+  definitionally depend on nothing. Canon does not record a term-level dependency order anywhere.
+  Constructing one is a wave of its own and is NOT proposed here.
+
+  ### 7b. Self-containment — PASSES, with four declared forward pointers
+
+  The reading stated in projections/tracks/README.md: no rung may need a word a later rung
+  introduces. Checked against the track text. The first run found 11 forward uses; seven were
+  drafting convenience and were removed. Four survive and are **declared in the track's manifest**
+  rather than left to be noticed:
+
+  - rung 3 and rung 5 use "assurance" inside verbatim quotations of DDD-ground-02 and
+    DDD-frame-01. Deleting the word misquotes canon; DDD-frame-01's tuple has six coordinates or
+    it is not the tuple.
+  - rung 8 uses "escape risk" twice, which the charter's own rung-8 specification requires
+    ("identical escape risk if neither is checked").
+
+  Each passes canon's own deletion test and each is defined properly at its own rung. This is
+  precisely canon's W1 discipline — 59 declared forward pointers stand at v5.7.0 under the same
+  rule — applied to a projection.
+
+  ### 7c. What Emil must rule
+
+  Which reading governs. Three options, with the session's recommendation:
+
+  - **(a) RECOMMENDED — self-containment governs; the charter constraint is restated to say so.**
+    The document-granularity order is canon's *exposition* order, and a pedagogical path has no
+    obligation to reproduce it: core/01 states escape early because the principle needs it early,
+    and the track reaches it last because a learner needs eight rungs of vocabulary before
+    "decided by nobody" means anything. The two orders answer different questions.
+  - **(b) Reorder the track to satisfy 7a.** This moves escape to roughly rung 3 and destroys the
+    arc the charter specifies. Not recommended, and it would be a charter change, not a fix.
+  - **(c) Construct a term-level dependency order upstream and check against that.** Honest, and
+    a wave of its own. Explicitly not begun here.
+
+  ## 8. The two open orderings — answered as judgements, not polls
+
+  ### 8a. The retry example holds through rung 9 and strains at rung 10
+
+  It is strongest at rung 7, where the closed/open split falls out of the example cleanly enough
+  that the test and the question it fails to answer can both be shown in a dozen lines. It holds
+  at 6, 8 and 9.
+
+  **It strains at rung 10, which is the only rung that matters.** The worked discharge produces a
+  record whose value does not change — 3 stays 3 — and whose declared assurance level is recorded
+  as unmet. That is honest, and it is deliberately written to teach that recording a decision you
+  do not yet meet is a successful discharge. But it gives the learner a first owned act that
+  feels like transcription: they wrote down what was already true. A decision whose *value* is
+  contested — a credit limit, a refund threshold, a retention period — would put a real
+  disagreement in front of the learner at the moment they must name a principal, and naming a
+  principal is easy when nothing is at stake.
+
+  A lesser strain at rung 8: the on-call engineer changing a retry count live is slightly
+  artificial for teams that do not permit it, though the cell is still legible.
+
+  **The session does not resolve this**; the charter reserves it for Emil and the juniors have not
+  seen the track. The recommendation, if a change is wanted, is not to replace the example — rungs
+  1 through 9 depend on its concreteness — but to reconsider whether rung 10's *worked* instance
+  must be the same decision as rungs 1-9's. That would relax "one decision unchanged across all
+  ten rungs", which is a charter constraint and therefore Emil's to relax or keep.
+
+  ### 8b. Rung 7 stays after rung 5 — recommendation, with the reason
+
+  The argument for moving closure earlier is that closure conditions which commitment levels are
+  available. **The session recommends keeping the charter's order**, for one reason that outranks
+  the others:
+
+  Closure conditions which commitments are **assurable**, not which are **available**. An
+  arrangement can and constantly does commit at outcome level against a predicate that does not
+  close — a literal in a source file governing peak-load behaviour is exactly that, and it is rung
+  9's entire pathology. Teaching closure first would leave the learner believing the unassurable
+  commitment is impossible, when the lesson is that it is easy, common, and invisible. The
+  ordering that teaches "here is what an arrangement can fix in advance" before "here is what can
+  be checked" is what makes rung 9's reveal land.
+
+  Two corroborations from drafting rather than from argument. Rung 5 was written and needs nothing
+  from rung 7: it stands alone. Rung 7 does need rung 5 — its closed/open table is about which
+  half of the decision can be committed at outcome level and assured. The dependency, as drafted,
+  runs 5 -> 7. And moving 7 before 5 makes the 7a check strictly worse, not better: it would put
+  core/03 vocabulary at rung 5 and core/14 vocabulary at rung 7, leaving the core/01 inversion
+  untouched.
+
   ## 6. Instrument note, deliberately not built
 
   The sorted-warning-line diff used at Gate 1 — comparing the validator's warning set against the

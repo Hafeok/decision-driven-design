@@ -52,4 +52,4 @@ canon and what would change that.
 
 | Track | Vocabulary | Worked decision | Status |
 |---|---|---|---|
-| `01-determination.md` | determinable, determinate, ground, actor, arrangement, commitment level, residual discretion, closure, assurance, escape | how many times do we retry a failed outbound call? | **[PROPOSED]** — rungs 1–5 drafted at Gate 2 |
+| `01-determination.md` | determinable, determinate, ground, actor, arrangement, commitment level, residual discretion, closure, assurance, escape, accountability | how many times do we retry a failed outbound call? | **[PROPOSED]** — all ten rungs drafted; claim `DDD-track-01` |
