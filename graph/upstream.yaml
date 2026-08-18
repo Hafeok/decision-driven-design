@@ -174,3 +174,55 @@ upstream:
     - id: DDD-hyp-05
       status_at_pin: projected
       content_hash: sha256:115bdd9e449d3929de9a96323e355503b950de3e001252e6dc0627bd7f041251
+    # [PROPOSED] Track 1 additions (2026-08-18, DDD-dec-27): the ids the determination track
+    # cites by ddd:ref in projections/tracks/01-determination.md. Pins added at the SAME ref
+    # (v5.7.0) — no advance is proposed here, and none of these ids moved at Wave 3. Added
+    # because W5 fires on a ddd:ref to an unpinned id anywhere under the repo root: a track
+    # that cites canon without pinning it is a teaching surface that can go stale silently,
+    # which is the failure DDD-agent-01 names. Rungs 1-5's citations only; rungs 6-10 add
+    # theirs at Gate 3. The two Track 1 mints — term:commitment-level and
+    # term:residual-discretion — are deliberately NOT pinned here: they do not exist at
+    # v5.7.0 and pinning them now would fire E12. They are pinned at the ref advance to
+    # v5.8.0, on Emil's acceptance of the upstream PR, per the DDD-dec-10/16/18/25 pattern.
+    - id: term:determinable
+      status_at_pin: settled
+      content_hash: sha256:3210619b4130a3ef5c9661c2388d3ea9942995fb54b7a895a5eb2a245c0ef913
+    - id: term:determinate
+      status_at_pin: settled
+      content_hash: sha256:fc1f2dbfb3657c72d236cd76a54d34d90a5278c3d505f6ca9b8d46c47de5fc1b
+    - id: term:tolerance
+      status_at_pin: settled
+      content_hash: sha256:4905e29da1c4b3f812c014e336e6987062526443d11fdd26b408412cdd3f63ac
+    - id: term:decision
+      status_at_pin: settled
+      content_hash: sha256:21b87cd282d731bbd45b3faa4421733bc329a38cf5c30c8164121c03fe2a992e
+    - id: term:admission-test
+      status_at_pin: settled
+      content_hash: sha256:ccc8549533afe452ce1f3fe0ff5b540b5222477d59837774ba2be2702adcac4c
+    - id: term:governing-decision
+      status_at_pin: settled
+      content_hash: sha256:96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7
+    - id: term:ground
+      status_at_pin: settled
+      content_hash: sha256:a990e0b79eef1094d911f829b1935f0a6206b0591e737315d14c4346cec14c05
+    - id: term:actor
+      status_at_pin: settled
+      content_hash: sha256:eeaf465fefdd9ca66897d521b9a5aba1f61eaccd56cb2a411a3615eb5251078e
+    - id: term:arrangement
+      status_at_pin: settled
+      content_hash: sha256:be191770f5301246c6b3b39b255354b86fa8eacacc0d26f39a0f432f4ca7e04e
+    - id: term:judgment
+      status_at_pin: settled
+      content_hash: sha256:d49c90e5e04dcbe753907c5d3d6a16c6c9a6d30e576c3185564a10a23f5c8b02
+    - id: DDD-ground-02
+      status_at_pin: projected
+      content_hash: sha256:a3be6a8f38e0a467e0298dbc5b95fbd7a5a05e94389819dbb9db1c8bc77c5831
+    - id: DDD-ground-05
+      status_at_pin: projected
+      content_hash: sha256:5c146793529821d24b0b45137f1d8e7893acd8c6392b3694d7e145078c9d5e3e
+    - id: DDD-frame-02
+      status_at_pin: projected
+      content_hash: sha256:f45492eedfaf5dc3e0a92776fb71b61639ac1941486816200b01894ba807f04a
+    - id: DDD-frame-13
+      status_at_pin: projected
+      content_hash: sha256:4add58e0f47c0ff22bb752d6b78aef7f591a14b17d610cdb06677439e0b33276

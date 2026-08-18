@@ -1,0 +1,121 @@
+format: 1
+id: DDD-dec-27
+kind: decision
+statement: |
+  The determination learning track files at projections/tracks/01-determination.md as a deliberate first instance of the projections/ tree rather than a general rule closing way-of-working §8 OPEN 3; its rung order is a declared judgement-mediated decision with a named owner and not a derivation from the canon dependency order; and its ground-provenance material is carried as track-native scaffolding marked non-canon at each point of use, with a Q27 revision obligation borne by DDD-track-01.
+principal: Emil
+made: 2026-08-18, Track 1 session (Gate 1 accepted; Gate 2 proposing rungs 1-5)
+resolution: |
+  [PROPOSED — Emil ratifies. Nothing below is settled until he does.]
+
+  ## 1. projections/ is created; OPEN 3 stays open
+
+  The tree is prescribed by meta/way-of-working.md §1 (the three layers) and written out in §5's
+  repo-structure block. It stood unbuilt through the split; migration-report.md records its
+  absence at that time. Creating it realises the specification rather than extending it, which is
+  why this is a filing decision and not a charter change.
+
+  Three files: projections/README.md, projections/tracks/README.md, and
+  projections/tracks/01-determination.md.
+
+  **What this does not settle, stated so it cannot be miscited.** Way-of-working §8 OPEN 3 asks
+  whether projections/ holds rendered artifacts or manifests-plus-pointers *when the artifact
+  lives elsewhere*. That is the question, and it is untouched here. The track is filed as a
+  rendered artifact because it lives in this repository and has nowhere else to live — the
+  elsewhere case never arises for it. **One instance, not a general rule.** A later reader must
+  not cite this filing as the precedent that closed OPEN 3; OPEN 3 closes when someone rules on
+  the elsewhere case, which this session does not.
+
+  ## 2. Audience is a manifest field, not a path segment
+
+  Tracks file audience-general. A track's content is Layer 1 and actor-general; only its worked
+  example is domain-specific. Filing by example domain would put a governance implementer's
+  track and a canon contributor's track in different trees for the same register, which is the
+  wrong shape for the same reason the arrangement rather than the executor is the unit of
+  comparison. The software audience of track 01 is recorded in its manifest.
+
+  ## 3. The rung order is declared, not derived
+
+  The order of the ten rungs is **a decision made by a named owner**, resolved at
+  principal-level, and it is deliberately not a derivation from the canon dependency order.
+
+  The dependency order is a **constraint** the order satisfies — no rung may require vocabulary a
+  later rung introduces, and Gate 3 states that check explicitly. Satisfying a constraint is not
+  the same act as being produced by it. Deriving the order mechanically and calling it settled
+  would be presumed discharge in this repository's own sense: the artefact recording the skip
+  would be identical to the artefact recording the choice, and nobody could tell afterwards
+  whether the sequence was chosen or fallen into.
+
+  Two orderings are live and are not resolved at this gate, per the session charter: whether the
+  worked example survives contact with junior engineers or a business-line example is stronger,
+  and whether rung 7 (closure) belongs before rung 5 (commitment level) on the argument that
+  closure conditions which commitment levels are available at all. Both carry to Gate 3 as open.
+
+  ## 4. Ground provenance — the ruling applied
+
+  Rung 3's canon content is the definition and nothing more: a fact belongs to ground when
+  information about it can change the resolution or its acceptance status beyond the declared
+  tolerance. That is what the rung teaches and what the track claim rests on.
+
+  The five-way taxonomy (controlled, observed, inferred, institutional, missing) is **expository
+  scaffolding, not a partition claim**. It is marked track-native and non-canon **in line at the
+  point of use**, inside the rung, so a reader arriving at rung 3 sees the status without leaving
+  the document — a projection manifest alone does not satisfy the status-floor rule for a
+  practice-facing surface. The institutional row carries its own flag naming Q27 as the open
+  mechanism.
+
+  **The revision trigger is a positive obligation, not a note.** A Q27 landing *requires* the
+  track to be revised, and DDD-track-01 carries the dependency so the requirement is discoverable
+  from the claim graph rather than only from this decision record. DDD-track-01 files at Gate 3
+  with the track-level falsifier.
+
+  ## 5. Pins added, no ref advance
+
+  Fourteen ids the track cites by ddd:ref were added to graph/upstream.yaml **at the existing ref
+  (v5.7.0)**: term:determinable, term:determinate, term:tolerance, term:decision,
+  term:admission-test, term:governing-decision, term:ground, term:actor, term:arrangement,
+  term:judgment, DDD-ground-02, DDD-ground-05, DDD-frame-02, DDD-frame-13. No advance is proposed
+  in this act.
+
+  The reason is instrumental, not tidiness: W5 fires on a ddd:ref to an unpinned id anywhere
+  under the repository root, so a track that cites canon without pinning it is a teaching surface
+  that can go stale in silence. That is DDD-agent-01's failure mode — basis loss — on a surface
+  where it reaches learners.
+
+  The two Track 1 mints, term:commitment-level and term:residual-discretion, are **deliberately
+  not pinned**: they do not exist at v5.7.0 and pinning them would fire E12. Rungs 5 and 6 cite
+  them in prose, carry no ddd:ref marker, and say plainly at the point of use that the marker and
+  pin land at the advance to v5.8.0 on Emil's acceptance of the upstream PR. Rungs 6-10 add their
+  own pins at Gate 3.
+
+  ## 6. Instrument note, deliberately not built
+
+  The sorted-warning-line diff used at Gate 1 — comparing the validator's warning set against the
+  baseline commit, so a green run distinguishes a new warning from a standing one — is recorded
+  as a **candidate instrument and nothing more**. It is not generalised into a validator this
+  session (Emil, Gate 1). Booked, unbuilt, unbundled.
+basis:
+  - DDD-agent-01
+  - DDD-frame-01
+  - DDD-frame-02
+  - DDD-ground-02
+  - DDD-ground-05
+  - DDD-dec-26
+  - term:capability
+  - term:presumed-discharge
+  - term:determinable
+  - term:arrangement
+notes: |
+  [PROPOSED] Drafted at Gate 2 and committed to the session branch before reporting, per the
+  session charter. Emil's acceptance is the ratification act.
+
+  Numbering: decisions share one id space across the principle repo and this one. 26 is the
+  upstream session decision; 27 is this one.
+
+  The upstream half of this session is DDD-dec-26 (the two mints, the three non-deltas, the
+  ground-provenance ineligibility ruling, and the reading of DDD-dec-24's minimality clause).
+  This decision does not restate those rulings; it applies them.
+
+  Scope discipline. The charter forbids bundling. Untouched here: the Q27 wave, the term:training
+  supersession question, the ref-staleness instrument, any path generator, any ActorClass axis,
+  any Diataxis restructuring, and any website work.
