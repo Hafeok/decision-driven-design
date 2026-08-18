@@ -171,6 +171,11 @@ not apology.
   acts.** Both are now declared in §2's Notation paragraph.
 - Worked tables report the `H(V)·n` scale, marked `·n` in every header; §5.2's RAG table and §6's
   aggregate table are in bits and carry no `·n`.
+- **Appendix A is generated from the graph, never hand-edited.** Regenerate both tables wholesale
+  from `core/claims/` and `core/graph/terms.yaml`, then re-read the result against the graph with
+  an independent script. Verbatim-by-construction plus an independent check is a verification
+  class hand-editing cannot reach, and it corrects drifted rows in the same pass that adds new
+  ones. Standing convention from the discharge session's Gate 4 (44/44 at that gate).
 - **`§N/M` forms are Ashby's section numbers, not this paper's** (`§7/7`, `§11/7`, `§11/9`). Any
   mechanical renumbering must exclude `§N` followed by `/`. This was nearly a silent corruption at
   the discharge session's Gate 2.
