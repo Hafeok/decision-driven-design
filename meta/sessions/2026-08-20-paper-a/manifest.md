@@ -149,6 +149,21 @@ canon to tidy banners. Freight item 4.
 | The measure note has no downstream tag | **Emil**, unbundled |
 | The `term:training` supersession question | Wave 3 successor item 1, untouched |
 
+## Release discipline: checked, and no descriptor is owed
+
+Recorded explicitly because the charter names Wave 3's near-miss — a session expecting a tag on
+acceptance must carry its descriptor in its own pull request.
+
+**This session expects no tag, and could not carry a descriptor if it did.** The
+descriptor-and-CI mechanism (`releases/v<major>.<minor>.<patch>.yaml`, merged to the default branch,
+CI cutting the tag) exists **only in the principle repository**. `decision-driven-design` has no
+`releases/` directory and no tag-cutting workflow; its `v0.x` tags were cut by another route. This
+session touches only the downstream repository, files nothing in canon, and asks for no release.
+
+The adjacent question — whether a downstream tag should be cut that finally carries the measure
+note, which is absent from `v0.4.0` and every earlier tag — is **Emil's and unbundled** (successor
+item 6), and is not a thing this pull request either does or requires.
+
 ## Out of scope, untouched
 
 Any canon filing · the measure note itself (cited, never touched) · the training-gate supersession ·
