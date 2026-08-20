@@ -63,27 +63,24 @@ word-for-word from the graph, with its status, so the paper can be checked witho
 
 Ashby's regulator has no species.
 
-It is described by the variety it can absorb, not by whether that variety is supplied by a
-governor, a nervous system, a bureaucracy or a program. Brooks distinguishes essential from
-accidental complexity. Tesler asks where complexity is allocated. Meyer specifies obligations
-through preconditions, postconditions and invariants. These are not instances of one hidden
-formalism, and this paper does not claim that they are. They share a narrower limitation: the
-arrangement that performs, checks and answers for the work is usually held fixed while the
-allocation problem is analysed.
+It is described by the variety it can absorb, not by whether that variety is supplied by a governor,
+a nervous system, a bureaucracy or a program. Brooks, Tesler and Meyer each analyse the allocation
+of work differently (§11), and they share one limitation: the arrangement that performs, checks and
+answers for the work is usually held fixed while the allocation problem is analysed.
 
 **A parameter that never varies is indistinguishable from a constant.** For much of software
 engineering, treating the determiner as fixed was productive, because the operative arrangement was
 reliably some combination of authored procedure, human developer, human operator and mechanical
 execution. Contemporary systems make the omitted parameter harder to ignore, because the same
-governing choice may now be allocated among an explicit rule, a search procedure, a learned policy,
-a human specialist, a model with tools, an automated checker, a human reviewer, an organisation
-that authorises and bears consequences, or a composition of several of these.
+governing choice may now be allocated among an explicit rule, a learned policy, a human specialist,
+a model with tools, an automated checker, a reviewer, an organisation that authorises and bears
+consequences — or a composition of several of these.
 
-The important change is not that an ontologically unprecedented third species has appeared.
-Probabilistic programs, adaptive systems, learned components, organisations and collectives all
-predate contemporary generative models. The change is operational: heterogeneous arrangements now
-resolve consequential choices inside ordinary engineering systems, at a scale that makes their
-differences load-bearing. **(analysis)**
+The important change is not that an unprecedented third species has appeared — probabilistic
+programs, adaptive systems, learned components, organisations and collectives all predate
+contemporary generative models. The change is operational: heterogeneous arrangements now resolve
+consequential choices inside ordinary engineering systems, at a scale that makes their differences
+load-bearing. **(analysis)**
 
 ### 1.1 The primary claim
 
@@ -203,7 +200,51 @@ non-applicability** [DDD-ground-01, projected].
 
 ### 2.4 Ground provenance
 
-*(Authored section — outlined at Gate 1, drafted at Gate 3.)*
+**(analysis)** Ground is not homogeneous, and the differences between kinds of ground drive
+engineering decisions that the single word conceals. The canon half is the definition already given
+in §2.3: **a fact belongs to ground when information about it can change the resolution or its
+acceptance status beyond the declared tolerance** [DDD-dec-26]. Everything below is this paper's
+sorting of what that definition admits, and it is offered as analysis rather than as canon.
+
+| Provenance | The ground is | Finer distinctions where they matter |
+|---|---|---|
+| **Controlled** | maintained by the arrangement and enforceable through commitments | — |
+| **Observed** | read from an external or independently changing system | **sensory** — read at the act, current by construction; **recorded** — read from a store, current only as of its write |
+| **Inferred** | estimated from data or a model | **derived** — computed from ground already held; **predicted** — estimated about a state not yet observed |
+| **Institutional** | supplied through rules, conventions, authority or social practice | — |
+| **Missing** | relevant and unavailable to the executing arrangement | — |
+
+**Why the observed/inferred sub-distinctions earn their place.** *A stored statement about
+uncontrolled ground is not equivalent to a current observation of that ground.* That sentence is the
+whole practical yield of the taxonomy, and it is a claim about the sensory/recorded boundary rather
+than about observation in general. Revalidation cadence should depend on drift rate, consequence,
+consistency guarantees and the declared assurance level, rather than on a universal "read every
+time" rule — and an arrangement cannot reason about cadence at all until it knows which of its
+observed ground is sensed and which is recalled. The derived/predicted boundary does the same work
+on the inferred slot: a derived value fails when its inputs are wrong, a predicted one fails when
+the world moves, and the two want different checks.
+
+**Missing ground is a slot, not an omission.** It is what makes an arrangement's limits a property
+of *ground* rather than of the executor, which is why the first variable in the framework's
+situated-advantage hypothesis is relevant ground being unavailable to the computational system
+[DDD-hyp-02, projected]. An act whose acceptance depends on ground the arrangement cannot reach has
+a floor, whatever the executor's capability (§6.1). Dropping this slot would relocate a ground
+property onto the actor, which is precisely the collapse the index exists to prevent.
+
+**Institutional provenance, and the mechanism this paper does not state.** Institutional ground is
+supplied by rules, conventions, authority and social practice, and it is the slot §7's
+accountability material leans on: an authority that supplies ground is usually also a party that can
+answer for it. *How* that supply works — what makes an institution's statement usable as ground, and
+what makes it fail — is **a question the framework has open and has not answered.** The trust
+material that would settle it is unfiled, and this paper does not anticipate it. Institutional
+provenance is named here and its mechanism is stated as pending that filing, cited as an open
+question rather than smuggled in early.
+
+*This five-way partition is not canon. The framework has ruled it ineligible for minting rather than
+merely deferred — a mint would fix a partition that the open trust question may restructure —
+so it is carried here as this paper's analysis, marked non-canon at the point of use, with the
+institutional slot's mechanism flagged as pending on that same question [DDD-dec-26]. This paper
+flags the gap and files nothing.*
 
 ### 2.5 The arrangement, not the isolated actor
 
@@ -538,9 +579,80 @@ logically and operationally available and still economically useless.
 and stakeholders the arrangement is meant to serve. A mechanically executable predicate may be
 normatively incomplete, contested or gameable.
 
+**A second axis follows, and it is orthogonal to this one.** These four name *which* closure
+question is being asked. The next section asks *how strong* the answer is once the question is
+fixed as operational. A predicate has a position on both axes at once, and neither reading
+constrains the other — so nothing in §5.2 competes with the four kinds, and a reader meeting both
+should not look for a contradiction between them.
+
 ### 5.2 How strong is the closure?
 
-*(Authored section — outlined at Gate 1, drafted at Gate 3.)*
+**(analysis)** Section 5.1 sorted the questions. This section orders the answers to one of them.
+Fix the question as operational closure — the framework's own [term:closure] — and predicates still
+differ in *degree*, along a gradient the framework's material already implies and has not yet
+assembled in one place. Four rungs, weakest first.
+
+| Rung | What holds | Where the framework says so |
+|---|---|---|
+| **Open** | No acceptance procedure over accessible ground at the declared assurance level. | [term:closure], by negation |
+| **Verification-closed** | Adequacy can be *evaluated* within declared resource, latency and confidence bounds. | [term:closure] |
+| **Constructively closed** | The verdict is *computed by rule* from ground available at the act. | measure note §8 |
+| **Formally decidable** | An acceptance procedure exists and terminates over the declared domain. | [term:closure]'s reservation |
+
+**Open.** No procedure decides acceptability, so there is no verdict function to have entropy about
+and the measure does not exist [DDD-measure-06, **established**]. Governance is untouched by this:
+the question of whether every decision governing the act sits in a declared store, none escaped, is
+well-formed on the total domain [DDD-frame-11]. The measure's silence here is a fact about the
+measure.
+
+**Verification-closed.** The rung canon means by *closure*: the relevant ground is observable and
+adequacy can be evaluated within declared bounds [term:closure]. Two things become available at
+once. The measure exists, so specification demand is `H(V)` [DDD-measure-01]. And producer identity
+stops being epistemically necessary — for the checked property, and nothing more [DDD-frame-05].
+
+**Constructively closed.** A predicate can be more than checkable. Call it **constructively closed**
+when the verdict is not merely evaluable but computed by rule from ground available at the act: a
+procedure returns the correct output directly, and there is no candidate search to price. Closure
+asks whether adequacy can be *evaluated*; constructive closure asks whether the verdict can be
+*produced*. The distinction is the measure note's, and the worked date task of §8.6 is its example —
+its entropies are exact and exhaustive rather than sampled precisely because the verdict there is
+computed rather than searched for (measure note §8).
+
+**Formally decidable.** Placed last and deliberately not at the top. Canon reserves *decidable* for
+the formal special case rather than making it the requirement [term:closure], and the reservation is
+load-bearing in both directions: any bounded finite domain is decidable by lookup, and a decidable
+checker may demand resources no arrangement has. Decidability is therefore a special case of the
+ladder rather than its summit, and the rungs that govern deployed arrangements are the middle two.
+
+#### The retirement this ladder walks past
+
+The third rung approaches a claim the framework killed, and the approach has to be stated carefully
+because the resemblance is real.
+
+> **RETIRED — "closed predicates make intelligence unnecessary."** Does not follow from
+> producer-independence under verification; generation may still require whatever capability the
+> search demands. [DDD-frame-09, **retired**]
+
+The retirement turns on a premise: that a search remains, and that verification-closure bounds
+nothing about how expensive it is [DDD-frame-06, **established**; DDD-measure-11, reported].
+Constructive closure does not contradict that finding. It **sidesteps** it — where the verdict is
+computed by rule, there is no search left to be expensive, so the premise the retirement turns on is
+**absent rather than denied**.
+
+The difference matters, because the two readings license different things. Denying the retirement
+would license inferring cheap generation from closure, which is exactly what was retired.
+Sidestepping it licenses nothing beyond the case at hand: a predicate whose verdict is computed has
+no generation cost to bound, and predicates whose verdicts are merely checkable are untouched. The
+scoped survivor of the retirement — that producer identity is not necessary *for the checked
+property and nothing more* — holds either way [DDD-frame-05].
+
+*Canon's closure vocabulary does not carry the constructive/verification distinction. `term:closure`
+is stated in evaluative terms alone, no claim node names the stronger rung, and the word*
+constructive *occurs nowhere in the principle repository's core documents. The rung above is stated
+register-native, as this paper's analysis and not as canon; a dedicated node is pending filing on
+the framework's open-questions wave, and until it lands the citation basis is closure, the
+separation of closure from generation cost, and the measure's silence on search, as cited above.
+This paper flags the gap and files nothing.*
 
 ### 5.3 Closure is not generation cost
 
@@ -668,19 +780,10 @@ reintroduce the error the correction removed.
 
 ### 6.3 Reading the classical accounts through the index
 
-**(analysis)** Ashby's requisite variety describes what a regulator must absorb and is silent on
-what kind of thing the regulator is; the index makes that silence a variable rather than an
-omission. Brooks's essential complexity, read through [DDD-floor-02], is not a property of the
-problem but of the problem-against-an-arrangement, which is why essential complexity is observed to
-move when tooling, ground access or acceptance criteria change. Tesler's conservation of complexity
-asks where complexity is allocated and presupposes that it is allocated somewhere — the framework's
-conservation statement is that intuition given a store vocabulary and, on the closing region, a
-measure (§4.4). Meyer's contracts are outcome-level and policy-level commitments in the
-framework's sense (§3.1), written at an interface.
-
-None of these is claimed as an instance of one hidden formalism. What the index supplies is a
-common set of coordinates in which each can be located, and a reason why their disagreements are
-often disagreements about which coordinate was held fixed.
+**(analysis)** Brooks's essential complexity, read through [DDD-floor-02], is not a property of the
+problem but of the problem-against-an-arrangement — which is why essential complexity is observed to
+move when tooling, ground access or acceptance criteria change. That single relocation is what the
+index buys, and §11 places the other classical accounts against it.
 
 ---
 
@@ -751,32 +854,26 @@ and a human reviewer is available.
 ### 8.1 Ground and its provenance
 
 The relevant ground is heterogeneous, and §2.4's provenance vocabulary sorts it. The repository's
-existing conventions are **controlled**: the arrangement maintains them and can enforce them.
-The address-format rules for each country are **institutional**: they are supplied by postal
-authorities and conventions, not derived. The current schema is **observed**, and — importantly —
-it is observed *from a store*, so it is current only as of its last write. Whether a given customer
-record is a business or a residence is **inferred**. And whether downstream consumers depend on the
-existing un-normalised form is, in most real repositories, **missing**: the information exists
-somewhere and is not available to the arrangement executing the act.
+conventions are **controlled**. Each country's address-format rules are **institutional**, supplied
+by postal authorities rather than derived. The current schema is **observed**, and observed *from a
+store*, so it is current only as of its last write. Whether a customer record is a business or a
+residence is **inferred**. And whether downstream consumers depend on the existing un-normalised
+form is, in most real repositories, **missing**.
 
 The missing slot is not a defect in the taxonomy. It is the finding: an act whose acceptance depends
 on ground the arrangement cannot reach has a floor, whatever the executor's capability (§6.1).
 
 ### 8.2 Commitments, by level
 
-*Outcome-level.* The schema fixes field types and lengths. The linter fixes formatting. These
-resolve their determinables directly, and the act has nothing left to decide along them.
-
-*Policy-level.* "New endpoints follow the existing controller pattern" fixes the generating
-procedure without fixing the output. The test suite's coverage requirement is likewise policy-level.
-
-*Principal-level.* "A reviewer with commit rights accepts the change" selects a determiner by
+*Outcome-level:* the schema fixes field types and lengths, the linter fixes formatting — these
+resolve their determinables directly. *Policy-level:* "new endpoints follow the existing controller
+pattern" fixes the generating procedure without fixing the output, as does the coverage requirement.
+*Principal-level:* "a reviewer with commit rights accepts the change" selects a determiner by
 qualification and delegates the case-level resolution.
 
-*Residual discretion.* After all three are applied, what remains is the outcome-relevant variation
-the arrangement has not committed: which normalisation the canonical form uses, how the endpoint
-behaves on a country whose format rules the institutional ground does not cover, and whether the
-un-normalised form is preserved. The model is deterministic given its inputs and this changes
+*Residual discretion* is what survives all three: which normalisation the canonical form uses, how
+the endpoint behaves on a country the institutional ground does not cover, and whether the
+un-normalised form is preserved. The model is deterministic given its inputs, and that changes
 nothing about the size of that residual [term:residual-discretion].
 
 ### 8.3 Resolution source, per choice
@@ -789,14 +886,12 @@ nothing about the size of that residual [term:residual-discretion].
 | Behaviour on an uncovered country | **default** — whatever the library does | usually not |
 | Preservation of the un-normalised form | **draw** — whichever the generated code happens to do | no |
 
-The last two rows are the section's point. Both acts complete. Both land outcomes in the world. One
-is governed by an arrangement default that nobody declared, and one is not governed at all — and
-under [DDD-frame-15] both are discharged, which is why the framework says demand is never unmet,
-only ungoverned. Under [term:store] the last row's source is *nothing*, and it is an escape.
-
-Note the second row's qualification. The controller-pattern decision is filed. If the model's
-context does not carry it at the act, no source supplied it, and a filed decision that is not
-delivered is an escape [DDD-delivery-02].
+The last two rows are the section's point. Both acts complete and both land outcomes in the world;
+one is governed by an arrangement default nobody declared, and one is not governed at all. Under
+[DDD-frame-15] both are discharged — demand is never unmet, only ungoverned — and under [term:store]
+the last row's source is *nothing*, which is an escape. The second row carries the qualification: if
+the model's context does not deliver that filed decision at the act, no source supplied it, and it
+escapes too [DDD-delivery-02].
 
 ### 8.4 Closure, per predicate
 
@@ -983,38 +1078,29 @@ no claim about governance, which is well-formed there [DDD-frame-11].
 
 ### 10.3 Boundary cases
 
-**(analysis)** *Randomised and adaptive programs.* Randomisation is not discretion (§3.2). An
-adaptive program whose adaptation rule is declared and bounded is policy-level committed; one whose
-adaptation is unbounded has residual discretion proportional to what the bound would have removed.
+**(analysis)** *Learned and adaptive systems.* Randomisation is not discretion (§3.2): an adaptive
+program whose adaptation rule is declared and bounded is policy-level committed, while one whose
+adaptation is unbounded carries the discretion that bound would have removed. A system that learns a
+rule and then applies it deterministically has moved demand from occasioned to standing supply
+[DDD-frame-16], and that the rule was learned rather than authored changes nothing in the
+accounting.
 
-*Learned symbolic systems.* A system that learns a rule and then applies it deterministically has
-moved demand from occasioned to standing supply; the framework's account of that move is
-[DDD-frame-16]'s, and the fact that the rule was learned rather than authored changes nothing in
-the accounting.
+*Hybrid arrangements.* The ordinary case, and the reason the arrangement is the unit (§2.5): a
+hybrid is not a fraction of a person plus a fraction of a model, but an arrangement with its own
+commitments, checks and principal.
 
-*Hybrid arrangements.* The ordinary case, and the reason the arrangement is the unit (§2.5). A
-hybrid is not a fraction of a human plus a fraction of a model; it is an arrangement with its own
-commitments, ground channels, checks and principal.
+*Distributed actors.* The composite and ensemble vocabulary handles these (§2.1), with one caution:
+a composite carries the demand of its parts **plus** the seam demand created between them
+[term:seam, settled].
 
-*Distributed actors.* Handled by the composite and ensemble vocabulary (§2.1), with the caution
-that a composite carries the demand of its parts **plus** the seam demand created between them
-[term:seam, settled] — distribution is not free, and the seam is where the price shows.
+*Incomplete and gameable predicates.* Normative closure can fail while operational closure holds
+(§5.1), and a predicate optimised against has had its acceptance region searched adversarially.
 
-*Incomplete and gameable predicates.* Normative closure (§5.1) can fail while operational closure
-holds, and a predicate optimised against is a predicate whose acceptance region has been searched
-adversarially (§5.3).
+*Long-running agents.* An arrangement whose ground decays over its own run instances the escape
+account directly: context decay removes filed claim nodes from the agent's ground, so later actions
+become decisions with no link back to the declared claims — escape by delivery failure, at scale
+[DDD-agent-01, projected; DDD-delivery-02].
 
-*Expensive decidable checks.* Logical closure without economic closure. The framework's closure is
-operational precisely so this case does not read as closed.
-
-*Contested normative ground.* Institutional provenance (§2.4) with disagreement among the
-authorities that supply it. H2 names evaluator disagreement as a situated-advantage variable for
-exactly this case.
-
-*Long-running agents.* An arrangement whose ground decays over its own run is a live instance of the
-framework's escape account: context decay and compaction remove filed claim nodes from the agent's
-ground, so later actions become decisions with no link back to the declared claims — escape by
-delivery failure, at scale [DDD-agent-01, projected; DDD-delivery-02].
 
 ---
 
