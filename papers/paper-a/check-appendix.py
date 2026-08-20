@@ -14,6 +14,15 @@ Four things are checked, and they are different failures:
 
 Usage:  check-appendix.py <manuscript.md> <upstream-repo> <ref>
 Exit 0 when the appendix matches the graph; 1 otherwise.
+
+Defect history, kept with the instrument because a check that can be wrong about a correct
+artefact could have been wrong about an incorrect one:
+
+  * First run reported four discrepancies -- DDD-floor-01, DDD-measure-02, DDD-measure-03,
+    DDD-measure-10 -- and all four were this script's fault. Their statements carry literal
+    pipes, H(V|X) and H(V|S), which the generator correctly escapes as \| in a table cell;
+    the parser split rows on a bare '|' and broke those cells in two. The appendix was right.
+    Fixed by splitting on unescaped pipes only; the hazard is commented at the split.
 """
 import re
 import subprocess

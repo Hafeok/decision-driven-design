@@ -9,6 +9,14 @@ check is independent of the generator that produced it.
 
 Usage:  gen-appendix.py <manuscript.md> <upstream-repo> <ref>
 Rewrites everything from the `## Appendix A` heading to end of file.
+
+Defect history, kept with the instrument:
+
+  * First version was not idempotent: it appended a horizontal rule to a body that already
+    ended with the rule preceding the appendix, so a second run added a second rule. A
+    convention that says "regenerate wholesale" must survive being run twice, and this one
+    did not. Fixed by stripping trailing rules from the body first; idempotence is now
+    checked by running three times and comparing bytes.
 """
 import re
 import subprocess
@@ -120,7 +128,13 @@ def main(path, repo, ref):
                 f'{len([c for c in cited_c if c in claims])} claims, '
                 f'{len([c for c in cited_c if c in decisions])} decisions, '
                 f'{len(cited_t)} terms.*', '']
-    open(path, 'w').write(body.rstrip('\n') + '\n\n---\n\n' + '\n'.join(out))
+    # The body already ends with the rule that preceded the appendix. Appending another would
+    # make the generator non-idempotent -- a second run would add a second rule, and a convention
+    # that says "regenerate wholesale" must survive being run twice.
+    body = body.rstrip('\n')
+    while body.endswith('---'):
+        body = body[:-3].rstrip('\n')
+    open(path, 'w').write(body + '\n\n---\n\n' + '\n'.join(out))
     print(f'Appendix A generated: {len([c for c in cited_c if c in claims])} claims, '
           f'{len([c for c in cited_c if c in decisions])} decisions, {len(cited_t)} terms, '
           f'{len(hset)} hypothesis-set rows')

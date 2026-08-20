@@ -13,6 +13,13 @@ citation — the trailing bracket carrying a disclosure such as "closing clause"
 
 Usage:  check-quotations.py <manuscript.md> <upstream-repo> <ref>
 Exit 0 when every quotation verifies or is disclosed; 1 otherwise.
+
+Defect history, kept with the instrument:
+
+  * First version folded case at the first character only, and failed a legitimate quotation of
+    DDD-measure-02 that begins mid-sentence at "H(V)". Fixed by trying the quotation as written
+    and with either casing of its first letter -- and only those, so an internal rewording
+    still fails.
 """
 import re
 import subprocess

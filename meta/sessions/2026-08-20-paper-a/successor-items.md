@@ -52,7 +52,49 @@ settled is the requirement, not its implementation.
 *A found bug, recorded because it bears on trusting the instrument.* The checker's first version
 folded case at the first character only, and failed a legitimate quotation of `DDD-measure-02` that
 begins mid-sentence at `H(V)`. Corrected to try the quotation as written and with either casing of
-its first letter, and only those — an internal rewording still fails, as control 2 confirms.
+its first letter, and only those — an internal rewording still fails, as control 2 confirms. The
+defect is recorded in the script's own docstring, not only here.
+
+---
+
+## 1a. Appendix generation, re-read independently *(freight — rides with item 1)*
+
+**The rule.** An appendix reproducing graph text is **generated, never hand-edited**, and then
+**re-read against the graph by a second script that shares no code with the generator** and takes
+the *rendered* artefact as its input. Generated-not-edited was already the standing convention from
+the discharge session; what this session adds is that the re-read must be **independent**, and why.
+
+**Why independence, and not merely a re-read.** `check-appendix.py`'s first run reported four
+discrepancies — `DDD-floor-01`, `DDD-measure-02`, `DDD-measure-03`, `DDD-measure-10`. **All four
+were the checker's fault, not the appendix's.** Each of those statements carries a literal pipe —
+`H(V|X)`, `H(V|S)` — which the generator correctly escapes as `\|` inside a table cell, and which
+the checker's parser was splitting on, breaking the cell in two. The appendix was correct
+throughout.
+
+That is the argument, and it is stronger than the usual one. A checker that can be wrong about a
+**correct** artefact is a checker that could have been wrong about an **incorrect** one, and only
+independence surfaces which of the two artefacts is at fault. Had generator and checker shared a
+parser, the four discrepancies would never have appeared — and neither would a real one of the same
+shape. The defect is recorded in the script's own docstring.
+
+**Machine-checked predictions-never-findings.** The same script fails if any row in a hypothesis-set
+table shows evidence the graph does not hold. Ruled at GATE 4 as an upgrade from discipline to
+instrument, and generalised here: **any projection carrying hypothesis nodes fails if a rendered row
+reports evidence the graph does not carry.** The H-set has been carried as
+predictions-never-findings by convention since Wave 3's GATE 4; this makes the convention
+executable.
+
+**A second defect, found at the close, and the rule it adds.** The generator was **not
+idempotent**: it appended a horizontal rule to a body that already ended with the rule preceding the
+appendix, so a second run added a second one. A convention that says *regenerate wholesale* is a
+convention that will be run more than once, and an instrument serving it must survive that. Fixed,
+and idempotence is now demonstrated by running the generator three times and comparing bytes. **The
+rule this adds: a generated section's generator must be idempotent, and the check is running it
+twice, not reading it.** Recorded in the script's own docstring.
+
+**Open, as with item 1.** Whether generator and checker belong in a shared projection toolkit, in
+CI, or per-paper is undecided. What is settled is the requirement: generated, re-read, re-read
+*independently*, and idempotent.
 
 ---
 
