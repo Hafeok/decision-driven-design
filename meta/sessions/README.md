@@ -29,3 +29,4 @@ session's later work exceeds the committed prompt, the excess is visible as exce
 | `2026-08-18-track-1-determination/` | Projection authoring — the determination learning track, ten rungs, two repositories |
 | `2026-08-19-measure-discharge/` | Interactive paper drafting — the measure note's discharge section (items M-1…M-5) |
 | `2026-08-20-paper-a/` | Interactive paper drafting — Paper A, the framework's statement paper (P-1…P-5) |
+| `2026-08-21-floor-lineage/` | Interactive canon curation — the floor's definition placement and lineage (F-1…F-4) |
