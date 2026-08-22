@@ -4,7 +4,7 @@
 
 *Emil — Context&. Statement paper.*
 
-*This paper is a projection of `actor-indexed-determination` at `v5.8.0`. Every bracketed claim,
+*This paper is a projection of `actor-indexed-determination` at `v5.9.0`. Every bracketed claim,
 decision and term identifier resolves against that one ref, and Appendix A reproduces each of them
 from it, so the paper can be checked without the repository. No identifier here resolves against the
 downstream repository, so no downstream ref is pinned. The companion measure note —
@@ -738,13 +738,18 @@ tolerance and assurance level, cannot discharge mechanically.
 
 ### 6.1 The floor lives in the predicate
 
-> **The intrinsic floor is a property of the acceptance predicate, not of the decision.**
-> [term:floor, settled]
+> **… The intrinsic floor is a property of the acceptance predicate, not of the decision.**
+> [term:floor, settled — closing clause; the canonical text opens with the floor's definition]
 
 Where the predicate does not close, verification is structurally unavailable, and the demand falls
 to whoever is present. That is the mechanism, and it is why the floor is not a statement about
 difficulty. A task can be enormously difficult with a fully closing predicate — the search is
 expensive and the check is cheap — and carry no floor at all (§5.3).
+
+**Attribution.** The phenomenon this claim relocates — an irreducible residue in determination — is
+Polanyi's and Collins's, and this paper cites them for the phenomenon only, taking no result from
+either (Polanyi 1966; Collins 2010). What is the framework's, and not theirs, is the residue's
+*location*: in the checkability of the acceptance predicate, arrangement-indexed.
 
 The measure's boundary coincides with the floor's location: **the measure exists if and only if the
 acceptance predicate operationally closes, and `H(V)` is undefined exactly where the framework
@@ -1264,7 +1269,13 @@ Ashby, W. R. (1956). *An Introduction to Cybernetics*. Chapman & Hall, London. V
 *(verified)*
 
 Brooks, F. P. (1987). No Silver Bullet: Essence and Accidents of Software Engineering. *IEEE
-Computer* 20(4):10–19. *(verified)*
+Computer* 20(4):10–19, April 1987, doi:10.1109/MC.1987.1663532; reprinted from *Proceedings of the
+IFIP 10th World Computer Congress*, North-Holland, 1986. Both locators are given because both
+circulate. *(verified)*
+
+Collins, H. M. (2010). *Tacit and Explicit Knowledge*. University of Chicago Press, Chicago. ISBN
+978-0-226-11380-7. The three-way taxonomy the framework respects — relational, somatic and
+**collective** tacit knowledge — is the book's organising distinction. *(verified)*
 
 Funkhouser, E. (2014). *The Logical Structure of Kinds*. Oxford University Press. ISBN
 9780198713302. *(verified)*
@@ -1277,6 +1288,9 @@ Johnson, W. E. (1921). *Logic*, Part I, chapter XI, "The Determinable". Cambridg
 *(verified)*
 
 Meyer, B. (1992). Applying "Design by Contract". *IEEE Computer* 25(10):40–51. *(verified)*
+
+Polanyi, M. (1966). *The Tacit Dimension*. Doubleday & Company, Garden City, New York. Based on the
+Terry Lectures delivered at Yale University in 1962. *(verified)*
 
 Prior, A. N. (1949). Determinables, Determinates and Determinants. *Mind* 58(229):1–20 and
 58(230):178–194, in two parts. *(verified)*
@@ -1384,7 +1398,7 @@ re-read against the graph by an independent script (`check-appendix.py`).
 | `term:ensemble-actor` | ensemble-actor | **The choice is a property of the ensemble, and it exists nowhere in any member.** |
 | `term:escape` | escape | **Escaped** — determined *never*, by nobody: decided-by-nobody as a first-class category. Latent defect exposure. **The only forbidden state.** |
 | `term:escape-mechanism` | escape-mechanism | **Capacity-generated escape — the escape an actor produces from residual it has taken up — requires two conditions, both necessary:** **(1) Overflow** — demand exceeds resolve capacity. **(2) Open** — no verifier the actor holds. Overflow alone (closing predicate) → **retries, not escape.** Recoverable. Not floor. Open alone (within capacity) → **carried by judgment**, where an accountable supplier is named. Not floor. Where none is named, it is escape by another route (`05` §7) — outside this mechanism, not excluded by it. **Overflow AND open** → **escape. This is the floor.** **Sufficient for escape, never necessary.** A governing decision that never entered an actor's residual escapes without overflowing anything: escape is supplied-by-nobody (`term:escape`), and capacity shortfall is one generator of it. |
-| `term:floor` | floor | **The intrinsic floor is a property of the acceptance predicate, not of the decision.** |
+| `term:floor` | floor | The "floor" is the portion of a determination's demand that **cannot be moved off the in-the-moment actor** — the residue that no amount of encoding or checking can amortise, that must be paid, per run, in judgment. **The intrinsic floor is a property of the acceptance predicate, not of the decision.** |
 | `term:liability` | liability | **Liability** — bearing the consequence. |
 | `term:outcome` | outcome | The **outcome** — the determinate as it lands in the world, produced at every completed act. The **verdict** is the same determinate as assessed by a declared predicate, produced only where governance has declared one. The world renders outcomes, never verdicts; governance is the conversion of outcomes into verdicts. |
 | `term:residual-discretion` | residual-discretion | **Residual discretion** is the outcome-relevant variation remaining at the act after the arrangement's declared commitments are applied. It is not randomness: a deterministic arrangement can carry substantial discretion across unfamiliar cases, a randomised one can be tightly committed, and a zero-variance arrangement can be consistently wrong. |
@@ -1410,4 +1424,4 @@ graph's own fields, not the paper's summary of them.
 | `DDD-hyp-04` | projected | `[]` (empty) | paper-4 | yes |
 | `DDD-hyp-05` | projected | `[]` (empty) | paper-4 | yes |
 
-*Generated from the graph at `v5.8.0`. 45 claims, 3 decisions, 24 terms.*
+*Generated from the graph at `v5.9.0`. 45 claims, 3 decisions, 24 terms.*

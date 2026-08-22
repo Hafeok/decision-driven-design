@@ -58,7 +58,18 @@ upstream:
   # one standing W7 unchanged. Two pins added at the same act — term:commitment-level and
   # term:residual-discretion, the mints this release carries, which could not be pinned before
   # the tag existed because E12 resolves against the pinned ref.
-  ref: v5.8.0                       # tag, never a branch
+  # Advanced v5.8.0 -> v5.9.0 on Emil's acceptance of the floor-lineage upstream PR (merge
+  # bce18fe, tagged v5.9.0 by the release descriptor landing on main), per the
+  # DDD-dec-10/16/18/25/28 pattern; the advance is DDD-dec-29 here, Emil's GATE 1 ruling of
+  # 2026-08-21 upstream. Predicted firing at the bump, stated before it ran: exactly one W6, on
+  # term:floor, and nothing else — v5.9.0 promotes the floor's definition into that term's
+  # canonical_md, which is one of the three fields pinned_content_digest hashes, while the rest
+  # of the release is prose. Verified at the bump, by advancing ref first and re-instrumenting
+  # the hash second so the firing could be observed rather than assumed: 67 pins resolved, 0
+  # basis-loss, EXACTLY ONE content-drift — term:floor, daf43e07... -> 917f7e4d..., both hashes
+  # as predicted — 0 status movement, the one standing W7 unchanged. The prediction held. No
+  # pins added: v5.9.0 mints nothing.
+  ref: v5.9.0                       # tag, never a branch
   pins:
     # basis claims for DDD-dec-04 (the split decision itself rests on these)
     - id: DDD-frame-01
@@ -80,7 +91,7 @@ upstream:
       content_hash: sha256:6c4690378b86183cf421d509127b4548ba5cef4597078d8cb4290bb32c12a689
     - id: term:floor
       status_at_pin: settled
-      content_hash: sha256:daf43e076f83b338c1b37e826492083e05ea080ccf26cd911bbe632bf7c339b0
+      content_hash: sha256:917f7e4d23d4af877480591deb3ba72d63f50894488c42c2c8c03c6634b50d86
     - id: term:conservation
       status_at_pin: settled
       content_hash: sha256:cade5469d18b4595f1a71692f06c9632aa3d898b8d34e3107685d4057adac3eb

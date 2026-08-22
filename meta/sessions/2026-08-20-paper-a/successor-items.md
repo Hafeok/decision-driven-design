@@ -43,6 +43,15 @@ a citation carrying *"closing clause"*, *"opening clause; the claim continues"* 
 explicit `…`. Everything else fails. Verified against two negative controls: the near-miss above,
 and a single reworded word in an otherwise-correct quotation. Both fail the check.
 
+**Verbatim is not complete — a second predicate over the same input** *(added by the floor-lineage
+session, 2026-08-21, at Emil's GATE 2 ruling).* The checker's test is `contains(canon, quoted)` —
+*"Is `quoted` a verbatim run of `canon`?"* — so it verifies **faithfulness, not disclosure**, and a
+contiguous partial passes untagged. The instance: upstream item F-1 lengthened `term:floor`'s
+`canonical_md`, which turned Paper A `§6.1`'s quotation into a partial overnight, with the checker
+still reporting it verbatim and correctly so. A partial-quote disclosure rule is a **separate
+predicate over the same input**, and whoever implements this item should carry both rather than
+assume the first covers the second.
+
 **Open, and deliberately not decided here.** Whether this belongs in `validate-core-order.py`, in
 CI, in a projection-side linter, or stays a per-paper script is a design question — the same
 question Wave 3's item 2 left open for ref-staleness, and for the same reason: it reads an input
@@ -115,6 +124,44 @@ as it forces a revision of the determination track. Recorded so the dependency i
 Q-wave's side.
 
 ## 4. `DDD-dec-26`'s `[PROPOSED]` banners inside a cut tag *(freight — next canon session)*
+
+*Not a second instance, 2026-08-21 — the remedy, demonstrated.* `DDD-dec-29` (the floor-lineage pin
+advance) carried the same banner for the same reason: it was filed before the merge it records. It
+was **struck at the bump**, once its prediction had been checked against what actually fired, so the
+file lands ratified rather than landing `[PROPOSED]` and being tidied later. That is this item's own
+fix applied at the only moment it is cheap. The item stays open for `DDD-dec-26` and
+`DDD-frame-02`, which are already inside a cut tag and need a session that is touching them
+anyway.
+
+### 4a. Prediction before the operation — a convention to file, not a habit to notice
+
+*(added by the floor-lineage session, 2026-08-21, at Emil's GATE 3 ruling.)*
+
+**The pattern, as it now stands.** Three instrument-bearing decisions state their expected result
+**before** the operation runs, so that verification can disconfirm rather than merely narrate:
+
+| Decision | Operation | Predicted before |
+|---|---|---|
+| `DDD-dec-25` | pin advance v5.6.0 → v5.7.0 | *"predicted firing: none — DDD-frame-01's Wave 3 change is notes-only…"* |
+| `DDD-dec-28` | pin advance v5.7.0 → v5.8.0 | *"PREDICTED FIRING: none."* over 65 pins, then verified over all 65 |
+| `DDD-dec-29` | pin advance v5.8.0 → v5.9.0 | *"PREDICTED FIRING: exactly one W6, on `term:floor`, and nothing else"*, with both hashes stated |
+
+**The convention to file.** A governed pin advance states its predicted W5/W6/W7/E12 outcome in the
+decision body, before the bump, and a divergence from it is **a finding rather than a surprise**.
+`DDD-dec-28` already gives the reason in its own words: *"a bump whose firing is described only
+afterwards cannot be distinguished from a bump whose firing was tolerated."*
+
+**Why it is worth filing rather than leaving as practice.** The three instances came from three
+different sessions and none of them was following a rule — each author reasoned to it independently,
+which is exactly the signal that the reasoning is sound and the rule is missing. `DDD-dec-25` also
+supplies the evidence that the prediction does real work: its content prediction held, **and W6
+separately caught a mis-transcribed pin the decision had not predicted** — a live catch on an
+unplanned specimen, which is only legible as a catch because the expected result was written down
+first.
+
+**Open, and deliberately not decided here:** whether this belongs in `graph/upstream.yaml`'s header
+alongside the existing "advancing a pin is a decision" rule, in the decision format spec, or in
+`CONTRIBUTING.md`. The requirement is what this note settles; its home is not.
 
 Reported at GATE 1, ruled reported-not-repaired: a paper session does not reach into canon to tidy
 banners. `DDD-dec-26`'s `resolution` and `notes` both open with `[PROPOSED … nothing is ratified]`
