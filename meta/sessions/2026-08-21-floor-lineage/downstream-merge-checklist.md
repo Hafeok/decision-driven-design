@@ -1,6 +1,14 @@
 # Downstream merge checklist — the three tag-dependent steps
 
-**Session** `2026-08-21-floor-lineage` · governed by `DDD-dec-29` *(`[PROPOSED]` until the bump runs)*
+**Session** `2026-08-21-floor-lineage` · governed by `DDD-dec-29`
+
+> **RUN AND COMPLETE, 2026-08-22.** Upstream PR #17 merged as `bce18fe`; `releases/v5.9.0.yaml`
+> landing on the default branch cut **`v5.9.0`** at that commit, verified as an ancestor of the
+> default branch. All three steps below were taken in order and every expected result was met —
+> including the prediction test, which was run by advancing `ref` **first** and re-instrumenting the
+> hash **second**, so the W6 firing was observed rather than assumed. `DDD-dec-29` records the
+> observation alongside the prediction it was written to test, and its `[PROPOSED]` banner is
+> struck. The checklist is kept as the record of what was done, not as outstanding work.
 
 The downstream pull request is complete **except** for three steps that cannot be taken until the
 upstream tag exists. This file is the checklist, with each step's expected result already verified

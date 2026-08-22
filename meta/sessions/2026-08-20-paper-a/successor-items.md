@@ -125,9 +125,13 @@ Q-wave's side.
 
 ## 4. `DDD-dec-26`'s `[PROPOSED]` banners inside a cut tag *(freight — next canon session)*
 
-*Second instance, 2026-08-21:* `DDD-dec-29` (the floor-lineage pin advance) carries the same banner
-for the same reason — it is filed before the merge it records. It inherits this item rather than
-resolving it.
+*Not a second instance, 2026-08-21 — the remedy, demonstrated.* `DDD-dec-29` (the floor-lineage pin
+advance) carried the same banner for the same reason: it was filed before the merge it records. It
+was **struck at the bump**, once its prediction had been checked against what actually fired, so the
+file lands ratified rather than landing `[PROPOSED]` and being tidied later. That is this item's own
+fix applied at the only moment it is cheap. The item stays open for `DDD-dec-26` and
+`DDD-frame-02`, which are already inside a cut tag and need a session that is touching them
+anyway.
 
 ### 4a. Prediction before the operation — a convention to file, not a habit to notice
 

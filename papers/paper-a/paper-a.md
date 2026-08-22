@@ -4,7 +4,7 @@
 
 *Emil — Context&. Statement paper.*
 
-*This paper is a projection of `actor-indexed-determination` at `v5.8.0`. Every bracketed claim,
+*This paper is a projection of `actor-indexed-determination` at `v5.9.0`. Every bracketed claim,
 decision and term identifier resolves against that one ref, and Appendix A reproduces each of them
 from it, so the paper can be checked without the repository. No identifier here resolves against the
 downstream repository, so no downstream ref is pinned. The companion measure note —
@@ -1398,7 +1398,7 @@ re-read against the graph by an independent script (`check-appendix.py`).
 | `term:ensemble-actor` | ensemble-actor | **The choice is a property of the ensemble, and it exists nowhere in any member.** |
 | `term:escape` | escape | **Escaped** — determined *never*, by nobody: decided-by-nobody as a first-class category. Latent defect exposure. **The only forbidden state.** |
 | `term:escape-mechanism` | escape-mechanism | **Capacity-generated escape — the escape an actor produces from residual it has taken up — requires two conditions, both necessary:** **(1) Overflow** — demand exceeds resolve capacity. **(2) Open** — no verifier the actor holds. Overflow alone (closing predicate) → **retries, not escape.** Recoverable. Not floor. Open alone (within capacity) → **carried by judgment**, where an accountable supplier is named. Not floor. Where none is named, it is escape by another route (`05` §7) — outside this mechanism, not excluded by it. **Overflow AND open** → **escape. This is the floor.** **Sufficient for escape, never necessary.** A governing decision that never entered an actor's residual escapes without overflowing anything: escape is supplied-by-nobody (`term:escape`), and capacity shortfall is one generator of it. |
-| `term:floor` | floor | **The intrinsic floor is a property of the acceptance predicate, not of the decision.** |
+| `term:floor` | floor | The "floor" is the portion of a determination's demand that **cannot be moved off the in-the-moment actor** — the residue that no amount of encoding or checking can amortise, that must be paid, per run, in judgment. **The intrinsic floor is a property of the acceptance predicate, not of the decision.** |
 | `term:liability` | liability | **Liability** — bearing the consequence. |
 | `term:outcome` | outcome | The **outcome** — the determinate as it lands in the world, produced at every completed act. The **verdict** is the same determinate as assessed by a declared predicate, produced only where governance has declared one. The world renders outcomes, never verdicts; governance is the conversion of outcomes into verdicts. |
 | `term:residual-discretion` | residual-discretion | **Residual discretion** is the outcome-relevant variation remaining at the act after the arrangement's declared commitments are applied. It is not randomness: a deterministic arrangement can carry substantial discretion across unfamiliar cases, a randomised one can be tightly committed, and a zero-variance arrangement can be consistently wrong. |
@@ -1424,4 +1424,4 @@ graph's own fields, not the paper's summary of them.
 | `DDD-hyp-04` | projected | `[]` (empty) | paper-4 | yes |
 | `DDD-hyp-05` | projected | `[]` (empty) | paper-4 | yes |
 
-*Generated from the graph at `v5.8.0`. 45 claims, 3 decisions, 24 terms.*
+*Generated from the graph at `v5.9.0`. 45 claims, 3 decisions, 24 terms.*

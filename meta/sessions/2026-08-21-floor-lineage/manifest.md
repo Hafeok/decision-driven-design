@@ -74,7 +74,33 @@ paragraph, one disclosure tail, one locator alignment. **No argument rewritten.*
 
 ---
 
-## 4. The three tag-dependent steps, deliberately not taken
+## 4. The three tag-dependent steps — taken, 2026-08-22
+
+Upstream PR #17 merged as `bce18fe`; the descriptor cut **`v5.9.0`** at that commit. All three then
+ran, in order, and every expected result was met.
+
+**The prediction test was run so it could fail.** `ref` was advanced to `v5.9.0` **first**, with
+`term:floor`'s `content_hash` left at its old value, and the checker run against that intermediate
+state. That produced the observation `DDD-dec-29` was written to be tested against:
+
+> 67 pins resolved, **1 content-drift**, 1 shadowed id — `W6 pinned content moved: 'term:floor' is
+> pinned at content_hash sha256:daf43e07… but resolves to sha256:917f7e4d… at the ref`
+
+Exactly one W6, on `term:floor`, both hashes as written down before the operation, no W5, no E12.
+**The prediction held in every limb.** Advancing ref and hash in one edit would have shown 0 drift
+throughout and left nothing to check the prediction against — the pass and the skip producing
+identical output, which is presumed discharge in its exact form.
+
+The hash was then re-instrumented (**0 content-drift**, baseline restored), Appendix A regenerated
+against the tag (**exactly the two-line diff predicted at GATE 2**; the independent re-read moved
+from 1 expected discrepancy to **0**), and the manuscript's declared ref advanced at
+`paper-a.md:7` — the only `v5.8.0` mention in either Paper A artefact, checked rather than assumed.
+
+`DDD-dec-29`'s `[PROPOSED]` banner is struck, at the bump and not at the merge. It therefore does
+**not** become a second instance of Paper A freight item 4; it is that item's remedy demonstrated,
+and the item's note is corrected to say so.
+
+### What was deliberately not taken, and why (kept as the record)
 
 `downstream-merge-checklist.md` carries them with each expected result pre-verified: advance the pin
 and re-instrument `term:floor`'s hash; regenerate Appendix A against the tag (**a two-line diff**);
