@@ -738,13 +738,18 @@ tolerance and assurance level, cannot discharge mechanically.
 
 ### 6.1 The floor lives in the predicate
 
-> **The intrinsic floor is a property of the acceptance predicate, not of the decision.**
-> [term:floor, settled]
+> **… The intrinsic floor is a property of the acceptance predicate, not of the decision.**
+> [term:floor, settled — closing clause; the canonical text opens with the floor's definition]
 
 Where the predicate does not close, verification is structurally unavailable, and the demand falls
 to whoever is present. That is the mechanism, and it is why the floor is not a statement about
 difficulty. A task can be enormously difficult with a fully closing predicate — the search is
 expensive and the check is cheap — and carry no floor at all (§5.3).
+
+**Attribution.** The phenomenon this claim relocates — an irreducible residue in determination — is
+Polanyi's and Collins's, and this paper cites them for the phenomenon only, taking no result from
+either (Polanyi 1966; Collins 2010). What is the framework's, and not theirs, is the residue's
+*location*: in the checkability of the acceptance predicate, arrangement-indexed.
 
 The measure's boundary coincides with the floor's location: **the measure exists if and only if the
 acceptance predicate operationally closes, and `H(V)` is undefined exactly where the framework
@@ -1264,7 +1269,13 @@ Ashby, W. R. (1956). *An Introduction to Cybernetics*. Chapman & Hall, London. V
 *(verified)*
 
 Brooks, F. P. (1987). No Silver Bullet: Essence and Accidents of Software Engineering. *IEEE
-Computer* 20(4):10–19. *(verified)*
+Computer* 20(4):10–19, April 1987, doi:10.1109/MC.1987.1663532; reprinted from *Proceedings of the
+IFIP 10th World Computer Congress*, North-Holland, 1986. Both locators are given because both
+circulate. *(verified)*
+
+Collins, H. M. (2010). *Tacit and Explicit Knowledge*. University of Chicago Press, Chicago. ISBN
+978-0-226-11380-7. The three-way taxonomy the framework respects — relational, somatic and
+**collective** tacit knowledge — is the book's organising distinction. *(verified)*
 
 Funkhouser, E. (2014). *The Logical Structure of Kinds*. Oxford University Press. ISBN
 9780198713302. *(verified)*
@@ -1277,6 +1288,9 @@ Johnson, W. E. (1921). *Logic*, Part I, chapter XI, "The Determinable". Cambridg
 *(verified)*
 
 Meyer, B. (1992). Applying "Design by Contract". *IEEE Computer* 25(10):40–51. *(verified)*
+
+Polanyi, M. (1966). *The Tacit Dimension*. Doubleday & Company, Garden City, New York. Based on the
+Terry Lectures delivered at Yale University in 1962. *(verified)*
 
 Prior, A. N. (1949). Determinables, Determinates and Determinants. *Mind* 58(229):1–20 and
 58(230):178–194, in two parts. *(verified)*

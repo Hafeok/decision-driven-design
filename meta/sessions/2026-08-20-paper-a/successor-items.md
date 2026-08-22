@@ -43,6 +43,15 @@ a citation carrying *"closing clause"*, *"opening clause; the claim continues"* 
 explicit `…`. Everything else fails. Verified against two negative controls: the near-miss above,
 and a single reworded word in an otherwise-correct quotation. Both fail the check.
 
+**Verbatim is not complete — a second predicate over the same input** *(added by the floor-lineage
+session, 2026-08-21, at Emil's GATE 2 ruling).* The checker's test is `contains(canon, quoted)` —
+*"Is `quoted` a verbatim run of `canon`?"* — so it verifies **faithfulness, not disclosure**, and a
+contiguous partial passes untagged. The instance: upstream item F-1 lengthened `term:floor`'s
+`canonical_md`, which turned Paper A `§6.1`'s quotation into a partial overnight, with the checker
+still reporting it verbatim and correctly so. A partial-quote disclosure rule is a **separate
+predicate over the same input**, and whoever implements this item should carry both rather than
+assume the first covers the second.
+
 **Open, and deliberately not decided here.** Whether this belongs in `validate-core-order.py`, in
 CI, in a projection-side linter, or stays a per-paper script is a design question — the same
 question Wave 3's item 2 left open for ref-staleness, and for the same reason: it reads an input
@@ -115,6 +124,10 @@ as it forces a revision of the determination track. Recorded so the dependency i
 Q-wave's side.
 
 ## 4. `DDD-dec-26`'s `[PROPOSED]` banners inside a cut tag *(freight — next canon session)*
+
+*Second instance, 2026-08-21:* `DDD-dec-29` (the floor-lineage pin advance) carries the same banner
+for the same reason — it is filed before the merge it records. It inherits this item rather than
+resolving it.
 
 Reported at GATE 1, ruled reported-not-repaired: a paper session does not reach into canon to tidy
 banners. `DDD-dec-26`'s `resolution` and `notes` both open with `[PROPOSED … nothing is ratified]`

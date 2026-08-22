@@ -1,0 +1,103 @@
+format: 1
+id: DDD-dec-29
+kind: decision
+statement: |
+  The upstream pin advances v5.8.0 -> v5.9.0 on Emil's acceptance of the floor-lineage upstream pull request, and term:floor's content_hash is re-instrumented at the same act — W6's firing on that pin is a governed advance recorded here, not undetected drift.
+principal: Emil
+made: 2026-08-21, floor-lineage session (GATE 1 ruling, item F-1, Option C; filed pre-merge as [PROPOSED])
+resolution: |
+  [PROPOSED] The advance, and the one firing it is expected to produce.
+
+  ## Why this decision exists before the bump rather than after it
+
+  graph/upstream.yaml's own header states the standing rule: "Advancing a pin is a decision: when
+  a pinned status has moved, record the advance as a decision under core/decisions/ before
+  bumping status_at_pin." This advance additionally moves a content_hash, which is the W6 class
+  rather than the W5 class, and the rule reads the same way for both. The DDD-dec-10/16/18/25/28
+  pattern is followed: the advance is recorded here, the upstream session ruling is Emil's GATE 1
+  ruling of 2026-08-21, quoted in meta/sessions/2026-08-21-floor-lineage/.
+
+  ## What upstream did, and why the hash moves
+
+  Upstream item F-1 repaired a placement defect in core/03-the-floor.md: the floor's definition
+  arrived after the claim block that used it. The registry answer showed the cause. term:floor
+  existed and was established by 03, but its canonical_md carried the relocation *claim* — "a
+  property of the acceptance predicate, not of the decision" — and never said what a floor *is*.
+  Its two sibling terms established in the same document both define (term:acceptance-predicate,
+  term:closure); term:floor alone asserted. That asymmetry is the ruling's recorded warrant.
+
+  term:floor's canonical_md is now the definition followed by the claim sentence, both promoted
+  byte-for-byte from 03's own prose. Nothing ratified was lost and nothing was authored into the
+  term. The hash moves because canonical_md is one of the three fields pinned_content_digest
+  covers, which is the instrument behaving correctly: a promotion is still a change to canonical
+  text, and a pin exists to make canonical text changes visible rather than convenient.
+
+  ## Predicted before, to be verified after
+
+  Stated in this order so the verification can disconfirm it, per DDD-dec-28:
+
+    PREDICTED FIRING: exactly one W6, on term:floor, and nothing else.
+
+      - term:floor is pinned at content_hash sha256:daf43e076f83b338c1b37e826492083e05ea080cc
+        f26cd911bbe632bf7c339b0, live-verified as matching v5.8.0 exactly.
+      - Its digest at the staged upstream branch is sha256:917f7e4d23d4af877480591deb3ba72d63f5
+        0894488c42c2c8c03c6634b50d86.
+      - No pinned status moves (W5): term:floor stays settled.
+      - No pinned id is retired, renamed or restatused (E12).
+      - No claim statement moves anywhere in the release. DDD-floor-01 and DDD-floor-02 are
+        untouched in statement, region and falsifier, so neither can contribute a W6.
+      - The remaining upstream change is prose — core/03's restructure and its new lineage
+        pointer, meta/lineage-and-limits.md §1.16 — and prose is outside the three hashed fields.
+
+    Baseline to compare against: 67 pins resolved, 0 basis-loss, 0 content-drift, 1 shadowed id
+    (the standing W7), verified at v5.8.0 on 2026-08-21 before any edit.
+
+  ## What this act does not do
+
+  It does not merge either pull request; Emil ratifies both. It does not advance the pin before
+  the tag exists — see the note below. It does not extend meta/lineage-and-limits.md §6's
+  required-citations table to the new ancestry, which is a separate governance question routed as
+  a successor item rather than ridden in on a pin advance.
+basis:
+  - DDD-dec-10
+  - DDD-dec-28
+  - DDD-agent-01
+  - term:floor
+notes: |
+  [PROPOSED] Filed at the staging step of the floor-lineage session, before the upstream merge.
+  Emil ratifies.
+
+  Numbering: decisions share one id space across the principle repository and this one, contiguous
+  at 01-28 before this file. 29 is this advance. There is no separate upstream decision node for
+  the supersession — Emil's GATE 1 ruling governs it upstream, and this repository files the pin
+  consequence, which is the only cross-repo object the change creates.
+
+  ## The ordering, and the near-miss it is written to avoid
+
+  DDD-dec-28 records a near-miss worth repeating here because this session is in the same
+  position: an instruction to bump arrived once before the merge had happened, and the bump was
+  correctly not made, because "a pin file naming a ref that does not exist is a false record, and
+  a decision filed alongside it would have asserted an acceptance that had not occurred."
+
+  The same asymmetry applies now. graph/upstream.yaml pins a tag, never a branch, and the checker
+  shallow-clones that ref, so naming v5.9.0 before the tag is cut would fail E12 on all 67 pins at
+  once. Per CLAUDE.md, merging releases/v5.9.0.yaml to the default branch is what cuts the tag;
+  there is no manual git tag step.
+
+  The sequence is therefore: upstream pull request merges and v5.9.0 is cut -> this repository
+  advances ref and re-instruments term:floor's content_hash -> the prediction above is verified
+  against what actually fires -> Paper A's Appendix A is regenerated against the tag and re-read
+  independently. Until then the pin stays at v5.8.0 and this decision stays [PROPOSED].
+
+  DDD-dec-10 offers the alternative of pinning the staged upstream branch during staging, and it
+  is deliberately not taken. That precedent moved a repository-internal pin file only. Here the
+  same ref is also written into a published manuscript — papers/paper-a/paper-a.md's front matter
+  declares the projection's ref, and Appendix A's generated footer names it — so staging against a
+  branch would put a branch sha into a paper. That is the defect the pin discipline exists to
+  prevent, and the ordering constraint was approved on that ground at GATE 2.
+
+  ## Inherited freight
+
+  This file carries a [PROPOSED] banner, and Paper A successor item 4 is open on exactly that:
+  [PROPOSED] banners surviving inside a cut tag. This decision inherits the item rather than
+  resolving it, and is named in it at close.
