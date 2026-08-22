@@ -42,22 +42,48 @@ decision, and reversing a decision is a ruling.
 
 ---
 
-## 3. `term:floor`'s promotion — the pattern, not the instance *(observation, unscoped)*
+## 3. Sweep the registry for canonical text that asserts without defining *(audit)*
 
-F-1 found that `term:floor`'s `canonical_md` carried the *claim about* the floor and never a
-definition of it, while both sibling terms established in the same document define. That instance is
-fixed. **Whether it is the only one is not known** — no sweep was run, and running one was outside
-this session's booking.
+*Widened from a spot-check to a sweep at Emil's GATE 3 ruling: "`term:floor` was found by a reader
+tripping over it; a sweep finds the rest before a reader does."*
 
-The check is cheap and mechanical: for each term in `core/graph/terms.yaml` with a `canonical_md`,
-does the text define the term, or assert something about it? A registry whose entries assert are
-still useful, but they cannot be embedded as a definition, and a document that embeds one will
-reproduce F-1's defect. `term:path-degeneracy` is the obvious next candidate to look at — *"Where the
-floor is zero, path-degeneracy makes it robustly zero…"* is a claim, not a definition.
+**The pattern.** F-1 found that `term:floor`'s `canonical_md` carried the *claim about* the floor and
+never a definition of it, while both sibling terms established in the same document define. A
+registry entry that asserts a property without defining its subject is still useful prose, but it
+cannot serve as an embedded definition, and any document that embeds one reproduces F-1's defect:
+the reader meets a claim about a thing before learning what the thing is.
 
-Unscoped deliberately: whether this is a validator rule, a one-off audit, or nothing at all is open.
+**The sweep, as scoped.** Over the **62** entries in `core/graph/terms.yaml` carrying a
+`canonical_md` — all 62 are embedded, and the remaining 8 are registry-only and out of the sweep,
+since nothing pins their wording. For each of the 62, one question: **does the canonical text define its subject, or assert something about it?**
+Report three buckets — defines; asserts; mixed — and for the "asserts" bucket, whether a definition
+exists elsewhere in the establishing document as ungoverned prose, which is the exact shape F-1
+repaired.
 
----
+**Do not repair in the sweep.** Each promotion is a supersession of ratified canonical text with a
+downstream pin cost — this session's single instance cost a decision node (`DDD-dec-29`), an
+Appendix A regeneration, and a manuscript re-quote. A sweep that repaired as it went would be a
+dozen of those, unruled. The deliverable is **the list**, with each entry's downstream pin and embed
+cost counted, so the repairs can be ruled in batches or declined.
+
+**Known candidate, already spotted:** `term:path-degeneracy` — *"Where the floor is zero,
+path-degeneracy makes it robustly zero: infinitely many structurally different candidates satisfy the
+predicate, so no particular path is load-bearing."* That is a claim about what path-degeneracy
+*does*, not a definition of what it *is*, and it is established by the same document as `term:floor`.
+It is the obvious first hit, not the scope.
+
+**Found while scoping this item, reported and not repaired.** `core/graph/terms.yaml`'s header
+comment is **stale**: it says *"Five terms are registry-only (no canonical_md): demand,
+governing-decision, assurance-tower, verdict-entropy, immune-system"*. There are **eight** — the
+three cost terms (`term:cost-register`, `term:standing-cost`, `term:occasioned-cost`) were added
+later and the comment was not updated. Counted directly from the file, and consistent with the
+validator's own tally (70 terms, 62 embedded, 0 W3). It is a one-line repair in a file this session
+already edits, and it is **deliberately not made** — the session's out-of-scope list forbids
+bundling, and a stale comment is not this session's booking. It rides this item.
+
+**Note the asymmetry that makes this worth doing.** No validator can see this defect. `E6` checks
+that an embed matches the registry byte-for-byte; it cannot check that what it matches is a
+definition. This is a reading task, and the sweep is how a reading task gets bounded.
 
 ## 4. Wittgenstein §201 — the print check *(a named debt, discharged by one reading)*
 

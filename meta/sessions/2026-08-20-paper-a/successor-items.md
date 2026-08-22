@@ -129,6 +129,36 @@ Q-wave's side.
 for the same reason — it is filed before the merge it records. It inherits this item rather than
 resolving it.
 
+### 4a. Prediction before the operation — a convention to file, not a habit to notice
+
+*(added by the floor-lineage session, 2026-08-21, at Emil's GATE 3 ruling.)*
+
+**The pattern, as it now stands.** Three instrument-bearing decisions state their expected result
+**before** the operation runs, so that verification can disconfirm rather than merely narrate:
+
+| Decision | Operation | Predicted before |
+|---|---|---|
+| `DDD-dec-25` | pin advance v5.6.0 → v5.7.0 | *"predicted firing: none — DDD-frame-01's Wave 3 change is notes-only…"* |
+| `DDD-dec-28` | pin advance v5.7.0 → v5.8.0 | *"PREDICTED FIRING: none."* over 65 pins, then verified over all 65 |
+| `DDD-dec-29` | pin advance v5.8.0 → v5.9.0 | *"PREDICTED FIRING: exactly one W6, on `term:floor`, and nothing else"*, with both hashes stated |
+
+**The convention to file.** A governed pin advance states its predicted W5/W6/W7/E12 outcome in the
+decision body, before the bump, and a divergence from it is **a finding rather than a surprise**.
+`DDD-dec-28` already gives the reason in its own words: *"a bump whose firing is described only
+afterwards cannot be distinguished from a bump whose firing was tolerated."*
+
+**Why it is worth filing rather than leaving as practice.** The three instances came from three
+different sessions and none of them was following a rule — each author reasoned to it independently,
+which is exactly the signal that the reasoning is sound and the rule is missing. `DDD-dec-25` also
+supplies the evidence that the prediction does real work: its content prediction held, **and W6
+separately caught a mis-transcribed pin the decision had not predicted** — a live catch on an
+unplanned specimen, which is only legible as a catch because the expected result was written down
+first.
+
+**Open, and deliberately not decided here:** whether this belongs in `graph/upstream.yaml`'s header
+alongside the existing "advancing a pin is a decision" rule, in the decision format spec, or in
+`CONTRIBUTING.md`. The requirement is what this note settles; its home is not.
+
 Reported at GATE 1, ruled reported-not-repaired: a paper session does not reach into canon to tidy
 banners. `DDD-dec-26`'s `resolution` and `notes` both open with `[PROPOSED … nothing is ratified]`
 while the same file's body records the GATE 1 and GATE 3 rulings as made, and `DDD-frame-02`'s notes
