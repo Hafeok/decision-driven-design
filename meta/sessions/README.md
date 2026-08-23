@@ -31,3 +31,4 @@ session's later work exceeds the committed prompt, the excess is visible as exce
 | `2026-08-20-paper-a/` | Interactive paper drafting — Paper A, the framework's statement paper (P-1…P-5) |
 | `2026-08-21-floor-lineage/` | Interactive canon curation — the floor's definition placement and lineage (F-1…F-4) |
 | `2026-08-23-phase1a/` | Interactive canon curation — Phase 1a: the discharge partition and `DDD-measure-06` (R-1…R-4) |
+| `2026-08-24-ground-audit/` | Interactive audit — Phase 1b: the ground audit (D-1…D-4); changes nothing |
