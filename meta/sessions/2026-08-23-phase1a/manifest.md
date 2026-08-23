@@ -92,7 +92,21 @@ ungoverned." [DDD-frame-15 — closing clause]*.
 Two things follow. First, the manual scan was wrong and the run was right, which is the whole
 argument for running rather than reasoning. Second, **the missed quotation is the cheapest of the
 four to repair, for the reason that makes it interesting: the compact form is the one sentence
-`DDD-frame-17` preserves verbatim.** The citation moves and no prose does.
+`DDD-frame-17` preserves verbatim.** The citation moves and no prose does — the sentence that was
+worth preserving was preserved.
+
+**Ruled at GATE 4: this is a finding, not a miss, and it is filed with the instrument** rather than
+left in a session record. The fourth quotation is one sentence quoted inline with a disclosure
+tail, which is exactly the shape a human scanning for block-quote runs does not see. Manual
+enumeration and instrumented enumeration disagreed and the instrument was right — **the opposite
+direction from the two defects the paper checkers already carry in their docstrings**, where the
+human caught the script both times. Recording only those would misstate the instrument's record in
+the direction that gets it retired.
+
+It is also the clearest case for the prediction convention itself. **A prediction that holds tells
+you the operation went as expected; a prediction that fails tells you your model of the artefact
+was wrong** — which is worth more, and which you learn only if the prediction was written down
+first.
 
 Upstream validators, at every gate and at close: `validate-core-order.py` **exit 0, 66 warnings —
 59 W1, 7 W2, zero W4**, identical to arrival. 63 claims, 9 decisions, 6 release descriptors valid.

@@ -49,6 +49,39 @@ review would have surfaced this node, and the false-positive rate is the design 
 than an objection. **Deliberately not designed here**; the finding is filed, the instrument is the
 freight session's.
 
+**A third instance, of the opposite sign — and the direction is the finding** (Emil, GATE 4
+ruling). The two defects the paper checkers already carry in their own docstrings are both cases of
+**the human beating the instrument**:
+
+- `check-quotations.py` folded case at the first character only, and failed a legitimate quotation
+  of `DDD-measure-02` beginning mid-sentence at `"H(V)"`. The quotation was right and the checker
+  was wrong.
+- `check-appendix.py` split table rows on a bare `|`, breaking the cells of four statements
+  carrying literal `H(V|X)` and `H(V|S)`. It reported four discrepancies; **all four were the
+  script's fault** and the appendix was right.
+
+**This session's P4 runs the other way.** GATE 2 predicted that advancing the pin would fail
+**three** Paper A block quotations, from a manual scan of `> ` runs ending in a citation. Running
+the checker against the session branch found **four**. The fourth is line 1208 — the compact form
+quoted alone, inline, with a disclosure tail: *"… demand is never unmet, only ungoverned."
+`[DDD-frame-15 — closing clause]`*. **That is precisely the shape a human scanning for block quotes
+does not see**: one sentence, an ellipsis, and a citation that discloses its own partiality.
+
+**The general lesson, and why it belongs with the instrument rather than in a session record:**
+manual enumeration and instrumented enumeration disagreed, and **the instrument was right**. Two
+defect entries where the human caught the script, one where the script caught the human — a
+checker's value is not that it is always right, and recording only the cases where it was wrong
+would misstate its record in the direction that gets it retired.
+
+**And it is why the prediction convention earns its keep.** A prediction that holds tells you the
+operation went as expected. **A prediction that fails tells you your model of the artefact was
+wrong**, which is worth more, and is a thing you learn only if the prediction was written down
+before the run.
+
+A small vindication rides along: the missed quotation is the **cheapest** of the four to repair,
+because the compact form is the one sentence `DDD-frame-17` preserves verbatim. The citation moves
+and no prose does — the sentence that was worth preserving was preserved.
+
 **Not to be bundled with the status/kind separation** (review §7, triage §2). That is a registry
 change with a wide blast radius and its own session. This is a validator gap in the *existing*
 schema, and it is cheap.
