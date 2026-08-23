@@ -34,6 +34,15 @@ result. **One `status` field governed both**, which is exactly the failure rule 
 and it is the mechanism by which the node resisted repair: demoting it would have demoted the
 sound limb, so nobody demoted it.
 
+**Why rule 1 needs enforcing rather than merely stating — the durable half of this finding**
+(Emil, GATE 3 ruling). A compound statement does not merely offend tidiness. It makes the node
+*undemotable*: `DDD-measure-06`'s two limbs carried different warrants under one `status` field, so
+demoting the node would have demoted the sound limb along with the unsound one. **That is how a
+defect survives five minor versions in a repository that reviews its own canon** — not because
+nobody saw it, but because the only available correction was worse than the defect. Rule 1 exists
+to prevent exactly that, and a rule that is stated but not checked prevents nothing. **This is the
+reason the instrument is worth building, and it should be the first line of its rationale.**
+
 **What a checker could catch, and what it could not.** Falsifier presence is mechanical. Rule 1 is
 not fully mechanical — but a heuristic flagging semicolon- and "and"-joined statements for human
 review would have surfaced this node, and the false-positive rate is the design question rather
@@ -115,14 +124,28 @@ triage (§3), not in that session's execution.
 
 ---
 
-## 5. Paper A's three block quotations, and the pin
+## 5. Paper A's **four** block quotations, and the pin
 
 **Not this session's work, and named so the revision session does not discover it late.**
 
-Paper A block-quotes three nodes this session changes: `DDD-frame-15`'s statement (line 365),
-`DDD-frame-02`'s statement (line 274), and `term:residual-discretion`'s canonical text (line 310).
-`DDD-frame-15`'s retirement rewrites its statement per canon's retirement convention, so that
-quotation cannot survive as written.
+Paper A block-quotes **four** passages this session changes, established by running the checker
+against the session branch rather than by reading the manuscript:
+
+| Line | Node | What it quotes | Repair cost at the revision |
+|---|---|---|---|
+| 365 | `DDD-frame-15` | the full statement | rewrite to `DDD-frame-17`'s three values |
+| 274 | `DDD-frame-02` | the full statement | one clause |
+| 310 | `term:residual-discretion` | the canonical text | replace with the corrected text |
+| **1208** | `DDD-frame-15` | **the compact form alone**, disclosed-partial: *"… demand is never unmet, only ungoverned." [DDD-frame-15 — closing clause]* | **a one-token citation change** |
+
+The fourth was missed at GATE 2, where a manual scan of block-quote runs found three. **The
+checker found four.** The extra is Paper A §12's central sentence, and it is the cheapest of the
+four to repair for the reason that makes it interesting: **the compact form is the one sentence
+`DDD-frame-17` preserves verbatim**, so the citation moves and no prose does —
+`[DDD-frame-15 — closing clause]` becomes `[DDD-frame-17 — closing clause]`.
+
+`DDD-frame-15`'s retirement rewrites its statement per canon's retirement convention, so the first
+and fourth quotations cannot survive as written.
 
 The pin is therefore **held at `v5.9.0`** by this session. Paper A's revision session advances it,
 having first rewritten those three quotations — which it must do anyway, since two of the three are
