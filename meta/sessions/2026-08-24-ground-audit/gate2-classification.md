@@ -1,6 +1,6 @@
 # GATE 2 — D-1 the classification, D-2 the cost table
 
-**Status: draft-pending-ruling.** Nothing outside this directory has been touched.
+**Status: ratified at its gate (Emil).** Nothing outside this directory has been touched.
 
 Artefacts committed beside this report, so every number can be re-derived rather than trusted:
 `count-ground.py`, `extract-occurrences.py`, `classify.py`, `classification.json` (2,845 rows,

@@ -1,6 +1,6 @@
 # GATE 1 — raw enumeration, and the sense definitions as they will be applied
 
-**Status: draft-pending-ruling.** Nothing is classified yet, deliberately: the raw counts land first
+**Status: ratified at its gate (Emil).** Nothing is classified yet, deliberately: the raw counts land first
 so the classification's coverage at GATE 2 can be checked against them rather than trusted.
 
 **Nothing outside this directory has been touched.** Read at `actor-indexed-determination` `37f508e`

@@ -1,6 +1,6 @@
 # GATE 3 — D-3 the design rulings, D-4 the migration's shape
 
-**Status: draft-pending-ruling.** Nothing outside this directory has been touched.
+**Status: ratified at its gate (Emil).** Nothing outside this directory has been touched.
 
 Per the GATE 2 ruling: **volume is a cost, not a vote.** Every argument below is made from canon's
 definition and canon's usage. The three repositories' counts enter only where cost is priced, and
