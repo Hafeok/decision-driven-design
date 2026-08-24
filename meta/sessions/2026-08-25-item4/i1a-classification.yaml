@@ -1,0 +1,169 @@
+# I-1(a) — the 29 conceptual/projected claims, classified.
+#
+# DRAFT — PENDING RULING. Filed as data so the count in gate1-survey.md is auditable
+# claim by claim rather than asserted.
+#
+# The criterion, applied uniformly and stated so a disagreement can be located:
+#
+#   definition   the claim's work is to fix what a term picks out, or what something is a
+#                property of; its declared failure mode is non-application, no extension,
+#                or a wrong joint — not an observation.
+#   substantive  the claim asserts a contingent relation among terms already fixed; a
+#                describable state of affairs makes it false.
+#   mixed        the statement carries a separable stipulative limb AND a separable
+#                assertoric limb. Not a hedge: it is the rule-1 finding, and it is why
+#                `kind` cannot carry the split today.
+#
+# `test_only: true` marks a claim with a `test` field and no `falsifier`. All four such
+# claims are definitions; no mixed or substantive claim is test-only.
+
+criterion_version: 1
+classified: 29
+counts: {definition: 16, mixed: 8, substantive: 5}
+
+claims:
+
+- id: DDD-cost-05
+  class: definition
+  test_only: true
+  why: >-
+    Defines capacity as bits-per-act and denominates the capacity model's escape term.
+    No contingent assertion; the falsifier is explicitly deferred to the floor-mechanism work.
+- id: DDD-cost-30
+  class: definition
+  why: >-
+    Separates the demand and cost registers. Its falsifier — a cost statement forced by the
+    demand identity alone — would collapse the two into one, which is a wrong-joint failure,
+    not an observation.
+- id: DDD-delivery-01
+  class: definition
+  why: >-
+    Draws the filing/encoding distinction. Its falsifier is stated as the distinction having
+    no extension, which is the definitional failure mode written out in full.
+- id: DDD-delivery-02
+  class: definition
+  why: >-
+    Subsumes undelivered governance under term:escape and states the subsumption adds no
+    condition. The falsifier tests the carving against the term, not the world.
+- id: DDD-floor-02
+  class: definition
+  why: >-
+    Re-indexes irreducibility from the task to the relation. Failure would be that the
+    relational carving was the wrong one.
+- id: DDD-frame-01
+  class: definition
+  test_only: true
+  why: >-
+    The framework's founding indexing move. Its declared test is explanatory utility and
+    counterexamples — the definitional tests, not an observation.
+- id: DDD-frame-02
+  class: definition
+  test_only: true
+  why: >-
+    Fixes a three-level taxonomy of commitment and defines residual discretion. Test is
+    boundary-case coverage; failure is commitments that resist the coding.
+- id: DDD-frame-03
+  class: definition
+  test_only: true
+  why: >-
+    Separates source from assurance as dimensions. Test is coding reliability across
+    independent coders — a carving test.
+- id: DDD-frame-12
+  class: definition
+  why: >-
+    Its own region field calls it "the bridge definition". A claim is an act with a deferred
+    verdict; the test is explanatory transfer.
+- id: DDD-frame-13
+  class: definition
+  why: >-
+    Introduces the determinable/determinate vocabulary. The falsifier is a canonical use of
+    "demand" that does not parse in it — non-application.
+- id: DDD-frame-16
+  class: definition
+  why: >-
+    Act-indexes discharge; "there is no act-free discharge" follows from the indexing rather
+    than being independently observable.
+- id: DDD-ground-02
+  class: definition
+  why: >-
+    Declares three axes orthogonal and fixes their values. Failure is real cases needing an
+    ordering or coupling the split forbids — a wrong joint.
+- id: DDD-ground-03
+  class: definition
+  why: >-
+    Adds a fourth value to the timing vocabulary. Its falsifier is the value proving
+    assignable without loss, i.e. carving nothing.
+- id: DDD-ground-05
+  class: definition
+  why: >-
+    Constitutive priority of the determinable space. Failure is a governed determination over
+    a space no declaration could precede — non-application.
+- id: DDD-measure-15
+  class: definition
+  why: >-
+    Defines admissibility and says so in the statement: the arithmetic holds for any X, and
+    admissibility restricts the reading, not the identity.
+- id: DDD-measure-17
+  class: definition
+  why: >-
+    A claim about the epistemic status of an agreement. Its falsifier is a derivational fact
+    — that the two arguments do not share the closure premise — not an observation.
+
+- id: DDD-cost-01
+  class: mixed
+  limbs: [bits are per-act on both sides (stipulated denomination),
+          the asymmetry is locus of supply (interpretation)]
+- id: DDD-cost-09
+  class: mixed
+  limbs: [the occasioned/standing locus distinction (stipulated),
+          closing a predicate converts occasioned to standing (substantive)]
+- id: DDD-cost-12
+  class: mixed
+  limbs: [required actor class defined as a maximum over capabilities (stipulated),
+          per capability beats per act (substantive, and what the falsifier tests)]
+- id: DDD-cost-20
+  class: mixed
+  limbs: [around/within encoding locus distinction (stipulated),
+          training buys allocation and not capacity (substantive)]
+- id: DDD-cost-25
+  class: mixed
+  limbs: [the pre-/at-/post-act position taxonomy (stipulated),
+          rising tempo forces assurance pre-act (substantive)]
+- id: DDD-frame-11
+  class: mixed
+  limbs: [governed and measured domains distinguished (stipulated),
+          the governed domain is strictly wider (substantive)]
+  note: >-
+    The clearest instance in the corpus: its falsifier field itself has two limbs of
+    different type — an audit question unposable without the measure (definitional) and a
+    demand reduction at fixed task (empirical).
+- id: DDD-frame-14
+  class: mixed
+  limbs: [the outcome/verdict register distinction (stipulated),
+          every diachronic instrument runs on verdicts alone (substantive)]
+- id: DDD-frame-17
+  class: mixed
+  limbs: [the predetermined/exercised/drawn taxonomy (stipulated),
+          the taxonomy is exhaustive (substantive),
+          demand is never unmet only ungoverned (carried from retired DDD-frame-15)]
+  note: >-
+    Worth the reviewer's attention: this is the successor built last session to cure
+    DDD-frame-15's compoundness, and it is a three-limb rule-1 hit.
+
+- id: DDD-cost-08
+  class: substantive
+  why: A contingent claim about when each gate binds; falsifier is a comparative outcome.
+- id: DDD-cost-11
+  class: substantive
+  why: A sign-flip claim about coupling; falsifier is a deployment comparison.
+- id: DDD-cost-13
+  class: substantive
+  why: A predictive bound on qualification instruments; falsifier is predictive performance.
+- id: DDD-cost-22
+  class: substantive
+  why: >-
+    Asserts the two gates transfer to the claim layer adding no mechanism. Transfer can fail,
+    and the falsifier says how.
+- id: DDD-delivery-03
+  class: substantive
+  why: A correlated-failure claim; falsifier is an arrangement comparison with content held constant.
