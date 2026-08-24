@@ -107,10 +107,20 @@ This is a duplication with no declared authority. It is not obviously wrong — 
 validates its own claims and may want its own spec — but nothing states which file governs when they
 disagree, and one has already drifted without anyone deciding that it should.
 
-`spec/claim-format-2-addendum.md` is upstream-only, so the `retired_from` field filed this session
-does not widen the divergence; it sits in a file the downstream copy never had.
+**The addendum is upstream-only, and that must not be read as a ruling** (Emil, GATE 2). Both
+fields filed this session — `retired_from` and the falsifier condition at every live status — sit in
+`spec/claim-format-2-addendum.md`, which the downstream repository has never had. So this session
+does not widen the drift, and it does not narrow it either. **A later session must not read the new
+field's upstream-only home as evidence that upstream is authoritative by practice.** Which copy
+governs is a ruling nobody has made, and it should be made explicitly rather than inferred from
+where things happen to get filed. The §4 additions made this session were written into **both**
+copies identically, precisely so that the drift stays exactly what it was.
+
+**`scripts/validate-claims.py` is duplicated the same way**, and the two copies are byte-identical
+at the close of this session — because this session copied its changes across deliberately, which is
+the maintenance cost the item is about. Nothing states which copy governs there either.
 
 **Not taken here** because it is a repository-topology decision, not a schema one, and this session
 was chartered on the schema.
 
-**Lands against:** `spec/claim-format.md` in both repositories.
+**Lands against:** `spec/claim-format.md` and `scripts/validate-claims.py`, in both repositories.

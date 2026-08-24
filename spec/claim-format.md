@@ -76,3 +76,27 @@ renumbering is forbidden.
 A claim file is valid iff: it declares `format`; validation runs against the declared version's
 rules (§2 for format 1); mandatory fields for its `status` and `kind` are present. Everything else
 — how claims are authored, converted, or reviewed — is process and lives outside this spec.
+
+`scripts/validate-claims.py` reports at two classes, and the difference is a ruling rather than a
+taste:
+
+| Class | Meaning | Exit |
+|---|---|---|
+| **error** | The claim is invalid. | 1 |
+| **warning** | A rule with a known backlog, or a heuristic that locates candidates for a human rather than deciding. | 0 |
+
+**A check becomes error class only when its hit list against the existing corpus is empty or already
+migrated.** A check that fires on ratified claims needs a migration plan, not a merge — so the hit
+list is produced before the class is chosen, never after. The checker's `CHECK_CLASS` table is the
+whole of that policy, one line per check, so promoting a check is a one-word reviewable change.
+
+**Rule 1 is not mechanically decidable and is never error class.** "One proposition" is a semantic
+property; what a checker can count is clause-joining punctuation. The best available proxy fires on
+sound claims — including `DDD-measure-16`, the claim built to cure `DDD-measure-06`'s compoundness —
+so it ships as a drafting prompt that flags candidates for adjudication. **A rule that is stated but
+not checked prevents nothing; a rule checked by a proxy that overreaches prevents the wrong things.**
+Rule 1's real enforcement is an adjudication with rulings.
+
+Rules added since format 1 — the falsifier condition at every live status, and `retired_from` on
+retired claims — are stated in `spec/claim-format-2-addendum.md` with their migration notes. Both
+are enforced now and both have empty hit lists.
