@@ -58,8 +58,11 @@ PARENTHETICAL = re.compile(r"\([^()]*\)")
 # here is a ruling and should arrive with the hit list that justifies it.
 CHECK_CLASS = {
     # Rule 2 extended from projected to every live status. Hit list: 0 of 89.
-    # This is the gap DDD-measure-06 fell through -- established from v4.5 to v5.9
-    # with no stated observation that would fire against it.
+    # Rule 2 required a falsifier for `projected` and said nothing above it, so THE
+    # STRONGEST STATUS CANON OFFERS CARRIED THE WEAKEST EVIDENTIAL REQUIREMENT --
+    # which is exactly how DDD-measure-06 sat at established from v4.5 to v5.9 with
+    # no stated observation that would fire against it. The rule now binds where the
+    # defect was.
     "falsifier-presence": "error",
     # Every live claim carries a falsifier, `test` no substitute. Hit list: 7 of 89,
     # all conceptual or normative, all carrying a test. Warning until those seven
@@ -99,6 +102,15 @@ def single_limb(statement):
     a semicolon following a colon usually separates two glosses of one
     proposition rather than two propositions, and a scoping clause reads as a
     second limb without asserting beside the first.
+
+    RETIRED CLAIMS ARE EXEMPT, and the reason is here rather than at the call
+    site because the next person to widen a rule will read it here. A retired
+    claim's `statement` is a retirement record, not a proposition -- canon
+    rewrites it as RETIRED -- "<the dead claim>" (DDD-frame-09 and
+    DDD-measure-08 are the exemplars). DDD-measure-06's epitaph quotes VERBATIM
+    the compound statement that killed it, so running rule 1 over it flags the
+    record of the defect as though it were the defect. Rule 1 governs
+    propositions, and an epitaph is not one.
     """
     s = " ".join(str(statement).split())
     prev = None
@@ -160,13 +172,7 @@ def check_claim(c, where, default_format=None):
 
     # Rule 1, as a drafting prompt. Never promote this to error without an
     # adjudication of its hit list: it fires on sound claims.
-    #
-    # Retired claims are exempt. A retired claim's statement field is a retirement
-    # record, not a proposition -- canon rewrites it as RETIRED — "<the dead claim>"
-    # (DDD-frame-09, DDD-measure-08 are the exemplars). DDD-measure-06's epitaph
-    # quotes verbatim the compound statement that killed it, so flagging it for rule
-    # 1 would flag the record of the defect as though it were the defect. Rule 1
-    # governs propositions, and an epitaph is not one.
+    # Retired claims are exempt -- see single_limb()'s docstring for why.
     limbs = single_limb(c.get("statement", "")) if status in LIVE_STATUSES else 0
     if limbs:
         flag("single-limb", where,

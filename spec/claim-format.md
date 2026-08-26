@@ -100,3 +100,37 @@ Rule 1's real enforcement is an adjudication with rulings.
 Rules added since format 1 — the falsifier condition at every live status, and `retired_from` on
 retired claims — are stated in `spec/claim-format-2-addendum.md` with their migration notes. Both
 are enforced now and both have empty hit lists.
+
+## 5. What the statuses mean, and what they do not
+
+The four `status` values are read by people outside this programme, and the strongest of them
+is the easiest to over-read. This section states what each value claims and, more usefully,
+what it does not.
+
+| Value | Claims | Does **not** claim |
+|---|---|---|
+| `projected` | Proposed, with a declared falsifier (or `test`) that has not been met. | That anyone has tried to meet it. |
+| `reported` | At least one evidence entry whose asset reproduces. | That the world was consulted. A computation reproducing is a fact about the computation. |
+| `established` | Argued from a derivation or theorem, and unchallenged **within this framework**. | External validation, empirical confirmation, or acceptance by anyone outside this programme. |
+| `retired` | Superseded, and kept in the graph with the correction that killed it. | That it was wrong from the start, or that its replacement is safe. `retired_from` records the maturity it held. |
+
+**The number that should anchor the reading: `established` is four claims, and all four are
+`formal`** — `DDD-frame-06`, `DDD-measure-02`, `DDD-measure-10`, `DDD-measure-16`. Nothing
+empirical, conceptual or normative has ever reached it, and nothing in the downstream projection
+repository has reached it at all.
+
+**So `kind` and `status` must be read together, and either alone misleads.** `established` on a
+`formal` claim says an identity holds or a derivation goes through — arithmetic, checkable, and
+saying nothing on its own about whether the arithmetic describes anything. The modelling claims
+that give it meaning are `conceptual` or `empirical`, and they are `projected`. That separation
+is rule 4 doing its job, and it is the framework's most honest feature rather than a gap in it:
+*never present an identity holding as evidence for the framework*.
+
+**What `established` is therefore worth.** It is the strongest status this graph offers, and its
+warrant is internal. A reader wanting to know whether the framework is *true* will not find the
+answer in a status field; the statuses record how far each claim has been argued and what would
+falsify it, which is a different and more checkable thing.
+
+**A status is not a confidence score and does not aggregate.** Forty-five claims at `projected`
+is not a weak framework or a strong one — it is a young registry that has declared what would
+falsify it. The count that matters to an outside reader is the one above: four, all formal.
