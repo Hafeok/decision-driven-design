@@ -17,6 +17,14 @@ Defect history, kept with the instrument:
     convention that says "regenerate wholesale" must survive being run twice, and this one
     did not. Fixed by stripping trailing rules from the body first; idempotence is now
     checked by running three times and comparing bytes.
+
+  * The claims table rendered `id | status | statement` and no kind, for five minor versions.
+    `kind` has been populated on every claim since format 1, so this was never a schema gap --
+    an external reader inferred one from the appendix and reported the registry as missing a
+    field it has always had. A projection defect reads as a schema defect when the projection
+    is the only view a reader has. Adding the column changes the table's shape, so
+    `check-appendix.py` was updated in the same commit; see its own defect history for why
+    that could not wait.
 """
 import re
 import subprocess
@@ -29,10 +37,21 @@ HEADING = '## Appendix A. Cited claims, decisions and terms'
 PREAMBLE = """
 The paper cites nodes in the framework's claim graph. Statements below are reproduced
 word-for-word from the graph at the ref pinned in the front matter, so the paper can be checked
-without it. **Status** is the graph's own: *settled* and *established* are argued and unchallenged,
-*reported* is exercised by a reproducing computation, *projected* is proposed with a declared
-falsifier and not yet met, *draft* is filed and not yet ratified, *retired* is superseded and kept
-with the correction that killed it.
+without it. **Kind** and **status** are the graph's own fields, and they answer different questions.
+*Kind* is what sort of claim it is: *formal* is arithmetic or a derivation, *empirical* rests on
+observation, *conceptual* fixes or uses the framework's vocabulary, *normative* says what ought to
+be done. *Status* is how far it has been argued: *settled* and *established* are argued and
+unchallenged **within this framework**, *reported* is exercised by a reproducing computation,
+*projected* is proposed with a declared falsifier and not yet met, *draft* is filed and not yet
+ratified, *retired* is superseded and kept with the correction that killed it.
+
+**Neither field claims external validation, and the two must be read together.** *Established*
+means internally argued and unchallenged, not empirically confirmed; *reported* means a computation
+runs and reproduces, not that the world was consulted. The pairing is what carries the information:
+every *established* claim in this graph is *formal*, so what is settled here is arithmetic, and the
+modelling claims that give the arithmetic its meaning are *projected*. The canonical statement of
+what each value means, and what it does not, is `spec/claim-format.md` §5 at the pinned ref; this
+paragraph projects it and does not replace it.
 
 **This appendix is generated from the graph and never hand-edited** (`gen-appendix.py`), then
 re-read against the graph by an independent script (`check-appendix.py`).
@@ -97,11 +116,15 @@ def main(path, repo, ref):
     if miss:
         sys.exit(f'cited but not in the graph at {ref}: {miss}')
 
+    # Kind and status are rendered together because either alone misleads. A reader who
+    # sees `established` and not `formal` reads a claim about the world as confirmed; the
+    # pair says it is arithmetic. The column is the graph's own field, populated since
+    # format 1 -- what was missing was the rendering, not the data.
     out = [HEADING, PREAMBLE, '### Claims', '',
-           '| ID | Status | Statement |', '|---|---|---|']
+           '| ID | Kind | Status | Statement |', '|---|---|---|---|']
     for c in [c for c in cited_c if c in claims]:
         y = claims[c]
-        out.append(f"| `{c}` | {y.get('status')} | {cell(y.get('statement'))} |")
+        out.append(f"| `{c}` | {y.get('kind')} | {y.get('status')} | {cell(y.get('statement'))} |")
 
     out += ['', '### Decisions', '', '| ID | Statement |', '|---|---|']
     for c in [c for c in cited_c if c in decisions]:

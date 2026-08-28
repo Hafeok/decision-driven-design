@@ -23,6 +23,14 @@ artefact could have been wrong about an incorrect one:
     pipes, H(V|X) and H(V|S), which the generator correctly escapes as \| in a table cell;
     the parser split rows on a bare '|' and broke those cells in two. The appendix was right.
     Fixed by splitting on unescaped pipes only; the hazard is commented at the split.
+
+  * The status check was guarded on `len(cols) == 2`. When the claims table gained a `kind`
+    column the guard stopped matching, so the status column silently stopped being checked
+    while the statement column carried on and the run reported success -- a verification
+    quietly weaker than the one before it, with nothing to see. This was predicted from
+    reading the code before the column was added, and fixed in the same commit. Metadata
+    columns are now counted from the LEFT and named individually, so a future column cannot
+    switch an existing check off. **Never guard a check on a total column count.**
 """
 import re
 import subprocess
@@ -66,6 +74,9 @@ def strip_quote(md):
 
 def main(path, repo, ref):
     nodes = graph(repo, ref)
+    # Which ids are claims, so a decisions row (id | statement) is not mistaken for a claims
+    # row that lost its metadata columns.
+    claim_ids = {i for i, n in nodes.items() if 'status' in n and not i.startswith('term:')}
     text = open(path).read()
     head, _, appendix = text.partition('## Appendix A')
     if not appendix:
@@ -92,7 +103,11 @@ def main(path, repo, ref):
                 bad.append(f'{node_id}: canonical wording differs from the graph')
             if cols[0] != node.get('term', node_id.split(':', 1)[1]):
                 bad.append(f'{node_id}: term name differs from the graph')
-        elif len(cols) == 4:                                   # the hypothesis-set table
+        elif len(cols) == 4:
+            # The hypothesis-set table: id | status | evidence | owner | falsifier. Four
+            # columns after the id is unambiguous -- a claims row has three and a decisions
+            # row has one -- but that is a fact about the current tables, so if a fifth column
+            # is ever added anywhere, this discrimination is the thing to revisit first.
             status, evidence, owner, falsifier = cols
             if status != str(node.get('status')):
                 bad.append(f'{node_id}: status differs from the graph')
@@ -105,11 +120,27 @@ def main(path, repo, ref):
                 bad.append(f'{node_id}: owner differs from the graph')
             if (falsifier == 'yes') != bool(node.get('falsifier')):
                 bad.append(f'{node_id}: falsifier column misreports the graph')
-        else:                                                  # claims and decisions
+        else:
+            # Claims and decisions. The claims table is id | kind | status | statement and the
+            # decisions table is id | statement, so the metadata columns are counted from the
+            # LEFT and the statement is read from the right. Guarding a column's check on the
+            # total column count -- as this did while the claims table had two columns -- means
+            # that adding a column silently switches the check off while the run still reports
+            # success. That is the failure mode this instrument exists to prevent, so it must
+            # not be the instrument's own.
             if unescape(cols[-1]) != flat(node.get('statement')):
                 bad.append(f'{node_id}: statement differs from the graph')
-            if len(cols) == 2 and cols[0] != str(node.get('status')):
-                bad.append(f'{node_id}: status differs from the graph')
+            meta = cols[:-1]
+            if len(meta) == 2:                                 # claims: kind, then status
+                if meta[0] != str(node.get('kind')):
+                    bad.append(f'{node_id}: kind differs from the graph')
+                if meta[1] != str(node.get('status')):
+                    bad.append(f'{node_id}: status differs from the graph')
+            elif len(meta) == 1:                               # a claims row with no kind column
+                bad.append(f'{node_id}: claims row carries no kind column '
+                           '(regenerate with gen-appendix.py)')
+            elif node_id in claim_ids:
+                bad.append(f'{node_id}: claims row has {len(cols)} columns, expected 4')
 
     dropped = sorted(body_cited - rendered)
     invented = sorted(rendered - body_cited)
