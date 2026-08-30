@@ -151,3 +151,59 @@ artefact. Leaving it is `term:undelivered`'s shape exactly. **Q-2** a `denominat
 would repair C10's `projection` half more cheaply than a rename, by moving `term:verdict`'s inline
 audience denomination out of canonical text — and the primer is the first projection needing it at
 scale.
+
+---
+
+## GATE 2 ruled (2026-08-27) — dispositions
+
+- **Sweep 1 Grade A files in this migration**: `term:seam`, `term:composite-actor`,
+  `term:projection`. Three unpinned entries, one embed each, zero pin advances.
+- **Grades B and C carry to the freight list with their grading intact** — the grading is the
+  artefact, because it prices the rest without re-reading.
+- **`mechanical` repairs on the delivery side. `act-triggered` ruled in.** Record `DDD-dec-30` as
+  the warrant, **and record that the discipline existed before the violation**, because that is the
+  finding.
+- **`judgment`**: closed, cost zero, historical mentions stay as history.
+- **`projection` and `verdict`**: confirmed, priced, **deferred to the freight list** — unpinned,
+  and `09`'s contract already disambiguates `verdict|verdict function`. Only the bare `term:` field
+  is exposed, a small repair that should not ride a migration.
+- **`posterior` withdrawn.** Record all three deaths together in the manifest — `fixed`, `resolved`,
+  `posterior` — because three is a pattern and the pattern is the argument for the check.
+- **Q-1 filed.** The erratum pointer is in `meta/ground-audit-2026-08-24.md`, as a forward reference
+  that touches no other line. The supersession convention has always added forward references.
+- **Q-2 ruled in, and moved up.** A `denominations:` field files **in this migration**: it repairs
+  `projection` more cheaply than a rename by moving `term:verdict`'s inline audience denomination out
+  of canonical text, and it is the same move as the appendix defect and claim-format §5 — the
+  projection carrying what the schema should say. **Two consumers now, not one**, and the primer
+  needs it at scale.
+- **To Gate 4**: the i18n gloss (C4), `ground channel` inside `term:arrangement` (C3), the
+  five-exception drafting warning (C12).
+- **To W4's assessment**: the `floor` collision in `product-cli` (C13).
+
+---
+
+## From GATE 3 (reported 2026-08-27, pending ruling)
+
+### C15 — the reconciliation settles, and it narrows rather than dissolves
+
+**The corpus contains no use of `ground` for a rule's normative force.** Of 15 genuine
+`institutional ground` occurrences, 11 are meta-mentions of the category and all 4 actual uses denote
+a representation supplied by an authority. §7 repairs a defect the corpus does not have; Q27's object
+is the only one the word ever named. **The collision is one mis-listed word** — `rules` inside the
+slot's list of *supply channels* (`conventions, authority, social practice`). **Q27 is safe to file.**
+
+### C16 — S4 does not survive as a sense
+
+Four senses plus provenance attributes, not five. This is SR-4 reaching the partition itself, and it
+removes the smallest sense with no rename. **The plan's wave table should be redrawn on four senses.**
+
+### C17 — **BLOCKING: W0-bis, the 427 prose-context rows**
+
+A seeded 60-row sample of the inherited rule-assigned half: **anchored rules 39/39 correct;
+prose-context rules 6/21 correct.** ~305 of 427 rows suspect, concentrated in `accessible-available`
+(191) and `reading-ground` (99) — **precisely the S2/S3 boundary the delivery vocabulary is being
+reused to name.**
+
+Nothing ruled so far moves: G1's residual work, both G2 sweeps, G3 Part 1 and SR-1/SR-2 are all
+independent of these rows. **Gate 4 is not**, because a plan's file lists and wave sizes are computed
+off the classification. Recommended: **run W0-bis (427 rows, 42% of W0) before the plan.**
