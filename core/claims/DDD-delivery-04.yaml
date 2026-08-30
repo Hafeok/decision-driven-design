@@ -9,13 +9,13 @@ region: |
   and not upstream (DDD-dec-09's charter). Governs the consuming-side half of the channel
   condition; the authoring-side half (the harvest actually reaching the encoded store) is
   upstream core/08's as stated. Per act-site, inheriting term:delivery's edge-colouring
-  (upstream, pinned on acceptance): the same standing decision amortises at a mechanically
-  delivered site and not at a judgement-mediated one.
+  (upstream, pinned on acceptance): the same standing decision amortises at an act-triggered
+  site and not at a judgement-mediated one.
 evidence:
   - kind: observation
     ref: "meta/corpus-test-results-2026-08-14.md — rows 1 and 5 (DDD-dec-15/16)"
     note: |
-      A standing mechanical channel that did not deliver: the pin's checks (E12/E13/W5)
+      A standing act-triggered channel that did not deliver: the pin's checks (E12/E13/W5)
       instrument status, not statement, and the escape-scope correction crossed the repo boundary
       by governed judgement instead — the paid-once property failing at exactly the half the
       channel did not carry. Corpus sample: 11 rows (5 canon-ratified, 4 accepted-not-ratified,
@@ -23,14 +23,14 @@ evidence:
   - kind: observation
     ref: "meta/corpus-test-results-2026-08-14.md — row 6 and row 3"
     note: |
-      Row 6: one standing decision, two act-sites, two delivery types — mechanically delivered
+      Row 6: one standing decision, two act-sites, two delivery types — act-triggered
       (and inheriting per run) at the MCP write path, absent at the CLI act-site, the variance
       documented in the consuming repo's own instructions. Row 3 (DDD-dec-02): a standing policy
-      with no mechanical carrier possible at the time — it reaches an act only through prompt
+      with no act-triggered carrier possible at the time — it reaches an act only through prompt
       text or recall, and its failure mode leaves the register looking exactly as it does when
       things work: filed, standing, and inheriting nothing per run by itself.
 falsifier: |
-  A corpus in which judgement-mediated standing decisions show the same per-run inheritance as mechanically delivered ones — delivery type failing to predict amortisation at matched content.
+  A corpus in which judgement-mediated standing decisions show the same per-run inheritance as act-triggered ones — delivery type failing to predict amortisation at matched content.
 test: |
   Track per-run arrival of standing decisions across act-sites of both delivery types over a working period; the claim fails if inheritance rates do not separate by delivery type.
 breaks: |

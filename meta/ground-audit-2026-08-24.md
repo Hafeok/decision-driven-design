@@ -8,6 +8,15 @@ written. The whole of the session's diff is this document, its instruments, and 
 **Read at:** `actor-indexed-determination` `37f508e` (= `v5.10.0`) · `decision-driven-design`
 `92c7b2e` · `product-cli` `d0f4297`.
 
+> **Erratum filed against this document:** `meta/ground-audit-2026-08-24-erratum.md`, by the
+> ground-migration session of 2026-08-27, on Emil's ruling at that session's GATE 1 and GATE 2.
+> Three corrections — the definition layer is **17 settled terms and one draft, not fifteen** (§3.1);
+> **`ground channel` occurs 10 times, not zero**, one of them inside `term:arrangement`'s settled
+> canonical text (§2); and the corpus at this document's own read commits is **2,843**, because the
+> instrument counted this session's index line (§1). The findings, the four rulings and the wave
+> shape are untouched, and the central finding was corroborated by the completed classification.
+> **This forward reference is the only change to this file.** Its text stands as filed.
+
 **Instruments and data**, reproducible, in `meta/sessions/2026-08-24-ground-audit/`:
 `count-ground.py`, `extract-occurrences.py`, `classify.py`, `classification.json` (2,845 rows),
 `residual-adjudication.json`, and the four gate reports.
