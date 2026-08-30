@@ -84,3 +84,70 @@ repair for occurrences no rename could reach.
 **+133 across 11 files** against the audit's read commits, **+0 in `product-cli`**. 106 are immutable
 or the audit's own output. The 27 live rows sit in three files and are read alongside the plan.
 C5 rides with this.
+
+---
+
+## From GATE 2 (reported 2026-08-27, pending ruling)
+
+### C8 — sweep 1's ten assert-not-define entries: **none is pinned**
+
+30 of the 62 entries carrying canonical text are pinned downstream; **not one of the ten is**. Zero
+pin advances, zero `DDD-dec-29`-class decisions, one embed site each, four with Paper A appendix
+exposure (`training`, `seam`, `composite-actor`, `ensemble-actor`).
+
+Grade A — **no definition anywhere**, the worst grade and the cheapest fix: `term:seam`,
+`term:composite-actor`, `term:projection`. Grade B — an ungoverned definition already sits in the
+establishing document, promotable byte-for-byte: `term:training`, `term:ensemble-actor`. Grade C —
+the definition is present but subordinate, needing only a reordering: `term:path-degeneracy`,
+`term:pinning-resolution`, `term:orchestrator`, `term:p-err`, `term:redundancy`.
+
+### C9 — `mechanical`: repair the delivery side, not the store
+
+Both `term:mechanical` and `term:delivery` are pinned, so either direction fires a pin advance. The
+volumes are not close: the delivery value is **≈49 occurrences at `draft` status, filed v5.5.0**; the
+store is **≈340 at `settled`, filed at `01`**. `DDD-dec-30`'s own discipline — a new value must share
+no word with the store vocabulary — is the argument, and `term:delivery` is the case that rule was
+written for, five versions too late.
+
+**`act-triggered` is the replacement, checked and clear**, and it is canon's own gloss:
+`DDD-cost-09` already reads *"where the check is act-triggered (`term:delivery`, mechanical)"*.
+Reuse, not minting. It pairs with the existing `judgment-mediated`.
+
+**`posterior` is therefore moot**, and it fires its check independently: `prior` is live in the
+Bayesian sense in four places, one of them ratified canon (`DDD-measure-05`), and
+`term:calibration-ledger` is the estimator in that same prior→update pipeline.
+
+### C10 — `projection` and `verdict`: two new live collisions, both unpinned
+
+`term:projection` (the compound's two axes) against *the projection layer* / *the engineering
+projection* — which appears **inside `term:verdict`'s settled canonical text**. And `term:verdict`
+(the induced assignment, whose entropy is `D`) against the per-act verdict in `term:act-individuation`
+and `term:outcome` — a function against a value of it, across three settled entries established by
+one document. `09`'s contract already disambiguates as `verdict|verdict function` and the registry
+carries the alias; only the `term:` field is the bare word.
+
+### C11 — `judgment` is closed; the brief inherited it as open
+
+`DDD-frame-15` is retired and `DDD-frame-17`'s three values are `predetermined`/`exercised`/`drawn`.
+`DDD-dec-30` records the collision in canon's own words. ~7 historical mentions remain and **must not
+be migrated** — they are correct as history. Cost: zero.
+
+### C12 — the drafting-warning instrument now needs **five** exceptions, not three
+
+Quotations · historical notes · ordinary English (the audit's third) · the RDF `ground term` · the CSS
+surface colour. `floor` shows the same shape in `core/00-primitives.md` (*"a floor of pure action"*),
+so the instrument is a general exception-list problem and not a `ground` one.
+
+### C13 — `floor` collides in `product-cli` (W4 class)
+
+`tolerance_floor` (a set's minimum tier, §4.2.1) against the **Polanyi floor** (§3.5, `term:floor`).
+**168 files** touch `tolerance_floor`, and both senses appear in the same documents. A serialised
+field name, so it prices with W4 and not with the canon waves.
+
+### C14 — two questions raised at GATE 2, unruled
+
+**Q-1** the erratum has no pointer from the audit it corrects, and a pointer would edit a merged
+artefact. Leaving it is `term:undelivered`'s shape exactly. **Q-2** a `denominations:` registry field
+would repair C10's `projection` half more cheaply than a rename, by moving `term:verdict`'s inline
+audience denomination out of canonical text — and the primer is the first projection needing it at
+scale.
