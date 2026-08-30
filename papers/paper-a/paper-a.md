@@ -1113,54 +1113,205 @@ become decisions with no link back to the declared claims — escape by delivery
 
 ## 11. Related work
 
-Each neighbourhood below is taken in turn, and each entry closes on what this paper takes from it
-and what it does not.
+**DRAFT — pending ruling.** This section is rewritten at the external review's §8, which found the
+paper's novelty claim unestablished against literatures it had not surveyed. The finding was
+correct. Two questions are kept apart throughout: what the framework **inherits**, which is most of
+what follows, and what it **adds**, which is narrower than the merged version implied.
+
+Locators for every work named here are verified in the references, or flagged unverified there with
+the reason.
+
+### 11.1 What the framework inherits
 
 **The determinable literature.** The determinable/determinate relation is W. E. Johnson's (*Logic*
 Part I, ch. XI, 1921), developed by Prior (*Mind* 58, 1949, in two parts) and Funkhouser (*The
 Logical Structure of Kinds*, OUP, 2014), and surveyed by Wilson (*SEP*, rev. 2023). Four structural
 gifts are taken directly: that the relation is not genus-and-species; that determinates under one
 determinable are constitutively exclusive; that determinateness comes in orders; and that the
-determinable is a dimension of comparability. **What is the framework's, and not theirs**, is the
-identification of the determinable as determination demand's object and of the verdict variable's
-support as the determinate-space at the declared grain [DDD-frame-13, credits].
+determinable is a dimension of comparability. What is the framework's is the identification of the
+determinable as determination demand's object and of the verdict variable's support as the
+determinate-space at the declared grain [DDD-frame-13, projected — a proposal with a declared
+falsifier, not a result].
 
 **Cybernetics and requisite variety.** Ashby supplies the move this paper generalises — describing
 a regulator by what it must absorb rather than by what it is. What the framework adds is that the
-absorbing arrangement is itself a variable, and that its coordinates can be enumerated (§1).
+absorbing arrangement is itself a variable, and that its coordinates can be enumerated (§1). That
+enumeration is `projected` [DDD-frame-01].
 
 **Complexity allocation.** Brooks and Tesler ask where complexity resides and where it is moved.
-The framework indexes both questions (§6.3) and, on the closing region, measures the second one
+The framework indexes both questions (§6.3) and, on the closing region only, measures the second
 (§4.4). It does not claim their results as instances of its own.
 
 **Formal verification and proof-carrying systems.** The producer-independence result (§5.4) is the
-framework's statement of what a sound check buys, deliberately narrowed to the checked property.
-The literature's own scope conditions — soundness, ground completeness, checker legitimacy — are
-carried inside the claim rather than assumed away.
+framework's statement of what a sound check buys, deliberately narrowed to the checked property
+[DDD-frame-05, projected]. The literature's own scope conditions — soundness, ground completeness,
+checker legitimacy — are carried inside the claim rather than assumed away.
 
 **Design by contract.** Meyer's preconditions, postconditions and invariants are outcome-level and
 policy-level commitments written at an interface (§3.1). The framework contributes the level
-vocabulary and the observation that contracts do not reach principal-level commitment at all.
-
-**Mixed-initiative and human-in-the-loop systems.** This literature studies arrangements directly
-and is the framework's closest empirical neighbour. What the framework adds is a vocabulary for
-*why* a given mix works — which commitments attach where, which predicates close, who answers —
-rather than a catalogue of mixes that do.
+vocabulary [term:commitment-level, draft] and the observation that contracts do not reach
+principal-level commitment at all.
 
 **Bounded rationality and principal–agent theory.** The accountability relation (§7) is adjacent to
 principal–agent analysis and is not reducible to it: authority linkage and sanction path are
 institutional facts, not incentive parameters, and an arrangement can be incentive-aligned and
-accountability-incomplete.
-
-**Algorithmic accountability and responsibility gaps.** The framework's contribution here is
-[DDD-frame-08]'s structural reading: a responsibility gap is an arrangement naming an executor and
-no principal, which is a fixable property of the arrangement rather than a novel moral category.
+accountability-incomplete. That reading is `projected` [DDD-frame-08].
 
 **Information theory.** Shannon's entropy and chain rule are used exactly as stated, and the
 theorem is Shannon's, always. The identification of determination demand with verdict entropy is
-the framework's modelling claim, and it is the falsifiable part (§4.4) [DDD-measure-01].
+the framework's modelling claim, and it is the falsifiable part (§4.4) [DDD-measure-01, projected].
 
-### 11.1 A force the framework names and has not filed
+### 11.2 The arrangement as the unit of analysis is not this framework's
+
+This is the review's central correction and the paper accepts it without qualification. **The
+proposition that consequential work should be analysed at the level of an arrangement rather than an
+individual actor is decades old, and the priority belongs to others.**
+
+**Hutchins, distributed cognition.** *Cognition in the Wild* takes as its unit of cognitive analysis
+a collection of people and artefacts in a work practice, and argues that groups have cognitive
+properties not predictable from the properties of their members. The framework's [term:arrangement]
+is that move, applied to determination rather than to cognition. **(analysis)** What the framework
+does not find in Hutchins is a governing apparatus: distributed cognition describes how a system
+computes, and does not ask what acceptance relation the result must satisfy, what assures it, or who
+answers for it. The addition is the governing questions, not the unit.
+
+**Hollnagel and Woods, joint cognitive systems.** This is the closest neighbour and the one that
+most narrows what this paper may claim. Cognitive systems engineering *"introduces the concept of a
+cognitive system: an adaptive system which functions using knowledge about itself and the
+environment in the planning and modification of actions"* (Hollnagel & Woods 1983), and the joint
+cognitive system reads people and machines together as one such system rather than as an interacting
+pair. §2.5's insistence that the unit of comparison is the arrangement and not the isolated actor is
+**their point before it is this framework's**, and the paper states that rather than rediscovering
+it.
+
+**(analysis)** Where the framework goes further is not the unit but a partition inside it. A joint
+cognitive system is characterised by what it does. This framework separates *where a resolution
+comes from* from *what establishes its acceptability* [DDD-frame-03, projected], and then separates
+assurance supplied **standing** — in a mechanism, independent of the act — from assurance supplied
+**occasioned**, at the act and at the carrier's price [DDD-cost-09, projected]. Both are `projected`:
+they are proposals with declared falsifiers, and neither has been tested against a joint cognitive
+system that resists the partition. The claim here is that the distinction is available and useful,
+not that it is established.
+
+**Leveson, STAMP and systems safety.** *Engineering a Safer World* models safety as a control
+problem: a hierarchical control structure whose vertical axis carries control and authority,
+controllers holding process models of what they control, and safety enforced as constraints on
+behaviour. STPA classifies unsafe control actions in four ways — not provided, provided, provided
+too early or too late or out of order, and stopped too soon or lasting too long — and the
+classification is argued to be complete over control actions. The framework's accountability
+material is weaker than Leveson's on authority, which STAMP carries structurally, and this paper
+does not improve on it.
+
+**(analysis)** The distinction the framework adds is **filing versus delivery**. STPA's four types
+quantify over control actions the controller *provides*; a constraint that was authored, is correct,
+and is simply not present to the controller at the act appears as a flawed process model or a flawed
+control algorithm. STPA's causal-scenario step can reach that case. What the framework supplies is a
+standing category rather than a scenario: delivery is a property of a decision **at an act-site**,
+the same decision can be delivered at one act-site and not at another, and governance filed but not
+delivered is escape whose distinguishing feature is that the ledger shows coverage [DDD-delivery-01,
+DDD-delivery-02, both projected]. Whether that category earns its place against STPA's scenarios is
+an empirical question neither literature has settled.
+
+### 11.3 Allocating work inside the arrangement
+
+**Horvitz, mixed-initiative interaction.** *Principles of Mixed-Initiative User Interfaces* treats
+initiative as something allocated per interaction under uncertainty about the user's goal, and gives
+twelve factors for doing it — among them inferring ideal action in light of costs, benefits and
+uncertainties; employing dialogue to resolve key uncertainties; and minimising the cost of poor
+guesses about action and timing. This is the framework's closest neighbour on allocation, and it is
+prior.
+
+**(analysis)** Two differences, and the first runs against the framework. **Horvitz supplies a
+decision-theoretic criterion for the allocation and this framework supplies none** outside the
+region where the acceptance predicate closes; off that region the framework offers vocabulary and a
+governance question, not a rule for deciding. That is a real advantage of the mixed-initiative
+account and the paper does not dispute it. The second difference is the framework's: Horvitz's
+factors govern **when the automated service should act**, and are silent on what the arrangement
+has fixed in advance. The level vocabulary names that — outcome, policy or principal
+[term:commitment-level, draft] — and the observation the framework offers is that a mixed-initiative
+system is one that has committed at policy level while leaving the act's initiative open.
+
+### 11.4 Accountability, and the gap
+
+**Bovens, the actor–forum relation.** *Analysing and Assessing Accountability* defines accountability
+as *"a relationship between an actor and a forum, in which the actor has an obligation to explain and
+to justify his or her conduct, the forum can pose questions and pass judgement, and the actor may
+face consequences"*, in three stages: the actor is obliged to inform; the forum can interrogate —
+*"hence the close semantic connection between 'accountability' and 'answerability'"* — and the forum
+may pass judgement and impose sanctions.
+
+**The correspondence with [DDD-frame-08] is close, and the paper states how close.** **(analysis)**
+Four of the framework's five elements are already Bovens's: a persistent principal is his actor, the
+obligation to inform is attribution and answerability, and judgement with sanction is his third stage.
+The element that is not his is **authority linkage** — that the acting party was entitled to act —
+which his relation does not require because it assesses conduct after the fact rather than
+constituting an arrangement before it. That is where the framework's contribution sits, and it is
+one element and a change of tense, not a new theory of accountability. Bovens's **problem of many
+hands** — that a forum confronted with an outcome often cannot unravel who contributed what — is §7's
+difficulty stated in 2007, and the framework's answer to it is structural rather than forensic: the
+arrangement is the unit, and the principal is named at its boundary [term:arrangement,
+term:accountability].
+
+**Matthias, the responsibility gap.** *The responsibility gap* argues that for learning machines the
+manufacturer or operator cannot in principle predict future behaviour, so *"nobody has enough control
+over the machine's actions to be able to assume the responsibility for them"*. The gap is grounded in
+a **control condition on just ascription**, not in a missing name.
+
+**(analysis)** That matters for what this framework may say about it. [DDD-frame-08] holds that
+accountability is a relation and not an intrinsic capacity, so the relation does not read the
+executor's kind — which means an arrangement can be made accountability-complete without its
+principal being able to predict the executor. **It does not follow that the gap is thereby closed.**
+Whether structural completeness is morally sufficient where the control condition fails is a
+normative question, [DDD-frame-08] is `projected` about exactly that, and this paper does not settle
+it. An earlier draft of this section claimed the gap was "fixable rather than novel"; the reading
+does not support that, and the claim is withdrawn here rather than carried quietly.
+
+**Meaningful human control.** Santoni de Sio and van den Hoven propose two conditions: **tracking**,
+that a decision-making system *"should demonstrably and verifiably be responsive to the human moral
+reasons relevant in the circumstances"*, and **tracing**, that its actions *"should be traceable to a
+proper moral understanding on the part of one or more relevant human persons who design or interact
+with the system"*. The separation of the two is the contribution, and it is theirs.
+
+**(analysis)** Tracing and the framework's delivery question are adjacent and are not the same, and
+the difference is worth stating precisely because it is easy to collapse. Tracing asks whether some
+human in the design-and-use chain understood the system and was answerable for it. Delivery asks
+whether the governing decision **reached the act** [DDD-delivery-02, projected]. An arrangement can
+satisfy tracing completely — a named, understanding, answerable designer — and still fail at the act,
+because the decision that designer authored was never retrieved when it was needed. That is escape
+that presents as governance, and it is a failure a tracing audit passes.
+
+### 11.5 What is left to claim
+
+The comparison, in one table. Every row's *what the framework adds* is `projected` in the graph
+unless marked otherwise, which means proposed with a declared falsifier and not yet met.
+
+| Neighbour | The unit | What it already has | What the framework adds | Node |
+|---|---|---|---|---|
+| Hutchins | people + artefacts in a practice | the arrangement as the cognitive unit | the governing questions — acceptance, assurance, principal | `term:arrangement` |
+| Hollnagel & Woods | the joint cognitive system | the arrangement as the unit, **prior to this framework** | source separated from assurance; standing separated from occasioned | `DDD-frame-03`, `DDD-cost-09` |
+| Leveson | the control structure | control, authority, constraints, four complete types of unsafe control action | filing separated from delivery, as a standing category | `DDD-delivery-01`, `DDD-delivery-02` |
+| Horvitz | the interaction | allocation of initiative, **with a decision criterion the framework lacks** | what the arrangement committed in advance, by level | `term:commitment-level` |
+| Bovens | the actor–forum relation | four of five accountability elements; the problem of many hands | authority linkage; the relation as a design-time property | `DDD-frame-08` |
+| Matthias | the ascription | the gap, grounded in a control condition | a completeness the gap does not require — **and no claim that this closes it** | `DDD-frame-08` |
+| Meaningful human control | the system and its design chain | tracking and tracing, separated | delivery: reaching the act, which tracing does not test | `DDD-delivery-02` |
+
+**(analysis)** What survives the survey is narrower than the merged version of this paper claimed,
+and it is what the review itself proposed: **the contribution is a specific, auditable synthesis of
+resolution, assurance, delivery and accountability — not the discovery that sociotechnical
+arrangements matter.** Each coordinate has a prior literature, and several of those literatures are
+older and better evidenced than this framework. What the framework offers is that the four are
+carried in one vocabulary, over one unit, with each proposition attached to a node that states its
+status and its falsifier — so a reader can find out what is argued and what is merely proposed
+without reading the authors' minds. Whether that synthesis earns its keep is an empirical question,
+and §9 is where it would be answered.
+
+**Two things the survey did not find**, recorded because their absence is part of the result. No
+work surveyed carries the filing-versus-delivery distinction as a standing category, and none
+separates a resolution's source from its assurance mechanism as orthogonal dimensions. Those are the
+two places the framework's difference held up under reading. They are also `projected` claims with
+empty evidence fields, and a distinction being unoccupied is not a distinction being correct.
+
+### 11.6 A force the framework names and has not filed
 
 **(analysis)** One piece of positioning belongs here because it names the force the whole framework
 is about, and it is deliberately unfiled.
@@ -1260,13 +1411,22 @@ than against the one that happened to be current.
 
 ## References
 
-Locators are marked **verified** where the source was checked directly, and **unverified** where it
-could not be. One entry below is unverified, and the reason is stated in the entry rather than left
-for a reader to discover.
+Locators are marked **verified** where the locator was checked against an authoritative registry —
+Crossref for a DOI, Open Library or the publisher's own record for an ISBN, NCBI for a PubMed
+record — and **unverified** where it could not be. One entry below is unverified, and the reason is
+stated in the entry rather than left for a reader to discover.
+
+**Verifying a locator is not reading a text, and the two are marked separately.** Where an entry's
+substance rests on a secondary characterisation rather than on the primary work, the entry says so.
+The distinction was earned rather than assumed: the review this revision answers cited the wrong
+volume of a two-volume pair, and a database would have propagated the error.
 
 Ashby, W. R. (1956). *An Introduction to Cybernetics*. Chapman & Hall, London. Variety and the bit,
 §7/7; the Law of Requisite Variety in logarithmic form, §11/7, with the general statement at §11/9.
 *(verified)*
+
+Bovens, M. (2007). Analysing and Assessing Accountability: A Conceptual Framework. *European Law
+Journal* 13(4):447–468, doi:10.1111/j.1468-0386.2007.00378.x. *(verified; primary text read.)*
 
 Brooks, F. P. (1987). No Silver Bullet: Essence and Accidents of Software Engineering. *IEEE
 Computer* 20(4):10–19, April 1987, doi:10.1109/MC.1987.1663532; reprinted from *Proceedings of the
@@ -1284,8 +1444,44 @@ Goodhart, C. A. E. (1975). Problems of Monetary Management: The U.K. Experience.
 Monetary Economics*, Volume I. Reserve Bank of Australia, Sydney. Reprinted in *Monetary Theory and
 Practice: The U.K. Experience*, Macmillan, 1984. *(verified)*
 
+Hollnagel, E. and Woods, D. D. (1983). Cognitive Systems Engineering: New wine in new bottles.
+*International Journal of Man-Machine Studies* 18(6):583–600; reprinted *International Journal of
+Human-Computer Studies* 51(2):339–356, 1999, doi:10.1006/ijhc.1982.0313. Both locators are given
+because both circulate. *(verified; the authors' own abstract read, not the full text.)*
+
+Hollnagel, E. and Woods, D. D. (2005). *Joint Cognitive Systems: Foundations of Cognitive Systems
+Engineering*. CRC Press, Boca Raton. ISBN 0-8493-2821-7, doi:10.1201/9781420038194. **Not to be
+confused with the companion volume below**, which reverses the author order and shares the main
+title. *(Locator verified against Crossref and Open Library; the volume itself was not obtained,
+and this paper's characterisation of it rests on the 1983 paper above and on secondary sources.)*
+
+Horvitz, E. (1999). Principles of Mixed-Initiative User Interfaces. *Proceedings of CHI '99*,
+pp. 159–166. ACM Press, doi:10.1145/302979.303030. *(verified; primary text read.)*
+
+Hutchins, E. (1995). *Cognition in the Wild*. MIT Press, Cambridge, Massachusetts. ISBN
+978-0-262-08231-0; paperback, Bradford Books, 1996, ISBN 978-0-262-58146-2. *(Locator verified
+against Open Library; characterised here from the author's own summary of the book and from
+secondary sources, not from the full text.)*
+
 Johnson, W. E. (1921). *Logic*, Part I, chapter XI, "The Determinable". Cambridge University Press.
 *(verified)*
+
+Leveson, N. G. (2011). *Engineering a Safer World: Systems Thinking Applied to Safety*. MIT Press,
+Cambridge, Massachusetts. ISBN 978-0-262-01662-9; paperback 2017, ISBN 978-0-262-53369-0; an
+open-access edition is published by MIT Press. *(Locator verified against Open Library. STPA's
+control structure, process models and four types of unsafe control action are cited here from the
+STPA Handbook below, which states them and which was read; the book itself was not obtained.)*
+
+Leveson, N. G. and Thomas, J. P. (2018). *STPA Handbook*. March 2018, published by the authors and
+distributed through MIT's Partnership for Systems Approaches to Safety and Security. Chapter 2,
+"How to do Basic STPA": the hierarchical control structure, the generic control loop and process
+models under "Modeling the control structure", pp. 22–24; the four types of unsafe control action
+and the argument that they are complete, pp. 38 and 38–39. The handbook's chapters carry names
+rather than numbered subsections, so page numbers are given. *(verified; primary text read.)*
+
+Matthias, A. (2004). The responsibility gap: Ascribing responsibility for the actions of learning
+automata. *Ethics and Information Technology* 6(3):175–183, doi:10.1007/s10676-004-3422-1.
+*(verified; primary text read.)*
 
 Meyer, B. (1992). Applying "Design by Contract". *IEEE Computer* 25(10):40–51. *(verified)*
 
@@ -1294,6 +1490,10 @@ Terry Lectures delivered at Yale University in 1962. *(verified)*
 
 Prior, A. N. (1949). Determinables, Determinates and Determinants. *Mind* 58(229):1–20 and
 58(230):178–194, in two parts. *(verified)*
+
+Santoni de Sio, F. and van den Hoven, J. (2018). Meaningful Human Control over Autonomous Systems:
+A Philosophical Account. *Frontiers in Robotics and AI* 5:15, doi:10.3389/frobt.2018.00015.
+*(verified; primary text read.)*
 
 Shannon, C. E. (1948). A Mathematical Theory of Communication. *Bell System Technical Journal*
 27(3):379–423 and 27(4):623–656. *(verified)*
@@ -1306,6 +1506,12 @@ cites Tesler for the allocation question only, and takes no result from him.
 
 Wilson, J. (2023). Determinables and Determinates. *Stanford Encyclopedia of Philosophy*, first
 published 7 February 2017, substantive revision 18 January 2023. *(verified)*
+
+Woods, D. D. and Hollnagel, E. (2006). *Joint Cognitive Systems: Patterns in Cognitive Systems
+Engineering*. CRC Press, Boca Raton. ISBN 0-8493-3933-2, doi:10.1201/9781420005684. **This is the
+volume the external review's own locator resolves to**, while the review's prose concerns the 2005
+*Foundations* volume above. *(Locator verified against Crossref and Open Library; the volume itself
+was not obtained.)*
 
 ---
 

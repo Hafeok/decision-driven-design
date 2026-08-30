@@ -19,6 +19,10 @@ Four exclusions, each a reason a rename would assert something the session canno
   identifier a filename. `measure-nonuniform-ground.py` is an asset in the principle repository
              and out of this session's reach. The audit's extract does not flag it; this does.
   ambiguous  S5 by the classification and three words from an S1 reading of the same phrase.
+             RULED AT GATE 1 (Emil): all five members of the "ground the task faces" set defer,
+             including the three that read as S5. "Three words apart is exactly where a rule fails,
+             and W1's whole licence is that it renames a sense touching no other. Where that is
+             contestable, it isn't W1."
 
 Usage:  w1-enumerate.py [<repo-root>]
 Prints the enumeration and the counts the close report must use.
@@ -40,7 +44,7 @@ TWO = ('papers/paper-a/paper-a.md', 'papers/measure-note/measure-note.md')
 # and the divergence is recorded rather than silently reconciled -- an enumeration that quietly
 # renumbers is an enumeration whose input cannot be checked. measure-note.md did not move.
 DISPOSITION = {
-    ('papers/paper-a/paper-a.md', 502):  ('move-flagged', 502,  'ambiguous: "distribution of ground the task faces" (S5) vs "the ground the task faces" (S1)'),
+    ('papers/paper-a/paper-a.md', 502):  ('defer',        502,  'ambiguous, RULED defer: "distribution of ground the task faces" (S5) vs "the ground the task faces" (S1)'),
     ('papers/paper-a/paper-a.md', 672):  ('move',         672,  ''),
     ('papers/paper-a/paper-a.md', 1365): ('defer',        1376, 'generated: Appendix A, DDD-measure-01'),
     ('papers/paper-a/paper-a.md', 1371): ('defer',        1382, 'generated: Appendix A, DDD-measure-11'),
@@ -50,9 +54,9 @@ _MN = 'papers/measure-note/measure-note.md'
 for ln in (27, 41, 114, 129, 466, 493, 495, 601, 651, 713, 842, 899):
     DISPOSITION[(_MN, ln)] = ('move', ln, '')
 DISPOSITION[(_MN, 482)] = ('move', 482, 'elliptical: rewrite, not a token swap')
-DISPOSITION[(_MN, 22)] = ('move-flagged', 22, 'ambiguous: the "ground the task faces" pair')
-DISPOSITION[(_MN, 88)] = ('move-flagged', 88, 'ambiguous: the "ground the task faces" pair')
-DISPOSITION[(_MN, 464)] = ('move-flagged', 464, 'heading couples to upstream asset measure-nonuniform-ground.py')
+DISPOSITION[(_MN, 22)] = ('defer', 22, 'ambiguous, RULED defer: the "ground the task faces" set')
+DISPOSITION[(_MN, 88)] = ('defer', 88, 'ambiguous, RULED defer: the "ground the task faces" set')
+DISPOSITION[(_MN, 464)] = ('move-flagged', 464, 'UNRULED at Gate 1: heading couples to upstream asset measure-nonuniform-ground.py; re-raised at Gate 4')
 for ln in (138, 484, 879):
     DISPOSITION[(_MN, ln)] = ('defer', ln, 'quotes: DDD-measure-12 statement, verbatim')
 DISPOSITION[(_MN, 102)] = ('defer', 102, 'quotes: term:verdict definition, blockquoted')
