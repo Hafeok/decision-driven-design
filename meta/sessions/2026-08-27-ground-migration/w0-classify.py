@@ -20,7 +20,8 @@ APPLIED TO THE WORD, never the compound.
     population preds   (distribution over, evaluated over, per deployment)                   -> S5
 An occurrence that will not sit in exactly one sense is U, with the reason recorded, never a default.
 
-OUTPUT: w0-full.json, sense per row over all 2,845; w0-residual.json, the 1,022 rulings alone.
+OUTPUT: w0-full-v2.json, sense per row over all 2,845; w0-residual.json, W0's 1,022; w0bis-rulings.json,
+W0-bis's 456.
 
 Per-file rulings and their reasons are in rulings/r0NN.py, which this script merges. Nothing here
 re-derives a sense: the rulings ARE the classification, and this file only assembles and checks them.
@@ -30,9 +31,9 @@ import json, glob, importlib.util, collections, os, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 AUDIT = os.path.join(HERE, '..', '2026-08-24-ground-audit', 'classification.json')
 
-def load_rulings():
+def load_rulings(pattern='rulings/r0*.py'):
     out = {}
-    for f in sorted(glob.glob(os.path.join(HERE, 'rulings', 'r0*.py'))):
+    for f in sorted(glob.glob(os.path.join(HERE, *pattern.split('/')))):
         n = os.path.basename(f)[:-3]
         s = importlib.util.spec_from_file_location(n, f)
         m = importlib.util.module_from_spec(s); s.loader.exec_module(m)
@@ -44,13 +45,18 @@ def load_rulings():
 def main(src, outdir):
     rows = json.load(open(src))
     residual = {i for i, r in enumerate(rows) if r['rule'] == 'residual-no-rule-matched'}
-    R = load_rulings()
+    R = load_rulings('rulings/r0*.py')
     assert set(R) == residual, (
         f'rulings cover {len(R)} rows, residual is {len(residual)}; '
         f'unruled={sorted(residual - set(R))[:8]} over-ruled={sorted(set(R) - residual)[:8]}')
+    # W0-bis: the 427 prose-context rows plus the 29 anchored-class ordering corrections.
+    B = load_rulings('rulings-bis/b0*.py')
+    assert not (set(B) & residual), 'W0-bis must not overlap W0 — the residual was already read'
     full = {i: (R[i] if i in R else r['sense']) for i, r in enumerate(rows)}
+    full.update(B)
     json.dump({str(k): v for k, v in R.items()}, open(os.path.join(outdir, 'w0-residual.json'), 'w'))
-    json.dump({str(k): v for k, v in full.items()}, open(os.path.join(outdir, 'w0-full.json'), 'w'))
+    json.dump({str(k): v for k, v in B.items()}, open(os.path.join(outdir, 'w0bis-rulings.json'), 'w'))
+    json.dump({str(k): v for k, v in full.items()}, open(os.path.join(outdir, 'w0-full-v2.json'), 'w'))
     top = lambda s: s.split('-')[0]
     print(f'{len(full)} classified; 0 unassigned by construction (the assert above)')
     for k, v in sorted(collections.Counter(top(v) for v in full.values()).items()):

@@ -207,3 +207,50 @@ reused to name.**
 Nothing ruled so far moves: G1's residual work, both G2 sweeps, G3 Part 1 and SR-1/SR-2 are all
 independent of these rows. **Gate 4 is not**, because a plan's file lists and wave sizes are computed
 off the classification. Recommended: **run W0-bis (427 rows, 42% of W0) before the plan.**
+
+---
+
+## From W0-bis (reported 2026-08-27, pending ruling) — GATE 3 re-opened
+
+### C18 — the classification is whole, and C17's estimate was wrong
+
+**Reported at GATE 3: 29% correct. Measured over all 427: 71.7%.** The sample over-stated by 2.5×,
+because it drew a tenth of itself from two rules that are 22 of 427 rows, and because I mis-ruled four
+`ground-provenance` rows in it. **146 rows changed sense** — the ruling holds, the number did not.
+
+**Two rules carry 49 of the 121 prose errors from 54 rows**: `delivered` (7% correct) and
+`rule-standard-context` (15%). The two largest rules are 91% and 84%. **Plan on the rules, not the
+class.**
+
+### C19 — S3 moved a second time, and back. GATE 1's +26% was inflated; it is **+11%**
+
+`delivered` labelled thirteen identifiers and the area name S3; `reading-ground` labelled sixteen S1
+occurrences S3. **SR-2 is untouched** — it was ruled on canon's authority, not a count — and
+`apparatus/` remains the largest single contributor of added S3, so **C1 stands at the corrected
+size**.
+
+### C20 — **S1 is the largest movement: +79 (+16%), and canon is now S1-led (182 S1 : 154 S3)**
+
+Unpredicted by the audit or by GATE 1. **It strengthens SR-1**: the sense that keeps the word is
+canon's largest, which the audit ruled on authority against the counts of the day. The counts have
+come to it. **The wave table should be redrawn on this**, not on GATE 1's figures.
+
+### C21 — canon's S4 is exactly **zero**, mechanically
+
+Independent of GATE 3 Part 1's reading, and agreeing with it. **Four senses plus attributes**, and the
+sense that dissolves has no canon occurrences to migrate at all.
+
+### C22 — the true identifier count is **142**, not 116
+
+`ddd-ground-id` sits last in an ordered first-match-wins table, so 15 identifier rows were stolen by
+earlier rules and 13 non-identifier rows were stolen by it. Both sets enumerated mechanically; all
+142 now classify U. **The unmigratable-at-any-price column grows by 26.**
+
+### C23 — the method rule, for the manifest
+
+**A classification rule whose match window can cross a clause boundary is not an anchored rule, and
+the two classes cannot share an acceptance standard.** `[^.]` does not stop at a sentence boundary —
+not at a comma, a semicolon, a dash, a list item, a `§`-ref or a version number — so a 50–70
+character window routinely spans two clauses. Ordering is a separate third mechanism. Corollaries:
+report per-rule precision and never one figure for a table; put identifier and immutability rules
+first; a windowed rule earns a sample of its own.
