@@ -7,8 +7,13 @@ construction, and corrects drifted rows in the same pass that adds new ones. The
 result is then re-read against the graph by a separate script, `check-appendix.py`, so the
 check is independent of the generator that produced it.
 
-Usage:  gen-appendix.py <manuscript.md> <upstream-repo> <ref>
+Usage:  gen-appendix.py <manuscript.md> <upstream-repo> <ref> [<appendix-home.md>]
 Rewrites everything from the `## Appendix A` heading to end of file.
+
+Citations are always read from <manuscript.md>. When <appendix-home.md> is given, the appendix
+is rendered THERE and the manuscript is not written at all -- which is how the supplement split
+works: the argument stays in the paper, the generated graph tables live beside it, and the two
+files cannot drift because one is still generated from the other's citations.
 
 Defect history, kept with the instrument:
 
@@ -17,6 +22,14 @@ Defect history, kept with the instrument:
     convention that says "regenerate wholesale" must survive being run twice, and this one
     did not. Fixed by stripping trailing rules from the body first; idempotence is now
     checked by running three times and comparing bytes.
+
+  * The appendix's home became a second file at the supplement split, and the first attempt
+    passed the supplement as the manuscript. Citations are then read from the supplement, which
+    cites nothing, so the generator rendered an EMPTY appendix and exited 0. A generator whose
+    correct output for a correct input is indistinguishable from its output for the wrong input
+    is not a generator you can run unattended. The two roles are now separate arguments and the
+    citation source is never the render target unless they are the same file by intent; a render
+    that finds zero cited ids exits non-zero rather than writing an empty table.
 
   * The claims table rendered `id | status | statement` and no kind, for five minor versions.
     `kind` has been populated on every claim since format 1, so this was never a schema gap --
@@ -104,13 +117,16 @@ def canonical(term):
     return cell(' '.join(lines))
 
 
-def main(path, repo, ref):
+def main(path, repo, ref, home=None):
     claims, decisions, terms = load(repo, ref)
     text = open(path).read()
     body = text.split(HEADING)[0].split('## Appendix A')[0]
 
     cited_c = sorted(set(re.findall(r'DDD-[a-z]+-\d+', body)))
     cited_t = sorted(set(re.findall(r'term:[a-z-]+', body)))
+    if not cited_c and not cited_t:
+        sys.exit(f'{path} cites no graph ids -- refusing to render an empty appendix. '
+                 'Citations are read from the manuscript; the appendix home is the 4th argument.')
     miss = [c for c in cited_c if c not in claims and c not in decisions]
     miss += [t for t in cited_t if t not in terms]
     if miss:
@@ -154,16 +170,23 @@ def main(path, repo, ref):
     # The body already ends with the rule that preceded the appendix. Appending another would
     # make the generator non-idempotent -- a second run would add a second rule, and a convention
     # that says "regenerate wholesale" must survive being run twice.
-    body = body.rstrip('\n')
-    while body.endswith('---'):
-        body = body[:-3].rstrip('\n')
-    open(path, 'w').write(body + '\n\n---\n\n' + '\n'.join(out))
+    if home is None or home == path:
+        target, keep = path, body
+    else:
+        # Rendering into a separate home: the manuscript is not written at all, and whatever the
+        # home carries before the heading -- its own front matter -- is preserved verbatim.
+        target = home
+        keep = open(home).read().split(HEADING)[0].split('## Appendix A')[0]
+    keep = keep.rstrip('\n')
+    while keep.endswith('---'):
+        keep = keep[:-3].rstrip('\n')
+    open(target, 'w').write(keep + '\n\n---\n\n' + '\n'.join(out))
     print(f'Appendix A generated: {len([c for c in cited_c if c in claims])} claims, '
           f'{len([c for c in cited_c if c in decisions])} decisions, {len(cited_t)} terms, '
           f'{len(hset)} hypothesis-set rows')
 
 
 if __name__ == '__main__':
-    if len(sys.argv) != 4:
+    if not 4 <= len(sys.argv) <= 5:
         sys.exit(__doc__)
     main(*sys.argv[1:])

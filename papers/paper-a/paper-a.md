@@ -4,13 +4,13 @@
 
 *Emil — Context&. Statement paper.*
 
-*This paper is a projection of `actor-indexed-determination` at `v5.9.0`. Every bracketed claim,
-decision and term identifier resolves against that one ref, and Appendix A reproduces each of them
-from it, so the paper can be checked without the repository. No identifier here resolves against the
-downstream repository, so no downstream ref is pinned. The companion measure note —
-`papers/measure-note/measure-note.md` in `decision-driven-design` — is cited by path at commit
-`aa7e135`, which carries its discharge section; the note is absent from `v0.4.0` and from every
-earlier downstream tag, so it resolves at that commit rather than at a tag.*
+*This paper is a projection of the `actor-indexed-determination` claim graph at `v5.12.0`. Every
+bracketed identifier resolves against that one ref, and the supplement reproduces each cited node
+word-for-word from it, so the paper can be checked without the repository.*
+
+*The supplement — `paper-a-supplement.md`, beside this file — carries the reproduced nodes, the
+projection's mechanics and the reproduction instructions. It is not required to follow the
+argument.*
 
 ---
 
@@ -36,8 +36,10 @@ never unmet, only ungoverned**; and discharge is act-indexed, so governance neve
 demand is supplied, only by what. On the region where the acceptance predicate closes, demand is
 identified with the entropy of the verdict, and on that identification conservation is the chain
 rule of entropy. The identification is a modelling claim and it is unproven; the chain rule is
-Shannon's and is certain and empty on its own. Off the closing region the measure does not exist
-and the governance question still does.
+Shannon's and is certain and empty on its own. **The construction has three conditions, not one** —
+a verdict function must exist, the evaluation must be available to the arrangement, and the
+deployment distribution must be estimable — and closure governs only the second. Where the
+construction does not apply, the governance question still does.
 
 **What is claimed is a synthesis, not a discovery.** That consequential work should be analysed at
 the level of a sociotechnical arrangement rather than an isolated actor is not this framework's
@@ -52,19 +54,27 @@ what is merely proposed. No empirical result is claimed, and none is reported.
 ## Note on claim status
 
 This paper is a **projection**. Every load-bearing statement below either cites a node in the
-framework's claim graph or is marked as the paper's own analysis. The graph's status vocabulary is
-used throughout and is not this paper's to redefine:
+framework's claim graph or is marked as the paper's own analysis.
 
-- **settled** / **established** — argued and unchallenged in the graph.
-- **reported** — exercised by a reproducing computation.
-- **projected** — proposed with a declared falsifier, not yet met.
-- **draft** — filed, not yet ratified.
-- **retired** — superseded, retained with the correction that killed it.
+**What the status labels do and do not mean.** They record how far a proposition has been argued
+**inside this framework**, and nothing else. `settled` and `established` mean argued and
+unchallenged here — **not empirically confirmed, and not externally validated**. `reported` means a
+computation runs and reproduces, not that the world was consulted. `projected` means proposed with a
+declared falsifier that has not been met. `draft` means filed and not yet ratified. `retired` means
+superseded and kept with the correction that killed it — and this paper carries three of those, two
+of them killed by the review it answers.
 
-The paper's primary claim is `projected` [DDD-frame-01]. So is most of what follows. Where a
-statement is the paper's own analysis rather than the graph's, it is marked **(analysis)** and
-carries no claim status at all, because it is not a claim. Appendix A reproduces every cited node
-word-for-word from the graph, with its status, so the paper can be checked without it.
+The paper's primary claim is `projected` [DDD-frame-01, projected]. So is most of what follows.
+Where a statement is the paper's own analysis rather than the graph's, it is marked **(analysis)**
+and carries no status at all, because it is not a claim — which does not make it uncontestable, only
+unattributed to the graph.
+
+An external review found this vocabulary being read as epistemic warrant when it encodes internal
+maturity. **That reading is wrong and the paper's earlier phrasing invited it.** The supplement
+reproduces every cited node with its status and its kind, so a reader can check the pairing rather
+than take this paragraph's word for it: every `established` claim in this graph is `formal`, so what
+is settled here is arithmetic, and the modelling claims that give the arithmetic its meaning are all
+`projected`.
 
 ---
 
@@ -115,8 +125,10 @@ trusted, who answers, and which residual risks stay accepted — or escape.
 The paper claims a framework and a vocabulary, together with a set of graded predictions that are
 not yet tested. It does not claim an empirical result. It does not claim a boundary between human
 and computational work. It does not claim that determination demand is a measured invariant in
-general — only on the region where the acceptance predicate closes, where the measure exists and
-the conservation statement is arithmetic (§4.4).
+general — only where the verdict-entropy construction is available to the arrangement, which
+requires the acceptance predicate to close **and** the task to supply a verdict function **and** the
+deployment distribution to be estimable; on that region, and given the identification, the
+conservation statement is arithmetic (§4.4).
 
 **And it does not claim the arrangement.** An earlier version of this paper was titled *The Missing
 Parameter*, which asserts absence from prior work. The absence does not hold. Analysing
@@ -263,11 +275,9 @@ material that would settle it is unfiled, and this paper does not anticipate it.
 provenance is named here and its mechanism is stated as pending that filing, cited as an open
 question rather than smuggled in early.
 
-*This five-way partition is not canon. The framework has ruled it ineligible for minting rather than
-merely deferred — a mint would fix a partition that the open trust question may restructure —
-so it is carried here as this paper's analysis, marked non-canon at the point of use, with the
-institutional slot's mechanism flagged as pending on that same question [DDD-dec-26]. This paper
-flags the gap and files nothing.*
+*This five-way partition is **not canon**. It is this paper's analysis, marked non-canon at the point
+of use, and §8.1 shows a case it does not adjudicate. The framework's reason for not minting it is
+recorded in the supplement.*
 
 ### 2.5 The arrangement, not the isolated actor
 
@@ -293,12 +303,11 @@ How does an arrangement fix behaviour in advance? The framework's answer is thre
 levels compose.
 
 > **Behavioural commitments attach at three levels — outcome, policy, principal — which compose and
-> are not actor species; residual discretion is the outcome-relevant variation that remains after
-> the arrangement's declared commitments are applied.** [DDD-frame-02, projected]
+> are not actor species; residual discretion is the outcome-relevant variation those commitments
+> leave open at the act, held at fixed ground.** [DDD-frame-02, projected]
 
-Two terms name the halves of that claim. Both were minted only when a downstream projection needed
-them as citable nodes, and **both carry `draft` status** — they are filed and not yet ratified, and
-this paper shows the status rather than quietly promoting it [DDD-dec-26].
+Two terms name the halves of that claim, and **both carry `draft` status** — filed, not yet
+ratified. The paper shows that rather than quietly promoting it.
 
 ### 3.1 The three levels
 
@@ -328,19 +337,39 @@ the error the level vocabulary exists to prevent.
 
 ### 3.2 Residual discretion
 
-> **Residual discretion** is the outcome-relevant variation remaining at the act after the
-> arrangement's declared commitments are applied. It is not randomness: a deterministic arrangement
-> can carry substantial discretion across unfamiliar cases, a randomised one can be tightly
+> **Residual discretion** is the outcome-relevant variation the arrangement's commitments
+> leave open at the act, **held at fixed ground**: the alternatives still admissible once
+> the standing configuration and the ground at the act are both given. It is not variation
+> across ground — a cryptographic hash varies enormously with its input and exercises no
+> discretion, because at each input the commitments fix the output exactly. It is not an
+> observer's inability to predict a fixed policy, which is a fact about the observer and
+> not about the arrangement. And it is not randomness: a deterministic arrangement can
+> carry substantial discretion across unfamiliar cases, a randomised one can be tightly
 > committed, and a zero-variance arrangement can be consistently wrong.
 > [term:residual-discretion, **draft**]
 
-Those three clauses each block a different mistake. Determinism is not commitment: a program that
-always does the same wrong thing on an unfamiliar input has enormous outcome-relevant variation
-across the input space, all of it unresolved by any declared commitment. Randomisation is not
-discretion: a sampler drawing from a tightly bounded distribution the arrangement declared and
-accepted has been committed at policy level. And low variance is not correctness: an arrangement
-can be consistent and consistently unacceptable, which is why variance is never the measure of
-commitment.
+**The held-at-fixed-ground clause is a repair, and the earlier version of this paper carried the
+defect it repairs.** An external review found the term conflating four phenomena: outcome variation
+across ground, epistemic uncertainty about a fixed policy, stochasticity, and genuine unresolved or
+delegated selection. Its decisive example is the one canon now carries — **a cryptographic hash
+varies enormously across inputs and exercises no discretion whatever**, because at each input the
+commitments fix the output exactly. Under the earlier wording, "the variation remaining after the
+declared commitments are applied", the hash came out carrying enormous discretion, which is plainly
+wrong. Quantifying at *fixed ground* is what excludes it.
+
+Four clauses now block four different mistakes, and only the last was there before. **Variation
+across ground is not discretion** — the hash. **Unpredictability is not discretion**: an observer
+who cannot anticipate a deterministic policy has learned something about the observer, and the
+arrangement's commitments are what they were. **Randomisation is not discretion**: a sampler drawing
+from a bounded distribution the arrangement declared and accepted has been committed at policy
+level. And **low variance is not correctness**: an arrangement can be consistent and consistently
+unacceptable, which is why variance is never the measure of commitment.
+
+**(analysis)** What remains after the separation is narrower and more useful: discretion is the set
+of alternatives still admissible when both the standing configuration and this act's ground are
+given. That is the quantity §4.1's fixing test reads — an alternative with no residual discretion at
+fixed ground is *predetermined* [DDD-frame-17, projected] — so the two repairs the review forced
+turn out to be one repair, made in two nodes.
 
 ### 3.3 Boundary cases
 
@@ -378,21 +407,58 @@ That separation is the section's spine. Section 4.1 takes the source side, §4.2
 §4.3 what happens when neither is adequate, and §4.4 what is conserved across every rearrangement
 of the two.
 
-### 4.1 Source of resolution: the four discharge modes
+### 4.1 Source of resolution: the three discharge values
 
 A completed act's determination demand is not sometimes supplied and sometimes not. It is always
 supplied, and the only question is by what.
 
-> **At every completed act in a task's scope, the act's determination demand is discharged — by a
-> filed decision, an actor's judgment, an arrangement default, or an uncontrolled draw; escape is a
-> supply mode of discharge, not an absence of supply — demand is never unmet, only ungoverned.**
-> [DDD-frame-15, projected]
+> **At every completed act in a task's scope, each outcome-relevant alternative is discharged in
+> exactly one of three ways: predetermined — the arrangement's standing configuration together with
+> the ground at the act determines the resolution; exercised — it does not, and something within
+> the arrangement's control determines it at the act; or drawn — it does not, and what determines
+> it lies outside the arrangement's control. Demand is never unmet, only ungoverned.**
+> [DDD-frame-17, projected]
 
-The four modes classify **the producer of the resolution**, not its governance status. A *filed
-decision* is variation authored in advance and delivered at the act. *Judgment* is variation
-produced at the act by an actor reading ground. A *default* is variation carried by the
-arrangement's standing configuration without a fresh resolution — and a default may be declared and
-governed, or incidental and not. A *draw* is variation living in nothing the arrangement controls.
+**This claim is three days younger than the objection that produced it, and the paper says so.**
+An earlier version of this section carried a four-mode enumeration — filed decision, judgment,
+arrangement default, uncontrolled draw — which an external review showed does not partition: a
+declared default is both a filed decision and an arrangement default, a thermostat satisfies the
+judgment gloss under a rule canon times as encoded, and trained inference is policy commitment,
+judgment and standing encoded supply at once. The enumeration was retired in canon rather than
+defended [DDD-frame-15, retired; superseded by DDD-frame-17]. The paper carries the successor.
+
+The three values turn on **two dichotomies and nothing else**. First: do the arrangement's standing
+configuration and the ground at the act, together, fix the resolution? If yes it is
+**predetermined**. If no, second: is what fixes it inside the arrangement's control? Inside is
+**exercised**; outside is **drawn**.
+
+Three things follow, and each repairs one of the overlaps.
+
+**The unit is the alternative, not the act** [DDD-frame-17, region]. One act may carry several
+outcome-relevant alternatives that discharge differently — a timeout carries a when-to-stop
+alternative and a what-to-return alternative, and they need not land the same way. The retired
+claim quantified over acts in its statement and over alternatives in its own test field, which are
+different claims; fixing the unit dissolves several reported overlaps before any of the rest is
+needed.
+
+**Governance status is not an axis of this claim** [DDD-frame-17, region]. Whether a resolution is
+declared, governed, filed or escaped is [term:store]'s question and is answered there. The three
+values turn on determination and control alone, never on declaredness — which is what makes the
+seam below an exclusion the claim's own shape enforces rather than a paragraph a reader may skip.
+The declared-default overlap was exactly a declaredness test smuggled into a locus partition.
+
+**No value turns on actorhood** [DDD-frame-17, region]. The fixing test asks whether standing
+configuration and ground jointly determine the resolution, which is answerable without deciding
+whether the producer is an actor. The retired claim's *judgment* mode did turn on actorhood, and
+thereby inherited the open circularity in the actor admission test (§2.1, and the review is right
+that it is open). This claim does not inherit it.
+
+**(analysis)** The value is a property of the arrangement at the act, not of the carrier in the
+abstract, and the same weights can take different values: a carrier decoding greedily is
+predetermined, and the same model sampled at temperature is exercised — or drawn, where the
+arrangement does not control the sampling source. An arrangement that changes its decode changes
+the value without changing anything it bought. Coding practice must therefore read the deployment
+and never the artefact, which is a real burden on §9's Study 0 and is not a small one.
 
 Discharge is also indexed to the act, on both sides of the supply split:
 
@@ -414,21 +480,33 @@ rather than left to be inferred.
 | | The store partition | The discharge partition |
 |---|---|---|
 | Asks | what **governance supplied** | what **the world produced** |
-| Values | `{rule, check, actor, nothing}` [term:store] | filed decision · judgment · default · draw [DDD-frame-15] |
+| Values | `{rule, check, actor, nothing}` [term:store] | predetermined · exercised · drawn [DDD-frame-17] |
 | Escape is | **nothing** — "there is no fifth source" | **a supply mode** — the uncontrolled draw |
 
-Both are correct, and neither reduces to the other [DDD-frame-15, region]. In the store partition
+Both are correct, and neither reduces to the other [DDD-frame-17, region]. In the store partition
 escape is nothing, because the question is what governance supplied and the answer is that nothing
-did. In the discharge partition the same act's demand is met by an uncontrolled draw, because the
-question is what the world produced, and **the world never produces nothing**. A reader who reads
-one partition's "nothing" into the other's four modes will conclude the framework contradicts
-itself; it does not, and the two questions are simply distinct.
+did. In the discharge partition the same alternative is *drawn*, because the question is what the
+world produced, and **the world never produces nothing**. A reader who reads one partition's
+"nothing" into the other's three values will conclude the framework contradicts itself; it does
+not, and the two questions are simply distinct.
 
-*This paper's §4.1 replaces the source enumeration its own foundation document used —* prior
-commitment, runtime actor, environmental-or-default, failure-or-non-resolution. That enumeration
-mixed declared defaults with uncontrolled dynamics in its third source, and its fourth was not a
-discharge mode at all, since even a failed arrangement's act lands an outcome in the world register
-[DDD-frame-15, notes]. Canon governs, and the paper carries canon's form.
+**This guard survived the retirement, and that is worth recording.** The seam was ratified with the
+four modes and killed with none of them: it separates governance-supply from discharge, which is
+orthogonal to the overlaps that failed, and it is carried into the successor's region verbatim
+[DDD-frame-17, region]. It is also the one part of that section an external reader met and still
+found confusing, which is a finding about exposition rather than about the guard.
+
+*Two enumerations have now been retired at this seam, and both for the same reason.* The
+foundation document's — prior commitment, runtime actor, environmental-or-default,
+failure-or-non-resolution — mixed declared defaults with uncontrolled dynamics in its third source,
+and its fourth was not a discharge mode at all, since even a failed arrangement's act lands an
+outcome in the world register [DDD-frame-15, notes]. Its replacement, the four modes, mixed causal
+producer with provenance, timing, governance status and control. **A list of sources drawn from
+several dimensions at once will not partition**, and the successor's answer is to stop enumerating
+sources and dichotomise instead: determined or not, and if not, controlled or not. Whether *that*
+partitions is `projected` and has a falsifier — an alternative for which there is no fact of the
+matter whether standing configuration and ground determine the resolution [DDD-frame-17,
+falsifier]. Canon governs, and the paper carries canon's form.
 
 ### 4.2 Assurance mechanism
 
@@ -472,7 +550,7 @@ side.
 It follows that **escape is tested on the arrangement, not on the outcome**. Ask whether any
 adequate source-and-assurance combination governed the act. If none did, the act escaped whether or
 not what landed happened to be acceptable, because what landed was drawn from a distribution the
-arrangement did not control [DDD-frame-15, derivation].
+arrangement did not control [DDD-frame-17, projected].
 
 #### Filing is not delivering
 
@@ -548,11 +626,33 @@ for two decompositions of one task: totals of 25.493 bits either way, split 20.5
 decomposition and 11.020 / 14.474 by the other (measure note §4; `core/09` §3). Demand is conserved
 across the two, not escaped by either.
 
-**The bound, stated and not implied.** The measure exists **if and only if** the acceptance
-predicate operationally closes, and `H(V)` is undefined exactly where the framework locates a
-non-zero floor [DDD-measure-06, **established**]. Off the closing region there is no verdict
-function to have entropy about, and conservation is what it was before the measure existed: an
-accounting discipline, a principle rather than a measured invariant.
+**The bound, restated after a correction, and it was the paper's largest overstatement.** An earlier
+version of this section said the measure exists **if and only if** the acceptance predicate
+operationally closes, citing a claim then carried at `established`. **That biconditional is false in
+both directions, the node asserting it is retired, and the correction came from outside**
+[DDD-measure-06, retired].
+
+Three conditions were collapsed under one, and they fail differently [DDD-measure-16, established;
+DDD-measure-17, projected].
+
+| Condition | What it asks | What closure does about it |
+|---|---|---|
+| **Existence** | does the task class supply a unique correct output per input point? | **nothing.** A relation task can have a fully decidable acceptance predicate and admit several acceptable outputs, and no output-valued `V` exists until the task supplies a tie-breaker, a canonical form, or a declared selection distribution |
+| **Availability** | can *this arrangement* run the evaluation within its declared bounds? | **this is what closure is.** It is a property of the arrangement, not of the task, and the same nominal task can be inside the construction's domain for one arrangement and outside it for another |
+| **Estimability** | is the deployment distribution known well enough to compute the quantity? | **nothing.** Where it is unknown, unstable, non-stationary or partly observable, the demand is well defined and cannot be computed |
+
+So closure governs **availability** and neither of the other two [DDD-measure-16, **established**].
+Off the closing region this construction does not apply — which is not the same as measurement
+failing there, and the surviving claim is careful to say so: where evaluators disagree there are
+distributions over their judgments, and some of those are informative [DDD-measure-16, region].
+
+**(analysis)** The provenance of this repair is worth stating, because the paper's credibility rests
+more on it than on the repair. The companion measure note's own revision had already conceded both
+failure directions in its scope condition, and canon was never updated to match — so this projection
+was *stronger than the note that shares its graph*, and stayed so through a merge. An external
+review found it. The node then retired at `v5.10`, and this section is the projection catching up.
+The instrument that should have caught it did not: `DDD-measure-06` was not pinned, so no warning
+fired when its status moved (§ the reproduction note).
 
 **Governance outruns measurement.** The governance question — is every decision governing the act
 in a declared store, none escaped? — is well-formed on the total domain, including open predicates
@@ -626,15 +726,21 @@ assembled in one place. **Three rungs, weakest first**, and all three are operat
 | **Verification-closed** | Adequacy can be *evaluated* within declared resource, latency and confidence bounds. | [term:closure] |
 | **Constructively closed** | The verdict is *computed by rule* from ground available at the act. | measure note §8 |
 
-**Open.** No procedure decides acceptability, so there is no verdict function to have entropy about
-and the measure does not exist [DDD-measure-06, **established**]. Governance is untouched by this:
+**Open.** No procedure decides acceptability over accessible ground within declared bounds, so the
+verdict-entropy construction is not available to this arrangement [DDD-measure-16, established].
+Two things it does *not* mean, and the retired predecessor blurred both: it does not mean no verdict
+function exists, and it does not mean nothing about the situation is measurable
+[DDD-measure-16, region]. Governance is untouched by either:
 the question of whether every decision governing the act sits in a declared store, none escaped, is
 well-formed on the total domain [DDD-frame-11]. The measure's silence here is a fact about the
 measure.
 
 **Verification-closed.** The rung canon means by *closure*: the relevant ground is observable and
 adequacy can be evaluated within declared bounds [term:closure]. Two things become available at
-once. The measure exists, so specification demand is `H(V)` [DDD-measure-01]. And producer identity
+once. The verdict-entropy construction becomes available to the arrangement — **available, which is
+not the same as defined or computable**, and the other two conditions still have to hold — so where
+they do, specification demand is `H(V)` [DDD-measure-01, projected; DDD-measure-16, established].
+And producer identity
 stops being epistemically necessary — for the checked property, and nothing more [DDD-frame-05].
 
 **Constructively closed.** A predicate can be more than checkable. Call it **constructively closed**
@@ -683,13 +789,11 @@ no generation cost to bound, and predicates whose verdicts are merely checkable 
 scoped survivor of the retirement — that producer identity is not necessary *for the checked
 property and nothing more* — holds either way [DDD-frame-05].
 
-*Canon's closure vocabulary does not carry the constructive/verification distinction. `term:closure`
-is stated in evaluative terms alone, no claim node names the stronger rung, and the word*
-constructive *occurs nowhere in the principle repository's core documents. The rung above is stated
-register-native, as this paper's analysis and not as canon; a dedicated node is pending filing on
-the framework's open-questions wave, and until it lands the citation basis is closure, the
-separation of closure from generation cost, and the measure's silence on search, as cited above.
-This paper flags the gap and files nothing.*
+*Canon's closure vocabulary does not carry the constructive/verification distinction: `term:closure`
+is stated in evaluative terms alone and no claim node names the stronger rung. **The constructively
+closed rung is therefore this paper's own, not the graph's**, and it is stated register-native. Its
+basis is closure, the separation of closure from generation cost, and the measure's silence on
+search, all cited above. The filing status is recorded in the supplement.*
 
 ### 5.3 Closure is not generation cost
 
@@ -704,7 +808,7 @@ space. None of these contradicts closure. What they refute is the inference *fro
 cheap adequacy, and that inference is the one the framework retired a claim over (§10).
 
 The measure register says the same thing from its own side: **the measure prices the verdict, not
-the search.** `H(verdict)` is a property of the verdict function and the ground distribution, and
+the search.** `H(verdict)` is a property of the verdict function and the deployment distribution, and
 two tasks with identical verdict entropy can differ without bound in what it costs to compute a
 correct answer [DDD-measure-11, reported].
 
@@ -789,16 +893,21 @@ Polanyi's and Collins's, and this paper cites them for the phenomenon only, taki
 either (Polanyi 1966; Collins 2010). What is the framework's, and not theirs, is the residue's
 *location*: in the checkability of the acceptance predicate, arrangement-indexed.
 
-The measure's boundary coincides with the floor's location: **the measure exists if and only if the
-acceptance predicate operationally closes, and `H(V)` is undefined exactly where the framework
-locates non-zero floor** [DDD-measure-06, **established**].
+The construction's domain and the floor's location coincide, and canon now carries that coincidence
+as its own claim rather than folding it into the boundary:
 
-**That coincidence is worth noticing and it is not evidence.** The two arguments share a premise —
-the closure of the acceptance predicate — so their agreement about where the line falls is close to
-definitional on the measure's side. What is not definitional is that the line was drawn twice, from
-different materials, with neither drawing fitted to the other. That makes the boundary principled
-rather than arbitrary. It does not make the identification true, and this paper does not argue that
-it does (measure note §8.2).
+> **The verdict-entropy construction's domain and the region where the framework's floor result
+> locates non-zero floor coincide, and the coincidence is principled rather than evidential: the two
+> arguments share the closure of the acceptance predicate as a premise, so their agreement about
+> where the line falls is close to definitional on the measure's side and is not evidence that the
+> identification is correct.** [DDD-measure-17, projected]
+
+**That the claim is `projected` rather than `established` is the point of it.** Its predecessor
+carried this content at `established`, and the content includes a judgment about what the agreement
+is *worth* — which is an interpretive claim about two arguments, not arithmetic. What is not
+definitional is that the line was drawn twice, from different materials, with neither drawing fitted
+to the other, and that makes the boundary principled rather than arbitrary. It does not make the
+identification true, and this paper does not argue that it does (measure note §8.2).
 
 ### 6.2 The capacity mechanism, and its scope
 
@@ -982,7 +1091,7 @@ nothing about the size of that residual [term:residual-discretion].
 
 The last two rows are the section's point. Both acts complete and both land outcomes in the world;
 one is governed by an arrangement default nobody declared, and one is not governed at all. Under
-[DDD-frame-15] both are discharged — demand is never unmet, only ungoverned — and under [term:store]
+[DDD-frame-17] both are discharged — demand is never unmet, only ungoverned — and under [term:store]
 the last row's source is *nothing*, which is an escape. The second row carries the qualification: if
 the model's context does not deliver that filed decision at the act, no source supplied it, and it
 escapes too [DDD-delivery-02].
@@ -995,7 +1104,7 @@ substantially weaker statement than conformance to intent. Canonical-form correc
 **constructively closed** for the countries whose rules are encoded — the correct output is
 computed by rule from institutional ground, and there is no search to price (§5.2). Behaviour on an
 uncovered country is **open**: no procedure over accessible ground decides acceptability, and there
-is nothing for `H(V)` to be about [DDD-measure-06].
+the verdict-entropy construction is not available to this arrangement [DDD-measure-16, established].
 
 Closure varies *within a single act*, per capability, which is precisely why required actor class is
 computed per capability rather than per act [DDD-cost-12].
@@ -1219,8 +1328,17 @@ arithmetically valid split with no engineering meaning, and the condition is wha
 *The escape mechanism's scope.* Overflow ∩ open is sufficient for escape and never necessary for
 it (§6.2) [DDD-dec-15].
 
-*The measure's silence.* Off the closing region the measure does not exist, and its absence licenses
-no claim about governance, which is well-formed there [DDD-frame-11].
+*The measure's three conditions.* Closure governs the construction's **availability** to an
+arrangement and neither the verdict function's existence nor the deployment distribution's
+estimability [DDD-measure-16, established]. Where the construction does not apply its silence
+licenses no claim about governance, which is well-formed there [DDD-frame-11], and none about
+measurement in general [DDD-measure-16, region].
+
+*A retirement this paper carried into print before it was caught.* The predecessor of that claim
+asserted a biconditional in both directions at `established`, this paper projected it faithfully,
+and the companion measure note had already conceded both failure directions without canon being
+updated to match (§4.4). The projection was stronger than the note sharing its graph. **An external
+review found it; no instrument in this repository did.**
 
 ### 10.3 Boundary cases
 
@@ -1498,12 +1616,13 @@ adequate commitment, check or accountable authorisation governs [term:escape].
 
 The framework's compact statement of what makes that possible is the conjunction of two claims:
 
-> **… demand is never unmet, only ungoverned.** [DDD-frame-15 — closing clause]
+> **… demand is never unmet, only ungoverned.** [DDD-frame-17 — closing clause]
 
-That sentence is canon's own, and the compact statement it belongs to is the **conjunction** of two
-claims rather than either alone: every completed act's demand is discharged by one of four modes
-[DDD-frame-15], and discharge is act-indexed, so governance never chooses whether demand is
-supplied, only by what [DDD-frame-16].
+That sentence is canon's own, and it survived the retirement of the claim it was first filed in
+(§4.1): the four-mode enumeration died and the compact form did not. The statement it belongs to is
+the **conjunction** of two claims rather than either alone: every outcome-relevant alternative at a
+completed act is discharged in one of three ways [DDD-frame-17], and discharge is act-indexed, so
+governance never chooses whether demand is supplied, only by what [DDD-frame-16].
 
 And its most load-bearing proposal is relational — a proposal, with a falsifier, and without
 evidence:
@@ -1513,9 +1632,10 @@ evidence:
 > [DDD-floor-02 — opening clause; the claim continues, quoted in full at §6]
 
 **What is established, and what is projected.** Established in the graph: that closure is distinct
-from generation cost; that conservation on the closing region is the chain rule; that the measure
-exists exactly where the acceptance predicate closes; that the parts of a decomposition become
-trivial only when the decomposition already encodes the verdict. Projected, with falsifiers and
+from generation cost; that conservation on the region where the construction applies is the chain
+rule; that the construction's availability to an arrangement is what closure governs, and not the
+verdict function's existence or the distribution's estimability; that the parts of a decomposition
+become trivial only when the decomposition already encodes the verdict. Projected, with falsifiers and
 without evidence: the index itself, the commitment levels, the discharge chain, the relational
 floor, the accountability relation, and every one of the five hypotheses. **Every claim in the first
 list is `formal`** — arithmetic, or a derivation from it — so what is settled here is arithmetic, and
@@ -1539,22 +1659,6 @@ resolved, what they are resolved against, how they are checked, who answers for 
 have been left to accident. **Whether the vocabulary offered here does that better than the
 vocabularies it was assembled from is the open question**, and §11 names the ones it was assembled
 from.
-
----
-
-## Reproduction
-
-**This paper mints no figures and no assets.** Every number it states was produced by an existing
-script in the principle repository and is cited to the projection that works it: the
-date-validation totals of §4.4 and §8.6 come from `core/assets/measure-toy.py`, worked in the
-companion measure note's §4 and in `core/09` §3. That script was re-run fresh while this paper was
-drafted and reproduces the stated values.
-
-Every block quotation attributed to a graph node was verified verbatim against the graph at the
-pinned ref by `check-quotations.py`, alongside this file. Appendix A was generated from the graph by
-`gen-appendix.py` and re-read against it by `check-appendix.py`. All three scripts live beside this
-manuscript and take the ref as an argument, so the checks are reproducible against any ref rather
-than against the one that happened to be current.
 
 ---
 
@@ -1661,133 +1765,3 @@ Engineering*. CRC Press, Boca Raton. ISBN 0-8493-3933-2, doi:10.1201/97814200056
 volume the external review's own locator resolves to**, while the review's prose concerns the 2005
 *Foundations* volume above. *(Locator verified against Crossref and Open Library; the volume itself
 was not obtained.)*
-
----
-
-## Appendix A. Cited claims, decisions and terms
-
-The paper cites nodes in the framework's claim graph. Statements below are reproduced
-word-for-word from the graph at the ref pinned in the front matter, so the paper can be checked
-without it. **Kind** and **status** are the graph's own fields, and they answer different questions.
-*Kind* is what sort of claim it is: *formal* is arithmetic or a derivation, *empirical* rests on
-observation, *conceptual* fixes or uses the framework's vocabulary, *normative* says what ought to
-be done. *Status* is how far it has been argued: *settled* and *established* are argued and
-unchallenged **within this framework**, *reported* is exercised by a reproducing computation,
-*projected* is proposed with a declared falsifier and not yet met, *draft* is filed and not yet
-ratified, *retired* is superseded and kept with the correction that killed it.
-
-**Neither field claims external validation, and the two must be read together.** *Established*
-means internally argued and unchallenged, not empirically confirmed; *reported* means a computation
-runs and reproduces, not that the world was consulted. The pairing is what carries the information:
-every *established* claim in this graph is *formal*, so what is settled here is arithmetic, and the
-modelling claims that give the arithmetic its meaning are *projected*. The canonical statement of
-what each value means, and what it does not, is `spec/claim-format.md` §5 at the pinned ref; this
-paragraph projects it and does not replace it.
-
-**This appendix is generated from the graph and never hand-edited** (`gen-appendix.py`), then
-re-read against the graph by an independent script (`check-appendix.py`).
-
-### Claims
-
-| ID | Kind | Status | Statement |
-|---|---|---|---|
-| `DDD-agent-01` | empirical | projected | Long-running agent drift is escaped decisions caused by basis loss: context decay, compaction, and distractors remove claim nodes from the agent's ground, so later actions are decisions with no basedOn edge to the declared claims and revert to model priors. Grounding the agent in a persistent external claim graph — basis as query, not context residue, with per-decision claim citation — reduces drift relative to context-carried instruction. |
-| `DDD-cost-08` | conceptual | projected | Actor selection for an act is two-gated: capacity gates always — the actor must carry the act's residual at the declared tolerance or the excess escapes — and assurance gates exactly where the acceptance predicate does not close, where assurance must attach to the actor because no check can carry it. |
-| `DDD-cost-09` | conceptual | projected | Assurance-by-actor binds assurance to a scarce carrier, supplied occasioned — at the act, at the carrier's class price. Assurance-by-check moves it into a mechanism, supplied standing — independent of the act. Closing a predicate converts a property's assurance supply from occasioned to standing. |
-| `DDD-cost-11` | conceptual | projected | On an open predicate, assurance and actor class are positively coupled; closing the predicate flips the sign — the assurance gate lifts and the capacity gate softens — so the actor class the act requires falls, leaving the actor carrying generation only. |
-| `DDD-cost-12` | conceptual | projected | Required actor class for an act is the maximum, over the act's capabilities, of the class needed where assurance is not mechanically discharged — per capability, not per act. |
-| `DDD-cost-13` | conceptual | projected | Where assurance attaches to the actor per capability, an answer-keyed qualification instrument — an examination, an eval — evidences demonstrated class on predicates that close. Its verdict cannot evidence open-predicate carriage: the instrument's own predicate closes while the target predicate does not, so delegation to the open predicate substitutes the actor's identity for exactly the check the instrument cannot be. |
-| `DDD-cost-20` | conceptual | projected | Encoding around a carrier and encoding within it differ in locus: around-encoding — context, retrieval, scaffolds — is standing supply outside the carrier, delivered through the channel at each act; within-encoding — training — converts judgment allocation to encoded allocation inside the carrier. Training buys allocation, not capacity: it does not enlarge the judgment store. |
-| `DDD-cost-25` | conceptual | projected | Assurance mechanisms occupy temporal positions relative to the act — pre-act (selection, training, encoding, static checks), at-act (monitoring), post-act (review, audit, consequence) — each with a latency; a mechanism whose latency exceeds its position's budget — the episode for at-act mechanisms, the consequence horizon for post-act ones — cannot hold its position, so rising tempo, which compresses both budgets, forces assurance pre-act, into standing supply or the carrier. |
-| `DDD-delivery-01` | conceptual | projected | Filing is not encoding: a decision sits in I(V;X) only to the extent the arrangement delivers it at the act, so store allocation cannot be read off artefacts, and the paid-once-inherited-by-every-run property belongs to mechanical delivery specifically, not to standing supply generally. |
-| `DDD-delivery-02` | conceptual | projected | Governance filed but not delivered is escape: no source supplied the governing decision at the act, so it was determined by nobody (term:escape, supply-general), and delivery failure is thereby a generator of escape — sufficient, never necessary — whose distinguishing feature is that the ledger shows coverage: escape that presents as governance. |
-| `DDD-delivery-03` | conceptual | projected | An unretrieved decision and an unretrieved check over the same act are correlated failures — same actor, same budget, same position — so judgement-mediated delivery on both the source and assurance sides silently removes the independence a gate depends on: the failures compound rather than stack. |
-| `DDD-floor-01` | formal | reported | H(V\|X) bundles judged and escaped demand; cleaving them requires an actor-capacity model, and residual demand an actor has taken up escapes where it exceeds effective capacity min(C_hold, C_resolve) AND the shed decisions carry no verifier — overflow ∩ open is the mechanism of capacity-generated escape, sufficient for escape and not necessary for it, with overflow alone producing retries, not escape. |
-| `DDD-floor-02` | conceptual | projected | The judgment floor is relational: irreducibility is a property of the indexed relation ⟨task, ground, acceptance relation, tolerance, arrangement, assurance⟩, not of the task alone — the portion of determination an arrangement cannot discharge through its prior commitments or adequate direct verification at the declared assurance level moves when any coordinate of the relation moves. |
-| `DDD-frame-01` | conceptual | projected | Unresolved determination is indexed by the tuple ⟨task, ground, acceptance relation, tolerance, arrangement, assurance⟩, not by the task alone. |
-| `DDD-frame-02` | conceptual | projected | Behavioural commitments attach at three levels — outcome, policy, principal — which compose and are not actor species; residual discretion is the outcome-relevant variation that remains after the arrangement's declared commitments are applied. |
-| `DDD-frame-03` | conceptual | projected | The source of a resolution and the mechanism assuring it are separate dimensions; the four-store model held the arrangement largely fixed while the allocation was analysed, and did not draw the distinction. |
-| `DDD-frame-04` | empirical | projected | Escaped decisions — consequential resolutions with no adequate source-and-assurance combination — predict ungoverned failure modes and design-review findings. |
-| `DDD-frame-05` | formal | projected | Under a sound terminating operational checker with complete declared ground, producer identity is not epistemically necessary for the checked property — and nothing more: not cheap generation, not normative completeness, not accountability. |
-| `DDD-frame-06` | formal | established | Closure is distinct from generation cost: verification being cheap implies nothing about the density or accessibility of the acceptance region. |
-| `DDD-frame-07` | empirical | projected | Operational evaluability, feedback density, and ground accessibility predict the comparative advantage of computationally assisted arrangements over unaided situated judgment, after controlling for difficulty and resources (H1–H5, filed as DDD-hyp-01 through DDD-hyp-05). |
-| `DDD-frame-08` | normative | projected | Accountability is a relation (attribution, persistent principal, authority linkage, stake, sanction path), not an intrinsic capacity; an arrangement naming an executor but no principal is incomplete. |
-| `DDD-frame-09` | formal | retired | RETIRED — "closed predicates make intelligence unnecessary." Does not follow from producer-independence under verification; generation may still require whatever capability the search demands. |
-| `DDD-frame-10` | formal | projected | Determination demand is conserved as a scalar across arbitrary re-arrangements, actor-generally and including open predicates. |
-| `DDD-frame-11` | conceptual | projected | The governance question — is every decision governing the act in a declared store, none escaped? — is well-formed on the total domain, including open predicates where the measure does not exist; the cost question — how much is in each store? — exists only where the predicate closes. The framework's governed domain is strictly wider than its measured domain. |
-| `DDD-frame-13` | conceptual | projected | Determination's object is the determinable — an outcome-relevant dimension of variation at the declared tolerance — and its product is a determinate, one specific way of occupying that dimension; determination demand is thereby a measure over unresolved determinables, the verdict variable's support being the determinate-space at the declared grain where the predicate closes. |
-| `DDD-frame-14` | conceptual | projected | Discharge always produces a determinate, which lands in two registers: as an outcome — the determinate as it lands in the world, produced at every completed act — and as a verdict — the determinate as assessed by a declared predicate, produced only where governance has declared one; governance is thereby the conversion of outcomes into verdicts, and every diachronic instrument runs on verdicts alone. |
-| `DDD-frame-15` | conceptual | projected | At every completed act in a task's scope, the act's determination demand is discharged — by a filed decision, an actor's judgment, an arrangement default, or an uncontrolled draw; escape is a supply mode of discharge, not an absence of supply — demand is never unmet, only ungoverned. |
-| `DDD-frame-16` | conceptual | projected | Discharge is act-indexed: standing supply is inherited per act and occasioned supply is produced per act, so there is no act-free discharge — governance never chooses whether demand is supplied, only by what, chosen in advance or defaulted at the act. |
-| `DDD-ground-01` | normative | projected | A governing decision must declare a resolvable applicability predicate, unless it explicitly declares universal applicability; non-evaluation must never silently become non-applicability, and where the predicate is implemented over declared ground axes, each axis is marked mechanically-evaluable or judgement-evaluable. |
-| `DDD-ground-02` | conceptual | projected | Source coverage (covered · declared-empty · undeclared · unknown), resolution (resolved · deliberately-open · unknown), and assurance (adequate · inadequate · unknown) are orthogonal properties of ground relative to a filed decision set: only source coverage = undeclared is a source-coverage finding, deliberately-open is a resolution value carrying a deferred verdict, and Unknown is never a pass. |
-| `DDD-ground-03` | conceptual | projected | A decision whose resolution is deliberately-open has no resolution for a timing predicate to read, so the timing vocabulary carries a fourth value — "—(open)" — alongside before, during, and after; any timing predicate without it misfiles open decisions, because every definite value it can assign erases the declaredness that makes them open. |
-| `DDD-ground-05` | conceptual | projected | Declaring the determinable space is constitutively prior to determination over it — a determination selects a determinate, and determinates exist only as ways of occupying a declared determinable — with the symmetry that ground is prior within each act while decisions are prior in a registry's growth, so the priority is synchronic constitution and the bootstrap diachronic history, not a circle. |
-| `DDD-hyp-01` | empirical | projected | Holding generation difficulty and resources constant, comparative advantage shifts toward high-throughput computational generators as acceptance becomes more operationally evaluable, feedback becomes faster and denser, ground becomes more accessible, checking becomes cheaper, and retries become more affordable. |
-| `DDD-hyp-02` | empirical | projected | Human or institutionally situated arrangements retain greater comparative advantage as relevant ground becomes unavailable to the computational system, consequences are delayed, evaluators disagree, acceptance criteria drift over time, tacit or socially distributed knowledge is required, or normative legitimacy is part of the task. |
-| `DDD-hyp-03` | empirical | projected | A generator-plus-checker arrangement — a computational generator composed with a mechanical checker or an independent reviewer — outperforms both generator-alone and judgment-alone baselines where candidate generation benefits from breadth or speed, significant parts of acceptance are operationally closed, and the remaining open residue can be escalated. |
-| `DDD-hyp-04` | empirical | projected | Trust and deployment willingness are better predicted by the completeness of the accountability arrangement — attribution, persistent principal, authority linkage, stake, sanction path — than by whether the immediate executor is human or computational. |
-| `DDD-hyp-05` | empirical | projected | Reliance on worker or provider selection increases as result-level evaluation becomes slower, less objective, less stationary, and less complete, holding labour supply, training cost, consequence severity, and task structure constant. |
-| `DDD-measure-01` | empirical | projected | Specification demand is verdict entropy: for a task whose acceptance predicate closes, the demand engineers experience as specification burden is H(V) over the ground distribution. |
-| `DDD-measure-02` | formal | established | Given the identification (DDD-measure-01), conservation on the closing region is the chain rule of entropy: H(V) = I(V;X) + H(V\|X) for any conditioning variable X. |
-| `DDD-measure-03` | formal | reported | The seam of a decomposition is I(V;S); a decomposition with cheaper parts has pre-paid more demand into the seam, and H(V\|S) is minimised exactly when I(V;S) is maximised. |
-| `DDD-measure-06` | formal | established | The measure exists iff the acceptance predicate operationally closes; H(V) is undefined exactly where the framework's floor result locates non-zero floor. |
-| `DDD-measure-08` | formal | retired | RETIRED — "a better decomposition destroys demand." Cheaper parts were purchased by a higher-information seam; the destruction was an artifact of not counting I(V;S). |
-| `DDD-measure-10` | formal | established | You cannot decompose your way out of the work: for a fixed closing task, H(V\|S) = 0 requires I(V;S) = H(V) — the parts become trivial only when the decomposition already encodes the entire verdict. Demand is conserved, not escapable by re-decomposition. |
-| `DDD-measure-11` | conceptual | reported | The measure prices the verdict, not the search: H(verdict) is a property of the verdict function and the ground distribution and says nothing about the cost of computing a correct answer. Two tasks with identical verdict entropy can differ unboundedly in generation cost, so the measure must not be read as pricing generation. |
-| `DDD-measure-15` | conceptual | projected | The engineering reading of the chain-rule identification holds only for admissible conditioning variables. A conditioning variable X is admissible where it is computable from ground available at the act and from what the arrangement has standing before it, and not from the verdict itself — computable by something that has not been handed the answer. The arithmetic holds for any X whatever; admissibility is what restricts the reading, not the identity. |
-
-### Decisions
-
-| ID | Statement |
-|---|---|
-| `DDD-dec-15` | The escape mechanism's scope correction: overflow ∩ open is the mechanism of capacity-generated escape — sufficient for escape, never necessary for it. Escape as such stays as term:escape defines it, supplied by nobody for any reason, and term:escape-mechanism and DDD-floor-01 are re-scoped by supersession of their universal quantifier. |
-| `DDD-dec-24` | Wave 3 files the principle layer's central material: the indexed-determination core given its canon home (core/14, with the flag clearances that home licenses), the discharge chain (the determinable, the determinate's two registers, supply-mode exhaustiveness, act-indexed discharge, constitutive priority of ground), and the hypothesis set as a new claim area — six derivation-grade claims, five statement-grade hypotheses, three settled terms, one new core document, filed by supersession-and-amendment with every divergence from source material reported rather than harmonised. |
-| `DDD-dec-26` | The Track 1 session mints two terms and no more — term:commitment-level and term:residual-discretion, both established by core/14-indexed-determination.md §2 — discharging the mint DDD-frame-02 deferred pending use; three anticipated deltas (axis, arrangement, escaped decision) are ruled non-deltas because canon already carries each, and the five-way ground-provenance taxonomy is ruled ineligible for minting because its institutional slot is Q27-gated. |
-
-### Terms
-
-| ID | Term | Canonical wording |
-|---|---|---|
-| `term:accountability` | accountability | **Accountability** is a property of the arrangement, not of the executor: attribution of the determination, a persistent answerable party, and a borne consequence. An arrangement missing any of the three has not allocated the decision's consequence. |
-| `term:actor` | actor | An **actor** is a system that resolves decisions by reading ground: variation in declared ground can alter the resolution through an internal pathway that selects among alternatives. A thermostat qualifies; a falling rock does not. Actorhood does not require intelligence. |
-| `term:admission-test` | admission-test | **A choice is a decision iff varying *the choice* moves the outcome past tolerance.** **A fact is ground iff varying *the world* moves the outcome past tolerance.** |
-| `term:answerability` | answerability | **Answerability** — the obligation to produce the chain: which determinations were made, by whom, against what ground. |
-| `term:arrangement` | arrangement | The **arrangement** is the composition through which a resolution is produced and governed: executor, prior commitments, ground channels, checks, reviewers, record, and accountable principal. The unit of comparison is the arrangement, not the isolated actor. |
-| `term:attribution` | attribution | **Attribution** — provenance-shaped, and therefore checkable: the record connecting the determination to the execution that produced it. |
-| `term:closure` | closure | **Effective closure, defined.** A predicate is **closed for an arrangement** when the relevant ground is observable and adequacy can be evaluated within declared resource, latency, and confidence bounds. **Decidable** is reserved for the formal special case. |
-| `term:commitment-level` | commitment-level | A **commitment level** is a level at which an arrangement fixes behaviour in advance: **outcome-level** — permitted resolutions fixed directly; **policy-level** — the generating procedure fixed; **principal-level** — a determiner selected by qualification and case-level resolution delegated. The three compose, and they are levels of commitment, not species of actor: the question is never which of three kinds an actor is, but at which levels the arrangement has committed. |
-| `term:composite-actor` | composite-actor | **A composite actor carries its members' demand, plus the seam demand between them.** |
-| `term:conservation` | conservation | **For a task at a declared assurance level, and within a fixed decomposition of that task, determination demand is conserved.** Every governing decision gets made. The only choice is **by whom, when, and at what price.** Reduce the demand in one store and it **relocates**; it does not vanish. |
-| `term:determinable` | determinable | The **determinable** — an outcome-relevant dimension of variation at the declared tolerance: the object determination resolves, and the dimension of comparability an axis names. Determinateness comes in orders — red → scarlet → this shade — and the declared tolerance names the order at which the framework stops distinguishing. |
-| `term:determinate` | determinate | The **determinate** — one specific way of occupying a determinable: what discharge produces. A determinate is a way of being, not the determinable plus a differentia, and determinates under one determinable are constitutively exclusive at their grain. |
-| `term:ensemble-actor` | ensemble-actor | **The choice is a property of the ensemble, and it exists nowhere in any member.** |
-| `term:escape` | escape | **Escaped** — determined *never*, by nobody: decided-by-nobody as a first-class category. Latent defect exposure. **The only forbidden state.** |
-| `term:escape-mechanism` | escape-mechanism | **Capacity-generated escape — the escape an actor produces from residual it has taken up — requires two conditions, both necessary:** **(1) Overflow** — demand exceeds resolve capacity. **(2) Open** — no verifier the actor holds. Overflow alone (closing predicate) → **retries, not escape.** Recoverable. Not floor. Open alone (within capacity) → **carried by judgment**, where an accountable supplier is named. Not floor. Where none is named, it is escape by another route (`05` §7) — outside this mechanism, not excluded by it. **Overflow AND open** → **escape. This is the floor.** **Sufficient for escape, never necessary.** A governing decision that never entered an actor's residual escapes without overflowing anything: escape is supplied-by-nobody (`term:escape`), and capacity shortfall is one generator of it. |
-| `term:floor` | floor | The "floor" is the portion of a determination's demand that **cannot be moved off the in-the-moment actor** — the residue that no amount of encoding or checking can amortise, that must be paid, per run, in judgment. **The intrinsic floor is a property of the acceptance predicate, not of the decision.** |
-| `term:liability` | liability | **Liability** — bearing the consequence. |
-| `term:outcome` | outcome | The **outcome** — the determinate as it lands in the world, produced at every completed act. The **verdict** is the same determinate as assessed by a declared predicate, produced only where governance has declared one. The world renders outcomes, never verdicts; governance is the conversion of outcomes into verdicts. |
-| `term:residual-discretion` | residual-discretion | **Residual discretion** is the outcome-relevant variation remaining at the act after the arrangement's declared commitments are applied. It is not randomness: a deterministic arrangement can carry substantial discretion across unfamiliar cases, a randomised one can be tightly committed, and a zero-variance arrangement can be consistently wrong. |
-| `term:seam` | seam | A composite carries the demand of its parts, **plus** the seam demand `S` created *between* them. |
-| `term:store` | store | **{rule, check, actor, nothing}.** There is no fifth source. |
-| `term:swarm-gate` | swarm-gate | **A swarm is an actor only if it genuinely determines choices against ground.** The admission tests (`00` §4) still gate, and they must. |
-| `term:training` | training | **Closure decides whether training is *available*. Cost decides the *ratio* when it is.** Training requires a **reliable error signal** — you must be able to tell, and tell soon, whether the output was right. |
-| `term:verdict` | verdict | **Definition (determination demand).** *(In the engineering projection this same quantity is denominated in the vocabulary of the domain and called* **specification demand** *; the measure below is identical either way.)* For a task whose acceptance predicate **closes** for the arrangement (`term:closure`; *decidable* is the formal special case, not the requirement), the predicate evaluates outcomes, and the **task class** supplies one correct output per input point. The **verdict** is that induced assignment — the correct output over each point of the input space. Let `P` be the distribution over inputs (the *ground distribution*). The **determination demand** of the task is the Shannon entropy of the verdict: **D = H(verdict)**, measured in **bits**. Where the task class supplies no such assignment, the predicate still evaluates outcomes and there is no verdict to have entropy about — which is the boundary `09` §7 draws. |
-
-### The hypothesis set, as the graph holds it
-
-The hypothesis set is broken out because its discipline is the easiest thing in the paper for a
-reader to mistake. Every row is `projected`, every row declares a falsifier, **every evidence field
-is empty**, and every row is owned by a study that has not been run. The columns below are the
-graph's own fields, not the paper's summary of them.
-
-| ID | Status | Evidence | Owner | Falsifier declared |
-|---|---|---|---|---|
-| `DDD-frame-07` | projected | `[]` (empty) | paper-4 | yes |
-| `DDD-hyp-01` | projected | `[]` (empty) | paper-4 | yes |
-| `DDD-hyp-02` | projected | `[]` (empty) | paper-4 | yes |
-| `DDD-hyp-03` | projected | `[]` (empty) | paper-4 | yes |
-| `DDD-hyp-04` | projected | `[]` (empty) | paper-4 | yes |
-| `DDD-hyp-05` | projected | `[]` (empty) | paper-4 | yes |
-
-*Generated from the graph at `v5.9.0`. 45 claims, 3 decisions, 24 terms.*

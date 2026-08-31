@@ -1,18 +1,44 @@
 #!/usr/bin/env python3
-"""Inline status assertions in a projection, checked against the graph at a ref.
+"""Verify every inline status assertion in a projection against the claim graph at a ref.
 
-The gap this closes. `check-quotations.py` verifies BLOCK quotations, and its docstring says so
-honestly. But the manuscript's more common form is the inline citation that asserts a status in
-prose -- `[DDD-measure-06, **established**]` -- and no instrument reads it. At the v5.9.0 -> v5.12.0
-advance that gap hides a retirement: DDD-measure-06 is retired at v5.12.0, the paper calls it
-established three times, and both existing checkers pass those three lines.
+The gap this closes, and it is a third gap rather than a variation on the other two.
+`check-quotations.py` verifies BLOCK quotations and says so honestly in its own docstring;
+`check-appendix.py` re-reads the generated node tables. Neither reads the manuscript's MORE COMMON
+form: the inline citation that asserts a status in running prose -- `[DDD-measure-06,
+**established**]`. At the v5.9.0 -> v5.12.0 advance that gap hid a retirement. DDD-measure-06 is
+retired at v5.12.0; the paper called it **established** in three places; both existing checkers
+passed all three lines, because none of the three is a block quotation and none is an appendix row.
 
-A status label is the part of a citation a reader converts into warrant. It is therefore the part
-most worth checking, and it was the part with no check.
+**A status label is the part of a citation a reader converts into warrant.** It is therefore the
+part most worth checking, and it was the part with no check. That the review's central criticism was
+that the paper communicates more warrant than the graph provides, and that the one unchecked
+surface was exactly the warrant labels, is not a coincidence worth leaving unfixed.
 
-Usage:  status-sweep.py <manuscript.md> <upstream-repo> <ref> [<baseline-ref>]
+The script also reports every cited node whose status MOVED between two refs, label or not, when a
+baseline ref is given. A status can move under a citation that never named one while the prose
+around it still asserts the old reading -- which is what happened at §8.4 and in the conclusion's
+"what is established" list, neither of which carried a label.
+
+Usage:  check-status.py <manuscript.md> <upstream-repo> <ref> [<baseline-ref>]
 Exit 0 when every inline status assertion matches the graph at <ref>; 1 otherwise.
-Appendix A is excluded: it is generated wholesale and re-read by check-appendix.py.
+Appendix A is excluded, wherever it lives: it is generated wholesale and re-read by
+check-appendix.py, and checking it here would report one defect twice.
+
+Defect history, kept with the instrument:
+
+  * Written as a one-off sweep at this revision's GATE 1 to answer a question -- does the pin
+    advance break anything the two checkers cannot see -- and it did, four times. It was kept as
+    a session artefact for one gate before being ruled an instrument. Recording that here because
+    the instrument's origin is its warrant: it was not designed against a specification, it was
+    generalised from a sweep that found something, and its coverage is therefore exactly the
+    coverage of that sweep and no wider.
+
+  * The citation regex accepts a status after a comma or an em dash, matching both forms the
+    manuscript uses -- `[id, projected]` and `[id -- closing clause]`. A citation carrying NO
+    status word is skipped rather than flagged: a projection may cite without asserting, and
+    treating a bare citation as a defect would make the honest form the expensive one. The cost
+    is that a bare citation whose surrounding PROSE asserts a status is invisible here, and the
+    baseline-ref comparison is the mitigation rather than a cure.
 """
 import re
 import subprocess

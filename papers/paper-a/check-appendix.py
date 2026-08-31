@@ -12,8 +12,13 @@ Four things are checked, and they are different failures:
   3. every row corresponds to a node the body cites (nothing invented);
   4. the hypothesis-set rows really do carry empty evidence.
 
-Usage:  check-appendix.py <manuscript.md> <upstream-repo> <ref>
+Usage:  check-appendix.py <manuscript.md> <upstream-repo> <ref> [<appendix-home.md>]
 Exit 0 when the appendix matches the graph; 1 otherwise.
+
+Citations are read from <manuscript.md>; the rendered appendix is read from <appendix-home.md>
+when the two are separate files. Checks 2 and 3 -- nothing dropped, nothing invented -- are
+exactly the checks that keep a split appendix honest, so they run ACROSS the two files rather
+than within one.
 
 Defect history, kept with the instrument because a check that can be wrong about a correct
 artefact could have been wrong about an incorrect one:
@@ -72,17 +77,21 @@ def strip_quote(md):
     return flat(' '.join(re.sub(r'^> ?', '', ln) for ln in str(md).split('\n')))
 
 
-def main(path, repo, ref):
+def main(path, repo, ref, home=None):
     nodes = graph(repo, ref)
     # Which ids are claims, so a decisions row (id | statement) is not mistaken for a claims
     # row that lost its metadata columns.
     claim_ids = {i for i, n in nodes.items() if 'status' in n and not i.startswith('term:')}
-    text = open(path).read()
-    head, _, appendix = text.partition('## Appendix A')
+    head = open(path).read().partition('## Appendix A')[0]
+    _, _, appendix = open(home or path).read().partition('## Appendix A')
     if not appendix:
-        sys.exit('no Appendix A found')
+        sys.exit(f'no Appendix A found in {home or path}')
 
     body_cited = set(re.findall(r'DDD-[a-z]+-\d+', head)) | set(re.findall(r'term:[a-z-]+', head))
+    if not body_cited:
+        sys.exit(f'{path} cites no graph ids -- the manuscript is the first argument and the '
+                 'appendix home the fourth; passing the appendix as the manuscript would report '
+                 'every row as uncited')
     rendered, bad = set(), []
 
     # Statements carry literal pipes -- H(V|X), H(V|S) -- escaped as \| in a cell. Splitting on
@@ -157,6 +166,6 @@ def main(path, repo, ref):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) != 4:
+    if not 4 <= len(sys.argv) <= 5:
         sys.exit(__doc__)
     sys.exit(main(*sys.argv[1:]))

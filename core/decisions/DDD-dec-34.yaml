@@ -1,0 +1,123 @@
+format: 1
+id: DDD-dec-34
+kind: decision
+statement: |
+  The upstream pin advances v5.9.0 -> v5.12.0 across three releases in one act, six pinned objects are re-instrumented and four unpinned ones are added, and the advance's firing is predicted in a committed file before graph/upstream.yaml is touched — because the node whose retirement forces this revision's largest repair, DDD-measure-06, fired nothing at all: it was never pinned.
+principal: Emil
+made: 2026-08-30, Paper A revision (GATE 3 ruling to proceed; the advance executed and verified at GATE 4)
+resolution: |
+  The advance, what it fired, and the finding that changes what gets pinned.
+
+  ## Why three releases at once
+
+  The pin was HELD at v5.9.0 by ruling, so canon could be repaired without dragging the projection
+  behind it. Three releases landed against that hold: v5.10.0 (the Phase 1a session — the discharge
+  partition and the measure boundary), v5.11.0 (retirement provenance and the validator) and
+  v5.12.0 (definitions that were never in the registry, and a collision the store won). The hold
+  was correct and it is discharged here, in one advance, by the paper it was protecting.
+
+  ## Predicted before, verified after
+
+  Stated in this order so the verification can disconfirm it, per DDD-dec-28 and DDD-dec-29, and
+  COMMITTED AHEAD OF THE OPERATION at
+  meta/sessions/2026-08-30-paper-a-revision/gate4-prediction.md, with the instrument that computed
+  it beside it (predict-pin-advance.py, which re-implements validate-core-order.py's own
+  pinned_content_digest rather than approximating it).
+
+    PREDICTED FIRING:
+      E12  0 — all 67 pinned ids still exist at v5.12.0
+      W5   exactly 1 — DDD-frame-15, projected -> retired
+      W6   exactly 6 — DDD-cost-09 (region); DDD-delivery-01 (statement); DDD-frame-02
+           (statement); DDD-frame-15 (statement and region); term:delivery (canonical_md);
+           term:residual-discretion (canonical_md)
+      W7   1, unchanged — term:maturation, declared against DDD-dec-21
+      and 61 of 67 pins unmoved.
+
+    OBSERVED, at ref v5.12.0 with the hashes NOT yet re-instrumented:
+
+      67 pins resolved against the pinned ref, 1 basis-loss, 6 content-drift, 1 shadowed id(s)
+
+  Every id and every hash was the one written down beforehand. **The prediction held in every
+  limb.** The two-stage method is the point: had the hashes been advanced in the same edit as the
+  ref, the drift count would have read 0 throughout, the pass and the skip would have produced
+  identical output, and there would have been nothing to check the prediction against.
+
+  After re-instrumentation: 71 pins resolved, 0 basis-loss, 0 content-drift, 1 shadowed id.
+
+  ## Reconciled against the migration seed's own prediction
+
+  meta/migration-plan-ground.md predicted three W6 for the next advance past both sessions —
+  term:delivery, DDD-cost-09, DDD-delivery-01. Those three appear exactly. The other three are the
+  Phase 1a session's repairs and are not ground-migration work, which is why the seed does not
+  list them. The seed also names seven W6 that fire when W1 executes IN CANON; none fired, because
+  this session carries W1 in the two manuscripts only and renames nothing upstream.
+
+  ## The finding: four pins added, and why it is a finding
+
+  DDD-measure-06 retires at v5.12.0 from established. It forces the largest prose repair in this
+  revision — the paper asserted its biconditional as **established** in three places, and the
+  companion measure note had already conceded both failure directions without canon being updated
+  to match, so this projection was stronger than the note sharing its graph.
+
+  **It fired nothing.** W5 only sees ids that are pinned, and DDD-measure-06 was not. Both existing
+  checkers passed all three lines, because none is a block quotation and none is an appendix row.
+  The gap was found by a sweep written at this session's GATE 1 for inline status assertions, now
+  shipped as papers/paper-a/check-status.py.
+
+  That is DDD-agent-01 applied to this repository's own apparatus: a basis cited without a pin is a
+  basis that can move silently. Four nodes are therefore pinned at this advance — DDD-measure-06,
+  its two successors DDD-measure-16 and DDD-measure-17, and DDD-frame-17, which supersedes
+  DDD-frame-15. Three of the four could not have been pinned earlier: they do not exist at v5.9.0
+  and pinning them there would have fired E12.
+
+  ## The other steps, and their results
+
+  - **The four failing quotations**, all repaired and verified: DDD-frame-15's statement (retired,
+    the four modes replaced by DDD-frame-17's three values), DDD-frame-02's (amended clause),
+    term:residual-discretion's (amended, the cryptographic-hash separation), and the compact form
+    in the conclusion — the cheapest, since the compact form survives verbatim in DDD-frame-17's
+    closing clause, so the citation moved and no prose did. check-quotations.py at v5.12.0:
+    **30 verbatim, 0 disclosed-partial, 0 failing.**
+  - **Appendix A regenerated wholesale** against the tag, never hand-edited, and re-read by the
+    independent script: **75 nodes rendered, 75 cited, 0 discrepancies**, up from 72 nodes and 13
+    discrepancies before regeneration. Idempotent across three runs, byte-compared.
+  - **check-status.py at v5.12.0: 93 inline status assertions, 0 wrong**, from 4 wrong before the
+    repair.
+  - **The declared ref** advanced in the manuscript's front matter, which is now the supplement's
+    S2.
+
+  ## What this act does not do
+
+  It does not merge anything; Emil ratifies. It does not file, amend or retire any claim in either
+  repository — the two retirements this revision carries were made upstream at v5.10 and are only
+  projected here. It does not rule on the accountability arity finding (S4 of the supplement),
+  which is routed as a successor item rather than ridden in on a pin advance.
+basis:
+  - DDD-dec-29
+  - DDD-dec-28
+  - DDD-dec-10
+  - DDD-agent-01
+  - DDD-frame-15
+  - DDD-frame-17
+  - DDD-measure-06
+  - DDD-measure-16
+notes: |
+  Numbering: decisions share one id space across the principle repository and this one. 33 is the
+  highest before this file (upstream, at v5.12.0), so this advance is 34.
+
+  Filed at the advance rather than staged [PROPOSED], because the tag it pins already existed:
+  v5.12.0 resolves to 81f6929, verified as the principle repository's default-branch head before
+  anything moved. The DDD-dec-28/29 near-miss — an instruction to bump arriving before the tag was
+  cut — does not apply here, and the file lands ratified rather than being tidied later.
+
+  The ordering constraint from DDD-dec-29 still binds and was followed: the ref written into
+  graph/upstream.yaml is also written into a published manuscript, so pinning a branch during
+  staging would put a branch sha into a paper. Tag first, always.
+
+  ## What the two-stage verification cost, and why it is worth it
+
+  Nothing but one extra checker run. The alternative — advance ref and hashes together — produces
+  a green run whether or not the prediction was right, which is presumed discharge in its exact
+  form: the artefact recording the pass identical to the artefact recording the skip. Three
+  advances have now been verified this way (DDD-dec-28, DDD-dec-29, this one) and the prediction
+  has held each time, which is an argument for keeping the method rather than for dropping it.

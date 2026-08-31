@@ -24,7 +24,7 @@ of entropy: conditioning on any variable `X` splits the total into the verdict i
 `I(V;X)`, and what remains, `H(V|X)`. Three claims previously stated separately — seam demand under
 decomposition, store allocation across actors, and the encode/verify split — are this one identity
 under three choices of `X`. Two further instances, the identity iterated across a two-level
-decomposition and a ground-distribution sweep, extend the worked coverage without adding a fourth
+decomposition and a deployment-distribution sweep, extend the worked coverage without adding a fourth
 claim.
 
 **Demand is not cost.** Entropy prices what each act must resolve. Description length prices the
@@ -38,8 +38,8 @@ correspondence that would make it a measured result — that `I(V;S)` predicts t
 interface — is stated as a protocol and not run.
 
 The measure has a sharp boundary, stated as a scope condition: the construction applies where the task
-supplies an operationally usable verdict function and a ground distribution that can be estimated.
-Outside that region the framework's independently derived floor becomes non-zero and the measure goes
+supplies an operationally usable verdict function and a deployment distribution that can be
+estimated. Outside that region the framework's independently derived floor becomes non-zero and the measure goes
 silent, for the same reason in both cases. That coincidence is worth noticing. It is not evidence, and
 the note does not use it as any.
 
@@ -111,7 +111,7 @@ separates the two. The definition's phrase *the correct output the predicate ass
 task classes and not others; §2.2 says which, and what `V` is in the rest.
 
 **Notation.** `H(·)` denotes Shannon entropy in bits, `H(V) = −Σ_v P(v) log₂ P(v)`; `H(·|·)`
-conditional entropy; `I(·;·)` mutual information. All are taken with respect to the ground
+conditional entropy; `I(·;·)` mutual information. All are taken with respect to the deployment
 distribution `P`. Two counts appear and are never interchangeable: `n` is the number of points in
 the input space, used below as a display scale, and `N` is a number of acts (§6, §9).
 
@@ -126,8 +126,8 @@ per-act claim.
 
 Three properties follow immediately, and each answers something the counting approach could not.
 
-**It is representation-independent.** `H(V)` is a property of the verdict function and the ground
-distribution. Describing the task at a different granularity does not change it.
+**It is representation-independent.** `H(V)` is a property of the verdict function and the
+deployment distribution. Describing the task at a different granularity does not change it.
 
 **It never mentions the actor.** This is the exact form of the framework's claim that demand is fixed by
 the task and never by the system. Whatever resolves the task faces the same `H(V)`.
@@ -461,9 +461,13 @@ sub-decompositions; the arithmetic is identical, the instance distinct, and the 
 remains unworked here [term:seam-identity; DDD-measure-14]. Iteration is arithmetic — the theorem
 is still Shannon's, applied twice.
 
-### 5.4 `P` varied → non-uniform ground
+### 5.4 `P` varied → a non-uniform deployment distribution
 
-The worked example uses a uniform ground distribution. `P` is a parameter of the definition (§2),
+*Worked by `measure-nonuniform-ground.py`, named before the vocabulary moved: the asset lives in
+the principle repository and is out of this note's reach, so the section and the script that
+computes it read under two words until the migration reaches `core/assets/`.*
+
+The worked example uses a uniform deployment distribution. `P` is a parameter of the definition (§2),
 not a convenience of the example, and the identity owes a demonstration under a skewed one
 [DDD-measure-12]. Re-running the task under two skewed deployments — benign, where valid inputs
 arrive nine times as often as invalid, and adversarial, the reverse — with both decompositions of §4:
@@ -479,7 +483,7 @@ identity is indifferent to
 the skew; the demand is not. The same validator, unchanged, faces roughly four times the uniform
 demand when invalid inputs dominate and about a sixth of it when they are rare. Where the demand
 sits moves too: the share decomposition B carries in its seam is 41% of the whole on the benign
-ground, 57% on the uniform, and 75% on the adversarial. A decomposition's seam economics are a
+deployment distribution, 57% on the uniform, and 75% on the adversarial. A decomposition's seam economics are a
 property of the task *and its deployment*. *Fixed by the task* is fixed by the task, the tolerance,
 and the ground distribution — now worked, not merely stated.
 
@@ -490,9 +494,9 @@ encode/verify split — are one identity under three choices of `X`. That a sing
 recovers all three, with no additional assumptions, is the note's main structural result.
 
 The two further instances add no fourth claim. Chaining exercises the same identity iterated;
-the skewed ground exercises it with `P` varied. What they add is coverage: the identity has now been
+the skewed distribution exercises it with `P` varied. What they add is coverage: the identity has now been
 worked on five instances — the three conditioning variables, a two-level chain, and a
-ground-distribution sweep across three deployments — on two tasks.
+deployment-distribution sweep across three deployments — on two tasks.
 
 **One caveat carried forward, and it is where the next work is.** In all three, *escape* is folded into
 `H(V|X)` together with *judgment*. The identity cleaves what `X` carries from everything else; it does
@@ -598,7 +602,7 @@ cost layer downstream of this note [DDD-cost-06; DDD-cost-07]. This section does
 ### 6.5 Where demand comes due
 
 One consequence is worth stating and is not a further claim. Discharge is
-**distribution-weighted**: demand comes due where acts concentrate, at the rate the ground
+**distribution-weighted**: demand comes due where acts concentrate, at the rate the deployment
 distribution `P` supplies them. That is the measure's own `P` (§2) read back through the act
 rather than anything additional, which is why the aggregate above moves with `P` exactly as the
 per-act demand does (§5.4). The framework carries this in the same posture — as exposition,
@@ -648,7 +652,7 @@ determination demand *is* verdict entropy.
 | It is **non-degenerate** — values are non-trivial, neither zero nor everything, and they move as the framework says they should | That the identification is the *correct* one |
 | The framework's qualitative claims appear with the **right signs and magnitudes** — a higher-information split really does buy cheaper parts; distractors really do push demand back to judgment | That information-theoretic demand predicts any **engineering** quantity |
 | The aggregate over a run is **exact and computable** — the correlation inequality's gap is §4's seam seen from repetition rather than decomposition (§6.3) | That correlated verdicts **are** cacheable work. That second identification is untested, exactly as the first is (§6.6) |
-| No contradiction appears across five worked instances on two tasks — three conditioning variables, an iterated chain, and a three-deployment ground sweep | Anything whatsoever about open predicates |
+| No contradiction appears across five worked instances on two tasks — three conditioning variables, an iterated chain, and a three-deployment distribution sweep | Anything whatsoever about open predicates |
 
 **So where does falsifiable content live?** In the identification, which is a modelling claim, and
 modelling claims fail by failure of correspondence rather than by arithmetic. The correspondence that
@@ -710,7 +714,7 @@ never on live entropy. Necessary for the warrant, unnecessary for the operation 
 The boundary is a scope condition, and it is best stated as one.
 
 > **The construction applies where the task supplies an operationally usable verdict function and a
-> ground distribution that can be estimated.**
+> deployment distribution that can be estimated.**
 
 Three requirements sit inside that sentence, and they fail in different ways. Collapsing them is the
 error the section is written to avoid.
@@ -839,7 +843,7 @@ Where the framework has looked for this structure in production data,
 the evidence is consistent with the two-part form but cannot yet select the MDL form, and is filed
 as basis rather than confirmation [DDD-cost-03; mdl-cost-manufacturing-assessment-2026-08-08].
 Within this note's own region a second, older
-answer stands: entropy is relative to a declared ground distribution and computable from it
+answer stands: entropy is relative to a declared deployment distribution and computable from it
 [DDD-measure-12], and Kolmogorov complexity is neither — which is what makes demand
 deployment-relative. The note therefore concedes the standing side to description length entirely:
 entropy cannot price the mechanism, and the cost layer built on this identity is MDL's. That concession
@@ -896,7 +900,7 @@ actor-capacity model — stated as the next result and not worked here (§5.1, �
 [DDD-cost-05; DDD-floor-01].
 
 **Multi-actor composition remains unworked.** Of the instances previously owed, chained seams and
-non-uniform ground are done (§5.3, §5.4); the composed-arrangement case is not
+non-uniform deployment distributions are done (§5.3, §5.4); the composed-arrangement case is not
 [term:seam-identity]. Five worked instances is credibility, not certification, and the framing should
 be certified by an information theorist. The theorem is exact; identifying the right conditioning
 variable for a deployed system is estimation, with error bars.
