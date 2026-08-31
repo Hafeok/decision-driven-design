@@ -1,4 +1,4 @@
-# The Missing Parameter: Actor-Indexed Determination
+# Actor-Indexed Determination
 
 ### Where consequential choices are resolved, what assures them, and who answers
 
@@ -29,16 +29,23 @@ from the *mechanism* that assures it. This yields a precise account of an **esca
 consequential resolution that no adequate source-and-assurance combination governs, and whose
 unacceptable outcomes are not reliably detected.
 
-Two results give the framework its shape. Every completed act's determination demand is discharged
-— by a filed decision, an actor's judgment, an arrangement default, or an uncontrolled draw — so
-**demand is never unmet, only ungoverned**; and discharge is act-indexed, so governance never
-chooses whether demand is supplied, only by what. On the region where the acceptance predicate
-closes, that demand is measurable, and its conservation is the chain rule of entropy. Off that
-region the measure does not exist and the governance question still does.
+Two propositions give the framework its shape, and both are **proposals with declared falsifiers
+rather than findings**. Every completed act's determination demand is discharged — by a filed
+decision, an actor's judgment, an arrangement default, or an uncontrolled draw — so **demand is
+never unmet, only ungoverned**; and discharge is act-indexed, so governance never chooses whether
+demand is supplied, only by what. On the region where the acceptance predicate closes, demand is
+identified with the entropy of the verdict, and on that identification conservation is the chain
+rule of entropy. The identification is a modelling claim and it is unproven; the chain rule is
+Shannon's and is certain and empty on its own. Off the closing region the measure does not exist
+and the governance question still does.
 
-The contribution is not a new species taxonomy of programs, models and humans. It is a framework
-for analysing where consequential choices are resolved, how commitments attach, what can be
-verified, who bears the residual consequence, and which choices have been left to accident.
+**What is claimed is a synthesis, not a discovery.** That consequential work should be analysed at
+the level of a sociotechnical arrangement rather than an isolated actor is not this framework's
+proposition: it belongs to distributed cognition, to joint cognitive systems, and to systems-theoretic
+safety, and §11 credits them. What is offered here is a specific, auditable synthesis of resolution,
+assurance, delivery and accountability over that unit — with every load-bearing proposition attached
+to a graph node that carries its status and its falsifier, so a reader can tell what is argued from
+what is merely proposed. No empirical result is claimed, and none is reported.
 
 ---
 
@@ -110,6 +117,20 @@ not yet tested. It does not claim an empirical result. It does not claim a bound
 and computational work. It does not claim that determination demand is a measured invariant in
 general — only on the region where the acceptance predicate closes, where the measure exists and
 the conservation statement is arithmetic (§4.4).
+
+**And it does not claim the arrangement.** An earlier version of this paper was titled *The Missing
+Parameter*, which asserts absence from prior work. The absence does not hold. Analysing
+consequential work at the level of an arrangement rather than an isolated actor is central to
+distributed cognition, to joint cognitive systems and to systems-theoretic safety, all of which
+predate this framework by decades and several of which are better evidenced than it is (§11). The
+title was withdrawn on that finding.
+
+What is claimed instead is narrower and is stated once, here, in the form the paper defends
+everywhere else: **a specific, auditable synthesis of resolution, assurance, delivery and
+accountability over the arrangement as the unit** — four coordinates each of which has a prior
+literature, carried in one vocabulary, with each load-bearing proposition attached to a node
+carrying its status and its falsifier. Whether that synthesis is worth having is an empirical
+question and §9 is where it would be answered. **(analysis)**
 
 One question sits adjacent to this paper and is deliberately not taken up: software mechanised the
 half of engineering that names what varies, and never mechanised the half that resolves it — an
@@ -581,25 +602,29 @@ logically and operationally available and still economically useless.
 and stakeholders the arrangement is meant to serve. A mechanically executable predicate may be
 normatively incomplete, contested or gameable.
 
-**A second axis follows, and it is orthogonal to this one.** These four name *which* closure
-question is being asked. The next section asks *how strong* the answer is once the question is
-fixed as operational. A predicate has a position on both axes at once, and neither reading
-constrains the other — so nothing in §5.2 competes with the four kinds, and a reader meeting both
-should not look for a contradiction between them.
+**A second axis follows, and the earlier version of this paper mixed it with this one.** These four
+name *which* closure question is being asked. The next section asks *how strong* the answer is once
+the question is fixed as **operational**. A predicate has a position on both axes at once.
+
+**(analysis)** The external review found the earlier §5.2 ending its operational ladder at *formally
+decidable*, which is a property on the **logical** axis and not a stronger operational rung. The
+finding is correct and the ladder is repaired below: it ends at constructively closed, and
+decidability is stated as what it is — the logical axis's answer, related to the operational one and
+not above it. The defect was in this paper's framing and not in canon, which reserves *decidable*
+for the formal special case rather than making it the requirement [term:closure, settled].
 
 ### 5.2 How strong is the closure?
 
-**(analysis)** Section 5.1 sorted the questions. This section orders the answers to one of them.
+**(analysis)** Section 5.1 sorted the questions. This section orders the answers to **one** of them.
 Fix the question as operational closure — the framework's own [term:closure] — and predicates still
 differ in *degree*, along a gradient the framework's material already implies and has not yet
-assembled in one place. Four rungs, weakest first.
+assembled in one place. **Three rungs, weakest first**, and all three are operational.
 
 | Rung | What holds | Where the framework says so |
 |---|---|---|
 | **Open** | No acceptance procedure over accessible ground at the declared assurance level. | [term:closure], by negation |
 | **Verification-closed** | Adequacy can be *evaluated* within declared resource, latency and confidence bounds. | [term:closure] |
 | **Constructively closed** | The verdict is *computed by rule* from ground available at the act. | measure note §8 |
-| **Formally decidable** | An acceptance procedure exists and terminates over the declared domain. | [term:closure]'s reservation |
 
 **Open.** No procedure decides acceptability, so there is no verdict function to have entropy about
 and the measure does not exist [DDD-measure-06, **established**]. Governance is untouched by this:
@@ -620,15 +645,25 @@ asks whether adequacy can be *evaluated*; constructive closure asks whether the 
 its entropies are exact and exhaustive rather than sampled precisely because the verdict there is
 computed rather than searched for (measure note §8).
 
-**Formally decidable.** Placed last and deliberately not at the top. Canon reserves *decidable* for
-the formal special case rather than making it the requirement [term:closure], and the reservation is
-load-bearing in both directions: any bounded finite domain is decidable by lookup, and a decidable
-checker may demand resources no arrangement has. Decidability is therefore a special case of the
-ladder rather than its summit, and the rungs that govern deployed arrangements are the middle two.
+**And decidability is not a fourth rung.** An earlier version of this paper put *formally decidable*
+at the ladder's end, which was an error: decidability is an answer on §5.1's **logical** axis — a
+procedure exists and terminates over the declared domain — and it is not a stronger operational
+position than constructive closure. The two axes relate, and the relation is worth stating rather
+than implying.
+
+**(analysis)** Neither direction of implication holds. A decidable predicate need not be
+operationally closed for any arrangement: any bounded finite domain is decidable by lookup, and a
+decidable checker may demand time, memory, permissions or ground no arrangement has. And an
+operationally closed predicate need not be decidable: closure asks whether adequacy can be evaluated
+within declared bounds *for this arrangement*, and a procedure can meet those bounds on the inputs
+the task actually presents without terminating over the declared domain. Canon reserves *decidable*
+for the formal special case rather than making it the requirement [term:closure, settled], and the
+reservation is what keeps the two axes apart. **The rungs that govern deployed arrangements are the
+last two, and they are operational.**
 
 #### The retirement this ladder walks past
 
-The third rung approaches a claim the framework killed, and the approach has to be stated carefully
+The top rung approaches a claim the framework killed, and the approach has to be stated carefully
 because the resemblance is real.
 
 > **RETIRED — "closed predicates make intelligence unnecessary."** Does not follow from
@@ -680,8 +715,10 @@ capability, access to relevant ground, and adversarial pressure. **(analysis)**
 
 ### 5.4 Producer independence, and nothing more
 
-The strongest defensible result about closure is narrow, and the framework states its limits inside
-the claim rather than in a footnote:
+The most defensible proposition the framework offers about closure is narrow, and the framework
+states its limits inside the claim rather than in a footnote. It is `projected` — proposed with a
+declared falsifier and not met — so what follows is what the framework is prepared to defend, not
+what it has shown:
 
 > **Under a sound terminating operational checker with complete declared ground, producer identity
 > is not epistemically necessary for the checked property — and nothing more: not cheap generation,
@@ -723,7 +760,8 @@ framework's hypotheses are written to respect that difference (§9) [DDD-hyp-02,
 ## 6. Actor-indexed irreducibility
 
 Brooks's essential/accidental distinction becomes more precise when it is indexed. The framework's
-statement of that precision is its strongest result, and it is relational:
+statement of that precision is relational, and it is `projected` — the most load-bearing proposal
+in the paper, and a proposal:
 
 > **The judgment floor is relational: irreducibility is a property of the indexed relation ⟨task,
 > ground, acceptance relation, tolerance, arrangement, assurance⟩, not of the task alone — the
@@ -764,7 +802,9 @@ it does (measure note §8.2).
 
 ### 6.2 The capacity mechanism, and its scope
 
-A second and narrower result describes one *generator* of floor rather than the floor itself.
+A second and narrower claim describes one *generator* of floor rather than the floor itself. It is
+`reported` — exercised by a reproducing computation, which is not the same as observed in the
+world:
 
 > **H(V|X) bundles judged and escaped demand; cleaving them requires an actor-capacity model, and
 > residual demand an actor has taken up escapes where it exceeds effective capacity `min(C_hold,
@@ -808,6 +848,36 @@ determination of who acted [term:attribution, settled]. **Answerability** is the
 to explain [term:answerability, settled]. **Liability** is exposure to consequence [term:liability,
 settled]. **Accountability** is the relation that requires all of them together with a persistent
 principal, authority linkage and a sanction path [term:accountability, settled].
+
+#### The five elements and the three, reconciled
+
+The graph carries **two counts** of accountability's elements, and the external review was right
+that the paper used both without supplying the mapping. The claim above names five — attribution,
+persistent principal, authority linkage, stake, sanction path. The canonical term names three: *"the
+attribution of the determination, a persistent answerable party, and a borne consequence"*
+[term:accountability, settled; reproduced in full in Appendix A]. The mapping is not one-to-one and
+the difference is not cosmetic.
+
+| `term:accountability` (three, **settled**) | `DDD-frame-08` (five, **projected**) | Relation |
+|---|---|---|
+| attribution of the determination | attribution | the same element |
+| a persistent answerable party | persistent principal | the same element |
+| a borne consequence | **stake** and **sanction path** | the five-element version *splits* one into exposure and the mechanism that imposes it |
+| — | **authority linkage** | the five-element version *adds* an element the term does not carry |
+
+So the five-element version **refines** the three-element one on its third element and **adds** a
+fourth kind of thing. It does not replace it.
+
+**(analysis)** Two consequences the paper carries rather than resolves. The split is defensible:
+exposure to consequence and a body able to impose one are separable, and an arrangement can have the
+first without the second — an executor who will be blamed and no forum that can act. The addition is
+the live question. Authority linkage — that the acting party was *entitled* to act — is not in the
+settled term, and a `projected` claim that adds an element to a `settled` term is a supersession
+question rather than an elaboration. **This paper does not take it.** It flags that the two nodes
+disagree about the relation's arity, that the disagreement is in canon and not in this projection,
+and that a canon session owes the ruling. Reading the five-element version as settled because the
+three-element version is settled would be exactly the status confusion the note on claim status
+warns against.
 
 ### 7.1 Executor and principal
 
@@ -860,15 +930,32 @@ and a human reviewer is available.
 
 ### 8.1 Ground and its provenance
 
-The relevant ground is heterogeneous, and §2.4's provenance vocabulary sorts it. The repository's
-conventions are **controlled**. Each country's address-format rules are **institutional**, supplied
-by postal authorities rather than derived. The current schema is **observed**, and observed *from a
-store*, so it is current only as of its last write. Whether a customer record is a business or a
-residence is **inferred**. And whether downstream consumers depend on the existing un-normalised
-form is, in most real repositories, **missing**.
+The relevant ground is heterogeneous, and §2.4's provenance vocabulary sorts it. **Every assignment
+below is a hypothesis about this arrangement, to be investigated in it — not a fact the scenario
+supplies.** The external review found the earlier version of this section applying its own taxonomy
+inconsistently, and the repair is not a better set of assignments but an honest account of what an
+assignment is: a claim about where a fact comes from *in a particular arrangement*, which an
+investigation can overturn.
+
+| Ground | Assignment | What would overturn it |
+|---|---|---|
+| the repository's conventions | **controlled** | the conventions are set outside the team and merely mirrored here, in which case they are institutional |
+| each country's address-format rules | **institutional**, supplied by postal authorities | the arrangement maintains its own rule table and enforces it, in which case they are controlled |
+| the current schema | **observed**, and from a store | the arrangement owns and enforces the schema, in which case it is controlled — this is the assignment the review challenged, and it turns on who may change it |
+| business or residence | **inferred** | the field is declared at signup, or read from an external register, in which case it is neither |
+| whether consumers depend on the un-normalised form | **missing** | code search, contract tests, telemetry or asking the consuming teams reaches it — see §8.5 |
+
+**(analysis)** The schema row is the instructive one. An arrangement that both maintains a schema and
+reads it back from a store holds it under two provenances at once, and the taxonomy does not
+adjudicate: which one governs depends on whether the acceptance question is *what the schema says*
+or *what the schema currently is*. That is a limit of the five-way partition, and the partition is
+this paper's analysis rather than canon, ruled ineligible for minting for a related reason
+[DDD-dec-26].
 
 The missing slot is not a defect in the taxonomy. It is the finding: an act whose acceptance depends
-on ground the arrangement cannot reach has a floor, whatever the executor's capability (§6.1).
+on ground the arrangement cannot reach has a floor, whatever the executor's capability (§6.1). **That
+too is arrangement-relative** — ground missing to one arrangement is available to another that can
+run the search, and the floor moves with it [DDD-floor-02, projected].
 
 ### 8.2 Commitments, by level
 
@@ -915,10 +1002,20 @@ computed per capability rather than per act [DDD-cost-12].
 
 ### 8.5 What the walk exposes, and what it predicts
 
-Two escapes, both invisible to the arrangement's own instruments: the library default on uncovered
-countries, and the un-normalised-form question that nothing in the arrangement asks. Both are
-consequential, neither is governed, and the framework predicts that both surface as ungoverned
-failure modes and as design-review findings [DDD-frame-04].
+Two **candidate** escapes, both invisible to the arrangement's own instruments as described: the
+library default on uncovered countries, and the un-normalised-form question that nothing in the
+arrangement asks. Both are consequential and neither is governed by anything the walk found, and the
+framework predicts that escapes of this kind surface as ungoverned failure modes and as
+design-review findings [DDD-frame-04, projected].
+
+**(analysis)** *Candidate*, because the review's objection is correct and the framework's own
+vocabulary makes it: an escape is a property of an arrangement, not of an outcome, so a walk that
+did not look everywhere has not established one. The un-normalised-form question is reachable by
+code search, by contract tests, by telemetry on the existing endpoint, or by asking the consuming
+teams — and an arrangement that does any of those has ground the walk assumed missing. What the walk
+actually shows is weaker and still worth having: **the arrangement's declared instruments do not ask
+either question**, and nothing in its ledger would record that they went unasked. Whether a wider
+search reaches them is exactly the investigation §8.1 says each provenance assignment needs.
 
 The remedy the framework recommends is not more capability. It is declaring the determinables — the
 uncovered-country behaviour and the preservation question become decisions once the arrangement
@@ -1020,6 +1117,48 @@ identity persistence held constant [DDD-hyp-05, notes].
 **(analysis)** The design below is the paper's proposal; the preregistration artefact belongs to
 the study that owns the hypothesis set, and is referenced here rather than asserted.
 
+#### The first study is not a comparison
+
+The external review's finding was that the five hypotheses are **not yet study-ready**, and it is
+correct. H1 bundles evaluability, feedback speed, feedback density, ground access, checker cost and
+retry cost into one prediction. H2 bundles delayed consequences, evaluator disagreement, criterion
+drift, tacit knowledge and legitimacy. Difficulty and resources are invoked as controls with no
+operational definition. Each hypothesis is therefore **a research programme rather than a study**,
+and each needs decomposing into preregistered pieces before any of it is run.
+
+**And none of it can be run first.** Every dependent variable in the design below is read through
+the framework's own coding scheme: an arrangement's commitments are coded by level, its ground by
+provenance, its predicates by closure rung, its escapes by structured review. If two competent
+coders do not agree on those codes, every downstream comparison measures the coders. **The first
+study is therefore an instrument study, not a comparison**, and it has to come first:
+
+**Study 0 — coding reliability and predictive validity of the framework's coding scheme.**
+Independent coders, blind to each other and to the hypotheses, code a corpus of real arrangement-task
+pairs on five dimensions: commitment level per determinable [term:commitment-level, draft]; ground
+provenance (§2.4, this paper's analysis and not canon); closure rung per predicate (§5.2); discharge
+mode per resolution; and accountability elements present [DDD-frame-08, projected]. Reported:
+inter-rater agreement **per dimension, separately rather than pooled**, since a scheme can be
+reliable on closure and unreliable on discharge, and a pooled figure would hide exactly that. Then,
+on the codes that survive: whether they predict anything a task-only description does not.
+
+Two things follow, and both are uncomfortable for the framework.
+
+*The escaped-decision count is circular until Study 0 passes.* §9's dependent variables include
+"escaped-decision count found by structured design review", where the review uses this framework's
+criterion. A count produced by the framework cannot also be evidence for it. The count is usable
+only as an *inter-rater* quantity — do independent reviewers find the same escapes — until an
+independent criterion exists, and the paper does not have one.
+
+*The umbrella prediction's failure would not falsify the ontology.* If arrangement-level variables
+carry no more predictive weight than executor kind [DDD-frame-07, projected], what fails is the
+comparative-advantage prediction. The vocabulary — source separated from assurance, filing from
+delivery, executor from principal — could still be the right way to describe arrangements while
+predicting nothing about which one wins. **The framework's descriptive and predictive claims are
+separately falsifiable, and only the predictive ones are what §9 tests.** The review made this
+point and the paper had not.
+
+#### The comparative design, once the instrument holds
+
 *Unit of analysis.* The arrangement-task pair, never the actor. An arrangement is specified by its
 executor, its commitments by level, its ground channels, its verification mechanisms, its reviewers
 and its accountable principal (§2.5).
@@ -1055,8 +1194,8 @@ with the correction that killed them. IDs are never reused and retired claims ar
 > producer-independence under verification; generation may still require whatever capability the
 > search demands. [DDD-frame-09, **retired**]
 
-What survives is the scoped result of §5.4: producer identity is not necessary *for the checked
-property and nothing more* [DDD-frame-05]. The retirement is the difference between those two
+What survives is the scoped claim of §5.4, itself `projected`: producer identity is not necessary
+*for the checked property and nothing more* [DDD-frame-05, projected]. The retirement is the difference between those two
 statements, and the difference is the whole of §5.3.
 
 > **RETIRED — "a better decomposition destroys demand."** Cheaper parts were purchased by a
@@ -1142,7 +1281,7 @@ enumeration is `projected` [DDD-frame-01].
 The framework indexes both questions (§6.3) and, on the closing region only, measures the second
 (§4.4). It does not claim their results as instances of its own.
 
-**Formal verification and proof-carrying systems.** The producer-independence result (§5.4) is the
+**Formal verification and proof-carrying systems.** The producer-independence claim (§5.4) is the
 framework's statement of what a sound check buys, deliberately narrowed to the checked property
 [DDD-frame-05, projected]. The literature's own scope conditions — soundness, ground completeness,
 checker legitimacy — are carried inside the claim rather than assumed away.
@@ -1343,8 +1482,11 @@ A consequential choice becomes easy, hard, checkable, delegable or judgment-heav
 what the arrangement can observe, what commitments it already contains, what acceptance relation it
 must satisfy, what tolerance it declares, and what assurance is required.
 
-That is the missing parameter. It is not a new species name for the determiner. It is the
-arrangement through which determination is produced and governed [DDD-frame-01].
+That relativity is what the index names. It is not a new species name for the determiner, and it is
+not a parameter this paper discovered: the arrangement through which determination is produced and
+governed is the unit distributed cognition, joint cognitive systems and systems-theoretic safety
+already work in (§11). What the index adds is that the arrangement's coordinates can be enumerated
+and moved one at a time [DDD-frame-01, projected].
 
 Once the arrangement is explicit, several distinctions sharpen. A commitment may attach to an
 outcome, a policy or a principal, and the three compose [DDD-frame-02]. A resolution's source is
@@ -1363,7 +1505,8 @@ claims rather than either alone: every completed act's demand is discharged by o
 [DDD-frame-15], and discharge is act-indexed, so governance never chooses whether demand is
 supplied, only by what [DDD-frame-16].
 
-And its strongest result is relational:
+And its most load-bearing proposal is relational — a proposal, with a falsifier, and without
+evidence:
 
 > **The judgment floor is relational: irreducibility is a property of the indexed relation ⟨task,
 > ground, acceptance relation, tolerance, arrangement, assurance⟩, not of the task alone …**
@@ -1374,9 +1517,13 @@ from generation cost; that conservation on the closing region is the chain rule;
 exists exactly where the acceptance predicate closes; that the parts of a decomposition become
 trivial only when the decomposition already encodes the verdict. Projected, with falsifiers and
 without evidence: the index itself, the commitment levels, the discharge chain, the relational
-floor, the accountability relation, and every one of the five hypotheses. This paper states a
-framework whose central claims are proposals, and the honest form of that statement is this
-sentence rather than a hedge distributed through the argument.
+floor, the accountability relation, and every one of the five hypotheses. **Every claim in the first
+list is `formal`** — arithmetic, or a derivation from it — so what is settled here is arithmetic, and
+the modelling claims that give the arithmetic its meaning are all in the second list. **And
+`established` in this graph means internally argued and unchallenged, not externally validated;
+nothing in either list has been checked against the world.** This paper states a framework whose
+central claims are proposals, and the honest form of that statement is these sentences rather than a
+hedge distributed through the argument.
 
 The empirical question is not whether models replace people wherever a predicate closes. It is how
 comparative advantage shifts as operational evaluability, generation cost, ground access, feedback
@@ -1385,11 +1532,13 @@ falsification, and it matches engineering practice, where the practical winner i
 isolated actor and usually a composition of commitments, generators, checks, reviewers and
 principals.
 
-Decision-Driven Design is the engineering corpus from which this program was abstracted. Its value
-is not that it proves a universal conservation principle or an exact boundary between kinds of
-determiner. Its value is that it makes consequential choices auditable: where they are resolved,
-what they are resolved against, how they are checked, who answers for them, and which ones have
-been left to accident.
+Decision-Driven Design is the engineering corpus from which this programme was abstracted. Its aim
+is not to prove a universal conservation principle or an exact boundary between kinds of determiner,
+and it has proved neither. Its aim is to make consequential choices auditable: where they are
+resolved, what they are resolved against, how they are checked, who answers for them, and which ones
+have been left to accident. **Whether the vocabulary offered here does that better than the
+vocabularies it was assembled from is the open question**, and §11 names the ones it was assembled
+from.
 
 ---
 

@@ -180,7 +180,7 @@ Claim node, stated with its falsifier per convention:
 > or tool maintenance exceeds the audit cost it replaces. **What breaks:** nothing in `core/` — the
 > tool is a projection; if it fails, the discipline reverts to convention and grep.
 
-**Paper A** (*The Missing Parameter: Actor-Indexed Determination*) is not a paper on this roadmap. It
+**Paper A** (*Actor-Indexed Determination*) is not a paper on this roadmap. It
 is the program's conceptual material. The foundation-revision document is quarried, not completed:
 its claim-status table and hypothesis structure move into `meta/`; its manuscript prose waits. A
 synthesis paper may exist eventually — written last, organising results rather than proposing
