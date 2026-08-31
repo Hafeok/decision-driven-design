@@ -69,7 +69,24 @@ upstream:
   # basis-loss, EXACTLY ONE content-drift — term:floor, daf43e07... -> 917f7e4d..., both hashes
   # as predicted — 0 status movement, the one standing W7 unchanged. The prediction held. No
   # pins added: v5.9.0 mints nothing.
-  ref: v5.9.0                       # tag, never a branch
+  # Advanced v5.9.0 -> v5.12.0 at the Paper A revision (2026-08-30), on Emil's GATE 3 ruling;
+  # the advance is DDD-dec-34 here. Three releases at once, because the pin was HELD at v5.9.0 by
+  # ruling so canon could move without dragging the projection — v5.10.0 (Phase 1a), v5.11.0
+  # (retirement provenance) and v5.12.0 (definitions and the store collision) all landed against
+  # a projection deliberately left behind. Predicted firing, stated before it ran and committed
+  # ahead of the operation at meta/sessions/2026-08-30-paper-a-revision/gate4-prediction.md:
+  # E12 0 - W5 exactly 1 (DDD-frame-15, projected -> retired) - W6 exactly 6 (DDD-cost-09 region;
+  # DDD-delivery-01 and DDD-frame-02 statement; DDD-frame-15 statement and region; term:delivery
+  # and term:residual-discretion canonical_md) - W7 1, unchanged. Verified at the bump, by
+  # advancing ref first and re-instrumenting the hashes second so the firing could be observed
+  # rather than assumed: 67 pins resolved, 1 basis-loss, 6 content-drift, 1 shadowed id, every id
+  # and every hash the one written down beforehand. The prediction held in every limb. After
+  # re-instrumentation: 71 pins, 0 basis-loss, 0 content-drift, 1 shadowed id.
+  # FOUR PINS ADDED, and the reason is a finding rather than housekeeping: DDD-measure-06 retires
+  # at v5.12.0 and fired NOTHING, because W5 only sees ids that are pinned. Paper A asserted it as
+  # **established** in three places and both of its checkers passed those lines. The gap was found
+  # by a sweep written for inline status assertions, now shipped as papers/paper-a/check-status.py.
+  ref: v5.12.0                      # tag, never a branch
   pins:
     # basis claims for DDD-dec-04 (the split decision itself rests on these)
     - id: DDD-frame-01
@@ -123,7 +140,7 @@ upstream:
     # the assurance-locus conversion core/13 §5's amortisation corollary rests on (GATE B carve)
     - id: DDD-cost-09
       status_at_pin: projected
-      content_hash: sha256:fecb317fb0b76a969b7f8f5eebdbfc94ea628faf75deb83142de7efb0dd4c013
+      content_hash: sha256:f6cc24f0f406dea4f43785106310669ed81a016202165c0d1c739df31b091ffe
     # the routing layer core/15 exercises and core/14's register consumes (Wave 2, 2026-08-10)
     - id: term:capability
       status_at_pin: settled
@@ -163,10 +180,10 @@ upstream:
     # 2026-08-15; staged with the v5.5.0 advance, DDD-dec-18)
     - id: term:delivery
       status_at_pin: draft
-      content_hash: sha256:1e7b2e4d5df5dad2869d966abe94f5d5677a4a2f4d3e0ff35356534f382ecac2
+      content_hash: sha256:c56909e53c93d1cfbf857df605df91607e75176ca146f07731386ef9d166e46e
     - id: DDD-delivery-01
       status_at_pin: projected
-      content_hash: sha256:67377ef2294de814afd95026f2e7ad0bdb768516696395d05f1ed1645aa6d804
+      content_hash: sha256:1340d483e45ad5db10acb754aa335453f719f01e8126c3ee0f028f8c5545a73d
     # Basis added by the freight session (2026-08-17): four upstream objects gained basedOn
     # edges from decisions filed here — DDD-dec-20 (the session convention), DDD-dec-22 (the
     # pin/shadow instrumentation) and DDD-dec-23 (ruling 16). Found by the GATE 6 basis-impact
@@ -242,7 +259,7 @@ upstream:
       content_hash: sha256:5c146793529821d24b0b45137f1d8e7893acd8c6392b3694d7e145078c9d5e3e
     - id: DDD-frame-02
       status_at_pin: projected
-      content_hash: sha256:f45492eedfaf5dc3e0a92776fb71b61639ac1941486816200b01894ba807f04a
+      content_hash: sha256:0002f60b446fc9d6a5561f21e61fb10472b3b209a416b4ed10216e37721fdbb3
     - id: DDD-frame-13
       status_at_pin: projected
       content_hash: sha256:4add58e0f47c0ff22bb752d6b78aef7f591a14b17d610cdb06677439e0b33276
@@ -274,8 +291,8 @@ upstream:
       status_at_pin: settled
       content_hash: sha256:b3d940d3167c8e9e18667a224a13d98bad17509844930b3be9e49834014aa19e
     - id: DDD-frame-15
-      status_at_pin: projected
-      content_hash: sha256:6d14509db3daaaf1773b6e6d24b6d6b742da2c7fa4f5f6bf18f2286a970df3f9
+      status_at_pin: retired
+      content_hash: sha256:2a65878dfdd95895ef91819fe4545ed125e542346eae2ed9b5e91e50e517d58b
     - id: DDD-frame-04
       status_at_pin: projected
       content_hash: sha256:eec0a4b49c4f996f68a8b83281e0990b829efd318964f803a16452fb4d32a0d3
@@ -304,4 +321,25 @@ upstream:
       content_hash: sha256:7714da9eb209a6839b862a36c0aecd48d411f6af18cab4b1acaa7a1dea032167
     - id: term:residual-discretion
       status_at_pin: draft
-      content_hash: sha256:77284b1467c8a100654279d5a3c86970c791badeb1d891e60f9618e13dc1541e
+      content_hash: sha256:9bbe31e3a02fd3cee70ad42d560268943cd136aa1c0d389ec081d7af0c579340
+    # [PROPOSED] Paper A revision (2026-08-30), added at the v5.12.0 advance. Four nodes the
+    # manuscript leans on that were NOT pinned, found by the Gate 1 status sweep rather than by
+    # the instrument: DDD-measure-06 retires at v5.12.0 and fired NOTHING, because W5 only sees
+    # ids that are pinned. The paper asserted it as **established** in three places and both
+    # existing checkers passed those lines. That is DDD-agent-01 about this repository's own
+    # apparatus — a basis cited without a pin is a basis that can move silently — and the four
+    # are pinned here so the next movement is instrumented rather than swept for. They could
+    # not be pinned before this advance: DDD-frame-17, DDD-measure-16 and DDD-measure-17 do not
+    # exist at v5.9.0 and pinning them there would have fired E12.
+    - id: DDD-frame-17
+      status_at_pin: projected
+      content_hash: sha256:bf8d2c699946fd388ee10af09a0e2441fde92d5d69c8e5e847a2e369ca23248d
+    - id: DDD-measure-06
+      status_at_pin: retired
+      content_hash: sha256:a7ae6e7ad5ccd0afd3bc35c5fd5ce061532b4f99f4d352464f9cc5b78ee01c39
+    - id: DDD-measure-16
+      status_at_pin: established
+      content_hash: sha256:2d763d1adf9e1c68c88d1f5c3e30550a5079e274d84e688c31f5f5bb51f1d94e
+    - id: DDD-measure-17
+      status_at_pin: projected
+      content_hash: sha256:164a18072145bc4a0cdb3c6e1ca8890fc64c1b36396c73be5ca8bd45c66114e5

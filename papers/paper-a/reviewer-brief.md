@@ -1,4 +1,4 @@
-# Reviewer brief — *The Missing Parameter: Actor-Indexed Determination*
+# Reviewer brief — *Actor-Indexed Determination*
 
 *Companion to the paper. One page. The first brief in this series was written for an information
 theorist, and asked whether an identification was sound. This one is written for the framework's

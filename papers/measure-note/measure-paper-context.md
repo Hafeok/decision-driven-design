@@ -37,7 +37,8 @@ is as long as its booked content, reported honestly, with ceiling questions take
 padding, and no trimming of reviewed content to pay for booked additions. When a figure lands past
 what was last accepted, raise it as a question rather than let it drift.
 
-**Relationship to Paper A.** Paper A (*The Missing Parameter: Actor-Indexed Determination*) states
+**Relationship to Paper A.** Paper A (*Actor-Indexed Determination*; retitled at its 2026-08-30
+revision from *The Missing Parameter*, which asserted an absence its survey did not support) states
 the actor-general principle and cites this result rather than deriving it. This note cites A for
 the framework and does not restate it.
 

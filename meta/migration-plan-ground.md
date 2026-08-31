@@ -29,11 +29,21 @@ projection: **380 (67%) need no edit; 187 are bare and need re-expression.**
 
 | Wave | Content | Size | Pins |
 |---|---|---|---|
-| **W1** | S5 → *deployment distribution* | 87 mutable, 29 in merged papers | `term:verdict` unpinned |
+| **W1** | S5 → *deployment distribution* | 87 mutable, **31** in the two manuscripts (was recorded as 29) | `term:verdict` unpinned |
 | **W2** | 11 registry entries + 11 embeds + upstream `core/` bare prose + **`apparatus/`** | 11 + 11 + 65 | **7 fire W6** |
 | **W3** | projections, applications, papers, downstream `core/` | 122 bare | 0 |
 | **W4** | `product-cli` | 1,203 | ruled separately |
 | **never** | U (261, of which **142 identifiers**) + immutable (260) | 521 | — |
+
+**W1's counts, corrected again by the Paper A revision (2026-08-30).** Against
+`w0-full-v2.json`: S5 totals **97**, of which 9 are immutable, leaving **88 mutable** corpus-wide
+and **87** excluding `product-cli`. The two merged manuscripts hold **31** of those (measure note
+26, Paper A 5) — **35%, not 88%**, and the row above is corrected from 29. Of those 31, Emil's Gate 1
+rulings put **15 in scope for that session and 16 out of it**: generated or hand-carried node-table
+rows, passages quoting a live claim verbatim while canon still says `ground distribution`, one
+filename, and the three occurrences ruled ambiguous between S5 and S1. **On those rulings W1's
+remaining surface is 73 of 88, not zero** — the executed figure is recorded at that session's close
+and supersedes this line if it differs.
 
 **Corrected counts, after W0 and W0-bis:** S2 1,529 · S1 **567** · S3 369 · U 261 · S5 97 · S4 **22**.
 Canon is **S1-led** (182 S1 : 154 S3) and **canon's S4 is mechanically zero.**
@@ -106,3 +116,27 @@ Three mechanisms, all found by reading rows the instrument had already scored:
    per-rule precision, never one figure for a table. A windowed rule earns a sample of its own.**
 
 **This closes two mechanisms, not the possibility of a rare third.**
+
+### A third, found by the Paper A revision and added on Emil's ruling
+
+> **Classification data cites content, never position.**
+
+The W0 classification's line numbers for `papers/paper-a/paper-a.md` are stale, and not by error:
+the audit's extract was taken on 2026-08-24, and the item-4 session regenerated that paper's
+Appendix A the next day with a `kind` column, moving every appendix row down by eleven lines. Three
+of the five S5 rows in that file therefore point at the wrong lines — `1365`, `1371`, `1409` in the
+extract against `1376`, `1382`, `1420` at head.
+
+Nothing was lost, because a sense assignment travels with the occurrence rather than with the line.
+But **a migration executed by line number would have edited three wrong rows**, and the three wrong
+rows were all inside a generated appendix, where an edit forges agreement with the graph. The
+failure would have been silent in the only place the corpus cannot afford silence.
+
+The rule is cheap: an occurrence is addressed by its file plus a content anchor, and a line number
+is a convenience for a reader rather than an instruction to an instrument. `w1-enumerate.py`
+(`meta/sessions/2026-08-30-paper-a-revision/`) carries both numbers and reconciles neither silently
+— it fails loudly when a manuscript has moved under the enumeration, which is how this was found.
+
+**Corollary, and it is the wave-planning fact:** a generated table's rows are not the wave's to
+move at all. They carry canon's words and they move when canon moves. W1's own scope shrinks once
+that is applied — see the counts correction below.

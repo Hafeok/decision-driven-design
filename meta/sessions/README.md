@@ -34,3 +34,4 @@ session's later work exceeds the committed prompt, the excess is visible as exce
 | `2026-08-24-ground-audit/` | Interactive audit — Phase 1b: the ground audit (D-1…D-4); changed nothing. Output: `meta/ground-audit-2026-08-24.md` |
 | `2026-08-25-item4/` | Interactive canon curation — item 4: status, kind, the validator and the appendix (I-1…I-4) |
 | `2026-08-27-ground-migration/` | Interactive canon curation with an execution phase — item 5: the ground migration, on the ground audit's rulings (G1…G6) |
+| `2026-08-30-paper-a-revision/` | Interactive paper revision — Paper A answers its external review, advances its pin to `v5.12.0`, and carries W1 (R-1…R-6) |
