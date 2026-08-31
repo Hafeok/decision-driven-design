@@ -98,8 +98,19 @@ protected by one session's reading and by nothing else, and a later session rena
 would notice. The note is also three releases behind on its own pin.
 
 The three scripts are already ref-parameterised and manuscript-parameterised, so pointing them at
-the note is a small session rather than a new instrument. **It should happen before the note's pin
-advances**, not after: the checkers are what make an advance observable.
+the note is a small session rather than a new instrument.
+
+**Ruled at GATE 4 (Emil): the checkers point at the note before the note's pin next advances**, and
+the reason is a rule rather than a preference for this note:
+
+> **An advance without instruments is unobservable, and an unobservable advance is presumed
+> discharge at the pin layer.**
+
+That is the same shape as `term:presumed-discharge` one layer up: the artefact recording a verified
+advance is identical to the artefact recording an unverified one, because a green run and no run
+produce the same file. The two-stage verification this session used — advance the ref, observe the
+firing, then re-instrument — requires instruments to observe with. Without them the note's next pin
+advance is a bump, and a bump is what the pin discipline exists to prevent.
 
 ---
 

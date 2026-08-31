@@ -16,10 +16,13 @@ argument.*
 
 ## Abstract
 
-Several influential accounts of complexity, control and verification describe where the work of
-determination resides while holding the determiner largely fixed. That omission has become
+Several influential accounts of complexity allocation — Ashby's regulator, Brooks's essential and
+accidental complexity, Tesler's conservation, Meyer's contracts — describe where the work of
+determination resides while holding the determiner largely fixed. Holding it fixed has become
 consequential, because engineered systems now combine authored procedures, learned policies, human
-judgment, mechanical checks and institutional principals inside one arrangement.
+judgment, mechanical checks and institutional principals inside one arrangement. **Other
+literatures did not hold it fixed** (§11), and this paper's contribution is stated against them
+rather than against their absence.
 
 We state **actor-indexed determination**: unresolved determination is relative not to a task alone
 but to a tuple of task, accessible ground, acceptance relation, declared tolerance, system
@@ -30,10 +33,10 @@ consequential resolution that no adequate source-and-assurance combination gover
 unacceptable outcomes are not reliably detected.
 
 Two propositions give the framework its shape, and both are **proposals with declared falsifiers
-rather than findings**. Every completed act's determination demand is discharged — by a filed
-decision, an actor's judgment, an arrangement default, or an uncontrolled draw — so **demand is
-never unmet, only ungoverned**; and discharge is act-indexed, so governance never chooses whether
-demand is supplied, only by what. On the region where the acceptance predicate closes, demand is
+rather than findings**. At every completed act, each outcome-relevant alternative is discharged in
+exactly one of three ways — predetermined, exercised, or drawn — so **demand is never unmet, only
+ungoverned**; and discharge is act-indexed, so governance never chooses whether demand is supplied,
+only by what. On the region where the acceptance predicate closes, demand is
 identified with the entropy of the verdict, and on that identification conservation is the chain
 rule of entropy. The identification is a modelling claim and it is unproven; the chain rule is
 Shannon's and is certain and empty on its own. **The construction has three conditions, not one** —
@@ -386,6 +389,17 @@ answers are not — with the important qualification that what training buys is 
 *capacity* [DDD-cost-20, projected]. Deploying the same weights behind a stricter acceptance check
 changes the arrangement's commitments without changing the model at all, which is §2.5's point
 arriving in a concrete form.
+
+**This is the case the external review used to break the paper's earlier discharge list, and it is
+worth showing the repair on it.** A trained model was, on that list, policy commitment, judgment
+and standing encoded supply at once — three classifications from one deployment, which is a
+partition failing. The repair is that the three were never on one axis. On **commitment level** the
+model is policy-committed [term:commitment-level, draft]. On **discharge** it is predetermined,
+where the standing configuration and the ground jointly fix the output, and exercised or drawn where
+they do not — which depends on the decode and not on the weights (§4.1) [DDD-frame-17, projected].
+On **act-indexation** its supply is standing, inherited per act [DDD-frame-16, projected]. All three
+readings are true simultaneously and none competes with another, because they answer different
+questions. The earlier list read as competition because it drew values from all three axes at once.
 
 *An escalation path.* An arrangement that commits at outcome level for familiar cases and delegates
 unfamiliar ones to a named principal has committed at two levels simultaneously. This is the
@@ -964,7 +978,7 @@ The graph carries **two counts** of accountability's elements, and the external 
 that the paper used both without supplying the mapping. The claim above names five — attribution,
 persistent principal, authority linkage, stake, sanction path. The canonical term names three: *"the
 attribution of the determination, a persistent answerable party, and a borne consequence"*
-[term:accountability, settled; reproduced in full in Appendix A]. The mapping is not one-to-one and
+[term:accountability, settled; reproduced in full in the supplement]. The mapping is not one-to-one and
 the difference is not cosmetic.
 
 | `term:accountability` (three, **settled**) | `DDD-frame-08` (five, **projected**) | Relation |
@@ -1149,8 +1163,9 @@ The five hypotheses below are **predictions, not findings**. Every one is `proje
 graph, every one carries a declared falsifier, **every one's evidence field is empty**, and every
 one is owned by a study that has not been run. The emptiness is discipline, not oversight: the
 framework files a hypothesis at the strength its falsifier gives it and does not backfill evidence
-from the corpus that suggested it. Appendix A shows the status and the empty evidence column for
-all six nodes so that no reader has to take this paragraph's word for it.
+from the corpus that suggested it. The supplement reproduces the status and the empty evidence
+column for all six nodes, straight from the graph, so that no reader has to take this paragraph's
+word for it.
 
 They replace binary human-versus-model predictions with graded predictions about **arrangements**
 (§2.5). Each names a gradient, not a boundary.
