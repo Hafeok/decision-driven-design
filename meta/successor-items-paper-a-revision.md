@@ -148,3 +148,33 @@ Hoffman & Woods's *Beyond Simon's Slice*, and records no conservation law from *
 volume itself could not be obtained. **Nothing in the paper rests on it.**
 
 Anyone with the book in hand can settle it in a minute, and it is a real finding either way.
+
+---
+
+## 7. The abstract is an uninstrumented surface, and the finding generalises
+
+**Recorded at GATE 5 (Emil): note the general form, because it will recur.**
+
+At this session's close — three checkers green, every validator clean — the abstract still carried
+the four-mode enumeration retired at `v5.10`, after §4.1 had been repaired to carry its successor.
+Nothing caught it but reading the paper from the top.
+
+> **Instruments cover the surfaces someone thought to instrument.** The abstract is the surface
+> nobody thinks to instrument, because it is *prose about the paper* rather than a citation *in* it
+> — so it inherits no citation's protection while carrying more of the reader's warrant than any
+> single citation does.
+
+**What this item is not.** It is not a proposal for a fourth checker. An instrument that parsed an
+abstract for claims it does not cite would be guessing at meaning rather than checking
+correspondence — a different kind of tool, and a worse one, since its false negatives would be
+indistinguishable from a clean run. The three checkers all verify correspondence against the graph;
+that is what makes them trustworthy and it is also what bounds them.
+
+**What it is.** A standing instruction for any session that repairs a projection against a moved
+graph: **the abstract and the conclusion are repaired last and read whole**, because they restate
+claims without citing them, and a restatement inherits nothing from the citation it paraphrases.
+The full manifest entry is at `meta/sessions/2026-08-30-paper-a-revision/manifest.md` §5.3, with the
+sibling finding — an unpinned node moving silently — at §5.1.
+
+Whether this belongs in `meta/way-of-working.md` as a projection rule rather than sitting in a
+session's successor list is a question for whoever next touches that document. It is not filed here.

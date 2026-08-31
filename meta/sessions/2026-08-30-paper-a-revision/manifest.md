@@ -85,14 +85,51 @@ checkers passed all three prose lines calling it `established`, because none is 
 and none is an appendix row. Found by a sweep written at GATE 1, now shipped as
 `papers/paper-a/check-status.py`. Four nodes pinned in consequence.
 
-**5.2 The corroboration check fired on a claim that would have helped us.** A search result
+**5.2 Two checks fired against claims that would have helped us, and that is the pattern worth
+keeping.** The first is the corroboration check. A search result
 attributed a *"Law of Conservation of Complexity"* to Woods & Hollnagel's *Patterns*. Had it held it
 would have given the framework's own conservation principle a named precedent inside the literature
 the review says we ignore. **It could not be corroborated in any primary source and is used
 nowhere.** A verification rule that only ever removes inconvenient claims is not a verification
 rule; this is the case worth having on record.
 
-**5.3 A count in the session's own charter did not reconcile.** The charter said 88% of W1 lives in
+The second fired on this session's own writing. A draft of `response-to-review.md` opened
+*"nineteen conceded or repaired, three defended"* — a count reached by treating three propositions
+the review **praised** as objections we had defended. It would have flattered us. Corrected during
+drafting to twenty-one conceded and **one** defended, with §5 renamed *What we decline to give up*
+and told plainly that those are not defences. **Twice in one session a check fired against something
+that would have helped**, which is the only evidence that the checks are not decorative.
+
+**5.3 The abstract carried a retired claim past three green checkers, and this is the argument for
+the full read.** At GATE 5, with `check-quotations.py`, `check-status.py` and `check-appendix.py`
+all reporting zero and every repository validator clean, the abstract still read *"discharged — by a
+filed decision, an actor's judgment, an arrangement default, or an uncontrolled draw"*. That
+enumeration was retired at `v5.10` and §4.1 had already been repaired to carry its successor. **The
+paper's most-read paragraph was projecting a claim the graph had killed**, and nothing caught it but
+reading the paper from the top.
+
+*Why no instrument saw it.* The abstract is not a block quotation, so the quotation checker does not
+read it. It carries no citation, so the status checker has nothing to compare. It is not an appendix
+row. **Three instruments, three surfaces, and the sentence most readers will actually read sits
+outside all of them.**
+
+**The general form, stated because it will recur:**
+
+> **Instruments cover the surfaces someone thought to instrument.** The abstract is the surface
+> nobody thinks to instrument, because it is *prose about the paper* rather than a citation *in* it
+> — so it inherits no citation's protection while carrying more of the reader's warrant than any
+> single citation does.
+
+This is the **second** unwatched-surface finding of this session and it is the same shape as the
+first. §5.1's was an unpinned node moving silently; this one is unciting prose asserting silently.
+Both were found by a human-scale pass rather than by a checker, and both were found only because
+someone went looking at a layer the instruments do not describe. A third checker was the answer to
+the first. **A fourth is not obviously the answer to this one** — an instrument that parsed the
+abstract for claims it does not cite would be guessing at meaning rather than checking
+correspondence, which is a different kind of tool and a worse one. The honest remedy is the full
+read, and its cost is now known.
+
+**5.4 A count in the session's own charter did not reconcile.** The charter said 88% of W1 lives in
 the two papers. Against the committed classification, **88 is the corpus-wide mutable total and the
 two manuscripts hold 31 of it — 35%.** The migration seed is corrected, and W1's remaining surface
 is **73 of 88, not zero.**
