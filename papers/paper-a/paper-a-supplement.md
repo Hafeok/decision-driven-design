@@ -36,8 +36,11 @@ it in one step. Two of the four quotations that broke at the advance are quotati
 review asked the paper to stop overstating, so the repair paid a debt the paper already owed.
 
 The companion measure note — `papers/measure-note/measure-note.md` in `decision-driven-design` — is
-cited by path at commit `d6bc1a1`, which carries its discharge section and the vocabulary rename
-described in S5. The note is absent from `v0.4.0` and from every earlier downstream tag, so it
+cited by path at commit `2b26f25`, which carries its discharge section and the vocabulary rename
+described in S5. **That commit is this session's own** — Paper A pinned the note at `aa7e135`, and
+W1 edited the note, so the pin had to advance to a commit this revision created. The alternative was
+to keep citing a commit whose prose says `ground distribution` while this paper's says
+`deployment distribution`, which would have been a citation that reads as current and is not. The note is absent from `v0.4.0` and from every earlier downstream tag, so it
 resolves at a commit rather than at a tag.
 
 ---
