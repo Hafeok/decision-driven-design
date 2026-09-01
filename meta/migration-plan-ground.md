@@ -140,3 +140,21 @@ is a convenience for a reader rather than an instruction to an instrument. `w1-e
 **Corollary, and it is the wave-planning fact:** a generated table's rows are not the wave's to
 move at all. They carry canon's words and they move when canon moves. W1's own scope shrinks once
 that is applied — see the counts correction below.
+
+### A fourth, found by the execution session and added on Emil's Gate 1 ruling
+
+> **A figure whose instrument was not committed is not reproducible, and the ledger should have
+> been carried rather than the number.**
+
+This plan's own headline — 380 qualified, 187 bare — was measured at the predecessor's GATE 4 and
+the instrument behind it never entered the record. The figure survived; the row list did not. The
+execution session had to rebuild the instrument (anchored, clause-clipped, its lexicon frozen
+after two warrant-disciplined revisions, per-rule precision reported), and the rebuilt instrument
+reads the same baseline as **389/178** — a nine-row divergence that can never be located row-wise,
+because there is nothing to locate it against. Ruled at the execution session's Gate 1: the
+committed instrument's ledger governs
+(`meta/sessions/2026-08-31-ground-migration-exec/g1-head-ledger.json`), 380/187 stands recorded as
+a prediction that did not verify, and hunting nine rows to make the old number true would be
+reconciling a divergence rather than recording it. The mechanism is the same class as the other
+three and was learned the same way: by an instrument's consumer, after the fact. **A count that
+matters ships with the instrument that counted it and the rows it counted, or it is prose.**

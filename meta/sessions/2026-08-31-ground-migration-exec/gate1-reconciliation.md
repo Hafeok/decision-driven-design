@@ -1,6 +1,22 @@
 # GATE 1 — the classification reconciled against head
 
-**Status: draft-pending-ruling.** Nothing in canon is touched by this gate.
+**Status: RULED (Emil, 2026-09-01).** Nothing in canon is touched by this gate.
+
+> **The ruling, recorded verbatim in substance:** (1) reconciliation and removal attributions
+> accepted as read. (3) **The frozen instrument's ledger governs**; 380/187 is recorded as a
+> prediction that did not verify; the nine-row divergence is a finding with a name — *a figure
+> whose instrument was not committed is not reproducible* — filed as the **fourth method
+> mechanism** in the seed. The 185≈187 coincidence stays flagged as coincidence: two independent
+> instruments landing two apart is not agreement. (2) The 80 proposed senses accepted; both
+> boundary cases and the two-row README divergence recorded rather than resolved — `ground by
+> provenance` is SR-4's territory and is not settled by a sense assignment. (4) Wave sizes
+> accepted, including W1's +1 — a row found by reconciliation is the reconciliation working;
+> booked. (5) **The 54 bare unbooked rows go to G5. The 134 unruled meta additions are out of
+> scope by name** — they are programme meta, and a migration that rewrites its own audit trail is
+> editing history; any of the 134 that is a live surface rather than a record is named
+> individually at G5 or stays as written. Carried into G2: the delivered/judgment/default trio was
+> cut rather than moved, so its shape survives in the corpus without its clearest instance —
+> **a replacement instance for that shape is selected deliberately at G2**.
 
 **Read at:** `actor-indexed-determination` `81f6929` (= annotated tag **`v5.12.0`**, verified — tag
 and branch head are the same commit) · `decision-driven-design` `d89ed55` plus this session's
