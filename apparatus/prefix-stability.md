@@ -101,7 +101,7 @@ adversarial ones:
 | random mix | 1312 (fails) | 557 ✓ |
 | realistic prefix | optimal ✓ | optimal ✓ |
 
-**Why the simple rule usually works anyway.** In a typical prefix, stable content *is* long (ground,
+**Why the simple rule usually works anyway.** In a typical prefix, stable content *is* long (delivered ground,
 a large corpus of settled decisions) and volatile content *is* short (the task). Rate and rate/length
 then agree, which is why ascending-rate looks right in practice and why the shipped INV-6 ordering
 (ground → decisions → task) is correct. **But the rule that holds in general is Smith's**, and any

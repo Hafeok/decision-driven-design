@@ -1,0 +1,3971 @@
+[
+ {
+  "repo": "upstream",
+  "path": "CLAUDE.md",
+  "sense": "S2",
+  "anchor": "ay removes claim nodes from the agent's ground, so later edits revert to model priors",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/CANON-PATCH-REGISTER.md",
+  "sense": "S3",
+  "anchor": "eads *during the act \u00b7 an actor reading ground*. Patch the row and add the split below",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/CANON-PATCH-REGISTER.md",
+  "sense": "S3",
+  "anchor": "| \u2014 | during the act | an actor reading ground | does not amortise \u00b7 walks out the doo",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/CANON-PATCH-REGISTER.md",
+  "sense": "S3",
+  "anchor": "| \u2014 | during the act | an actor reading ground, **with an accountable party named** |",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/measure-paper-context.md",
+  "sense": "S3",
+  "anchor": "| \u00a76 | Missing, poisoned, or overflowed ground | **The limit, stated in canon's own w",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/session-reconciliation-2026-08-16.md",
+  "sense": "S2",
+  "anchor": "n would have drafted against superseded ground. That indistinguishability is `term:pre",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/lineage-and-limits.md",
+  "sense": "S3",
+  "anchor": "is the **rigorous ancestor of poisoned ground**, and it has what we lack: theorems. F",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/lineage-and-limits.md",
+  "sense": "S3",
+  "anchor": "dependently. **Correction:** \"poisoned ground\" is **observability failure / estimator",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/lineage-and-limits.md",
+  "sense": "S3",
+  "anchor": "causes (missing / poisoned / overflowed ground). The existing literature already parti",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/lineage-and-limits.md",
+  "sense": "S3",
+  "anchor": "el* (a decision is made without correct ground iff the ground is absent, false, or unr",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/lineage-and-limits.md",
+  "sense": "S3",
+  "anchor": "is made without correct ground iff the ground is absent, false, or unresolved), and i",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/lineage-and-limits.md",
+  "sense": "S2",
+  "anchor": "k's irreducibility is about **where the ground is**, not about whether an answer can b",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/lineage-and-limits.md",
+  "sense": "S2",
+  "anchor": "ty is a conjunct of `term:closure`, and ground that an arrangement cannot reach is gro",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/lineage-and-limits.md",
+  "sense": "S2",
+  "anchor": "und that an arrangement cannot reach is ground its predicate cannot evaluate over. So",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/lineage-and-limits.md",
+  "sense": "S2",
+  "anchor": "does not supply the location. Dispersed ground with a closing predicate carries no flo",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/lineage-and-limits.md",
+  "sense": "S2",
+  "anchor": "on (Wittgenstein), in the dispersion of ground (Hayek), in the residue automation leav",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/lineage-and-limits.md",
+  "sense": "S3",
+  "anchor": "\u2014 *\"consuming your own prior output as ground creates uncorrectable error\"* \u2014 is corr",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/lineage-and-limits.md",
+  "sense": "S3",
+  "anchor": "hing. The honest statement: > Poisoned ground is a *family* of failures unified only",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/lineage-and-limits.md",
+  "sense": "S3",
+  "anchor": "fied only by **the actor's model of the ground > having diverged from the ground**. Th",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/lineage-and-limits.md",
+  "sense": "S3",
+  "anchor": "f the ground > having diverged from the ground**. The *direction* and *mechanism* of d",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/lineage-and-limits.md",
+  "sense": "S3",
+  "anchor": "of the placement question | | Poisoned ground | **Kalman** filter divergence; observa",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/reference-audit-2026-08-07.md",
+  "sense": "S3",
+  "anchor": "00`'s apparatus table rows for poisoned ground and the encode/verify split \u2192 R2). - **",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/reference-audit-2026-08-07.md",
+  "sense": "S3",
+  "anchor": "able row | EDITORIAL | | 79 | \"Poisoned ground \u2014 *corrupting what a determination read",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/reference-audit-2026-08-07.md",
+  "sense": "S3",
+  "anchor": "/verify split \u2014 *whether you author the ground a determination reads*\" | R2 | nowhere;",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/reference-audit-2026-08-07.md",
+  "sense": "S3",
+  "anchor": "res. \u2026 Counterintelligence had poisoned ground\" | R3/R2 | shared with rows 77 and 79 |",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/reference-audit-2026-08-07.md",
+  "sense": "S3",
+  "anchor": "6 | \"(The rigorous ancestor of poisoned ground.)\" | R2 | see `00`:79 | registry candid",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/reference-audit-2026-08-07.md",
+  "sense": "S3",
+  "anchor": "and note `09`'s reading (pre-resolving ground into retrieved context) is not obviousl",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/reference-audit-2026-08-07.md",
+  "sense": "S3",
+  "anchor": "obviously `00`'s reading (authoring the ground a determination reads); the promotion m",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/reference-audit-2026-08-07.md",
+  "sense": "S2",
+  "anchor": "ple (an actor's own prior output is not ground)\" | R2+R6 | nowhere \u2014 not in any contra",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/reference-audit-2026-08-07.md",
+  "sense": "S2",
+  "anchor": "| | 224 | \"own prior output consumed as ground (`closure-principle`)\" | R2 | `closure-",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/reference-audit-2026-08-07.md",
+  "sense": "S3",
+  "anchor": "e as denying single-point authorship of ground (`The Adversarial Ground`)\" | R2 | no d",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/reference-audit-2026-08-07.md",
+  "sense": "S3",
+  "anchor": "authorship of ground (`The Adversarial Ground`)\" | R2 | no document of that name exis",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/reference-audit-2026-08-07.md",
+  "sense": "S3",
+  "anchor": "RIAL | | 151, 153, 174 | \"both poisoned-ground attacks\" \u00b7 \"Autoimmune disease is poiso",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/reference-audit-2026-08-07.md",
+  "sense": "S3",
+  "anchor": "acks\" \u00b7 \"Autoimmune disease is poisoned ground\" \u00b7 \"a genuine Polanyi floor \u2026 both pois",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/reference-audit-2026-08-07.md",
+  "sense": "S3",
+  "anchor": "a genuine Polanyi floor \u2026 both poisoned-ground attacks\" | R2 / R3 | poisoned ground: s",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/reference-audit-2026-08-07.md",
+  "sense": "S3",
+  "anchor": "undefined load-bearing terms (poisoned ground, encode/verify split, compound, granula",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/reference-audit-2026-08-07.md",
+  "sense": "S3",
+  "anchor": "r than choosing. **C1 \u2014 `term:poisoned-ground`** (R2; sites `00`:79/221, `04`:496, `1",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/reference-audit-2026-08-07.md",
+  "sense": "S3",
+  "anchor": "across all sites. Draft: > **Poisoned ground** \u2014 ground that is present but false: t",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/reference-audit-2026-08-07.md",
+  "sense": "S3",
+  "anchor": "sites. Draft: > **Poisoned ground** \u2014 ground that is present but false: the substrat",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/reference-audit-2026-08-07.md",
+  "sense": "S3",
+  "anchor": "ll authority. The logic is > sound; the ground is the attack surface. **C2 \u2014 `term:en",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/reference-audit-2026-08-07.md",
+  "sense": "S3",
+  "anchor": "s *authorship* (\"whether you author the ground a determination reads\"); `09`:216 reads",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/reference-audit-2026-08-07.md",
+  "sense": "S3",
+  "anchor": "216 reads it as *allocation* (\"converts ground into encoded specification, leaving the",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/reference-audit-2026-08-07.md",
+  "sense": "S2",
+  "anchor": "nation's demand between pre-resolving > ground into the encoded store before the act a",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/reference-audit-2026-08-07.md",
+  "sense": "S2",
+  "anchor": "> An actor's **own prior output is not ground**: consuming it as ground substitutes t",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/reference-audit-2026-08-07.md",
+  "sense": "S3",
+  "anchor": "output is not ground**: consuming it as ground substitutes the actor's > model of the",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/reference-audit-2026-08-07.md",
+  "sense": "S3",
+  "anchor": "world \u2014 the reflexive case of poisoned ground. **C5 \u2014 `term:granularity-bound`** (R2",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/reference-audit-2026-08-07.md",
+  "sense": "S3",
+  "anchor": "een decomposed decisions* | | Poisoned ground | *corrupting what a determination read",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/reference-audit-2026-08-07.md",
+  "sense": "S3",
+  "anchor": "/verify split | *whether you author the ground a determination reads* | | Tolerance |",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/reference-audit-2026-08-07.md",
+  "sense": "S3",
+  "anchor": "Judgment's source as *an actor reading ground*. That is correct and stays. It elides",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/reference-audit-2026-08-07.md",
+  "sense": "S2",
+  "anchor": "ple (an actor's own prior output is not ground). Reproduction: `assets/floor-mechanism",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/reference-audit-2026-08-07.md",
+  "sense": "S3",
+  "anchor": "e as denying single-point authorship of ground (`The Adversarial -Ground`). Redundant",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/reference-audit-2026-08-07.md",
+  "sense": "S3",
+  "anchor": "authorship of ground (`The Adversarial -Ground`). Redundant *uncorrelated* channels de",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/reference-audit-2026-08-07.md",
+  "sense": "S3",
+  "anchor": "e as denying single-point authorship of ground. Redundant *uncorrelated* channels defe",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/reference-audit-2026-08-07.md",
+  "sense": "S3",
+  "anchor": "ging is clo pheromone field is genuine ground, read and written. **The immune syst",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/reference-audit-2026-08-07.md",
+  "sense": "S3",
+  "anchor": ":118/126. The vocabulary form (poisoned ground) needs a closed lexicon \u2014 e.g. require",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/holding-note-addendum-determinables.md",
+  "sense": "S2",
+  "anchor": "etro-conversion:** replay over recorded ground retro-judges outcomes into verdicts onc",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/holding-note-addendum-determinables.md",
+  "sense": "S2",
+  "anchor": "comparability** \u2014 what an axis is; the ground registry is a registry of determinab",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/holding-note-addendum-determinables.md",
+  "sense": "S3",
+  "anchor": "any grain \u2014 capability not *about* any ground. **Routing:** downstream (the inference",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/consolidated-state.md",
+  "sense": "S3",
+  "anchor": "ned against. Every determination reads ground to resolve a choice. There is no third",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/consolidated-state.md",
+  "sense": "S3",
+  "anchor": "dgment** | per-run, by an actor reading ground | does not amortise \u00b7 walks out the doo",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/consolidated-state.md",
+  "sense": "S2",
+  "anchor": "> **An actor's own prior output is not ground.** Consuming a cached belief as ground",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/consolidated-state.md",
+  "sense": "S2",
+  "anchor": "ground.** Consuming a cached belief as ground closes a loop with **no corrective term",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/consolidated-state.md",
+  "sense": "S3",
+  "anchor": "ge. *Original antigenic sin is poisoned ground, literally.* - **FDE + platform \u00b7 `grou",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/consolidated-state.md",
+  "sense": "S3",
+  "anchor": "ound, literally.* - **FDE + platform \u00b7 `ground harvest` \u00b7 the seam-harvest loop:** the",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/consolidated-state.md",
+  "sense": "S3",
+  "anchor": "ure.** A thermostat determines \u2014 reads ground, resolves a choice, passes both admissi",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/consolidated-state.md",
+  "sense": "S3",
+  "anchor": "hich delivers **both** | | The poisoned-ground **cross-domain unification** | **Retrea",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/consolidated-state.md",
+  "sense": "S3",
+  "anchor": "7 immune licensing \u2014 cut), `adversarial-ground.md` (the unification \u2014 retreat to a fam",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/consolidated-state.md",
+  "sense": "S2",
+  "anchor": "iple.md` | an actor's own output is not ground | current; cite **Kalman** | | `adversa",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/consolidated-state.md",
+  "sense": "S3",
+  "anchor": "rrent; cite **Kalman** | | `adversarial-ground.md` | ground as attack surface | **retr",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/consolidated-state.md",
+  "sense": "S3",
+  "anchor": "*Kalman** | | `adversarial-ground.md` | ground as attack surface | **retreat the unifi",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/consolidated-state.md",
+  "sense": "S3",
+  "anchor": "ark**, End-to-End Argument | | Poisoned ground | **Kalman** filter divergence; observa",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "meta/measure-paper-context-staleness-2026-08-14.md",
+  "sense": "S2",
+  "anchor": "rocedure can be executed over available ground within declared resource, latency and c",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/13-delivery.md",
+  "sense": "S3",
+  "anchor": "tanding configuration together with the ground at the act determines the resolution. *",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/13-delivery.md",
+  "sense": "S3",
+  "anchor": "iven the standing configuration and the ground, the resolution is determined or it is",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/00-primitives.md",
+  "sense": "S3",
+  "anchor": "establishes: [determination, decision, ground, tolerance, admission-test, actor, arra",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/00-primitives.md",
+  "sense": "S3",
+  "anchor": "on|last decision in the chain, poisoned-ground|poisoned ground, granularity-bound|gran",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/00-primitives.md",
+  "sense": "S3",
+  "anchor": "in the chain, poisoned-ground|poisoned ground, granularity-bound|granularity bound, e",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/00-primitives.md",
+  "sense": "S3",
+  "anchor": "or by an actor in the moment \u2014 **reads ground in order to resolve a choice.** There i",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/00-primitives.md",
+  "sense": "S3",
+  "anchor": "ween decomposed decisions* | | Poisoned ground | *corrupting what a determination read",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/00-primitives.md",
+  "sense": "S3",
+  "anchor": "rry* | <!-- ddd:embed id=term:poisoned-ground --> > **Poisoned ground** \u2014 ground that",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/00-primitives.md",
+  "sense": "S3",
+  "anchor": "d=term:poisoned-ground --> > **Poisoned ground** \u2014 ground that is present but false: t",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/00-primitives.md",
+  "sense": "S3",
+  "anchor": "oned-ground --> > **Poisoned ground** \u2014 ground that is present but false: the substrat",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/00-primitives.md",
+  "sense": "S3",
+  "anchor": "ll authority. The logic is > sound; the ground is the attack surface. <!-- /ddd:embed",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/00-primitives.md",
+  "sense": "S2",
+  "anchor": "nation's demand between pre-resolving > ground into the encoded store before the act a",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/00-primitives.md",
+  "sense": "S2",
+  "anchor": "overned: > executor, prior commitments, ground channels, checks, reviewers, record, an",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/00-primitives.md",
+  "sense": "S3",
+  "anchor": "it in choice-language is *you authoring ground, not the rock reading it* \u2014 it inspects",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/00-primitives.md",
+  "sense": "S3",
+  "anchor": "ation. Counterintelligence had poisoned ground without knowing it generalised. Immunol",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/04-actors.md",
+  "sense": "S2",
+  "anchor": "ist but are not computable, unavailable ground, contested or moving criteria, under-sp",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/04-actors.md",
+  "sense": "S2",
+  "anchor": "ected-for* competence on unverifiable ground. > **Models should outperform humans e",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/04-actors.md",
+  "sense": "S3",
+  "anchor": "es. *(The rigorous ancestor of poisoned ground.)* **Indexed:** the same divergence, *",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/02-completeness.md",
+  "sense": "S3",
+  "anchor": "cal.** - During, by an actor reading ground \u2192 **Judgment.** Every governing decisi",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/01-the-principle.md",
+  "sense": "S3",
+  "anchor": "| \u2014 | during the act | an actor reading ground, **with an accountable party named** |",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/01-the-principle.md",
+  "sense": "S3",
+  "anchor": "d *during* the act, by an actor reading ground, **with an > accountable party named**.",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/08-projections.md",
+  "sense": "S2",
+  "anchor": "ecision *below* > inherits the resolved ground cheaply. Maturation runs along the tim",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/08-projections.md",
+  "sense": "S3",
+  "anchor": "> resolved per run by an actor reading ground, rather than inherited from the encoded",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/08-projections.md",
+  "sense": "S2",
+  "anchor": "ed and **encoded** at depth *k* removes ground that decision *k+1* would > otherwise h",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/08-projections.md",
+  "sense": "S2",
+  "anchor": "-decision > curve descending as encoded ground accumulates within a run \u2014 the judgment",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/08-projections.md",
+  "sense": "S2",
+  "anchor": "* \u2014 to spend the judgment that resolves ground which is then encoded and inherited che",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/08-projections.md",
+  "sense": "S2",
+  "anchor": "p of the funnel already converted their ground from judgment to encoded. --- ## The",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/08-projections.md",
+  "sense": "S2",
+  "anchor": "tional**. It forms only if the resolved ground is actually encoded on the way down. Sk",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/08-projections.md",
+  "sense": "S2",
+  "anchor": "every level, and you re-derive the same ground repeatedly. > **Encode as you descend",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/08-projections.md",
+  "sense": "S2",
+  "anchor": "re is no loop. You hit a decision whose ground was not yet converted to encoded, the j",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/08-projections.md",
+  "sense": "S2",
+  "anchor": "the judgment demand spikes locally, the ground gets encoded, and the demand drops. The",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/08-projections.md",
+  "sense": "S2",
+  "anchor": "t or spiking, and re-derives the same ground at each level \u2014 **genuine** loops. So",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/08-projections.md",
+  "sense": "S2",
+  "anchor": "governing decision descends as encoded ground accumulates \u2014 *conditional on encoding",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/08-projections.md",
+  "sense": "S2",
+  "anchor": "rst pass; lower levels inherit resolved ground and can be handled by cheaper actors. T",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/08-projections.md",
+  "sense": "S2",
+  "anchor": "ment demand per run descends as encoded ground accumulates in the platform \u2014 *conditio",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/12-the-licensing-instance.md",
+  "sense": "S3",
+  "anchor": "e as denying single-point authorship of ground. Redundant *uncorrelated* channels defe",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/12-the-licensing-instance.md",
+  "sense": "S3",
+  "anchor": "because the pheromone field is genuine ground, read and written. **The immune system",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/12-the-licensing-instance.md",
+  "sense": "S3",
+  "anchor": "eering preference. **And both poisoned-ground attacks, with no metaphor in between:**",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/12-the-licensing-instance.md",
+  "sense": "S3",
+  "anchor": "en:** **Autoimmune disease is poisoned ground.** The machinery works *perfectly* \u2014 so",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/12-the-licensing-instance.md",
+  "sense": "S3",
+  "anchor": "ing host tissue \u2014 *it looks like normal ground*, so the determination reads it as self",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/12-the-licensing-instance.md",
+  "sense": "S3",
+  "anchor": "ng collateral destruction of legitimate ground** \u2014 the same structure as an intrusion",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/12-the-licensing-instance.md",
+  "sense": "S3",
+  "anchor": "running the *same* attack: **author the ground so that a correct determiner reads it w",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/12-the-licensing-instance.md",
+  "sense": "S3",
+  "anchor": "r, an ensemble actor, and both poisoned-ground attacks \u2014 that **evolved**, with no spe",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/10-cost.md",
+  "sense": "S3",
+  "anchor": "over an actor's pathways: the class of ground a pathway can > read \u2014 visual, reposito",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/10-cost.md",
+  "sense": "S3",
+  "anchor": "e admission test (`00` \u00a74), applied per ground type: > **An act requires capability X",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/10-cost.md",
+  "sense": "S2",
+  "anchor": "apability X iff its verdict varies with ground accessible only through > X-type pathwa",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/11-the-floor-mechanism.md",
+  "sense": "S2",
+  "anchor": "ple (an actor's own prior output is not ground). Reproduction: `assets/floor-mechanism",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/11-the-floor-mechanism.md",
+  "sense": "S3",
+  "anchor": "*Hold capacity `C_hold`** \u2014 the bits of ground it can have in context at once. The sub",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/11-the-floor-mechanism.md",
+  "sense": "S3",
+  "anchor": "it holds. The work done over the held ground. Effective capacity is `min(C_hold, C_",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/11-the-floor-mechanism.md",
+  "sense": "S3",
+  "anchor": "o-fold: **hold capacity** \u2014 the bits of ground it can have in > context at once \u2014 and",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/11-the-floor-mechanism.md",
+  "sense": "S3",
+  "anchor": "d-overflow** \u2014 the decision's governing ground does not fit. **Resolve-overflow** \u2014 >",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/11-the-floor-mechanism.md",
+  "sense": "S3",
+  "anchor": "s not fit. **Resolve-overflow** \u2014 > the ground fits and is held, but the bits that mus",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/11-the-floor-mechanism.md",
+  "sense": "S3",
+  "anchor": "d-overflow** \u2014 the decision's governing ground does not fit; the actor decides against",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/11-the-floor-mechanism.md",
+  "sense": "S2",
+  "anchor": "is **encodable away**: pre-resolve some ground into the constraint (raise `I(verdict",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/11-the-floor-mechanism.md",
+  "sense": "S3",
+  "anchor": "t floor. - **Resolve-overflow** \u2014 the ground fits and is held, but the bits that mus",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/11-the-floor-mechanism.md",
+  "sense": "S3",
+  "anchor": "without correct ground: | Cause | The ground is\u2026 | Mechanism | The fix | |---|---|--",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/11-the-floor-mechanism.md",
+  "sense": "S3",
+  "anchor": "| **absent** \u2014 not in the window | the ground was never supplied; hold-overflow where",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/11-the-floor-mechanism.md",
+  "sense": "S3",
+  "anchor": "in non-supply where it is not | **add** ground (retrieval) | | **Poisoned** | **false*",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/11-the-floor-mechanism.md",
+  "sense": "S3",
+  "anchor": "d belief / own prior output consumed as ground (`closure-principle`) | **re-verify** g",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/11-the-floor-mechanism.md",
+  "sense": "S3",
+  "anchor": "d (`closure-principle`) | **re-verify** ground against source of truth | | **Overflowe",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/11-the-floor-mechanism.md",
+  "sense": "S3",
+  "anchor": "actor sheds and coin-flips | **encode** ground (raise encode fraction) \u2014 do *not* add",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/11-the-floor-mechanism.md",
+  "sense": "S3",
+  "anchor": "e those are the only ways the governing ground of a decision can fail to constrain it.",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/11-the-floor-mechanism.md",
+  "sense": "S3",
+  "anchor": "ise statement is *output decouples from ground under one of three ground-failures*; th",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/11-the-floor-mechanism.md",
+  "sense": "S3",
+  "anchor": "ecouples from ground under one of three ground-failures*; the intuition \"the model is",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/11-the-floor-mechanism.md",
+  "sense": "S3",
+  "anchor": "on is escape surfacing as output \u2014 from ground > that is absent, false, or unresolved",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/06-composition.md",
+  "sense": "S3",
+  "anchor": "ingle point of authorship** (poison its ground and you poison the composite \u2014 prompt i",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/09-the-measure.md",
+  "sense": "S3",
+  "anchor": "issible** where it is computable from > ground available at the act, and from what the",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/09-the-measure.md",
+  "sense": "S2",
+  "anchor": "inadmissible because the verdict is not ground available before the verdict. What adm",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/09-the-measure.md",
+  "sense": "S2",
+  "anchor": "*computes* the verdict from admissible ground. \u00a76.2's program does exactly that and r",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/09-the-measure.md",
+  "sense": "S2",
+  "anchor": "te is > closed for the arrangement over ground it can inspect. It vanishes exactly at",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/09-the-measure.md",
+  "sense": "S2",
+  "anchor": "losed or matured). Replay over recorded ground can retro-judge outcomes into verdicts",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/05-accountability.md",
+  "sense": "S3",
+  "anchor": "Judgment's source is *an actor reading ground*; Escaped's source is *nobody*. The pa",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/05-accountability.md",
+  "sense": "S3",
+  "anchor": "tion is by.** A classical program reads ground and determines choices \u2014 it satisfies `",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/05-accountability.md",
+  "sense": "S2",
+  "anchor": "true; a complete record is not complete ground. The defensible claim: **on artifact-le",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/05-accountability.md",
+  "sense": "S3",
+  "anchor": "Judgment's source as *an actor reading ground*. That is correct and stays. It elides",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/03-the-floor.md",
+  "sense": "S2",
+  "anchor": "te is **closed for the arrangement over ground it can inspect** \u2014 and > there, *path-d",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/03-the-floor.md",
+  "sense": "S2",
+  "anchor": "te is **closed for the arrangement over ground it can inspect**, then the mechanical s",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/03-the-floor.md",
+  "sense": "S2",
+  "anchor": "of \"closed for the arrangement over ground it can **inspect**.\" The whole content",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/03-the-floor.md",
+  "sense": "S2",
+  "anchor": "application, Hayek in the dispersion of ground, Bainbridge in what automation leaves t",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/14-indexed-determination.md",
+  "sense": "S3",
+  "anchor": "leave open at the act, **held at fixed ground**: the alternatives still admissible on",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/14-indexed-determination.md",
+  "sense": "S3",
+  "anchor": "ce > the standing configuration and the ground at the act are both given. It is not va",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/14-indexed-determination.md",
+  "sense": "S3",
+  "anchor": "on is left at the act. **Held at fixed ground \u2014 the qualifier is doing work.** Residu",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/14-indexed-determination.md",
+  "sense": "S3",
+  "anchor": "etermined by standing configuration and ground together, settled at the act by somethi",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/14-indexed-determination.md",
+  "sense": "S2",
+  "anchor": "judgment-heavy for another, and better ground, contracts, checks, and institutions mo",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/14-indexed-determination.md",
+  "sense": "S2",
+  "anchor": "y evaluable, feedback fast and dense, ground accessible, checking cheap, and retries",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/14-indexed-determination.md",
+  "sense": "S2",
+  "anchor": "cheap, and retries affordable. - **H2 \u2014 ground and judgment dependence** (`DDD-hyp-02`",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/07-determination-and-intelligence.md",
+  "sense": "S3",
+  "anchor": "ence A thermostat determines. It reads ground (temperature), resolves a choice (heat",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/graph/terms.yaml",
+  "sense": "S2",
+  "anchor": "d: > executor, prior commitments, ground channels, checks, reviewers, record, an",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/graph/terms.yaml",
+  "sense": "S3",
+  "anchor": "e measure exists. - id: term:poisoned-ground term: poisoned-ground aliases:",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/graph/terms.yaml",
+  "sense": "S3",
+  "anchor": "term:poisoned-ground term: poisoned-ground aliases: [poisoned ground] esta",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/graph/terms.yaml",
+  "sense": "S3",
+  "anchor": "poisoned-ground aliases: [poisoned ground] established_by: 00-primitives.md",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/graph/terms.yaml",
+  "sense": "S3",
+  "anchor": "canonical_md: | > **Poisoned ground** \u2014 ground that is present but false: t",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/graph/terms.yaml",
+  "sense": "S3",
+  "anchor": "cal_md: | > **Poisoned ground** \u2014 ground that is present but false: the substrat",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/graph/terms.yaml",
+  "sense": "S3",
+  "anchor": "hority. The logic is > sound; the ground is the attack surface. - id: term:gra",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/graph/terms.yaml",
+  "sense": "S3",
+  "anchor": "d *during* the act, by an actor reading ground, **with an > accountable party na",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/graph/terms.yaml",
+  "sense": "S2",
+  "anchor": "n arrangement** when the relevant ground is observable and adequacy can be evalu",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/graph/terms.yaml",
+  "sense": "S3",
+  "anchor": "o-fold: **hold capacity** \u2014 the bits of ground it can have in > context at once",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/graph/terms.yaml",
+  "sense": "S3",
+  "anchor": "d-overflow** \u2014 the decision's governing ground does not fit. **Resolve-overflow** \u2014",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/graph/terms.yaml",
+  "sense": "S3",
+  "anchor": "fit. **Resolve-overflow** \u2014 > the ground fits and is held, but the bits that mus",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/graph/terms.yaml",
+  "sense": "S3",
+  "anchor": "over an actor's pathways: the class of ground a pathway can > read \u2014 visual, re",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/graph/terms.yaml",
+  "sense": "S3",
+  "anchor": "leave open at the act, **held at fixed ground**: the alternatives still admissible on",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/graph/terms.yaml",
+  "sense": "S3",
+  "anchor": "> the standing configuration and the ground at the act are both given. It is not va",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/assets/projections.html",
+  "sense": "S2",
+  "anchor": "decision</b> descends \u2014 as encoded ground accumulates. Both projections bottom ou",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/assets/projections.html",
+  "sense": "S2",
+  "anchor": "s encoded, so every step re-derives the ground it needs \u2014 \" + \"the <span style='",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-measure-15.yaml",
+  "sense": "S3",
+  "anchor": "admissible where it is computable from ground available at the act and from what the",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-measure-15.yaml",
+  "sense": "S2",
+  "anchor": "at computes the verdict from admissible ground and reaches H(V|X) = 0 legitimately \u2014 t",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-measure-15.yaml",
+  "sense": "S3",
+  "anchor": "\u2014 computable at the act from available ground and standing supply, without access to",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-measure-15.yaml",
+  "sense": "S3",
+  "anchor": "states what X must be computable FROM \u2014 ground available at the act, and standing supp",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-measure-15.yaml",
+  "sense": "S2",
+  "anchor": "the thing that determines verdicts from ground fixed before the act. The distinctio",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-measure-15.yaml",
+  "sense": "S2",
+  "anchor": "inadmissible because the verdict is not ground available before the verdict \u2014 not beca",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-hyp-01.yaml",
+  "sense": "S2",
+  "anchor": "le, feedback becomes faster and denser, ground becomes more accessible, checking becom",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-hyp-01.yaml",
+  "sense": "S2",
+  "anchor": "unaided situated judgment at equivalent ground and checking access. owner: paper-4 cha",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-hyp-01.yaml",
+  "sense": "S2",
+  "anchor": "n cost, feedback latency and density, ground accessibility, acceptance-region access",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-agent-01.yaml",
+  "sense": "S2",
+  "anchor": "ors remove claim nodes from the agent's ground, so later actions are decisions with no",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-agent-01.yaml",
+  "sense": "S2",
+  "anchor": "ared claims and revert to model priors. Grounding the agent in a persistent external clai",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-agent-01.yaml",
+  "sense": "S2",
+  "anchor": "does not predict drift onset, or graph-grounded agents drift no less than context-carri",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-measure-16.yaml",
+  "sense": "S2",
+  "anchor": "evaluating the predicate over available ground within declared bounds, and avail",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-measure-16.yaml",
+  "sense": "S2",
+  "anchor": "edure cannot be executed over available ground within > declared resource, latency,",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-hyp-02.yaml",
+  "sense": "S2",
+  "anchor": "e the open-predicate side of the index: ground accessibility and the acceptance rela",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-frame-02.yaml",
+  "sense": "S3",
+  "anchor": "ts leave open at the act, held at fixed ground. status: projected region: engineered a",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-frame-02.yaml",
+  "sense": "S3",
+  "anchor": "use corrected; quantifier fixed at held ground, declared struck)\" notes: | Filed fro",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-frame-02.yaml",
+  "sense": "S2",
+  "anchor": "ses it to task distribution, accessible ground, tolerance, and time horizon \u2014 that r",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-frame-02.yaml",
+  "sense": "S3",
+  "anchor": "nce said the variation is held at fixed ground. Adding \"held at fixed ground\" exclud",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-frame-02.yaml",
+  "sense": "S3",
+  "anchor": "t fixed ground. Adding \"held at fixed ground\" excludes it: at each input the commitm",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-frame-07.yaml",
+  "sense": "S2",
+  "anchor": "nal evaluability, feedback density, and ground accessibility predict the comparative a",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-frame-07.yaml",
+  "sense": "S2",
+  "anchor": "ically favour unaided judgment at equal ground and checking access. owner: paper-4 cha",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-frame-07.yaml",
+  "sense": "S2",
+  "anchor": "perational evaluability), DDD-hyp-02 (ground and judgment dependence), DDD-hyp-03 (g",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-ground-02.yaml",
+  "sense": "S2",
+  "anchor": "\u00b7 unknown) are orthogonal properties of ground relative to a filed decision set: only",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-ground-02.yaml",
+  "sense": "S2",
+  "anchor": "region: | Synchronic \u2014 properties of ground relative to a filed decision set, read",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-frame-14.yaml",
+  "sense": "S2",
+  "anchor": "s into verdicts by replay over recorded ground is honest only under retro-filing's t",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-cost-25.yaml",
+  "sense": "S2",
+  "anchor": "verdict-gap carriage, decay, accrual, ground assurance) persists between acts and fi",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-frame-15.yaml",
+  "sense": "S3",
+  "anchor": "produced at the act by an actor reading ground (judgment); carried by the arran",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-frame-17.yaml",
+  "sense": "S3",
+  "anchor": "tanding configuration together with the ground at the act determines the resolution; e",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-frame-17.yaml",
+  "sense": "S3",
+  "anchor": "er the standing configuration and the ground jointly determine the resolution, which",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-frame-17.yaml",
+  "sense": "S3",
+  "anchor": "ther the standing configuration and the ground together determine the resolution; or a",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-frame-17.yaml",
+  "sense": "S3",
+  "anchor": "the seam guard. 2. A thermostat reads ground at the act and produces output by a rul",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-frame-17.yaml",
+  "sense": "S3",
+  "anchor": "gement's standing configuration and the ground at the act, the resolution is dete",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-frame-17.yaml",
+  "sense": "S3",
+  "anchor": "ault is determined by configuration and ground with no rule authored and no govern",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-frame-17.yaml",
+  "sense": "S3",
+  "anchor": "ctor \"resolves decisions by reading ground\", term:capacity carries \"resolve capaci",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/claims/DDD-cost-05.yaml",
+  "sense": "S3",
+  "anchor": "nt, where context is simultaneously the ground, the retrieved governance and the wor",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/decisions/DDD-dec-26.yaml",
+  "sense": "S2",
+  "anchor": "already carries each, and the five-way ground-provenance taxonomy is ruled ineligible",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/decisions/DDD-dec-26.yaml",
+  "sense": "S2",
+  "anchor": "am mint; it never supplies the mint's ground. DDD-frame-02's Wave 3 note \u2014 \"minting",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/decisions/DDD-dec-26.yaml",
+  "sense": "S2",
+  "anchor": "ng 9 cites both and adds nothing. ## Ground provenance \u2014 ruled ineligible, not defe",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/decisions/DDD-dec-19.yaml",
+  "sense": "S2",
+  "anchor": "rd: an upstream decision cites upstream ground only, and the downstream adoption rec",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/decisions/DDD-dec-15.yaml",
+  "sense": "S3",
+  "anchor": "verloaded. - 11 \u00a76, the Missing row \u2014 ground that \"was never there\" labelled hold-ov",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/decisions/DDD-dec-15.yaml",
+  "sense": "S3",
+  "anchor": "term:overflow defines hold-overflow as ground that does not fit. Corrected. - Groun",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/decisions/DDD-dec-30.yaml",
+  "sense": "S3",
+  "anchor": "ed or not by standing configuration and ground together, and if not, inside or outside",
+  "bare": true
+ },
+ {
+  "repo": "upstream",
+  "path": "core/decisions/DDD-dec-30.yaml",
+  "sense": "S3",
+  "anchor": "in place to hold the variation at fixed ground and to strike declared, no term being m",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/decisions/DDD-dec-30.yaml",
+  "sense": "S3",
+  "anchor": "gement's standing configuration and the ground at the act, the resolution is determi",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/decisions/DDD-dec-30.yaml",
+  "sense": "S3",
+  "anchor": "ng rule fixes the output given the ground \u2014 which it does \u2014 rather than by adjudi",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "core/decisions/DDD-dec-30.yaml",
+  "sense": "S3",
+  "anchor": "ts read as discretion. \"Held at fixed ground\" excludes it: at each input the commitm",
+  "bare": false
+ },
+ {
+  "repo": "upstream",
+  "path": "i18n/ordliste-dansk.md",
+  "sense": "S3",
+  "anchor": "g\u00f8r. | | **forgiftet grund** | poisoned ground | N\u00e5r en akt\u00f8r forbruger sit eget tidli",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "README.md",
+  "sense": "S2",
+  "anchor": "](apparatus/encode-verify.md) | *Encode ground you control; verify ground you don't* \u2014",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "README.md",
+  "sense": "S2",
+  "anchor": "d) | *Encode ground you control; verify ground you don't* \u2014 and verify on a schedule |",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "README.md",
+  "sense": "S3",
+  "anchor": "ple.md) | *An actor's own output is not ground* \u2014 poisoned ground, and why Terraform c",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "README.md",
+  "sense": "S3",
+  "anchor": "'s own output is not ground* \u2014 poisoned ground, and why Terraform can delete your data",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "README.md",
+  "sense": "S3",
+  "anchor": "ur database | | [`apparatus/adversarial-ground.md`](apparatus/adversarial-ground.md) |",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "README.md",
+  "sense": "S3",
+  "anchor": "arial-ground.md`](apparatus/adversarial-ground.md) | The attack surface of an actor is",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "README.md",
+  "sense": "S3",
+  "anchor": "| The attack surface of an actor is its ground, not its logic \u2014 across three fields |",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "CLAUDE.md",
+  "sense": "S2",
+  "anchor": "ay removes claim nodes from the agent's ground, so later edits revert to model priors",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "CHANGELOG.md",
+  "sense": "S2",
+  "anchor": "ate is *closed for an arrangement* when ground is observable and adequacy evaluable",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "CHANGELOG.md",
+  "sense": "S2",
+  "anchor": "umption) - apparatus/tool-contract.md \u2014 ground-first tool contract for local agents; t",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "CHANGELOG.md",
+  "sense": "S3",
+  "anchor": "WELL-DEFINED. A classical program reads ground and determines choices, so actorhood",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "CHANGELOG.md",
+  "sense": "S3",
+  "anchor": "PER TOKEN. The shipped INV-6 ordering (ground -> decisions -> task) remains correct",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "CHANGELOG.md",
+  "sense": "S3",
+  "anchor": "xonomy (missing / poisoned / overflowed ground) and three different fixes - apparatus/",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "CHANGELOG.md",
+  "sense": "S3",
+  "anchor": "verify, the closure principle (poisoned ground), adversarial ground - **`meta/`** \u2014 li",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "CHANGELOG.md",
+  "sense": "S3",
+  "anchor": "rinciple (poisoned ground), adversarial ground - **`meta/`** \u2014 lineage-and-limits and",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "CHANGELOG.md",
+  "sense": "S3",
+  "anchor": "** (Edelman & Gally 2001). - **Poisoned-ground cross-domain unification** retreated to",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "RECONCILIATION-REPORT.md",
+  "sense": "S3",
+  "anchor": "`closure-principle.md` and `adversarial-ground.md` under the `core/` set (shipped u",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "RECONCILIATION-REPORT.md",
+  "sense": "S3",
+  "anchor": "**: `determination.md`, `adversarial-ground.md` (present, but the note implies a pe",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "RECONCILIATION-REPORT.md",
+  "sense": "S2",
+  "anchor": "ding revision), `linkedin-plan.md`, `ground-prd.md`. If these live outside the repo",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "RECONCILIATION-REPORT.md",
+  "sense": "S3",
+  "anchor": "-verify, closure-principle, adversarial-ground), `meta/` (lineage-and-limits, consolid",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "projections/tracks/README.md",
+  "sense": "S3",
+  "anchor": "gs supply **capability** \u2014 the class of ground you can now read and the distinctions",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "projections/tracks/01-determination.md",
+  "sense": "S2",
+  "anchor": "DD-dec-27` (rung order, filing, and the ground-provenance ruling) | | **Track claim**",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "projections/tracks/01-determination.md",
+  "sense": "S3",
+  "anchor": "is **capability** \u2014 a typing over what ground you can read and what distinctions you",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "projections/tracks/01-determination.md",
+  "sense": "S2",
+  "anchor": "onvention, and > social practice supply ground is an open upstream question (`Q27`, tr",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "projections/tracks/01-determination.md",
+  "sense": "S2",
+  "anchor": "has been in production for months; the ground it is answerable to has never been asse",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "projections/tracks/01-determination.md",
+  "sense": "S2",
+  "anchor": "ctor, because they do not have the same ground available: | Actor | Ground it can act",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "projections/tracks/01-determination.md",
+  "sense": "S3",
+  "anchor": "e the same ground available: | Actor | Ground it can actually read | |---|---| | **th",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "projections/tracks/01-determination.md",
+  "sense": "S3",
+  "anchor": "ee that the three actors read different ground. You will still, by reflex, compare the",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "projections/tracks/01-determination.md",
+  "sense": "S2",
+  "anchor": "overned: > executor, prior commitments, ground channels, checks, reviewers, record, an",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "projections/tracks/01-determination.md",
+  "sense": "S2",
+  "anchor": "| the runbook, the incident process | | ground channels | response status, elapsed tim",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "projections/tracks/01-determination.md",
+  "sense": "S2",
+  "anchor": "engineer's arrangement has the richest ground channels and the weakest record. The pr",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "projections/tracks/01-determination.md",
+  "sense": "S3",
+  "anchor": "record. The program's has the narrowest ground and a perfect record. The LLM's inherit",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "projections/tracks/01-determination.md",
+  "sense": "S3",
+  "anchor": "perfect record. The LLM's inherits its ground from whatever the pipeline retrieved, w",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "projections/tracks/01-determination.md",
+  "sense": "S3",
+  "anchor": "n *during* the act, by an actor reading ground, **with an accountable party named**. T",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "projections/tracks/01-determination.md",
+  "sense": "S3",
+  "anchor": "most tightly bounded and has the least ground**, while **the engineer's has the most",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "projections/tracks/01-determination.md",
+  "sense": "S3",
+  "anchor": "**, while **the engineer's has the most ground and the least record**. Neither is bett",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "projections/tracks/01-determination.md",
+  "sense": "S3",
+  "anchor": "angeable. You can give the program more ground \u2014 feed it the gateway's published rate",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "projections/tracks/01-determination.md",
+  "sense": "S2",
+  "anchor": "or an arrangement** when the relevant > ground is observable and adequacy can be evalu",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "projections/tracks/01-determination.md",
+  "sense": "S2",
+  "anchor": "and engineers routinely drop the third. Ground observable \u2014 you can see what you need",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "projections/tracks/01-determination.md",
+  "sense": "S2",
+  "anchor": "and judgement-heavy for another; better ground, contracts, checks, and institutions mo",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "projections/tracks/01-determination.md",
+  "sense": "S2",
+  "anchor": "is load the gateway cannot absorb? | | Ground | observable \u2014 a stubbed handler, a fak",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "projections/tracks/01-determination.md",
+  "sense": "S3",
+  "anchor": "imension worth governing (rung 1) | | **ground** | none consulted \u2014 not the rate limit",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "projections/tracks/01-determination.md",
+  "sense": "S2",
+  "anchor": "dly by a named principal against stated ground is a decision you can find, argue with,",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "projections/tracks/01-determination.md",
+  "sense": "S2",
+  "anchor": "h the reason it qualifies \u2014 no axis, no ground, no principal, and total commitment. Th",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "projections/tracks/01-determination.md",
+  "sense": "S2",
+  "anchor": "minate now governing (rung 1) | \u2014 | | **ground cited** | what it is resolved against,",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "projections/tracks/01-determination.md",
+  "sense": "S2",
+  "anchor": "track renames rather than canon. #### Ground cited: \"none\" is the point The field e",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "projections/tracks/01-determination.md",
+  "sense": "S2",
+  "anchor": "scripts | | **value** | 24 months | | **ground cited** | the statutory minimum for the",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "projections/tracks/01-determination.md",
+  "sense": "S2",
+  "anchor": "at cases: asserted, never measured \u2014 no ground exists for it** | | **\u03b1** | a legal rev",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "projections/tracks/01-determination.md",
+  "sense": "S2",
+  "anchor": "he floor, support wants longer, and the ground line says which of those positions has",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "projections/tracks/01-determination.md",
+  "sense": "S2",
+  "anchor": "line says which of those positions has ground behind it and which does not. \"Asserted",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "projections/tracks/01-determination.md",
+  "sense": "S2",
+  "anchor": "ponential backoff \u2014 **unchanged** | | **ground cited** | provider rate limits (publish",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "projections/tracks/01-determination.md",
+  "sense": "S2",
+  "anchor": "which was escaped is now governed, its ground is stated including the part that is mi",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-act-cost-2026-08-08.md",
+  "sense": "S2",
+  "anchor": "ckward, it produces: the verdict is new ground about the verdict function itself. Matu",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-act-cost-2026-08-08.md",
+  "sense": "S3",
+  "anchor": "over an actor's pathways: the class of ground a pathway can read (visual, repository,",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-act-cost-2026-08-08.md",
+  "sense": "S3",
+  "anchor": "ves from the admission test applied per ground type: *an act requires capability X iff",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-act-cost-2026-08-08.md",
+  "sense": "S2",
+  "anchor": "apability X iff its verdict varies with ground accessible only through X-type pathways",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-act-cost-2026-08-08.md",
+  "sense": "S2",
+  "anchor": "ts into conservation-into-tempo. **(e) Ground assurance and the recon cadence** *(aff",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-act-cost-2026-08-08.md",
+  "sense": "S3",
+  "anchor": "erifies the resolution against declared ground, so a valid verdict on poisoned ground",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-act-cost-2026-08-08.md",
+  "sense": "S3",
+  "anchor": "ground, so a valid verdict on poisoned ground is wrong with full authority (existing",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-act-cost-2026-08-08.md",
+  "sense": "S3",
+  "anchor": "with full authority (existing canon) \u2014 ground assurance is a distinct requirement wit",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-act-cost-2026-08-08.md",
+  "sense": "S3",
+  "anchor": "* \u2014 weaker actors require more frequent ground checks. Cadence is computable from \u00a711(",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-act-cost-2026-08-08.md",
+  "sense": "S3",
+  "anchor": "rollary: **prompt injection is poisoned ground meeting insufficient detection class at",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-act-cost-2026-08-08.md",
+  "sense": "S3",
+  "anchor": "ro recon cadence** \u2014 agent defence is a ground-assurance budget across the three suppl",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/way-of-working.md",
+  "sense": "S2",
+  "anchor": "ncipal | | Framework mapping | Governed ground \u2014 the statused portion of what decision",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/corpus-test-results-2026-08-14.md",
+  "sense": "S3",
+  "anchor": "t/actor = *during*, by an actor reading ground. `core/02` line 78 explicitly permits",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/corpus-test-results-2026-08-14.md",
+  "sense": "S2",
+  "anchor": "ched:` markers meanwhile, never read as ground). V2 records Emil's ruling: a watched-n",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/corpus-test-results-2026-08-14.md",
+  "sense": "S2",
+  "anchor": "V2 records Emil's ruling: a watched-not-grounding edge **is** a distinct edge type, `revi",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/corpus-test-results-2026-08-14.md",
+  "sense": "S2",
+  "anchor": "r-change-set} \u2227 edge-kind = watched-not-grounding* \u2192 file as `revisit_if`, never as groun",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/corpus-test-results-2026-08-14.md",
+  "sense": "S2",
+  "anchor": "nding* \u2192 file as `revisit_if`, never as ground. **The content is Q14, ratified.** \"Th",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/vocabulary-delivery-session-2026-08-15.md",
+  "sense": "S2",
+  "anchor": "and the world, not by evaluation \u2014 the ground under F-1's \"non-evaluation must never",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S2",
+  "anchor": "inverts the quantifier in the existing ground definition. The upstream definition fix",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S2",
+  "anchor": "xes a decision and asks which facts are ground for it. The proposed move fixes a groun",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S3",
+  "anchor": "* Time as a **validity index** on every ground reading: > Every ground reading carrie",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S3",
+  "anchor": "dex** on every ground reading: > Every ground reading carries an as-of, and therefore",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S2",
+  "anchor": "scores. This is why \"how trusted is the ground\" is *not* a parameter on ground: closur",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S3",
+  "anchor": "r would have collapsed them. ### Q12 \u2014 Ground not as expected at act time (Emil's rul",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S3",
+  "anchor": "ime (Emil's ruling, session 2) > Stale ground is the same mechanism as poisoned groun",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S3",
+  "anchor": "round is the same mechanism as poisoned ground. It is not escape. It is ground not as",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S3",
+  "anchor": "oisoned ground. It is not escape. It is ground not as expected > at act time. The cla",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S2",
+  "anchor": "t drift at all; observed and inferred ground drift at their source's rate. Risk is e",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S3",
+  "anchor": "ore valuable direction: > Does reading ground in order to act determine when a given",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S3",
+  "anchor": "time by whoever is already reading the ground. Why it beats scheduled review: calend",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S3",
+  "anchor": "tinct is Emil's. *Flagged:* this makes ground-reading an act with governance conseque",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S2",
+  "anchor": "e axis, converting observed or inferred ground to controlled. The *check that the pin",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S3",
+  "anchor": "emedy applied per-PR.** It re-reads the ground and so bounds decay, but it detects t",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S3",
+  "anchor": "tion *is* the extraction. Self-supplied ground, no further reading required. Three co",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S3",
+  "anchor": "because the predicate is small and the ground is already in hand. Note in the PRD t",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S2",
+  "anchor": "y it is a carnivore, citing the trusted ground the > decision stood on, without verify",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S2",
+  "anchor": "ccountability structure standing behind ground you did not verify. **Trust closes pre",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S2",
+  "anchor": "arnivore?\" is unevaluable over your own ground; you have never watched a crocodile eat",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S2",
+  "anchor": ", seen from the source side. **Trusted ground drifts at the source's rate, three ways",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S2",
+  "anchor": "venance sets the drift scaling. Trusted ground has three generators and only one is th",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S2",
+  "anchor": "e | Note | |---|---|---| | The source's ground moves | taxonomy revised | ordinary dri",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S2",
+  "anchor": "side anatomy: an inference over trusted ground has **no gate of its own**; its assuran",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S2",
+  "anchor": "sumed discharge (Q18) transposed to the ground layer. It is exactly why the human vers",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S2",
+  "anchor": "king \u2014 a decision node whose region is \"ground of type Y from source X,\" and whose Q1",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S2",
+  "anchor": "(Emil: actor class with the decision's ground has an impact on the projection).** Q16",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S3",
+  "anchor": "Emil's ruling that trust plus poisoned ground covers it.** A seller emits ground proj",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S3",
+  "anchor": "oned ground covers it.** A seller emits ground projections into a buyer's ground, tune",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S3",
+  "anchor": "emits ground projections into a buyer's ground, tuned to the buyer's arrangement, so t",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S2",
+  "anchor": "g \u00a713.10's proxy authoring over curated ground. Segmentation is form-tuning by receivi",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S2",
+  "anchor": "the accountability structure behind the ground is complete** \u2014 a seller bearing stake",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S2",
+  "anchor": "urce; one who does not is manufacturing ground the buyer treats as trusted with no nod",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S3",
+  "anchor": "ailable | Q28 fourth failure mode | | **Ground channels** \u2014 axes readable at act time",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S2",
+  "anchor": "sources accepted as standing | how much ground can be supplied by citation | Q27 | | *",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S2",
+  "anchor": "the arrangement axis too. - **They are ground, so poisoning applies.** Credentials ca",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S2",
+  "anchor": "ing in Q27's sense. A CV is unsupported ground; a licence is trusted ground with a pri",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S2",
+  "anchor": "nsupported ground; a licence is trusted ground with a principal. - **The proxy is for",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S2",
+  "anchor": "ts, the answers look authoritative, the ground was never rechecked. The fix is not a b",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S2",
+  "anchor": "gained a second customer. ### Q30 \u2014 \"Ground registry\" as the term, and projection-a",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S2",
+  "anchor": "ogy reaches for is the organisation's **ground registry**: the full set of declared ax",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S2",
+  "anchor": "and the trust decisions (Q27) that let ground be supplied by citation. Software's dom",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S2",
+  "anchor": "table from code. **Proposed canon term: ground registry**, with the software layer as",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S3",
+  "anchor": "(the EM reading: events are the reason ground at t\u2081 differs from t\u2080); state is a fold",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S3",
+  "anchor": "were recorded at their as-of under the ground of their time, and a new projection re-",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S3",
+  "anchor": "projection re-reads them under current ground. Without the events that re-reading is",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S3",
+  "anchor": "| Q14 reading-triggered revisitation | Ground-assumption divergence at read time fire",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S2",
+  "anchor": "e is not what raises assurance. | | Q30 ground registry | Filed decisions found region",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S2",
+  "anchor": "are a shared customer (Q29)? 32. **\"Ground registry\" as canon vocabulary** (Q30) \u2014",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S3",
+  "anchor": "ment's budget is shared between holding ground and finding governance is an empirical",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S3",
+  "anchor": "sumed: - Context is simultaneously the ground, the retrieved governance, and the work",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S2",
+  "anchor": "f two cases | Emil | | 35 | Adversarial ground manufacture proposed as needing vocabul",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S2",
+  "anchor": "k | Claude | | 37 | \"How trusted is the ground\" as a scalar parameter rejected; assura",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S2",
+  "anchor": "ogy reaches for; it is one layer of the ground registry | Emil | | 41 | \"Discard never",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S3",
+  "anchor": "Polling loop | act-approach | repeated ground reads, as-of refreshed per glance (Q11)",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S2",
+  "anchor": "into an evaluable proxy over available ground. Both actor types demonstrably have it",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S3",
+  "anchor": "ion plus drilled parts, binding current ground at current as-ofs \u2192 the act discharges",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S3",
+  "anchor": "nes which arrive; as-of determines what ground binds; capability supplies the drilled",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S3",
+  "anchor": "nce. Emil ruled that trust and poisoned ground cover the adversarial case without new",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "sense": "S2",
+  "anchor": "hority; \"domain\" as lacking term with **ground registry** proposed for canon; projecti",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/graph-tool-ontology.md",
+  "sense": "S2",
+  "anchor": "*Made* | | Framework mapping | Governed ground \u2014 the statused, curated portion of what",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/consolidated-state.md",
+  "sense": "S3",
+  "anchor": "**predicate closure**, not \"adversarial ground.\" *Spec ops carries judgment because th",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/consolidated-state.md",
+  "sense": "S2",
+  "anchor": "t \u2014 what is still owed **Product (see `ground-prd.md`):** rebuild Bicep on **compile-",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/seed/claims-seed.yaml",
+  "sense": "S2",
+  "anchor": "nal evaluability, feedback density, and ground accessibility predict the compara",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/seed/claims-seed.yaml",
+  "sense": "S2",
+  "anchor": "ically favour unaided judgment at equal ground and checking access. owner: paper-4",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/seed/claims-seed.yaml",
+  "sense": "S2",
+  "anchor": "ors remove claim nodes from the agent's ground, so later actions are decisions w",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/seed/claims-seed.yaml",
+  "sense": "S2",
+  "anchor": "laims and revert to model priors. Grounding the agent in a persistent external clai",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "meta/seed/claims-seed.yaml",
+  "sense": "S2",
+  "anchor": "does not predict drift onset, or graph-grounded agents drift no less than context",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "migration/core-contracts.md",
+  "sense": "S2",
+  "anchor": "osure (\"closed for the arrangement over ground it can inspect\"). 00 line 160's \"closes",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "migration/graph/terms.yaml",
+  "sense": "S2",
+  "anchor": "n arrangement** when the relevant ground is observable and adequacy can be evalu",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S2",
+  "anchor": "lone but to a tuple of task, accessible ground, acceptance relation, declared toleranc",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S2",
+  "anchor": "ibed relative to a task `T`, accessible ground `G`, an acceptance relation `P`, a decl",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S2",
+  "anchor": "d asks how its resolution is governed. Ground carries orthogonal properties relative",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S2",
+  "anchor": "** [DDD-ground-01, projected]. ### 2.4 Ground provenance **(analysis)** Ground is no",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S2",
+  "anchor": "r a model | **derived** \u2014 computed from ground already held; **predicted** \u2014 estimated",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S2",
+  "anchor": "ll until it knows which of its observed ground is sensed and which is recalled. The de",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S2",
+  "anchor": "ed]. An act whose acceptance depends on ground the arrangement cannot reach has a floo",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S2",
+  "anchor": "1). Dropping this slot would relocate a ground property onto the actor, which is preci",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S2",
+  "anchor": "al leans on: an authority that supplies ground is usually also a party that can answer",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S2",
+  "anchor": "es an institution's statement usable as ground, and what makes it fail \u2014 is **a questi",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S2",
+  "anchor": "executor, prior commitments, available ground channels, tools and memory, verificatio",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S3",
+  "anchor": "produced at the act by an actor reading ground. A *default* is variation carried by th",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S2",
+  "anchor": "or an arrangement** when the relevant > ground is observable and adequacy can be evalu",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S2",
+  "anchor": "ance procedure can be executed with the ground, time, memory, tools, permissions and r",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S2",
+  "anchor": "No acceptance procedure over accessible ground at the declared assurance level. | [ter",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S3",
+  "anchor": "The verdict is *computed by rule* from ground available at the act. | measure note \u00a78",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S3",
+  "anchor": "ely evaluable but computed by rule from ground available at the act: a procedure retur",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S2",
+  "anchor": "procedure is available over accessible ground at the declared assurance level, accept",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S2",
+  "anchor": "exity is observed to move when tooling, ground access or acceptance criteria change. T",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S2",
+  "anchor": "ing: an act whose acceptance depends on ground the arrangement cannot reach has a floo",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S2",
+  "anchor": "**open**: no procedure over accessible ground decides acceptability, and there is not",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S2",
+  "anchor": "onal evaluability, feedback density and ground accessibility predict the comparative a",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S2",
+  "anchor": "le, feedback becomes faster and denser, ground becomes more accessible, checking becom",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S2",
+  "anchor": "comparison is the arrangement. **H2 \u2014 ground and judgment dependence.** *Human or in",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S2",
+  "anchor": "executor, its commitments by level, its ground channels, its verification mechanisms,",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S2",
+  "anchor": "redicate; feedback latency and density; ground accessibility; retry cost; and accounta",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S3",
+  "anchor": "onditioning variables \u2014 computable from ground available at the act [DDD-measure-15, p",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S2",
+  "anchor": "g-running agents.* An arrangement whose ground decays over its own run instances the e",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S2",
+  "anchor": "oves filed claim nodes from the agent's ground, so later actions become decisions with",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S2",
+  "anchor": "ure's own scope conditions \u2014 soundness, ground completeness, checker legitimacy \u2014 are",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S2",
+  "anchor": "rational evaluability, generation cost, ground access, feedback and accountability cha",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S2",
+  "anchor": "ors remove claim nodes from the agent's ground, so later actions are decisions with no",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S2",
+  "anchor": "ared claims and revert to model priors. Grounding the agent in a persistent external clai",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S2",
+  "anchor": "nal evaluability, feedback density, and ground accessibility predict the comparative a",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S2",
+  "anchor": "\u00b7 unknown) are orthogonal properties of ground relative to a filed decision set: only",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S2",
+  "anchor": "le, feedback becomes faster and denser, ground becomes more accessible, checking becom",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S3",
+  "anchor": "admissible where it is computable from ground available at the act and from what the",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S2",
+  "anchor": "already carries each, and the five-way ground-provenance taxonomy is ruled ineligible",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/paper-a.md",
+  "sense": "S2",
+  "anchor": "governed: executor, prior commitments, ground channels, checks, reviewers, record, an",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/paper-a/reviewer-brief.md",
+  "sense": "S2",
+  "anchor": "advantage *shifts* with evaluability, ground access, feedback and accountability. It",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/measure-note/measure-note.md",
+  "sense": "S3",
+  "anchor": "t resolves it during the act by reading ground, or nothing at all, in which case the d",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/measure-note/measure-note.md",
+  "sense": "S3",
+  "anchor": "s **admissible** if it is a function of ground > available at the act, and of what the",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/measure-note/measure-note.md",
+  "sense": "S2",
+  "anchor": "V` is inadmissible: the verdict is not ground available before the verdict. What adm",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/measure-note/measure-note.md",
+  "sense": "S2",
+  "anchor": "hanism that *computes* the verdict from ground. \u00a75.1's program does exactly that and r",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/measure-note/measure-note.md",
+  "sense": "S2",
+  "anchor": "edure cannot be executed over available ground within declared resource, latency, and",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/measure-note/measure-note.md",
+  "sense": "S3",
+  "anchor": "checkable but **computed by rule** from ground available at the act \u2014 a procedure retu",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/measure-note/measure-note.md",
+  "sense": "S3",
+  "anchor": "admissible where it is computable from ground available at the act and from what the",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/measure-note/measure-note.md",
+  "sense": "S2",
+  "anchor": "mination's demand between pre-resolving ground into the encoded store before the act a",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/measure-note/measure-paper-context.md",
+  "sense": "S3",
+  "anchor": "d** \u2014 the verdict computed by rule from ground available at the act, no candidate sear",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/measure-note/response-to-review.md",
+  "sense": "S3",
+  "anchor": "conditioning variable is a function of ground available at the act, and of what the a",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/measure-note/next-canon-session.md",
+  "sense": "S3",
+  "anchor": "s **admissible** if it is a function of ground available at the act, and > of what the",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "papers/measure-note/next-canon-session.md",
+  "sense": "S2",
+  "anchor": "echanism that computes the verdict from ground \u2014 `core/09`'s program encoding does exa",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "core/README.md",
+  "sense": "S2",
+  "anchor": "rdict-gap carriage, decay, accrual, and ground assurance with the recon substitution",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "core/17-time-and-assurance.md",
+  "sense": "S3",
+  "anchor": "surance decays at the drift rate of the ground it read | `DDD-cost-27` | projected | |",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "core/17-time-and-assurance.md",
+  "sense": "S2",
+  "anchor": "nd | `DDD-cost-28` | projected | | \u00a74 | Ground assurance has three suppliers; detectio",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "core/17-time-and-assurance.md",
+  "sense": "S2",
+  "anchor": "ntity-unit question, open). --- ## 4. Ground assurance and the recon cadence A chec",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "core/17-time-and-assurance.md",
+  "sense": "S3",
+  "anchor": "erifies the resolution against declared ground, so a valid verdict on poisoned ground",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "core/17-time-and-assurance.md",
+  "sense": "S3",
+  "anchor": "ground, so a valid verdict on poisoned ground is wrong with full authority (upstream",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "core/17-time-and-assurance.md",
+  "sense": "S3",
+  "anchor": "g with full authority (upstream canon). Ground assurance is therefore a distinct requi",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "core/17-time-and-assurance.md",
+  "sense": "S2",
+  "anchor": "stitution law between two of them: > **Ground assurance has three suppliers \u2014 encoded",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "core/17-time-and-assurance.md",
+  "sense": "S3",
+  "anchor": ": weaker actors > require more frequent ground checks, the cadence computable from the",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "core/17-time-and-assurance.md",
+  "sense": "S3",
+  "anchor": "nstance.** Prompt injection is poisoned ground meeting insufficient detection class at",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "core/17-time-and-assurance.md",
+  "sense": "S3",
+  "anchor": "zero recon cadence \u2014 agent defence is a ground-assurance budget across the three suppl",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "core/15-routing-example.md",
+  "sense": "S3",
+  "anchor": "ves from the admission test applied per ground type (`DDD-cost-12`'s derivation at the",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "core/15-routing-example.md",
+  "sense": "S2",
+  "anchor": "is required iff the verdict varies with ground accessible only through that pathway. V",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "core/15-routing-example.md",
+  "sense": "S3",
+  "anchor": "how the test excluding. | Capability | Ground type read | Residual (bits/act) | Mecha",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "core/14-maturation.md",
+  "sense": "S2",
+  "anchor": "ckward, it produces: the verdict is new ground about the verdict function itself. <!-",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "core/14-maturation.md",
+  "sense": "S2",
+  "anchor": "its depreciate at the drift rate of the ground they encode; steady state is encoding",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "core/assets/measure-routing-example.py",
+  "sense": "S3",
+  "anchor": "ent derives from the admission test per ground type: # required iff the verdict varies",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "core/assets/measure-routing-example.py",
+  "sense": "S2",
+  "anchor": "# required iff the verdict varies with ground accessible only through that # pathway.",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "core/assets/measure-routing-example.py",
+  "sense": "S3",
+  "anchor": "lity residual coverage(today) ground type \"code-synthesis\": dict(r=12.",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "core/assets/measure-routing-example.py",
+  "sense": "S3",
+  "anchor": "# visual ground -> excluded } # Class thresholds: unco",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "core/assets/recon-cadence-demo.py",
+  "sense": "S2",
+  "anchor": "thon3 \"\"\"Recon cadence vs actor class \u2014 ground assurance substitution (all stipulated)",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "core/assets/recon-cadence-demo.py",
+  "sense": "S3",
+  "anchor": "lam_drift, lam_adv = 0.002, 0.02 # ground corruption rate per day (drift / advers",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "core/assets/recon-cadence-demo.py",
+  "sense": "S3",
+  "anchor": "# encoded ground-check coverage eps = 0.001",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "core/claims/DDD-cost-29.yaml",
+  "sense": "S2",
+  "anchor": "cost-29 kind: conceptual statement: | Ground assurance has three suppliers \u2014 encoded",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "core/claims/DDD-cost-29.yaml",
+  "sense": "S3",
+  "anchor": "es: weaker actors require more frequent ground checks, the cadence computable from the",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "core/claims/DDD-cost-29.yaml",
+  "sense": "S2",
+  "anchor": "The three-supplier budget reading of ground assurance; the prompt-injection instanc",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "core/claims/DDD-cost-29.yaml",
+  "sense": "S3",
+  "anchor": "The prompt-injection instance: poisoned ground meeting insufficient detection class",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "core/claims/DDD-cost-29.yaml",
+  "sense": "S3",
+  "anchor": "zero recon cadence; agent defence is a ground-assurance budget across the three suppl",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "core/claims/DDD-cost-18.yaml",
+  "sense": "S2",
+  "anchor": "its depreciate at the drift rate of the ground they encode; steady state is encoding r",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "core/claims/DDD-track-01.yaml",
+  "sense": "S2",
+  "anchor": "a governing decision naming an axis, a ground citation, a declared assurance level, a",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "core/claims/DDD-track-01.yaml",
+  "sense": "S2",
+  "anchor": "not a note Rung 3 carries a five-way ground-provenance taxonomy (controlled, observ",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "core/claims/DDD-track-01.yaml",
+  "sense": "S2",
+  "anchor": "convention, or social practice supply ground, projections/tracks/01-determination.md",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "core/decisions/DDD-dec-27.yaml",
+  "sense": "S2",
+  "anchor": "rom the canon dependency order; and its ground-provenance material is carried as track",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "core/decisions/DDD-dec-27.yaml",
+  "sense": "S2",
+  "anchor": "Both carry to Gate 3 as open. ## 4. Ground provenance \u2014 the ruling applied Rung",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "core/decisions/DDD-dec-27.yaml",
+  "sense": "S2",
+  "anchor": "two mints, the three non-deltas, the ground-provenance ineligibility ruling, and th",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "core/decisions/DDD-dec-25.yaml",
+  "sense": "S2",
+  "anchor": "DDD-dec-24 (upstream, citing upstream ground only, per the freight convention); this",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/closure-principle.md",
+  "sense": "S2",
+  "anchor": "closes The current treatment defines **ground** as *the read-only surface actors insp",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/closure-principle.md",
+  "sense": "S2",
+  "anchor": "s a definition by *role* \u2014 it says what ground is **for**. It does not say where grou",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/closure-principle.md",
+  "sense": "S2",
+  "anchor": "ound is **for**. It does not say where ground may **come from**. And that omission ad",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/closure-principle.md",
+  "sense": "S2",
+  "anchor": "o act. **It satisfies the definition of ground completely.** But it is not a fact abo",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/closure-principle.md",
+  "sense": "S3",
+  "anchor": ". Call this a **closed loop**, and the ground it produces **poisoned**. --- ## Why",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/closure-principle.md",
+  "sense": "S3",
+  "anchor": "ine is working perfectly, over poisoned ground.** The decisive evidence is what the e",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/closure-principle.md",
+  "sense": "S2",
+  "anchor": "nal on exactly the check that keeps the ground clean.** That is not an implementation",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/closure-principle.md",
+  "sense": "S2",
+  "anchor": "The existing rule: > **You can encode ground you control. You must mechanically veri",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/closure-principle.md",
+  "sense": "S2",
+  "anchor": "u control. You must mechanically verify ground you don't.** The closure principle is",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/closure-principle.md",
+  "sense": "S2",
+  "anchor": "reducible, and it is the price of > the ground being someone else's.** This is the sa",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/closure-principle.md",
+  "sense": "S2",
+  "anchor": "tale encoding that has been promoted to ground**, and thereby made *unfalsifiable with",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/closure-principle.md",
+  "sense": "S3",
+  "anchor": ". Propose a sixth class: > **Poisoned ground** \u2014 the actor's substrate is its own pr",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/closure-principle.md",
+  "sense": "S3",
+  "anchor": "Escape produces visible gaps. Poisoned ground produces *confident, well-reasoned dest",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/closure-principle.md",
+  "sense": "S2",
+  "anchor": "he observation is the cost of acting on ground you do not > own.** --- ## Consequenc",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/closure-principle.md",
+  "sense": "S2",
+  "anchor": "at: - consumes its own prior output as ground, - has no mandatory re-verification, -",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/closure-principle.md",
+  "sense": "S2",
+  "anchor": ". The only candidate is a system whose ground is genuinely immutable *and* wholly con",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/closure-principle.md",
+  "sense": "S2",
+  "anchor": "y**: it is precisely the case where the ground was never uncontrolled, and the encode/",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/adversarial-ground.md",
+  "sense": "S3",
+  "anchor": "principle (`core/01-the-principle.md`, ground) an",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/adversarial-ground.md",
+  "sense": "S3",
+  "anchor": "*The attack surface of any actor is its ground, not its logic.** An adversary who att",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/adversarial-ground.md",
+  "sense": "S3",
+  "anchor": "is best at. An adversary who attacks **ground** lets the actor's own competence carry",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/adversarial-ground.md",
+  "sense": "S2",
+  "anchor": "le (`an actor's own prior output is not ground`) read from the other side. There, the",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/adversarial-ground.md",
+  "sense": "S3",
+  "anchor": "side. There, the actor poisoned its own ground by carelessness. Here, **someone poison",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/adversarial-ground.md",
+  "sense": "S3",
+  "anchor": "pon. --- ## Why the adversary prefers ground Recall the signature of poisoned groun",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/adversarial-ground.md",
+  "sense": "S3",
+  "anchor": "my's analysis. It attacks the enemy's **ground**, and lets first-rate analysts reason",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/adversarial-ground.md",
+  "sense": "S3",
+  "anchor": "d. - **Time-bombs / logic bombs** \u2014 the ground is genuinely benign *when observed* and",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/adversarial-ground.md",
+  "sense": "S3",
+  "anchor": "box-aware malware** \u2014 behaves as benign ground *while watched*. The attacker reasons",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/adversarial-ground.md",
+  "sense": "S3",
+  "anchor": "e-of-check to time-of-use)** \u2014 poisoned ground with the mechanism *written into the",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/adversarial-ground.md",
+  "sense": "S3",
+  "anchor": "ate file is a cached belief consumed as ground; `plan = f(config, state)`, not `f(conf",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/adversarial-ground.md",
+  "sense": "S2",
+  "anchor": "nal on exactly the check that keeps the ground clean. The difference from the other t",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/adversarial-ground.md",
+  "sense": "S3",
+  "anchor": "ore because it changes what \"verify the ground\" can mean. **Living-off-the-land.** Th",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/adversarial-ground.md",
+  "sense": "S3",
+  "anchor": "false at the fact level. > **Poisoned ground is not always a false fact. Sometimes e",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/adversarial-ground.md",
+  "sense": "S3",
+  "anchor": "y single channel the authorship of your ground, and watch the decisions, not just > th",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/adversarial-ground.md",
+  "sense": "S3",
+  "anchor": "y single actor the > authorship of your ground.** You do not verify a vendor's schema",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/adversarial-ground.md",
+  "sense": "S3",
+  "anchor": ". The attack surface of an actor is its ground. Hardening reasoning is nearly worthles",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/adversarial-ground.md",
+  "sense": "S3",
+  "anchor": "e class: - prompt injection \u2192 poisoned ground (false fact in the model's inspected co",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/adversarial-ground.md",
+  "sense": "S3",
+  "anchor": "t) - supply-chain compromise \u2192 poisoned ground (false fact in a trusted dependency cha",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/adversarial-ground.md",
+  "sense": "S3",
+  "anchor": "cy channel) - disinformation \u2192 poisoned ground (false fact across corroborating channe",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/adversarial-ground.md",
+  "sense": "S3",
+  "anchor": "** The earlier account said adversarial ground is expensive to read because *reading i",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/adversarial-ground.md",
+  "sense": "S3",
+  "anchor": "to deny single-point authorship of your ground. **And it gives the encode/verify spli",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/adversarial-ground.md",
+  "sense": "S3",
+  "anchor": "s adversarial teeth.** \"You must verify ground you do not control\" is, read adversaria",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/adversarial-ground.md",
+  "sense": "S3",
+  "anchor": "ead adversarially: *you must assume the ground you do not control may be authored agai",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/adversarial-ground.md",
+  "sense": "S3",
+  "anchor": "ails if an actor can be exhibited whose ground is genuinely uncontrolled *and* adversa",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/adversarial-ground.md",
+  "sense": "S3",
+  "anchor": "ne can exist: reasoning operates *over* ground, so it is downstream of any poison in t",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/adversarial-ground.md",
+  "sense": "S3",
+  "anchor": "one apparent exception \u2014 an actor whose ground is immutable and wholly controlled \u2014 is",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/adversarial-ground.md",
+  "sense": "S3",
+  "anchor": "trolled \u2014 is exactly the case where the ground is not uncontrolled, the adversary has",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/prefix-stability.md",
+  "sense": "S3",
+  "anchor": "is is why the reference tooling emits **ground \u2192 settled decisions \u2192 task** (INV-6), a",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/prefix-stability.md",
+  "sense": "S3",
+  "anchor": "pical prefix, stable content *is* long (ground, a large corpus of settled decisions) a",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/prefix-stability.md",
+  "sense": "S3",
+  "anchor": "ice and why the shipped INV-6 ordering (ground \u2192 decisions \u2192 task) is correct. **But t",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/prefix-stability.md",
+  "sense": "S2",
+  "anchor": "ratus/encode-verify.md`: you can encode ground you control; you must *verify* ground y",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/prefix-stability.md",
+  "sense": "S2",
+  "anchor": "e ground you control; you must *verify* ground you do not). The cache invalidation is",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/prefix-stability.md",
+  "sense": "S3",
+  "anchor": "when the stale encoding is consumed as ground (`apparatus/closure-principle.md`). --",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/README.md",
+  "sense": "S2",
+  "anchor": "y* core. - **encode-verify** \u00b7 *encode ground you control; verify ground you don't* \u2014",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/README.md",
+  "sense": "S2",
+  "anchor": "** \u00b7 *encode ground you control; verify ground you don't* \u2014 and verify on a schedule,",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/README.md",
+  "sense": "S3",
+  "anchor": "ciple** \u00b7 *an actor's own output is not ground* \u2014 poisoned ground, estimator divergenc",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/README.md",
+  "sense": "S3",
+  "anchor": "'s own output is not ground* \u2014 poisoned ground, estimator divergence, and why a tool w",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/README.md",
+  "sense": "S3",
+  "anchor": "an delete your database - **adversarial-ground** \u00b7 the attack surface of an actor is i",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/README.md",
+  "sense": "S3",
+  "anchor": "\u00b7 the attack surface of an actor is its ground, not its logic \u2014 the same mechanism acr",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/README.md",
+  "sense": "S2",
+  "anchor": "hoosing the floor - **tool-contract** \u00b7 ground first \u2014 a tool declares what ground it",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/README.md",
+  "sense": "S2",
+  "anchor": "* \u00b7 ground first \u2014 a tool declares what ground it touched and whether it still holds;",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/tool-contract.md",
+  "sense": "S2",
+  "anchor": "rt of foundations RFC 0005 \u2014 **the same ground-relation requirement, one altitude down",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/tool-contract.md",
+  "sense": "S2",
+  "anchor": "<!-- ddd:ref id=DDD-floor-01 --> ## 1. Ground first The organising claim, and the re",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/tool-contract.md",
+  "sense": "S2",
+  "anchor": "not lead with tools: > **Tools act on ground. If the ground is not pinned, a tool's",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/tool-contract.md",
+  "sense": "S2",
+  "anchor": "tools: > **Tools act on ground. If the ground is not pinned, a tool's demand conseque",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/tool-contract.md",
+  "sense": "S2",
+  "anchor": "esolver that resolves against **stale** ground is not a resolver. It returns a confide",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/tool-contract.md",
+  "sense": "S3",
+  "anchor": "might notice is wrong. That is poisoned ground (`apparatus/closure-principle.md`) wear",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/tool-contract.md",
+  "sense": "S2",
+  "anchor": "classes are only meaningful over pinned ground.** Unpinned, every class collapses towa",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/tool-contract.md",
+  "sense": "S2",
+  "anchor": "s, over which transport \u2014 and specify **ground** not at all. The consequence is struct",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/tool-contract.md",
+  "sense": "S2",
+  "anchor": "han incidental: > **Capability without ground relation is motion without traction.**",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/tool-contract.md",
+  "sense": "S2",
+  "anchor": "flawless capability > declaration over ground nobody pinned, and the actor still cann",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/tool-contract.md",
+  "sense": "S2",
+  "anchor": ") | a context fragment must declare its ground relation, or the C axis is not pinned |",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/tool-contract.md",
+  "sense": "S2",
+  "anchor": "all) | a tool response must declare its ground relation, or the call's demand conseque",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/tool-contract.md",
+  "sense": "S2",
+  "anchor": "a tool does not know the task. ### 2.1 Ground relation \u2014 per response, not per tool",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/tool-contract.md",
+  "sense": "S2",
+  "anchor": "tool Every tool response declares the ground it depended on: - **controlled** \u2014 the",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/tool-contract.md",
+  "sense": "S2",
+  "anchor": "ve over what it returned. It *is* the ground; it cannot be stale relative to a sourc",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/tool-contract.md",
+  "sense": "S3",
+  "anchor": "ed** \u2014 the response is a **reading** of ground owned elsewhere. True as of an observ",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/tool-contract.md",
+  "sense": "S2",
+  "anchor": "ol hitting a remote URL touch different ground under one name. The declaration is ther",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/tool-contract.md",
+  "sense": "S2",
+  "anchor": "nd by what. Unbounded responses are the ground-exporter signature and the direct drive",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/tool-contract.md",
+  "sense": "S2",
+  "anchor": ". --- ## 5. The one line > **Pin the ground first: a tool response declares what gr",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/tool-contract.md",
+  "sense": "S2",
+  "anchor": "nd first: a tool response declares what ground it touched, whether that ground is > co",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/tool-contract.md",
+  "sense": "S2",
+  "anchor": "es what ground it touched, whether that ground is > controlled, and how to tell if it",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/encode-verify.md",
+  "sense": "S2",
+  "anchor": "iple produces once you notice that some ground is yours and some is not. It is the spi",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/encode-verify.md",
+  "sense": "S2",
+  "anchor": "ty --> ## The rule > **You can encode ground you control.** > **You must mechanicall",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/encode-verify.md",
+  "sense": "S2",
+  "anchor": "rol.** > **You must mechanically verify ground you don't.** Ground is the read-only s",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/encode-verify.md",
+  "sense": "S2",
+  "anchor": "echanically verify ground you don't.** Ground is the read-only surface an actor inspe",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/encode-verify.md",
+  "sense": "S2",
+  "anchor": "is irreducible \u2014 it is the price of the ground > being someone else's.** This is the",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/encode-verify.md",
+  "sense": "S3",
+  "anchor": "ple Encode/verify tells you to re-read ground you don't control. `apparatus/closure-p",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/encode-verify.md",
+  "sense": "S3",
+  "anchor": "ls you *why re-reading matters even for ground you think you do control*: the moment y",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/encode-verify.md",
+  "sense": "S3",
+  "anchor": "nt you consume your own prior output as ground, you have closed a loop with no correct",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/encode-verify.md",
+  "sense": "S2",
+  "anchor": "d you never controlled, the other about ground you corrupted by caching your own belie",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/tool-surfaces.md",
+  "sense": "S3",
+  "anchor": "he residual*, never by technology. ### Ground exporters Return unstructured or unbou",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/tool-surfaces.md",
+  "sense": "S3",
+  "anchor": "tor's own output.** They do not provide ground; they provide a check. Under `core/11`",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/tool-surfaces.md",
+  "sense": "S3",
+  "anchor": "endence.** `read_file` exports enormous ground when the task is *\"refactor this module",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/tool-surfaces.md",
+  "sense": "S3",
+  "anchor": "test` consumed for its **stdout** is a *ground exporter* \u2014 a wall of text to be interp",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/tool-surfaces.md",
+  "sense": "S3",
+  "anchor": "unt to be true.** A CLI's *stdout* is a ground exporter, and its *exit code* is a veri",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/tool-surfaces.md",
+  "sense": "S3",
+  "anchor": "| |---|---| | **Resources** | **Exports ground.** Read-only content returned for the a",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/tool-surfaces.md",
+  "sense": "S3",
+  "anchor": "| |---|---| | **Roots** | **Bounds the ground.** Declares what is in scope \u2014 a ground",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/tool-surfaces.md",
+  "sense": "S3",
+  "anchor": "ground.** Declares what is in scope \u2014 a ground-scoping primitive, and the only one tha",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/tool-surfaces.md",
+  "sense": "S3",
+  "anchor": "s outside the window. 3. **Bound the ground.** Roots-style scoping caps the volume",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/the-skill-floor.md",
+  "sense": "S3",
+  "anchor": "at thing on *this* input against *this* ground. In the store vocabulary (`core/01`): a",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/the-skill-floor.md",
+  "sense": "S3",
+  "anchor": "o every future invocation as if it were ground. This is the encode/verify split (`app",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/the-skill-floor.md",
+  "sense": "S2",
+  "anchor": "her: - The skill's future inputs are **ground the author did not control.** Each invo",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/the-skill-floor.md",
+  "sense": "S3",
+  "anchor": "refore **an observation of uncontrolled ground, encoded as if it were a fact** \u2014 a c",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/the-skill-floor.md",
+  "sense": "S3",
+  "anchor": "fact** \u2014 a cached belief consumed as ground on every subsequent run. Poisoned-groun",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/the-skill-floor.md",
+  "sense": "S3",
+  "anchor": "round on every subsequent run. Poisoned-ground-shaped. - And **you cannot amortise an",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/the-skill-floor.md",
+  "sense": "S3",
+  "anchor": "hat fires on *this* run, against *this* ground, and can **fail closed.** Not *\"we tes",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/the-skill-floor.md",
+  "sense": "S2",
+  "anchor": "ce tool `ground` (`applications/sdlc`, `ground-prd`) is the anti-skill, and now it is",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/the-skill-floor.md",
+  "sense": "S2",
+  "anchor": "is* true, failing closed on unreachable ground (INV-3). It is, precisely, the missing",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/assets/prefix-stability-check.py",
+  "sense": "S3",
+  "anchor": "==[s[0] for s in by_ratio]}\") check([(\"ground\",1000,0.01),(\"decisions\",400,0.10),(\"ex",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "apparatus/assets/prefix-stability-check.py",
+  "sense": "S3",
+  "anchor": "is long, volatile is short)\") check([(\"ground\",100,0.01),(\"decisions\",100,0.10),(\"tas",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "applications/sdlc/README.md",
+  "sense": "S2",
+  "anchor": "uction predicates close over substitute ground; DORA's four keys instrument the encode",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "applications/sdlc/production-as-ground.md",
+  "sense": "S2",
+  "anchor": "tion predicates close over *substitute* ground. Production predicates close over *real",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "applications/sdlc/production-as-ground.md",
+  "sense": "S3",
+  "anchor": "over drifted fixtures is the **poisoned ground** signature exactly (`apparatus/closure",
+  "bare": false
+ },
+ {
+  "repo": "downstream",
+  "path": "applications/sdlc/production-as-ground.md",
+  "sense": "S2",
+  "anchor": "review or more tests against substitute ground. It is **raising the verification rate",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "applications/sdlc/production-as-ground.md",
+  "sense": "S2",
+  "anchor": "uidance is essentially: make substitute ground adequate, on-demand, and non-constraini",
+  "bare": true
+ },
+ {
+  "repo": "downstream",
+  "path": "applications/sdlc/production-as-ground.md",
+  "sense": "S2",
+  "anchor": "tion: practices that convert substitute ground into *real* ground should outperform >",
+  "bare": true
+ }
+]

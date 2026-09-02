@@ -150,7 +150,7 @@ exception matters:
 The middle tier is why the naive two-way cut fails. *"Does this query hold at production traffic"* is
 a **technical** question whose predicate does not close statically — you can benchmark against
 substitutes, but the real answer requires real load. Likewise correctness against production's actual
-`P(input)`, which is `core/09`'s ground-distribution caveat arriving in practice: you do not have
+`P(input)`, which is `core/09`'s deployment-distribution caveat arriving in practice: you do not have
 production's input distribution in staging.
 
 **And this is what progressive delivery is *for*.** Canaries and shadow traffic are not a

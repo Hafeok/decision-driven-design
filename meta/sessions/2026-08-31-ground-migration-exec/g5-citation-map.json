@@ -1,0 +1,380 @@
+[
+ {
+  "path": "CLAUDE.md",
+  "repo": "upstream",
+  "anchor": "ay removes claim nodes from the agent's ground, so later edits revert to model priors",
+  "precedent": "P-01",
+  "action": "no-edit"
+ },
+ {
+  "path": "README.md",
+  "repo": "upstream",
+  "anchor": "g cheaper, and retries affordable. 2. **Ground and judgment dependence** Situated ar",
+  "precedent": "P-12",
+  "action": "no-edit"
+ },
+ {
+  "path": "meta/consolidated-state.md",
+  "repo": "upstream",
+  "anchor": "> **An actor's own prior output is not ground.** Consuming a cached belief as ground",
+  "precedent": "P-03",
+  "action": "no-edit"
+ },
+ {
+  "path": "meta/consolidated-state.md",
+  "repo": "upstream",
+  "anchor": "ound, literally.* - **FDE + platform \u00b7 `ground harvest` \u00b7 the seam-harvest loop:** the",
+  "precedent": "P-17",
+  "action": "no-edit"
+ },
+ {
+  "path": "meta/consolidated-state.md",
+  "repo": "upstream",
+  "anchor": "iple.md` | an actor's own output is not ground | current; cite **Kalman** | | `adversa",
+  "precedent": "P-03",
+  "action": "no-edit"
+ },
+ {
+  "path": "meta/consolidated-state.md",
+  "repo": "upstream",
+  "anchor": "*Kalman** | | `adversarial-ground.md` | ground as attack surface | **retreat the unifi",
+  "precedent": "P-12",
+  "action": "no-edit"
+ },
+ {
+  "path": "meta/holding-note-addendum-determinables.md",
+  "repo": "upstream",
+  "anchor": "etro-conversion:** replay over recorded ground retro-judges outcomes into verdicts onc",
+  "precedent": "P-07",
+  "action": "no-edit"
+ },
+ {
+  "path": "meta/holding-note-addendum-determinables.md",
+  "repo": "upstream",
+  "anchor": "comparability** \u2014 what an axis is; the ground registry is a registry of determinab",
+  "precedent": "P-15",
+  "action": "no-edit"
+ },
+ {
+  "path": "meta/holding-note-addendum-determinables.md",
+  "repo": "upstream",
+  "anchor": "any grain \u2014 capability not *about* any ground. **Routing:** downstream (the inference",
+  "precedent": "P-08",
+  "action": "no-edit"
+ },
+ {
+  "path": "meta/lineage-and-limits.md",
+  "repo": "upstream",
+  "anchor": "k's irreducibility is about **where the ground is**, not about whether an answer can b",
+  "precedent": "P-19",
+  "action": "no-edit"
+ },
+ {
+  "path": "meta/lineage-and-limits.md",
+  "repo": "upstream",
+  "anchor": "ty is a conjunct of `term:closure`, and ground that an arrangement cannot reach is gro",
+  "precedent": "P-06",
+  "action": "no-edit"
+ },
+ {
+  "path": "meta/lineage-and-limits.md",
+  "repo": "upstream",
+  "anchor": "und that an arrangement cannot reach is ground its predicate cannot evaluate over. So",
+  "precedent": "P-06",
+  "action": "no-edit"
+ },
+ {
+  "path": "meta/lineage-and-limits.md",
+  "repo": "upstream",
+  "anchor": "on (Wittgenstein), in the dispersion of ground (Hayek), in the residue automation leav",
+  "precedent": "P-19",
+  "action": "no-edit"
+ },
+ {
+  "path": "meta/lineage-and-limits.md",
+  "repo": "upstream",
+  "anchor": "fied only by **the actor's model of the ground > having diverged from the ground**. Th",
+  "precedent": "P-07",
+  "action": "no-edit"
+ },
+ {
+  "path": "meta/lineage-and-limits.md",
+  "repo": "upstream",
+  "anchor": "f the ground > having diverged from the ground**. The *direction* and *mechanism* of d",
+  "precedent": "P-07",
+  "action": "no-edit"
+ },
+ {
+  "path": "meta/reference-audit-2026-08-07.md",
+  "repo": "upstream",
+  "anchor": "ple (an actor's own prior output is not ground)\" | R2+R6 | nowhere \u2014 not in any contra",
+  "precedent": "P-13",
+  "action": "P13-record"
+ },
+ {
+  "path": "meta/reference-audit-2026-08-07.md",
+  "repo": "upstream",
+  "anchor": "ll authority. The logic is > sound; the ground is the attack surface. **C2 \u2014 `term:en",
+  "precedent": "P-13",
+  "action": "P13-record"
+ },
+ {
+  "path": "meta/reference-audit-2026-08-07.md",
+  "repo": "upstream",
+  "anchor": "ple (an actor's own prior output is not ground). Reproduction: `assets/floor-mechanism",
+  "precedent": "P-13",
+  "action": "P13-record"
+ },
+ {
+  "path": "meta/reference-audit-2026-08-07.md",
+  "repo": "upstream",
+  "anchor": "e as denying single-point authorship of ground. Redundant *uncorrelated* channels defe",
+  "precedent": "P-13",
+  "action": "P13-record"
+ },
+ {
+  "path": "meta/session-reconciliation-2026-08-16.md",
+  "repo": "upstream",
+  "anchor": "n would have drafted against superseded ground. That indistinguishability is `term:pre",
+  "precedent": "P-13",
+  "action": "P13-record"
+ },
+ {
+  "path": "CHANGELOG.md",
+  "repo": "downstream",
+  "anchor": "umption) - apparatus/tool-contract.md \u2014 ground-first tool contract for local agents; t",
+  "precedent": "P-17",
+  "action": "no-edit"
+ },
+ {
+  "path": "CHANGELOG.md",
+  "repo": "downstream",
+  "anchor": "PER TOKEN. The shipped INV-6 ordering (ground -> decisions -> task) remains correct",
+  "precedent": "P-16",
+  "action": "no-edit"
+ },
+ {
+  "path": "CLAUDE.md",
+  "repo": "downstream",
+  "anchor": "ay removes claim nodes from the agent's ground, so later edits revert to model priors",
+  "precedent": "P-01",
+  "action": "no-edit"
+ },
+ {
+  "path": "README.md",
+  "repo": "downstream",
+  "anchor": "ple.md) | *An actor's own output is not ground* \u2014 poisoned ground, and why Terraform c",
+  "precedent": "P-03",
+  "action": "no-edit"
+ },
+ {
+  "path": "README.md",
+  "repo": "downstream",
+  "anchor": "| The attack surface of an actor is its ground, not its logic \u2014 across three fields |",
+  "precedent": "P-02",
+  "action": "no-edit"
+ },
+ {
+  "path": "RECONCILIATION-REPORT.md",
+  "repo": "downstream",
+  "anchor": "ding revision), `linkedin-plan.md`, `ground-prd.md`. If these live outside the repo",
+  "precedent": "P-16",
+  "action": "no-edit"
+ },
+ {
+  "path": "meta/consolidated-state.md",
+  "repo": "downstream",
+  "anchor": "t \u2014 what is still owed **Product (see `ground-prd.md`):** rebuild Bicep on **compile-",
+  "precedent": "P-16",
+  "action": "no-edit"
+ },
+ {
+  "path": "meta/corpus-test-results-2026-08-14.md",
+  "repo": "downstream",
+  "anchor": "V2 records Emil's ruling: a watched-not-grounding edge **is** a distinct edge type, `revi",
+  "precedent": "P-13",
+  "action": "P13-record"
+ },
+ {
+  "path": "meta/graph-tool-ontology.md",
+  "repo": "downstream",
+  "anchor": "*Made* | | Framework mapping | Governed ground \u2014 the statused, curated portion of what",
+  "precedent": "P-06",
+  "action": "no-edit"
+ },
+ {
+  "path": "meta/holding-note-act-cost-2026-08-08.md",
+  "repo": "downstream",
+  "anchor": "ckward, it produces: the verdict is new ground about the verdict function itself. Matu",
+  "precedent": "P-13",
+  "action": "P13-record"
+ },
+ {
+  "path": "meta/holding-note-act-cost-2026-08-08.md",
+  "repo": "downstream",
+  "anchor": "ves from the admission test applied per ground type: *an act requires capability X iff",
+  "precedent": "P-13",
+  "action": "P13-record"
+ },
+ {
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "repo": "downstream",
+  "anchor": "inverts the quantifier in the existing ground definition. The upstream definition fix",
+  "precedent": "P-13",
+  "action": "P13-record"
+ },
+ {
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "repo": "downstream",
+  "anchor": "xes a decision and asks which facts are ground for it. The proposed move fixes a groun",
+  "precedent": "P-13",
+  "action": "P13-record"
+ },
+ {
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "repo": "downstream",
+  "anchor": "because the predicate is small and the ground is already in hand. Note in the PRD t",
+  "precedent": "P-13",
+  "action": "P13-record"
+ },
+ {
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "repo": "downstream",
+  "anchor": "arnivore?\" is unevaluable over your own ground; you have never watched a crocodile eat",
+  "precedent": "P-13",
+  "action": "P13-record"
+ },
+ {
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "repo": "downstream",
+  "anchor": "e | Note | |---|---|---| | The source's ground moves | taxonomy revised | ordinary dri",
+  "precedent": "P-13",
+  "action": "P13-record"
+ },
+ {
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "repo": "downstream",
+  "anchor": "sumed discharge (Q18) transposed to the ground layer. It is exactly why the human vers",
+  "precedent": "P-13",
+  "action": "P13-record"
+ },
+ {
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "repo": "downstream",
+  "anchor": "king \u2014 a decision node whose region is \"ground of type Y from source X,\" and whose Q1",
+  "precedent": "P-13",
+  "action": "P13-record"
+ },
+ {
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "repo": "downstream",
+  "anchor": "(Emil: actor class with the decision's ground has an impact on the projection).** Q16",
+  "precedent": "P-13",
+  "action": "P13-record"
+ },
+ {
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "repo": "downstream",
+  "anchor": "g \u00a713.10's proxy authoring over curated ground. Segmentation is form-tuning by receivi",
+  "precedent": "P-13",
+  "action": "P13-record"
+ },
+ {
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "repo": "downstream",
+  "anchor": "ing in Q27's sense. A CV is unsupported ground; a licence is trusted ground with a pri",
+  "precedent": "P-13",
+  "action": "P13-record"
+ },
+ {
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "repo": "downstream",
+  "anchor": "ts, the answers look authoritative, the ground was never rechecked. The fix is not a b",
+  "precedent": "P-13",
+  "action": "P13-record"
+ },
+ {
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "repo": "downstream",
+  "anchor": "gained a second customer. ### Q30 \u2014 \"Ground registry\" as the term, and projection-a",
+  "precedent": "P-13",
+  "action": "P13-record"
+ },
+ {
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "repo": "downstream",
+  "anchor": "table from code. **Proposed canon term: ground registry**, with the software layer as",
+  "precedent": "P-13",
+  "action": "P13-record"
+ },
+ {
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "repo": "downstream",
+  "anchor": "e is not what raises assurance. | | Q30 ground registry | Filed decisions found region",
+  "precedent": "P-13",
+  "action": "P13-record"
+ },
+ {
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "repo": "downstream",
+  "anchor": "are a shared customer (Q29)? 32. **\"Ground registry\" as canon vocabulary** (Q30) \u2014",
+  "precedent": "P-13",
+  "action": "P13-record"
+ },
+ {
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "repo": "downstream",
+  "anchor": "sumed: - Context is simultaneously the ground, the retrieved governance, and the work",
+  "precedent": "P-13",
+  "action": "P13-record"
+ },
+ {
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "repo": "downstream",
+  "anchor": "ogy reaches for; it is one layer of the ground registry | Emil | | 41 | \"Discard never",
+  "precedent": "P-13",
+  "action": "P13-record"
+ },
+ {
+  "path": "meta/holding-note-ground-axes-rev18.md",
+  "repo": "downstream",
+  "anchor": "hority; \"domain\" as lacking term with **ground registry** proposed for canon; projecti",
+  "precedent": "P-13",
+  "action": "P13-record"
+ },
+ {
+  "path": "meta/vocabulary-delivery-session-2026-08-15.md",
+  "repo": "downstream",
+  "anchor": "and the world, not by evaluation \u2014 the ground under F-1's \"non-evaluation must never",
+  "precedent": "P-13",
+  "action": "P13-record"
+ },
+ {
+  "path": "meta/way-of-working.md",
+  "repo": "downstream",
+  "anchor": "ncipal | | Framework mapping | Governed ground \u2014 the statused portion of what decision",
+  "precedent": "P-06",
+  "action": "no-edit"
+ },
+ {
+  "path": "meta/seed/claims-seed.yaml",
+  "repo": "downstream",
+  "anchor": "ors remove claim nodes from the agent's ground, so later actions are decisions w",
+  "precedent": "P-13",
+  "action": "P13-record"
+ },
+ {
+  "path": "meta/seed/claims-seed.yaml",
+  "repo": "downstream",
+  "anchor": "laims and revert to model priors. Grounding the agent in a persistent external clai",
+  "precedent": "P-13",
+  "action": "P13-record"
+ },
+ {
+  "path": "meta/seed/claims-seed.yaml",
+  "repo": "downstream",
+  "anchor": "does not predict drift onset, or graph-grounded agents drift no less than context",
+  "precedent": "P-13",
+  "action": "P13-record"
+ }
+]

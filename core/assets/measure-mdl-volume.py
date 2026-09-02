@@ -28,7 +28,7 @@ projected optimisation (DDD-cost-07). Does not and cannot confirm the
 correspondence (coefficients stipulated).
 
 Task (identical to the upstream measure-toy.py figures): (M, D), M in 1..4,
-D in 1..31, uniform ground, verdict VALID iff D <= days(M),
+D in 1..31, uniform deployment distribution, verdict VALID iff D <= days(M),
 days = {31, 28, 31, 30}.
 """
 

@@ -18,7 +18,8 @@ there, pinned at a version and a status in `graph/upstream.yaml`:
 > **You can encode ground you control.**
 > **You must mechanically verify ground you don't.**
 
-Ground is the read-only surface an actor inspects in order to act (`core/00`). Some of it you own —
+Ground (`core/00`) is what a determination is resolved against; this apparatus reads it as the
+read-only surface an actor inspects in order to act. Some of it you own —
 your source, your config, your schemas. Some of it you do not — a third-party API, a live
 environment, another team's service. The rule says these get different treatment, and the difference
 is not stylistic.
