@@ -1,6 +1,26 @@
-# GATE 4 — the prose waves, midpoint
+# GATE 4 — the prose waves, midpoint and completion
 
-**Status: draft-pending-ruling.** The citation map is committed and counted
+**Status: RULED (Emil, 2026-09-02) — all five items ratified; the wave is complete.**
+
+> **The ruling, recorded.** (1) The map and its 114 no-edit rulings ratified — the outcome G2 was
+> constructed to produce, retrospectively justifying the deferral: without the precedent set this
+> would have been 131 unreviewed micro-decisions called a migration. (2) The seven edits and the
+> miscitation repair ratified — `encode-verify.md` keeps the gloss and stops it borrowing
+> authority it never had. (3) **The held region row is left**, and the reason is recorded as a
+> genuinely new precedent instance: **a verbatim inheritance declared in text that the hash then
+> protects — P-13's shape inside a hashed field.** Editing it would break a declared carriage to
+> buy a firing. The next session to meet a hashed field containing declared carriage inherits
+> this instance by name. (4) W1's dispositions ratified, dated notes as records and filenames
+> keeping their names. (5) The ratio statement ratified in those words, with the clause that must
+> not be trimmed: **each shrink came from a ruling, not a re-count** — the difference between a
+> migration that was over-scoped and one that was over-estimated: the work was always small, and
+> only the rulings could show it.
+
+**Completion.** With the held row resolved by ruling, the wave's ledger closes: 131 rows — 114
+no-edit · 7 edits · 3 at G3 · 6 P-13 records · 1 left-by-ruling. Nothing remains open in the
+prose waves.
+
+*(Original status: draft-pending-ruling.)* The citation map is committed and counted
 (`g4-citation-map.py`, `g4-citation-map.json`); the mapped edits are executed on both branches
 (upstream `44dee42`, downstream this commit). One row is held for ruling. Nothing merged.
 
