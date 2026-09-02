@@ -1,6 +1,14 @@
 # GATE 5 — i18n and the surfaces Gate 1 raised
 
-**Status: draft-pending-ruling.** Upstream commit `5e75d23`; the map is
+**Status: RULED (Emil, 2026-09-02) — ratified.**
+
+> **The ruling, recorded.** (1) The 54-row map as read; the conclusion to record: the unbooked
+> surface was mostly history plus sentences the precedents already cover — **the waves vindicated
+> by the thing that surfaced outside them**, better evidence than the waves finishing cleanly.
+> (2) Both Danish repairs ratified as translation-defect repairs under the file's own rule —
+> repair the defect, keep what was true. (3) The successor-items finding recorded with its
+> discharged-by-G3 note: an item true of the tag and false of the branch reads as a live defect
+> six months later; the note is what stops someone re-opening it. Upstream commit `5e75d23`; the map is
 `g5-citation-map.py/.json`. Nothing merged.
 
 ## 1. The 54 surfaced bare rows — mapped, zero edits
