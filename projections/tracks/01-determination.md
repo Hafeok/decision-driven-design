@@ -404,7 +404,7 @@ stops being an abstraction.
 
 Now the differences are legible, and almost none of them are about the executor. The engineer's
 arrangement has the richest ground channels and the weakest record. The program's has the
-narrowest ground and a perfect record. The LLM's inherits its ground from whatever the pipeline
+narrowest ground available to it and a perfect record. The LLM's inherits its ground from whatever the pipeline
 retrieved, which is a design choice somebody made and probably did not write down.
 
 <!-- ddd:ref id=term:judgment -->
@@ -425,7 +425,7 @@ obvious gap because it looks handled.
 Compare arrangements, not components.
 
 The interesting result is that **the program's arrangement is the most tightly bounded and has
-the least ground**, while **the engineer's has the most ground and the least record**. Neither is
+the least ground available to it**, while **the engineer's has the most ground available and the least record**. Neither is
 better. They fail differently, and they fail differently *because of the seven items that are not
 the executor*.
 
@@ -969,7 +969,7 @@ since rung 1, discharged in four lines because it is now easy.
 |---|---|
 | **axis** | `retention-period` for customer support transcripts |
 | **value** | 24 months |
-| **ground cited** | the statutory minimum for the records class (institutional, verified against the regulation's text, 2026-08-18); the data processing agreement's ceiling (institutional, contractual); storage cost per month at current volume (controlled, measured); **support's argument that older transcripts resolve repeat cases: asserted, never measured — no ground exists for it** |
+| **ground cited** | the statutory minimum for the records class (institutional, verified against the regulation's text, 2026-08-18); the data processing agreement's ceiling (institutional, contractual); storage cost per month at current volume (controlled, measured); **support's argument that older transcripts resolve repeat cases: asserted, never measured — no ground is available for it** |
 | **α** | a legal review confirming the value sits inside both the statutory floor and the contractual ceiling, re-run whenever either moves — **met at filing, and it decays** |
 | **principal** | the named data protection owner. **Not** the platform team, **not** the engineer who set the cron job |
 | **retro-filed** | yes — value in force since the retention job shipped, gap uncovered 2026-08-18 |

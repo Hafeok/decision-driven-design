@@ -1,0 +1,782 @@
+[
+ {
+  "path": "core/00-primitives.md",
+  "anchor": "establishes: [determination, decision, ground, tolerance, admission-test, actor, arra",
+  "precedent": "P-08",
+  "action": "no-edit"
+ },
+ {
+  "path": "core/00-primitives.md",
+  "anchor": "ll authority. The logic is > sound; the ground is the attack surface. <!-- /ddd:embed",
+  "precedent": "P-02",
+  "action": "no-edit"
+ },
+ {
+  "path": "core/03-the-floor.md",
+  "anchor": "application, Hayek in the dispersion of ground, Bainbridge in what automation leaves t",
+  "precedent": "P-19",
+  "action": "no-edit"
+ },
+ {
+  "path": "core/08-projections.md",
+  "anchor": "every level, and you re-derive the same ground repeatedly. > **Encode as you descend",
+  "precedent": "P-07",
+  "action": "no-edit"
+ },
+ {
+  "path": "core/08-projections.md",
+  "anchor": "t or spiking, and re-derives the same ground at each level \u2014 **genuine** loops. So",
+  "precedent": "P-07",
+  "action": "no-edit"
+ },
+ {
+  "path": "core/09-the-measure.md",
+  "anchor": "*computes* the verdict from admissible ground. \u00a76.2's program does exactly that and r",
+  "precedent": "P-07",
+  "action": "no-edit"
+ },
+ {
+  "path": "core/09-the-measure.md",
+  "anchor": "losed or matured). Replay over recorded ground can retro-judge outcomes into verdicts",
+  "precedent": "P-07",
+  "action": "no-edit"
+ },
+ {
+  "path": "core/10-cost.md",
+  "anchor": "e admission test (`00` \u00a74), applied per ground type: > **An act requires capability X",
+  "precedent": "P-08",
+  "action": "no-edit"
+ },
+ {
+  "path": "core/11-the-floor-mechanism.md",
+  "anchor": "ple (an actor's own prior output is not ground). Reproduction: `assets/floor-mechanism",
+  "precedent": "P-03",
+  "action": "no-edit"
+ },
+ {
+  "path": "core/11-the-floor-mechanism.md",
+  "anchor": "*Hold capacity `C_hold`** \u2014 the bits of ground it can have in context at once. The sub",
+  "precedent": "P-04",
+  "action": "no-edit"
+ },
+ {
+  "path": "core/11-the-floor-mechanism.md",
+  "anchor": "o-fold: **hold capacity** \u2014 the bits of ground it can have in > context at once \u2014 and",
+  "precedent": "P-04",
+  "action": "no-edit"
+ },
+ {
+  "path": "core/11-the-floor-mechanism.md",
+  "anchor": "d-overflow** \u2014 the decision's governing ground does not fit. **Resolve-overflow** \u2014 >",
+  "precedent": "P-05",
+  "action": "edited-at-G3"
+ },
+ {
+  "path": "core/11-the-floor-mechanism.md",
+  "anchor": "d-overflow** \u2014 the decision's governing ground does not fit; the actor decides against",
+  "precedent": "P-05",
+  "action": "edited-at-G3"
+ },
+ {
+  "path": "core/11-the-floor-mechanism.md",
+  "anchor": "without correct ground: | Cause | The ground is\u2026 | Mechanism | The fix | |---|---|--",
+  "precedent": "P-12",
+  "action": "no-edit"
+ },
+ {
+  "path": "core/11-the-floor-mechanism.md",
+  "anchor": "in non-supply where it is not | **add** ground (retrieval) | | **Poisoned** | **false*",
+  "precedent": "P-07",
+  "action": "no-edit"
+ },
+ {
+  "path": "core/11-the-floor-mechanism.md",
+  "anchor": "e those are the only ways the governing ground of a decision can fail to constrain it.",
+  "precedent": "P-06",
+  "action": "no-edit"
+ },
+ {
+  "path": "core/11-the-floor-mechanism.md",
+  "anchor": "ecouples from ground under one of three ground-failures*; the intuition \"the model is",
+  "precedent": "P-17",
+  "action": "no-edit"
+ },
+ {
+  "path": "core/12-the-licensing-instance.md",
+  "anchor": "e as denying single-point authorship of ground. Redundant *uncorrelated* channels defe",
+  "precedent": "P-14",
+  "action": "no-edit"
+ },
+ {
+  "path": "core/12-the-licensing-instance.md",
+  "anchor": "ng collateral destruction of legitimate ground** \u2014 the same structure as an intrusion",
+  "precedent": "P-14",
+  "action": "no-edit"
+ },
+ {
+  "path": "core/13-delivery.md",
+  "anchor": "iven the standing configuration and the ground, the resolution is determined or it is",
+  "precedent": "P-01",
+  "action": "edit"
+ },
+ {
+  "path": "core/14-indexed-determination.md",
+  "anchor": "cheap, and retries affordable. - **H2 \u2014 ground and judgment dependence** (`DDD-hyp-02`",
+  "precedent": "P-12",
+  "action": "no-edit"
+ },
+ {
+  "path": "core/graph/terms.yaml",
+  "anchor": "hority. The logic is > sound; the ground is the attack surface. - id: term:gra",
+  "precedent": "P-02",
+  "action": "no-edit"
+ },
+ {
+  "path": "core/graph/terms.yaml",
+  "anchor": "o-fold: **hold capacity** \u2014 the bits of ground it can have in > context at once",
+  "precedent": "P-04",
+  "action": "no-edit"
+ },
+ {
+  "path": "core/graph/terms.yaml",
+  "anchor": "d-overflow** \u2014 the decision's governing ground does not fit. **Resolve-overflow** \u2014",
+  "precedent": "P-05",
+  "action": "edited-at-G3"
+ },
+ {
+  "path": "core/claims/DDD-agent-01.yaml",
+  "anchor": "ors remove claim nodes from the agent's ground, so later actions are decisions with no",
+  "precedent": "P-01",
+  "action": "no-edit"
+ },
+ {
+  "path": "core/claims/DDD-agent-01.yaml",
+  "anchor": "ared claims and revert to model priors. Grounding the agent in a persistent external clai",
+  "precedent": "P-01",
+  "action": "no-edit"
+ },
+ {
+  "path": "core/claims/DDD-agent-01.yaml",
+  "anchor": "does not predict drift onset, or graph-grounded agents drift no less than context-carri",
+  "precedent": "P-01",
+  "action": "no-edit"
+ },
+ {
+  "path": "core/claims/DDD-cost-05.yaml",
+  "anchor": "nt, where context is simultaneously the ground, the retrieved governance and the wor",
+  "precedent": "P-13",
+  "action": "P13-record"
+ },
+ {
+  "path": "core/claims/DDD-frame-07.yaml",
+  "anchor": "perational evaluability), DDD-hyp-02 (ground and judgment dependence), DDD-hyp-03 (g",
+  "precedent": "P-12",
+  "action": "no-edit"
+ },
+ {
+  "path": "core/claims/DDD-frame-17.yaml",
+  "anchor": "er the standing configuration and the ground jointly determine the resolution, which",
+  "precedent": "P-01",
+  "action": "held-for-ruling"
+ },
+ {
+  "path": "core/claims/DDD-frame-17.yaml",
+  "anchor": "ther the standing configuration and the ground together determine the resolution; or a",
+  "precedent": "P-01",
+  "action": "edit"
+ },
+ {
+  "path": "core/claims/DDD-frame-17.yaml",
+  "anchor": "ault is determined by configuration and ground with no rule authored and no govern",
+  "precedent": "P-13",
+  "action": "P13-record"
+ },
+ {
+  "path": "core/claims/DDD-measure-15.yaml",
+  "anchor": "at computes the verdict from admissible ground and reaches H(V|X) = 0 legitimately \u2014 t",
+  "precedent": "P-07",
+  "action": "no-edit"
+ },
+ {
+  "path": "core/decisions/DDD-dec-26.yaml",
+  "anchor": "ng 9 cites both and adds nothing. ## Ground provenance \u2014 ruled ineligible, not defe",
+  "precedent": "P-13",
+  "action": "P13-record"
+ },
+ {
+  "path": "core/decisions/DDD-dec-30.yaml",
+  "anchor": "ed or not by standing configuration and ground together, and if not, inside or outside",
+  "precedent": "P-13",
+  "action": "P13-record"
+ },
+ {
+  "path": "projections/tracks/01-determination.md",
+  "anchor": "has been in production for months; the ground it is answerable to has never been asse",
+  "precedent": "P-07",
+  "action": "no-edit"
+ },
+ {
+  "path": "projections/tracks/01-determination.md",
+  "anchor": "record. The program's has the narrowest ground and a perfect record. The LLM's inherit",
+  "precedent": "P-09",
+  "action": "edit"
+ },
+ {
+  "path": "projections/tracks/01-determination.md",
+  "anchor": "perfect record. The LLM's inherits its ground from whatever the pipeline retrieved, w",
+  "precedent": "P-07",
+  "action": "no-edit"
+ },
+ {
+  "path": "projections/tracks/01-determination.md",
+  "anchor": "most tightly bounded and has the least ground**, while **the engineer's has the most",
+  "precedent": "P-09",
+  "action": "edit"
+ },
+ {
+  "path": "projections/tracks/01-determination.md",
+  "anchor": "**, while **the engineer's has the most ground and the least record**. Neither is bett",
+  "precedent": "P-09",
+  "action": "edit"
+ },
+ {
+  "path": "projections/tracks/01-determination.md",
+  "anchor": "angeable. You can give the program more ground \u2014 feed it the gateway's published rate",
+  "precedent": "P-07",
+  "action": "no-edit"
+ },
+ {
+  "path": "projections/tracks/01-determination.md",
+  "anchor": "is load the gateway cannot absorb? | | Ground | observable \u2014 a stubbed handler, a fak",
+  "precedent": "P-12",
+  "action": "no-edit"
+ },
+ {
+  "path": "projections/tracks/01-determination.md",
+  "anchor": "imension worth governing (rung 1) | | **ground** | none consulted \u2014 not the rate limit",
+  "precedent": "P-12",
+  "action": "no-edit"
+ },
+ {
+  "path": "projections/tracks/01-determination.md",
+  "anchor": "dly by a named principal against stated ground is a decision you can find, argue with,",
+  "precedent": "P-06",
+  "action": "no-edit"
+ },
+ {
+  "path": "projections/tracks/01-determination.md",
+  "anchor": "h the reason it qualifies \u2014 no axis, no ground, no principal, and total commitment. Th",
+  "precedent": "P-08",
+  "action": "no-edit"
+ },
+ {
+  "path": "projections/tracks/01-determination.md",
+  "anchor": "at cases: asserted, never measured \u2014 no ground exists for it** | | **\u03b1** | a legal rev",
+  "precedent": "P-10",
+  "action": "edit"
+ },
+ {
+  "path": "projections/tracks/01-determination.md",
+  "anchor": "he floor, support wants longer, and the ground line says which of those positions has",
+  "precedent": "P-11",
+  "action": "no-edit"
+ },
+ {
+  "path": "projections/tracks/01-determination.md",
+  "anchor": "line says which of those positions has ground behind it and which does not. \"Asserted",
+  "precedent": "P-11",
+  "action": "no-edit"
+ },
+ {
+  "path": "projections/tracks/01-determination.md",
+  "anchor": "which was escaped is now governed, its ground is stated including the part that is mi",
+  "precedent": "P-06",
+  "action": "no-edit"
+ },
+ {
+  "path": "papers/paper-a/paper-a-supplement.md",
+  "anchor": "ors remove claim nodes from the agent's ground, so later actions are decisions with no",
+  "precedent": "P-01",
+  "action": "no-edit"
+ },
+ {
+  "path": "papers/paper-a/paper-a-supplement.md",
+  "anchor": "ared claims and revert to model priors. Grounding the agent in a persistent external clai",
+  "precedent": "P-01",
+  "action": "no-edit"
+ },
+ {
+  "path": "papers/paper-a/paper-a.md",
+  "anchor": "** [DDD-ground-01, projected]. ### 2.4 Ground provenance **(analysis)** Ground is no",
+  "precedent": "P-12",
+  "action": "no-edit"
+ },
+ {
+  "path": "papers/paper-a/paper-a.md",
+  "anchor": "ed]. An act whose acceptance depends on ground the arrangement cannot reach has a floo",
+  "precedent": "P-06",
+  "action": "no-edit"
+ },
+ {
+  "path": "papers/paper-a/paper-a.md",
+  "anchor": "1). Dropping this slot would relocate a ground property onto the actor, which is preci",
+  "precedent": "P-11",
+  "action": "no-edit"
+ },
+ {
+  "path": "papers/paper-a/paper-a.md",
+  "anchor": "es an institution's statement usable as ground, and what makes it fail \u2014 is **a questi",
+  "precedent": "P-03",
+  "action": "no-edit"
+ },
+ {
+  "path": "papers/paper-a/paper-a.md",
+  "anchor": "e standing configuration and this act's ground are given. That is the quantity \u00a74.1's",
+  "precedent": "P-04",
+  "action": "no-edit"
+ },
+ {
+  "path": "papers/paper-a/paper-a.md",
+  "anchor": "ance procedure can be executed with the ground, time, memory, tools, permissions and r",
+  "precedent": "P-08",
+  "action": "no-edit"
+ },
+ {
+  "path": "papers/paper-a/paper-a.md",
+  "anchor": "may demand time, memory, permissions or ground no arrangement has. And an operationall",
+  "precedent": "P-06",
+  "action": "no-edit"
+ },
+ {
+  "path": "papers/paper-a/paper-a.md",
+  "anchor": "ing: an act whose acceptance depends on ground the arrangement cannot reach has a floo",
+  "precedent": "P-06",
+  "action": "no-edit"
+ },
+ {
+  "path": "papers/paper-a/paper-a.md",
+  "anchor": "arrangement that does any of those has ground the walk assumed missing. What the walk",
+  "precedent": "P-06",
+  "action": "no-edit"
+ },
+ {
+  "path": "papers/paper-a/paper-a.md",
+  "anchor": "comparison is the arrangement. **H2 \u2014 ground and judgment dependence.** *Human or in",
+  "precedent": "P-12",
+  "action": "no-edit"
+ },
+ {
+  "path": "papers/paper-a/paper-a.md",
+  "anchor": "lity, feedback speed, feedback density, ground access, checker cost and retry cost int",
+  "precedent": "P-11",
+  "action": "no-edit"
+ },
+ {
+  "path": "papers/paper-a/paper-a.md",
+  "anchor": "t's commitments are coded by level, its ground by provenance, its predicates by closur",
+  "precedent": "P-14",
+  "action": "no-edit"
+ },
+ {
+  "path": "papers/paper-a/paper-a.md",
+  "anchor": "minable [term:commitment-level, draft]; ground provenance (\u00a72.4, this paper's analysis",
+  "precedent": "P-14",
+  "action": "no-edit"
+ },
+ {
+  "path": "papers/paper-a/paper-a.md",
+  "anchor": "g-running agents.* An arrangement whose ground decays over its own run instances the e",
+  "precedent": "P-07",
+  "action": "no-edit"
+ },
+ {
+  "path": "papers/paper-a/paper-a.md",
+  "anchor": "ure's own scope conditions \u2014 soundness, ground completeness, checker legitimacy \u2014 are",
+  "precedent": "P-11",
+  "action": "no-edit"
+ },
+ {
+  "path": "papers/paper-a/paper-a.md",
+  "anchor": "rational evaluability, generation cost, ground access, feedback and accountability cha",
+  "precedent": "P-11",
+  "action": "no-edit"
+ },
+ {
+  "path": "papers/paper-a/response-to-review.md",
+  "anchor": "standing configuration *and this act's ground* are both given. A hash varies enormous",
+  "precedent": "P-04",
+  "action": "no-edit"
+ },
+ {
+  "path": "papers/paper-a/reviewer-brief.md",
+  "anchor": "advantage *shifts* with evaluability, ground access, feedback and accountability. It",
+  "precedent": "P-11",
+  "action": "no-edit"
+ },
+ {
+  "path": "papers/measure-note/measure-note.md",
+  "anchor": "hanism that *computes* the verdict from ground. \u00a75.1's program does exactly that and r",
+  "precedent": "P-07",
+  "action": "no-edit"
+ },
+ {
+  "path": "papers/measure-note/next-canon-session.md",
+  "anchor": "echanism that computes the verdict from ground \u2014 `core/09`'s program encoding does exa",
+  "precedent": "P-07",
+  "action": "no-edit"
+ },
+ {
+  "path": "core/14-maturation.md",
+  "anchor": "ckward, it produces: the verdict is new ground about the verdict function itself. <!-",
+  "precedent": "P-03",
+  "action": "no-edit"
+ },
+ {
+  "path": "core/15-routing-example.md",
+  "anchor": "ves from the admission test applied per ground type (`DDD-cost-12`'s derivation at the",
+  "precedent": "P-08",
+  "action": "no-edit"
+ },
+ {
+  "path": "core/assets/measure-routing-example.py",
+  "anchor": "ent derives from the admission test per ground type: # required iff the verdict varies",
+  "precedent": "P-16",
+  "action": "no-edit"
+ },
+ {
+  "path": "core/assets/measure-routing-example.py",
+  "anchor": "lity residual coverage(today) ground type \"code-synthesis\": dict(r=12.",
+  "precedent": "P-16",
+  "action": "no-edit"
+ },
+ {
+  "path": "core/assets/measure-routing-example.py",
+  "anchor": "# visual ground -> excluded } # Class thresholds: unco",
+  "precedent": "P-16",
+  "action": "no-edit"
+ },
+ {
+  "path": "core/assets/recon-cadence-demo.py",
+  "anchor": "lam_drift, lam_adv = 0.002, 0.02 # ground corruption rate per day (drift / advers",
+  "precedent": "P-16",
+  "action": "no-edit"
+ },
+ {
+  "path": "core/decisions/DDD-dec-27.yaml",
+  "anchor": "Both carry to Gate 3 as open. ## 4. Ground provenance \u2014 the ruling applied Rung",
+  "precedent": "P-13",
+  "action": "P13-record"
+ },
+ {
+  "path": "core/decisions/DDD-dec-27.yaml",
+  "anchor": "two mints, the three non-deltas, the ground-provenance ineligibility ruling, and th",
+  "precedent": "P-13",
+  "action": "P13-record"
+ },
+ {
+  "path": "apparatus/README.md",
+  "anchor": "ciple** \u00b7 *an actor's own output is not ground* \u2014 poisoned ground, estimator divergenc",
+  "precedent": "P-03",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/README.md",
+  "anchor": "\u00b7 the attack surface of an actor is its ground, not its logic \u2014 the same mechanism acr",
+  "precedent": "P-02",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/README.md",
+  "anchor": "hoosing the floor - **tool-contract** \u00b7 ground first \u2014 a tool declares what ground it",
+  "precedent": "P-12",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/adversarial-ground.md",
+  "anchor": "*The attack surface of any actor is its ground, not its logic.** An adversary who att",
+  "precedent": "P-02",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/adversarial-ground.md",
+  "anchor": "my's analysis. It attacks the enemy's **ground**, and lets first-rate analysts reason",
+  "precedent": "P-07",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/adversarial-ground.md",
+  "anchor": "box-aware malware** \u2014 behaves as benign ground *while watched*. The attacker reasons",
+  "precedent": "P-03",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/adversarial-ground.md",
+  "anchor": "y single actor the > authorship of your ground.** You do not verify a vendor's schema",
+  "precedent": "P-14",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/adversarial-ground.md",
+  "anchor": ". The attack surface of an actor is its ground. Hardening reasoning is nearly worthles",
+  "precedent": "P-02",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/adversarial-ground.md",
+  "anchor": "to deny single-point authorship of your ground. **And it gives the encode/verify spli",
+  "precedent": "P-14",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/adversarial-ground.md",
+  "anchor": "ead adversarially: *you must assume the ground you do not control may be authored agai",
+  "precedent": "P-06",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/adversarial-ground.md",
+  "anchor": "ails if an actor can be exhibited whose ground is genuinely uncontrolled *and* adversa",
+  "precedent": "P-06",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/adversarial-ground.md",
+  "anchor": "one apparent exception \u2014 an actor whose ground is immutable and wholly controlled \u2014 is",
+  "precedent": "P-06",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/adversarial-ground.md",
+  "anchor": "trolled \u2014 is exactly the case where the ground is not uncontrolled, the adversary has",
+  "precedent": "P-06",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/closure-principle.md",
+  "anchor": "s a definition by *role* \u2014 it says what ground is **for**. It does not say where grou",
+  "precedent": "P-03",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/closure-principle.md",
+  "anchor": "ound is **for**. It does not say where ground may **come from**. And that omission ad",
+  "precedent": "P-14",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/closure-principle.md",
+  "anchor": "o act. **It satisfies the definition of ground completely.** But it is not a fact abo",
+  "precedent": "P-03",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/closure-principle.md",
+  "anchor": "reducible, and it is the price of > the ground being someone else's.** This is the sa",
+  "precedent": "P-14",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/closure-principle.md",
+  "anchor": "he observation is the cost of acting on ground you do not > own.** --- ## Consequenc",
+  "precedent": "P-06",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/closure-principle.md",
+  "anchor": ". The only candidate is a system whose ground is genuinely immutable *and* wholly con",
+  "precedent": "P-06",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/encode-verify.md",
+  "anchor": "iple produces once you notice that some ground is yours and some is not. It is the spi",
+  "precedent": "P-14",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/encode-verify.md",
+  "anchor": "is irreducible \u2014 it is the price of the ground > being someone else's.** This is the",
+  "precedent": "P-14",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/encode-verify.md",
+  "anchor": "d you never controlled, the other about ground you corrupted by caching your own belie",
+  "precedent": "P-06",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/prefix-stability.md",
+  "anchor": "pical prefix, stable content *is* long (ground, a large corpus of settled decisions) a",
+  "precedent": "P-18",
+  "action": "edit"
+ },
+ {
+  "path": "apparatus/prefix-stability.md",
+  "anchor": "ice and why the shipped INV-6 ordering (ground \u2192 decisions \u2192 task) is correct. **But t",
+  "precedent": "P-16",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/the-skill-floor.md",
+  "anchor": "at thing on *this* input against *this* ground. In the store vocabulary (`core/01`): a",
+  "precedent": "P-04",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/the-skill-floor.md",
+  "anchor": "o every future invocation as if it were ground. This is the encode/verify split (`app",
+  "precedent": "P-03",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/the-skill-floor.md",
+  "anchor": "her: - The skill's future inputs are **ground the author did not control.** Each invo",
+  "precedent": "P-06",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/the-skill-floor.md",
+  "anchor": "hat fires on *this* run, against *this* ground, and can **fail closed.** Not *\"we tes",
+  "precedent": "P-04",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/the-skill-floor.md",
+  "anchor": "ce tool `ground` (`applications/sdlc`, `ground-prd`) is the anti-skill, and now it is",
+  "precedent": "P-15",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/the-skill-floor.md",
+  "anchor": "is* true, failing closed on unreachable ground (INV-3). It is, precisely, the missing",
+  "precedent": "P-06",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/tool-contract.md",
+  "anchor": "rt of foundations RFC 0005 \u2014 **the same ground-relation requirement, one altitude down",
+  "precedent": "P-11",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/tool-contract.md",
+  "anchor": "<!-- ddd:ref id=DDD-floor-01 --> ## 1. Ground first The organising claim, and the re",
+  "precedent": "P-12",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/tool-contract.md",
+  "anchor": "not lead with tools: > **Tools act on ground. If the ground is not pinned, a tool's",
+  "precedent": "P-07",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/tool-contract.md",
+  "anchor": "s, over which transport \u2014 and specify **ground** not at all. The consequence is struct",
+  "precedent": "P-07",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/tool-contract.md",
+  "anchor": "han incidental: > **Capability without ground relation is motion without traction.**",
+  "precedent": "P-11",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/tool-contract.md",
+  "anchor": "a tool does not know the task. ### 2.1 Ground relation \u2014 per response, not per tool",
+  "precedent": "P-11",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/tool-contract.md",
+  "anchor": "ve over what it returned. It *is* the ground; it cannot be stale relative to a sourc",
+  "precedent": "P-03",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/tool-contract.md",
+  "anchor": "ol hitting a remote URL touch different ground under one name. The declaration is ther",
+  "precedent": "P-07",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/tool-contract.md",
+  "anchor": "nd by what. Unbounded responses are the ground-exporter signature and the direct drive",
+  "precedent": "P-17",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/tool-contract.md",
+  "anchor": "es what ground it touched, whether that ground is > controlled, and how to tell if it",
+  "precedent": "P-06",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/tool-surfaces.md",
+  "anchor": "he residual*, never by technology. ### Ground exporters Return unstructured or unbou",
+  "precedent": "P-17",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/tool-surfaces.md",
+  "anchor": "endence.** `read_file` exports enormous ground when the task is *\"refactor this module",
+  "precedent": "P-07",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/tool-surfaces.md",
+  "anchor": "unt to be true.** A CLI's *stdout* is a ground exporter, and its *exit code* is a veri",
+  "precedent": "P-17",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/tool-surfaces.md",
+  "anchor": "| |---|---| | **Resources** | **Exports ground.** Read-only content returned for the a",
+  "precedent": "P-07",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/tool-surfaces.md",
+  "anchor": "| |---|---| | **Roots** | **Bounds the ground.** Declares what is in scope \u2014 a ground",
+  "precedent": "P-07",
+  "action": "no-edit"
+ },
+ {
+  "path": "apparatus/tool-surfaces.md",
+  "anchor": "ground.** Declares what is in scope \u2014 a ground-scoping primitive, and the only one tha",
+  "precedent": "P-17",
+  "action": "no-edit"
+ },
+ {
+  "path": "applications/sdlc/README.md",
+  "anchor": "uction predicates close over substitute ground; DORA's four keys instrument the encode",
+  "precedent": "P-14",
+  "action": "no-edit"
+ },
+ {
+  "path": "applications/sdlc/production-as-ground.md",
+  "anchor": "tion predicates close over *substitute* ground. Production predicates close over *real",
+  "precedent": "P-14",
+  "action": "no-edit"
+ },
+ {
+  "path": "applications/sdlc/production-as-ground.md",
+  "anchor": "review or more tests against substitute ground. It is **raising the verification rate",
+  "precedent": "P-14",
+  "action": "no-edit"
+ },
+ {
+  "path": "applications/sdlc/production-as-ground.md",
+  "anchor": "uidance is essentially: make substitute ground adequate, on-demand, and non-constraini",
+  "precedent": "P-14",
+  "action": "no-edit"
+ },
+ {
+  "path": "applications/sdlc/production-as-ground.md",
+  "anchor": "tion: practices that convert substitute ground into *real* ground should outperform >",
+  "precedent": "P-14",
+  "action": "no-edit"
+ }
+]

@@ -44,7 +44,7 @@ inherited. The note polices this line in its own voice — conservation on the c
 ## What the computations do and do not establish
 
 The note computes the identity on a small exhaustive task (a date validator, two decompositions,
-three actor encodings, chained splits, three ground distributions) and estimates it through a
+three actor encodings, chained splits, three deployment distributions) and estimates it through a
 simulated retrieval channel (40,000 samples). It then states, before a reviewer can:
 **an identity holding is not evidence.** `I(V;X) + H(V|X) = H(V)` holds for every joint
 distribution; computing it and finding it holds establishes nothing about the framework, and

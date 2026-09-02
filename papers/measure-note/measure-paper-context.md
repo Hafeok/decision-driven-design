@@ -56,7 +56,7 @@ invariance is a theorem.
 > Three of the framework's separately-stated claims are this one identity: `X` a **decomposition**
 > gives the seam; `X` an **actor's encoding** gives the store allocation; `X` a **retrieval
 > policy** gives RAG. Two further instances extend the worked coverage without adding a fourth
-> claim: the identity **iterated** across a two-level chain, and a **ground-distribution sweep**
+> claim: the identity **iterated** across a two-level chain, and a **deployment-distribution sweep**
 > across three deployments.
 
 **Naming.** Inside the engineering projection, **specification demand**; the actor-general term is
@@ -103,7 +103,7 @@ computed; necessary for the warrant, unnecessary for the operation** [`DDD-frame
 | §5.1 | Actor store allocation (three sums = 25.493) | `measure-actor-allocation.py` | upstream `v5.7.0` |
 | §5.2 | Retrieval / encode-verify (`H(A)` ≈ 2.61 invariant) | `measure-rag.py` | upstream `v5.7.0` |
 | §5.3 | Chained seams (iterated chain rule, both orders) | `measure-chained-seams.py` | upstream `v5.7.0` |
-| §5.4 | Non-uniform ground (three deployments) | `measure-nonuniform-ground.py` | upstream `v5.7.0` |
+| §5.4 | Non-uniform deployment distribution (three deployments) | `measure-nonuniform-ground.py` | upstream `v5.7.0` |
 | §6 | Aggregate discharge over `N` acts | `measure-aggregate-discharge.py` | **next upstream tag** — new with the discharge session |
 
 **The sixth asset does not resolve at the pin, and the note says so** in Reproduction rather than
@@ -136,7 +136,7 @@ turns on is absent rather than denied. See §9 for the open canon item this crea
 
 1. The theorem is Shannon's; the claim is the mapping. **Now: the mappings**, plural — §6 adds a
    second.
-2. Demand is relative to the ground distribution — worked at §5.4 (`DDD-measure-12`).
+2. Demand is relative to the deployment distribution — worked at §5.4 (`DDD-measure-12`).
 3. Escape is not separated from judgment. **Verified against `DDD-frame-15`/`16` and unchanged:**
    those claims partition *discharge*, while this caveat cleaves *within the residual* — a
    different object, and `DDD-frame-15`'s own region field guards the seam.
@@ -167,7 +167,7 @@ not apology.
 - The identity is reported as arithmetic and projected as a model; never fused.
 - Notation stated once and used exactly. Operators: `H(·)`, `H(·|·)`, `I(·;·)`, all w.r.t. `P`.
   Variables: `V` verdict, `A` the answer (§5.2's verdict variable), `X` conditioning, `S`
-  decomposition, `E` actor encoding, `R` retrieval, `P` ground, `M` the month (§5.3's chain, §6's shared latent).
+  decomposition, `E` actor encoding, `R` retrieval, `P` deployment distribution, `M` the month (§5.3's chain, §6's shared latent).
   **Two counts, never interchangeable: `n` points in the input space (the display scale), `N`
   acts.** Both are now declared in §2's Notation paragraph.
 - Worked tables report the `H(V)·n` scale, marked `·n` in every header; §5.2's RAG table and §6's
@@ -219,7 +219,7 @@ The section exists; edits to it are line-level ratification matters.
 
 ### Settled earlier, carried for the record
 
-RAG-as-demonstration (R-a) · chained seams and non-uniform ground worked (R-b) · correspondence
+RAG-as-demonstration (R-a) · chained seams and non-uniform deployment distribution worked (R-b) · correspondence
 proposed as protocol, not run · escape/judgment split named and stopped · related-work positioning
 merged as §9.
 
