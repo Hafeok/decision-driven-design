@@ -1,8 +1,23 @@
 # GATE 2 — the twenty precedents
 
-**Status: draft-pending-ruling. This is the session's largest ruling and the reason it exists.**
-Nothing is edited by this gate: every proposed re-expression below is a proposal, executed at G3/G4
-only under the ruling.
+**Status: RULED (Emil, 2026-09-02) — all twenty ratified.** Nothing is edited by this gate: the
+re-expressions below execute at G3/G4 under the ruling.
+
+> **The ruling, recorded.** The five edits approved as drafted. **P-09** ratified as a *named
+> precedent, not a wording*: comparative endowments take *available*, per-act reach takes
+> *delivered* — later rows cite the boundary, not the sentence. **P-13**'s extension to notes
+> recording a decision as formed ratified, and named the more consequential: re-expressing such a
+> note would rewrite what a decision was made against — the same principle as basis edges into
+> retired nodes (`retired_from`, the `DDD-measure-08` exemplar), cross-referenced so the two are
+> visibly one rule. **P-01**: `DDD-agent-01` untouched — an eighth W6 bought for neatness is the
+> wrong kind of transaction. **P-04**'s consequence accepted in advance: a seed-predicted firing
+> G3 finds unearned is a recorded divergence and the prediction stands as written. **P-18**
+> ratified as the general fallback **with a condition**: G4 reports the count of rows that
+> reached it — a large count is a finding about the vocabulary, not a licence; and a row where
+> P-18 would change the sense rather than name an omitted state still stops at a gate. **P-20**
+> discharges the Gate 1 directive: the README row is the canonical instance and the standing
+> citation for all 416 qualified rows. No inheritance estimates — the citation map is counted at
+> G4.
 
 **Drawn from the 185-row bare ledger** Gate 1 ruled governing (`g1-head-ledger.json`), selected for
 coverage over every distinct sentence shape in it, hardest first, with at least one S2 and one S3
