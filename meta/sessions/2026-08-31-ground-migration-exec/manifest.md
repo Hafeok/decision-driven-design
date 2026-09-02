@@ -1,5 +1,23 @@
 # Manifest — the ground migration, executed
 
+**GATE 6: ACCEPTED (Emil, 2026-09-02). The migration closes.**
+
+> **The ruling, recorded.** The close as assembled, `v5.13.0` as a minor with the descriptor as
+> written, PRs upstream-first, the pin advance as a successor act — *it belongs to a session that
+> can verify its own prediction rather than inheriting one.* **W4 closes as no-migration-owed**,
+> the four local items riding `product-cli`'s own maintenance. And the observation Emil named as
+> worth stating precisely: the expensive disposition — keeping the word where the world-facing
+> sense lives — looked twice as costly when it was ruled, and turned out to **eliminate the only
+> edit in the programme that could break something running**. The serialised field was already
+> correct because canon kept its word.
+>
+> The closing summary, in the ruling's words: four instruments priced this migration in
+> descending order and every reduction came from a ruling rather than a re-count. What executed
+> was under twenty discretionary sentences across two repositories, 185 rows mapped to twenty
+> precedents with zero orphans and a fallback count of one, and a translated defect nobody had a
+> checker for. **The two-session shape is the finding: plan completely, defer whole, then spend
+> the rulings first.**
+
 **Session type:** interactive execution, six gates, Emil ruling at each. **Merged nothing.**
 **Branch:** `claude/ground-migration-exec-teb4gc` in both repositories; `product-cli` read-only
 throughout, no commit, no working-tree change.
