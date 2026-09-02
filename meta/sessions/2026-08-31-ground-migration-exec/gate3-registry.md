@@ -1,6 +1,23 @@
 # GATE 3 — the registry wave, executed and verified
 
-**Status: draft-pending-ruling.** The prediction was committed first (`gate3-prediction.md`,
+**Status: RULED (Emil, 2026-09-02) — ratified.**
+
+> **The ruling, recorded.** (1) The zero-of-seven divergence is recorded explicitly as **the
+> seed's largest prediction, unverified, and unmanufactured** — nothing was edited to make seven
+> true; P-01 operating on the case it was written for. (2) The two W1 firings belong to G6's
+> proposal; the SR-5 supersession is recorded as a **post-seed fact, not an error in SR-5** — the
+> ruling was correct on the corpus it ruled on. (3) The poisoned-ground rewording ratified; the
+> disclosure named the valuable half — a first draft semantically right and structurally wrong,
+> caught by an instrument: the Stable Dependency Principle working at term level. (4) **The three
+> printed strings stay as predicted**: the asset's output bytes are evidence a paper cites, and
+> substituting new evidence for predicted evidence mid-gate is the reconciling the method rules
+> forbid. They are **booked with the filename as one migration item** for whoever next advances
+> that asset, with the measure note §5.4's disclosure clause as the precedent. Carried into G4:
+> three precedents exercised at scale on the hardest population produced no edits — if the prose
+> waves show the same ratio, the migration is **smaller than four instruments in a row have
+> predicted**, and that count belongs in the manifest as such.
+
+*(Original status: draft-pending-ruling.)* The prediction was committed first (`gate3-prediction.md`,
 downstream `a8d5fa5`), the edits after (upstream `0aa55e2`, branch
 `claude/ground-migration-exec-teb4gc`). Nothing merged; no tag; the downstream pin untouched.
 
