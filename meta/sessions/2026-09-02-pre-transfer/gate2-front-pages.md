@@ -192,3 +192,35 @@ sentence keeps its position and its purpose:
 - B1: Emil rules the sentence-form question once; the same ruling covers its instances.
 
 **HOLD at GATE 2 — awaiting Emil's ruling on the findings and the repair shape.**
+
+---
+
+## RULING (Emil, 2026-09-03): all twelve repair, plus B1
+
+- **D1 is two defects and both go** — the absence claim withdraws with the paper's ruled
+  formulation; "changes their predictions" goes entirely: §11 explicitly declines the move, so the
+  README claimed something the paper refuses.
+- **D5 takes the real vocabulary** with §5's glosses, "harder to knock down" goes with it — the
+  highest-priority repair on the page.
+- **D3, D4, D6, U1, U2: status marks in place.** D4 specifically must stop leaning the projected
+  identification on the established chain rule — the identity-as-evidence move the measure note's
+  review caught must not survive on a front page after the paper repaired it.
+- **D2 takes "largely/usually held fixed"** — the absolute is falsified by any counterexample and
+  the survey supplies candidates.
+- **D7 repairs with I-3's advance. U3 becomes marked exposition** — the nearest node is toy-actor
+  reported, and "a mechanical account" claims more.
+- **B1: repair the sentence-form** — "applies to any arrangement" asserts universal applicability;
+  "is written to apply across arrangements" states the intent, which is what a purpose sentence is
+  for. One ruling, all instances.
+- **U4: the v3-era demotion governs, and this is the sharper finding.** The immune-system material
+  is a suggestive parallel with known disanalogies, and no claim carries the instance. core/12
+  being a document is not supersession: prose does not overturn a recorded demotion, and if it
+  were meant to, that would need a decision node nobody filed. The upstream README loses the
+  tested-against and survived-falsification framing. Recorded at its true size: **two front pages
+  contradicting each other, one recording the demotion the other ignores — the strongest single
+  argument that this session had to happen before publication.**
+- Repair shape confirmed: converge on the register already present in both files, in place, no
+  rewriting. Frame-08's `changed: v5.14` correctly flagged now; the close proposes the version and
+  the field either matches or is corrected there.
+
+**Executed:** downstream `3a575bb` (D1–D6, D8), upstream `6e14a83` (U1–U4, B1); D7 rides I-3.
