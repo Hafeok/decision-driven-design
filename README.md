@@ -13,8 +13,9 @@ determinations come from, what they cost, and which actor should make each one.
 
 The framework is a **claim graph**: every claim it makes is a node with a status, evidence, and a
 falsifier, stored as data and validated against a versioned schema. It remains deliberately **smaller
-and better-attributed** than v3, and harder to knock down — and says exactly which of its claims are
-proven, exercised, or still projected.
+and better-attributed** than v3 — and says exactly which of its claims are `established` (argued
+internally and unchallenged; four claims, all formal — not external validation), `reported` (at
+least one reproducing computation), or still `projected` (a declared falsifier nobody has met).
 
 ---
 
@@ -22,30 +23,34 @@ proven, exercised, or still projected.
 
 Four classical results govern how work is allocated in engineered systems — Brooks's essential
 complexity, Tesler's conservation of complexity, Ashby's requisite variety, Meyer's contracts. Each
-quantifies over an **actor**: the thing that makes a determination against some ground. **None of them
-makes that actor explicit.** They had no reason to — for the whole history of these results there
-were two kinds of determiner, a person or a program, and the gap between them was a light switch, not
-a spectrum.
+quantifies over an **actor**: the thing that makes a determination against some ground. **Each of
+them holds that actor largely fixed.** They had little reason to vary it — for the whole history of
+these results there were two kinds of determiner, a person or a program, and the gap between them
+was a light switch, not a spectrum.
 
 A third kind now exists: **non-deterministic, yet with a distribution that can be frozen by binding.**
-Decision-Driven Design is what you get when you **fill in the actor slot** those results left empty —
-and discover that supplying the missing parameter *changes their predictions.*
+Decision-Driven Design is what you get when you **make the actor an explicit parameter** those
+results hold largely fixed. The framework indexes their allocation questions to the arrangement; its
+contribution is stated against those literatures, not against their absence.
 
-Two consequences follow, and they are the framework's core contribution:
+Two claims follow, and they are the framework's core contribution — both **projected**: argued,
+with declared falsifiers nobody has met:
 
 1. **The irreducible floor of a task is a property of its *acceptance predicate*, not of the task.**
    Zero where you can check the answer; non-zero where you cannot; and *whether you can* is, in
-   general, undecidable. → [`core/03-the-floor.md`](core/03-the-floor.md)
+   general, undecidable. *(`DDD-floor-02`, **projected**)* → [`core/03-the-floor.md`](core/03-the-floor.md)
 
 2. **Selection intensity is inversely proportional to acceptance-predicate closure.** *Training* is
    what you do when you can check the work. *Selection* is what you do when you cannot — you check the
-   worker instead. This is falsifiable across professions.
+   worker instead. This is falsifiable across professions. *(`DDD-hyp-05`, **projected**)*
    → [`core/04-actors.md`](core/04-actors.md)
 
-And, new in 4.1: for tasks whose acceptance predicate closes, **specification demand is measurable** —
-it is the Shannon entropy of the verdict, and conservation is the chain rule of entropy
-([`core/09`](core/09-the-measure.md)). The measure exists exactly where the predicate closes, and
-vanishes precisely at the floor.
+And, new in 4.1: a measure for the closing region. The chain-rule identity is arithmetic
+(`DDD-measure-02`, **established**, formal); the identification of specification demand with the
+Shannon entropy of the verdict is a modelling claim (`DDD-measure-01`, **projected**) — the
+identity holding is not evidence for the identification
+([`core/09`](core/09-the-measure.md)). The measure is defined exactly where the predicate closes,
+and is undefined at the floor.
 
 And a prediction: **model actors outperform human actors exactly where the acceptance predicate
 closes, and underperform exactly where it does not — the gap tracks *closure*, not *difficulty*.**
@@ -81,9 +86,10 @@ pinned in [`graph/upstream.yaml`](graph/upstream.yaml) (`v5.5.0` at time of writ
 It is not duplicated here. This repository pins the specific claims it depends on in
 [`graph/upstream.yaml`](graph/upstream.yaml); read the theory in the principle repo's `core/`.
 
-The load-bearing, falsifiable results — the floor is in the acceptance predicate, selection intensity
-tracks predicate closure, demand is the Shannon entropy of the verdict, overflow ∩ open is the
-mechanism of capacity-generated escape — all live upstream. Falsification of any of them is an issue against the principle repo, not this one.
+The load-bearing, falsifiable claims — the floor is in the acceptance predicate (`DDD-floor-02`,
+projected), selection intensity tracks predicate closure (`DDD-hyp-05`, projected), demand is the
+Shannon entropy of the verdict (`DDD-measure-01`, projected), overflow ∩ open is the mechanism of
+capacity-generated escape (`DDD-floor-01`, reported) — all live upstream. Falsification of any of them is an issue against the principle repo, not this one.
 
 ### Apparatus — the mechanisms
 
@@ -166,10 +172,11 @@ This is a working specification under active revision. The strongest claims — 
 predicate, and *selection intensity tracks predicate closure* — are **falsifiable**, and the
 conditions are stated in the documents. Live status is now in the graph: every claim carries a
 status (`established` / `reported` / `projected` / `retired`) in [`core/claims/`](core/claims/).
-The counting-procedure debt — a measure of governing-decision demand shown invariant — is
-**paid for closing predicates** by the measure (`core/09`, `DDD-measure-01`/`02`/`06`) and marked
-as a **boundary, not an open debt**, off them; the framework books its remaining debts openly
-([`meta/`](meta/)).
+The counting-procedure debt — a measure of governing-decision demand — is **addressed for closing
+predicates** by the measure: the conservation identity is arithmetic (`DDD-measure-02`,
+established) and the identification of demand with verdict entropy is a modelling claim
+(`DDD-measure-01`, **projected**); off closing predicates it is marked as a **boundary, not an
+open debt**. The framework books its remaining debts openly ([`meta/`](meta/)).
 
 Reference implementation: [`product-cli`](https://github.com/Hafeok/product-cli) (the authoring layer
 for the SDLC projection).
