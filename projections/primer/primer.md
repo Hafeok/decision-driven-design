@@ -1,7 +1,5 @@
 # The primer
 
-**DRAFT — draft-pending-ruling (Gate 3). This marker is removed on ratification.**
-
 An operational manual for running the framework on a real engagement. It teaches five
 procedures: file a decision, read an act, test whether a check closes, find the decisions
 nobody made, and know where this framework stops. It is not the argument for the framework;
