@@ -166,3 +166,35 @@ Costs:
    stay exactly as predicted.
 
 **HOLD — awaiting Emil's ruling on A / B / C.**
+
+---
+
+## RULING (Emil, 2026-09-03): C — and not primarily on cost
+
+- **A refused on principle:** it moves content whose evidence grade is projected (one projected
+  claim, one unrun hypothesis) into a settled node — the over-claim defect this session exists to
+  prevent; cost does not enter into it.
+- **B refused** because it would make canon smaller than the corpus supporting it: core/05 argues
+  authority linkage in its exposition, and B narrows the claim to three while the prose continues
+  to argue for more — resolving one inconsistency by creating another, and stranding half of Paper
+  A's stated delta with no canonical carrier on the eve of publication.
+- **C is right because the two objects genuinely differ, and there is a test:** an arrangement can
+  instantiate the relation and still be incomplete, and it is the ordinary case — attribution
+  exists, a persistent principal exists, consequence is borne, and no authority has jurisdiction to
+  enforce it. Everyone knows who is responsible; nobody can sanction them.
+- **The convergence:** the distinction C draws *is* the delta over Bovens — retrospective
+  assessment versus design-time constitution. The definition/completeness split is not a device to
+  make two counts coexist; it is the same distinction that makes the contribution non-derivative.
+  C carries the contribution; B discards it.
+
+Three required consequences: (1) core/05's four-element sentence is the completeness statement and
+must carry five, attributed to `DDD-frame-08`, marked projected, distinct from the definition in
+the embed — both grades visible in one document; (2) frame-08's verification was under-supported —
+a four-element sentence cited as verification for five — and must cite the pair (that sentence plus
+the sanctionability-and-jurisdiction line); (3) frame-08's notes take the lineage in full — four of
+five elements are Bovens's, the delta is authority linkage plus the change from retrospective
+assessment to design-time constitution, half of it a tense change and stated as such. No schema
+field: prose beside the embed suffices; reconsider only on a second case.
+
+**Executed:** upstream commit `b0d603f` (`DDD-frame-08` re-scoped, `core/05` §2 restated; all three
+validators green, warning count unchanged at 32); successor item 1 marked discharged.
