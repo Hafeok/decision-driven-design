@@ -86,6 +86,20 @@ upstream:
   # at v5.12.0 and fired NOTHING, because W5 only sees ids that are pinned. Paper A asserted it as
   # **established** in three places and both of its checkers passed those lines. The gap was found
   # by a sweep written for inline status assertions, now shipped as papers/paper-a/check-status.py.
+  # Advanced v5.12.0 -> v5.13.0 at the pre-transfer session (2026-09-04), on Emil's GATE 3
+  # ruling; the advance is DDD-dec-35 here. This advance discharges the ground-migration
+  # execution's OWN prediction, committed before that session's edits at
+  # meta/sessions/2026-08-31-ground-migration-exec/gate3-prediction.md: exactly two W6 and no
+  # more, both from W1's ground->deployment rename — DDD-measure-01 (statement,
+  # 66b01ede... -> d78274d2...) and DDD-measure-16 (statement, 2d763d1a... -> 6828d066...);
+  # zero W5, zero E12/E13, the one standing W7 unchanged. Verified at the bump, by advancing the
+  # ref first and re-instrumenting the hashes second so the firing could be observed rather than
+  # assumed: 71 pins resolved, 0 basis-loss, EXACTLY TWO content-drift, both ids and all four
+  # digests as written down beforehand. The prediction held in every limb. After
+  # re-instrumentation: 71 pins, 0 basis-loss, 0 content-drift, 1 shadowed id. No pins added,
+  # none removed. The same session's branch-only supersession of DDD-frame-08 (GATE 1 ruling C)
+  # was predicted to contribute nothing to this advance — the tag does not carry it — and
+  # contributed nothing; its firing belongs to the next advance.
   ref: v5.13.0                      # tag, never a branch
   pins:
     # basis claims for DDD-dec-04 (the split decision itself rests on these)
@@ -94,7 +108,7 @@ upstream:
       content_hash: sha256:6b74b5bfb34c6c722c9abf1185264ff5c6eee01d020c7fd4ad6804ba7a5bca64
     - id: DDD-measure-01
       status_at_pin: projected
-      content_hash: sha256:66b01ede631c0173d86696dca945ade53c9ffe37462bbe290a6df6b6de4b41ea
+      content_hash: sha256:d78274d2350cb867c9ec3497aaf13caeafb4792f9e20c20697ba54114a58c198
     # the floor mechanism the apparatus/skill-floor builds on
     - id: DDD-floor-01
       status_at_pin: reported
@@ -339,7 +353,7 @@ upstream:
       content_hash: sha256:a7ae6e7ad5ccd0afd3bc35c5fd5ce061532b4f99f4d352464f9cc5b78ee01c39
     - id: DDD-measure-16
       status_at_pin: established
-      content_hash: sha256:2d763d1adf9e1c68c88d1f5c3e30550a5079e274d84e688c31f5f5bb51f1d94e
+      content_hash: sha256:6828d06649045bfdf374f985a7984d337d01fdb42be29ef8f051a185411fe674
     - id: DDD-measure-17
       status_at_pin: projected
       content_hash: sha256:164a18072145bc4a0cdb3c6e1ca8890fc64c1b36396c73be5ca8bd45c66114e5

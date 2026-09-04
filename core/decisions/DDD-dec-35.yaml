@@ -1,0 +1,76 @@
+format: 1
+id: DDD-dec-35
+kind: decision
+statement: |
+  The upstream pin advances v5.12.0 -> v5.13.0, discharging the ground-migration execution's own prediction: exactly two pinned digests move, DDD-measure-01 and DDD-measure-16, both from the W1 rename in their statements, with every id and every hash the one the migration session wrote down before its edits were made.
+principal: Emil
+made: 2026-09-04, pre-transfer session (GATE 3 ruling to proceed; the advance executed and held for verification at the same gate)
+resolution: |
+  The advance, and the prediction it verifies.
+
+  ## Whose prediction this is
+
+  The ground-migration execution (2026-08-31) edited canon's `ground distribution` occurrences to
+  `deployment distribution` and predicted, in a committed file before its own edits
+  (meta/sessions/2026-08-31-ground-migration-exec/gate3-prediction.md §2), what the next downstream
+  pin advance would fire: exactly two W6 and no more, by id and by hash. The prediction belongs to
+  "a session that can verify its own prediction", which is the pre-transfer session — this advance.
+
+  ## Predicted before, verified after
+
+  Per the DDD-dec-28/29/34 pattern, restated and committed at
+  meta/sessions/2026-09-02-pre-transfer/gate3-pin-advance.md before graph/upstream.yaml was
+  touched, with the ref advanced ALONE first and the hashes re-instrumented second, so the pass is
+  distinguishable from a skip.
+
+    PREDICTED FIRING (from the migration record, verbatim ids and hashes):
+      E12/E13  0
+      W5       0 — no pinned status moves
+      W6       exactly 2 —
+               DDD-measure-01 (statement, 1 occurrence):
+                 sha256:66b01ede...  ->  sha256:d78274d2...
+               DDD-measure-16 (statement, 2 occurrences):
+                 sha256:2d763d1a...  ->  sha256:6828d066...
+      W7       1, unchanged — the standing shadowed id
+      and 69 of 71 pins unmoved.
+
+    BASELINE, fresh at ref v5.12.0 before the operation:
+      71 pins resolved against the pinned ref, 0 basis-loss, 0 content-drift, 1 shadowed id(s)
+
+    OBSERVED, at ref v5.13.0 with the hashes NOT yet re-instrumented:
+      71 pins resolved against the pinned ref, 0 basis-loss, 2 content-drift, 1 shadowed id(s)
+      warnings: exactly 2, both W6, both ids and all four digests exactly as tabled; 0 errors
+
+  **The prediction held in every limb.** After re-instrumentation: 71 pins resolved, 0 basis-loss,
+  0 content-drift, 1 shadowed id; 0 errors, 0 warnings.
+
+  ## Non-interference, predicted as nothing and observed as nothing
+
+  The same session's supersession of DDD-frame-08 (GATE 1 ruling C) lives on the upstream session
+  branch only; the v5.13.0 tag does not carry it. Its predicted contribution to this advance was
+  stated as zero beforehand — making the absence checkable — and zero is what fired:
+  DDD-frame-08's pinned hash verified unchanged at the tag. That supersession's firing belongs to
+  the next advance, after the pre-transfer session's close proposes its version.
+
+  ## Consequences carried at the same act
+
+  - The primer regenerates at v5.13.0: generated blocks re-drawn, the stamp's pin moves, the
+    hand-written sections' own pin references move, and §6's "the migration's changes arrive at
+    the next advance" paragraph updates — this is that advance, as §6 anticipated.
+  - Paper A's three checkers re-run at the new pin; their reports are recorded as evidence at the
+    session's verification hold. None of the sixteen deferred manuscript occurrences moves here
+    (Emil's GATE 3 ruling): a pin advance is not a licence to reopen a deferral, and this session
+    repairs no manuscript prose.
+  - The successor item recording that DDD-measure-12 and term:verdict still read
+    `ground distribution` at v5.12.0 discharges: at v5.13.0 both read `deployment distribution`.
+  - The downstream README's stale "(v5.5.0 at time of writing)" is repaired by pointing at
+    graph/upstream.yaml without naming a version (GATE 2 ruling, D7): a stale number recurs, a
+    pointer does not.
+basedOn:
+  - DDD-dec-29
+  - DDD-dec-34
+  - DDD-agent-01
+notes: |
+  Filed from the pre-transfer session (2026-09-02..04; interactive canon curation, Emil ruling at
+  every gate). No pin added, none removed; no status_at_pin moves. The session record is
+  meta/sessions/2026-09-02-pre-transfer/gate3-pin-advance.md.
