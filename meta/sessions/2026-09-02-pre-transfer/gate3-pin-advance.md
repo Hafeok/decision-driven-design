@@ -80,3 +80,62 @@ h. The successor item "passages quoting a live claim verbatim — `DDD-measure-1
    gone. Recorded in the successor file at the verification step.
 
 **HOLD — awaiting Emil's ruling on the prediction before the ref moves.**
+
+---
+
+## RULING (Emil, 2026-09-04): prediction approved; advance
+
+As stated, with two additions: (f) none of the sixteen deferred occurrences moves here — a pin
+advance is not a licence to reopen a deferral; what the checkers report is evidence, recorded for
+whichever session next touches that manuscript; this session repairs no manuscript prose. (g) the
+pointer repair is the better one — a stale version number recurs, a pointer does not.
+
+## VERIFICATION (executed 2026-09-04)
+
+**Step (b) — ref alone (`a2676cf`), observed:**
+
+> upstream: 71 pins resolved against the pinned ref, 0 basis-loss, **2 content-drift**, 1 shadowed id(s)
+> W6 `DDD-measure-01`: pinned `sha256:66b01ede…` → resolves `sha256:d78274d2…`
+> W6 `DDD-measure-16`: pinned `sha256:2d763d1a…` → resolves `sha256:6828d066…`
+> total warnings: exactly 2; errors: 0
+
+Both ids and all four digests exactly as tabled. Zero W5, zero E12/E13, the standing W7 unchanged
+at 1. **The prediction held in every limb.** Divergence: none.
+
+**Step (c)–(d) — re-instrumented (`d8d0306`):** validator back to baseline shape — 71 pins, 0
+basis-loss, 0 content-drift, 1 shadowed id; 0 errors, 0 warnings. The advance filed as
+`core/decisions/DDD-dec-35` (23 decisions valid) and recorded in `graph/upstream.yaml`'s comment
+block in the house pattern. Non-interference verified: `DDD-frame-08`'s pinned hash unchanged at
+the tag — predicted nothing, observed nothing.
+
+**Step (e) — primer (`571b557`):** 13 generated regions re-drawn; stamp `pin=v5.13.0`; `--check`:
+"OK: stamp present, pin v5.13.0, all regions current." Hand-written sections verified to hold at
+v5.13.0 (zero pre-migration vocabulary) and their pin references moved; §6's "arrives at the next
+advance" paragraph discharged. Roster unchanged: 89 claims, `established` still the same four.
+
+**Step (f) — Paper A checkers at v5.13.0, recorded as evidence, nothing repaired:**
+
+| Checker | Target | v5.12.0 | v5.13.0 |
+|---|---|---|---|
+| `check-quotations` | paper-a.md | 30 verbatim, 0 failing | **30 verbatim, 0 failing** (rc 0) |
+| `check-status` | paper-a.md | 96 assertions, 0 wrong | **96 assertions, 0 wrong** (rc 0) |
+| `check-appendix` | paper-a.md + supplement | 75 rendered, 75 cited, 0 discrepancies | **4 discrepancies** (rc 1): `DDD-measure-01`, `DDD-measure-11`, `DDD-measure-16` statements; `term:verdict` canonical wording |
+| `check-quotations` | supplement | 1 failing (UNCITED, the boundary rule) | 1 failing, **identical** |
+
+The four appendix discrepancies are the sixteen-deferral's expected expiry — the rows render canon
+at v5.12.0 wording and canon moved. Per the ruling they are **recorded, not repaired**; noted in
+the successor file for whichever session next touches the manuscripts. The supplement's one
+failing quotation is identical at both refs — ref-independent and pre-existing, not this advance's
+divergence; booked for the I-4 sweep (the supplement quotes the session's own boundary rule, which
+is not a canon node, and the supplement was not a declared target of that checker).
+
+**Step (g) — D7:** the front page now points at `graph/upstream.yaml` as authoritative, no version
+named. **Step (h):** the successor item's blocker recorded as discharged at `DDD-dec-35`.
+
+**Also recorded, an instrument note for I-4:** all three checkers print their docstring and exit
+**0** when invoked with wrong arguments (e.g. an unrecognised `--upstream` flag) — a bad
+invocation is indistinguishable from a pass by exit code alone. Found by making exactly that
+mistake in this session; the counts above are from corrected invocations with directly captured
+exit codes.
+
+**HOLD at GATE 3 (verification) — awaiting Emil's ruling on the verification record.**

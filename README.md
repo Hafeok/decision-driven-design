@@ -82,7 +82,7 @@ cannot support is worth more than one that overclaims.
 The actor-general theory — `00` primitives through `13` delivery, the canonical term graph, and the
 reproduction assets — is **canon in the principle repository**,
 [`actor-indexed-determination`](https://github.com/Hafeok/actor-indexed-determination), at the tag
-pinned in [`graph/upstream.yaml`](graph/upstream.yaml) (`v5.5.0` at time of writing).
+pinned in [`graph/upstream.yaml`](graph/upstream.yaml), which is authoritative for the version.
 It is not duplicated here. This repository pins the specific claims it depends on in
 [`graph/upstream.yaml`](graph/upstream.yaml); read the theory in the principle repo's `core/`.
 
