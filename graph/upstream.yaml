@@ -86,7 +86,7 @@ upstream:
   # at v5.12.0 and fired NOTHING, because W5 only sees ids that are pinned. Paper A asserted it as
   # **established** in three places and both of its checkers passed those lines. The gap was found
   # by a sweep written for inline status assertions, now shipped as papers/paper-a/check-status.py.
-  ref: v5.12.0                      # tag, never a branch
+  ref: v5.13.0                      # tag, never a branch
   pins:
     # basis claims for DDD-dec-04 (the split decision itself rests on these)
     - id: DDD-frame-01
