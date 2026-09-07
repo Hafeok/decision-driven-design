@@ -81,3 +81,21 @@ version, those three fields are the corrections.
 **Open question for this gate:** whether ruling C also files as an upstream decision node (the
 `DDD-dec-15` precedent for a ruled re-scoping) or rests, as now, in frame-08's notes plus the
 session record. Not filed unilaterally.
+
+---
+
+## RULING (Emil, 2026-09-07) — GATE 5: accepted
+
+- **`projection`:** already-filed-at-v5.12.0 plus remainder-carries. No settled text moves; the
+  remaining layer-sense in prose is corpus-wide vocabulary work and does not meet the
+  pre-transfer test now that the canonical text is clean.
+- **Ruling C files as an upstream decision node** — the `DDD-dec-15` precedent governs: a
+  stranger reading frame-08 should reach why it was re-scoped through the graph rather than
+  through `meta/`, and the Bovens lineage constraint is a governing decision that outlives the
+  session. Notes carry the text; a decision carries the ruling. **Filed as `DDD-dec-36`**
+  (upstream `fa82c83`, in PR #22): the ruling, the two refused dispositions with their reasons,
+  the test, the lineage constraint, the executed consequences. Added to v5.14.0's basis;
+  frame-08's notes point at it. Notes are unhashed — the next-advance prediction is unmoved
+  (frame-08's digest verified still `ef5d5faf…`).
+- **Version:** v5.14.0 as proposed; the three `changed:` fields match.
+- **Both PRs accepted** — Emil merges #22 (cutting the tag), then #35.
