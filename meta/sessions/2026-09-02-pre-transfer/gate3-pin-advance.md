@@ -138,4 +138,12 @@ invocation is indistinguishable from a pass by exit code alone. Found by making 
 mistake in this session; the counts above are from corrected invocations with directly captured
 exit codes.
 
+> **ERRATUM (I-4, 2026-09-07): the instrument note above is RETRACTED.** Re-tested with no pipe
+> in the measurement path, every bad invocation of all three checkers exits **1** — including
+> the exact two-argument form this session used. The "exit 0" readings were the session's own
+> measurement artefact: `script | tail -N; echo $?` reports `tail`'s exit status, always 0. The
+> checkers satisfy the exit-code rule; the session's harness did not. The checker RESULTS table
+> above is unaffected — it was produced with directly captured exit codes. Full test matrix and
+> the recounted unwatched-surface class: `gate4-readiness.md` §0.
+
 **HOLD at GATE 3 (verification) — awaiting Emil's ruling on the verification record.**
