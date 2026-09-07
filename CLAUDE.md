@@ -6,8 +6,8 @@ Guidance for agents working in the `decision-driven-design` repository.
 
 **This repository is the software projection (split per `DDD-dec-04`).** The actor-general
 theory — the numbered core documents and the canonical term graph — is **canon in the principle
-repository** (`actor-indexed-determination`, currently pinned at tag `v5.7.0` — `graph/upstream.yaml`
-is authoritative), not here. Do not add or edit core
+repository** (`actor-indexed-determination`, pinned at the tag named in `graph/upstream.yaml`,
+which is authoritative), not here. Do not add or edit core
 theory documents in this repo; canon changes are issues and PRs against the principle repo.
 This repo holds the software apparatus, the SDLC and organisation-design projections, the graph
 tool's claims (`core/claims/`: `org`, `tool`, `sim`), and the program's decisions

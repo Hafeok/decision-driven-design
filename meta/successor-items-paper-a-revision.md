@@ -10,6 +10,12 @@ canon has to leave as an item rather than as an edit. That is the whole reason t
 
 ## 1. `term:accountability` and `DDD-frame-08` disagree about the relation's arity
 
+**DISCHARGED — pre-transfer session, GATE 1 ruling C (Emil, 2026-09-03).** The two are different
+objects: the settled term defines the relation; the claim asserts what a complete instance requires
+at design time. `DDD-frame-08`'s statement re-scoped by supersession; the term untouched; the
+distinction and its test stated in `core/05` §2 beside the embed; the Bovens lineage filed in the
+claim's notes. Record: `meta/sessions/2026-09-02-pre-transfer/gate1-arity.md`.
+
 **Ruled at GATE 3 (Emil): the paper flags, and a canon session gets the issue — both, not either.**
 
 The graph carries two counts of accountability's elements.
@@ -66,6 +72,11 @@ judgement call:
   agreement the pin does not have;
 - **passages quoting a live claim verbatim** (4) — `DDD-measure-12` and `term:verdict` still read
   `ground distribution` at `v5.12.0`, so a rename would make the note misquote a live node;
+  *(the blocker discharged at the pre-transfer session's pin advance to `v5.13.0`, `DDD-dec-35`:
+  both nodes now read `deployment distribution` at the pinned ref. The deferral itself was NOT
+  reopened there — Emil's GATE 3 ruling: a pin advance is not a licence to reopen a deferral, and
+  the four discrepancies check-appendix now reports at `v5.13.0` are recorded for whichever
+  session next touches the manuscripts.)*
 - **one filename** (`measure-nonuniform-ground.py`, upstream) and **three occurrences ruled
   ambiguous** between the population sense and the sense naming conditions in the case.
 

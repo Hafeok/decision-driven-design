@@ -98,7 +98,9 @@ not checked prevents nothing; a rule checked by a proxy that overreaches prevent
 Rule 1's real enforcement is an adjudication with rulings.
 
 Rules added since format 1 — the falsifier condition at every live status, and `retired_from` on
-retired claims — are stated in `spec/claim-format-2-addendum.md` with their migration notes. Both
+retired claims — are stated in the principle repository's
+[`spec/claim-format-2-addendum.md`](https://github.com/Hafeok/actor-indexed-determination/blob/main/spec/claim-format-2-addendum.md)
+with their migration notes. Both
 are enforced now and both have empty hit lists.
 
 ## 5. What the statuses mean, and what they do not

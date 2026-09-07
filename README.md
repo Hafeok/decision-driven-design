@@ -13,8 +13,9 @@ determinations come from, what they cost, and which actor should make each one.
 
 The framework is a **claim graph**: every claim it makes is a node with a status, evidence, and a
 falsifier, stored as data and validated against a versioned schema. It remains deliberately **smaller
-and better-attributed** than v3, and harder to knock down — and says exactly which of its claims are
-proven, exercised, or still projected.
+and better-attributed** than v3 — and says exactly which of its claims are `established` (argued
+internally and unchallenged; four claims, all formal — not external validation), `reported` (at
+least one reproducing computation), or still `projected` (a declared falsifier nobody has met).
 
 ---
 
@@ -22,30 +23,34 @@ proven, exercised, or still projected.
 
 Four classical results govern how work is allocated in engineered systems — Brooks's essential
 complexity, Tesler's conservation of complexity, Ashby's requisite variety, Meyer's contracts. Each
-quantifies over an **actor**: the thing that makes a determination against some ground. **None of them
-makes that actor explicit.** They had no reason to — for the whole history of these results there
-were two kinds of determiner, a person or a program, and the gap between them was a light switch, not
-a spectrum.
+quantifies over an **actor**: the thing that makes a determination against some ground. **Each of
+them holds that actor largely fixed.** They had little reason to vary it — for the whole history of
+these results there were two kinds of determiner, a person or a program, and the gap between them
+was a light switch, not a spectrum.
 
 A third kind now exists: **non-deterministic, yet with a distribution that can be frozen by binding.**
-Decision-Driven Design is what you get when you **fill in the actor slot** those results left empty —
-and discover that supplying the missing parameter *changes their predictions.*
+Decision-Driven Design is what you get when you **make the actor an explicit parameter** those
+results hold largely fixed. The framework indexes their allocation questions to the arrangement; its
+contribution is stated against those literatures, not against their absence.
 
-Two consequences follow, and they are the framework's core contribution:
+Two claims follow, and they are the framework's core contribution — both **projected**: argued,
+with declared falsifiers nobody has met:
 
 1. **The irreducible floor of a task is a property of its *acceptance predicate*, not of the task.**
    Zero where you can check the answer; non-zero where you cannot; and *whether you can* is, in
-   general, undecidable. → [`core/03-the-floor.md`](core/03-the-floor.md)
+   general, undecidable. *(`DDD-floor-02`, **projected**)* → [`core/03-the-floor.md`](https://github.com/Hafeok/actor-indexed-determination/blob/main/core/03-the-floor.md)
 
 2. **Selection intensity is inversely proportional to acceptance-predicate closure.** *Training* is
    what you do when you can check the work. *Selection* is what you do when you cannot — you check the
-   worker instead. This is falsifiable across professions.
-   → [`core/04-actors.md`](core/04-actors.md)
+   worker instead. This is falsifiable across professions. *(`DDD-hyp-05`, **projected**)*
+   → [`core/04-actors.md`](https://github.com/Hafeok/actor-indexed-determination/blob/main/core/04-actors.md)
 
-And, new in 4.1: for tasks whose acceptance predicate closes, **specification demand is measurable** —
-it is the Shannon entropy of the verdict, and conservation is the chain rule of entropy
-([`core/09`](core/09-the-measure.md)). The measure exists exactly where the predicate closes, and
-vanishes precisely at the floor.
+And, new in 4.1: a measure for the closing region. The chain-rule identity is arithmetic
+(`DDD-measure-02`, **established**, formal); the identification of specification demand with the
+Shannon entropy of the verdict is a modelling claim (`DDD-measure-01`, **projected**) — the
+identity holding is not evidence for the identification
+([`core/09`](https://github.com/Hafeok/actor-indexed-determination/blob/main/core/09-the-measure.md)). The measure is defined exactly where the predicate closes,
+and is undefined at the floor.
 
 And a prediction: **model actors outperform human actors exactly where the acceptance predicate
 closes, and underperform exactly where it does not — the gap tracks *closure*, not *difficulty*.**
@@ -61,9 +66,9 @@ allocation lens (four stores: encoded, mechanically checked, judged, escaped), a
 **It is not** a new physical law. The conservation claim is **Tesler's Law of Conservation of
 Complexity, generalised** — denominated in decisions, with a fourth store (the *escaped* one Tesler
 lacked) and an assurance-level bound. It has **no measurable unit**, so it is a **principle**, not a
-law, and the repository says so throughout. See [`core/01-the-principle.md`](core/01-the-principle.md)
+law, and the repository says so throughout. See [`core/01-the-principle.md`](https://github.com/Hafeok/actor-indexed-determination/blob/main/core/01-the-principle.md)
 and, for the full record of what was corrected and why,
-[`meta/lineage-and-limits.md`](meta/lineage-and-limits.md).
+[`meta/lineage-and-limits.md`](https://github.com/Hafeok/actor-indexed-determination/blob/main/meta/lineage-and-limits.md).
 
 We publish the review and the retreats as first-class documents. A framework that states what it
 cannot support is worth more than one that overclaims.
@@ -77,13 +82,14 @@ cannot support is worth more than one that overclaims.
 The actor-general theory — `00` primitives through `13` delivery, the canonical term graph, and the
 reproduction assets — is **canon in the principle repository**,
 [`actor-indexed-determination`](https://github.com/Hafeok/actor-indexed-determination), at the tag
-pinned in [`graph/upstream.yaml`](graph/upstream.yaml) (`v5.5.0` at time of writing).
+pinned in [`graph/upstream.yaml`](graph/upstream.yaml), which is authoritative for the version.
 It is not duplicated here. This repository pins the specific claims it depends on in
 [`graph/upstream.yaml`](graph/upstream.yaml); read the theory in the principle repo's `core/`.
 
-The load-bearing, falsifiable results — the floor is in the acceptance predicate, selection intensity
-tracks predicate closure, demand is the Shannon entropy of the verdict, overflow ∩ open is the
-mechanism of capacity-generated escape — all live upstream. Falsification of any of them is an issue against the principle repo, not this one.
+The load-bearing, falsifiable claims — the floor is in the acceptance predicate (`DDD-floor-02`,
+projected), selection intensity tracks predicate closure (`DDD-hyp-05`, projected), demand is the
+Shannon entropy of the verdict (`DDD-measure-01`, projected), overflow ∩ open is the mechanism of
+capacity-generated escape (`DDD-floor-01`, reported) — all live upstream. Falsification of any of them is an issue against the principle repo, not this one.
 
 ### Apparatus — the mechanisms
 
@@ -105,7 +111,7 @@ The framework, denominated in a domain.
 
 | Document | Domain |
 |---|---|
-| [`applications/sdlc/`](applications/sdlc/) | Software delivery — the agentic/DAG design framework (formerly the whole of v3) |
+| [`applications/sdlc/`](applications/sdlc/) | Software delivery. What the tree carries today: the section README and `production-as-ground.md`. The four v3 design documents live in this repository's git history, not in the tree — see the section README for what they were and where they sit |
 | [`applications/sdlc/production-as-ground.md`](applications/sdlc/production-as-ground.md) | Production is the only real ground; DORA read as demand; which feedback loops are waste |
 
 ### The graph — claims and decisions as data
@@ -118,6 +124,7 @@ The framework as nodes. Files are storage; the graph is the object.
 | [`core/decisions/`](core/decisions/) | Decision nodes (`DDD-dec-NN`); the load-bearing edge is `decision --basedOn--> claim` |
 | [`spec/claim-format.md`](spec/claim-format.md) | The claim schema (format version 1) and its validation rules |
 | [`scripts/validate-claims.py`](scripts/validate-claims.py) | Validates `core/claims/` and `core/decisions/` against the spec |
+| [`validate-core-order.py`](validate-core-order.py) | Validates docs, embeds and the cross-repo pins. **Canonical invocation: `python3 validate-core-order.py core/`** — run against the repository root (`.`) it misreads this repository's own registry ids and reports spurious E13 errors on a clean tree; a fix for that mode is tracked, the `core/` invocation is authoritative |
 
 ### Meta — the honesty layer and the program
 
@@ -137,11 +144,14 @@ Danish glossary of core terms: in the principle repo (`i18n/ordliste-dansk.md`).
 ## What changed from v3
 
 v3 was the agentic-design framework: decisions as the unit of work, a DAG of roles, artifacts with
-schemas, backed by [`product-cli`](https://github.com/Hafeok/product-cli). **That framework is
-intact** — it now lives in [`applications/sdlc/`](applications/sdlc/) as the **engineering
-projection** of the general principle, which is exactly what it always was. What v4 adds is the layer
-*beneath* it: the theory that explains why the DAG design works, and the actor model that says which
-node each determination belongs to.
+schemas, backed by [`product-cli`](https://github.com/Hafeok/product-cli). Its reframing as the
+**engineering projection** of the general principle stands — that is what it always was. Its four
+design documents, however, are **not in this tree**: they were removed at the v4 restructuring and
+survive in git history; restoring them is an open decision that has not been taken. What the
+projection carries in the tree today is [`applications/sdlc/`](applications/sdlc/)'s README,
+`production-as-ground.md`, and the reference implementation. What v4 adds is the layer *beneath*
+it: the theory that explains why the DAG design works, and the actor model that says which node
+each determination belongs to.
 
 The register also changed. Following external review:
 
@@ -149,14 +159,14 @@ The register also changed. Following external review:
   Ashby did, and even he refused the term).
 - **Conservation** holds as an accounting identity *within a fixed decomposition* — re-decomposing
   *relocates* demand into the seam (a cleaner split pre-pays more into the interface contract; the
-  total is invariant), so the decomposition is the highest-leverage decision. → [`core/09`](core/09-the-measure.md) §4, `DDD-measure-03`.
+  total is invariant), so the decomposition is the highest-leverage decision. → [`core/09`](https://github.com/Hafeok/actor-indexed-determination/blob/main/core/09-the-measure.md) §4, `DDD-measure-03`.
 - **The immune-system "licensing" argument** is demoted to a suggestive parallel with known
   disanalogies; **CRISPR** is the accurate compound-platform instance.
 - **The zero-floor postulate** is retreated to **the floor-in-the-predicate** result, which is
   sharper and survives the theoretical limits (Rice, inevitable model error, collective tacit
   knowledge).
 
-Full record: [`meta/lineage-and-limits.md`](meta/lineage-and-limits.md).
+Full record: [`meta/lineage-and-limits.md`](https://github.com/Hafeok/actor-indexed-determination/blob/main/meta/lineage-and-limits.md).
 
 ---
 
@@ -166,10 +176,11 @@ This is a working specification under active revision. The strongest claims — 
 predicate, and *selection intensity tracks predicate closure* — are **falsifiable**, and the
 conditions are stated in the documents. Live status is now in the graph: every claim carries a
 status (`established` / `reported` / `projected` / `retired`) in [`core/claims/`](core/claims/).
-The counting-procedure debt — a measure of governing-decision demand shown invariant — is
-**paid for closing predicates** by the measure (`core/09`, `DDD-measure-01`/`02`/`06`) and marked
-as a **boundary, not an open debt**, off them; the framework books its remaining debts openly
-([`meta/`](meta/)).
+The counting-procedure debt — a measure of governing-decision demand — is **addressed for closing
+predicates** by the measure: the conservation identity is arithmetic (`DDD-measure-02`,
+established) and the identification of demand with verdict entropy is a modelling claim
+(`DDD-measure-01`, **projected**); off closing predicates it is marked as a **boundary, not an
+open debt**. The framework books its remaining debts openly ([`meta/`](meta/)).
 
 Reference implementation: [`product-cli`](https://github.com/Hafeok/product-cli) (the authoring layer
 for the SDLC projection).
@@ -179,7 +190,7 @@ for the SDLC projection).
 Tesler (conservation of complexity) · Ashby (requisite variety) · Brooks (essential complexity) ·
 Meyer & Hoare (contracts) · Saltzer, Reed & Clark (end-to-end) · Kalman (observability) · Polanyi &
 Collins (tacit knowledge) · Rice (undecidability) · Edelman & Gally (degeneracy). Full attribution in
-[`meta/lineage-and-limits.md`](meta/lineage-and-limits.md).
+[`meta/lineage-and-limits.md`](https://github.com/Hafeok/actor-indexed-determination/blob/main/meta/lineage-and-limits.md).
 
 ## License
 
