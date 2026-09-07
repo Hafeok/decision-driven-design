@@ -99,3 +99,21 @@ session record. Not filed unilaterally.
   (frame-08's digest verified still `ef5d5faf…`).
 - **Version:** v5.14.0 as proposed; the three `changed:` fields match.
 - **Both PRs accepted** — Emil merges #22 (cutting the tag), then #35.
+
+---
+
+## DIVERGENCE RECORD (2026-09-07, post-merge): v5.14.0 was cut before DDD-dec-36 landed
+
+The line above reading "Filed as `DDD-dec-36` (upstream `fa82c83`, in PR #22)" did not hold:
+**#22 was merged, and `v5.14.0` cut, at `8ddcd5a` with head `af8cb05` — before `fa82c83`
+reached it.** At the `v5.14.0` tag the decision register does not carry `DDD-dec-36`, and
+`DDD-frame-08`'s notes do not yet point at it. The tag is internally consistent — its
+descriptor's basis resolves, and every content change of the release (the re-scoped claim, the
+demotions, the front-page repairs) is in it; what it lacks is the ruling's own node.
+
+Recorded rather than reconciled, and corrected forward per the release rules (a cut descriptor
+is immutable; corrections ship as a new version): the filing re-landed on a branch restarted
+from main with the descriptor edit dropped (the cut `v5.14.0.yaml` restored byte-for-byte from
+the tag), and **`v5.14.1` is proposed carrying `DDD-dec-36`** — upstream PR #23. The
+next-advance prediction is unaffected: notes are unhashed, frame-08's digest verified still
+`ef5d5faf…` after the re-landing.
