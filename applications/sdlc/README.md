@@ -38,22 +38,25 @@ generally and more carefully.
 
 ## The design documents
 
-These are the v3 documents, retained. Read `core/` for *why*; read these for *how to build it*.
+**The four v3 design documents are not in this tree.** They were removed at the v4 restructuring
+(commit `219ad6c`, under their former `docs/` paths) and have not been re-landed; restoring them is
+an open decision that has not been taken. They are listed here as the record of what the v3
+framework comprised — recoverable from this repository's git history — not as links:
 
-1. **[`01-foundations.md`](01-foundations.md)** — LLMs as knowledge forecasters; work as a chain of
+1. **`01-foundations.md`** *(history: `docs/01-foundations.md`)* — LLMs as knowledge forecasters; work as a chain of
    context-conditioned decisions; value actions as the terminus; roles and artifacts; the DAG, not the
    pipeline. *Start here for the software framing.*
 
-2. **[`02-entity-reference.md`](02-entity-reference.md)** — the vocabulary made precise: processes,
+2. **`02-entity-reference.md`** *(history: `docs/02-entity-reference.md`)* — the vocabulary made precise: processes,
    decisions, actions, interpretations, roles, artifacts, sessions, schemas, bundles, audits, the
    orchestration system, per-role autonomy.
 
-3. **[`03-autonomy-levels.md`](03-autonomy-levels.md)** — the 0–5 autonomy ladder, why autonomy is
+3. **`03-autonomy-levels.md`** *(history: `docs/03-autonomy-levels.md`)* — the 0–5 autonomy ladder, why autonomy is
    per-role not per-system, and why this structure is what makes Levels 4–5 reachable. *Now with a
    sharper foundation: per-role autonomy is exactly the actor model's pinning resolution (`core/04`),
    and the ceiling on a role's autonomy is set by the closure of its acceptance predicate (`core/03`).*
 
-4. **[`04-implementation.md`](04-implementation.md)** — the build architecture: Rust + Oxigraph, curated
+4. **`04-implementation.md`** *(history: `docs/04-implementation.md`)* — the build architecture: Rust + Oxigraph, curated
    SPARQL for bundle assembly, the event substrate, the worker contract, emergent decisions during
    action, the meta-loop, the model catalog.
 
@@ -61,11 +64,12 @@ Written against v4:
 
 - **production-as-ground** · pre-production predicates close over substitute ground; DORA's four keys instrument the encode/verify gap; the three tiers of feedback loop and which are eliminable
 
-> **Note.** These four documents are carried forward from v3 and are **not yet fully reconciled** with
-> the v4 register (they may still say "law" where `core/` now says "principle," and may still lean on
-> the pre-review immune framing). Reconciling them is tracked in
-> [`../../meta/consolidated-state.md`](../../meta/consolidated-state.md). The `core/` layer wins wherever
-> they conflict.
+> **Note.** The four historical documents were written before the v4 register (they say "law"
+> where `core/` now says "principle," and lean on the pre-review immune framing). If they are ever
+> restored to the tree, that reconciliation is the restoring session's work, and the `core/` layer
+> wins wherever they conflict. Until then, this README and `production-as-ground.md` are what the
+> SDLC projection carries here; the reference implementation is
+> [`product-cli`](https://github.com/Hafeok/product-cli).
 
 ---
 

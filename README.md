@@ -38,18 +38,18 @@ with declared falsifiers nobody has met:
 
 1. **The irreducible floor of a task is a property of its *acceptance predicate*, not of the task.**
    Zero where you can check the answer; non-zero where you cannot; and *whether you can* is, in
-   general, undecidable. *(`DDD-floor-02`, **projected**)* → [`core/03-the-floor.md`](core/03-the-floor.md)
+   general, undecidable. *(`DDD-floor-02`, **projected**)* → [`core/03-the-floor.md`](https://github.com/Hafeok/actor-indexed-determination/blob/main/core/03-the-floor.md)
 
 2. **Selection intensity is inversely proportional to acceptance-predicate closure.** *Training* is
    what you do when you can check the work. *Selection* is what you do when you cannot — you check the
    worker instead. This is falsifiable across professions. *(`DDD-hyp-05`, **projected**)*
-   → [`core/04-actors.md`](core/04-actors.md)
+   → [`core/04-actors.md`](https://github.com/Hafeok/actor-indexed-determination/blob/main/core/04-actors.md)
 
 And, new in 4.1: a measure for the closing region. The chain-rule identity is arithmetic
 (`DDD-measure-02`, **established**, formal); the identification of specification demand with the
 Shannon entropy of the verdict is a modelling claim (`DDD-measure-01`, **projected**) — the
 identity holding is not evidence for the identification
-([`core/09`](core/09-the-measure.md)). The measure is defined exactly where the predicate closes,
+([`core/09`](https://github.com/Hafeok/actor-indexed-determination/blob/main/core/09-the-measure.md)). The measure is defined exactly where the predicate closes,
 and is undefined at the floor.
 
 And a prediction: **model actors outperform human actors exactly where the acceptance predicate
@@ -66,9 +66,9 @@ allocation lens (four stores: encoded, mechanically checked, judged, escaped), a
 **It is not** a new physical law. The conservation claim is **Tesler's Law of Conservation of
 Complexity, generalised** — denominated in decisions, with a fourth store (the *escaped* one Tesler
 lacked) and an assurance-level bound. It has **no measurable unit**, so it is a **principle**, not a
-law, and the repository says so throughout. See [`core/01-the-principle.md`](core/01-the-principle.md)
+law, and the repository says so throughout. See [`core/01-the-principle.md`](https://github.com/Hafeok/actor-indexed-determination/blob/main/core/01-the-principle.md)
 and, for the full record of what was corrected and why,
-[`meta/lineage-and-limits.md`](meta/lineage-and-limits.md).
+[`meta/lineage-and-limits.md`](https://github.com/Hafeok/actor-indexed-determination/blob/main/meta/lineage-and-limits.md).
 
 We publish the review and the retreats as first-class documents. A framework that states what it
 cannot support is worth more than one that overclaims.
@@ -111,7 +111,7 @@ The framework, denominated in a domain.
 
 | Document | Domain |
 |---|---|
-| [`applications/sdlc/`](applications/sdlc/) | Software delivery — the agentic/DAG design framework (formerly the whole of v3) |
+| [`applications/sdlc/`](applications/sdlc/) | Software delivery. What the tree carries today: the section README and `production-as-ground.md`. The four v3 design documents live in this repository's git history, not in the tree — see the section README for what they were and where they sit |
 | [`applications/sdlc/production-as-ground.md`](applications/sdlc/production-as-ground.md) | Production is the only real ground; DORA read as demand; which feedback loops are waste |
 
 ### The graph — claims and decisions as data
@@ -124,6 +124,7 @@ The framework as nodes. Files are storage; the graph is the object.
 | [`core/decisions/`](core/decisions/) | Decision nodes (`DDD-dec-NN`); the load-bearing edge is `decision --basedOn--> claim` |
 | [`spec/claim-format.md`](spec/claim-format.md) | The claim schema (format version 1) and its validation rules |
 | [`scripts/validate-claims.py`](scripts/validate-claims.py) | Validates `core/claims/` and `core/decisions/` against the spec |
+| [`validate-core-order.py`](validate-core-order.py) | Validates docs, embeds and the cross-repo pins. **Canonical invocation: `python3 validate-core-order.py core/`** — run against the repository root (`.`) it misreads this repository's own registry ids and reports spurious E13 errors on a clean tree; a fix for that mode is tracked, the `core/` invocation is authoritative |
 
 ### Meta — the honesty layer and the program
 
@@ -143,11 +144,14 @@ Danish glossary of core terms: in the principle repo (`i18n/ordliste-dansk.md`).
 ## What changed from v3
 
 v3 was the agentic-design framework: decisions as the unit of work, a DAG of roles, artifacts with
-schemas, backed by [`product-cli`](https://github.com/Hafeok/product-cli). **That framework is
-intact** — it now lives in [`applications/sdlc/`](applications/sdlc/) as the **engineering
-projection** of the general principle, which is exactly what it always was. What v4 adds is the layer
-*beneath* it: the theory that explains why the DAG design works, and the actor model that says which
-node each determination belongs to.
+schemas, backed by [`product-cli`](https://github.com/Hafeok/product-cli). Its reframing as the
+**engineering projection** of the general principle stands — that is what it always was. Its four
+design documents, however, are **not in this tree**: they were removed at the v4 restructuring and
+survive in git history; restoring them is an open decision that has not been taken. What the
+projection carries in the tree today is [`applications/sdlc/`](applications/sdlc/)'s README,
+`production-as-ground.md`, and the reference implementation. What v4 adds is the layer *beneath*
+it: the theory that explains why the DAG design works, and the actor model that says which node
+each determination belongs to.
 
 The register also changed. Following external review:
 
@@ -155,14 +159,14 @@ The register also changed. Following external review:
   Ashby did, and even he refused the term).
 - **Conservation** holds as an accounting identity *within a fixed decomposition* — re-decomposing
   *relocates* demand into the seam (a cleaner split pre-pays more into the interface contract; the
-  total is invariant), so the decomposition is the highest-leverage decision. → [`core/09`](core/09-the-measure.md) §4, `DDD-measure-03`.
+  total is invariant), so the decomposition is the highest-leverage decision. → [`core/09`](https://github.com/Hafeok/actor-indexed-determination/blob/main/core/09-the-measure.md) §4, `DDD-measure-03`.
 - **The immune-system "licensing" argument** is demoted to a suggestive parallel with known
   disanalogies; **CRISPR** is the accurate compound-platform instance.
 - **The zero-floor postulate** is retreated to **the floor-in-the-predicate** result, which is
   sharper and survives the theoretical limits (Rice, inevitable model error, collective tacit
   knowledge).
 
-Full record: [`meta/lineage-and-limits.md`](meta/lineage-and-limits.md).
+Full record: [`meta/lineage-and-limits.md`](https://github.com/Hafeok/actor-indexed-determination/blob/main/meta/lineage-and-limits.md).
 
 ---
 
@@ -186,7 +190,7 @@ for the SDLC projection).
 Tesler (conservation of complexity) · Ashby (requisite variety) · Brooks (essential complexity) ·
 Meyer & Hoare (contracts) · Saltzer, Reed & Clark (end-to-end) · Kalman (observability) · Polanyi &
 Collins (tacit knowledge) · Rice (undecidability) · Edelman & Gally (degeneracy). Full attribution in
-[`meta/lineage-and-limits.md`](meta/lineage-and-limits.md).
+[`meta/lineage-and-limits.md`](https://github.com/Hafeok/actor-indexed-determination/blob/main/meta/lineage-and-limits.md).
 
 ## License
 
