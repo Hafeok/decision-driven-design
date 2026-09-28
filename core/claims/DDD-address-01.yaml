@@ -1,0 +1,52 @@
+format: 1
+id: DDD-address-01
+kind: conceptual
+statement: |
+  Act occurrences carry a time index beside their address, given by causal dependency — occurrence B depends on occurrence A iff a state change produced by A is in B's ground reading — so that the index is the resulting order over state changes rather than wall-clock, dependent occurrences at one address are distinct in time, and independent ones may be concurrent.
+status: projected
+region: |
+  Diachronic — orders occurrences across acts, so it files with the projection (DDD-dec-09's
+  charter). Presupposes upstream DDD-ground-06 (pinned at the release that carries it). The
+  index is kept out of the address because an address containing time would make every
+  occurrence unique and leave nothing to recur at, dissolving behaviour (pre-registration
+  criterion K5). Dependency is read off ground readings, so it inherits their declared-space
+  limit (DDD-ground-05, DDD-ground-02): a state change that reaches B through ground nobody
+  declared does not order B after A.
+evidence:
+  - kind: observation
+    ref: "meta/sessions/2026-09-27-act-address/results-act-address-dry-run.md — T2a"
+    note: |
+      Dry run: retry attempts 1 to 3 of one call share an address and are ordered by dependency
+      alone — each depends on the previous one failing. Read under the amended definition, the
+      previous attempt's failure is in each attempt's ground reading; the dry run predates the
+      amendment and did not record readings. Written inside the framework; instrument check, not
+      evidence for the claim.
+falsifier: |
+  Two dependent occurrences whose order cannot be recovered from the state changes in their ground readings, or a behaviour-change detection that needs a wall-clock distinction the causal order cannot supply.
+test: |
+  T2b (first Phoenix slice): at least two dependent occurrences share an address and are separated only by the time index, per the fixed pre-registration.
+breaks: |
+  Invalidation fan-out as a forward query (the acts after a superseded decision in causal order), and as-of decay's anchor at the act.
+owner: none
+changed: 2026-09-28, act address landing session (GATE 3, on the GATE 1 rulings)
+notes: |
+  Emil originated the extension ("address plus distance in time makes a real map"); ruled R-4,
+  2026-09-27. The causal form, and keeping the index outside the address, were Claude's
+  proposals, accepted in the ruling.
+
+  Amended at the landing session's GATE 1 (Emil, ruling 1, 2026-09-28). The draft left
+  "dependency" undefined. It is now defined over ground readings: B depends on A iff a state
+  change produced by A is in B's ground reading, and the time index is the resulting order over
+  state changes. This is the same line upstream DDD-ground-06's repaired falsifier draws, so the
+  address, the ground readings and the time index are read from one record.
+  UNVERIFIED — Emil review: the reading/verdict-input line — that a dependency always passes
+  through a ground reading and never through a verdict alone. Verdict-triggered decisions
+  (escalation rules) are the pressure case, carried as a T2b test item: they anchor at the
+  following act, whose reading contains the verdict (GATE 2 ruling).
+
+  Rule 1 candidate, adjudicated: kept joined (GATE 1 ruling 4). The definition of dependency and
+  the index it induces are one object; the "so that" clauses are consequences.
+
+  UNVERIFIED — Emil review: that this does not conflict with ground-axes holding note rev 18's
+  argument that time is weak as a coordinate. That argument concerns the age of ground
+  readings; this claim concerns an act's position in dependency order.

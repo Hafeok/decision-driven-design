@@ -1,0 +1,23 @@
+format: 1
+id: DDD-address-02
+kind: normative
+statement: |
+  Every act occurrence is its own act, and reuse of code across occurrences is a derivation-layer relation — many occurrences pulling one component — never an identity between acts.
+status: projected
+region: |
+  Diachronic — relates occurrences across acts. Governs the act map (a tree of occurrences) and
+  places reuse in the derivation record, consistent with forward-only derivation: acts pull
+  components, and components never define acts.
+evidence: []
+falsifier: |
+  A governance question answerable only by treating a reused component as a single act — a case where the occurrence map, with reuse in the derivation layer, cannot state what the identity reading states.
+test: |
+  Counterexample search in T2b: every reused component in the first Phoenix slice is represented as derivation edges from distinct occurrences without loss of any governing decision.
+breaks: |
+  DDD-address-03 and the forward fan-out query; the method's refusal to read acts back from code.
+owner: none
+changed: 2026-09-28, act address landing session (GATE 3, on the GATE 1 rulings)
+notes: |
+  Emil's ruling R-6, 2026-09-27, in his words: "our choice to reuse the same act in the code is an
+  optimization not the truth." Filed as a normative claim: it is a governing choice about
+  representation, and its test is utility.

@@ -1,0 +1,23 @@
+format: 1
+id: DDD-address-04
+kind: conceptual
+statement: |
+  Two act occurrences coincide when their ground positions are equal, whatever their layer paths.
+status: projected
+region: |
+  Diachronic — compares occurrences. Needed because the layer path is part of the address
+  (DDD-ground-06), so occurrences under different parents never share a full address.
+evidence: []
+falsifier: |
+  Two occurrences at one ground position under different parents whose comparison misleads — behaviour that differs only because the parents impose different tolerance, read as a ground shift.
+test: |
+  T2b: every cross-parent coincidence in the first Phoenix slice is checked for inherited-tolerance differences (dry-run finding F-2).
+breaks: |
+  DDD-address-05's cross-parent grain.
+owner: none
+changed: 2026-09-28, act address landing session (GATE 3, on the GATE 1 rulings)
+notes: |
+  Ruled R-7, 2026-09-27, on Claude's proposal. The falsifier names the known risk: dry-run finding
+  F-2, that the layer carries inherited tolerance, so cross-parent coincidence may compare unlike
+  acts. F-2 is held, not accepted (landing session GATE 1 ruling 7), and its latency figure is
+  struck; the test checks for the risk rather than presupposing it.
