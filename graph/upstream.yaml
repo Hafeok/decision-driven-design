@@ -100,16 +100,18 @@ upstream:
   # none removed. The same session's branch-only supersession of DDD-frame-08 (GATE 1 ruling C)
   # was predicted to contribute nothing to this advance — the tag does not carry it — and
   # contributed nothing; its firing belongs to the next advance.
-  # STAGED advance v5.13.0 -> v5.15.0 (act address landing session, 2026-09-28): ref points at
-  # the upstream landing branch so the checks resolve during staging, per the
-  # DDD-dec-10/16/18/25/28 pattern; bumps to the tag v5.15.0 on Emil's acceptance of upstream
-  # PR #24. The advance is DDD-dec-38 here, DDD-dec-37 upstream. It crosses v5.14.0 and v5.14.1
-  # as well. Predicted firing, committed before this ref moved at
-  # meta/sessions/2026-09-27-act-address-landing/gate3-prediction.md: E12 0 - E13 0 - W5 0 -
-  # W6 exactly 1 (DDD-frame-08, cf73b307... -> ef5d5faf..., v5.14.0's published prediction) -
-  # W7 1, unchanged. DDD-frame-08's content_hash is deliberately NOT re-instrumented at staging,
-  # so the firing stays observable at the bump. Three pins added (below).
-  ref: claude/act-address-landing-bla6io   # staged; bumps to tag v5.15.0 on acceptance
+  # Advanced v5.13.0 -> v5.15.1 at the act address landing session (2026-09-28), on Emil's
+  # acceptance of upstream PR #24 (merge 13128a7, tagged v5.15.0) and PR #25 (merge 1cb3819,
+  # tagged v5.15.1); the advance is DDD-dec-38 here, DDD-dec-37 upstream. Staged against the
+  # landing branch per the DDD-dec-10/16/18/25/28 pattern, then bumped to the tag. DEVIATION,
+  # recorded before the bump at meta/sessions/2026-09-27-act-address-landing/
+  # gate4-target-deviation.md: the prediction (gate3-prediction.md, committed at ef0d444 before
+  # the ref first moved) targeted v5.15.0; v5.15.0 was cut from e484ca5 without the GATE 2 fix
+  # cc0abf8, which ships as v5.15.1, and Emil ruled the pin names v5.15.1. Notes and i18n only
+  # separate the two, so the restated prediction is identical: E12 0 - E13 0 - W5 0 - W6
+  # exactly 1 (DDD-frame-08, cf73b307... -> ef5d5faf..., v5.14.0's published prediction) - W7 1,
+  # unchanged. Three pins added: DDD-ground-06, term:act-address, DDD-ground-01.
+  ref: v5.15.1                      # tag, never a branch
   pins:
     # basis claims for DDD-dec-04 (the split decision itself rests on these)
     - id: DDD-frame-01
