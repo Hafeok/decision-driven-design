@@ -4,8 +4,18 @@ kind: decision
 statement: |
   The projection files the act address ruling's diachronic companions — the causal time index, occurrence uniqueness, shared-component escape, the coincidence grain and the two behaviour grains (DDD-address-01 to 05) — as projected claims resting on upstream DDD-ground-06, and advances the upstream pin to the release that carries it, with DDD-ground-06, term:act-address and DDD-ground-01 pinned.
 principal: Emil
-made: 2026-09-27, act address session; filed 2026-09-28 at the act address landing session (GATE 3, on the GATE 1 and GATE 2 rulings)
+made: 2026-09-27, act address session; filed 2026-09-28 at the act address landing session (GATE 3, on the GATE 1 and GATE 2 rulings); the advance completed at GATE 4, 2026-09-28, against v5.15.1 on the GATE 3 ruling
 resolution: |
+  Final. The GATE 4 sequence completed as ruled. Upstream PR #24 was accepted (merge 13128a7,
+  tagged v5.15.0), but it merged one commit behind the GATE 2 fix. The fix shipped as v5.15.1
+  (PR #25, merge 1cb3819, ratified head 7266306 merged exactly). The ref was bumped from the
+  staged branch to v5.15.1, not v5.15.0, on Emil's GATE 3 ruling. That change of target is a
+  recorded deviation (meta/sessions/2026-09-27-act-address-landing/gate4-target-deviation.md,
+  committed before the bump). The firing did not deviate: ref first, hashes second, it showed
+  74 pins, 0 E12/E13/W5, exactly one W6 (DDD-frame-08, cf73b307… -> ef5d5faf…, both digests as
+  predicted) and W7 1. After re-instrumentation it showed 74 pins with 0 drift. The downstream
+  PR stands for Emil's acceptance.
+
   The upstream ruling is DDD-dec-37. This decision records the downstream half. The address
   itself is synchronic and lives upstream. Everything that compares or orders occurrences
   persists between acts and lives here, per DDD-dec-09 and meta/repo-topology.md, the same split
