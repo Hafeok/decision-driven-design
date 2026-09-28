@@ -1,0 +1,59 @@
+format: 1
+id: DDD-dec-38
+kind: decision
+statement: |
+  The projection files the act address ruling's diachronic companions — the causal time index, occurrence uniqueness, shared-component escape, the coincidence grain and the two behaviour grains (DDD-address-01 to 05) — as projected claims resting on upstream DDD-ground-06, and advances the upstream pin to the release that carries it, with DDD-ground-06, term:act-address and DDD-ground-01 pinned.
+principal: Emil
+made: 2026-09-27, act address session; filed 2026-09-28 at the act address landing session (GATE 3, on the GATE 1 and GATE 2 rulings)
+resolution: |
+  The upstream ruling is DDD-dec-37. This decision records the downstream half. The address
+  itself is synchronic and lives upstream. Everything that compares or orders occurrences
+  persists between acts and lives here, per DDD-dec-09 and meta/repo-topology.md, the same split
+  the seam took.
+
+  ## What files
+
+  - DDD-address-01 — the causal time index, amended at GATE 1 (ruling 1): B depends on A iff a
+    state change produced by A is in B's ground reading; the index is the resulting order over
+    state changes. The reading/verdict-input line is flagged UNVERIFIED — Emil review.
+  - DDD-address-02 — every occurrence is its own act; reuse is a derivation relation.
+  - DDD-address-03 — shared-component escape. The seam-decay reading in its notes has no
+    canonical home and is carried as a successor item (ruling 6).
+  - DDD-address-04 — coincidence on ground position. Its known risk is dry-run finding F-2,
+    which is held (ruling 7).
+  - DDD-address-05 — the two behaviour grains, filed with the unregistered behaviour term named
+    as a dependency (ruling 5).
+
+  DDD-address-01 and DDD-ground-06 were kept joined under rule 1 (ruling 4).
+
+  ## The pin advance
+
+  Staged against the upstream landing branch and bumped to the tag only on Emil's acceptance of
+  the upstream PR, per the DDD-dec-10/16/18/25/28 pattern. The predicted firing was committed
+  before the ref moved (meta/sessions/2026-09-27-act-address-landing/gate3-prediction.md). The
+  advance runs from v5.13.0, so it crosses v5.14.0 and v5.14.1 as well: it carries v5.14.0's
+  published W6 on DDD-frame-08, and nothing else from the existing pins.
+
+  Three pins are added. DDD-ground-06 and term:act-address are the basis of the five claims and
+  do not exist before the release that carries them, so they could not be pinned earlier.
+  DDD-ground-01 is this decision's basis and was not pinned: a basis cited without a pin can move
+  silently (DDD-agent-01). DDD-dec-37 is not pinned, because the checker indexes upstream claims
+  and terms, not decisions.
+
+  ## Rulings on the dry run (GATE 1, ruling 7)
+
+  E-1 is accepted as a correction record. F-3 is accepted as [PROPOSED]. The T2a act map is
+  accepted, with a1's gateway axis recorded as not read. F-1 is held as a T2b test item: an act
+  that never reads an axis a governing predicate uses. F-2 is held and its 14 s figure is struck.
+  The session record lands exactly as bundled; the rulings live in the landing session's
+  gate1-rulings.md, not in the record they rule on.
+basedOn:
+  - DDD-ground-06
+  - DDD-dec-37
+  - DDD-ground-01
+notes: |
+  New claim area `address`. Areas are cheap and renumbering is forbidden (spec/claim-format.md
+  §3). The area name was confirmed free at the landing session's GATE 1.
+
+  Phoenix is the code name of the first independent application case. It is named here and in
+  the claims' tests. Upstream names the case neutrally (GATE 1 ruling 2).

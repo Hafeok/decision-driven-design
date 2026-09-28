@@ -1,0 +1,25 @@
+format: 1
+id: DDD-address-05
+kind: conceptual
+statement: |
+  Behaviour is read at two grains: at full address within one parent, and at ground position across parents.
+status: projected
+region: |
+  Diachronic. Depends on a registered behaviour term, which the Gate 0 bundle queues; until that
+  term lands, "behaviour" here carries the working definition (recurring acts at one address
+  under the same relative ground) and nothing more.
+evidence: []
+falsifier: |
+  A shared-component change that alters behaviour across parents but is invisible at both grains, or a grain that adds no detection over the other on the Phoenix record.
+test: |
+  Phoenix: component changes are detected at the ground-position grain as simultaneous behaviour change across parents.
+breaks: |
+  Behaviour change as the detection channel for DDD-address-03's escapes.
+owner: none
+changed: 2026-09-28, act address landing session (GATE 3, on the GATE 1 rulings)
+notes: |
+  Ruled R-7, 2026-09-27. Filed with the dependency named (landing session GATE 1 ruling 5): the
+  Gate 0 behaviour bundle had not been filed in either repository at 361e88f / cba63ef, and no
+  behaviour term is registered. "Behaviour" here carries only the working definition in region;
+  "relative ground" is likewise unregistered. When the behaviour term lands, this claim is
+  checked against it (successor item).

@@ -1,0 +1,29 @@
+format: 1
+id: DDD-address-03
+kind: empirical
+statement: |
+  A change to a component pulled by several act occurrences is an escaped decision at every pulling occurrence that the changing decision's applicability predicate does not cover.
+status: projected
+region: |
+  Diachronic, over the derivation record. Where occurrences replicate a decision instead of
+  sharing a component, the fan-out is the decision's predicate match set, not a component's pullers
+  (dry-run finding F-3, accepted as [PROPOSED] at the landing session's GATE 1). Only the
+  component case is claimed here.
+evidence: []
+falsifier: |
+  Derivation records in which off-predicate pulling occurrences of changed components show no more behaviour change or incident than occurrences that did not pull the component.
+test: |
+  Phoenix: compute each component change's off-predicate fan-out forward from the derivation record, and compare behaviour change at those occurrences against a matched non-pulling set.
+breaks: |
+  The rationale for showing a component's fan-out to the person changing it before the change, and the pricing of reuse as seam risk.
+owner: none
+changed: 2026-09-28, act address landing session (GATE 3, on the GATE 1 rulings)
+notes: |
+  Emil's observation, 2026-09-27: one act often demands a change to a single function, incurring
+  sudden changes in hundreds of others. The seam reading is Claude's, flagged: a component shared
+  by k occurrences is a seam spanning k, decaying at the conjunction of k persistence
+  probabilities. UNVERIFIED — the seam-decay result has no canonical home: the landing session's
+  GATE 1 survey found no claim, term, core document or meta note stating it in either repository
+  at 361e88f / cba63ef. Filed with the reliance carried as a successor item (GATE 1 ruling 6).
+  Only the notes and the "pricing of reuse as seam risk" limb of breaks lean on it; the statement
+  does not. No other claim is cited as support for it.
