@@ -100,7 +100,16 @@ upstream:
   # none removed. The same session's branch-only supersession of DDD-frame-08 (GATE 1 ruling C)
   # was predicted to contribute nothing to this advance — the tag does not carry it — and
   # contributed nothing; its firing belongs to the next advance.
-  ref: v5.13.0                      # tag, never a branch
+  # STAGED advance v5.13.0 -> v5.15.0 (act address landing session, 2026-09-28): ref points at
+  # the upstream landing branch so the checks resolve during staging, per the
+  # DDD-dec-10/16/18/25/28 pattern; bumps to the tag v5.15.0 on Emil's acceptance of upstream
+  # PR #24. The advance is DDD-dec-38 here, DDD-dec-37 upstream. It crosses v5.14.0 and v5.14.1
+  # as well. Predicted firing, committed before this ref moved at
+  # meta/sessions/2026-09-27-act-address-landing/gate3-prediction.md: E12 0 - E13 0 - W5 0 -
+  # W6 exactly 1 (DDD-frame-08, cf73b307... -> ef5d5faf..., v5.14.0's published prediction) -
+  # W7 1, unchanged. DDD-frame-08's content_hash is deliberately NOT re-instrumented at staging,
+  # so the firing stays observable at the bump. Three pins added (below).
+  ref: claude/act-address-landing-bla6io   # staged; bumps to tag v5.15.0 on acceptance
   pins:
     # basis claims for DDD-dec-04 (the split decision itself rests on these)
     - id: DDD-frame-01
@@ -357,3 +366,16 @@ upstream:
     - id: DDD-measure-17
       status_at_pin: projected
       content_hash: sha256:164a18072145bc4a0cdb3c6e1ca8890fc64c1b36396c73be5ca8bd45c66114e5
+    # [PROPOSED] Act address landing (2026-09-28, DDD-dec-38), staged with the v5.15.0 advance.
+    # DDD-ground-06 and term:act-address are the basis of DDD-address-01..05; they do not exist
+    # before v5.15.0, so pinning them earlier would fire E12. DDD-ground-01 is DDD-dec-38's
+    # basis and was unpinned (DDD-agent-01). Hashes taken at upstream cc0abf8.
+    - id: DDD-ground-06
+      status_at_pin: projected
+      content_hash: sha256:87a6adab30551a4f464cdc1020ae0155f22d6a86d3baac30917894a1cb3b6609
+    - id: term:act-address
+      status_at_pin: draft
+      content_hash: sha256:d66ddee2ca634dc8ab84d96798b5ca0af36403551c826fb3affd86758f1df00c
+    - id: DDD-ground-01
+      status_at_pin: projected
+      content_hash: sha256:eb4679f9878a220b8a4c39e785b1d3cd9f6ad7eb717a02d1eff6ff97ef359d93
